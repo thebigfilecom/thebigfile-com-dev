@@ -22,16 +22,16 @@ const IntroCards: React.FC = () => {
           <div className="md:container-10 w-full">
             <div className="px-6 md:w-1/2 pt-12 pb-4 md:py-20 flex flex-col justify-centeritems-start">
               <h2 className="tw-heading-5 md:tw-heading-3 mb-3 md:mb-6">
-                What is the Internet Computer
+                What is the BigFile
               </h2>
               <p className="tw-paragraph-sm md:tw-lead mb-6 text-white/60">
-                The Internet Computer adds autonomous serverless cloud
+                The BigFile adds autonomous serverless cloud
                 functionality to the public internet.
               </p>
               <p className="mb-0 self-stretch sm:self-auto">
                 <Link
                   className="w-full sm:w-auto button-white"
-                  href="/what-is-the-ic"
+                  href="/what-is-the-big-file"
                 >
                   <span className="hidden sm:inline">Explore</span> The Power of
                   ICP

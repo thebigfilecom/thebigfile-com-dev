@@ -19,7 +19,7 @@ const customWebpack = require("./plugins/custom-webpack");
 const roadmapDataPlugin = require("./plugins/roadmap-data");
 const blogPostsPlugin = require("./plugins/blog-posts");
 const externalRedirectsPlugin = require("./plugins/external-redirects");
-const whatIsIcpDataPlugin = require("./plugins/what-is-the-ic-cards");
+const whatIsIcpDataPlugin = require("./plugins/what-is-the-big-file-cards");
 const howItWorksCardsPlugin = require("./plugins/howitworks-cards");
 const howItWorksArticlesPlugin = require("./plugins/howitworks-articles");
 const math = require("remark-math");
@@ -168,8 +168,8 @@ const marketingNav = {
             //   description: "New to ICP? Read this first",
             // },
             {
-              name: "What is ICP",
-              href: "/what-is-the-ic",
+              name: "What is BigFile",
+              href: "/what-is-the-big-file",
               description: "Get to know ",
             },
             {

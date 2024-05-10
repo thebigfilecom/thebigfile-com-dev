@@ -52,25 +52,6 @@ export const CardsSection = () => {
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">Decentralized AI</h2>
       </CardWithImage>
 
-      <CardWithImage href="/ecosystem" image="/img/home/ecosystem-card.webp">
-        <div className="tw-heading-7 md:tw-heading-6 mb-2">Ecosystem</div>
-        <h2 className="tw-heading-5 md:tw-heading-4 mb-0">Ecosystem links</h2>
-      </CardWithImage>
-
-      <CardWithImage
-        href="https://deck.internetcomputer.org"
-        image="/img/home/deck-astronaut.webp"
-      >
-        <div className="tw-heading-7 md:tw-heading-6 mb-2">
-          Online Deck [ ICP hosted ]
-        </div>
-        <h2 className="tw-heading-5 md:tw-heading-4 mb-0">
-          Cypherspace
-          <br />
-          as cloud 3.0
-        </h2>
-      </CardWithImage>
-
       <CardWithImage href="/docs/current/home" image="/img/home/dev-card.webp">
         <div className="tw-heading-7 md:tw-heading-6 mb-2">Developer Docs</div>
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">Start coding</h2>

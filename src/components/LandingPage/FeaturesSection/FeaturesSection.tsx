@@ -15,7 +15,7 @@ const FeaturesSection = () => {
         <h2 className="tw-heading-3 md:tw-title-lg mb-0 md:w-8/10">
           Amazing, you made it this far. Discover more{" "}
           <span className="text-gradient-purple md:tw-heading-60">
-            ICP key features:
+            BigFile key features:
           </span>
         </h2>
       </div>
@@ -66,7 +66,7 @@ const FeaturesSection = () => {
           <p className="mb-0  -mx-3">
             <Link className="link-primary" href="/capabilities">
               <LinkArrowRight />
-              ICP Capabilities Overview
+              BigFile Capabilities Overview
             </Link>
           </p>
         </motion.div>

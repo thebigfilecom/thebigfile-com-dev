@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 const SectionsLinks = [
   { text: "News", to: "#news" },
-  { text: "About ICP", to: "#about-icp" },
+  { text: "About BigFile", to: "#about-bigfile" },
   { text: "Community", to: "#community" },
   { text: "Technology", to: "#technology" },
   { text: "Sustainability", to: "#sustainable" },

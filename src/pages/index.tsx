@@ -28,20 +28,19 @@ export default function Home(): JSX.Element {
       editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
     >
       <Hero
-        headline={<>COMPUTE ON BLOCKCHAIN</>}
+        headline={<>BIGFILE ON BLOCKCHAIN</>}
         aiPlaceholders={[
-          "Is the Internet Computer decentralized?",
-          "What can I do with ICP token?",
-          "What is the first step to my ICP dapp?",
+          "Is the BigFile decentralized?",
+          "What can I do with BF token?",
+          "What is the first step to my BigFile dapp?",
         ]}
       >
         <CardsSection />
-        <NewsSection />
+        
         <VisionSection>
-        The Internet Computer reinvents compute on blockchain, incorporating more 
-        than a 1000 years of R&D effort. Everything is now on-chain. HTTP. Data. 
-        Compute. AI. Your Web3 social network. Your orderbook exchange. Full stack 
-        decentralization has arrived on a sovereign network that extends the internet.
+        BigFile is an all-in-one infrastructure platform that is secure, flexible, easy to use, and highly scalable. 
+        Our blockchain integrates seamlessly with our built-in service layers that enable businesses, infrastructures, and applications to be optimized. 
+        The entire platform is developed as a stack so additional service layers keep systems running without compromising performance.
         </VisionSection>
         <IntroCards />
       </Hero>

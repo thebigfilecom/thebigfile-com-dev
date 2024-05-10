@@ -18,7 +18,7 @@ function WhatIsIcpPage() {
 
   return (
     <Layout
-      title="What is ICP"
+      title="What is BigFile"
       description={`The Internet Computer adds autonomous serverless cloud functionality to the public Internet - making it possible to build almost any system or service entirely on a decentralized network using “canister software,” an evolution of smart contracts.`}
       editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
     >
@@ -52,7 +52,7 @@ function WhatIsIcpPage() {
             "
             >
               <img
-                src="/img/what-is-the-ic/hero.svg"
+                src="/img/what-is-the-big-file/hero.svg"
                 alt=""
                 className="w-full max-w-none"
               />
@@ -138,7 +138,7 @@ function WhatIsIcpPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-ic/icon-tamperproof.svg"
+                  src="/img/what-is-the-big-file/icon-tamperproof.svg"
                   alt=""
                   className="h-24"
                 />
@@ -155,7 +155,7 @@ function WhatIsIcpPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-ic/icon-autonomous.svg"
+                  src="/img/what-is-the-big-file/icon-autonomous.svg"
                   alt=""
                   className="h-24"
                 />
@@ -172,7 +172,7 @@ function WhatIsIcpPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-ic/icon-simple.svg"
+                  src="/img/what-is-the-big-file/icon-simple.svg"
                   alt=""
                   className="h-24"
                 />
@@ -189,7 +189,7 @@ function WhatIsIcpPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-ic/icon-sovereign.svg"
+                  src="/img/what-is-the-big-file/icon-sovereign.svg"
                   alt=""
                   className="h-24"
                 />
@@ -206,7 +206,7 @@ function WhatIsIcpPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-ic/icon-web3-ois.svg"
+                  src="/img/what-is-the-big-file/icon-web3-ois.svg"
                   alt=""
                   className="h-24"
                 />
@@ -223,7 +223,7 @@ function WhatIsIcpPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-ic/icon-next-gen-ai.svg"
+                  src="/img/what-is-the-big-file/icon-next-gen-ai.svg"
                   alt=""
                   className="h-24"
                 />
@@ -249,7 +249,7 @@ function WhatIsIcpPage() {
             </motion.h2>
           </div>
           <div className=" container-12 flex flex-col gap-16 md:gap-40 relative pt-20">
-            <TranslatedLayout imageUrl="/img/what-is-the-ic/node-providers.webp">
+            <TranslatedLayout imageUrl="/img/what-is-the-big-file/node-providers.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
                 Node providers
               </h2>
@@ -273,7 +273,7 @@ function WhatIsIcpPage() {
               </p>
             </TranslatedLayout>
             <TranslatedLayout
-              imageUrl="/img/what-is-the-ic/subnet-blockchains.webp"
+              imageUrl="/img/what-is-the-big-file/subnet-blockchains.webp"
               reverse={true}
             >
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
@@ -296,7 +296,7 @@ function WhatIsIcpPage() {
                 </Link>
               </p>
             </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/what-is-the-ic/smart-contracts.webp">
+            <TranslatedLayout imageUrl="/img/what-is-the-big-file/smart-contracts.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
                 Canister smart contracts
               </h2>
@@ -344,7 +344,7 @@ function WhatIsIcpPage() {
             variants={transitions.item}
           >
             <img
-              src="/img/what-is-the-ic/subnets.webp"
+              src="/img/what-is-the-big-file/subnets.webp"
               alt=""
               className="absolute w-[550px] md:w-[800px] max-w-none left-1/2 -translate-x-1/2"
             />
@@ -366,7 +366,7 @@ function WhatIsIcpPage() {
           </div>
 
           <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout imageUrl="/img/what-is-the-ic/internet-identity.webp">
+            <TranslatedLayout imageUrl="/img/what-is-the-big-file/internet-identity.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Internet Identity
               </h3>
@@ -388,7 +388,7 @@ function WhatIsIcpPage() {
               </Link>
             </TranslatedLayout>
             <TranslatedLayout
-              imageUrl="/img/what-is-the-ic/open-internet-services.webp"
+              imageUrl="/img/what-is-the-big-file/open-internet-services.webp"
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
@@ -410,7 +410,7 @@ function WhatIsIcpPage() {
                 <LinkArrowRight /> User-run Web3
               </Link>
             </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/what-is-the-ic/sovereign-infrastructure.webp">
+            <TranslatedLayout imageUrl="/img/what-is-the-big-file/sovereign-infrastructure.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Sovereign infrastructure
               </h3>
@@ -435,7 +435,7 @@ function WhatIsIcpPage() {
             </TranslatedLayout>
 
             <TranslatedLayout
-              imageUrl="/img/what-is-the-ic/reverse-gas-model.webp"
+              imageUrl="/img/what-is-the-big-file/reverse-gas-model.webp"
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
@@ -460,7 +460,7 @@ function WhatIsIcpPage() {
               </Link>
             </TranslatedLayout>
 
-            <TranslatedLayout imageUrl="/img/what-is-the-ic/multi-chain.webp">
+            <TranslatedLayout imageUrl="/img/what-is-the-big-file/multi-chain.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Native multi-chain
               </h3>

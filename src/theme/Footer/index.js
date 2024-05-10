@@ -117,7 +117,7 @@ function Footer({ editPath }) {
           >
             <p className="tw-lead-sm mb-3 md:mb-5">
               Sign up for email updates to keep up to date with advancements on
-              the Internet Computer
+              the BigFile
             </p>
             <div className="flex gap-3 flex-col md:flex-row items-start">
               <input

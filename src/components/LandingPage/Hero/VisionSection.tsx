@@ -72,7 +72,7 @@ export const VisionSection: React.FC<{
     <AnimateSpawn
       className="container-10 tw-lead md:tw-title-sm text-white py-24 md:pt-30 md:pb-40"
       variants={transitions.container}
-      id="about-icp"
+      id="about-bigfile"
     >
       <div className="md:w-7/10">{children}</div>
     </AnimateSpawn>

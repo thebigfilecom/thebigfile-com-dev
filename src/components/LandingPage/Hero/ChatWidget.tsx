@@ -61,7 +61,7 @@ export const ChatWidget: React.FC<{
           }}
         >
           <AiIcon />
-          ASK ICP.AI
+          ASK FILE.AI
         </button>
         <div className="flex-1 text-[14px] leading-[24px] font-bold md:tw-heading-7 text-white text-center md:text-left py-3 grid">
           {aiPlaceholders.map((placeholder, i) => (
