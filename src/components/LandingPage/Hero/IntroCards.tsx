@@ -34,7 +34,7 @@ const IntroCards: React.FC = () => {
                   href="/what-is-the-big-file"
                 >
                   <span className="hidden sm:inline">Explore</span> The Power of
-                  ICP
+                  BigFile
                 </Link>
               </p>
             </div>
@@ -91,7 +91,7 @@ const IntroCards: React.FC = () => {
             </p>
             <p className="mb-0">
               <Link className="button-outline" href="/ois">
-                Explore DAOs on ICP
+                Explore DAOs on BigFile
               </Link>
             </p>
           </motion.div>

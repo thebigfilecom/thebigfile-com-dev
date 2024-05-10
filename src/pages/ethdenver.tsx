@@ -934,8 +934,8 @@ function EthDenverPage() {
           cards={[
             {
               title: "Dev Forum",
-              body: "Engage with the ICP community to shape future features, propose new ideas, and ask questions. ",
-              link: "https://forum.dfinity.org",
+              body: "Engage with the BigFile community to shape future features, propose new ideas, and ask questions. ",
+              link: "https://forum.thebigfile.com",
             },
             {
               title: "Dev Docs",

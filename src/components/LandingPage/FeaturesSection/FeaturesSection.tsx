@@ -90,11 +90,11 @@ const FeaturesSection = () => {
           <p className="mb-0 -mx-3 flex flex-col gap-3 items-center">
             <Link className="link-primary" href="/bitcoin-integration">
               <LinkArrowRight />
-              Bitcoin on ICP
+              Bitcoin on BigFile
             </Link>
             <Link className="link-primary" href="/ethereum-integration">
               <LinkArrowRight />
-              Ethereum on ICP
+              Ethereum on BigFile
             </Link>
           </p>
         </motion.div>
