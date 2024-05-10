@@ -1,0 +1,19 @@
+Motoko compiler (source XXX)
+-- Parsing stdin:
+> -- Parsing lib/empty.mo:
+-- Checking empty.mo:
+-- Definedness empty.mo:
+-- Checking stdin:
+-- Definedness stdin:
+-- Interpreting empty.mo:
+-- Interpreting stdin:
+-- Finished stdin:
+
+-- Parsing stdin:
+> -- Checking stdin:
+-- Definedness stdin:
+-- Interpreting stdin:
+-- Finished stdin:
+
+-- Parsing stdin:
+> 

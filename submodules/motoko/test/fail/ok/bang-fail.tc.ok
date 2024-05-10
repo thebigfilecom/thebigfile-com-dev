@@ -1,0 +1,19 @@
+bang-fail.mo:2.11-2.17: type error [M0064], misplaced '!' (no enclosing 'do ? { ... }' expression)
+bang-fail.mo:6.13-6.17: type error [M0064], misplaced '!' (no enclosing 'do ? { ... }' expression)
+bang-fail.mo:6.13-6.15: type error [M0065], expected option type before '!', but expression produces type
+  ()
+bang-fail.mo:10.11-10.17: type error [M0064], misplaced '!' (no enclosing 'do ? { ... }' expression)
+bang-fail.mo:10.11-10.17: type error [M0064], misplaced '!' (no enclosing 'do ? { ... }' expression)
+bang-fail.mo:14.14-14.18: type error [M0064], misplaced '!' (no enclosing 'do ? { ... }' expression)
+bang-fail.mo:14.14-14.16: type error [M0065], expected option type before '!', but expression produces type
+  ()
+bang-fail.mo:18.14-18.22: type error [M0064], misplaced '!' (no enclosing 'do ? { ... }' expression)
+bang-fail.mo:18.17-18.19: type error [M0096], expression of type
+  ()
+cannot produce expected type
+  Nat
+bang-fail.mo:1.6-1.12: warning [M0194], unused identifier wrong1 (delete or rename to wildcard `_` or `_wrong1`)
+bang-fail.mo:5.6-5.12: warning [M0194], unused identifier wrong2 (delete or rename to wildcard `_` or `_wrong2`)
+bang-fail.mo:9.6-9.12: warning [M0194], unused identifier wrong3 (delete or rename to wildcard `_` or `_wrong3`)
+bang-fail.mo:13.6-13.12: warning [M0194], unused identifier wrong4 (delete or rename to wildcard `_` or `_wrong4`)
+bang-fail.mo:17.6-17.12: warning [M0194], unused identifier wrong5 (delete or rename to wildcard `_` or `_wrong5`)

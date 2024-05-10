@@ -1,0 +1,65 @@
+name: CI
+
+on: pull_request
+    
+env:
+  rust: 1.75.0
+
+jobs:
+  ci:
+    name: ${{ matrix.task.name }} (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        task: 
+        - name: Format
+          command: cargo fmt -- --check
+        - name: Clippy
+          command: cargo clippy --all --all-targets --all-features --tests -- -D warnings
+        - name: Test
+          command: cargo test
+        include:
+          - os: ubuntu-latest
+            build_deps: scripts/workflows/provision-linux-build.sh
+          - os: macos-latest
+            build_deps: scripts/workflows/provision-darwin-build.sh
+          - os: windows-latest
+            build_deps: scripts/workflows/provision-windows-build.ps1
+    env:
+      VCPKG_ROOT: 'C:\vcpkg'
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+            ${{ env.VCPKG_ROOT }}
+          key: ${{ matrix.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}-${{ env.rust }}-ci-1
+
+      - name: Install dependencies
+        run: ${{ matrix.build_deps }}
+
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: ${{ env.rust }}
+          override: true
+          components: rustfmt, clippy
+
+      - name: ${{ matrix.task.name }}
+        run: ${{ matrix.task.command }}
+  
+  aggregate:
+    name: ci:required
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    needs: [ci]
+    steps:
+      - name: check result
+        if: ${{ needs.ci.result != 'success' }}
+        run: exit 1
