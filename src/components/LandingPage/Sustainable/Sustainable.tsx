@@ -41,7 +41,7 @@ const Sustainable: React.FC<{ id?: string }> = ({ id }) => {
                 className="button-outline-white text-center"
                 href="/capabilities/sustainability"
               >
-                About ICP sustainability
+                About BigFile sustainability
               </Link>
             </p>
           </div>

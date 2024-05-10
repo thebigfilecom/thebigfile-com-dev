@@ -389,7 +389,7 @@ const marketingNav = {
         },
         {
           label: "X",
-          href: "https://twitter.com/dfinitydev",
+          href: "https://twitter.com/thebigfile",
           iconUrl: "/img/svgIcons/purple/twitter.svg",
         },
         {
@@ -674,7 +674,7 @@ const config = {
             items: [
               {
                 label: "X",
-                to: "https://twitter.com/dfinity",
+                to: "https://twitter.com/thebigfile",
                 iconLight: getImageDataUrl(
                   "./static/img/svgIcons/purple/twitter.svg"
                 ),
@@ -684,7 +684,7 @@ const config = {
               },
               {
                 label: "Telegram",
-                to: "https://t.me/+m8tiEFaaNR8xNjNl",
+                to: "https://t.me/thebigfilecom",
                 iconLight: getImageDataUrl(
                   "./static/img/svgIcons/purple/telegram.svg"
                 ),
