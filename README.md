@@ -1,73 +1,10 @@
-<img src="https://user-images.githubusercontent.com/15371828/158857061-8fa8d079-d33f-4ed2-88aa-56d452d238d8.svg" alt="DFINITY logo" width="270">
+# BigFile developer portal
 
-# ICP developer portal
+The BigFile developer portal brings together all the resources needed for developers to build on the
+BigFile. Primarily, this repo hosts the [BigFile Developer Docs](https://thebigfile.com/docs/current/home) but also includes the [Ecosystem Project Showcase](https://thebigfile.com/ecosystem), [community tooling page](https://thebigfile.com/tooling), and the thebigfile.com ['How it works'](https://thebigfile.com/how-it-works) series. 
 
-The ICP developer portal brings together all the resources needed for developers to build on the
-Internet Computer. Primarily, this repo hosts the [ICP Developer Docs](https://internetcomputer.org/docs/current/home) but also includes the [Ecosystem Project Showcase](https://internetcomputer.org/ecosystem), [community tooling page](https://internetcomputer.org/tooling), and the internetcomputer.org ['How it works'](https://internetcomputer.org/how-it-works) series. 
-
-The ICP developer portal uses [Docusaurus](https://docusaurus.io/docs).
 
 # Developer documentation
-
-## Repo structure
-
-```
-docs
-├── concepts
-├── developer-docs
-│   ├── backend // programming language documentation
-│   │   ├── motoko
-│   │   ├── rust
-│   │   ├── python
-│   │   ├── solidity
-│   │   ├── typescript
-│   ├── daos // NNS & SNS documentation
-│   │   ├── nns
-│   │   ├── sns
-│   ├── defi // token and defi documentation
-│   │   ├── asset-custody
-│   │   ├── icp-tokens
-│   │   ├── icrc-1
-│   │   ├── nfts
-│   │   ├── rosetta
-│   ├── developer-tools // CLI tools, IDEs, CDKs, and agent documentation
-│   │   ├── cli-tools
-│   │   ├── ide
-│   │   ├── off-chain
-│   │   ├── on-chain
-│   ├── getting-started // introductory onboarding documentation
-│   │   ├── cycles
-│   │   ├── deploy
-│   │   ├── install
-│   │   ├── quickstart
-│   ├── multi-chain // multi-chain integration documentation
-│   │   ├── bitcoin
-│   │   ├── ethereum
-│   ├── security
-│   ├── smart-contracts // canister documentation
-│   │   ├── advanced-features
-│   │   ├── best-practices
-│   │   ├── call
-│   │   ├── candid
-│   │   ├── deploy
-│   │   ├── encryption
-│   │   ├── maintain
-│   │   ├── overview
-│   │   ├── test
-│   │   ├── topping-up
-│   │   ├── write
-│   ├── web-apps // frontend and web app documentation
-│   │   ├── application-frontends
-│   │   ├── browser-js
-│   │   ├── custom-domains
-│   │   ├── frameworks
-│   │   ├── http-compatible-canisters
-│   │   ├── user-login
-├── motoko // Motoko documentation - submodule
-├── references // reference documentation
-├── samples // sample projects - submodule
-├── tutorials // tutorial series (developer journey, hackathon prep course, etc). 
-```
 
 # Contributing to the Dev Docs 
 
