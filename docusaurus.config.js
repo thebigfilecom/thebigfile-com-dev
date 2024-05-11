@@ -379,7 +379,7 @@ const marketingNav = {
       socialIcons: [
         {
           label: "Github",
-          href: "https://github.com/dfinity",
+          href: "https://github.com/thebigfilecom",
           iconUrl: "/img/svgIcons/purple/github.svg",
         },
         {
@@ -430,11 +430,6 @@ const marketingNav = {
               name: "Events",
               href: "/events",
               description: "Meet fellow Web3 enthusiasts",
-            },
-            {
-              name: "News",
-              href: "/news",
-              description: "Stay up to date",
             },
             {
               name: "Community Blog",
