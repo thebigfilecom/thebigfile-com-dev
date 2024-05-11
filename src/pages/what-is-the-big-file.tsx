@@ -290,19 +290,19 @@ function WhatIsIcpPage() {
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />
-                  ICP architecture
+                  BigFile architecture
                 </Link>
               </p>
             </TranslatedLayout>
             <TranslatedLayout imageUrl="/img/what-is-the-big-file/smart-contracts.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
-                Canister smart contracts
+                Mars smart contracts
               </h2>
               <p className="tw-lead-sm">
                 Smart contracts are a new form of software that runs on
                 blockchain networks, which is tamperproof, unstoppable,
                 optionally autonomous, can process tokens, and is easily
-                composed. Canisters are a high-performance form that can be used
+                composed. Mars are a high-performance form that can be used
                 to build anything. They interact with HTTP to serve user
                 experiences, can interact with Web2, and can natively interact
                 with external blockchains. Because they scale, a social network
