@@ -183,8 +183,8 @@ const marketingNav = {
               description: "Milestones and what’s next",
             },
             {
-              name: "ICP on YouTube",
-              href: "https://www.youtube.com/dfinity",
+              name: "BigFile on YouTube",
+              href: "https://www.youtube.com/",
               description: "Watch & Learn",
             },
           ],
@@ -477,7 +477,7 @@ function getImageDataUrl(url) {
 
 /** @type {import("@docusaurus/types").Config} */
 const config = {
-  title: "Internet Computer",
+  title: "BigFile: Blockchain and AI Data Ecosystem",
   tagline:
     "Step into the era of blockchain as a limitless smart contract cloud that hosts everything on-chain: data, content, computations, and user experiences.",
   url: isDeployPreview
@@ -730,7 +730,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Internet Computer`,
+        copyright: `© ${new Date().getFullYear()} TheBigFile.com`,
       },
       prism: {
         theme: lightCodeTheme,
