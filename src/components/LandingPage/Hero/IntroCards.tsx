@@ -41,7 +41,7 @@ const IntroCards: React.FC = () => {
             <div className="relative w-full aspect-[1074/713] overflow-hidden md:overflow-visible md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 bottom-0 md:w-1/2 text-right">
               <div className="absolute md:static top-0 -left-16 -bottom-10 right-0">
                 <img
-                  src="/img/home/what-is-the-ic.webp"
+                  src="/img/home/what-is-the-big-file.webp"
                   alt=""
                   className=" object-contain  max-w-none max-h-none w-full"
                 />
