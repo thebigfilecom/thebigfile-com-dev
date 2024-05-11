@@ -63,17 +63,15 @@ function WhatIsIcpPage() {
                 variants={transitions.item}
               >
                 What is the
-                <br className="hidden md:block" /> Internet Computer
+                <br className="hidden md:block" /> BigFile
               </motion.h1>
               <motion.p
                 className="pb-[15%] sm:pb-0 tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                The Internet Computer adds autonomous serverless cloud
-                functionality to the public Internet – making it possible to
-                build almost any system or service entirely on a decentralized
-                network using “canister software,” an evolution of smart
-                contracts.
+                BigFile adds autonomous serverless cloud functionality to the Blockchain network; 
+                It makes it possible to create and transfer almost any system or service on a completely decentralized network 
+                using the "Mars software", which is a revolution in the field of smart contracts.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -90,7 +88,7 @@ function WhatIsIcpPage() {
               variants={transitions.item}
             >
               Web3 services and enterprise systems can be built directly on the
-              Internet Computer — a public decentralized network that scales.
+              BigFile — a public decentralized network that scales.
               <br />
               Host social networks, media streaming and more, that support Web3
               functionality, are tamperproof, and can trustlessly interact with
@@ -102,16 +100,16 @@ function WhatIsIcpPage() {
               variants={transitions.item}
             >
               <Link className="button-primary text-center" href="/capabilities">
-                Internet Computer capabilities
+                BigFile capabilities
               </Link>
               <Link
                 className="link-primary link-with-icon"
-                href="https://wiki.internetcomputer.org/wiki/History"
+                href="https://wiki.thebigfile.com/wiki/History"
               >
                 <span>
                   <span className="hidden sm:inline">Wiki history </span>
                   <span className="sm:hidden">History </span>
-                  of the Internet Computer
+                  of the BigFile
                 </span>
                 <LinkArrowUpRight />
               </Link>
@@ -144,9 +142,9 @@ function WhatIsIcpPage() {
                 />
                 <h3 className="tw-lead my-3 md:tw-title-sm">Tamperproof</h3>
                 <p className="tw-paragraph-sm text-black/60 md:tw-paragraph mb-0">
-                  Canister software is tamperproof, does not need to be
+                  Mars software is tamperproof, does not need to be
                   protected by a firewall, and cannot be infected with
-                  ransomware. Because the Internet Computer is created by
+                  ransomware. Because the BigFile is created by
                   advanced math, there are no backdoors.
                 </p>
               </motion.div>
@@ -161,7 +159,7 @@ function WhatIsIcpPage() {
                 />
                 <h3 className="tw-lead my-3 md:tw-title-sm">Autonomous</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                  Canisters can be made unmodifiable, creating permanent logic
+                  Mars can be made unmodifiable, creating permanent logic
                   on the network, or placed under the control of autonomous
                   governance – empowering communities to run Web3, or securing
                   an enterprise.
@@ -508,7 +506,7 @@ function WhatIsIcpPage() {
               className="tw-heading-3 text-center mb-2 w-full mx-auto md:tw-heading-60 md:mb-6 lg:w-6/12"
               variants={transitions.item}
             >
-              Get familiar with the Internet Computer
+              Get familiar with the BigFile
             </motion.h2>
           </AnimateSpawn>
 

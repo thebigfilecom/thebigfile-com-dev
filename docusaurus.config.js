@@ -144,17 +144,17 @@ const marketingNav = {
       name: "Learn",
       auxItems: [
         {
-          name: "ICP Dashboard",
-          href: "https://dashboard.internetcomputer.org/",
+          name: "BigFile Dashboard",
+          href: "https://dashboard.thebigfile.com/",
         },
-        { name: "ICP Wiki", href: "https://wiki.internetcomputer.org/" },
+        { name: "BigFile Wiki", href: "https://wiki.thebigfile.com/" },
         {
           name: "Whitepaper",
-          href: "https://internetcomputer.org/whitepaper.pdf",
+          href: "https://thebigfile.com/whitepaper.pdf",
         },
         {
-          name: "History of ICP",
-          href: "https://wiki.internetcomputer.org/wiki/History",
+          name: "History of BigFile",
+          href: "https://wiki.thebigfile.com/wiki/History",
         },
       ],
 
@@ -457,8 +457,8 @@ const marketingNav = {
   ],
   auxItems: [
     {
-      name: "ICP Dashboard",
-      href: "https://dashboard.internetcomputer.org/",
+      name: "BigFile Dashboard",
+      href: "https://dashboard.thebigfile.com/",
     },
     {
       name: "Developer Grants",

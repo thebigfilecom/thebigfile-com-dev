@@ -407,7 +407,7 @@ const DocsHomePage: FC = () => {
             </h2>
             <p className="tw-paragraph mb-10 sm:w-6/10 md:w-8/10 md:flex-1">
               These docs are a community effort. Create a PR if you see
-              mistakes, room for improvement, or new opportunities to help IC
+              mistakes, room for improvement, or new opportunities to help BigFile
               developers.
             </p>
             <Link

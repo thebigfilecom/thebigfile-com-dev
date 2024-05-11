@@ -541,7 +541,7 @@ function EnterprisePage() {
               className="tw-heading-3 text-center mb-2 w-full mx-auto md:tw-heading-60 md:mb-6 lg:w-6/12"
               variants={transitions.item}
             >
-              Get familiar with the Internet Computer
+              Get familiar with the BigFile
             </motion.h2>
           </AnimateSpawn>
 
@@ -552,7 +552,7 @@ function EnterprisePage() {
             <CardWithDescription
               title="Network dashboard"
               description=""
-              href="https://dashboard.internetcomputer.org/"
+              href="https://dashboard.thebigfile.com/"
             />
 
             <CardWithDescription

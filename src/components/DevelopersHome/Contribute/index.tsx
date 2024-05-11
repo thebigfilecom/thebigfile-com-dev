@@ -109,7 +109,7 @@ function Index() {
             className={styles.callToActionText}
           >
             These docs are a community effort. Create a PR if you see mistakes,
-            room for improvement, or new opportunities to help IC developers.
+            room for improvement, or new opportunities to help BigFile developers.
           </motion.p>
           <motion.div
             variants={transitions.item}

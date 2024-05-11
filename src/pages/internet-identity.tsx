@@ -659,7 +659,7 @@ function InternetIdentityPage() {
 
         <LinkCardsSection
           className="mb-20 md:mb-30 mt-30 md:mt-40"
-          title="Get familiar with the Internet Computer"
+          title="Get familiar with the BigFile"
           cards={[
             {
               label: "Blogs",
