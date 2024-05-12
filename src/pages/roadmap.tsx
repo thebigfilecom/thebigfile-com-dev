@@ -37,7 +37,7 @@ const RoadmapPage: React.FC = () => {
   return (
     <Layout
       title="Roadmap"
-      description="The DFINITY Foundation is committing R&D resources in various domains of development with the intent of making the Internet Computer blockchain more efficient, faster and easier to use. This roadmap shows the status of many projects across the Internet Computer stack."
+      description="The BigFile is committing R&D resources in various domains of development with the intent of making the BigFile blockchain more efficient, faster and easier to use. This roadmap shows the status of many projects across the BigFile stack."
       editPath="https://github.com/dfinity/portal/tree/master/roadmap"
     >
       <ShareMeta image="/img/shareImages/share-roadmap.webp"></ShareMeta>
@@ -49,12 +49,11 @@ const RoadmapPage: React.FC = () => {
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Roadmap</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The DFINITY Foundation is committing R&D resources in various
-                domains of development with the intent of making the Internet
-                Computer blockchain more efficient, faster and easier to use.
-                This roadmap shows the status of many projects across the
-                Internet Computer stack, but not all - more to come over the
-                next few weeks.
+                The BigFile is committing R&D resources in various 
+                domains of development with the intent of making the 
+                BigFile blockchain more efficient, faster and easier to use. 
+                This roadmap shows the status of many projects across the 
+                BigFile stack, but not all - more to come over the next few weeks.
               </p>
             </div>
           </div>

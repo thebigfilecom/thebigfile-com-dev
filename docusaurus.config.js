@@ -241,7 +241,7 @@ const marketingNav = {
           name: "Step into Web3",
           items: [
             {
-              name: "ICP Ecosystem",
+              name: "BigFile Ecosystem",
               href: "/ecosystem",
               description: "Try dapps gas free",
             },
@@ -271,7 +271,7 @@ const marketingNav = {
           name: "Use cases",
           items: [
             {
-              name: "DAOs on ICP",
+              name: "DAOs on BigFile",
               href: "/sns",
               description: "Community-owned services",
             },

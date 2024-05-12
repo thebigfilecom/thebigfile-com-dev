@@ -64,17 +64,17 @@ export default function Home(): JSX.Element {
               },
               {
                 title: "Dev docs",
-                body: "Get to know the concepts,  architecture and technical breakthroughs that enable the ICP. Plus step-by-step guides on how to stake your tokens, and more.",
+                body: "Get to know the concepts,  architecture and technical breakthroughs that enable the BigFIle. Plus step-by-step guides on how to stake your tokens, and more.",
                 link: "/docs/current/home",
               },
               {
                 title: "Sample code",
-                body: "From a simple DEX, to on-chain encrypted storage, NFT minting, and a basic DAO, learn how to build on the Internet Computer.",
+                body: "From a simple DEX, to on-chain encrypted storage, NFT minting, and a basic DAO, learn how to build on the BigFile.",
                 link: "/samples",
               },
               {
                 title: "Motoko playground",
-                body: "Play around with Motoko, the native language of the Internet Computer, right in the browser without having to download the SDK.",
+                body: "Play around with Motoko, the native language of the BigFIle, right in the browser without having to download the SDK.",
                 link: "https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/",
               },
             ]}
@@ -84,7 +84,7 @@ export default function Home(): JSX.Element {
           <NewsletterSection formUrl="https://dfinity.us16.list-manage.com/subscribe/post?u=33c727489e01ff5b6e1fb6cc6&amp;id=7e9469a315&amp;f_id=00bac2e1f0">
             Sign up for email updates{" "}
             <span className="text-white-60">
-              to keep up to date with the Internet Computer
+              to keep up to date with the BigFile
             </span>
           </NewsletterSection>
         </div>
