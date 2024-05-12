@@ -122,7 +122,7 @@ function TokenHolders(): JSX.Element {
             <div className="-mt-40 md:mt-0 md:absolute md:right-0 md:-top-60 text-center">
               <motion.img
                 variants={transitions.fadeIn}
-                src="/img/icp-tokens/hero.webp"
+                src="/img/bf-tokens/hero.webp"
                 alt=""
                 className="w-full max-w-sm md:max-w-none aspect-[563/492]"
               />
@@ -169,8 +169,8 @@ function TokenHolders(): JSX.Element {
               >
                 <h3 className="inline-flex items-center gap-3 mb-6">
                   <img
-                    src="/img/icp-tokens/icp-token-logo.svg"
-                    alt="ICP logo"
+                    src="/img/bf-tokens/icp-token-logo.svg"
+                    alt="BF logo"
                     loading="lazy"
                     className="w-16 h-16"
                   />
@@ -197,7 +197,7 @@ function TokenHolders(): JSX.Element {
               >
                 <h3 className="inline-flex items-center gap-3 mb-6">
                   <img
-                    src="/img/icp-tokens/cycles-logo.svg"
+                    src="/img/bf-tokens/cycles-logo.svg"
                     className="w-16 h-16"
                     loading="lazy"
                     alt="Cycles logo"
@@ -341,7 +341,7 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
                 className="
                 bg-white/80 border border-white border-solid rounded-xl px-6 py-8 md:p-16 md:col-span-2
-                bg-[url(/img/icp-tokens/ecosystem-mobile.webp)] sm:bg-[url(/img/icp-tokens/ecosystem.webp)] 
+                bg-[url(/img/bf-tokens/ecosystem-mobile.webp)] sm:bg-[url(/img/bf-tokens/ecosystem.webp)] 
                 bg-[center_bottom_-20px] bg-[length:120%] bg-no-repeat 
 
                 sm:bg-[right_-200px_top_-100px] sm:bg-[length:auto_180%]
@@ -473,7 +473,7 @@ function TokenHolders(): JSX.Element {
                   variants={transitions.fadeIn}
                 >
                   <img
-                    src="/img/icp-tokens/ckBTC-token-1.webp"
+                    src="/img/bf-tokens/ckBTC-token-1.webp"
                     alt=""
                     loading="lazy"
                     className="lg:absolute -top-20"

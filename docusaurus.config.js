@@ -246,8 +246,8 @@ const marketingNav = {
               description: "Try dapps gas free",
             },
             {
-              name: "ICP Token",
-              href: "/icp-tokens",
+              name: "BF Token",
+              href: "/bf-tokens",
               description: "Use native utility token",
             },
             {
