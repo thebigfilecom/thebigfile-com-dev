@@ -343,11 +343,11 @@ function IcpEventPage() {
                 variants={transitions.item}
               >
                 <Link className="button-white" href="/community">
-                  Explore ICP Community
+                  Explore BigFile Community
                 </Link>
-                <Link className="link-white" href="https://t.me/Official_ICP">
+                <Link className="link-white" href="https://t.me/thebigfilecom">
                   <TelegramLogo className="inline-block align-text-bottom mr-2" />
-                  Join the official ICP Telegram Space
+                  Join the official BigFile Telegram Space
                 </Link>
               </motion.p>
             </div>

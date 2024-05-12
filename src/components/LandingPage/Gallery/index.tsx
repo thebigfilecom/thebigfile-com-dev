@@ -44,7 +44,7 @@ const GallerySection = () => {
               className="button-white"
               variants={transitions.item}
             >
-              Explore ICP Community
+              Explore BigFile Community
             </MotionLink>
             <MotionLink
               className="link-white link-with-icon"

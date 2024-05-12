@@ -177,7 +177,7 @@ function WhatIsIcpPage() {
                 <h3 className="tw-lead my-3 md:tw-title-sm">Simple</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
                   The global spend on IT personnel is now $1.8 trillion.
-                  Canister software greatly simplifies the development and
+                  Mars software greatly simplifies the development and
                   maintenance of online systems and services, driving cost
                   savings, and making you faster to market.
                 </p>
@@ -227,7 +227,7 @@ function WhatIsIcpPage() {
                 />
                 <h3 className="tw-lead my-3 md:tw-title-sm">Next-gen AI</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                  The Internet Computer is currently adding support for Web3 “AI
+                  The BigFile is currently adding support for Web3 “AI
                   compute units.” AI will also run on the network, supporting
                   native Web3 integrations, and trustlessness combinations of
                   models and data.
@@ -243,7 +243,7 @@ function WhatIsIcpPage() {
               className="tw-heading-3 md:tw-heading-60 text-center mb-0"
               variants={transitions.item}
             >
-              How is the Internet Computer created by a protocol?
+              How is the BigFile created by a protocol?
             </motion.h2>
           </div>
           <div className=" container-12 flex flex-col gap-16 md:gap-40 relative pt-20">
@@ -278,9 +278,9 @@ function WhatIsIcpPage() {
                 Subnet blockchains
               </h2>
               <p className="tw-lead-sm">
-                The ICP protocol combines node machines into highly efficient
+                The BigFile protocol combines node machines into highly efficient
                 subnet blockchains, which add capacity for hosting tamperproof
-                canisters. The Internet Computer has a permissionless automated
+                canisters. The BigFile has a permissionless automated
                 governance system called the Network Nervous System, which
                 instructs nodes to join or leave subnets.
               </p>
@@ -366,17 +366,17 @@ function WhatIsIcpPage() {
           <div className="flex flex-col gap-16 md:gap-40">
             <TranslatedLayout imageUrl="/img/what-is-the-big-file/internet-identity.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Internet Identity
+                BigFile Wallet
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Internet Identity enables users to quickly and securely
+                BigFile Wallet enables users to quickly and securely
                 authenticate to online systems and services using their devices,
                 for example using their laptop fingerprint sensor, or FaceID on
                 their phone. Under the skin, the framework relies on TPM chips
                 inside modern hardware, which keep keys and signing secure, the
                 WebAuthn protocol, which connects code inside the web browser to
                 those TPMs, and advanced chain-key cryptography running on the
-                Internet Computer network.
+                BigFile network.
               </p>
               <Link
                 className="link-primary link-with-icon"
@@ -418,7 +418,7 @@ function WhatIsIcpPage() {
                 services, closed-source software, and security hardware – there
                 are backdoors enabling spying, and kill switches. With no
                 alternative, governments had to surrender sovereignty over the
-                digital foundations society relies on. Now the Internet Computer
+                digital foundations society relies on. Now the BigFile
                 is adding special localized sovereign subnets for usage by
                 governments, NGOs and enterprises with special needs:
                 unstoppable, secure, and transparent sovereign platform
@@ -440,12 +440,12 @@ function WhatIsIcpPage() {
                 Reverse gas model
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Unlike most EVM compatible blockchains, the Internet Computer
+                Unlike most EVM compatible blockchains, the BigFile
                 uses a reverse gas model. This enables end users to interact
                 with smart contracts without having to setup a wallet, or hold
                 tokens — A standard web browser is all they need. Developers
                 charge their canister smart contracts with 'cycles', the gas on
-                the Internet Computer, which are then burnt to pay for
+                the BigFile, which are then burnt to pay for
                 computation, and memory usage. Such a model allows easy user
                 entry to Web3, and gives developers the flexibility to create
                 custom tokenomics models that meet mass adoption strategies.
@@ -463,8 +463,8 @@ function WhatIsIcpPage() {
                 Native multi-chain
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Canister smart contracts on the Internet Computer are the glue
-                between the world’s most important blockchains. ICP already
+                Canister smart contracts on the BigFile are the glue
+                between the world’s most important blockchains. BigFile already
                 integrates with the Bitcoin Network, and native ETH integration
                 is underway. Inter-chain communication and innovations such as
                 chain-key ECDSA allow canister smart contracts to directly hold,
@@ -521,7 +521,7 @@ function WhatIsIcpPage() {
             />
 
             <CardWithDescription
-              title="ICP community events"
+              title="BigFile community events"
               description=""
               href="https://dfinity.org/events-and-news/"
             />
@@ -531,7 +531,7 @@ function WhatIsIcpPage() {
               href="/docs/current/home"
             />
             <CardWithDescription
-              title="ICP dapps"
+              title="BigFile dapps"
               description=""
               href="/ecosystem"
             />
