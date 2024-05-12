@@ -134,7 +134,7 @@ function ReverseGasModelPage(): JSX.Element {
                   <div className="relative ">
                     <div className="flex gap-6 mb-5 pb-5 md:mb-8 md:pb-8 border-0 border-b border-solid border-black/20 mr-20">
                       <img
-                        src="/img/bf-tokens/icp-token-logo.svg"
+                        src="/img/icp-tokens/icp-token-logo.svg"
                         alt=""
                         loading="lazy"
                         className="w-12 h-12 md:w-16 md:h-16"
@@ -149,7 +149,7 @@ function ReverseGasModelPage(): JSX.Element {
 
                     <div className="flex gap-6">
                       <img
-                        src="/img/bf-tokens/cycles-logo.svg"
+                        src="/img/icp-tokens/cycles-logo.svg"
                         alt=""
                         loading="lazy"
                         className="w-12 h-12 md:w-16 md:h-16"
@@ -236,7 +236,7 @@ function ReverseGasModelPage(): JSX.Element {
             variants={transitions.item}
             className="
                 bg-white/80 border border-white border-solid rounded-xl px-6 py-8 md:p-16 md:col-span-2
-                bg-[url(/img/bf-tokens/ecosystem-mobile.webp)] sm:bg-[url(/img/bf-tokens/ecosystem.webp)]
+                bg-[url(/img/icp-tokens/ecosystem-mobile.webp)] sm:bg-[url(/img/icp-tokens/ecosystem.webp)]
                 bg-[center_bottom_-20px] bg-[length:120%] bg-no-repeat
 
                 sm:bg-[right_-250px_top_-100px] sm:bg-[length:auto_180%]

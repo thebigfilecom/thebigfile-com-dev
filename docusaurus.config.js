@@ -247,7 +247,7 @@ const marketingNav = {
             },
             {
               name: "BF Token",
-              href: "/bf-tokens",
+              href: "/icp-tokens",
               description: "Use native utility token",
             },
             {

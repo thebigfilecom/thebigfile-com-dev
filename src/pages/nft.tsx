@@ -253,7 +253,7 @@ function NftPage() {
 
               <Link
                 className="button-primary"
-                href="/bf-tokens#anchor-wallets"
+                href="/icp-tokens#anchor-wallets"
               >
                 Set up your wallet
               </Link>
