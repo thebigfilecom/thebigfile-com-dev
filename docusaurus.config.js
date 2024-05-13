@@ -203,12 +203,12 @@ const marketingNav = {
               description: "Transforming the internet",
             },
             {
-              name: "ICP as a Bitcoin L2",
+              name: "BigFile as a Bitcoin L2",
               href: "/bitcoin-integration",
               description: "Bringing smart contracts to Bitcoin",
             },
             {
-              name: "ICP as an Ethereum sidechain",
+              name: "BigFile as an Ethereum sidechain",
               href: "/ethereum-integration",
               description: "Native ETH on Internet Computer",
             },
@@ -394,7 +394,7 @@ const marketingNav = {
         },
         {
           label: "Forum",
-          href: "https://forum.dfinity.org/",
+          href: "https://forum.thebigfile.com/",
           iconUrl: "/img/svgIcons/purple/forum.svg",
         },
       ],
@@ -417,7 +417,7 @@ const marketingNav = {
           name: "Get Involved",
           items: [
             {
-              name: "ICP community",
+              name: "BigFile community",
               href: "/community",
               description: "Join the global community",
             },
@@ -645,7 +645,7 @@ const config = {
           {
             items: [
               {
-                label: "ICP Careers",
+                label: "BigFile Careers",
                 href: "https://careers.internetcomputer.org/",
               },
               { label: "Developer Grants", href: "https://dfinity.org/grants" },

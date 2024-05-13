@@ -168,7 +168,7 @@ function AIPage() {
               >
                 Train and run AI models as smart contracts fully onchain to
                 benefit from the security, resilience, and computation power of the
-                ICP blockchain.
+                BigFile blockchain.
               </motion.p>
               {/* <MotionLink
                 className="button-white"
@@ -556,79 +556,13 @@ let result = model.run(tvec!
                 linkLabel="See the post"
               />
             </Link>
-            <Link
-              href="https://www.coindesk.com/consensus-magazine/2023/07/29/crypto-networks-reliant-on-aws-wont-bring-transparency-to-ai/"
-              className="link-primary link-with-icon no-underline cursor-pointer hover:-translate-y-2 transition-transform text-black"
-            >
-              <NewsCard
-                news={{
-                  title:
-                    "AWS-Reliant Blockchains Won’t Bring Transparency to AI",
-                  dateHuman: "Jul 29, 2023",
-                  press: "Dominic Williams",
-                  details: `The rapid progress of artificial intelligence (AI) has captivated the world, with many asking what is next for this technological breakthrough. While AI has already demonstrated its potential to transform various industries...`,
-                  url: "https://www.coindesk.com/consensus-magazine/2023/07/29/crypto-networks-reliant-on-aws-wont-bring-transparency-to-ai/",
-                  imageUrl: "/img/decentralized-ai/news-2.jpg",
-                }}
-                linkLabel="Read Now"
-              />
-            </Link>
 
-            <Link
-              href="https://www.fastcompany.com/91055087/bitcoin-ai-cryptos-gaining-value-cryptocurrency"
-              className="link-primary link-with-icon no-underline cursor-pointer hover:-translate-y-2 transition-transform text-black"
-            >
-              <NewsCard
-                news={{
-                  title: "AI-related crypto are quickly gaining value",
-                  dateHuman: "Nov 03, 2024",
-                  press: "fastcompany.com",
-                  details: `Internet Computer (ICP) is the biggest AI crypto, by a wide margin. It’s a decentralized web platform whose goal is to build a secure network for public use—and it’s using large language models to help achieve that.`,
-                  url: "https://www.fastcompany.com/91055087/bitcoin-ai-cryptos-gaining-value-cryptocurrency",
-                  imageUrl: "/img/decentralized-ai/news-4.jpg",
-                }}
-                linkLabel="Read Now"
-              />
-            </Link>
-            <Link
-              href="https://metanews.com/decentralized-ai-offers-new-hope-for-user-data-security/"
-              className="link-primary link-with-icon no-underline cursor-pointer hover:-translate-y-2 transition-transform text-black"
-            >
-              <NewsCard
-                news={{
-                  title:
-                    "Decentralized AI Offers New Hope for User Data Security",
-                  dateHuman: "March 15, 2024",
-                  press: "metanews.com",
-                  details: `One of the biggest risks with the increased use of AI chatbots like ChatGPT is the emergence of new threats to user data. But some companies are starting to build decentralized AI systems that they hope will make personal data leaks...`,
-                  url: "https://metanews.com/decentralized-ai-offers-new-hope-for-user-data-security/",
-                  imageUrl: "/img/decentralized-ai/news-5.jpg",
-                }}
-                linkLabel="Read Now"
-              />{" "}
-            </Link>
-            <Link
-              href="https://www.cointribune.com/en/dfinity-is-revolutionizing-dapps-with-ai-on-icp/"
-              className="link-primary link-with-icon no-underline cursor-pointer hover:-translate-y-2 transition-transform text-black"
-            >
-              <NewsCard
-                news={{
-                  title: "DFINITY is revolutionizing dApps with AI on ICP!",
-                  dateHuman: "Sat 16 Mar 2024",
-                  press: "cointribune.com",
-                  details: `DFINITY, the foundation behind the innovative Internet Computer Protocol (ICP), has just unveiled a remarkable opportunity for decentralized application (dApp) developers. This new feature involves the ability to integrate OpenAI’s...`,
-                  url: "https://www.cointribune.com/en/dfinity-is-revolutionizing-dapps-with-ai-on-icp/",
-                  imageUrl: "/img/decentralized-ai/news-6.jpg",
-                }}
-                linkLabel="Read Now"
-              />{" "}
-            </Link>
           </div>
         </AnimateSpawn>
 
         <LinkCardsSection
           className="mb-20 md:mb-30 mt-30 md:mt-40"
-          title="Explore AI on ICP"
+          title="Explore AI on BigFile"
           cards={[
             {
               label: "Apply to DeAI Grants",
