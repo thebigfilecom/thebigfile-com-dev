@@ -1190,13 +1190,13 @@ pub enum MultiGetLogsResult {
             variants={transitions.container}
           >
             <CardWithDescription
-              title="ICP as a Bitcoin L2"
+              title="BigFile as a Bitcoin L2"
               description=""
               href="/bitcoin-integration"
             />
 
             <CardWithDescription
-              title="ICP as an Ethereum sidechain"
+              title="BigFile as an Ethereum sidechain"
               description=""
               href="/ethereum-integration"
             />
