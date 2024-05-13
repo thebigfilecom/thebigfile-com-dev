@@ -217,7 +217,7 @@ const PromoCard = () => {
         </p>
         <Link
           className="button-white text-center"
-          href="https://github.com/dfinity/portal/tree/master#showcase-submission-guidelines"
+          href="https://github.com/thebigfilecom/thebigfile-com-dev/tree/main#showcase-submission-guidelines"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -232,10 +232,10 @@ const ReportCard = () => {
   return (
     <div className="rounded-xl  text-white flex px-6 py-8 backdrop-blur-2xl bg-[#240d4e]">
       <div className="flex flex-col gap-2">
-        <h3 className="tw-title-sm mb-0">ICP Ecosystem Report</h3>
+        <h3 className="tw-title-sm mb-0">BigFile Ecosystem Report</h3>
         <p className="tw-paragraph text-white/60 flex-1 mb-12">
-          The first ICP ecosystem report recaps the most substantial ecosystem
-          achievements from 2023 as well as zooms in on several success stories
+          The first BigFile ecosystem report recaps the most substantial ecosystem
+          achievements from 2024 as well as zooms in on several success stories
           from within the ecosystem.
         </p>
         <Link
@@ -308,9 +308,9 @@ function ShowcasePage(): JSX.Element {
 
   return (
     <Layout
-      title="ICP Ecosystem"
-      description="Explore a showcase of curated projects built by the Internet Computer ecosystem. This continually growing list features the newest projects, all built with blockchain. Try out decentralized social media, dapps and more. Only possible on the IC. "
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      title="BigFile Ecosystem"
+      description="Explore a showcase of curated projects built by the BigFile ecosystem. This continually growing list features the newest projects, all built with blockchain. Try out decentralized social media, dapps and more. Only possible on the BIG. "
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-showcase.jpg"></ShareMeta>
       <main
@@ -328,7 +328,7 @@ function ShowcasePage(): JSX.Element {
             <div className="blob blob-white blob-x-5 md:blob-x-9 blob-y-8 blob-md md:blob-lg"></div>
 
             <h1 className="md:tw-heading-2 mb-8 md:mb-10 relative">
-              Enter the <br className="md:hidden" /> ICP ecosystem
+              Enter the <br className="md:hidden" /> BigFile ecosystem
             </h1>
             <div className="flex overflow-auto -mx-6 px-6 pb-4 md:mx-0 md:overflow-visible md:m-0 md:p-0 md:flex-wrap gap-3 relative light-pills-scrollbar ">
               {/* <button className="rounded-full px-3 appearance-none border-solid border border-[#d2d2d2] hover:text-white  hover:bg-infinite  hover:border-transparent flex items-center">
@@ -386,7 +386,7 @@ function ShowcasePage(): JSX.Element {
             </p>
             <p className="mb-0">
               <Link
-                href="https://github.com/dfinity/portal/tree/master#showcase-submission-guidelines"
+                href="https://github.com/thebigfilecom/thebigfile-com-dev/tree/main#showcase-submission-guidelines"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-primary link-with-icon"
@@ -398,7 +398,7 @@ function ShowcasePage(): JSX.Element {
           </div>
           <div className="tw-paragraph-sm text-black-60 md:w-3/10">
             <span className="text-black">Do your own research:</span> All of
-            these dapps are using the novel Internet Computer blockchain. Use
+            these dapps are using the novel BigFile blockchain. Use
             the following projects at your own risk. As always, do your own
             research.
           </div>
