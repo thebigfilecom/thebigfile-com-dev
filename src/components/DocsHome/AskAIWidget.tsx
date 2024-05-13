@@ -35,7 +35,7 @@ export function AskAIWidget() {
           <span className={"flex-1 flex flex-col items-center"}>
             <BrainIcon className={"md:text-white"} />
           </span>
-          <span className={"hidden md:block font-bold"}>Ask ICP.AI</span>
+          <span className={"hidden md:block font-bold"}>Ask FILE.AI</span>
         </button>
       </>
     )
