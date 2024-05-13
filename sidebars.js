@@ -9,8 +9,8 @@ const sidebars = {
       items: [
         {
           type: "doc",
-          label: "Overview of ICP",
-          id: "developer-docs/getting-started/overview-of-icp",
+          label: "Overview of BigFile",
+          id: "developer-docs/getting-started/overview-of-bigfile",
         },
         {
           type: "doc",
