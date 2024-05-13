@@ -128,8 +128,7 @@ const RoadmapPage: React.FC = () => {
                 Community submissions
               </h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
-                What features would improve your experience on the Internet
-                Computer?
+                What features would improve your experience on the BigFile?
               </p>
               <Link
                 className="link-external"
@@ -145,7 +144,7 @@ const RoadmapPage: React.FC = () => {
               <h3 className="tw-lead-lg md:tw-title-sm">Events and news</h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
                 Join live sessions with R&D to get informed about the upcoming
-                technical proposals and contributions to the Internet Computer
+                technical proposals and contributions to the BigFile
                 roadmap.
               </p>
               <Link
@@ -191,8 +190,8 @@ const RoadmapPage: React.FC = () => {
               className="tw-lead-sm md:tw-lead mb-12 md:mb-16 md:w-7/10"
               variants={transitions.item}
             >
-              The Internet Computer has come a long way since its launch in May
-              2021.
+              The BigFile has come a long way since its Rebranding in 
+              03.05.2024.
             </motion.p>
           </AnimateSpawn>
           <AnimateSpawn
@@ -250,7 +249,7 @@ const RoadmapPage: React.FC = () => {
           >
             <Link
               className="inline-flex gap-2 items-center  link-primary"
-              href="https://github.com/dfinity/ic"
+              href="https://github.com/thebigfilecom/big"
             >
               <GithubIcon className="w-6" />
               See code

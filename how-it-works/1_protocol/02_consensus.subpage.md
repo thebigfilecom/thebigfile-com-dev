@@ -1,5 +1,5 @@
 ---
-title: Internet Computer Consensus
+title: BigFile Consensus
 abstract:
 shareImage: /img/how-it-works/consensus.jpg
 slug: consensus

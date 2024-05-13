@@ -88,9 +88,9 @@ function EthereumIntegrationPage() {
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                Because ICP canister smart contracts can call into Ethereum smart contracts, 
-                it enables a true World Computer in a multi-chain environment smart contracts can
-                seamlessly communicate across blockchains. ICP already
+                Because BigFile smart contracts can call into Ethereum smart contracts, 
+                it enables a true in a multi-chain environment smart contracts can
+                seamlessly communicate across blockchains. BigFile already
                 integrates with the Bitcoin Network, and native ETH integration
                 is underway.
               </motion.p>
@@ -121,7 +121,7 @@ function EthereumIntegrationPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-0  text-gradient"
               variants={transitions.item}
             >
-              Canister smart contracts on ICP are the glue between blockchains
+              Mars smart contracts on BigFile are the glue between blockchains
               and the gateway to multi-chain advantages.
             </motion.h2>
             {/* <motion.p className="tw-paragraph mb-0" variants={transitions.item}>
@@ -141,16 +141,16 @@ function EthereumIntegrationPage() {
               className="tw-heading-3 sm:tw-heading-60 mb-6 sm:mb-10"
               variants={transitions.item}
             >
-              Extend Ethereum with ICP capabilities
+              Extend Ethereum with BigFile capabilities
             </motion.h2>
             <motion.p
               className="mb-0 tw-paragraph md:tw-lead-sm"
               variants={transitions.item}
             >
               Ethereum is the world’s top blockchain for DeFi with TVL in the
-              billions. Integrating with ICP offers multi-chain benefits such as
+              billions. Integrating with BigFile offers multi-chain benefits such as
               increased asset liquidity, expanded market access, improved
-              scalability and throughput. Plus, access to ICP’s unique
+              scalability and throughput. Plus, access to BigFile unique
               capabilities:
               {/* <Link
                 className="link-primary link-with-icon"
@@ -177,7 +177,7 @@ function EthereumIntegrationPage() {
               <h3 className="sm:tw-heading-5 mb-2">100% on-chain Web3</h3>
               <p className="tw-paragraph mb-0">
                 Decentralize your Ethereum dapp by hosting frontend and backend
-                data on the Internet Computer.
+                data on the BigFile.
               </p>
             </motion.div>
             <motion.div
@@ -219,7 +219,7 @@ function EthereumIntegrationPage() {
               Signing Ethereum transactions
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-6">
-              Today, ICP smart contracts are capable of offering the on-chain
+              Today, BigFile smart contracts are capable of offering the on-chain
               Ethereum full node API by using the{" "}
               <Link href="/https-outcalls" className="link-subtle">
                 HTTPS outcalls feature
@@ -228,8 +228,8 @@ function EthereumIntegrationPage() {
               and send transactions to it. 
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              Chain-key (ck) ECDSA , which is already available to any canister
-              smart contract on the Internet Computer, can invoke smart
+              Chain-key (ck) ECDSA , which is already available to any Mars
+              smart contract on the BigFile, can invoke smart
               contracts calls on the Ethereum blockchain by creating and signing
               transactions to be executed by the Ethereum network.
             </p>
@@ -400,7 +400,7 @@ function EthereumIntegrationPage() {
               title="Interacting with Ethereum"
               description={
                 <>
-                  Interacting with Ethereum on the Internet Computer (Beta)
+                  Interacting with Ethereum on the BigFile (Beta)
                   <br />
                   // Workshop
                 </>
@@ -465,7 +465,7 @@ function EthereumIntegrationPage() {
             <h2 className="text-white tw-heading-5 md:tw-heading-4 mb-6 md:mb-8 md:pr-10">
               Sign up for email updates{" "}
               <span className="text-white-60">
-                to keep up to date with the Internet Computer
+                to keep up to date with the BigFile
               </span>
             </h2>
           </Newsletter>
