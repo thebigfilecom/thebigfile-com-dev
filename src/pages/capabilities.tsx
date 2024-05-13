@@ -352,7 +352,7 @@ function FeaturesPage() {
                   className="tw-heading-6 flex gap-2 items-center text-white hover:text-white-60 hover:no-underline"
                 >
                   <RightPointer className="w-6 h-6"></RightPointer>
-                  Identity on ICP
+                  Wallet on BigFile
                 </Link>
               </motion.p>
             </div>

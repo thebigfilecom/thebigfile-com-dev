@@ -382,7 +382,7 @@ function WhatIsIcpPage() {
                 className="link-primary link-with-icon"
                 href="/internet-identity"
               >
-                <LinkArrowRight /> Identity on ICP
+                <LinkArrowRight /> Wallet on BigFile
               </Link>
             </TranslatedLayout>
             <TranslatedLayout
