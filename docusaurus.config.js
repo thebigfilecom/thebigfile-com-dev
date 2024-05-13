@@ -448,7 +448,7 @@ const marketingNav = {
 
       socialIcons: [
         {
-          label: "IC Forum",
+          label: "BigFile Forum",
           href: "https://forum.dfinity.org/",
           iconUrl: "/img/svgIcons/purple/forum.svg",
         },
@@ -548,7 +548,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           remarkPlugins: [math, simplePlantUML, require("remark-code-import")],
           rehypePlugins: [katex],
-          editUrl: "https://github.com/dfinity/portal/edit/master/",
+          editUrl: "https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/",
         },
         blog: {
           path: "blog",
