@@ -21,7 +21,7 @@ const redirects = `
   /docs /docs/current/home
   /docs/current/ /docs/current/home
   /docs/current/concepts/bitcoin-integration /bitcoin-integration
-  /docs/current/developer-docs/ic-overview /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/current/developer-docs/ic-overview /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/production/computation-and-storage-costs /docs/current/developer-docs/gas-cost
   /docs/current/developer-docs/deploy/computation-and-storage-costs /docs/current/developer-docs/gas-cost
   /docs/current/ic-overview  /docs/current/home
@@ -91,7 +91,7 @@ const redirects = `
   /docs/developers-guide/about-this-guide /docs/current/motoko/main/getting-started/motoko-introduction
   /docs/developers-guide/basic-syntax-rules /docs/current/motoko/main/reference/language-manual
   /docs/developers-guide/concepts/bitcoin-integration /bitcoin-integration
-  /docs/developers-guide/concepts/concepts-intro /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/developers-guide/concepts/concepts-intro /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/developers-guide/customize-projects /docs/current/developer-docs/smart-contracts/compile
   /docs/developers-guide/default-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
   /docs/developers-guide/design-apps /docs/current/developer-docs/web-apps/design-dapps
@@ -139,7 +139,7 @@ const redirects = `
   /docs/current/tokenomics/nns/community-fund /docs/current/developer-docs/daos/nns/neurons-fund
   /docs/current/tokenomics/sns/* /docs/current/developer-docs/daos/sns/tokenomics/:splat
   /docs/developers-guide/cli-reference/* /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/:splat
-  /docs/developers-guide/concepts/* /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/developers-guide/concepts/* /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/developers-guide/tutorials/* /docs/current/motoko/main/getting-started/motoko-introduction
   /docs/ic-identity-guide/* /docs/current/tokenomics/identity-auth/:splat
   /docs/language-guide/* /docs/current/motoko/main/:splat
@@ -170,11 +170,11 @@ const redirects = `
   /docs/developers-guide/tutorials-intro.html /docs/current/tutorials/developer-journey/
   /docs/quickstart/quickstart.html /docs/current/developer-docs/getting-started/install/
   /apis/site/proxy /docs/current/references/http-gateway-protocol-spec
-  /docs/developers-guide/concepts/what-is-ic /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/developers-guide/concepts/what-is-ic /docs/current/developer-docs/getting-started/overview-of-bigfile
   /language-guide/index /docs/current/tutorials/developer-journey/level-0/intro-languages
   /docs/current/developer-docs/production/instruction-limits /docs/current/developer-docs/smart-contracts/maintain/resource-limits
   /docs/current/developer-docs/backend/resource-limits /docs/current/developer-docs/smart-contracts/maintain/resource-limits
-  /docs/current/concepts/data-centers /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/current/concepts/data-centers /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/build/languages/rust/rust-intro /docs/current/developer-docs/backend/rust/
   /docs/current/developer-docs/build/languages/motoko /docs/current/motoko/main/getting-started/motoko-introduction
   /docs/current/developer-docs/integrations/sns/launching/launch-summary /docs/current/developer-docs/daos/sns/launching/launch-summary-1proposal
@@ -185,27 +185,27 @@ const redirects = `
   /docs/current/developer-docs/frontend/vue-frontend /docs/current/developer-docs/web-apps/application-frontends/overview
   /docs/current/developer-docs/setup/cycles/index /docs/current/developer-docs/getting-started/cycles/cycles-wallet
   /docs/current/developer-docs/setup/cycles /docs/current/developer-docs/getting-started/cycles/cycles-wallet
-  /docs/current/concepts/index /docs/current/developer-docs/getting-started/overview-of-icp
-  /docs/current/concepts /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/current/concepts/index /docs/current/developer-docs/getting-started/overview-of-bigfile
+  /docs/current/concepts /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/backend/candid/index /docs/current/developer-docs/smart-contracts/candid/candid-concepts
   /docs/current/developer-docs/integrations/https-outcalls/index /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-how-to-use
   /docs/current/developer-docs/integrations/https-outcalls /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-how-to-use
   /docs/current/developer-docs/security/index /docs/current/developer-docs/security/general-security-best-practices
   /docs/current/developer-docs/security /docs/current/developer-docs/security/general-security-best-practices
-  /docs/current/developer-docs/integrations/index /docs/current/developer-docs/getting-started/overview-of-icp
-  /docs/current/developer-docs/integrations /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/current/developer-docs/integrations/index /docs/current/developer-docs/getting-started/overview-of-bigfile
+  /docs/current/developer-docs/integrations /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/setup/index /docs/current/developer-docs/getting-started/install/
   /docs/current/developer-docs/setup /docs/current/developer-docs/getting-started/install/
   /docs/current/developer-docs/setup/quickstart /docs/current/developer-docs/getting-started/install/
-  /docs/current/tutorials/index /docs/current/developer-docs/getting-started/overview-of-icp
-  /docs/current/tutorials/ /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/current/tutorials/index /docs/current/developer-docs/getting-started/overview-of-bigfile
+  /docs/current/tutorials/ /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/backend/eu-subnets /docs/current/concepts/subnet-types
   /docs/current/samples/* /docs/current/samples/overview
   /docs/current/developer-docs/backend/choosing-language /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/production/deploying-and-upgrading /docs/current/developer-docs/smart-contracts/deploy/overview
-  /docs/current/developer-docs/index /docs/current/developer-docs/getting-started/overview-of-icp
-  /docs/current/developer-docs /docs/current/developer-docs/getting-started/overview-of-icp
-  /docs/current/concepts/what-is-ic /docs/current/developer-docs/getting-started/overview-of-icp
+  /docs/current/developer-docs/index /docs/current/developer-docs/getting-started/overview-of-bigfile
+  /docs/current/developer-docs /docs/current/developer-docs/getting-started/overview-of-bigfile
+  /docs/current/concepts/what-is-ic /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/setup/development-workflow /docs/current/developer-docs/getting-started/development-workflow
   /docs/current/developer-docs/setup/hello-world /docs/current/developer-docs/getting-started/hello-world
   /docs/current/developer-docs/setup/install/ /docs/current/developer-docs/getting-started/install/
