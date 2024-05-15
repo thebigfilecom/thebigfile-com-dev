@@ -134,7 +134,7 @@ function ReverseGasModelPage(): JSX.Element {
                   <div className="relative ">
                     <div className="flex gap-6 mb-5 pb-5 md:mb-8 md:pb-8 border-0 border-b border-solid border-black/20 mr-20">
                       <img
-                        src="/img/icp-tokens/icp-token-logo.svg"
+                        src="/img/icp-tokens/bf-token-logo.svg"
                         alt=""
                         loading="lazy"
                         className="w-12 h-12 md:w-16 md:h-16"

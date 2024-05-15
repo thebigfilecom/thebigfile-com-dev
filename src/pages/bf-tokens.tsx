@@ -83,8 +83,8 @@ function TokenHolders(): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
       <Layout
-        title="ICP Tokens"
-        description="ICP, the native utility token of the Internet Computer powers computation, staking, voting, governance and ownership."
+        title="BF Tokens"
+        description="BF, the native utility token of the Internet Computer powers computation, staking, voting, governance and ownership."
         editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
       >
         <main className="overflow-hidden">
@@ -101,13 +101,13 @@ function TokenHolders(): JSX.Element {
                   className="tw-heading-3 md:tw-heading-2 mb-8 md:mb-6 relative"
                   variants={transitions.item}
                 >
-                  Understanding the ICP token{" "}
+                  Understanding the BF token{" "}
                 </motion.h1>
                 <motion.p
                   className="tw-lead-sm md:tw-lead mb-0 relative"
                   variants={transitions.item}
                 >
-                  Engage with the Internet Computer and its ecosystem through
+                  Engage with the BigFile and its ecosystem through
                   the use of its native utility token.
                 </motion.p>
               </div>
@@ -138,28 +138,28 @@ function TokenHolders(): JSX.Element {
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                The ICP token plays a number of roles on the Internet Computer.
+                The BF token plays a number of roles on the BigFile.
                 Firstly, as a governance token, it can be staked to exercise
                 those governance rights. As a utility token, it can be burned to
                 obtain ‘cycles‘ which serves as gas for computation and storage
-                in canister smart contracts. It can also be minted to reward
+                in Mars smart contracts. It can also be minted to reward
                 ‘node machine‘ providers for providing that compute and storage.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                In addition to these core uses, ICP tokens can be used to
+                In addition to these core uses, BF tokens can be used to
                 participate in decentralisation swaps to become a co-owner of an
                 SNS DAO, and when using many smart contract services built on
-                the Internet Computer such as registries, marketplaces and
+                the BigFile such as registries, marketplaces and
                 exchanges.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-0"
                 variants={transitions.item}
               >
-                The ICP token implements the ICRC-1 standard.
+                The BF token implements the BFRC-20 standard.
               </motion.p>
             </div>
             <div className="flex flex-col gap-5 md:flex-row md:w-8/10">
@@ -169,13 +169,13 @@ function TokenHolders(): JSX.Element {
               >
                 <h3 className="inline-flex items-center gap-3 mb-6">
                   <img
-                    src="/img/icp-tokens/icp-token-logo.svg"
+                    src="/img/icp-tokens/bf-token-logo.svg"
                     alt="ICP logo"
                     loading="lazy"
                     className="w-16 h-16"
                   />
                   <span className="flex-1 text-gradient tw-heading-5">
-                    ICP token utility
+                    BF token utility
                   </span>
                 </h3>
                 <ul className="checklist space-y-3 mb-0">
@@ -277,7 +277,7 @@ function TokenHolders(): JSX.Element {
               variants={transitions.item}
             >
               <h2 className="tw-heading-3 mb-0 md:tw-heading-60">
-                Ways to use ICP tokens
+                Ways to use BF tokens
               </h2>
             </AnimateSpawn>
             <div className="container-12 grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -289,8 +289,8 @@ function TokenHolders(): JSX.Element {
                   Participate in governance
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                  The Internet Computer Protocol is run by the NNS, the largest
-                  DAO managing an L1 blockchain. ICP token holders can
+                  The BigFile is run by the NNS, the largest
+                  DAO managing an L1 blockchain. BF token holders can
                   participate in network governance simply by staking tokens in
                   neurons and locking them with a specified dissolve delay (time
                   to unlock). A neuron with a dissolve delay greater than 6
@@ -351,12 +351,12 @@ function TokenHolders(): JSX.Element {
               >
                 <div className="sm:w-6/10 lg:w-4/10">
                   <h3 className="tw-heading-5 md:tw-heading-4 mb-6">
-                    Use ICP in the ecosystem
+                    Use BF in the ecosystem
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                    Store ICP in wallets, swap it on DEXs, collect NFTs or tip
-                    friends while chatting. The Internet Computer is home to a
-                    growing ecosystem of dapps, many of which use ICP.
+                    Store BF in wallets, swap it on DEXs, collect NFTs or tip
+                    friends while chatting. The BigFile is home to a
+                    growing ecosystem of dapps, many of which use BF.
                   </p>
                   <p className="pb-[100%] sm:pb-0 mb-0">
                     <Link
@@ -385,14 +385,14 @@ function TokenHolders(): JSX.Element {
               className="tw-heading-3 md:tw-heading-60 mb-8"
               variants={transitions.item}
             >
-              Where to get ICP{" "}
+              Where to get BF{" "}
             </motion.h2>
             <motion.p className="tw-lead mb-8" variants={transitions.item}>
-              The ICP token is widely available on centralized exchanges.
+              The BF token is widely available on centralized exchanges.
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
-                href="https://coinmarketcap.com/currencies/internet-computer/markets/"
+                href="https://coinmarketcap.com/currencies/"
                 className="button-outline-white"
               >
                 Complete list on CoinMarketCap
@@ -411,15 +411,15 @@ function TokenHolders(): JSX.Element {
                   className="tw-heading-4 md:tw-heading-3 mb-10"
                   variants={transitions.item}
                 >
-                  Swap BTC for ICP on a DEX.
+                  Swap BTC for BF on a DEX.
                 </motion.h2>
                 <motion.p
                   className="tw-paragraph md:tw-lead-sm mb-0"
                   variants={transitions.item}
                 >
-                  Directly fund a ckBTC wallet with BTC and swap it for ICP
+                  Directly fund a ckBTC wallet with BTC and swap it for BF
                   using any of these DEXs — all without centralized exchanges.
-                  This was made possible on the Internet Computer through native{" "}
+                  This was made possible on the BigFile through native{" "}
                   <Link
                     className="text-white hover:text-white underline hover:cursor-pointer"
                     href="/bitcoin-integration"
@@ -504,7 +504,7 @@ function TokenHolders(): JSX.Element {
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
                   className="link-primary link-with-icon"
-                  href="https://wiki.internetcomputer.org/wiki/ICP_custody_options"
+                  href="https://wiki.thebigfile.com/wiki/ICP_custody_options"
                 >
                   Learn more about custody options <LinkArrowUpRight />
                 </Link>
@@ -519,7 +519,7 @@ function TokenHolders(): JSX.Element {
                 <h3 className="tw-heading-5 mb-6">Web Wallets</h3>
                 <p className="tw-paragraph text-black/60 mb-8">
                   Web-based dapps that are easily accessible with the creation
-                  of an Internet Identity. Great for daily use and small amount
+                  of an BIG Wallet. Great for daily use and small amount
                   transfers.
                 </p>
                 <div className="space-y-4">
@@ -697,7 +697,7 @@ function TokenHolders(): JSX.Element {
                   Participate in SNS DAOs
                 </h3>
                 <p className="tw-paragraph-sm mb-3 text-black/60">
-                  Own a piece of your favorite dapps on the Internet Computer,
+                  Own a piece of your favorite dapps on the BigFile,
                   and shape their development by participating in governance.
                 </p>
                 <p className="mb-0">
@@ -712,16 +712,16 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-lead-lg md:tw-title-sm mb-3">
-                  DeFi on the Internet Computer
+                  DeFi on the BigFile
                 </h3>
                 <p className="tw-paragraph-sm mb-3 text-black/60">
-                  Build and use DeFi apps on the Internet Computer that are
+                  Build and use DeFi apps on the BigFile that are
                   hosted 100% on the blockchain.
                 </p>
                 <p className="mb-0">
                   <Link href="/defi" className="link-primary link-with-icon">
                     <LinkArrowRight />
-                    DeFi on ICP
+                    DeFi on BF
                   </Link>
                 </p>
               </motion.div>
@@ -730,10 +730,10 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-lead-lg md:tw-title-sm mb-3">
-                  Join the ICRC conversation
+                  Join the BFRC conversation
                 </h3>
                 <p className="tw-paragraph-sm mb-3 text-black/60">
-                  Community discussions around extending the ICRC token standard
+                  Community discussions around extending the BFRC token standard
                   for all ledgers to optimize functionality is ongoing.
                 </p>
                 <p className="mb-0">

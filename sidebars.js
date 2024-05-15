@@ -609,7 +609,7 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "ICP tokens",
+          label: "BF tokens",
           items: [
             "developer-docs/defi/icp-tokens/overview",
             "developer-docs/defi/icp-tokens/ledger-local-setup",
