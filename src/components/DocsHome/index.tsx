@@ -44,7 +44,7 @@ const DocsHomePage: FC = () => {
             <p className="mb-0">
               <Link
                 className="button-white button-with-icon"
-                href="/docs/current/developer-docs/getting-started/overview-of-icp"
+                href="/docs/current/developer-docs/getting-started/overview-of-bigfile"
               >
                 Start building
                 <LinkArrowRight />
