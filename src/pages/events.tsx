@@ -122,8 +122,8 @@ function GlobalEventsPage() {
 
   return (
     <Layout
-      title="Global ICP Events"
-      description="Immerse yourself in the Internet Computer community! Connect with ICP enthusiasts worldwide with cutting-edge community events."
+      title="Global BigFile Events"
+      description="Immerse yourself in the Internet Computer community! Connect with BigFile enthusiasts worldwide with cutting-edge community events."
       editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-events.jpg"></ShareMeta>
@@ -147,14 +147,14 @@ function GlobalEventsPage() {
                   className="tw-heading-3 md:tw-heading-2 mb-2 md:mb-6"
                   variants={transitions.item}
                 >
-                  Global ICP Events
+                  Global BigFile Events
                 </motion.h1>
                 <motion.p
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  Immerse yourself in the Internet Computer community! Connect
-                  with ICP enthusiasts worldwide with cutting-edge community
+                  Immerse yourself in the BigFile community! Connect
+                  with BigFile enthusiasts worldwide with cutting-edge community
                   events.
                 </motion.p>
               </div>
@@ -262,7 +262,7 @@ function GlobalEventsPage() {
             >
               Welcome to the most dynamic and innovative Web3 community in the
               World. Join an inspiring tribe of creators, builders & educators
-              in a journey toward the adoption of the Internet Computer as the
+              in a journey toward the adoption of the BigFile as the
               default blockchain.
             </motion.p>
           </AnimateSpawn>
@@ -277,7 +277,7 @@ function GlobalEventsPage() {
             >
               <h3 className="tw-lead-lg md:tw-title-sm">Event submission</h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
-                Want to create your own event for the internet computer, submit
+                Want to create your own event for the BigFile, submit
                 your information to create an event where you'll find fantastic
                 places to gather, socialize, celebrate, expand your knowledge,
                 and form lasting bonds with fellow visionaries.

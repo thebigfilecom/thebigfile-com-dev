@@ -24,7 +24,7 @@ function NnsPage() {
       title="Network Nervous System (NNS)"
       // fill in meta description
       description="The NNS is one of the world's largest DAOs that governs the Internet Computer."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <Head>
         <meta
@@ -53,13 +53,13 @@ function NnsPage() {
                   variants={transitions.item}
                 >
                   The NNS is one of the world's largest DAOs that governs the
-                  Internet Computer. It is a 100% on-chain, permissionless
-                  system that continuously upgrades the Internet Computer based
-                  on the voting of ICP token holders.
+                  BigFile. It is a 100% on-chain, permissionless
+                  system that continuously upgrades the BigFile based
+                  on the voting of BF token holders.
                 </motion.p>
                 <MotionLink
                   className="button-white"
-                  href="https://nns.ic0.app"
+                  href="https://nns.thebigfile.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   variants={transitions.item}
@@ -100,16 +100,16 @@ function NnsPage() {
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                The Internet Computer doesn’t require complicated forks to
+                The BigFile doesn’t require complicated forks to
                 upgrade its capacity. Anyone can submit a proposal to make
-                protocol level changes. Once approved by ICP token holders,
+                protocol level changes. Once approved by BF token holders,
                 these changes are automatically deployed by the NNS, seamlessly
-                upgrading the network. For participating in governance, ICP
+                upgrading the network. For participating in governance, BF
                 token holders receive voting rewards.
               </motion.p>
               <MotionLink
                 className="link-external"
-                href="https://wiki.internetcomputer.org/wiki/Network_Nervous_System"
+                href="https://wiki.thebigfile.com/wiki/Network_Nervous_System"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={transitions.item}
@@ -125,7 +125,7 @@ function NnsPage() {
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                Anyone can participate in governance by simply sending ICP to
+                Anyone can participate in governance by simply sending BF to
                 the NNS and staking it in neurons. These neurons have to be
                 locked for a specific time between 6 months and 8 years to be
                 eligible for voting and earning voting rewards.
@@ -141,7 +141,7 @@ function NnsPage() {
               </motion.p>
               <MotionLink
                 className="button-primary"
-                href="https://nns.ic0.app"
+                href="https://nns.thebigfile.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={transitions.item}
@@ -158,7 +158,7 @@ function NnsPage() {
                 variants={transitions.item}
               >
                 Voting rewards are distributed among participants who have
-                locked ICP in neurons and are voting either manually or follow
+                locked BF in neurons and are voting either manually or follow
                 other neurons that vote. Rewards are distributed daily to voting
                 neurons as maturity. This maturity is unrealized ICP that can be
                 either staked or spawned. Staking maturity adds to the voting
@@ -196,7 +196,7 @@ function NnsPage() {
               className="tw-paragraph md:tw-lead mb-0"
             >
               Get a high-level overview of how to participate in governance,
-              from acquiring ICP tokens to staking and voting.
+              from acquiring BF tokens to staking and voting.
             </motion.p>
           </div>
           <motion.div variants={transitions.item}>
@@ -235,7 +235,7 @@ function NnsPage() {
             <MotionLink
               variants={transitions.item}
               className="button-white"
-              href="https://nns.ic0.app"
+              href="https://nns.thebigfile.com"
               target="_blank"
               rel="noopener noreferrer"
             >
