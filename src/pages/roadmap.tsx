@@ -38,7 +38,7 @@ const RoadmapPage: React.FC = () => {
     <Layout
       title="Roadmap"
       description="The BigFile is committing R&D resources in various domains of development with the intent of making the BigFile blockchain more efficient, faster and easier to use. This roadmap shows the status of many projects across the BigFile stack."
-      editPath="https://github.com/dfinity/portal/tree/master/roadmap"
+      editPath="https://github.com/thebigfilecom/thebigfile-com-dev/tree/main/roadmap"
     >
       <ShareMeta image="/img/shareImages/share-roadmap.webp"></ShareMeta>
 
@@ -160,14 +160,13 @@ const RoadmapPage: React.FC = () => {
             >
               <h3 className="tw-lead-lg md:tw-title-sm">Developer grants</h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
-                Do you have innovative ideas for building on the Internet
-                Computer and need funding to launch your project? The DFINITY
+                Do you have innovative ideas for building on the BigFile and need funding to launch your project? The BigFile
                 Developer Grant Program provides support to promising developers
                 around the globe.
               </p>
               <Link
                 className="link-external"
-                href="https://dfinity.org/grants/"
+                href="https://thebigfile.com/grants/"
               >
                 Apply for grants
               </Link>
