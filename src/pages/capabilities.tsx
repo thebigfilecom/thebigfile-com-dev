@@ -217,11 +217,11 @@ caused a major chain to hard fork and a loss of 60 million USD.`,
 function FeaturesPage() {
   return (
     <Layout
-      title="World Computer capabilities"
-      description="The Internet Computer is 'alien tech' crypto. It extends the
+      title="BigFile capabilities"
+      description="The BigFile is 'alien tech' crypto. It extends the
     internet by smashing through historical limitations, unlocking new capabilities
     for Web3 and the world..."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-features.jpg"></ShareMeta>
 
@@ -237,14 +237,14 @@ function FeaturesPage() {
                 className="tw-heading-3 md:tw-heading-2 mb-6"
                 variants={transitions.item}
               >
-                World Computer capabilities
+                BigFile capabilities
               </motion.h1>
               <motion.p
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                The Internet Computer provides numerous unique capabilities that
-                enable it to play the role of World Computer, provide a
+                The BigFile provides numerous unique capabilities that
+                enable it to play the role of BigFile, provide a
                 foundation for transforming the internet, and deliver
                 opportunity to builders and users.
               </motion.p>
@@ -277,7 +277,7 @@ function FeaturesPage() {
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              The Internet Computer combines several innovations to provide web
+              The BigFile combines several innovations to provide web
               experiences often indistinguishable from Web2 — all directly from
               the blockchain.{" "}
             </motion.p>
@@ -333,13 +333,13 @@ function FeaturesPage() {
                 variants={transitions.item}
                 className="tw-heading-4 md:tw-heading-3 mb-4 "
               >
-                Internet Identity — Web3 auth using WebAuthn
+                BIG Wallet — Web3 auth using WebAuthn
               </motion.h3>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm  mb-6 text-white-80"
                 variants={transitions.item}
               >
-                The Internet Computer blockchain has replaced the username and
+                The BigFile blockchain has replaced the username and
                 password model with a more advanced and much more secure method
                 of cryptographic authentication that is more convenient, works
                 across all of a user's devices, and helps protect user privacy.
