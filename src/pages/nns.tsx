@@ -118,7 +118,7 @@ function NnsPage() {
               </MotionLink>
             </TranslatedCard>
             <TranslatedCard
-              title="Help govern the Internet Computer"
+              title="Help govern the BigFile"
               icon={<IconGovern aria-hidden="true" />}
             >
               <motion.p
