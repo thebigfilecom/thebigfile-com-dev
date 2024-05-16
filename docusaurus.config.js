@@ -210,7 +210,7 @@ const marketingNav = {
             {
               name: "BigFile as an Ethereum sidechain",
               href: "/ethereum-integration",
-              description: "Native ETH on Internet Computer",
+              description: "Native ETH on BigFile",
             },
             {
               name: "HTTPS Outcalls",
@@ -247,7 +247,7 @@ const marketingNav = {
             },
             {
               name: "BF Token",
-              href: "/icp-tokens",
+              href: "/bf-tokens",
               description: "Use native utility token",
             },
             {
