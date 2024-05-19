@@ -354,7 +354,7 @@ const marketingNav = {
             {
               name: "Motoko Playground",
               href: "https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/",
-              description: "Learn the ICP native language",
+              description: "Learn the BigFile native language",
             },
             {
               name: "Programming languages",
