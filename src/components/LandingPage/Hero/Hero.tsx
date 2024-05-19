@@ -66,8 +66,8 @@ const Hero: React.FC<{
             variants={transitions.container}
           >
             <QueryClientProvider client={queryClient}>
-              <EthEquivalentTxRate />
-              <TotalBlocks />
+              {/* <EthEquivalentTxRate /> */}
+              {/* <TotalBlocks /> */}
               <SmartContractMemory />
               <LiveStats />
             </QueryClientProvider>

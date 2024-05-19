@@ -29,6 +29,8 @@ function getFigureSpacer(value) {
   return scheme.slice(scheme.length - valueDigitCountWithApostrophes);
 }
 
+// TotalBlocks bileşenini kaldırdık
+/*
 export const TotalBlocks = () => {
   const blockInfoQuery = useQuery(["blockRate"], () =>
     Promise.all([getBlockCount(), getBlockRate()])
@@ -40,7 +42,6 @@ export const TotalBlocks = () => {
       variants={transitions.fadeIn}
     >
       <figure className="m-0">
-        {/* <div className="mb-2 inline-grid relative left-1"> */}
         {blockInfoQuery.isFetched && blockInfoQuery.isSuccess ? (
           <>
             <ConstantRateCounter
@@ -49,15 +50,10 @@ export const TotalBlocks = () => {
               format={formatNumber}
               className="col-start-1 row-start-1 text-left"
             ></ConstantRateCounter>
-            {/* <span className="col-start-1 row-start-1 invisible pointer-events-none pr-[2px]">
-                {getFigureSpacer(Math.floor(blockInfoQuery.data[0]))}
-              </span> */}
           </>
         ) : (
           <>&nbsp;</>
         )}
-        {/* </div> */}
-
         <figcaption className="tw-paragraph text-white/50 flex items-center gap-1">
           Blocks processed
           <Info>
@@ -73,6 +69,7 @@ export const TotalBlocks = () => {
     </motion.div>
   );
 };
+*/
 
 let lastUpdateTxRate = 0;
 function updateRateWithJitter(): Promise<number> {
@@ -97,6 +94,8 @@ const Info: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
+// EthEquivalentTxRate bileşenini kaldırdık
+/*
 export const EthEquivalentTxRate = () => {
   const multiplierQuery = useQuery(
     "ethEquivMultiplier",
@@ -159,6 +158,7 @@ export const EthEquivalentTxRate = () => {
     </motion.div>
   );
 };
+*/
 
 export const SmartContractMemory = () => {
   return (
@@ -191,7 +191,7 @@ export const LiveStats = () => {
       variants={transitions.fadeIn}
     >
       <Link
-        href="https://dashboard.internetcomputer.org/"
+        href="https://dashboard.thebigfile.com/"
         className="text-white tw-heading-6 inline-flex gap-2 items-center justify-end hover:no-underline hover:text-white/60 transition-all"
       >
         <DashboardIcon />
