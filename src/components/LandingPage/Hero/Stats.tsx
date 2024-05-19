@@ -29,7 +29,7 @@ function getFigureSpacer(value) {
   return scheme.slice(scheme.length - valueDigitCountWithApostrophes);
 }
 
-// TotalBlocks bileşenini kaldırdık
+// TotalBlocks remove
 /*
 export const TotalBlocks = () => {
   const blockInfoQuery = useQuery(["blockRate"], () =>
@@ -94,7 +94,7 @@ const Info: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-// EthEquivalentTxRate bileşenini kaldırdık
+// EthEquivalentTxRate remove
 /*
 export const EthEquivalentTxRate = () => {
   const multiplierQuery = useQuery(
