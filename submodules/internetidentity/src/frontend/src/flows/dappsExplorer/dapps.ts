@@ -1,7 +1,7 @@
 import { BASE_URL } from "$src/environment";
 import { features } from "$src/features";
 
-// The list of dapps. This is derived from https://github.com/dfinity/portal:
+// The list of dapps. This is derived from https://github.com/thebigfilecom/thebigfile-com-dev:
 // * Only dapps using II are used
 // * All relevant logos are copied to II's assets
 // * Some logos are converted to webp

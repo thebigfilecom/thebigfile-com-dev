@@ -22,7 +22,7 @@ function EnterprisePage() {
     <Layout
       title="Enterprise"
       description="Build next-generation enterprise systems by using advanced smart contract technology hosted on the Internet Computer blockchain."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-enterprise.jpg"></ShareMeta>
 

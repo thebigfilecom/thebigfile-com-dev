@@ -20,7 +20,7 @@ function WhatIsIcpPage() {
     <Layout
       title="What is BigFile"
       description={`The Internet Computer adds autonomous serverless cloud functionality to the public Internet - making it possible to build almost any system or service entirely on a decentralized network using “canister software,” an evolution of smart contracts.`}
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-what-is-the-ic.jpg"></ShareMeta>
 
@@ -69,9 +69,7 @@ function WhatIsIcpPage() {
                 className="pb-[15%] sm:pb-0 tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                BigFile adds autonomous serverless cloud functionality to the Blockchain network; 
-                It makes it possible to create and transfer almost any system or service on a completely decentralized network 
-                using the "Mars software", which is a revolution in the field of smart contracts.
+                BigFile is a blockchain-based decentralized platform aimed at revolutionizing digital data storage and bureaucratic processes. By leveraging decentralized technology principles, BigFile provides a secure, scalable, and cost-effective solution for storing, accessing, and transferring digital files.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -208,12 +206,10 @@ function WhatIsIcpPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">Web3 + OIS</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">Web3 + BIGos</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                  Canisters support more powerful tokenization models that
-                  advance Web3. Autonomous governance can create “open Internet
-                  services” (OISs) that are exclusively managed by their
-                  communities.
+                  Smart Contracts support more powerful tokenization models that
+                  advance Web3. 
                 </p>
               </motion.div>
               <motion.div
@@ -225,7 +221,7 @@ function WhatIsIcpPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">Next-gen AI</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">File AI</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
                   The BigFile is currently adding support for Web3 “AI
                   compute units.” AI will also run on the network, supporting
@@ -278,9 +274,9 @@ function WhatIsIcpPage() {
                 Subnet blockchains
               </h2>
               <p className="tw-lead-sm">
-                The BigFile protocol combines node machines into highly efficient
+                The BigFile combines node machines into highly efficient
                 subnet blockchains, which add capacity for hosting tamperproof
-                canisters. The BigFile has a permissionless automated
+                Smart Contracts. The BigFile has a permissionless automated
                 governance system called the Network Nervous System, which
                 instructs nodes to join or leave subnets.
               </p>

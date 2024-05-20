@@ -81,7 +81,7 @@ function NewsPage() {
     <Layout
       title="News"
       description=" We love getting new impulses from the industry and sharing DFINITY insights and our vision about the Internet Computer. Join us at an upcoming event or check out past events, news and presentations."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-news.jpg"></ShareMeta>
 

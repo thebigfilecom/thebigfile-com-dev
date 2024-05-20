@@ -56,7 +56,7 @@ function EthereumIntegrationPage() {
     <Layout
       title="Ethereum Integration"
       description="A true World Computer enables a multi-chain environment where centralized bridges are obsolete and smart contracts can seamlessly communicate across blockchains. ICP already integrates with the Bitcoin Network, and native ETH integration is underway."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-ethereum-integration.jpg"></ShareMeta>
 

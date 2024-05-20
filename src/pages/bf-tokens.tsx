@@ -85,7 +85,7 @@ function TokenHolders(): JSX.Element {
       <Layout
         title="BF Tokens"
         description="BF, the native utility token of the Internet Computer powers computation, staking, voting, governance and ownership."
-        editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+        editPath={`https://github.com/thebigfilecim/thebigfile-com-dev/edit/main/${__filename}`}
       >
         <main className="overflow-hidden">
           <ShareMeta image="/img/shareImages/share-icp-tokens.jpg" />

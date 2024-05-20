@@ -158,7 +158,7 @@ function SnsPage() {
     <Layout
       title="Community-owned Web3"
       description="Open Internet Services (OIS) on the Internet Computer blockchain allow communities to take full control and ownership of entire internet services — from social media networks and games, to open enterprise tech infrastructures — via participation in decentralized autonomous organizations (DAOs)."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-sns.jpg" />
 

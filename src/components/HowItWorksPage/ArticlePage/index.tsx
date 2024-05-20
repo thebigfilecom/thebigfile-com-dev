@@ -11,7 +11,7 @@ function Index({ article }) {
     <Layout
       title={article.title}
       description={article.abstract || ""}
-      editPath={`https://github.com/dfinity/portal/edit/master/${article.fileName}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${article.fileName}`}
     >
       <ShareMeta image={article.shareImage}></ShareMeta>
       <main className="text-black relative overflow-hidden">

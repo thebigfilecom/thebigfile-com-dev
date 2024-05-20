@@ -19,7 +19,7 @@ function WebAssemblyPage() {
     <Layout
       title="WebAssembly on ICP"
       description="An advantage of the Internet Computer blockchain is its use of WebAssembly for executing smart contracts and decentralized applications — written in a wide variety of languages that compile to WebAssembly."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-webassembly.jpg"></ShareMeta>
 

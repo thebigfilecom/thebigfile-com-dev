@@ -87,7 +87,7 @@ function AsiaAlliancePage() {
     <Layout
       title="ICP Asia Alliance"
       description="The ICP Asia Alliance is at the forefront of fostering a vibrant Web3 and AI ecosystem in Asia."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-asia-alliance.webp"></ShareMeta>
 

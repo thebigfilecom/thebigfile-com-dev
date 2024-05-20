@@ -40,7 +40,7 @@ function Videos() {
       description={
         "Don't like reading? Learn how the Internet Computer works from feature presentations, demos, interviews, and conference talks."
       }
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-videos.jpg"></ShareMeta>
 

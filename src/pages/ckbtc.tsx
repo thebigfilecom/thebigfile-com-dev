@@ -55,7 +55,7 @@ function CkbtcPage(): JSX.Element {
       <Layout
         title="ckBTC is bitcoin on Web3"
         description="ckBTC can be sent with 1-2 second finality and negligible fees — a multi-chain bitcoin twin, trustlessly created by chain-key cryptography and Internet Computer smart contracts that directly hold raw bitcoin."
-        editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+        editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
       >
         <main className="overflow-hidden">
           <ShareMeta image="/img/shareImages/share-ckBTC.jpg" />

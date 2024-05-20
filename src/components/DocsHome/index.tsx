@@ -411,7 +411,7 @@ const DocsHomePage: FC = () => {
               developers.
             </p>
             <Link
-              href="https://github.com/dfinity/portal"
+              href="https://github.com/thebigfilecom/thebigfile-com-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="button-outline-white"

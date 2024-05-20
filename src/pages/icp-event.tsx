@@ -24,7 +24,7 @@ function IcpEventPage() {
     <Layout
       title="Intro to ICP"
       description={`The Internet Computer adds autonomous serverless cloud functionality to the public internet – making it possible to build almost any system or service entirely on a decentralized network using “canister software,” an evolution of smart contracts.`}
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-icp-event.jpg"></ShareMeta>
 

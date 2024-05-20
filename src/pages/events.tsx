@@ -124,7 +124,7 @@ function GlobalEventsPage() {
     <Layout
       title="Global BigFile Events"
       description="Immerse yourself in the Internet Computer community! Connect with BigFile enthusiasts worldwide with cutting-edge community events."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-events.jpg"></ShareMeta>
 
@@ -303,7 +303,7 @@ function GlobalEventsPage() {
                 Community initiatives
               </h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
-                Find out more about our Education programmes. ICP.Hubs across
+                Find out more about our Education programmes. BIG.Hubs across
                 the globe.
               </p>
               <p className="mb-0">
@@ -317,9 +317,9 @@ function GlobalEventsPage() {
               variants={transitions.item}
               className="px-8 py-12 backdrop-blur-2xl bg-white-50 rounded-xl border-white border-solid border text-center flex-1"
             >
-              <h3 className="tw-lead-lg md:tw-title-sm">Official ICP.Hubs</h3>
+              <h3 className="tw-lead-lg md:tw-title-sm">Official BIG.Hubs</h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
-                ICP communities are forming and taking shape in various regions
+                BigFile communities are forming and taking shape in various regions
                 around the globe, bringing entrepreneurs, developers, venture
                 capitalists, educators, enthusiasts and experts under one
                 regional roof.
@@ -330,7 +330,7 @@ function GlobalEventsPage() {
                   className="link-primary link-with-icon"
                 >
                   <LinkArrowRight />
-                  Meet the ICP.Hubs
+                  Meet the BIG.Hubs
                 </Link>
               </p>
             </motion.div>

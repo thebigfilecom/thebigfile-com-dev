@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import AnimateSpawn from "../../Common/AnimateSpawn";
 
-export default function FoundationSection(): JSX.Element {
+/* export default function FoundationSection(): JSX.Element {
   return (
     <section id="foundation">
       <AnimateSpawn
@@ -88,4 +88,4 @@ export default function FoundationSection(): JSX.Element {
       </AnimateSpawn>
     </section>
   );
-}
+}*/

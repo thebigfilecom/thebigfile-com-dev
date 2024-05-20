@@ -25,8 +25,7 @@ const IntroCards: React.FC = () => {
                 What is the BigFile
               </h2>
               <p className="tw-paragraph-sm md:tw-lead mb-6 text-white/60">
-                The BigFile adds autonomous serverless cloud
-                functionality to the public internet.
+              BigFile adds autonomous serverless cloud functionality to the public internet and enables the storage of large files and bureaucratic document processes to be accelerated and cost-effective.
               </p>
               <p className="mb-0 self-stretch sm:self-auto">
                 <Link

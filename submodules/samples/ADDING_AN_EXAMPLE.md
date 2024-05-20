@@ -39,15 +39,15 @@ hope of keeping examples in sync with releases of dfx.
 
 # Documentation
 
-Make sure to add documentation for the example in the [dfinity/portal](https://github.com/dfinity/portal) repository once your example has been merged.
+Make sure to add documentation for the example in the [thebigfilecom/thebigfile-com-dev](https://github.com/thebigfilecom/thebigfile-com-dev) repository once your example has been merged.
 
-Add a quick section to [`docs/samples/overview.mdx`](https://github.com/dfinity/portal/blob/master/docs/samples/overview.mdx) and make sure the example is listed in the "Sample apps" category in [`sidebars.js`](https://github.com/dfinity/portal/blob/master/sidebars.js).
+Add a quick section to [`docs/samples/overview.mdx`](https://github.com/thebigfilecom/thebigfile-com-dev/blob/main/docs/samples/overview.mdx) and make sure the example is listed in the "Sample apps" category in [`sidebars.js`](https://github.com/thebigfilecom/thebigfile-com-dev/blob/main/sidebars.js).
 
-Also make sure to add an entry in [`src/components/Common/sampleItems.ts`](https://github.com/dfinity/portal/blob/master/src/components/Common/sampleItems.ts) for your example.
+Also make sure to add an entry in [`src/components/Common/sampleItems.ts`](https://github.com/thebigfilecom/thebigfile-com-dev/blob/main/src/components/Common/sampleItems.ts) for your example.
 
 The content of the documentation is generated automatically from the `README.md` files in the examples repository, make sure your `README.md` contains a link to the actual example so people can easily find it. The following could be the first sentence of your `README.md`:
 
-> [View this samples code on GitHub](https://github.com/dfinity/examples/tree/master/rust/token_transfer_from).
+> [View this samples code on GitHub](https://github.com/thebigfilecom/examples/tree/master/rust/token_transfer_from).
 
 For your new example to be included in the auto generated documentation, make sure you update the submodule in the portal repository to point to the latest commit in the examples repository with the following command:
 

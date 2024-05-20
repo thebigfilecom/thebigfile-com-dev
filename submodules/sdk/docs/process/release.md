@@ -79,26 +79,26 @@ Obtain approval, but do not merge them yet.
     - Remove the beta releases from the `versions` array;
 1. Open a PR from this branch to `master`;
 
-[Sample PR](https://github.com/dfinity/sdk/pull/3491)
+[Sample PR](https://github.com/thebigfilecom/sdk/pull/3491)
 
-### Update the [portal](https://github.com/dfinity/portal) release notes and sdk submodule
+### Update the [portal](https://github.com/thebigfilecom/thebigfile-com-dev) release notes and sdk submodule
 
-- Add a link to the [release-notes-table](https://github.com/dfinity/portal/blob/master/docs/other/updates/release-notes/release-notes.md);
+- Add a link to the [release-notes-table](https://github.com/thebigfilecom/thebigfile-com-dev/blob/main/docs/other/updates/release-notes/release-notes.md);
     - Also include the link of the migration guide if it is available;
 - Update the sdk submodule:
     1. Change to the sdk submodule: `cd submodules/sdk`
     1. Checkout the release branch, e.g. `git checkout release-0.18.0`
     1. Go back to project root and commit the submodule change.
 
-[Sample PR](https://github.com/dfinity/portal/pull/2330)
+[Sample PR](https://github.com/thebigfilecom/thebigfile-com-dev/pull/2330)
 
 ### Update the [motoko-playground][motoko-playground] frontend canister hash whitelist
 
-- Click the "Run workflow" button on the [Broadcast Frontend Hash page](https://github.com/dfinity/sdk/actions/workflows/broadcast-frontend-hash.yml).
+- Click the "Run workflow" button on the [Broadcast Frontend Hash page](https://github.com/thebigfilecom/sdk/actions/workflows/broadcast-frontend-hash.yml).
 - Fill "Release version of dfx" with the version of this release.
 - The workflow will create a PR in the [motoko-playground][motoko-playground] repo.
 
-[Sample PR](https://github.com/dfinity/motoko-playground/pull/217)
+[Sample PR](https://github.com/thebigfilecom/motoko-playground/pull/217)
 
 [motoko-playground]: https://github.com/dfinity/motoko-playground
 

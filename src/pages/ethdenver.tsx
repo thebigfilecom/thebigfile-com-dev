@@ -91,7 +91,7 @@ function EthDenverPage() {
     <Layout
       title="Internet Computer blockchain @ ETHDenver 2023"
       description={`Visit us @ ETHDenver 2023, February 24 - March 5, 2023. Lightning fast and fully on-chain dapps running on the Internet Computer blockchain, the only true World Computer that enables a fully decentralized ecosystem.`}
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-ethdenver-2.jpg"></ShareMeta>
 
