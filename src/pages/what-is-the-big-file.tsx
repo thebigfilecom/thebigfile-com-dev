@@ -386,10 +386,10 @@ function WhatIsIcpPage() {
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Open Internet Services
+                Decentralized Services and Voting System
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Open Internet services are services that run autonomously under
+                Decentralized Services and Voting System are services that run autonomously under
                 the exclusive control of a decentralized governance system
                 called a Service Nervous System (SNS), an evolution of DAO
                 technology. This can enable a Web3 service to be transparently
@@ -440,7 +440,7 @@ function WhatIsIcpPage() {
                 uses a reverse gas model. This enables end users to interact
                 with smart contracts without having to setup a wallet, or hold
                 tokens — A standard web browser is all they need. Developers
-                charge their canister smart contracts with 'cycles', the gas on
+                charge their smart contracts with 'cycles', the gas on
                 the BigFile, which are then burnt to pay for
                 computation, and memory usage. Such a model allows easy user
                 entry to Web3, and gives developers the flexibility to create
@@ -459,15 +459,7 @@ function WhatIsIcpPage() {
                 Native multi-chain
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Canister smart contracts on the BigFile are the glue
-                between the world’s most important blockchains. BigFile already
-                integrates with the Bitcoin Network, and native ETH integration
-                is underway. Inter-chain communication and innovations such as
-                chain-key ECDSA allow canister smart contracts to directly hold,
-                receive and send BTC and ETH seamlessly across chains, creating
-                a trustless multi-chain environment that allows end users to
-                transfer crypto assets at the speed of a chat message without
-                bridges or third-party intermediaries.
+              Mars smart contracts on the BigFile are the glue between the world’s most important blockchains. BigFile Bitcoin Network, and native ETH integration is underway. Inter-chain communication and innovations such as chain-key ECDSA allow Mars smart contracts to directly hold, receive and send BTC and ETH seamlessly across chains, creating a trustless multi-chain environment that allows end users to transfer crypto assets at the speed of a chat message without bridges or third-party intermediaries.
               </p>
               <p className="mb-3">
                 <Link
