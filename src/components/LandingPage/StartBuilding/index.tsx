@@ -2,11 +2,11 @@ import Link from "@docusaurus/Link";
 import styles from "@site/src/components/LandingPage/StartBuilding/index.module.css";
 import BackgroundGradient from "@site/static/img/startBuilding/bgGradient.webp";
 import DatabaseIcon from "@site/static/img/startBuilding/database.svg";
-import DfinityIcon from "@site/static/img/startBuilding/dfinity.svg";
+import BigfileIcon from "@site/static/img/startBuilding/bigfile.svg";
 import GamingIcon from "@site/static/img/startBuilding/gaming.svg";
 import GrowthIcon from "@site/static/img/startBuilding/growth.svg";
 import IotIcon from "@site/static/img/startBuilding/iot.svg";
-import MotokoIcon from "@site/static/img/startBuilding/motoko.svg";
+import FileaiIcon from "@site/static/img/startBuilding/fileai.svg";
 import SocialIcon from "@site/static/img/startBuilding/social.svg";
 import RightArrowSVG from "@site/static/img/svgIcons/rightArrowIcon.svg";
 import transitions from "@site/static/transitions.json";
@@ -104,11 +104,11 @@ const StartBuilding: FC<{
             variants={transitions.item}
             className={styles.callToActionContainer}
           >
-            <MotokoIcon
-              className={clsx(styles.backgroundIcon, styles.motokoIcon)}
+            <FileaiIcon
+              className={clsx(styles.backgroundIcon, styles.fileaiIcon)}
             />
-            <DfinityIcon
-              className={clsx(styles.backgroundIcon, styles.dfinityIcon)}
+            <BigfileIcon
+              className={clsx(styles.backgroundIcon, styles.bigfileIcon)}
             />
             <GamingIcon
               className={clsx(styles.backgroundIcon, styles.gamingIcon)}

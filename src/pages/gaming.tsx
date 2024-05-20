@@ -21,7 +21,7 @@ function GamingPage() {
     <Layout
       title="Autonomous Worlds on ICP"
       description="Autonomous Worlds are a paradigm shift in Web3 gaming, allowing developers, and players to build infinitely extendable worlds together — 100% on-chain"
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-gaming.jpg"></ShareMeta>
 

@@ -92,7 +92,7 @@ function BitcoinFaqPage() {
     <Layout
       title="Bitcoin integration FAQ"
       description="All you need to know about ckBTC and ICP's Bitcoin integration."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-btc-faq.jpg"></ShareMeta>
 

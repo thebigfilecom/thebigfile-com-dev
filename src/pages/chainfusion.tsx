@@ -161,7 +161,7 @@ function MultichainPage() {
       description="ICP enables direct interoperability with all major blockchains, including Bitcoin, Ethereum, other EVMs (and soon Solana), 
       without relying on any trusted intermediary. Unique compared to other blockchains, ICP smart contracts can read from 
       and write to different chains, enabling developers to write smart contracts spanning different chains. This is chain fusion."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-chainfusion.jpg"></ShareMeta>
 

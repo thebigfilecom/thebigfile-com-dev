@@ -31,7 +31,7 @@ function NodeProvidersPage() {
     <Layout
       title="Node providers"
       description="The Internet Computer is hosted by a decentralized collection of node machines — physical hardware devices run by independent node providers distributed across data centers globally"
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-node-providers-2.jpg"></ShareMeta>
 

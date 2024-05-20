@@ -25,7 +25,7 @@ function SustainabilityPage() {
     <Layout
       title="Download report"
       description="Download now: Full report of all 10 sustainable business use cases in detail"
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-sustainability.jpg"></ShareMeta>
 

@@ -83,7 +83,7 @@ function DefiPage() {
     <Layout
       title="DeFi"
       description="From fully on-chain order book DEXs, to bridgeless multi-chain swaps, the Internet Computer provides an unmatched tech stack for DEXs to thrive on and DeFi to flourish."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-defi.jpg"></ShareMeta>
 

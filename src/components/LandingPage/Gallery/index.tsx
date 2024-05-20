@@ -9,7 +9,7 @@ import Link from "@docusaurus/Link";
 
 const MotionLink = motion(Link);
 
-const GallerySection = () => {
+/*const GallerySection = () => {
   return (
     <section
       id="community"
@@ -61,4 +61,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+export default GallerySection; */

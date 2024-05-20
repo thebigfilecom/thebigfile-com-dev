@@ -98,7 +98,7 @@ function NftPage() {
     <Layout
       title="NFTs"
       description={`The Internet Computer is the only blockchain storing all components of an NFT on the blockchain, including assets. This opens up capabilities for ICP NFTs that go way beyond "overpriced links to JPGs".`}
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <Head>
         <meta

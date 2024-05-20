@@ -120,7 +120,7 @@ const subnavItems = [
       },
       {
         label: "Dev Forum",
-        href: "https://forum.dfinity.org/",
+        href: "https://forum.thebigfile.com/",
       },
       {
         label: "Dev Discord",
@@ -612,9 +612,9 @@ const config = {
       //         id: "local_dev",
       //         content: isDeployPreview
       //           ? `You are currently viewing a preview of this <a href="${
-      //               process.env.PR_URL || "https://github.com/dfinity/portal"
+      //               process.env.PR_URL || "https://github.com/thebigfilecom/thebigfile-com-dev"
       //             }">Pull Request</a>.`
-      //           : 'You are currently locally editing the Developer Portal. Contributing guidelines are available <a href="https://github.com/dfinity/portal#contributing">here</a>.',
+      //           : 'You are currently locally editing the Developer Portal. Contributing guidelines are available <a href="https://github.com/thebigfilecom/thebigfile-com-dev#contributing">here</a>.',
       //         textColor: "#091E42",
       //         isCloseable: false,
       //       }

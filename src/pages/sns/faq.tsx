@@ -17,7 +17,7 @@ function SnsFaqPage() {
     <Layout
       title="SNS DAO FAQ"
       description="All you need to know about DAOs on the Internet Computer and how to participate in them."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-sns.jpg"></ShareMeta>
 

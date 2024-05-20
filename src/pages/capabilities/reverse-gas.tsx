@@ -26,7 +26,7 @@ function ReverseGasModelPage(): JSX.Element {
       description="A browser is all you need to interact with smart contracts on
       the Internet Computer. Developers pay for gas. End users access and
       use dapps without tokens."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <main className="overflow-hidden">
         <ShareMeta image="/img/shareImages/share-reverse-gas-model.jpg" />

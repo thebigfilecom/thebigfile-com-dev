@@ -117,7 +117,7 @@ function Index() {
           >
             <Link
               className={styles.actionButton}
-              to="https://github.com/dfinity/portal"
+              to="https://github.com/thebigfilecim/thebigfile-com-dev"
             >
               CONTRIBUTE
             </Link>

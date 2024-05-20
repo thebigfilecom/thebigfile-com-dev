@@ -18,7 +18,7 @@ function HTTPSOutcalls() {
       description="The power of HTTPS outcalls on the Internet Computer lies in
       their ability to connect smart contracts directly to the Web 2.0
       world, opening up a plethora of use cases."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-https-outcalls.webp"></ShareMeta>
 

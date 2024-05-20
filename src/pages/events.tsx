@@ -124,7 +124,7 @@ function GlobalEventsPage() {
     <Layout
       title="Global BigFile Events"
       description="Immerse yourself in the Internet Computer community! Connect with BigFile enthusiasts worldwide with cutting-edge community events."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-events.jpg"></ShareMeta>
 

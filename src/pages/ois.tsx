@@ -47,7 +47,7 @@ function OpenChatPage() {
       description="Join the Future of Social Media - Decentralized, Secure, and
       Community-Driven. See how OpenChat got DAO-swapped in less
       than 6 hours."
-      editPath={`https://github.com/dfinity/portal/edit/master/${__filename}`}
+      editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-openchat.jpg"></ShareMeta>
 

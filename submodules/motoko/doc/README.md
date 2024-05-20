@@ -26,7 +26,7 @@ This uses a small ./docusaurus project to build a reduced web site locally, open
 complete with live code blocks.
 
 In order to preview the real portal documentation, open a PR
-https://github.com/dfinity/portal, edit the git "submodule"for
+https://github.com/thebigfilecom/thebigfile-com-dev, edit the git "submodule"for
 Motoko to point at the PR branch and wait for CI to produce a build or
 follow the instructions to produce one locally.
 
