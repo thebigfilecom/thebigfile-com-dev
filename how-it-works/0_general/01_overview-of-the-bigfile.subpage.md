@@ -80,7 +80,6 @@ If you want to learn in more detail how the BIG works and realizes the vision of
 [BigFile Source Code](https://github.com/thebigfilecom/big)
 [Public Repositories for the BigFile](https://github.com/thebigfilecom?q=&type=public&language=&sort=)
 [BigFile Interface Specification Docs](https://thebigfile.com/docs/ic-interface-spec.md)
-[BigFile Primer - Deck](https://dfinity.org/deck/)
 [BigFile SDK](https://github.com/thebigfilecom/sdk)
 
 [![Watch youtube video](https://i.ytimg.com/vi/YWHTNr8RZHg/maxresdefault.jpg)](https://www.youtube.com/watch?v=YWHTNr8RZHg)
