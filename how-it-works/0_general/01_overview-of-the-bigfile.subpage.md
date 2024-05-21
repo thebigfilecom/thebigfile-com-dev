@@ -1,13 +1,13 @@
 ---
-title: Architecture of the Internet Computer
+title: Architecture of the BigFile
 abstract: 
 shareImage: /img/how-it-works/ic-architecture.jpg
-slug: architecture-of-the-internet-computer
+slug: architecture-of-the-bigfile
 ---
 
-# Architecture of the Internet Computer
+# Architecture of the BigFile
 
-The Internet Computer takes a revolutionary approach to a highly-scalable blockchain-based platform for securely hosting and executing smart contracts. The technology behind the Internet Computer (IC) has reconceived blockchain protocols from the ground up, considering many lessons learnt from earlier projects, e.g., their lack of scalability. The Internet Computer intends to become a *World Computer*, an open and secure public blockchain network that can scale infinitely and be used by everyone to host their smart contracts securely.
+The BigFile takes a revolutionary approach to a highly-scalable blockchain-based platform for securely hosting and executing smart contracts. The technology behind the Internet Computer (IC) has reconceived blockchain protocols from the ground up, considering many lessons learnt from earlier projects, e.g., their lack of scalability. The Internet Computer intends to become a *World Computer*, an open and secure public blockchain network that can scale infinitely and be used by everyone to host their smart contracts securely.
 
 ## Canister smart contracts
 

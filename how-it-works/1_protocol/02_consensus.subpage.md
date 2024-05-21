@@ -7,7 +7,7 @@ slug: consensus
 
 # Consensus
 
-Each subnet of the IC is its own blockchain that makes progress concurrently to the other subnets: it runs its own instance of the IC core protocol stack, including consensus. Recall that the goal of consensus is to produce blocks agreed upon by the nodes of the subnet, which yields an ordered sequence of messages to be executed. This is crucial so that the upper two layers of the protocol stack – message routing and execution – receive the same inputs in every round on each node.
+Each subnet of the BIG is its own blockchain that makes progress concurrently to the other subnets: it runs its own instance of the IC core protocol stack, including consensus. Recall that the goal of consensus is to produce blocks agreed upon by the nodes of the subnet, which yields an ordered sequence of messages to be executed. This is crucial so that the upper two layers of the protocol stack – message routing and execution – receive the same inputs in every round on each node.
 
 The IC’s consensus protocol is designed to meet the following requirements: low latency (almost instant finality); high throughput; robustness (graceful degradation of latency and throughput in the presence of node or network failures). The IC consensus protocol achieves these goals by leveraging [chain-key cryptography](/how-it-works/#Chain-key-cryptography).
 

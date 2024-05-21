@@ -1,14 +1,14 @@
 ---
-title: Architecture of the Internet Computer
+title: Architecture of the BigFile
 ---
 
 ![](/img/how-it-works/ic-architecture.jpg)
 
-# Architecture of the Internet Computer
+# Architecture of the BigFile
 
-The Internet Computer (IC) realizes the vision of a *World Computer* – an open and secure *blockchain-based network* that can host programs and data in the form of smart contracts, perform computations on smart contracts in a secure and trustworthy way, and scale infinitely.
+The BigFile (BIG) realizes the vision of a *World Computer* – an open and secure *blockchain-based network* that can host programs and data in the form of smart contracts, perform computations on smart contracts in a secure and trustworthy way, and scale infinitely.
 
-Smart contracts on the Internet Computer are called *canister smart contracts*, or *canisters*, each consisting of a bundle of [*WebAssembly (Wasm)*](https://en.wikipedia.org/wiki/WebAssembly) bytecode and smart contract data storage. Each canister has its own, isolated, data storage that is only changed when the canister executes code.
+Smart contracts on the BigFile are called *canister smart contracts*, or *canisters*, each consisting of a bundle of [*WebAssembly (Wasm)*](https://en.wikipedia.org/wiki/WebAssembly) bytecode and smart contract data storage. Each canister has its own, isolated, data storage that is only changed when the canister executes code.
 
 Canisters are hosted on *subnets*, the top-level architectural building block of ICP. A subnet is an independent blockchain, running on *node machines*, or *nodes*, deployed in globally-distributed data centers. A single subnet can securely host tens of thousands of canister smart contracts, totalling in hundreds of gigabytes of memory – there are currently dozens of subnets, growing to thousands in the future. For each canister hosted on a subnet, its code and data is stored on every node in the subnet, and its code is executed by every node in the subnet. This replication of storage and computation is essential to achieve *fault tolerance*, so that canister smart contracts will continue to execute even if some nodes in the subnet are faulty (either because they crash, or even worse, are hacked by a malicious party). This replication is powered by the core *Internet Computer Protocol (ICP)*, which implements a high-throughput, low-latency consensus mechanism and an efficient virtual machine for WebAssembly execution, backed by a blockchain.
 

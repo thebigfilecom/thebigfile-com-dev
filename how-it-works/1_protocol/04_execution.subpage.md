@@ -1,5 +1,5 @@
 ---
-title: "Internet Computer Execution Layer"
+title: "BigFile Execution Layer"
 abstract:
 shareImage: /img/how-it-works/execution.jpg
 slug: execution-layer
@@ -7,7 +7,7 @@ slug: execution-layer
 
 # Execution
 
-The execution layer is the topmost layer of the IC core protocol stack. It deterministically schedules and executes the messages that have been agreed on by consensus and inducted into the canister queues by message routing, thereby changing the state of the subnet in a deterministic manner on all the nodes. The execution of the same sequence of messages on every node of the subnet guarantees that the same ending state is obtained on each node of the subnet after completion of the round.
+The execution layer is the topmost layer of the BIG core stack. It deterministically schedules and executes the messages that have been agreed on by consensus and inducted into the canister queues by message routing, thereby changing the state of the subnet in a deterministic manner on all the nodes. The execution of the same sequence of messages on every node of the subnet guarantees that the same ending state is obtained on each node of the subnet after completion of the round.
 
 A canister smart contract on the IC consists of a Web Assembly (Wasm) bytecode representing the smart contract program and a set of memory pages representing its state. The Wasm bytecode can be modified by installing or updating the canister. The smart contract state gets modified when executing messages on the canister smart contract. Both the bytecode and the memory pages, i.e., the state, of the canister, are maintained by every node machine of the subnet the canister is installed on. Each node in the subnet holding the same canister state and ensuring that the state transitions in the same way on every node in every round is the foundation of realizing a replicated state machine and the security and resilience properties thereof that make blockchains so unique.
 

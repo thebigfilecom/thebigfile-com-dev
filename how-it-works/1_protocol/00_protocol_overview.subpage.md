@@ -5,7 +5,7 @@ shareImage: /img/how-it-works/ic-overview.jpg
 slug: core-ic-protocol-overview
 ---
 
-# Core Internet Computer Protocol – Overview
+# Core BigFile – Overview
 
 A subnet hosts canister smart contracts and executes *messages* sent to them either by users or other canister smart contracts (which may be hosted on the same or another subnet). Messages on the IC are analogous to transactions on other blockchains. Messages addressed to a canister smart contract are executed by the nodes on the corresponding subnet by running the Wasm code of the canister. Canister code execution updates the canister state. In order to keep the state on the subnet nodes on which a canister is hosted in sync, it must be ensured that every node executes the same messages in the same order, i.e., fully deterministically. This is the core of the blockchain-based replicated state machine functionality realizing the IC.
 
