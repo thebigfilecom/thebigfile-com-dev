@@ -23,4 +23,4 @@
 	url = https://github.com/thebigfilecom/dfxvm.git
 [submodule "submodules/response-verfication"]
 	path = submodules/response-verfication
-	url = https://github.com/dfinity/response-verification
+	url = https://github.com/thebigfilecom/response-verification
