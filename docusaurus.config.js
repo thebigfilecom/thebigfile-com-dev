@@ -104,7 +104,7 @@ const subnavItems = [
     items: [
       {
         label: "Awesome Internet Computer",
-        href: "https://github.com/dfinity/awesome-internet-computer#readme",
+        href: "https://github.com/thebigfilecom/awesome-internet-computer#readme",
       },
       { label: "Sample Code", to: "/samples" },
       {
@@ -124,7 +124,7 @@ const subnavItems = [
       },
       {
         label: "Dev Discord",
-        href: "https://discord.gg/jnjVVQaE2C",
+        href: "https://discord.gg/nyTAmMntqp",
       },
     ],
   },
@@ -384,7 +384,7 @@ const marketingNav = {
         },
         {
           label: "Discord",
-          href: "https://discord.gg/jnjVVQaE2C",
+          href: "https://discord.gg/nyTAmMntqp",
           iconUrl: "/img/svgIcons/purple/discord.svg",
         },
         {
