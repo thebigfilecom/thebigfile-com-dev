@@ -1063,7 +1063,7 @@ const sidebars = {
             id: "tutorials/hackathon-prep-course/index",
           },
           items: [
-            "tutorials/hackathon-prep-course/what-is-icp",
+            "tutorials/hackathon-prep-course/what-is-bigfile",
             "tutorials/hackathon-prep-course/deploying-first-fullstack-dapp",
             "tutorials/hackathon-prep-course/exploring-the-backend",
             "tutorials/hackathon-prep-course/exploring-the-frontend",

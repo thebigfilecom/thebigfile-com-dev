@@ -630,7 +630,7 @@ const config = {
               },
               {
                 label: "Wiki",
-                href: "https://wiki.internetcomputer.org/",
+                href: "https://wiki.thebigfile.com/",
               },
               {
                 label: "Node Providers",
