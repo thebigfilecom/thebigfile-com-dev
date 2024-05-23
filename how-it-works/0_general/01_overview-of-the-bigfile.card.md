@@ -2,7 +2,7 @@
 title: Architecture of the BigFile
 ---
 
-![](/img/how-it-works/ic-architecture.jpg)
+![](/img/how-it-works/big-architecture.jpg)
 
 # Architecture of the BigFile
 

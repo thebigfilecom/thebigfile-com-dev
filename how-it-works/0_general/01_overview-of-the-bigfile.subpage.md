@@ -1,7 +1,7 @@
 ---
 title: Architecture of the BigFile
 abstract: 
-shareImage: /img/how-it-works/ic-architecture.jpg
+shareImage: /img/how-it-works/big-architecture.jpg
 slug: architecture-of-the-bigfile
 ---
 

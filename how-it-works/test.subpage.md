@@ -1,7 +1,7 @@
 ---
 title: Content test card
 abstract:
-shareImage: /img/how-it-works/ic-architecture.jpg
+shareImage: /img/how-it-works/big-architecture.jpg
 slug: test-subpage
 ---
 
