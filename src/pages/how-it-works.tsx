@@ -119,10 +119,7 @@ function HowItWorks() {
                 Realizing the vision of the BigFile
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                Learn how the BigFile blockchain realizes the vision
-                of the No document World. Dive into its technology, open-source
-                repositories, in-depth video academy sessions, white papers,
-                publications, and detailed technology articles.
+              Discover how the BigFile blockchain realizes the vision of a No-Document World. Explore its technology through open-source repositories, in-depth video academy sessions, white papers, publications, and detailed technology articles.
               </p>
             </div>
           </div>

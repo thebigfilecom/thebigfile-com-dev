@@ -2,7 +2,7 @@
 title: Overview
 abstract:
 shareImage: /img/how-it-works/ic-overview.jpg
-slug: core-ic-protocol-overview
+slug: core-big-overview
 ---
 
 # Core BigFile – Overview

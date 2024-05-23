@@ -100,7 +100,7 @@ const cardsData: CardData[] = [
   {
     title: "Serve web directly from smart contracts",
     description:
-      "The BigFile is the only blockchain with Mars smart contracts that can serve web by processing HTTP requests. This allows 100% of online services to run from the blockchain, which allows for full decentralization.",
+      "BigFile is a blockchain with Mars smart contracts that can provide web services by processing HTTP requests. This allows 100% of online services to be run from the blockchain, allowing for full decentralization.",
     image: "/img/features/serve-web.webp",
     href: null,
     refText: null,
@@ -444,7 +444,7 @@ function FeaturesPage() {
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-0"
               variants={transitions.item}
             >
-              The Internet Computer provides a complete tech stack for
+              The BigFile provides a complete tech stack for
               developers to build on. It can host online services and games
               fully on chain without ever relying on centralized cloud
               providers. This provides complete decentralization and removes
