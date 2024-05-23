@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-![](/img/how-it-works/ic-overview.jpg)
+![](/img/how-it-works/big-overview.jpg)
 
 # Overview
 

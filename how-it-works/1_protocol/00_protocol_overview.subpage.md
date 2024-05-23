@@ -1,7 +1,7 @@
 ---
 title: Overview
 abstract:
-shareImage: /img/how-it-works/ic-overview.jpg
+shareImage: /img/how-it-works/big-overview.jpg
 slug: core-big-overview
 ---
 
