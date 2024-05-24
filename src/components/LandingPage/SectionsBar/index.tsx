@@ -7,11 +7,9 @@ import clsx from "clsx";
 
 const SectionsLinks = [
   { text: "About BigFile", to: "#about-bigfile" },
-  { text: "Community", to: "#community" },
   { text: "Technology", to: "#technology" },
   { text: "Sustainability", to: "#sustainable" },
   { text: "Start Building", to: "#startBuilding" },
-  { text: "Foundation", to: "#foundation" },
   { text: "Subscribe", to: "#subscribe" },
 ];
 const container = {
