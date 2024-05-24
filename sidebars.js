@@ -91,7 +91,7 @@ const sidebars = {
           items: [
             "developer-docs/smart-contracts/overview/introduction",
             "developer-docs/smart-contracts/overview/inside-canisters",
-            "developer-docs/smart-contracts/overview/canister-lifecycle",
+            "developer-docs/smart-contracts/overview/cube-lifecycle",
           ],
         },
         {

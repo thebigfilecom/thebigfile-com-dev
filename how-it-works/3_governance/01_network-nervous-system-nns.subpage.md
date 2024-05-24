@@ -10,7 +10,7 @@ slug: network-nervous-system-nns
 [![Watch youtube video](https://i.ytimg.com/vi/hWnsluxmRqc/maxresdefault.jpg)](https://www.youtube.com/watch?v=hWnsluxmRqc)
 
 
-The Network Nervous System (NNS) is the DAO that controls the BigFile blockchain. It is an open, permissionless governance system, where everyone can participate by staking ICP utility tokens in so-called _neurons_. Decisions are made by voting on _proposals_, which can be submitted by anyone.
+The Network Nervous System (NNS) is the DAO that controls the BigFile blockchain. It is an open, permissionless governance system, where everyone can participate by staking BF utility tokens in so-called _neurons_. Decisions are made by voting on _proposals_, which can be submitted by anyone.
 
 
 

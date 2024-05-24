@@ -184,7 +184,7 @@ caused a major chain to hard fork and a loss of 60 million USD.`,
     title: "Heartbeats",
     description: `On other blockchain networks, smart contract computations can only
   be invoked by submitting a new transaction to their networks. The
-  Internet Computer provides a means for canister smart contracts to
+  BigFile provides a means for cube smart contracts to
   be configured so that they are invoked by the blockchain itself,
   at some specified block interval.`,
     href: "/capabilities/daemon-contracts",
@@ -199,7 +199,7 @@ caused a major chain to hard fork and a loss of 60 million USD.`,
   },
   {
     title: "WebAssembly (Wasm)",
-    description: `Use any language that compiles to Wasm to write canister smart
+    description: `Use any language that compiles to Wasm to write cube smart
   contracts. SDKs are available for Motoko, Rust, TypeScript, Python
   and C++. Any other language that compiles to Wasm can be used as
   well.`,
@@ -207,7 +207,7 @@ caused a major chain to hard fork and a loss of 60 million USD.`,
   },
   {
     title: "Subnets & infinite scalability",
-    description: `The Internet Computer incorporates a novel subnet architecture
+    description: `The BigFile incorporates a novel subnet architecture
   that enables infinite scalability, making 100% on-chain
   mass-market Web3 services possible. No cloud servers needed.`,
     href: "/capabilities/limitless-scaling",
