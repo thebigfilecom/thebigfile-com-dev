@@ -7,13 +7,13 @@ slug: consensus
 
 # Consensus
 
-Each subnet of the BIG is its own blockchain that makes progress concurrently to the other subnets: it runs its own instance of the IC core protocol stack, including consensus. Recall that the goal of consensus is to produce blocks agreed upon by the nodes of the subnet, which yields an ordered sequence of messages to be executed. This is crucial so that the upper two layers of the protocol stack – message routing and execution – receive the same inputs in every round on each node.
+Each subnet of the BIG is its own blockchain that makes progress concurrently to the other subnets: it runs its own instance of the BIG core stack, including consensus. Recall that the goal of consensus is to produce blocks agreed upon by the nodes of the subnet, which yields an ordered sequence of messages to be executed. This is crucial so that the upper two layers of the protocol stack – message routing and execution – receive the same inputs in every round on each node.
 
-The IC’s consensus protocol is designed to meet the following requirements: low latency (almost instant finality); high throughput; robustness (graceful degradation of latency and throughput in the presence of node or network failures). The IC consensus protocol achieves these goals by leveraging [chain-key cryptography](/how-it-works/#Chain-key-cryptography).
+The BIG consensus is designed to meet the following requirements: low latency (almost instant finality); high throughput; robustness (graceful degradation of latency and throughput in the presence of node or network failures). The BIG consensus achieves these goals by leveraging [chain-key cryptography](/how-it-works/#Chain-key-cryptography).
 
-The IC consensus protocol provides _cryptographically guaranteed finality_. The option of choosing _probabilistic finality_ – similar to what is done in Bitcoin-like protocols, by considering a block final once a sufficient number of blocks have built on top of it in the blockchain – is not acceptable for the IC for two reasons: (1) probabilistic finality is a very weak notion of finality and (2) probabilistic finality would increase the time to finality drastically.
+The BIG consensus provides _cryptographically guaranteed finality_. The option of choosing _probabilistic finality_ – similar to what is done in Bitcoin-like protocols, by considering a block final once a sufficient number of blocks have built on top of it in the blockchain – is not acceptable for the BIG for two reasons: (1) probabilistic finality is a very weak notion of finality and (2) probabilistic finality would increase the time to finality drastically.
 
-The IC consensus protocol achieves all of these goals making only minimal assumptions about the communication network. In particular, it does not assume any bounds on the time it takes for protocol messages to be delivered – that is, it only assumes an _asynchronous network_ rather than a _synchronous network_. Indeed, for a decentralized network that is globally distributed, _synchrony_ is simply not a realistic assumption. While it is possible to design consensus protocols that work in a purely _asynchronous_ setting, these protocols generally have very poor latency. In order to achieve good latency, the IC consensus protocol requires protocol messages to be delivered in a timely manner to make progress. However, the _correctness_ of the protocol is always guaranteed, regardless of message delays, so long as less than a third of the nodes in the subnet are faulty.
+The BIG consensus achieves all of these goals making only minimal assumptions about the communication network. In particular, it does not assume any bounds on the time it takes for protocol messages to be delivered – that is, it only assumes an _asynchronous network_ rather than a _synchronous network_. Indeed, for a decentralized network that is globally distributed, _synchrony_ is simply not a realistic assumption. While it is possible to design consensus that work in a purely _asynchronous_ setting, these protocols generally have very poor latency. In order to achieve good latency, the BIG consensus requires protocol messages to be delivered in a timely manner to make progress. However, the _correctness_ of the protocol is always guaranteed, regardless of message delays, so long as less than a third of the nodes in the subnet are faulty.
 
 <figure>
 <img src="/img/how-it-works/consensus_orders_messages.png" alt="Consensus round yields an ordered sequences of messages" title="Consensus round yields an ordered sequences of messages" align="center" style="width:600px" />
@@ -37,7 +37,7 @@ A _block maker_ is a node that proposes a block for the current round. As explai
 If the network is slow or the primary block maker is faulty, the block proposed by the primary block maker may not get notarized within a reasonable time. In this case, after some delay, and using the same random beacon mechanism, other block makers are chosen to step in and supplant the primary block maker. The protocol logic guarantees that one block eventually gets notarized in the current round.
 
 The block makers for a round are chosen through a random permutation of the nodes of the subnet based on randomness derived from a _random beacon_.
-As discussed in the section on [chain-key cryptography](https://internetcomputer.org/how-it-works/#Chain-key-cryptography), chain-key cryptography may be used to produce unpredictable and unbiasable pseudo-random numbers. Consensus uses these pseudo-random numbers to define a pseudo-random permutation on the nodes of the subnet. This assigns a rank to each node in the subnet. The lowest-rank node in the subnet acts as the primary block maker. As time goes by without producing a notarized block, nodes of increasing rank gradually step in to supplant the (potentially faulty) nodes of lower rank as block maker.
+As discussed in the section on [chain-key cryptography](https://thebigfile.com/how-it-works/#Chain-key-cryptography), chain-key cryptography may be used to produce unpredictable and unbiasable pseudo-random numbers. Consensus uses these pseudo-random numbers to define a pseudo-random permutation on the nodes of the subnet. This assigns a rank to each node in the subnet. The lowest-rank node in the subnet acts as the primary block maker. As time goes by without producing a notarized block, nodes of increasing rank gradually step in to supplant the (potentially faulty) nodes of lower rank as block maker.
 
 In the scenario where the primary block maker is not faulty, and protocol messages get delivered in a timely manner, only the primary block maker will propose a block, and this block will quickly become notarized and finalized.
 
@@ -64,14 +64,10 @@ In a given round, the logic of the protocol guarantees that a node will always o
 
 ## Go Even Deeper
 
-[Achieving Consensus on the Internet Computer](https://medium.com/dfinity/achieving-consensus-on-the-internet-computer-ee9fbfbafcbc)
+[Achieving Consensus on the BigFile](https://medium.com/)
 
 [Consensus White Paper](https://eprint.iacr.org/2021/632.pdf)
 
 [Extended Abstract published at PODC'22](//assets.ctfassets.net/ywqk17d3hsnp/1Gutwfrd1lMgiUBJZGCdUG/d3ea7730aba0a4b793741681463239f5/podc-2022-cr.pdf)
 
-[Consensus on the IC wiki](https://wiki.internetcomputer.org/wiki/IC_consensus_layer)
-
-<!-- https://img.youtube.com/vi/vVLRRYh3JYo/0.jpg -->
-
-[![Watch youtube video](https://i.ytimg.com/vi/vVLRRYh3JYo/maxresdefault.jpg)](https://www.youtube.com/watch?v=vVLRRYh3JYo)
+[Consensus on the BIG wiki](https://wiki.thebigfile.com/wiki/BIG_consensus_layer)

@@ -7,13 +7,13 @@ slug: peer-to-peer-p2p
 
 # Peer-to-Peer
 
-The peer-to-peer layer (P2P) of the Internet Computer realizes the reliable and secure communication of network messages, also called _artifacts_, between the nodes of a subnet. Artifacts are the network messages that are to be broadcast in the subnet, including the input to canister smart contracts submitted by users or protocol-originating messages such as the blocks produced by the consensus layer. P2P guarantees the secure eventual broadcast delivery of an artifact to all nodes which require it to make progress. The P2P layer thereby is the communication fabric for the IC protocol stack and is used by the consensus layer, the next layer in the stack above it, to broadcast artifacts to the nodes in the subnet.
+The peer-to-peer layer (P2P) of the BigFile realizes the reliable and secure communication of network messages, also called _artifacts_, between the nodes of a subnet. Artifacts are the network messages that are to be broadcast in the subnet, including the input to cube smart contracts submitted by users or protocol-originating messages such as the blocks produced by the consensus layer. P2P guarantees the secure eventual broadcast delivery of an artifact to all nodes which require it to make progress. The P2P layer thereby is the communication fabric for the BIG stack and is used by the consensus layer, the next layer in the stack above it, to broadcast artifacts to the nodes in the subnet.
 
-It is important to note that broadcast artifacts reach all necessary subnet nodes eventually, that is, no upper bound on when this happens can be given. This _asynchronous communication network_ assumption is used for the ICP's communication and consensus layers as it reflects the properties of real-world networks.
+It is important to note that broadcast artifacts reach all necessary subnet nodes eventually, that is, no upper bound on when this happens can be given. This _asynchronous communication network_ assumption is used for the BigFile communication and consensus layers as it reflects the properties of real-world networks.
 
 ## Gossip protocol
 
-The P2P layer builds upon the basic principle of _gossip_. Gossip in communication networks works along the same basic principle as gossip among people: A node in the subnet is connected with a subset of the other nodes of the subnet – its _peers_. Whenever a node receives an artifact from a peer or creates one itself as part of the IC protocol, it gossips this artifact to all its peers. By every node in the network doing exactly this, every artifact _eventually_ propagates through the whole subnet, despite potential connectivity issues or malicious node behavior.
+The P2P layer builds upon the basic principle of _gossip_. Gossip in communication networks works along the same basic principle as gossip among people: A node in the subnet is connected with a subset of the other nodes of the subnet – its _peers_. Whenever a node receives an artifact from a peer or creates one itself as part of the BIG, it gossips this artifact to all its peers. By every node in the network doing exactly this, every artifact _eventually_ propagates through the whole subnet, despite potential connectivity issues or malicious node behavior.
 
 ## Adverts
 
@@ -31,8 +31,6 @@ To prevent Denial of Service (DoS) attacks, nodes will only request and accept c
 
 ## Go even deeper
 
-[P2P on the IC wiki](<https://wiki.internetcomputer.org/wiki/IC_P2P_(peer_to_peer)_layer>)
+[P2P on the BIG wiki](<https://wiki.thebigfile.com/wiki/IC_P2P_(peer_to_peer)_layer>)
 
-[Blogpost on P2P](https://medium.com/dfinity/secure-scalability-the-internet-computers-peer-to-peer-layer-6662d451f2cc)
-
-[![Watch youtube video](https://i.ytimg.com/vi/HOQb0lKIy9I/maxresdefault.jpg)](https://www.youtube.com/watch?v=HOQb0lKIy9I)
+[Blogpost on P2P](https://medium.com/)

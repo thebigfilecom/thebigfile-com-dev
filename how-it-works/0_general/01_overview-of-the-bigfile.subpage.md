@@ -7,14 +7,14 @@ slug: architecture-of-the-bigfile
 
 # Architecture of the BigFile
 
-The BigFile takes a revolutionary approach to a highly-scalable blockchain-based platform for securely hosting and executing smart contracts. The technology behind the BigFile (BIG) has reconceived blockchain protocols from the ground up, considering many lessons learnt from earlier projects, e.g., their lack of scalability. The BigFile intends to become a *World Computer*, an open and secure public blockchain network that can scale infinitely and be used by everyone to host their smart contracts securely.
+BigFile is developing a highly scalable blockchain-based platform to securely host and execute smart contracts. The technology behind BigFile (BIG) is being developed on top of the IC Open source blockchain fork, taking into account many lessons learned from previous projects (e.g. lack of scalability). The BigFile intends to become a *No-Document World*, an open and secure public blockchain network that can scale infinitely and be used by everyone to host their smart contracts securely.
 
 ## Cube smart contracts
 
 A smart contract on BigFile is called *cube smart contract*, or just *cube*. A Cube bundles [*WebAssembly (Wasm)*](https://en.wikipedia.org/wiki/WebAssembly) program code and data storage into a single unit. Anyone can deploy a cube on the BigFile. Cubes are stored and their code executed in a replicated, fault-tolerant manner on multiple machines, that is, the nodes of a subnet. Unlike other blockchains, a smart contract on BigFile can respect one of several possible *mutability policies*: it can be completely immutable (cannot be changed by anyone), unilaterally mutable (can be changed unilaterally by the dapp developer), or DAO mutable (it can be changed as authorized by a decentralized autonomous organization).
 
 
-Cubes pay, using *cycles*, for the BIG resources they consume. To this end, cubes need to be “topped up” with cycles. Cycles can be acquired with the ICP token, the BIG utility token. Buying cycles with BigFile removes the ICP token from the supply and creates an amount of cycles with the corresponding value. One Trillion cycles can be acquired with ICP worth 1 XDR, where an XDR is a basket comprising major currencies and one XDR is roughly 1.3 USD as of Q3 2022.
+Cubes pay, using *cycles*, for the BIG resources they consume. To this end, cubes need to be “topped up” with cycles. Cycles can be acquired with the BF token, the BIG utility token. Buying cycles with BigFile removes the BIG token from the supply and creates an amount of cycles with the corresponding value. 
 
 Cube smart contracts are more powerful than the smart contracts on other blockchains:
 * Cubes paying for their resources, and not the end users, which realizes the *reverse gas* model of the BIG.
@@ -41,7 +41,7 @@ See more on [subnets](https://wiki.thebigfile.com/wiki/Subnet_blockchain) on the
 
 ## Asynchronous messaging
 
-As mentioned earlier, a cube bundles its code and data (state). This makes the cube state isolated from that of other cubes. Users interact with cubes by sending *ingress messages*. Cubes may also interact with other cubes by sending messages to other cubes on the same or different subnets. We collectively refer to messages sent to cubes, either by users or other cubes, as *messages* or *cube messages*. Each message can lead to the execution of cube smart contract code and the change of (replicated) cube state. Messages sent to cubes are *asynchronous*: when a message is sent, the sender is not blocked by this operation, but can perform other computations until the response to the message is received. In most other blockchains, smart contract invocation is synchronous, i.e., a call to another smart contract is blocking, and there is one global state. This asynchronous messaging and isolated cube state results in a "loose coupling" between different cubes and subnets. The secure asynchronous cross-subnet (XNet) messaging between cubes and the resulting loose coupling of subnets are key principles that unlock the scalability of the BIG by means of adding new subnets: the state of each cube on a subnet can only be changed through asynchronous messages to the cube and thus cubes on the same or different subnets may execute concurrently. In terms of the programming model, asynchronous communication is a major difference between the BIG and most other blockchains; however, it is the key to achieving unprecedented scalability.
+As mentioned earlier, a cube bundles its code and data (state). This makes the cube state isolated from that of other cubes. Users interact with cubes by sending *ingress messages*. Cubes may also interact with other cubes by sending messages to other cubes on the same or different subnets. We collectively refer to messages sent to cubes, either by users or other cubes, as *messages* or *cube messages*. Each message can lead to the execution of cube smart contract code and the change of (replicated) cube state. Messages sent to cubes are *asynchronous*: when a message is sent, the sender is not blocked by this operation, but can perform other computations until the response to the message is received. In most other blockchains, smart contract invocation is synchronous, i.e., a call to another smart contract is blocking, and there is one global state. This asynchronous messaging and isolated cube state results in a "loose coupling" between different cubes and subnets. The secure asynchronous cross-subnet (XNet) messaging between cubes and the resulting loose coupling of subnets are key principles that unlock the scalability of the BIG by means of adding new subnets: the state of each cube on a subnet can only be changed through asynchronous messages to the cube and thus cubes on the same or different subnets may execute concurrently.
 
 ## Core BigFile
 
@@ -57,15 +57,13 @@ Chain-key cryptography is the collection of cryptographic mechanisms that enable
 
 For example, chain-evolution technology enables new nodes to efficiently join a subnet or nodes that have been down to efficiently catch up with the remaining part of the subnet.
 
-Both chain-key and chain-evolution technology sets the BIG apart from other projects in terms of technology.
-
 ## Governance
 
 The BIG offers governance at multiple levels, the platform level and the dapp level.
 
 ### Platform governance
 
-The BIG is governed by a *tokenized DAO*, the so-called *Network Nervous System (NNS)*. The NNS DAO is implemented as a set of cube smart contracts that are deployed on a high-replication subnet, i.e., a subnet with many nodes and hence stronger security properties. The NNS allows holders of the staked ICP to make proposals and vote on those proposals.
+The BIG is governed by a *tokenized DAO*, the so-called *Network Nervous System (NNS)*. The NNS DAO is implemented as a set of cube smart contracts that are deployed on a high-replication subnet, i.e., a subnet with many nodes and hence stronger security properties. The NNS allows holders of the staked BF to make proposals and vote on those proposals.
 
 ### Dapp governance
 
@@ -73,7 +71,7 @@ dapps on the BIG can be governed by an out-of-the-box deployable governance syst
 
 ## Go even deeper
 
-If you want to learn in more detail how the BIG works and realizes the vision of a World Computer, read through the sections of the page and the referenced Medium articles, or watch the YouTube videos. If you prefer to have a single source of information, the [White Paper](https://thebigfile.com/whitepaper.pdf) is highly recommended. However, note that it is a little technical at times.
+If you want to learn in more detail how the BIG works and realizes the vision of a No-document World, read through the sections of the page and the referenced Medium articles, or watch the YouTube videos. If you prefer to have a single source of information, the [White Paper](https://thebigfile.com/whitepaper.pdf) is highly recommended. However, note that it is a little technical at times.
 
 [BigFile for Geeks – White Paper](https://thebigfile.com/whitepaper.pdf)
 [BigFile Dashboard](https://dashboard.thebigfile.com/)
@@ -81,5 +79,3 @@ If you want to learn in more detail how the BIG works and realizes the vision of
 [Public Repositories for the BigFile](https://github.com/thebigfilecom?q=&type=public&language=&sort=)
 [BigFile Interface Specification Docs](https://thebigfile.com/docs/ic-interface-spec.md)
 [BigFile SDK](https://github.com/thebigfilecom/sdk)
-
-[![Watch youtube video](https://i.ytimg.com/vi/YWHTNr8RZHg/maxresdefault.jpg)](https://www.youtube.com/watch?v=YWHTNr8RZHg)
