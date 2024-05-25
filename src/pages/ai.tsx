@@ -55,14 +55,14 @@ const trustCards = [
     imageAlt: "Scalability icon",
     title: "Scalable",
     description:
-      "ICP aims to give smart contracts near native performance and scalability. Currently, smart contracts can execute billions of instructions per message and use 4GiB of the main memory and 400GiB of stable memory. The future vision is to give smart contracts access to AI hardware such as GPUs.",
+      "BigFile aims to give smart contracts near native performance and scalability. Currently, smart contracts can execute billions of instructions per message and use 4GiB of the main memory and 400GiB of stable memory. The future vision is to give smart contracts access to AI hardware such as GPUs.",
   },
   {
     imageSrc: "/img/decentralized-ai/trust-icon-5.svg",
     imageAlt: "Expressiveness icon",
     title: "Expressive",
     description:
-      "The virtual machine of ICP is WebAssembly that has a growing ecosystem of languages, tools, and libraries. This allows ICP developers to use open source projects such as ",
+      "The virtual machine of BigFile is WebAssembly that has a growing ecosystem of languages, tools, and libraries. This allows BigFile developers to use open source projects such as ",
     link: "https://github.com/sonos/tract",
     linkText: "Sonos Tract AI inference engine",
   },
@@ -77,7 +77,7 @@ const shortTermRoadmapItems = [
 const longTermRoadmapItems = [
   "Explore API for deterministic AI computation on GPUs.",
   "Develop public specification for nodes with GPUs.",
-  "Add subnets with the new nodes to ICP.",
+  "Add subnets with the new nodes to BigFile.",
 ];
 
 const TrustCard: React.FC<TrustCardProps> = ({
@@ -135,8 +135,8 @@ function AIPage() {
 
   return (
     <Layout
-      title="Decentralized AI on Internet Computer - Secure and Trustworthy AI Solutions"
-      description="Explore how the Internet Computer Protocol (ICP) leverages blockchain technology to offer decentralized AI solutions, ensuring model integrity, data confidentiality, and resilience against disruptions. Discover how AI smart contracts on ICP can transform trust and security in artificial intelligence."
+      title="Decentralized AI on BigFile - Secure and Trustworthy AI Solutions"
+      description="Explore how the BigFile leverages blockchain technology to offer decentralized AI solutions, ensuring model integrity, data confidentiality, and resilience against disruptions. Discover how AI smart contracts on ICP can transform trust and security in artificial intelligence."
     >
       <ShareMeta image="/img/shareImages/share-ai.jpg"></ShareMeta>
 
@@ -167,8 +167,7 @@ function AIPage() {
                 variants={transitions.item}
               >
                 Train and run AI models as smart contracts fully onchain to
-                benefit from the security, resilience, and computation power of the
-                BigFile blockchain.
+                benefit from the security, resilience, and computation power of the BigFile blockchain.
               </motion.p>
               {/* <MotionLink
                 className="button-white"
@@ -177,7 +176,7 @@ function AIPage() {
                 rel="noopener noreferrer"
                 variants={transitions.item}
               >
-                EXPLORE AI ON ICP
+                EXPLORE AI ON BigFile
               </MotionLink> */}
             </div>
           </div>
@@ -192,28 +191,7 @@ function AIPage() {
             </div>
           </div>
         </section>
-        <section className="container-10 mt-44 md:mt-60 mb-12 md:mb-20 ">
-          <AnimateSpawn
-            className="mt-32 md:mt-24"
-            variants={transitions.container}
-          >
-            <motion.h4 className="tw-heading-4 md:tw-heading-60 text-gradient">
-              A recent study on AI finds that nearly half of the respondents
-              (49%) are concerned about the misuse of AI for nefarious purposes.
-            </motion.h4>
-            <motion.p className="my-8">
-              Survey in the{" "}
-              <Link
-                className="font-bold"
-                to="https://aiindex.stanford.edu/wp-content/uploads/2024/04/HAI_AI-Index-Report-2024.pdf"
-                target="_blank"
-              >
-                Artificial Intelligence Index Report 2024
-              </Link>{" "}
-              by Stanford University.
-            </motion.p>
-          </AnimateSpawn>
-        </section>
+        
         <section className="container-12 relative mt-24 sm:mt-52 md:mt-40">
           <AnimateSpawn variants={transitions.container}>
             <aside className="container-10 md:mt-40 md:flex md:items-center !pl-0 !pr-0	">
@@ -250,7 +228,7 @@ function AIPage() {
                   is used and how AI models produces responses.
                   Since AI models behave like black boxes to users, building
                   trustworthy AI models is a difficult challenge that can be
-                  solved by training and running the models on ICP.
+                  solved by training and running the models on BigFile.
                 </motion.p>
               </div>
             </aside>
@@ -333,7 +311,7 @@ function AIPage() {
                     Decentralized AI
                   </motion.h3>
                   <motion.p className="text-2xl mb-0 ">
-                    <motion.span className="font-bold">DeAI </motion.span>
+                    <motion.span className="font-bold">FileAI </motion.span>
                     involves running AI training and inference as smart
                     contracts onchain, which addresses AI’s trust issues. Users
                     can verify the inputs to the models they utilize, reducing
@@ -341,9 +319,9 @@ function AIPage() {
                     inference are highly resource-intensive, and the limited
                     computational capabilities of traditional blockchain
                     networks often fall short. In contrast, the advanced design
-                    of the Internet Computer Protocol (ICP) successfully marries
+                    of the BigFile successfully marries
                     the security of smart contracts with the robust
-                    computational demands of AI. The following properties of ICP
+                    computational demands of AI. The following properties of BigFile
                     make decentralized and trustworthy AI possible.
                   </motion.p>
                 </div>
@@ -381,15 +359,15 @@ function AIPage() {
                 className="tw-heading-4 md:tw-heading-60 mb-0 text-gradient"
                 variants={transitions.item}
               >
-                AI Models on ICP Today
+                AI Models on BigFile Today
               </motion.h4>
               <div>
-                See a series of demos how the Internet Computer has the
+                See a series of demos how the BigFile has the
                 capability of running AI in a smart contract.
                 <div className="mt-6">
                   <Link
                     className="link-primary link-with-icon"
-                    href="https://www.youtube.com/watch?v=6qLvIXiCGcM&list=PLuhDt1vhGcrfWz1ZJrAmJBDS6aFADySwt"
+                    href="https://www.youtube.com/"
                   >
                     Watch the playlist <LinkArrowUpRight></LinkArrowUpRight>
                   </Link>
@@ -407,13 +385,7 @@ function AIPage() {
                   variants={transitions.item}
                   className="col-span-1 md:col-span-2 mb-10"
                 >
-                  <VideoCard
-                    image="/img/decentralized-ai/thumb-ai-video-thumb.webp"
-                    title="AI smart contract on ICP"
-                    label="Demo"
-                    link={`https://www.youtube.com/watch?v=6qLvIXiCGcM`}
-                    description="The world's first demonstration of AI inference running directly on the blockchain, presented by Dominic Williams"
-                  />
+                  
                 </motion.div>
               </div>
             </AnimateSpawn>
@@ -433,7 +405,7 @@ function AIPage() {
                   <MotionLink
                     variants={transitions.item}
                     className="button-outline"
-                    href="https://github.com/dfinity/examples/tree/master/rust/image-classification"
+                    href="https://github.com/thebigfilecom/examples/tree/main/rust/image-classification"
                   >
                     GO TO GITHUB REPO
                   </MotionLink>
@@ -441,7 +413,7 @@ function AIPage() {
                     href="/docs/current/developer-docs/ai/ai-on-chain"
                     className="mt-6 md:mt-0 link-primary link-with-icon items-center ml-0 md:ml-6"
                   >
-                    More about DeAI in the Dev docs <LinkArrowRight />
+                    More about FileAI in the Dev docs <LinkArrowRight />
                   </Link>
                 </p>
               </div>
@@ -511,74 +483,25 @@ let result = model.run(tvec!
           </AnimateSpawn>
         </section>
 
-        <AnimateSpawn
-          className="container-12 pt-16 md:pt-40"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <div className="flex flex-col gap-6 !p-0 md:gap-5 mb-8 md:flex-row container-10">
-            <motion.h2
-              className="tw-heading-4 mb-0 md:tw-heading-60"
-              variants={transitions.item}
-            >
-              News & media
-            </motion.h2>
-            <div className="md:flex-1 md:pt-1">
-              <motion.p
-                className="mb-0 mt-2 tw-paragraph md:tw-lead-sm"
-                variants={transitions.item}
-              >
-                Get all the news from the Internet Computer ecosystem
-              </motion.p>
-              <MotionLink
-                variants={transitions.item}
-                href="/news"
-                className="link-primary link-with-icon"
-              >
-                Explore more news <LinkArrowUpRight />
-              </MotionLink>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <Link
-              href="https://twitter.com/dominic_w/status/1750886289702834539"
-              className="link-primary link-with-icon no-underline cursor-pointer hover:-translate-y-2 transition-transform text-black"
-            >
-              <NewsCard
-                news={{
-                  title: "AI models as smart contracts on a blockchain.",
-                  dateHuman: "Jan 26, 2024 by @dominic_w",
-                  press: "@dominic_w",
-                  details: `#ICP says advanced AI models need to run as smart contracts on blockchain. How? Why? It's easiest to understand by example. Imagine an LLM (Large Language Model) AI that acts as a company oracle, which sits...`,
-                  url: "https://twitter.com/dominic_w/status/1750886289702834539",
-                  imageUrl: "/img/decentralized-ai/news-1.jpg",
-                }}
-                linkLabel="See the post"
-              />
-            </Link>
-
-          </div>
-        </AnimateSpawn>
-
         <LinkCardsSection
           className="mb-20 md:mb-30 mt-30 md:mt-40"
           title="Explore AI on BigFile"
           cards={[
             {
-              label: "Apply to DeAI Grants",
-              href: "https://dfinity.org/grants",
+              label: "Apply to FileAI Grants",
+              href: "https://thebigfile.com/grants",
             },
             {
-              label: "Start building DeAI",
+              label: "Start building FileAI",
               href: "/docs/current/developer-docs/ai/overview",
             },
             {
-              label: "Chat with AI to learn more about ICP",
+              label: "Chat with AI to learn more about BigFile",
               href: "/",
             },
             {
-              label: "Join the DeAI working group",
-              href: "https://forum.dfinity.org/t/technical-working-group-deai/24621",
+              label: "Join the FileAI working group",
+              href: "https://forum.thebigfile.com/",
             },
           ]}
         />

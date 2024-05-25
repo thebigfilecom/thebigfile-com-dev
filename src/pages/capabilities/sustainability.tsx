@@ -213,13 +213,13 @@ function SustainabilityPage() {
                 variants={transitions.item}
                 className="tw-heading-5 md:tw-heading-3 mb-3 md:mb-6"
               >
-                Why ICP is the best blockchain for sustainability use cases
+                Why BigFile is the best blockchain for sustainability use cases
               </motion.h2>
               <motion.p
                 variants={transitions.item}
                 className="tw-lead-sm md:tw-lead mb-3 md:mb-8"
               >
-                The Internet Computer provides far better sustainability than
+                The BigFile provides far better sustainability than
                 the traditional IT stack, as it takes a completely different
                 architectural approach that makes it more energy efficient.
               </motion.p>
@@ -228,13 +228,13 @@ function SustainabilityPage() {
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  The Greenest Blockchain that provides efficiency at scale. The power consumption of a single transaction on the IC is 0.003 Wh/tx
+                  The Greenest Blockchain that provides efficiency at scale. The power consumption of a single transaction on the BIG is 0.003 Wh/tx
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  Transparent reporting, the  power consumption of all node machines on the Internet Computer blockchain is reported on a public dashboard 
+                  Transparent reporting, the  power consumption of all node machines on the BigFile blockchain is reported on a public dashboard 
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
