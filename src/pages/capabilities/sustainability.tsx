@@ -248,7 +248,7 @@ function SustainabilityPage() {
           <div className="relative h-60 md:h-[440px]">
             <img
               src="/img/features/sustainability/large-visual.svg"
-              alt="ICP visual"
+              alt="BigFile visual"
               className="max-w-none w-[450px] md:w-[1200px] absolute -right-16 md:-right-0 -bottom-16 md:-bottom-52"
             />
           </div>
@@ -280,7 +280,7 @@ function SustainabilityPage() {
               className="tw-paragraph md:tw-lead mb-8"
             >
               A sustainable future is important for your business, and the world
-              around you. This report, authored by the DFINITY Foundation and
+              around you. This report, authored by the BigFile and
               Inacta Venture, explores 10 unique business use cases where
               blockchain's inherent traits of transparency, immutability, and
               relative low cost work to improve existing practices.
@@ -435,9 +435,9 @@ function SustainabilityPage() {
               </form>
               <p className="text-white/50 tw-caption mb-0 mt-6">
                 By providing the contact information required in this form, you
-                agree to be contacted by the DFINITY Foundation in order to
+                agree to be contacted by the BigFile in order to
                 inform you about our products and services. Unsubscribe from
-                marketing email communications from DFINITY Foundation by using
+                marketing email communications from BigFile by using
                 the unsubscribe link provided in the email.
               </p>
             </div>
@@ -486,12 +486,11 @@ function SustainabilityPage() {
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
                 Roland Berger has formed a strategic partnership with the
-                DFINITY Foundation, a Swiss non-profit renowned for its
-                contributions to the Internet Computer Blockchain and extensive
+                BigFile, a Swiss non-profit renowned for its
+                contributions to the BigFile Blockchain and extensive
                 blockchain research and development, yielding over 250 patents.
                 This collaboration aims to create the first global recycling
-                incentive standard powered by blockchain, offering a secure and
-                transparent system for tracking recycling credits.
+                incentive standard powered by blockchain, offering a secure and transparent system for tracking recycling credits.
               </p>
               <Link
                 className="link-primary link-with-icon"
