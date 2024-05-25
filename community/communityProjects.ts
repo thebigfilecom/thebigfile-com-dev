@@ -721,7 +721,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 42,
     title: "dfxIoT",
-    body: "Connecting real-world data into Internet Computer using verifiable and trusted IoT Devices and incentivize data-providers with tokens",
+    body: "Connecting real-world data into BigFile using verifiable and trusted IoT Devices and incentivize data-providers with tokens",
     links: {
       github: "https://github.com/marspoolxyz/dfx2IoT",
       livePreview:
