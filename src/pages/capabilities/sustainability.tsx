@@ -460,7 +460,7 @@ function SustainabilityPage() {
                 report, or a unique one.
               </p>
               <p className="mb-0">
-                <Link href="mailto:comms@dfinity.org" className="button-white">
+                <Link href="mailto:info@thebigfile.com" className="button-white">
                   Get in touch
                 </Link>
               </p>
@@ -475,127 +475,6 @@ function SustainabilityPage() {
             </div>
           </div>
         </AnimateSpawn>
-        <section className="container-12 pt-20 md:pt-30 relative">
-          <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout
-              imageUrl="/img/features/sustainability/vrc.webp"
-              reverse={true}
-            >
-              <h3 className="tw-heading-4 md:tw-heading-3 mb-6">
-                Revolutionizing Recycling: Blockchain-powered VRC Initiative
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Roland Berger has formed a strategic partnership with the
-                BigFile, a Swiss non-profit renowned for its
-                contributions to the BigFile Blockchain and extensive
-                blockchain research and development, yielding over 250 patents.
-                This collaboration aims to create the first global recycling
-                incentive standard powered by blockchain, offering a secure and transparent system for tracking recycling credits.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://gulfbusiness.com/cop28-voluntary-recycling-credits-initiative/"
-              >
-                Read the full article
-                <LinkArrowUpRight />
-              </Link>
-            </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/features/sustainability/cop28.webp">
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                ICP @ COP28
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                The international consortium in collaboration with DFINITY
-                Foundation and partners Roland Berger, BEEAH Group and
-                International Solid Waste Association (ISWA) came together at
-                the COP28 UN Climate Change Conference to launch the Voluntary
-                Recycling Credits initiative. This marks the world’s first
-                standard to incentivize recycling globally.
-              </p>
-
-              <p className="mb-0">
-                <Link
-                  className="link-primary link-with-icon"
-                  href="https://www.youtube.com/watch?v=YdY8UQ7nrs8&ab_channel=UAEPavilionatCOP28"
-                >
-                  Watch the presentation
-                  <LinkArrowUpRight />
-                </Link>
-              </p>
-            </TranslatedLayout>
-          </div>
-        </section>
-        <section>
-          <AnimateSpawn
-            className="container-10 pt-20 md:pt-30"
-            variants={transitions.container}
-          >
-            <div className="flex flex-col gap-6 md:gap-5 mb-8 md:mb-10 md:flex-row md:w-9/10">
-              <motion.h2
-                className="tw-heading-4 mb-0 md:tw-heading-60 md:flex-1"
-                variants={transitions.item}
-              >
-                News & videos
-              </motion.h2>
-              <div className="md:flex-1 md:pt-3">
-                <motion.p
-                  className="mb-4 tw-paragraph md:tw-lead-sm"
-                  variants={transitions.item}
-                >
-                  From industry news to videos about sustainable topics. Read
-                  the latest about blockchain technology.
-                </motion.p>
-                <MotionLink
-                  variants={transitions.item}
-                  href="/news"
-                  className="link-primary link-with-icon"
-                >
-                  <LinkArrowRight />
-                  Explore more news
-                </MotionLink>
-              </div>
-            </div>
-          </AnimateSpawn>
-          <AnimateSpawn
-            className="container-12 mb-20 md:mb-30"
-            variants={transitions.container}
-          >
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-              <AnimatedNewsCard
-                news={{
-                  title:
-                    "DFINITY founder says blockchain can bolster efforts to fight climate change",
-                  dateHuman: "December 13, 2023",
-                  press: "cointelegraph.com",
-                  imageUrl:
-                    "/img/features/sustainability/thumb-cointelegraph.webp",
-                  url: "https://gulfbusiness.com/cop28-voluntary-recycling-credits-initiative/",
-                }}
-              />
-              <AnimatedNewsCard
-                news={{
-                  title: "COP28 unveils voluntary recycling credits initiative",
-                  dateHuman: "July 12, 2023",
-                  press: "fastcompanyme.com",
-                  imageUrl:
-                    "/img/features/sustainability/thumb-fastcompany.webp",
-                  url: "https://fastcompanyme.com/news/cop28-unveils-voluntary-recycling-credits-initiative/",
-                }}
-              />
-              <AnimatedNewsCard
-                news={{
-                  title:
-                    "Launch Of Voluntary Recycling Credits: Setting an Incentive Mechanism for the Waste",
-                  dateHuman: "",
-                  press: "",
-                  imageUrl: "/img/features/sustainability/thumb-video-vrc.webp",
-                  url: "https://www.youtube.com/watch?v=YdY8UQ7nrs8&ab_channel=UAEPavilionatCOP28",
-                }}
-                linkLabel="Watch the video"
-              />
-            </div>
-          </AnimateSpawn>
-        </section>
       </main>
     </Layout>
   );
