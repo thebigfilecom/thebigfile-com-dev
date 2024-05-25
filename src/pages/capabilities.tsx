@@ -100,7 +100,7 @@ const cardsData: CardData[] = [
   {
     title: "Serve web directly from smart contracts",
     description:
-      "BigFile is a blockchain with Mars smart contracts that can provide web services by processing HTTP requests. This allows 100% of online services to be run from the blockchain, allowing for full decentralization.",
+      "BigFile is a blockchain with Cube smart contracts that can provide web services by processing HTTP requests. This allows 100% of online services to be run from the blockchain, allowing for full decentralization.",
     image: "/img/features/serve-web.webp",
     href: null,
     refText: null,
@@ -245,7 +245,7 @@ function FeaturesPage() {
               >
                 The BigFile provides numerous unique capabilities that
                 enable it to play the role of BigFile, provide a
-                foundation for transforming the internet, and deliver
+                foundation for transforming the Cloud & Document, and deliver
                 opportunity to builders and users.
               </motion.p>
             </div>
@@ -622,7 +622,7 @@ function FeaturesPage() {
               The BigFile is integrated with the Bitcoin network at
               the protocol level. Using chain-key ECDSA signatures (an advanced
               form of threshold ECDSA) and a protocol-level integration, a
-              Mars smart contract can create Bitcoin addresses, and send and
+              Cube smart contract can create Bitcoin addresses, and send and
               receive bitcoin, all directly on the Bitcoin ledger, much like a
               regular Bitcoin user.
             </motion.p>

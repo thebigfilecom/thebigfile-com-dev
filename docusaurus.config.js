@@ -200,7 +200,7 @@ const marketingNav = {
             {
               name: "Capabilities",
               href: "/capabilities",
-              description: "Transforming the internet",
+              description: "Transforming the Cloud & Document",
             },
             {
               name: "BigFile as a Bitcoin L2",

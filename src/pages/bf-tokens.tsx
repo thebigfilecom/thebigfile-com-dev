@@ -142,7 +142,7 @@ function TokenHolders(): JSX.Element {
                 Firstly, as a governance token, it can be staked to exercise
                 those governance rights. As a utility token, it can be burned to
                 obtain ‘cycles‘ which serves as gas for computation and storage
-                in Mars smart contracts. It can also be minted to reward
+                in Cube smart contracts. It can also be minted to reward
                 ‘node machine‘ providers for providing that compute and storage.
               </motion.p>
               <motion.p
