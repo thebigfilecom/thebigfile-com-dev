@@ -355,8 +355,7 @@ function SustainabilityPage() {
                   className="mb-0 tw-paragraph"
                   variants={transitions.item}
                 >
-                  A crypto donation solution, which provides an ecosystem for nonprofits and charities to fundraise Bitcoin and other cryptocurrencies, 
-                  be found by crypto donors, and receive funds instantly.
+                  A crypto donation solution, which provides an ecosystem for nonprofits and charities to fundraise Bitcoin and other cryptocurrencies, be found by crypto donors, and receive funds instantly.
                 </motion.p>
               </TranslatedCard>
               <TranslatedCard
@@ -434,8 +433,7 @@ function SustainabilityPage() {
                 </button>
               </form>
               <p className="text-white/50 tw-caption mb-0 mt-6">
-                By providing the contact information required in this form, you
-                agree to be contacted by the BigFile in order to
+                By providing the contact information required in this form, you agree to be contacted by the BigFile in order to
                 inform you about our products and services. Unsubscribe from
                 marketing email communications from BigFile by using
                 the unsubscribe link provided in the email.
