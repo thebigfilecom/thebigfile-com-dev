@@ -1,11 +1,11 @@
 import Changelog from './_attachments/interface-spec-changelog.md';
 
-# The Internet Computer Interface Specification
+# The BigFile Interface Specification
 
 
 ## Introduction
 
-Welcome to *the Internet Computer*! We speak of "the" Internet Computer, because although under the hood a large number of physical computers are working together in a blockchain protocol, in the end we have the appearance of a single, shared, secure and world-wide accessible computer. Developers who want to build decentralized applications (or *dapps* for short) that run on the Internet Computer blockchain and end-users who want to use those dapps need to know very little, if anything, about the underlying protocol. However, knowing some details about the interfaces that the Internet Computer exposes can allow interested developers and architects to take fuller advantages of the unique features that the Internet Computer provides.
+Welcome to *the BigFile*! We speak of "the" BigFile, because although under the hood a large number of physical computers are working together in a blockchain protocol, in the end we have the appearance of a single, shared, secure and world-wide accessible computer. Developers who want to build decentralized applications (or *dapps* for short) that run on the Internet Computer blockchain and end-users who want to use those dapps need to know very little, if anything, about the underlying protocol. However, knowing some details about the interfaces that the Internet Computer exposes can allow interested developers and architects to take fuller advantages of the unique features that the Internet Computer provides.
 
 ### Target audience
 
@@ -217,11 +217,11 @@ Example encoding from hex, and decoding to hex, in bash (the following can be pa
 
 :::
 
-### Canister lifecycle {#canister-lifecycle}
+### Cube lifecycle {#cube-lifecycle}
 
-Dapps on the Internet Computer are called *canisters*. Conceptually, they consist of the following pieces of state:
+Dapps on the BigFile are called *cubes*. Conceptually, they consist of the following pieces of state:
 
--   A canister id (a [principal](#principal))
+-   A cube id (a [principal](#principal))
 
 -   Their *controllers* (a possibly empty list of [principal](#principal))
 
@@ -2055,41 +2055,41 @@ Only controllers of the canister can uninstall code.
 
 Uninstalling a canister's code will reject all calls that the canister has not yet responded to, and drop the canister's code and state. Outstanding responses to the canister will not be processed, even if they arrive after code has been installed again. Cycles attached to such responses will still be refunded though.
 
-The canister is now [empty](#canister-lifecycle). In particular, any incoming or queued calls will be rejected.
+The cube is now [empty](#cube-lifecycle). In particular, any incoming or queued calls will be rejected.
 
-A canister after *uninstalling* retains its *cycle* balances, *controllers*, history, status, and allocations.
+A cube after *uninstalling* retains its *cycle* balances, *controllers*, history, status, and allocations.
 
-The optional `sender_canister_version` parameter can contain the caller's canister version. If provided, its value must be equal to `ic0.canister_version`.
+The optional `sender_cube_version` parameter can contain the caller's cube version. If provided, its value must be equal to `ic0.cube_version`.
 
-### IC method `canister_status` {#ic-canister_status}
+### BIG method `cube_status` {#ic-canister_status}
 
-Indicates various information about the canister. It contains:
+Indicates various information about the cube. It contains:
 
--   The status of the canister. It could be one of `running`, `stopping` or `stopped`.
+-   The status of the cube. It could be one of `running`, `stopping` or `stopped`.
 
--   The "settings" of the canister containing:
+-   The "settings" of the cube containing:
 
-    -   The controllers of the canister. The order of returned controllers may vary depending on the implementation.
+    -   The controllers of the cube. The order of returned controllers may vary depending on the implementation.
 
-    -   The compute and memory allocation of the canister.
+    -   The compute and memory allocation of the cube.
 
-    -   The freezing threshold of the canister in seconds.
+    -   The freezing threshold of the cube in seconds.
 
-    -   The reserved cycles limit of the canister, i.e., the maximum number of cycles that can be in the canister's reserved balance after increasing the canister's memory allocation and/or actual memory usage.
+    -   The reserved cycles limit of the cube, i.e., the maximum number of cycles that can be in the cube's reserved balance after increasing the cube's memory allocation and/or actual memory usage.
 
--   A SHA256 hash of the module installed on the canister. This is `null` if the canister is empty.
+-   A SHA256 hash of the module installed on the cube. This is `null` if the cube is empty.
 
--   The actual memory usage of the canister.
+-   The actual memory usage of the cube.
 
--   The cycle balance of the canister.
+-   The cycle balance of the cube.
 
--   The reserved cycles balance of the canister, i.e., the number of cycles reserved when increasing the canister's memory allocation and/or actual memory usage.
+-   The reserved cycles balance of the cube, i.e., the number of cycles reserved when increasing the cube's memory allocation and/or actual memory usage.
 
--   The idle cycle consumption of the canister, i.e., the number of cycles burned by the canister per day due to its compute and memory allocation and actual memory usage.
+-   The idle cycle consumption of the cube, i.e., the number of cycles burned by the cube per day due to its compute and memory allocation and actual memory usage.
 
-Only the controllers of the canister or the canister itself can request its status.
+Only the controllers of the cube or the cube itself can request its status.
 
-### IC method `canister_info` {#ic-canister-info}
+### BIG method `canister_info` {#ic-canister-info}
 
 Provides the history of the canister, its current module SHA-256 hash, and its current controllers. Every canister can call this method on every other canister (including itself). Users cannot call this method.
 

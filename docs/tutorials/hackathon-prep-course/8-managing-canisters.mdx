@@ -4,17 +4,17 @@ keywords: [beginner, tutorial, hackathon, hackathon prep course]
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
-# 8: Managing canisters
+# 8: Managing cubes
 
 <MarkdownChipRow labels={["Beginner", "Tutorial"]} />
 
 ## Overview
 
-Now that you have canisters deployed on the mainnet, it's important to learn how to manage and maintain those canisters. Basic canister management includes obtaining information about a canister, adding an identity as a controller of a canister, topping up a canister, starting and stopping a canister, and deleting a canister.
+Now that you have cubes deployed on the mainnet, it's important to learn how to manage and maintain those cubes. Basic cube management includes obtaining information about a cube, adding an identity as a controller of a cube, topping up a cube, starting and stopping a cube, and deleting a cube.
 
-## Obtaining a canister's ID
+## Obtaining a cube's ID
 
-Each canister has a unique identifier that can be used to interact with the canister. These unique IDs can be used to access the canister's frontend or Candid UI in a web browser, such as when you accessed the frontend of your dapp in the previous tutorial. Having a canister's ID is also important for executing management functions of the canister, such as setting ownership for the canister.
+Each cube has a unique identifier that can be used to interact with the cube. These unique IDs can be used to access the cube's frontend or Candid UI in a web browser, such as when you accessed the frontend of your dapp in the previous tutorial. Having a cube's ID is also important for executing management functions of the cube, such as setting ownership for the cube.
 
 To get the canister ID of the `backend` canister that's been deployed on the mainnet, use the command:
 
@@ -237,7 +237,7 @@ Module hash: 0xf8680eb74022a1079012b7e9c644d1156580002a6126305791811533d3fd6f17
 
 The values returned in this output refer to the following:
 
-- Status: The canister's [current status](https://github.com/dfinity/interface-spec/blob/master/spec/index.md#canister-lifecycle-canister-lifecycle), such as `Running`, `Stopping` or `Stopped`.
+- Status: The cube's [current status](https://github.com/thebigfilecom/interface-spec/blob/main/spec/index.md#cube-lifecycle-cube-lifecycle), such as `Running`, `Stopping` or `Stopped`.
 - [Controllers](/docs/current/tutorials/developer-journey/level-1/1.6-managing-canisters#adding-an-identity-as-a-controller-of-a-canister): The principal IDs of the canister's configured controllers. Controllers are able to perform operations such as deploying or stopping a canister.
 - [Memory allocation](/docs/current/developer-docs/gas-cost): The current amount of memory allocated by the canister.
 - [Compute allocation](/docs/current/developer-docs/gas-cost): The current amount of compute resources allocated by the canister.
