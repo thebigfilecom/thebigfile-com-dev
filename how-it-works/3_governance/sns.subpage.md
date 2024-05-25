@@ -9,7 +9,7 @@ slug: sns
 
 # Service Nervous System (SNS)
 
-The Service Nervous System (SNS) framework is the Internet Computer's built-in solution for creating and maintaining decentralized autonomous organizations (DAOs) to govern dapps. An SNS consists of an open, permissionless governance system governing a dapp, and of a built-in governance token that is unique to each SNS.
+The Service Nervous System (SNS) framework is the BigFile built-in solution for creating and maintaining decentralized autonomous organizations (DAOs) to govern dapps. An SNS consists of an open, permissionless governance system governing a dapp, and of a built-in governance token that is unique to each SNS.
 
 
 ## SNS DAO
@@ -17,7 +17,7 @@ Generally, for each dapp that is under SNS DAO control, there is one SNS DAO. Th
 
 
 ### What an SNS governs
-On a high level an SNS DAO governs a dapp, that is decides on the code of that dapp and how it is evolved. On the Internet Computer this can also include the dapp's data and frontend. Moreover, the SNS DAO makes decisions on the DAO itself, for example on how to change tokenomics. More technically, there are _native proposals_ that are common to all SNSs, such as proposals to upgrade the DAO-controlled dapp canisters, change governance rules, or making transfers from the treasury to open a liquidity pool on a DEX. In addition, each SNS can define _custom proposals_ that are specific to the dapp's needs. A proposal can be defined to call any method on any canister. This allows, for example to define proposals that orchestrate upgrades of dapps with many canisters.
+On a high level an SNS DAO governs a dapp, that is decides on the code of that dapp and how it is evolved. On the BigFile this can also include the dapp's data and frontend. Moreover, the SNS DAO makes decisions on the DAO itself, for example on how to change tokenomics. More technically, there are _native proposals_ that are common to all SNSs, such as proposals to upgrade the DAO-controlled dapp cubes, change governance rules, or making transfers from the treasury to open a liquidity pool on a DEX. In addition, each SNS can define _custom proposals_ that are specific to the dapp's needs. A proposal can be defined to call any method on any cube. This allows, for example to define proposals that orchestrate upgrades of dapps with many cubes.
 
 
 
@@ -45,22 +45,22 @@ As soon as a proposal is adopted, it is executed by the SNS. With very few excep
 ## The Architecture of an SNS
 
 
-### SNS canisters
-Each SNS DAO consists of a set of _canisters smart contracts_ that run _Wasm code_. The most central canisters closely resemble the [Network Nervous System](/how-it-works/network-nervous-system-nns/) (NNS) which is the DAO that governs the full ICP. The _governance canister_ implements the governance system and the _ledger canister_ implements an SNS specific governance token. The _swap canister_ implements the initial decentralization swap that is used during the launch process (see below) to raise initial funds in the form of ICP and swap them for newly minted SNS tokens. These canisters, together with a few additional ones, form one SNS DAO that governs one dapp.
+### SNS cubes
+Each SNS DAO consists of a set of _cubes smart contracts_ that run _Wasm code_. The most central cubes closely resemble the [Network Nervous System](/how-it-works/network-nervous-system-nns/) (NNS) which is the DAO that governs the full ICP. The _governance cube_ implements the governance system and the _ledger cube_ implements an SNS specific governance token. The _swap cube_ implements the initial decentralization swap that is used during the launch process (see below) to raise initial funds in the form of ICP and swap them for newly minted SNS tokens. These cubes, together with a few additional ones, form one SNS DAO that governs one dapp.
 
 
-### SNS canister code
+### SNS cube code
 The SNS DAOs are hosted on the _SNS subnet_.
 
 
-The Wasms run on SNS canister are approved by the [NNS](/how-it-works/network-nervous-system-nns/) and published on an NNS canister called the _SNS wasm modules canister (SNS-W)_. If an SNS community decides, by DAO decision, to update the SNS, then the DAO will automatically fetch the new version from SNS-W and update the canisters accordingly. This means that all the SNS DAOs run code that is pre-approved by the NNS and they all run the same code (some of the SNS might be a few versions behind). The fact that this is built into the platform makes it easy for SNS DAO communities to maintain the code. Moreover, it is easy for users to verify different SNS DAOs as they all run the same, pre-approved code.
+The Wasms run on SNS cube are approved by the [NNS](/how-it-works/network-nervous-system-nns/) and published on an NNS cube called the _SNS wasm modules cube (SNS-W)_. If an SNS community decides, by DAO decision, to update the SNS, then the DAO will automatically fetch the new version from SNS-W and update the cubes accordingly. This means that all the SNS DAOs run code that is pre-approved by the NNS and they all run the same code (some of the SNS might be a few versions behind). The fact that this is built into the platform makes it easy for SNS DAO communities to maintain the code. Moreover, it is easy for users to verify different SNS DAOs as they all run the same, pre-approved code.
 
 
 ## SNS Launch process
-The SNS framework includes a process how to launch a new SNS. To decentralize a dapp, the dapp is handed over to the Internet Computer together with an NNS proposal defining the details of the SNS launch and the initial configuration of the SNS DAO to be created. The proposal details, for example, the initial token distribution. If the NNS community approves this proposal, the following steps are executed fully automatically:
+The SNS framework includes a process how to launch a new SNS. To decentralize a dapp, the dapp is handed over to the BigFile together with an NNS proposal defining the details of the SNS launch and the initial configuration of the SNS DAO to be created. The proposal details, for example, the initial token distribution. If the NNS community approves this proposal, the following steps are executed fully automatically:
 * The NNS creates a new set of SNS canisters and initializes them as defined in the NNS proposal.
 * The NNS hands over the dapp's control to the newly created SNS.
-* The NNS starts an [_initial decentralization swap_](/sns/faq#what-is-a-decentralization-swap) for the SNS. The purpose of this is to raise initial funds for the DAO and to decentralize the voting power. This is done by an open swap where users can contribute ICP tokens as initial funding and get in return (staked) SNS tokens and thereby a share of the DAO's voting power.
+* The NNS starts an [_initial decentralization swap_](/sns/faq#what-is-a-decentralization-swap) for the SNS. The purpose of this is to raise initial funds for the DAO and to decentralize the voting power. This is done by an open swap where users can contribute BF tokens as initial funding and get in return (staked) SNS tokens and thereby a share of the DAO's voting power.
 * If the decentralization swap is successful, the SNS launch was successful and turns into a fully functional DAO.
 
 

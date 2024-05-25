@@ -23,7 +23,7 @@ Hello developers and welcome to the final installment of the Dev Blog's team spo
 
 *A main vehicle to support  developers in the initial stages is the DFINITY Developer Grants program, which allows us to provide some financial support, but more importantly regular touch points with the teams to help them build and grow.*
 
-*We are active on many communication platforms like the ICP Developer Discord and the DFINITY Forum, but also on (crypto) X, as well as OpenChat or new platforms like Farcaster. We run weekly Office Hours on Discord, are coordinating Technical Working Groups, organize Hackathons and Workshops, and create and aggregate resources for developers.*
+*We are active on many communication platforms like the BigFile Developer Discord and the BigFile Forum, but also on (crypto) X, as well as OpenChat or new platforms like Farcaster. We run weekly Office Hours on Discord, are coordinating Technical Working Groups, organize Hackathons and Workshops, and create and aggregate resources for developers.*
 
 **While interacting with the community in so many different ways, what are some of the challenges that the team faces?**
 

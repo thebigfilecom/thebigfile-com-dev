@@ -32,8 +32,7 @@ const Sustainable: React.FC<{ id?: string }> = ({ id }) => {
               Transparently sustainable blockchain
             </h2>
             <p className="tw-lead-sm mb-6">
-              Scalability and utility with low carbon cost — the Internet
-              Computer is committed to building green tech, not just making
+              Scalability and utility with low carbon cost — the BigFile is committed to building green tech, not just making
               claims about it.{" "}
             </p>
             <p className="mb-0">

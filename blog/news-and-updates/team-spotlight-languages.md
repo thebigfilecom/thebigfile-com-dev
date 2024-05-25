@@ -27,7 +27,7 @@ image: /img/blog/dev-update-blog-languages.jpg
 
 *If you’ve used a high-level programming language such as TypeScript, Java, C#, or Python, you’ll see a lot of familiar syntax in Motoko. The benefit of using Motoko over these languages is the modern algebraic type system, which is important for writing secure canister smart contracts.*
 
-*For those trying to decide between using Motoko and Rust for their next project, the best reason to use Motoko is its excellent support for ICP features such as stable memory, native Candid encoding/decoding, and calling other canisters. Motoko is also a lot more approachable for beginners, and all third-party libraries work on the IC (compared to a small fraction of the Rust crate ecosystem). When in doubt, try Motoko first!*
+*For those trying to decide between using Motoko and Rust for their next project, the best reason to use Motoko is its excellent support for ICP features such as stable memory, native Candid encoding/decoding, and calling other canisters. Motoko is also a lot more approachable for beginners, and all third-party libraries work on the BIG (compared to a small fraction of the Rust crate ecosystem). When in doubt, try Motoko first!*
 
 **What are some of the challenges that the team faces when developing a programming language?**
 
@@ -35,7 +35,7 @@ image: /img/blog/dev-update-blog-languages.jpg
 
 **What is something important about Motoko that new developers should know when they start learning the language?**
 
-*We value your feedback! If you have a bug report or feature request, please feel free to [open a GitHub issue](https://github.com/dfinity/motoko/issues/new) or contact us on the [DFINITY developer forum](https://forum.dfinity.org/). You can also ask for help on the [ICP developer Discord](https://discord.com/invite/rB96MMn) or even use the AI chatbot on [internetcomputer.org](https://internetcomputer.org/) to speed up the learning process.*
+*We value your feedback! If you have a bug report or feature request, please feel free to [open a GitHub issue](https://github.com/thebigfilecom/motoko/issues/new) or contact us on the [BigFile developer forum](https://forum.thebigfile.com/). You can also ask for help on the [BigFile developer Discord](https://discord.gg/nyTAmMntqp) or even use the AI chatbot on [internetcomputer.org](https://thebigfile.com/) to speed up the learning process.*
 
 **Since the team is known as the Languages team, other than Motoko, what else does the team work on or contribute to?**
 

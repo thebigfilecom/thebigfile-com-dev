@@ -10,14 +10,14 @@ slug: network-nervous-system-nns
 [![Watch youtube video](https://i.ytimg.com/vi/hWnsluxmRqc/maxresdefault.jpg)](https://www.youtube.com/watch?v=hWnsluxmRqc)
 
 
-The Network Nervous System (NNS) is the DAO that controls the Internet Computer blockchain. It is an open, permissionless governance system, where everyone can participate by staking ICP utility tokens in so-called _neurons_. Decisions are made by voting on _proposals_, which can be submitted by anyone.
+The Network Nervous System (NNS) is the DAO that controls the BigFile blockchain. It is an open, permissionless governance system, where everyone can participate by staking BF utility tokens in so-called _neurons_. Decisions are made by voting on _proposals_, which can be submitted by anyone.
 
 
 
 
 ## Governance participation
-Governance participants are called _neurons_. Neurons are created by locking ICP utility tokens for a specified period of time. The NNS is a stake-based governance system, where a neuron's voting power is depending on three main factors:
-1) the amount of ICP tokens the neuron stakes
+Governance participants are called _neurons_. Neurons are created by locking BF utility tokens for a specified period of time. The NNS is a stake-based governance system, where a neuron's voting power is depending on three main factors:
+1) the amount of BF tokens the neuron stakes
 2) the neuron's _dissolve delay_ which is the duration of the staking period
 3) the neuron's _age_, which on a high level is the time since the tokens have been staked.
 
@@ -50,25 +50,25 @@ As soon as a proposal is adopted, it is executed by the NNS. With very few excep
 
 
 ## What the NNS governs
-The NNS governs the full Internet Computer blockchain. For example, the NNS makes decisions on the following topics.
+The NNS governs the full BigFile blockchain. For example, the NNS makes decisions on the following topics.
 * *Network topology*: The NNS decides which node machines can join the network and how these nodes are organized into _subnets_.
 * *Software run on the nodes*: The NNS decides which software is run by the nodes that form the blockchain. This allows the NNS to upgrade the protocol without manual intervention of the individual node operators.
-* *Tokenomics*: The NNS decides how many rewards node operators and governance participants get and the costs of computation and storage on the Internet Computer.
+* *Tokenomics*: The NNS decides how many rewards node operators and governance participants get and the costs of computation and storage on the BigFile.
 * *Governance*: The NNS decides on the rules of the governance itself, e.g. how many votes are needed for a proposal to be adopted, how long the voting period is, etc.
 * *Motion*: These proposals allow for opinion polls and are the only proposals that do not have a direct effect. 
 
 
-With the exception of motion proposals, all these decisions are executed fully on-chain and at low cost compared to other chains. Therefore, decisions can be made efficiently and frequently allowing the NNS to adapt the ICP platform to the community's needs.
+With the exception of motion proposals, all these decisions are executed fully on-chain and at low cost compared to other chains. Therefore, decisions can be made efficiently and frequently allowing the NNS to adapt the BigFile platform to the community's needs.
 
 
 ## The Architecture of the NNS
 The NNS is implemented as a set of _canister smart contracts_ on a dedicated _NNS system subnet_. Facilitated by the low computation and storage costs on the ICP, and since the NNS subnet is cross-subsidized by other subnets, voting on proposals is free of charge and a high volume of votes and proposals can be processed and stored on-chain.
 
 
-Two important canisters are the _governance canister_ that manages neurons, proposals, and the voting process, and the _ICP ledger canister_ that implements the ICP token which is the NNS governance token. In addition, there are other canisters for special purposes, for example the _cycles minting canister (CMC)_ that is responsible to mint _cycles_ - the "gas" used for computation and storage on the ICP.
+Two important canisters are the _governance canister_ that manages neurons, proposals, and the voting process, and the _ICP ledger canister_ that implements the BF token which is the NNS governance token. In addition, there are other canisters for special purposes, for example the _cycles minting canister (CMC)_ that is responsible to mint _cycles_ - the "gas" used for computation and storage on the ICP.
 
 
-To allow for flexible governance evolution, the NNS canisters are _mutable smart contracts_. Two canisters, called _root_ and _lifeline_, are responsible for upgrading the NNS canisters. As NNS canisters control each other, it is ensured that they can only be changed by an NNS DAO decision.
+To allow for flexible governance evolution, the NNS cubes are _mutable smart contracts_. Two cubes, called _root_ and _lifeline_, are responsible for upgrading the NNS cubes. As NNS cubes control each other, it is ensured that they can only be changed by an NNS DAO decision.
 
 
 

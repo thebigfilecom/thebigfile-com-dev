@@ -91,7 +91,7 @@ const sidebars = {
           items: [
             "developer-docs/smart-contracts/overview/introduction",
             "developer-docs/smart-contracts/overview/inside-canisters",
-            "developer-docs/smart-contracts/overview/canister-lifecycle",
+            "developer-docs/smart-contracts/overview/cube-lifecycle",
           ],
         },
         {
@@ -611,11 +611,11 @@ const sidebars = {
           type: "category",
           label: "BF tokens",
           items: [
-            "developer-docs/defi/icp-tokens/overview",
-            "developer-docs/defi/icp-tokens/ledger-local-setup",
-            "developer-docs/defi/icp-tokens/using-the-ledger",
-            "developer-docs/defi/icp-tokens/icp-index-local-setup",
-            "developer-docs/defi/icp-tokens/account-trimming",
+            "developer-docs/defi/bf-tokens/overview",
+            "developer-docs/defi/bf-tokens/ledger-local-setup",
+            "developer-docs/defi/bf-tokens/using-the-ledger",
+            "developer-docs/defi/bf-tokens/icp-index-local-setup",
+            "developer-docs/defi/bf-tokens/account-trimming",
           ],
         },
         {
@@ -1063,7 +1063,7 @@ const sidebars = {
             id: "tutorials/hackathon-prep-course/index",
           },
           items: [
-            "tutorials/hackathon-prep-course/what-is-icp",
+            "tutorials/hackathon-prep-course/what-is-bigfile",
             "tutorials/hackathon-prep-course/deploying-first-fullstack-dapp",
             "tutorials/hackathon-prep-course/exploring-the-backend",
             "tutorials/hackathon-prep-course/exploring-the-frontend",

@@ -1,5 +1,5 @@
 ---
-title: Canister Lifecycle Hooks
+title: Cube Lifecycle Hooks
 links:
   Forum Link: https://forum.dfinity.org/t/canister-lifecycle-hooks/17089
   Proposal: https://dashboard.internetcomputer.org/proposal/106146

@@ -39,7 +39,7 @@ cd icp_transfer
 ### Step 2: Determine ledger file locations
 
 > [!NOTE]
-> You can read more about how to setup the ICP ledger locally [here](https://internetcomputer.org/docs/current/developer-docs/defi/icp-tokens/ledger-local-setup).
+> You can read more about how to setup the ICP ledger locally [here](https://internetcomputer.org/docs/current/developer-docs/defi/bf-tokens/ledger-local-setup).
 
 Go to the [releases overview](https://dashboard.internetcomputer.org/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 

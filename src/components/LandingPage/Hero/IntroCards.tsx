@@ -67,7 +67,7 @@ const IntroCards: React.FC = () => {
               Blockchain as a service
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
-              The future of cloud is serverless: for enterprise, government and
+              The future of cloud & document is serverless: for enterprise, government and
               Web3 applications – <strong>Build with Cloud 3.0.</strong>
             </p>
             <p className="mb-0">
@@ -81,11 +81,11 @@ const IntroCards: React.FC = () => {
             variants={transitions.item}
           >
             <h2 className="tw-heading-4 md:tw-heading-3 mb-0">
-              Open Internet Services
+              BigFile Services
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
-              Now internet communities take full and exclusive control and
-              ownership of entire internet services –{" "}
+              Now BigFile communities take full and exclusive control and
+              ownership of entire BigFile services –{" "}
               <strong>Create your first DAO on true Web 3.0.</strong>
             </p>
             <p className="mb-0">
@@ -102,7 +102,7 @@ const IntroCards: React.FC = () => {
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
               Web2 relies on usernames and passwords for authentication –{" "}
               <strong>
-                Internet Identity is the most secure authentification for Web2
+                BIG Wallet is the most secure authentification for Web2
                 and Web3.{" "}
               </strong>{" "}
             </p>

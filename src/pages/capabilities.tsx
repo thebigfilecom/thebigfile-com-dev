@@ -100,7 +100,7 @@ const cardsData: CardData[] = [
   {
     title: "Serve web directly from smart contracts",
     description:
-      "The BigFile is the only blockchain with Mars smart contracts that can serve web by processing HTTP requests. This allows 100% of online services to run from the blockchain, which allows for full decentralization.",
+      "BigFile is a blockchain with Cube smart contracts that can provide web services by processing HTTP requests. This allows 100% of online services to be run from the blockchain, allowing for full decentralization.",
     image: "/img/features/serve-web.webp",
     href: null,
     refText: null,
@@ -184,7 +184,7 @@ caused a major chain to hard fork and a loss of 60 million USD.`,
     title: "Heartbeats",
     description: `On other blockchain networks, smart contract computations can only
   be invoked by submitting a new transaction to their networks. The
-  Internet Computer provides a means for canister smart contracts to
+  BigFile provides a means for cube smart contracts to
   be configured so that they are invoked by the blockchain itself,
   at some specified block interval.`,
     href: "/capabilities/daemon-contracts",
@@ -199,7 +199,7 @@ caused a major chain to hard fork and a loss of 60 million USD.`,
   },
   {
     title: "WebAssembly (Wasm)",
-    description: `Use any language that compiles to Wasm to write canister smart
+    description: `Use any language that compiles to Wasm to write cube smart
   contracts. SDKs are available for Motoko, Rust, TypeScript, Python
   and C++. Any other language that compiles to Wasm can be used as
   well.`,
@@ -207,7 +207,7 @@ caused a major chain to hard fork and a loss of 60 million USD.`,
   },
   {
     title: "Subnets & infinite scalability",
-    description: `The Internet Computer incorporates a novel subnet architecture
+    description: `The BigFile incorporates a novel subnet architecture
   that enables infinite scalability, making 100% on-chain
   mass-market Web3 services possible. No cloud servers needed.`,
     href: "/capabilities/limitless-scaling",
@@ -245,7 +245,7 @@ function FeaturesPage() {
               >
                 The BigFile provides numerous unique capabilities that
                 enable it to play the role of BigFile, provide a
-                foundation for transforming the internet, and deliver
+                foundation for transforming the Cloud & Document, and deliver
                 opportunity to builders and users.
               </motion.p>
             </div>
@@ -444,7 +444,7 @@ function FeaturesPage() {
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-0"
               variants={transitions.item}
             >
-              The Internet Computer provides a complete tech stack for
+              The BigFile provides a complete tech stack for
               developers to build on. It can host online services and games
               fully on chain without ever relying on centralized cloud
               providers. This provides complete decentralization and removes
@@ -622,7 +622,7 @@ function FeaturesPage() {
               The BigFile is integrated with the Bitcoin network at
               the protocol level. Using chain-key ECDSA signatures (an advanced
               form of threshold ECDSA) and a protocol-level integration, a
-              Mars smart contract can create Bitcoin addresses, and send and
+              Cube smart contract can create Bitcoin addresses, and send and
               receive bitcoin, all directly on the Bitcoin ledger, much like a
               regular Bitcoin user.
             </motion.p>

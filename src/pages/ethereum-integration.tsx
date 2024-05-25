@@ -121,7 +121,7 @@ function EthereumIntegrationPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-0  text-gradient"
               variants={transitions.item}
             >
-              Mars smart contracts on BigFile are the glue between blockchains
+              Cube smart contracts on BigFile are the glue between blockchains
               and the gateway to multi-chain advantages.
             </motion.h2>
             {/* <motion.p className="tw-paragraph mb-0" variants={transitions.item}>
@@ -228,14 +228,14 @@ function EthereumIntegrationPage() {
               and send transactions to it. 
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              Chain-key (ck) ECDSA , which is already available to any Mars
+              Chain-key (ck) ECDSA , which is already available to any Cube
               smart contract on the BigFile, can invoke smart
               contracts calls on the Ethereum blockchain by creating and signing
               transactions to be executed by the Ethereum network.
             </p>
             <p className="mb-0">
               <Link
-                href="https://wiki.internetcomputer.org/wiki/Trustless_multi-chain_web3_using_the_IC"
+                href="https://wiki.thebigfile.com/wiki/Trustless_multi-chain_web3_using_the_BIG"
                 className="link-primary link-with-icon"
               >
                 About ckECDSA signing & multi-chain <LinkArrowRight />

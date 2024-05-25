@@ -124,6 +124,6 @@ After this step, the pulled dependencies can be deployed on a local replica usin
 
 The `dfx deps` feature is available in dfx versions `0.14.1` and newer. You can learn more from our [developer documentation](/docs/current/developer-docs/smart-contracts/maintain/import), which includes an interactive example you can use to test the feature for yourself.
 
-As always, please let us know if you have any feedback either through our [forum](https://forum.dfinity.org/) or [Discord server](https://discord.com/invite/5PJMmmETQB).
+As always, please let us know if you have any feedback either through our [forum](https://forum.thebigfile.com/) or [Discord server](https://discord.gg/nyTAmMntqp).
 
 -DFINITY

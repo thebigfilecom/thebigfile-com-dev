@@ -126,10 +126,10 @@ const redirects = `
   /docs/current/developer-docs/quickstart/windows-wsl /docs/current/developer-docs/getting-started/install/windows-wsl
   /docs/current/developer-docs/quickstart/hello10mins/ /docs/current/tutorials/developer-journey/
 
-  /docs/rosetta-api/ledger /docs/current/developer-docs/defi/icp-tokens/overview
-  /docs/rosetta-api/ledger-local-setup /docs/current/developer-docs/defi/icp-tokens/ledger-local-setup
-  /docs/integration/ledger-quick-start /docs/current/developer-docs/defi/icp-tokens/overview
-  /docs/current/developer-docs/functionality/ledger/* /docs/current/developer-docs/defi/icp-tokens/ledger-local-setup
+  /docs/rosetta-api/ledger /docs/current/developer-docs/defi/bf-tokens/overview
+  /docs/rosetta-api/ledger-local-setup /docs/current/developer-docs/defi/bf-tokens/ledger-local-setup
+  /docs/integration/ledger-quick-start /docs/current/developer-docs/defi/bf-tokens/overview
+  /docs/current/developer-docs/functionality/ledger/* /docs/current/developer-docs/defi/bf-tokens/ledger-local-setup
 
   /docs/base-libraries/* /docs/current/motoko/main/base/:splat
   /base-libraries/* /docs/current/motoko/main/base/:splat
@@ -348,11 +348,11 @@ const redirects = `
   /docs/current/developer-docs/http-compatible-canisters/serving-json-over-http /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-json-over-http
   /docs/current/developer-docs/http-compatible-canisters/serving-static-assets-over-http  /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-static-assets-over-http
   /docs/current/developer-docs/integrations/ledger/introduction_and_overview /docs/current/developer-docs/defi/overview
-  /docs/current/developer-docs/integrations/ledger/  /docs/current/developer-docs/defi/icp-tokens/overview
-  /docs/current/developer-docs/integrations/ledger/ledger-local-setup  /docs/current/developer-docs/defi/icp-tokens/ledger-local-setup
-  /docs/current/developer-docs/integrations/ledger/interact-with-ledger  /docs/current/developer-docs/defi/icp-tokens/using-the-ledger
-  /docs/current/developer-docs/integrations/ledger/icp-index-local-setup /docs/current/developer-docs/defi/icp-tokens/icp-index-local-setup
-  /docs/current/developer-docs/integrations/ledger/collecting-dust /docs/current/developer-docs/defi/icp-tokens/account-trimming
+  /docs/current/developer-docs/integrations/ledger/  /docs/current/developer-docs/defi/bf-tokens/overview
+  /docs/current/developer-docs/integrations/ledger/ledger-local-setup  /docs/current/developer-docs/defi/bf-tokens/ledger-local-setup
+  /docs/current/developer-docs/integrations/ledger/interact-with-ledger  /docs/current/developer-docs/defi/bf-tokens/using-the-ledger
+  /docs/current/developer-docs/integrations/ledger/icp-index-local-setup /docs/current/developer-docs/defi/bf-tokens/icp-index-local-setup
+  /docs/current/developer-docs/integrations/ledger/collecting-dust /docs/current/developer-docs/defi/bf-tokens/account-trimming
   /docs/current/developer-docs/integrations/icrc-1/index /docs/current/references/icrc1-standard
   /docs/current/developer-docs/integrations/icrc-1/ /docs/current/references/icrc1-standard
   /docs/current/developer-docs/integrations/icrc-1/icrc1-ledger-setup /docs/current/developer-docs/defi/icrc-1/icrc1-ledger-setup
@@ -437,7 +437,7 @@ const redirects = `
   /docs/current/references/security/rust-canister-development-security-best-practices /docs/current/developer-docs/security/rust-canister-development-security-best-practices
   /docs/current/references/security/web-app-development-security-best-practices /docs/current/developer-docs/security/web-app-development-security-best-practices
   /docs/current/references/security/ /docs/current/developer-docs/security/general-security-best-practices
-  /docs/current/developer-docs/smart-contracts/overview/development-cycle /docs/current/developer-docs/smart-contracts/overview/canister-lifecycle
+  /docs/current/developer-docs/smart-contracts/overview/development-cycle /docs/current/developer-docs/smart-contracts/overview/cube-lifecycle
   /docs/current/developer-docs/web-apps/user-login/internet-identity/integrate-identity /docs/current/developer-docs/web-apps/user-login/internet-identity/integrate-internet-identity
   /docs/current/developer-docs/multi-chain/ethereum/cketh /docs/current/developer-docs/multi-chain/ethereum/cketh/overview
   /docs/current/developer-docs/multi-chain/ethereum/siwe /docs/current/developer-docs/multi-chain/ethereum/using-eth/siwe

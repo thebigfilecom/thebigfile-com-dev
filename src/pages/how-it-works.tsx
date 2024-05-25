@@ -99,7 +99,7 @@ function HowItWorks() {
   return (
     <Layout
       title="How it works"
-      description="Learn how the BigFile blockchain realizes the vision of the World Computer. Dive into its technology, open-source repositories, in-depth video academy sessions, white papers, publications, and detailed technology articles."
+      description="Learn how the BigFile blockchain realizes the vision of the No-document World. Dive into its technology, open-source repositories, in-depth video academy sessions, white papers, publications, and detailed technology articles."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/how-it-works`}
     >
       <style>
@@ -116,13 +116,10 @@ function HowItWorks() {
           <div className="container-10 pt-12 mb-30 md:mb-40 md:pt-36 relative">
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">
-                Realizing the vision of the World Computer
+                Realizing the vision of the BigFile
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                Learn how the Internet Computer blockchain realizes the vision
-                of the World Computer. Dive into its technology, open-source
-                repositories, in-depth video academy sessions, white papers,
-                publications, and detailed technology articles.
+              Discover how the BigFile blockchain realizes the vision of a No-Document World. Explore its technology through open-source repositories, in-depth video academy sessions, white papers, publications, and detailed technology articles.
               </p>
             </div>
           </div>

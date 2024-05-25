@@ -140,7 +140,7 @@ function WhatIsIcpPage() {
                 />
                 <h3 className="tw-lead my-3 md:tw-title-sm">Tamperproof</h3>
                 <p className="tw-paragraph-sm text-black/60 md:tw-paragraph mb-0">
-                  Mars software is tamperproof, does not need to be
+                  Cube software is tamperproof, does not need to be
                   protected by a firewall, and cannot be infected with
                   ransomware. Because the BigFile is created by
                   advanced math, there are no backdoors.
@@ -157,7 +157,7 @@ function WhatIsIcpPage() {
                 />
                 <h3 className="tw-lead my-3 md:tw-title-sm">Autonomous</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                  Mars can be made unmodifiable, creating permanent logic
+                  Cube can be made unmodifiable, creating permanent logic
                   on the network, or placed under the control of autonomous
                   governance – empowering communities to run Web3, or securing
                   an enterprise.
@@ -175,7 +175,7 @@ function WhatIsIcpPage() {
                 <h3 className="tw-lead my-3 md:tw-title-sm">Simple</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
                   The global spend on IT personnel is now $1.8 trillion.
-                  Mars software greatly simplifies the development and
+                  Cube software greatly simplifies the development and
                   maintenance of online systems and services, driving cost
                   savings, and making you faster to market.
                 </p>
@@ -292,13 +292,13 @@ function WhatIsIcpPage() {
             </TranslatedLayout>
             <TranslatedLayout imageUrl="/img/what-is-the-big-file/smart-contracts.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
-                Mars smart contracts
+                Cube smart contracts
               </h2>
               <p className="tw-lead-sm">
                 Smart contracts are a new form of software that runs on
                 blockchain networks, which is tamperproof, unstoppable,
                 optionally autonomous, can process tokens, and is easily
-                composed. Mars are a high-performance form that can be used
+                composed. Cube are a high-performance form that can be used
                 to build anything. They interact with HTTP to serve user
                 experiences, can interact with Web2, and can natively interact
                 with external blockchains. Because they scale, a social network
@@ -386,10 +386,10 @@ function WhatIsIcpPage() {
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Open Internet Services
+                Decentralized Services and Voting System
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Open Internet services are services that run autonomously under
+                Decentralized Services and Voting System are services that run autonomously under
                 the exclusive control of a decentralized governance system
                 called a Service Nervous System (SNS), an evolution of DAO
                 technology. This can enable a Web3 service to be transparently
@@ -440,7 +440,7 @@ function WhatIsIcpPage() {
                 uses a reverse gas model. This enables end users to interact
                 with smart contracts without having to setup a wallet, or hold
                 tokens — A standard web browser is all they need. Developers
-                charge their canister smart contracts with 'cycles', the gas on
+                charge their smart contracts with 'cycles', the gas on
                 the BigFile, which are then burnt to pay for
                 computation, and memory usage. Such a model allows easy user
                 entry to Web3, and gives developers the flexibility to create
@@ -459,15 +459,7 @@ function WhatIsIcpPage() {
                 Native multi-chain
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Canister smart contracts on the BigFile are the glue
-                between the world’s most important blockchains. BigFile already
-                integrates with the Bitcoin Network, and native ETH integration
-                is underway. Inter-chain communication and innovations such as
-                chain-key ECDSA allow canister smart contracts to directly hold,
-                receive and send BTC and ETH seamlessly across chains, creating
-                a trustless multi-chain environment that allows end users to
-                transfer crypto assets at the speed of a chat message without
-                bridges or third-party intermediaries.
+              Cube smart contracts on the BigFile are the glue between the world’s most important blockchains. BigFile Bitcoin Network, and native ETH integration is underway. Inter-chain communication and innovations such as chain-key ECDSA allow Cube smart contracts to directly hold, receive and send BTC and ETH seamlessly across chains, creating a trustless multi-chain environment that allows end users to transfer crypto assets at the speed of a chat message without bridges or third-party intermediaries.
               </p>
               <p className="mb-3">
                 <Link

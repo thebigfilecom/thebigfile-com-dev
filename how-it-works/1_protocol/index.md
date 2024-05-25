@@ -1,3 +1,3 @@
 ---
-title: Core IC Protocol
+title: Core BIG
 ---

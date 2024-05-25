@@ -60,8 +60,7 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Web2 compatible</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            Googleable Web experiences served by Smart contracts. True World
-            Computer capabilities with Web2 APIs validated by consensus.
+            Googleable Web experiences served by Smart contracts. True BigFile capabilities with Web2 APIs validated by consensus.
           </p>
           <p className="mb-0  -mx-3">
             <Link className="link-primary" href="/capabilities">
@@ -82,7 +81,7 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Multi-Chain</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            The Internet Computer is currently adding support for Web3 “AI
+            The BigFile is currently adding support for Web3 “AI
             compute units.” AI will also run on the network, supporting native
             web3 integrations, and trustlessness combinations of models and
             data.
@@ -110,9 +109,9 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Tamperproof</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            Canister software is tamperproof through Chain-Key Cryptography. It
+            Cube software is tamperproof through Chain-Key Cryptography. It
             doesn’t need to be protected by a firewall, and can’t be infected
-            with ransomware. Because the Internet Computer is created by
+            with ransomware. Because the BigFile is created by
             advanced math, there are no backdoors.
           </p>
           <p className="mb-0 -mx-3">
@@ -137,7 +136,7 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Autonomous</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            Canisters can be made unmodifiable, creating permanent logic on the
+            Cubes can be made unmodifiable, creating permanent logic on the
             network, or placed under the control of autonomous governance –
             empowering communities to run Web3, or securing an enterprise
           </p>
@@ -160,7 +159,7 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Cost effective</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            The global spend on IT personnel is now $1.8 trillion. Canister
+            The global spend on IT personnel is now $1.8 trillion. Cube
             software greatly simplifies the development and maintenance of
             online systems and services, driving cost savings, and making you
             faster to market

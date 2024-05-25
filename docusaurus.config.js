@@ -104,7 +104,7 @@ const subnavItems = [
     items: [
       {
         label: "Awesome Internet Computer",
-        href: "https://github.com/dfinity/awesome-internet-computer#readme",
+        href: "https://github.com/thebigfilecom/awesome-internet-computer#readme",
       },
       { label: "Sample Code", to: "/samples" },
       {
@@ -113,7 +113,7 @@ const subnavItems = [
         docId: "other/updates/release-notes/release-notes",
       },
       { label: "Developer Tools", to: "/tooling" },
-      { label: "Developer Grants", href: "https://dfinity.org/grants" },
+      { label: "Developer Grants", href: "https://thebigfile.com/grants" },
       {
         label: "Motoko Playground",
         href: "https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/",
@@ -124,7 +124,7 @@ const subnavItems = [
       },
       {
         label: "Dev Discord",
-        href: "https://discord.gg/jnjVVQaE2C",
+        href: "https://discord.gg/nyTAmMntqp",
       },
     ],
   },
@@ -165,7 +165,7 @@ const marketingNav = {
             // {
             //   name: "The Basics",
             //   href: "/basics",
-            //   description: "New to ICP? Read this first",
+            //   description: "New to BigFile? Read this first",
             // },
             {
               name: "What is BigFile",
@@ -200,7 +200,7 @@ const marketingNav = {
             {
               name: "Capabilities",
               href: "/capabilities",
-              description: "Transforming the internet",
+              description: "Transforming the Cloud & Document",
             },
             {
               name: "BigFile as a Bitcoin L2",
@@ -328,9 +328,9 @@ const marketingNav = {
       auxItems: [
         {
           name: "Feedback Board",
-          href: "https://dx.internetcomputer.org/",
+          href: "https://dx.thebigfile.com/",
         },
-        { name: "Developer grants", href: "https://dfinity.org/grants" },
+        { name: "Developer grants", href: "https://thebigfile.com/grants" },
         {
           name: "Free Cycles",
           href: "/docs/current/developer-docs/getting-started/cycles/cycles-faucet",
@@ -365,7 +365,7 @@ const marketingNav = {
             {
               name: "Hackathons",
               description: "Join like-minded hackers",
-              href: "https://dfinity.org/hackathons",
+              href: "https://thebigfile.com/hackathons",
             },
           ],
           featured: {
@@ -384,7 +384,7 @@ const marketingNav = {
         },
         {
           label: "Discord",
-          href: "https://discord.gg/jnjVVQaE2C",
+          href: "https://discord.gg/nyTAmMntqp",
           iconUrl: "/img/svgIcons/purple/discord.svg",
         },
         {
@@ -404,11 +404,11 @@ const marketingNav = {
       auxItems: [
         {
           name: "Community grants",
-          href: "https://dfinity.org/community-grants/",
+          href: "https://thebigfile.com/community-grants/",
         },
         {
           name: "Help & Support",
-          href: "https://support.dfinity.org/hc/en-us",
+          href: "https://support.thebigfile.com/",
         },
       ],
 
@@ -433,7 +433,7 @@ const marketingNav = {
             },
             {
               name: "Community Blog",
-              href: "https://medium.com/dfinity",
+              href: "https://bigfile.medium.com/",
               description: "Keep up to date",
             },
           ],
@@ -449,7 +449,7 @@ const marketingNav = {
       socialIcons: [
         {
           label: "BigFile Forum",
-          href: "https://forum.dfinity.org/",
+          href: "https://forum.thebigfile.com/",
           iconUrl: "/img/svgIcons/purple/forum.svg",
         },
       ],
@@ -462,11 +462,11 @@ const marketingNav = {
     },
     {
       name: "Developer Grants",
-      href: "https://dfinity.org/grants",
+      href: "https://thebigfile.com/grants",
     },
     {
       name: "Help & Support",
-      href: "https://support.dfinity.org/hc/en-us",
+      href: "https://support.thebigfile.com/",
     },
   ],
 };
@@ -482,13 +482,13 @@ const config = {
     "Step into the era of blockchain as a limitless smart contract cloud that hosts everything on-chain: data, content, computations, and user experiences.",
   url: isDeployPreview
     ? `https://${process.env.PREVIEW_CANISTER_ID}.icp0.io`
-    : "https://internetcomputer.org",
+    : "https://thebigfile.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon-32x32.png",
-  organizationName: "dfinity",
-  projectName: "portal",
+  organizationName: "BigFile",
+  projectName: "thebigfile-com-dev",
   customFields: {
     searchCanisterId: "5qden-jqaaa-aaaam-abfpa-cai",
     marketingNav,
@@ -630,7 +630,7 @@ const config = {
               },
               {
                 label: "Wiki",
-                href: "https://wiki.internetcomputer.org/",
+                href: "https://wiki.thebigfile.com/",
               },
               {
                 label: "Node Providers",
@@ -638,7 +638,7 @@ const config = {
               },
               {
                 label: "Dashboard",
-                href: "https://dashboard.internetcomputer.org/",
+                href: "https://dashboard.thebigfile.com/",
               },
             ],
           },
@@ -646,12 +646,12 @@ const config = {
             items: [
               {
                 label: "BigFile Careers",
-                href: "https://careers.internetcomputer.org/",
+                href: "https://careers.thebigfile.com/",
               },
-              { label: "Developer Grants", href: "https://dfinity.org/grants" },
+              { label: "Developer Grants", href: "https://thebigfile.com/grants" },
               {
                 label: "Support & Feedback",
-                href: "https://support.dfinity.org/hc/en-us",
+                href: "https://support.thebigfile.com/",
               },
               {
                 label: "Brand Materials",
@@ -689,7 +689,7 @@ const config = {
               },
               {
                 label: "Medium",
-                to: "https://medium.com/@bigfile",
+                to: "https://bigfile.medium.com/",
                 icon: "data:image/svg+xml,%3Csvg width='24px' height='24px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='m24 24h-24v-24h24zm-8.986-15.006v7.326c0 .198 0 .234-.127.362l-1.302 1.264v.27h6.32v-.27l-1.257-1.234c-.091-.07-.148-.178-.148-.3 0-.022.002-.043.005-.064v.002-9.07c-.003-.019-.005-.04-.005-.062 0-.121.058-.229.148-.298l.001-.001 1.286-1.234v-.27h-4.456l-3.176 7.924-3.609-7.924h-4.675v.271l1.502 1.813c.127.115.207.281.207.466 0 .022-.001.043-.003.064v-.003 7.126c.007.041.011.088.011.136 0 .222-.088.423-.231.571l-1.69 2.054v.27h4.8v-.27l-1.691-2.054c-.149-.154-.241-.363-.241-.595 0-.04.003-.079.008-.117v.004-6.16l4.215 9.195h.49z'/%3E%3C/svg%3E",
                 iconLight: getImageDataUrl(
                   "./static/img/svgIcons/purple/medium.svg"
