@@ -13,19 +13,19 @@ const queryClient = new QueryClient();
 const links = [
   {
     label: "Events & News",
-    href: "https://dfinity.org/events-and-news/",
+    href: "https://thebigfile.com/events-and-news/",
   },
   {
     label: "Technical Working Groups",
-    href: "https://forum.dfinity.org/t/announcing-technical-working-groups/11781",
+    href: "https://forum.thebigfile.com/",
   },
-  { label: "Join the Dev Forum", href: "https://forum.dfinity.org" },
-  { label: "Dev Discord Office Hours", href: "https://discord.gg/jnjVVQaE2C" },
+  { label: "Join the Dev Forum", href: "https://forum.thebigfile.com" },
+  { label: "Dev Discord Office Hours", href: "https://discord.gg/bgjhB2WF" },
   {
     label: "Developer Grants and Bounties",
-    href: "https://dfinity.org/grants/",
+    href: "https://thebigfile.com/grants/",
   },
-  { label: "Bug Bounty Program", href: "https://dfinity.org/bug-bounty/" },
+  { label: "Bug Bounty Program", href: "https://thebigfile.com/bug-bounty/" },
 ];
 
 const DocsHomePage: FC = () => {
@@ -110,7 +110,7 @@ const DocsHomePage: FC = () => {
                 <h4 className="tw-heading-5 mb-6">Motoko</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
                   Get started with a high level programming language designed
-                  specifically for the Internet Computer
+                  specifically for the BigFile
                 </p>
                 <p className="mb-0">
                   <Link
@@ -128,7 +128,7 @@ const DocsHomePage: FC = () => {
               <div className="mb-16 md:mb-0 md:h-[200px]">
                 <img
                   src="/img/docs/rust.png"
-                  alt="Rust docs for the Internet Computer"
+                  alt="Rust docs for the BigFile"
                   className="w-10 h-10"
                   loading="lazy"
                 />
@@ -136,8 +136,7 @@ const DocsHomePage: FC = () => {
               <div className="flex-1 flex flex-col">
                 <h4 className="tw-heading-5 mb-6">Rust</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Use Rust - a high performance and safe programming language to
-                  build high efficiency apps on Internet Computer
+                  Use Rust - a high performance and safe programming language to build high efficiency apps on BigFile
                 </p>
                 <p className="mb-0">
                   <Link
@@ -154,7 +153,7 @@ const DocsHomePage: FC = () => {
               <div className="mb-16 md:mb-0 md:h-[200px]">
                 <img
                   src="/img/docs/typescript.png"
-                  alt="TypeScript docs for the Internet Computer"
+                  alt="TypeScript docs for the BigFile"
                   className="w-10 h-10"
                   loading="lazy"
                 />
@@ -162,7 +161,7 @@ const DocsHomePage: FC = () => {
               <div className="flex-1 flex flex-col">
                 <h4 className="tw-heading-5 mb-6">TypeScript</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Azle allows you to build Internet Computer apps using
+                  Azle allows you to build BigFile apps using
                   TypeScript and JavaScript, the languages of the web
                 </p>
                 <p className="mb-0">
@@ -181,7 +180,7 @@ const DocsHomePage: FC = () => {
               <div className="mb-16 md:mb-0 md:h-[200px]">
                 <img
                   src="/img/docs/python.png"
-                  alt="Python docs for the Internet Computer"
+                  alt="Python docs for the BigFile"
                   className="w-10 h-10"
                   loading="lazy"
                 />
@@ -189,8 +188,7 @@ const DocsHomePage: FC = () => {
               <div className="flex-1 flex flex-col">
                 <h4 className="tw-heading-5 mb-6">Python</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Kybra allows you to build Internet Computer apps using Python,
-                  one of the most popular languages in the world
+                  Kybra allows you to build BigFile apps using Python, one of the most popular languages in the world
                 </p>
                 <p className="mb-0">
                   <Link
@@ -216,8 +214,7 @@ const DocsHomePage: FC = () => {
               <div className="flex-1 flex flex-col">
                 <h4 className="tw-heading-5 mb-6">Solidity</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Bitfinity allows you to deploy smart contracts on the Internet
-                  Computer written in Solidity, a popular language for DeFi
+                  BVM allows you to deploy smart contracts on the BigFile written in Solidity, a popular language for DeFi
                   applications.
                 </p>
                 <p className="mb-0">
@@ -255,7 +252,7 @@ const DocsHomePage: FC = () => {
             </div>
             <div className="flex-1 flex flex-col">
               <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                Get started developing on the Internet Computer using frameworks such as Juno, which make deploying canisters on ICP simple and easy using a UI interface.
+                Get started developing on the BigFile using frameworks such as Juno, which make deploying cubes on BigFile simple and easy using a UI interface.
               </p>
               <p className="mb-0">
                 <Link
@@ -319,10 +316,7 @@ const DocsHomePage: FC = () => {
             </div>
             <div className="flex-1 flex flex-col">
               <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                If you're a seasoned developer looking to deploy code on ICP,
-                getting started is easy. Our developer Quick Start guides are
-                designed to jumpstart your developer experience on the Internet
-                Computer Protocol using your preferred programming language.
+                If you're a seasoned developer looking to deploy code on BigFile, getting started is easy. Our developer Quick Start guides are designed to jumpstart your developer experience on the BigFile using your preferred programming language.
               </p>
               <p className="mb-0">
                 <Link
@@ -347,7 +341,7 @@ const DocsHomePage: FC = () => {
               <div className="flex-1 flex flex-col">
                 <h4 className="tw-heading-5 mb-6">React</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Start here if you're coming to the Internet Computer Protocol
+                  Start here if you're coming to the BigFile
                   as a React developer.
                 </p>
                 <p className="mb-0">
@@ -400,15 +394,14 @@ const DocsHomePage: FC = () => {
             <div className="tw-heading-6 mb-10">
               Contribute to the
               <br />
-              Internet Computer
+              BigFile
             </div>
             <h2 className="tw-heading-3 mb-4 sm:w-5/10 md:w-8/10">
               Help us make the docs better
             </h2>
             <p className="tw-paragraph mb-10 sm:w-6/10 md:w-8/10 md:flex-1">
               These docs are a community effort. Create a PR if you see
-              mistakes, room for improvement, or new opportunities to help BigFile
-              developers.
+              mistakes, room for improvement, or new opportunities to help BigFile developers.
             </p>
             <Link
               href="https://github.com/thebigfilecom/thebigfile-com-dev"

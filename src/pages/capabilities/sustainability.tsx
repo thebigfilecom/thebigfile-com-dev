@@ -213,13 +213,13 @@ function SustainabilityPage() {
                 variants={transitions.item}
                 className="tw-heading-5 md:tw-heading-3 mb-3 md:mb-6"
               >
-                Why ICP is the best blockchain for sustainability use cases
+                Why BigFile is the best blockchain for sustainability use cases
               </motion.h2>
               <motion.p
                 variants={transitions.item}
                 className="tw-lead-sm md:tw-lead mb-3 md:mb-8"
               >
-                The Internet Computer provides far better sustainability than
+                The BigFile provides far better sustainability than
                 the traditional IT stack, as it takes a completely different
                 architectural approach that makes it more energy efficient.
               </motion.p>
@@ -228,13 +228,13 @@ function SustainabilityPage() {
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  The Greenest Blockchain that provides efficiency at scale. The power consumption of a single transaction on the IC is 0.003 Wh/tx
+                  The Greenest Blockchain that provides efficiency at scale. The power consumption of a single transaction on the BIG is 0.003 Wh/tx
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  Transparent reporting, the  power consumption of all node machines on the Internet Computer blockchain is reported on a public dashboard 
+                  Transparent reporting, the  power consumption of all node machines on the BigFile blockchain is reported on a public dashboard 
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
@@ -248,7 +248,7 @@ function SustainabilityPage() {
           <div className="relative h-60 md:h-[440px]">
             <img
               src="/img/features/sustainability/large-visual.svg"
-              alt="ICP visual"
+              alt="BigFile visual"
               className="max-w-none w-[450px] md:w-[1200px] absolute -right-16 md:-right-0 -bottom-16 md:-bottom-52"
             />
           </div>
@@ -280,7 +280,7 @@ function SustainabilityPage() {
               className="tw-paragraph md:tw-lead mb-8"
             >
               A sustainable future is important for your business, and the world
-              around you. This report, authored by the DFINITY Foundation and
+              around you. This report, authored by the BigFile and
               Inacta Venture, explores 10 unique business use cases where
               blockchain's inherent traits of transparency, immutability, and
               relative low cost work to improve existing practices.
@@ -355,8 +355,7 @@ function SustainabilityPage() {
                   className="mb-0 tw-paragraph"
                   variants={transitions.item}
                 >
-                  A crypto donation solution, which provides an ecosystem for nonprofits and charities to fundraise Bitcoin and other cryptocurrencies, 
-                  be found by crypto donors, and receive funds instantly.
+                  A crypto donation solution, which provides an ecosystem for nonprofits and charities to fundraise Bitcoin and other cryptocurrencies, be found by crypto donors, and receive funds instantly.
                 </motion.p>
               </TranslatedCard>
               <TranslatedCard
@@ -434,10 +433,9 @@ function SustainabilityPage() {
                 </button>
               </form>
               <p className="text-white/50 tw-caption mb-0 mt-6">
-                By providing the contact information required in this form, you
-                agree to be contacted by the DFINITY Foundation in order to
+                By providing the contact information required in this form, you agree to be contacted by the BigFile in order to
                 inform you about our products and services. Unsubscribe from
-                marketing email communications from DFINITY Foundation by using
+                marketing email communications from BigFile by using
                 the unsubscribe link provided in the email.
               </p>
             </div>
@@ -460,7 +458,7 @@ function SustainabilityPage() {
                 report, or a unique one.
               </p>
               <p className="mb-0">
-                <Link href="mailto:comms@dfinity.org" className="button-white">
+                <Link href="mailto:info@thebigfile.com" className="button-white">
                   Get in touch
                 </Link>
               </p>
@@ -475,128 +473,6 @@ function SustainabilityPage() {
             </div>
           </div>
         </AnimateSpawn>
-        <section className="container-12 pt-20 md:pt-30 relative">
-          <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout
-              imageUrl="/img/features/sustainability/vrc.webp"
-              reverse={true}
-            >
-              <h3 className="tw-heading-4 md:tw-heading-3 mb-6">
-                Revolutionizing Recycling: Blockchain-powered VRC Initiative
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Roland Berger has formed a strategic partnership with the
-                DFINITY Foundation, a Swiss non-profit renowned for its
-                contributions to the Internet Computer Blockchain and extensive
-                blockchain research and development, yielding over 250 patents.
-                This collaboration aims to create the first global recycling
-                incentive standard powered by blockchain, offering a secure and
-                transparent system for tracking recycling credits.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://gulfbusiness.com/cop28-voluntary-recycling-credits-initiative/"
-              >
-                Read the full article
-                <LinkArrowUpRight />
-              </Link>
-            </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/features/sustainability/cop28.webp">
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                ICP @ COP28
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                The international consortium in collaboration with DFINITY
-                Foundation and partners Roland Berger, BEEAH Group and
-                International Solid Waste Association (ISWA) came together at
-                the COP28 UN Climate Change Conference to launch the Voluntary
-                Recycling Credits initiative. This marks the world’s first
-                standard to incentivize recycling globally.
-              </p>
-
-              <p className="mb-0">
-                <Link
-                  className="link-primary link-with-icon"
-                  href="https://www.youtube.com/watch?v=YdY8UQ7nrs8&ab_channel=UAEPavilionatCOP28"
-                >
-                  Watch the presentation
-                  <LinkArrowUpRight />
-                </Link>
-              </p>
-            </TranslatedLayout>
-          </div>
-        </section>
-        <section>
-          <AnimateSpawn
-            className="container-10 pt-20 md:pt-30"
-            variants={transitions.container}
-          >
-            <div className="flex flex-col gap-6 md:gap-5 mb-8 md:mb-10 md:flex-row md:w-9/10">
-              <motion.h2
-                className="tw-heading-4 mb-0 md:tw-heading-60 md:flex-1"
-                variants={transitions.item}
-              >
-                News & videos
-              </motion.h2>
-              <div className="md:flex-1 md:pt-3">
-                <motion.p
-                  className="mb-4 tw-paragraph md:tw-lead-sm"
-                  variants={transitions.item}
-                >
-                  From industry news to videos about sustainable topics. Read
-                  the latest about blockchain technology.
-                </motion.p>
-                <MotionLink
-                  variants={transitions.item}
-                  href="/news"
-                  className="link-primary link-with-icon"
-                >
-                  <LinkArrowRight />
-                  Explore more news
-                </MotionLink>
-              </div>
-            </div>
-          </AnimateSpawn>
-          <AnimateSpawn
-            className="container-12 mb-20 md:mb-30"
-            variants={transitions.container}
-          >
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-              <AnimatedNewsCard
-                news={{
-                  title:
-                    "DFINITY founder says blockchain can bolster efforts to fight climate change",
-                  dateHuman: "December 13, 2023",
-                  press: "cointelegraph.com",
-                  imageUrl:
-                    "/img/features/sustainability/thumb-cointelegraph.webp",
-                  url: "https://gulfbusiness.com/cop28-voluntary-recycling-credits-initiative/",
-                }}
-              />
-              <AnimatedNewsCard
-                news={{
-                  title: "COP28 unveils voluntary recycling credits initiative",
-                  dateHuman: "July 12, 2023",
-                  press: "fastcompanyme.com",
-                  imageUrl:
-                    "/img/features/sustainability/thumb-fastcompany.webp",
-                  url: "https://fastcompanyme.com/news/cop28-unveils-voluntary-recycling-credits-initiative/",
-                }}
-              />
-              <AnimatedNewsCard
-                news={{
-                  title:
-                    "Launch Of Voluntary Recycling Credits: Setting an Incentive Mechanism for the Waste",
-                  dateHuman: "",
-                  press: "",
-                  imageUrl: "/img/features/sustainability/thumb-video-vrc.webp",
-                  url: "https://www.youtube.com/watch?v=YdY8UQ7nrs8&ab_channel=UAEPavilionatCOP28",
-                }}
-                linkLabel="Watch the video"
-              />
-            </div>
-          </AnimateSpawn>
-        </section>
       </main>
     </Layout>
   );

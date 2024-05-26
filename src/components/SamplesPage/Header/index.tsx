@@ -11,9 +11,8 @@ function Index() {
         Sample Code
       </motion.p>
       <motion.span variants={transitions.item} className={styles.body}>
-        Get inspired! The possibilities of what to build on the IC are infinite.
-        Find more sample code projects in the
-        <Link to={"https://github.com/dfinity/examples"}> examples repo</Link>.
+        Get inspired! The possibilities of what to build on the BIG are infinite. Find more sample code projects in the
+        <Link to={"https://github.com/thebigfilecom/examples"}> examples repo</Link>.
       </motion.span>
     </div>
   );

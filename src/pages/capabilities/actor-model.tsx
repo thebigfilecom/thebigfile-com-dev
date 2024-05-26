@@ -20,11 +20,11 @@ function FeaturePage() {
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Actor Model</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                A single canister smart contract has one thread of execution for
-                updates, but the Internet Computer can execute a massive number
-                of canisters in parallel. In addition, we make a distinction
-                between requests that need to update the state of a canister,
-                and queries, which cannot modify the state of a canister.
+                A single cube smart contract has one thread of execution for
+                updates, but the BigFile can execute a massive number
+                of cubes in parallel. In addition, we make a distinction
+                between requests that need to update the state of a cube,
+                and queries, which cannot modify the state of a cube.
               </p>
             </div>
           </div>
@@ -60,14 +60,14 @@ function FeaturePage() {
           >
             <h2>How It Works</h2>
             <p>
-              The programming model of the Internet Computer consists of
-              memory-isolated canisters communicating by asynchronous message
-              passing of binary data encoding Candid values. A canister
+              The programming model of the BigFile consists of
+              memory-isolated cubes communicating by asynchronous message
+              passing of binary data encoding Candid values. A cube
               processes its messages one-at-a-time, preventing race conditions.
-              A canister uses call-backs to register what needs to be done with
-              the result of any inter-canister messages it issues.
+              A cube uses call-backs to register what needs to be done with
+              the result of any inter-cube messages it issues.
             </p>
-            <h3>Canisters as actors</h3>
+            <h3>Cubes as actors</h3>
             <p>
               The actor model is a mathematical model of concurrent computation,
               where, in response to a message, an actor can modify its state,

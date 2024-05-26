@@ -90,7 +90,7 @@ const sidebars = {
           label: "Overview",
           items: [
             "developer-docs/smart-contracts/overview/introduction",
-            "developer-docs/smart-contracts/overview/inside-canisters",
+            "developer-docs/smart-contracts/overview/inside-cubes",
             "developer-docs/smart-contracts/overview/cube-lifecycle",
           ],
         },

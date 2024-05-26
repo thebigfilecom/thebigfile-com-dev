@@ -1241,7 +1241,7 @@ Adds a new field `canister_init_arg` to the bitcoin configuration in dfx.json an
 
 ### docs: cleanup of documentation
 
-Cleaned up documentation of IC SDK.
+Cleaned up documentation of BIG SDK.
 
 ## Asset Canister Synchronization
 
