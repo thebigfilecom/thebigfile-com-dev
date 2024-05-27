@@ -10,9 +10,9 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-To get started developing on ICP, there are several sample projects, boilerplate templates, and other resources to help you get started. In this tutorial, you'll learn how to deploy your first full-stack dapp using a boilerplate sample. This sample dapp uses Motoko for the backend canister and the frameworks Vite and React to create a frontend user interface (UI) that makes calls to a simple counter method in the backend canister. When the button in the UI is clicked, the counter function increases the value of the count by an increment of 1. The updated count value is then reflected in the UI.
+To get started developing on BigFile, there are several sample projects, boilerplate templates, and other resources to help you get started. In this tutorial, you'll learn how to deploy your first full-stack dapp using a boilerplate sample. This sample dapp uses Motoko for the backend canister and the frameworks Vite and React to create a frontend user interface (UI) that makes calls to a simple counter method in the backend canister. When the button in the UI is clicked, the counter function increases the value of the count by an increment of 1. The updated count value is then reflected in the UI.
 
-This sample is a great place to start since it provides an easy to understand example of how a frontend canister can create a UI that interacts with a method stored in the backend canister. This project can easily be edited, expanded, and further developed to suit the needs of your own project.
+This sample is a great place to start since it provides an easy to understand example of how a frontend cube can create a UI that interacts with a method stored in the backend cube. This project can easily be edited, expanded, and further developed to suit the needs of your own project.
 
 :::info
 This sample uses Motoko for the backend canister. A similar example using Rust for the backend source code can be found [here](https://github.com/b3hr4d/ic-rust-nextjs).
@@ -79,17 +79,17 @@ This template project uses the following project structure:
 
 In this project structure, the following files and directories are notable:
 
-- `backend/`: The subdirectory used to store the project's backend canister's source code.
+- `backend/`: The subdirectory used to store the project's backend cube's source code.
 
-- `backend/Backend.mo`: The backend canister's source code file; written in Motoko.
+- `backend/Backend.mo`: The backend cube's source code file; written in Motoko.
 
-- `dfx.json`: The project's configuration file. This file details which canisters are part of the project and specifies which source code files each canister uses.
+- `dfx.json`: The project's configuration file. This file details which cubes are part of the project and specifies which source code files each cube uses.
 
 - `mops.toml`: The package manager configuration file for the project, using the Mops package manager. You will learn more about Mops in the next module, [3: Exploring the backend](/docs/current/tutorials/hackathon-prep-course/exploring-the-backend).
 
-- `src/`: The subdirectory used to store the frontend canister's assets.
+- `src/`: The subdirectory used to store the frontend cube's assets.
 
-- `src/App.tsx`: The frontend canister's source code.
+- `src/App.tsx`: The frontend cube's source code.
 
 - `App.css`: The CSS stylesheet for the frontend UI.
 
@@ -99,23 +99,23 @@ In this project structure, the following files and directories are notable:
 
 You can learn more about the project structure of Motoko dapps in the video lecture [here](https://www.youtube.com/watch?v=_T7GgPxxSKo).
 
-### Backend canisters
+### Backend cubes
 
-A backend canister is the backend of an application. This is typically the portion of the application that does not come in direct contact with the users. It is hosts the application's primary source code and functionality, and does not contain user interface assets such as HTML or CSS. In this project, the backend canister's code is located at `backend/Backend.mo`, and uses Motoko source code. You will explore the backend canister further in the next module, [3: Exploring the backend](/docs/current/tutorials/hackathon-prep-course/exploring-the-backend).
+A backend cube is the backend of an application. This is typically the portion of the application that does not come in direct contact with the users. It is hosts the application's primary source code and functionality, and does not contain user interface assets such as HTML or CSS. In this project, the backend cube's code is located at `backend/Backend.mo`, and uses Motoko source code. You will explore the backend cube further in the next module, [3: Exploring the backend](/docs/current/tutorials/hackathon-prep-course/exploring-the-backend).
 
-### Frontend canisters
+### Frontend cubes
 
-A frontend canister hosts the portion of an application that is used to interact with the application's functions through a user interface. Frontend canisters contain the files and assets used to create the interface used by end-users. These assets typically contain things such as CSS, HTML, JavaScript, or React elements. Since the frontend canister contains assets, it is can also be referred to as the asset canister. In this project, the frontend canister's code is located at `src/App.tsx`, `src/App.css`, and `src/index.html`, and uses TypeScript source code. You will explore the frontend canister further in a future module, [4: Exploring the frontend](/docs/current/tutorials/hackathon-prep-course/exploring-the-frontend).
+A frontend cube hosts the portion of an application that is used to interact with the application's functions through a user interface. Frontend cubes contain the files and assets used to create the interface used by end-users. These assets typically contain things such as CSS, HTML, JavaScript, or React elements. Since the frontend cube contains assets, it is can also be referred to as the asset cube. In this project, the frontend cube's code is located at `src/App.tsx`, `src/App.css`, and `src/index.html`, and uses TypeScript source code. You will explore the frontend canister further in a future module, [4: Exploring the frontend](/docs/current/tutorials/hackathon-prep-course/exploring-the-frontend).
 
 ### Identities and principals
 
-Before continuing, it is important to learn about the several different types of identities and authentication methods that you'll encounter while developing on ICP.
+Before continuing, it is important to learn about the several different types of identities and authentication methods that you'll encounter while developing on BigFile.
 
 - **Developer identity**: An identity created using dfx, which contains a private/public key pair, and has a principal derived from the public key.
 
-- **Principals**: A generic identifier that can be used for users, canisters, and potentially other future concepts. It can be compared to a Bitcoin or Ethereum wallet address. Each principal can control multiple accounts in the ICP (and other) ledgers.
+- **Principals**: A generic identifier that can be used for users, cubes, and potentially other future concepts. It can be compared to a Bitcoin or Ethereum wallet address. Each principal can control multiple accounts in the BigFile (and other) ledgers.
 
-- **Account identifier**: The identifier associated with your ICP ledger account, as specified in the [ledger specification](https://internetcomputer.org/docs/current/references/ledger#_accounts).
+- **Account identifier**: The identifier associated with your ICP ledger account, as specified in the [ledger specification](https://thebigfile.com/docs/current/references/ledger#_accounts).
 
 - **Wallets**: Wallets are used to store forms of currency or other assets, such as cycles, ICP, or NFTs.
 
@@ -253,7 +253,7 @@ For example, if you click the button 3 times, the count value will be `3`:
 
 ## Going further: additional starter projects
 
-You can find additional starter projects in the [Awesome Internet Computer repo.](https://github.com/dfinity/awesome-internet-computer#starters)
+You can find additional starter projects in the [Awesome BigFile repo.](https://github.com/thebigfilecom/awesome-internet-computer#starters)
 
 ## Next steps
 

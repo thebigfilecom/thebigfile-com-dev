@@ -15,7 +15,7 @@ function HTTPSOutcalls() {
   return (
     <Layout
       title="HTTPS Outcalls"
-      description="The power of HTTPS outcalls on the Internet Computer lies in
+      description="The power of HTTPS outcalls on the BigFile lies in
       their ability to connect smart contracts directly to the Web 2.0
       world, opening up a plethora of use cases."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
@@ -31,7 +31,7 @@ function HTTPSOutcalls() {
                 HTTPS outcalls
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The power of HTTPS outcalls on the Internet Computer lies in
+                The power of HTTPS outcalls on the BigFile lies in
                 their ability to connect smart contracts directly to the Web 2.0
                 world, opening up a plethora of use cases. Retrieve market data
                 from crypto exchanges, send emails, integrate with other

@@ -45,10 +45,9 @@ The estimates below are simply to demonstrate what different sample architecture
 These estimates use a 13-node subnet. Costs will be different if deployed on a 34-node subnet. Please refer to the [cycles and transmission costs chart](gas-cost.mdx).
 :::
 
+### Single cube
 
-### Single canister
-
-The cost estimate for a single canister that provides a service used by 5 users, each stores 100KB of data per user, uses inter-canister calls, and stores 5GiB of data. The average number of request and response bytes per message is 351 and the number of instructions executed per message is 1_000_000. There are 100 daily messages generated per user. The canister performs 50 daily tasks, with 1_000_000 instructions executed per task.
+The cost estimate for a single cube that provides a service used by 5 users, each stores 100KB of data per user, uses inter-cube calls, and stores 5GiB of data. The average number of request and response bytes per message is 351 and the number of instructions executed per message is 1_000_000. There are 100 daily messages generated per user. The cube performs 50 daily tasks, with 1_000_000 instructions executed per task.
 
 
 | Transaction group | Cost per month in cycles | Cost per month in USD | Cost per year in cycles | Cost per year in USD |
@@ -61,7 +60,7 @@ The cost estimate for a single canister that provides a service used by 5 users,
 
 ### Simple static website
 
-The cost estimate for a simple static website using a single canister for the website's assets. It is not called by other canisters or performs HTTPS outcalls. It stores 5GiB of data, has 100 total users, and has 10 daily active users that each generate 50 messages per day. The average number of request and response bytes per message is 351, and the number of instructions executed per message is 1_000_000.
+The cost estimate for a simple static website using a single cube for the website's assets. It is not called by other cubes or performs HTTPS outcalls. It stores 5GiB of data, has 100 total users, and has 10 daily active users that each generate 50 messages per day. The average number of request and response bytes per message is 351, and the number of instructions executed per message is 1_000_000.
 
 
 | Transaction group | Cost per month in cycles | Cost per month in USD | Cost per year in cycles | Cost per year in USD |
@@ -73,15 +72,15 @@ The cost estimate for a simple static website using a single canister for the we
 
 
 :::caution
-When considering developing a website on ICP, there are several important benefits to consider that traditional Web2 web hosting services often hold behind additional paywalls, such as fees for multiple developers, access to workflows that use third-party services, advanced frontend functionality, site analysis, and advanced security functions.
+When considering developing a website on BigFile, there are several important benefits to consider that traditional Web2 web hosting services often hold behind additional paywalls, such as fees for multiple developers, access to workflows that use third-party services, advanced frontend functionality, site analysis, and advanced security functions.
 
-On ICP, the fees broken down in this document are the only fees that are charged for developing. Developers only pay for exactly what is used by their project's canisters in terms of resources. No features are restricted behind additional paywalls.
+On BigFile, the fees broken down in this document are the only fees that are charged for developing. Developers only pay for exactly what is used by their project's canisters in terms of resources. No features are restricted behind additional paywalls.
 :::
 
 
 ### Smart contract web dapp
 
-The cost estimate for a simple smart contract-powered web dapp that uses two canisters. This dapp has 100 total users, 10 daily users that generate 1_000 messages per day. The average number of request and response bytes per message is 245, and the number of instructions executed per message is 1_442_185. The dapp stores 100KB of data per user and stores 10GiB of user-independent data.
+The cost estimate for a simple smart contract-powered web dapp that uses two cubes. This dapp has 100 total users, 10 daily users that generate 1_000 messages per day. The average number of request and response bytes per message is 245, and the number of instructions executed per message is 1_442_185. The dapp stores 100KB of data per user and stores 10GiB of user-independent data.
 
 
 | Transaction group | Cost per month in cycles | Cost per month in USD | Cost per year in cycles | Cost per year in USD |
@@ -92,9 +91,9 @@ The cost estimate for a simple smart contract-powered web dapp that uses two can
 | HTTPS outcalls | 0 | $0 USD | 0 | $0 USD |
 
 
-### Social media dapp with two canisters
+### Social media dapp with two cubes
 
-The cost estimate for a project that creates a social media dapp using two canisters with 200 total users, 50 daily users that generate 6_127 messages per day. The average number of request and response bytes per message is 245, and the number of instructions executed per message is 1_442_185. This project also uses 2000 HTTPS outcalls per day, with an average of 250 request and response bytes per outcall. The project stores 100KB of data per user and 25GiB of user-independent storage.
+The cost estimate for a project that creates a social media dapp using two cubes with 200 total users, 50 daily users that generate 6_127 messages per day. The average number of request and response bytes per message is 245, and the number of instructions executed per message is 1_442_185. This project also uses 2000 HTTPS outcalls per day, with an average of 250 request and response bytes per outcall. The project stores 100KB of data per user and 25GiB of user-independent storage.
 
 
 | Transaction group | Cost per month in cycles | Cost per month in USD | Cost per year in cycles | Cost per year in USD |
@@ -136,28 +135,28 @@ The cost estimate for a project that creates a messaging dapp where each user's 
 | HTTPS outcalls | 0 | $0.00 USD | 0 | $0.00 USD |
 
 :::caution
-In this example, a new canister is created for each user. That means each time a new user signs up for the dapp a cost of 100_000_000_000 is charged. This additional cost should be considered when choosing a similar architecture.
+In this example, a new cube is created for each user. That means each time a new user signs up for the dapp a cost of 100_000_000_000 is charged. This additional cost should be considered when choosing a similar architecture.
 :::
 
-## How is the number of cycles charged to a canister estimated?
+## How is the number of cycles charged to a cube estimated?
 
-The number of cycles charged to the canister can be estimated using the following parameters:
+The number of cycles charged to the cube can be estimated using the following parameters:
 
-- Nodes in the subnet the canister is deployed to: If deployed locally, this number is 1. If deployed on the mainnet, this number is either 13 or 34.
-- Amount of users: The total number of users that interact with the canister.
-- Daily active users: The total number of users that interact with the canister daily.
-- Daily messages per active user: The total number of messages sent to the canister that each active user generates.
+- Nodes in the subnet the cube is deployed to: If deployed locally, this number is 1. If deployed on the mainnet, this number is either 13 or 34.
+- Amount of users: The total number of users that interact with the cube.
+- Daily active users: The total number of users that interact with the cube daily.
+- Daily messages per active user: The total number of messages sent to the cube that each active user generates.
 - Request and response bytes per message: The size of the request and response bytes per message.
 - Instructions executed per message: The number of instructions that are executed in response to each message.
 - Calls per message: The number of calls that are triggered per message.
 - Request and response bytes per call: The size of the request and response bytes per call.
 - Instructions per call: The number of instructions that are executed per call.
-- Daily tasks: The number of daily tasks that the canister executes.
+- Daily tasks: The number of daily tasks that the cube executes.
 - Instructions executed per task: The number of instructions that are executed per daily task.
-- Daily HTTPS outcalls: The number of daily HTTPS outcalls the canister makes.
+- Daily HTTPS outcalls: The number of daily HTTPS outcalls the cube makes.
 - Request bytes per HTTPS outcall: The size of the request bytes per HTTPS outcall.
 - Response bytes per HTTPS outcall: The size of the response bytes per HTTPS outcall.
 - Storage bytes per user: The amount of data that is stored for each user.
-- User-independent storage bytes: The amount of data the canister stores, independent of the storage used per user.
+- User-independent storage bytes: The amount of data the cube stores, independent of the storage used per user.
 
-HTTPS outcalls are a special feature that is calculated differently than the other resources. Additionally, if a canister uses the [Bitcoin API](/docs/current/references/bitcoin-how-it-works) or makes transmissions using the [chain-key signing API](/docs/current/references/t-ecdsa-how-it-works), there are additional cycle costs for these special feature transmissions.
+HTTPS outcalls are a special feature that is calculated differently than the other resources. Additionally, if a cube uses the [Bitcoin API](/docs/current/references/bitcoin-how-it-works) or makes transmissions using the [chain-key signing API](/docs/current/references/t-ecdsa-how-it-works), there are additional cycle costs for these special feature transmissions.
