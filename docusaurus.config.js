@@ -103,7 +103,7 @@ const subnavItems = [
     label: "Additional Resources",
     items: [
       {
-        label: "Awesome Internet Computer",
+        label: "Awesome BigFile",
         href: "https://github.com/thebigfilecom/awesome-internet-computer#readme",
       },
       { label: "Sample Code", to: "/samples" },
@@ -230,7 +230,7 @@ const marketingNav = {
       name: "Use",
       auxItems: [
         {
-          name: "Create an internet identity",
+          name: "Create an BIG Wallet",
           href: "https://identity.ic0.app/",
         },
         { name: "NNS and Staking", href: "https://nns.ic0.app/" },
@@ -256,7 +256,7 @@ const marketingNav = {
               description: "Govern and get rewards",
             },
             {
-              name: "Internet Identity",
+              name: "BIG Wallet",
               href: "/internet-identity",
               description: "Web3 authentication",
             },
