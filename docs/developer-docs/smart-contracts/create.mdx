@@ -1,5 +1,5 @@
 ---
-keywords: [beginner, tutorial, create, create canister]
+keywords: [beginner, tutorial, create, create cube]
 ---
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
@@ -11,51 +11,51 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-Canisters contain both code and state. Once you have written the code for a <GlossaryTooltip>canister</GlossaryTooltip>, the canister doesn't exist until it is registered with IC, either locally or the mainnet.
+Cubes contain both code and state. Once you have written the code for a <GlossaryTooltip>cube</GlossaryTooltip>, the cube doesn't exist until it is registered with BigFile, either locally or the mainnet.
 
-A canister can be created without first compiling any code. When canisters are created with [`dfx canister create`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#dfx-canister-create), they are empty and do not contain program code. The code must be compiled into Wasm and installed into the empty canister before it can be deployed.
+A cube can be created without first compiling any code. When cubes are created with [`dfx canister create`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#dfx-canister-create), they are empty and do not contain program code. The code must be compiled into Wasm and installed into the empty cube before it can be deployed.
 
-## Creating canisters 
+## Creating cubes 
 
-When a canister is created, either locally or on the mainnet, the following steps happen:
+When a cube is created, either locally or on the mainnet, the following steps happen:
 
-- The canister ID is registered with the local replica or the mainnet for each canister in the project's `dfx.json` file.
+- The cube ID is registered with the local replica or the mainnet for each cube in the project's `dfx.json` file.
 
-- The following canister components are created:
+- The following cube components are created:
       - List of controllers.
       - Cycles balance.
       - Reserved cycles balance.
-      - Canister status.
+      - Cube status.
       - Resource reservations.
 
-- The canister's ID is returned in the command line.
+- The cube's ID is returned in the command line.
 
-To create a canister locally, the `dfx canister create` command can be used:
+To create a cube locally, the `dfx canister create` command can be used:
 
 ```
-dfx canister create hello_world // Create a canister locally
-dfx canister create hello_world --network ic // Create a canister on the mainnet
-dfx canister create --all --network ic // Create all canisters in the project's dfx.json file
+dfx canister create hello_world // Create a cube locally
+dfx canister create hello_world --network ic // Create a cube on the mainnet
+dfx canister create --all --network ic // Create all cubes in the project's dfx.json file
 ```
 
 :::caution 
-Creating a canister on the mainnet will cost [cycles](/docs/current/developer-docs/getting-started/cycles/cycles-faucet)
+Creating a cube on the mainnet will cost [cycles](/docs/current/developer-docs/getting-started/cycles/cycles-faucet)
 :::
 
-At this step, settings can be configured for the canister using the optional flags. [View the full list of settings that can be configured](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#options-1).
+At this step, settings can be configured for the cube using the optional flags. [View the full list of settings that can be configured](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#options-1).
 
-Once your canister has been created, it is ready to be compiled.
+Once your cube has been created, it is ready to be compiled.
 
 ## Next steps
 
-- [Compile canister code](/docs/current/developer-docs/smart-contracts/compile)
+- [Compile cube code](/docs/current/developer-docs/smart-contracts/compile)
 
-- [Delete canisters](/docs/current/developer-docs/smart-contracts/maintain/delete)
+- [Delete cubes](/docs/current/developer-docs/smart-contracts/maintain/delete)
 
-- [Canister history](/docs/current/developer-docs/smart-contracts/maintain/history)
+- [Cube history](/docs/current/developer-docs/smart-contracts/maintain/history)
 
-- [Import canisters](/docs/current/developer-docs/smart-contracts/maintain/import)
+- [Import cube](/docs/current/developer-docs/smart-contracts/maintain/import)
 
-- [Recover canisters](/docs/current/developer-docs/smart-contracts/maintain/recovery)
+- [Recover cubes](/docs/current/developer-docs/smart-contracts/maintain/recovery)
 
-- [Canister settings](/docs/current/developer-docs/smart-contracts/maintain/settings)
+- [Cube settings](/docs/current/developer-docs/smart-contracts/maintain/settings)
