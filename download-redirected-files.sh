@@ -1,1 +1,1 @@
-wget https://raw.githubusercontent.com/thebigfilecom/sdk/public-manifest/install.sh -O build/install.sh -q
+wget https://raw.githubusercontent.com/dfinity/sdk/public-manifest/install.sh -O build/install.sh -q

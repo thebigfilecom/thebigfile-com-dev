@@ -38,7 +38,7 @@ function Videos() {
     <Layout
       title={"Video library"}
       description={
-        "Don't like reading? Learn how the Internet Computer works from feature presentations, demos, interviews, and conference talks."
+        "Don't like reading? Learn how the BigFile works from feature presentations, demos, interviews, and conference talks."
       }
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
