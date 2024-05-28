@@ -679,7 +679,7 @@ const config = {
               },
               {
                 label: "Telegram",
-                to: "https://t.me/thebigfilecom",
+                to: "https://t.me/BigFileOfficial",
                 iconLight: getImageDataUrl(
                   "./static/img/svgIcons/purple/telegram.svg"
                 ),

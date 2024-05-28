@@ -341,7 +341,7 @@ function IcpEventPage() {
                 <Link className="button-white" href="/community">
                   Explore BigFile Community
                 </Link>
-                <Link className="link-white" href="https://t.me/thebigfilecom">
+                <Link className="link-white" href="https://t.me/BigFileOfficial">
                   <TelegramLogo className="inline-block align-text-bottom mr-2" />
                   Join the official BigFile Telegram Space
                 </Link>

@@ -302,20 +302,18 @@ function AsiaAlliancePage() {
                 className="tw-paragraph md:tw-lead mb-6"
                 variants={transitions.item}
               >
-                The ICP community is currently active in around 30 countries and
-                collaborates with up to 50 well-known crypto organizations and
-                32 universities. Haven't joined yet? What are you waiting for?
+                The BigFile community is currently active in around 30 countries and collaborates with up to 50 well-known crypto organizations and 32 universities. Haven't joined yet? What are you waiting for?
               </motion.p>
               <motion.p
                 className="mb-0 flex gap-8 flex-col items-start md:flex-row md:items-center"
                 variants={transitions.item}
               >
                 <Link className="button-white" href="/community">
-                  Explore ICP Community
+                  Explore BigFile Community
                 </Link>
-                <Link className="link-white" href="https://t.me/Official_ICP">
+                <Link className="link-white" href="https://t.me/BigFileOfficial">
                   <TelegramLogo className="inline-block align-text-bottom mr-2" />
-                  Join the official ICP Telegram Space
+                  Join the official BigFile Telegram Space
                 </Link>
               </motion.p>
             </div>
