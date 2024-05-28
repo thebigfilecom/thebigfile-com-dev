@@ -596,8 +596,8 @@ const config = {
         hideOnScroll: true,
 
         logo: {
-          alt: "DFINITY Logo",
-          src: "/img/IC_logo_horizontal.svg",
+          alt: "BigFile Logo",
+          src: "/img/BIG_logo_horizontal.svg",
         },
         // subnav redeclared to show up in mobile menu
         items: [...navbarItems, ...subnavItems],

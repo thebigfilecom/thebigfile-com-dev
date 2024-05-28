@@ -383,12 +383,12 @@ const MarketingNav = () => {
           {/* logo */}
           <Link href="/" className="self-center flex items-center">
             <img
-              src="/img/IC_logo_horizontal_white.svg"
+              src="/img/BIG_logo_horizontal_white.svg"
               alt=""
               className="h-8 md:h-10 hidden dark-hero:block"
             />
             <img
-              src="/img/IC_logo_horizontal.svg"
+              src="/img/BIG_logo_horizontal.svg"
               alt=""
               className="h-8 md:h-10 dark-hero:hidden"
             />

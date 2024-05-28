@@ -29,11 +29,11 @@ function NnsPage() {
       <Head>
         <meta
           property="og:image"
-          content={"https://internetcomputer.org/img/shareImages/share-nns.jpg"}
+          content={"https://thebigfile.com/img/shareImages/share-nns.jpg"}
         />
         <meta
           name="twitter:image"
-          content={"https://internetcomputer.org/img/shareImages/share-nns.jpg"}
+          content={"https://thebigfile.com/img/shareImages/share-nns.jpg"}
         />
       </Head>
       <main className="text-black relative overflow-hidden">
@@ -103,9 +103,7 @@ function NnsPage() {
                 The BigFile doesn’t require complicated forks to
                 upgrade its capacity. Anyone can submit a proposal to make
                 protocol level changes. Once approved by BF token holders,
-                these changes are automatically deployed by the NNS, seamlessly
-                upgrading the network. For participating in governance, BF
-                token holders receive voting rewards.
+                these changes are automatically deployed by the NNS, seamlessly upgrading the network. For participating in governance, BF token holders receive voting rewards.
               </motion.p>
               <MotionLink
                 className="link-external"
@@ -135,8 +133,7 @@ function NnsPage() {
                 variants={transitions.item}
               >
                 Once locked, neurons can vote on proposals manually or follow
-                the vote of other neurons — this is called liquid democracy. The
-                longer a neuron is locked for, the more voting rewards it
+                the vote of other neurons — this is called liquid democracy. The longer a neuron is locked for, the more voting rewards it
                 collects
               </motion.p>
               <MotionLink
@@ -159,16 +156,11 @@ function NnsPage() {
               >
                 Voting rewards are distributed among participants who have
                 locked BF in neurons and are voting either manually or follow
-                other neurons that vote. Rewards are distributed daily to voting
-                neurons as maturity. This maturity is unrealized ICP that can be
-                either staked or spawned. Staking maturity adds to the voting
-                power of the neuron. Spawning mints the maturity into a neuron
-                that becomes liquid after a week so that the ICP contained in
-                the neuron can also be used outside of the NNS.
+                other neurons that vote. Rewards are distributed daily to voting neurons as maturity. This maturity is unrealized ICP that can be either staked or spawned. Staking maturity adds to the voting power of the neuron. Spawning mints the maturity into a neuron that becomes liquid after a week so that the ICP contained in the neuron can also be used outside of the NNS.
               </motion.p>
               <MotionLink
                 className="link-external"
-                href="https://dashboard.internetcomputer.org/governance"
+                href="https://dashboard.thebigfile.com/governance"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={transitions.item}

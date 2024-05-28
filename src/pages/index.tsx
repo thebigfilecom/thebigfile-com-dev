@@ -64,7 +64,7 @@ export default function Home(): JSX.Element {
               },
               {
                 title: "Dev docs",
-                body: "Get to know the concepts,  architecture and technical breakthroughs that enable the BigFIle. Plus step-by-step guides on how to stake your tokens, and more.",
+                body: "Get to know the concepts, architecture and technical breakthroughs that enable the BigFile. Plus step-by-step guides on how to stake your tokens, and more.",
                 link: "/docs/current/home",
               },
               {

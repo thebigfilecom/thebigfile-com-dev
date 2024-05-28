@@ -92,16 +92,16 @@ function HTTPSOutcalls() {
 
             <h3>HTTPS outcalls replace oracles</h3>
             <p>
-              Canister HTTPS outcalls on the Internet Computer blockchain allow
+              Cube HTTPS outcalls on the BigFile blockchain allow
               direct interaction with Web 2.0 and other blockchains without
-              oracles. Canister smart contracts can make HTTPS outcalls to
+              oracles. Cube smart contracts can make HTTPS outcalls to
               specified URLs to directly obtain off-chain data, or to interact
               with off-chain systems, such as Web 2.0 services or enterprise IT
               infrastructure.
             </p>
             <p className="mb-3 mt-6">
               <Link
-                href="https://wiki.internetcomputer.org/wiki/HTTPS_outcalls"
+                href="https://wiki.thebigfile.com/wiki/HTTPS_outcalls"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="tw-heading-6 flex gap-2 items-center"
@@ -122,14 +122,14 @@ function HTTPSOutcalls() {
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
               Powered by HTTPS outcalls, the exchange rate canister (XRC) on the
-              Internet Computer fetches data from Web 2.0 servers and lives
+              BigFile fetches data from Web 2.0 servers and lives
               entirely on chain. It interacts with major cryptocurrency
               exchanges using their public APIs to retrieve real-time or
               historical pricing information. The XRC also periodically queries
               public APIs of foreign exchange data providers around the world to
               get forex rates. The XCR can be integrated in DEXs to compare
               exchange rates against market rates and determine the value of
-              assets held under management in a canister smart contract, for
+              assets held under management in a cube smart contract, for
               example, with respect to a fiat currency.
             </p>
             <p className="mb-6">
@@ -166,7 +166,7 @@ function HTTPSOutcalls() {
             <CardWithDescription
               title="Dev docs"
               description="Start integrating the HTTPS outcalls feature in your dapps and services to connect to off-chain data."
-              href="https://internetcomputer.org/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/"
+              href="https://thebigfile.com/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/"
             />
             <CardWithDescription
               title="Beyond oracles"
@@ -180,9 +180,9 @@ function HTTPSOutcalls() {
               bgImageClass={"bg-https-outcalls"}
             />
             <CardWithDescription
-              title="ICP Wiki"
-              description="Get a high-level overview of how HTTPS outcalls work on the Internet Computer."
-              href="https://wiki.internetcomputer.org/wiki/HTTPS_outcalls"
+              title="BigFile Wiki"
+              description="Get a high-level overview of how HTTPS outcalls work on the BigFile."
+              href="https://wiki.thebigfile.com/wiki/HTTPS_outcalls"
             />
           </div>
         </section>
