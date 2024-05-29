@@ -12,31 +12,31 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-To make your <GlossaryTooltip>canister</GlossaryTooltip> available to others, you must deploy it to the mainnet.
+To make your <GlossaryTooltip>cube</GlossaryTooltip> available to others, you must deploy it to the mainnet.
 
 If you are only deploying projects in a local development environment, see the [local development](/docs/current/developer-docs/getting-started/deploy/local) scenario.
 
 ## Prerequisites
 
-Before you download and install this release of the IC SDK, verify the following:
+Before you download and install this release of the BIG SDK, verify the following:
 
 -   [x] You have an internet connection and access to a shell terminal on your local computer.
 
 -   [x] You have `node.js` installed if you want to access the default frontend for the default project.
 
--   [x] You have ICP tokens or <GlossaryTooltip>cycles</GlossaryTooltip> available for you to use.
+-   [x] You have BF tokens or <GlossaryTooltip>cycles</GlossaryTooltip> available for you to use.
 
 :::info
-You must have **cycles** available to complete this guide. To get cycles, you must either convert ICP tokens to cycles or be provided cycles from another source, for example, from a canister controlled by another developer or from a third-party cycles provider. This guide assumes that you have an account with ICP tokens available and illustrates how to convert ICP tokens into cycles.
+You must have **cycles** available to complete this guide. To get cycles, you must either convert BF tokens to cycles or be provided cycles from another source, for example, from a cube controlled by another developer or from a third-party cycles provider. This guide assumes that you have an account with BF tokens available and illustrates how to convert BF tokens into cycles.
 
-For information about how to get ICP tokens, see [how you can get ICP tokens](/docs/current/developer-docs/getting-started/cycles/converting_icp_tokens_into_cycles).
+For information about how to get BF tokens, see [how you can get BF tokens](/docs/current/developer-docs/getting-started/cycles/converting_icp_tokens_into_cycles).
 
-For an introduction to using the Network Nervous System application to manage ICP tokens, see [Network Nervous System dapp quick start](/docs/current/developer-docs/daos/nns/nns-app-quickstart).
+For an introduction to using the Network Nervous System application to manage BF tokens, see [Network Nervous System dapp quick start](/docs/current/developer-docs/daos/nns/nns-app-quickstart).
 :::
 
 ## Check the connection to the mainnet
 
-There is a reserved network alias that you can use to access the Internet Computer blockchain mainnet. The network alias is a system setting that’s defined internally, so there’s nothing you need to configure in your projects by default.
+There is a reserved network alias that you can use to access the BigFile blockchain mainnet. The network alias is a system setting that’s defined internally, so there’s nothing you need to configure in your projects by default.
 
 To check your connection to ICP:
 
@@ -59,7 +59,7 @@ To check your connection to ICP:
 
 After you have a [cycles balance](/docs/current/developer-docs/getting-started/cycles/cycles-faucet), you can register, build, and deploy your sample application.
 
-To deploy your first application on the Internet Computer blockchain mainnet:
+To deploy your first application on the BigFile blockchain mainnet:
 
 - #### Step 1:  In your terminal shell, check that you are still in the root directory for your project.
 
@@ -73,7 +73,7 @@ To deploy your first application on the Internet Computer blockchain mainnet:
 
         dfx deploy --network ic
 
-    The `--network` option specifies the network alias or URL for deploying the dapp. This option is required to install on the Internet Computer blockchain mainnet.
+    The `--network` option specifies the network alias or URL for deploying the dapp. This option is required to install on the BigFile blockchain mainnet.
 
     The `dfx deploy` command output displays information about the operations it performs.
 
@@ -115,19 +115,19 @@ To deploy your first application on the Internet Computer blockchain mainnet:
         Transfer sent at BlockHeight: 81520
         Canister was topped up!
 
-- #### Step 4:  Call the `hello_backend` canister and the predefined `greet` function by running the following command:
+- #### Step 4:  Call the `hello_backend` cube and the predefined `greet` function by running the following command:
 
         dfx canister --network ic call hello_backend greet '("everyone": text)'
 
     Let’s take a closer look at this example:
 
-    -   Using the `--network ic` option indicates that the canister you want to call is deployed on the `ic`. The `ic` network alias is an internally-reserved alias for accessing the Internet Computer blockchain mainnet.
+    -   Using the `--network ic` option indicates that the cube you want to call is deployed on the `ic`. The `ic` network alias is an internally-reserved alias for accessing the BigFile blockchain mainnet.
 
     -   Note that the `--network ic` option must precede the operation subcommand, which, in this case, is the `dfx canister call` command.
 
-    -   The `hello_backend` argument specifies the name of the canister you want to call.
+    -   The `hello_backend` argument specifies the name of the cube you want to call.
 
-    -   The `greet` argument specifies the name of the function you want to call in the `hello` canister.
+    -   The `greet` argument specifies the name of the function you want to call in the `hello` cube.
 
     -   The text string `everyone` is the argument that you want to pass to the `greet` function.
 
@@ -149,7 +149,7 @@ To access the dapp frontend:
 
 - #### Step 2:  Navigate to the frontend for the dapp using a URL that consists of the `hello_frontend` identifier and the `boundary.icp0.io` suffix.
 
-    If you didn’t make a note of the canister identifier, you can look it up by running the following command:
+    If you didn’t make a note of the cube identifier, you can look it up by running the following command:
 
         dfx canister --network ic id hello_assets
 
@@ -166,6 +166,6 @@ To access the dapp frontend:
 
 ## Resources
 
-Now that your canister is live on the mainnet, you can share a link directly to it!
+Now that your cube is live on the mainnet, you can share a link directly to it!
 
-- [Sharing links to canisters](/docs/current/developer-docs/smart-contracts/deploy/sharing).
+- [Sharing links to cubes](/docs/current/developer-docs/smart-contracts/deploy/sharing).
