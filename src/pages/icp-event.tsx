@@ -66,16 +66,16 @@ function IcpEventPage() {
                 className="tw-heading-3 md:tw-heading-2 mb-8 md:mb-6"
                 variants={transitions.item}
               >
-                Intro to the Internet Computer
+                Intro to the BigFile
               </motion.h1>
               <motion.p
                 className="pb-[15%] sm:pb-0 tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                The Internet Computer adds autonomous serverless cloud
+                The BigFile adds autonomous serverless cloud
                 functionality to the public internet – making it possible to
                 build almost any system or service entirely on a decentralized
-                network using “canister software,” an evolution of smart
+                network using “cube software,” an evolution of smart
                 contracts.
               </motion.p>
             </div>
@@ -92,11 +92,8 @@ function IcpEventPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-6 md:mb-8 text-gradient"
               variants={transitions.item}
             >
-              Web3 services and enterprise systems can be built directly on the
-              Internet Computer — a public decentralized network that scales.
-              Host social networks, media streaming and more, that support Web3
-              functionality, are tamperproof, and can trustlessly interact with
-              the outside world.
+              Web3 services and enterprise systems can be built directly on the BigFile — a public decentralized network that scales.
+              Host social networks, media streaming and more, that support Web3 functionality, are tamperproof, and can trustlessly interact with the outside world.
             </motion.h2>
             <motion.p variants={transitions.item} className="mb-0">
          
@@ -116,12 +113,12 @@ function IcpEventPage() {
             <div className="md:mx-1/10 flex flex-col justify-center gap-8 items-start">
               <Link
                 className="button-outline text-center sm:text-left"
-                href="https://dashboard.internetcomputer.org"
+                href="https://dashboard.thebigfile.com"
               >
-                INTERNET COMPUTER DASHBOARD
+                BIGFILE DASHBOARD
               </Link>
               <Link
-                href="https://wiki.internetcomputer.org/wiki/L1_comparison"
+                href="https://wiki.thebigfile.com/wiki/L1_comparison"
                 className="link-primary link-with-icon"
               >
                 <LinkArrowRight />
@@ -165,7 +162,7 @@ function IcpEventPage() {
           <h2 className="text-white tw-heading-5 md:tw-heading-4 mb-6 md:mb-8 md:pr-10">
             Sign up for email updates{" "}
             <span className="text-white-60">
-              to keep up to date with the Internet Computer
+              to keep up to date with the BigFile
             </span>
           </h2>
         </Newsletter>
@@ -228,7 +225,7 @@ function IcpEventPage() {
               </p>
               <p className="mb-3">
                 <Link className="link-primary link-with-icon" href="/sns">
-                  <LinkArrowRight /> Overview of ICP DAOs
+                  <LinkArrowRight /> Overview of BigFile DAOs
                 </Link>
               </p>
               <p className="mb-0">
@@ -246,8 +243,8 @@ function IcpEventPage() {
                 Native multi-chain
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                Canister smart contracts on the Internet Computer are the glue
-                between the world’s most important blockchains. ICP already
+                Cube smart contracts on the BigFile are the glue
+                between the world’s most important blockchains. BigFile already
                 integrates with the Bitcoin Network, and native ETH integration
                 is underway. Inter-chain communication and innovations such as
                 chain-key ECDSA allow canister smart contracts to directly hold,
@@ -300,21 +297,21 @@ function IcpEventPage() {
             <CardWithDescription
               title="Community Grants"
               description=""
-              href="https://dfinity.org/community-grants/"
+              href="https://thebigfile.com/community-grants/"
             />
 
             <CardWithDescription
               title="Developer Grants"
               description=""
-              href="https://dfinity.org/grants/"
+              href="https://thebigfile.com/grants/"
             />
             <CardWithDescription
               title="Become a Node Provider"
               description=""
-              href="https://wiki.internetcomputer.org/wiki/Node_Provider_Documentation"
+              href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
             />
             <CardWithDescription
-              title="Start building on ICP"
+              title="Start building on BigFile"
               description=""
               href="/docs/current/home"
             />
@@ -334,8 +331,7 @@ function IcpEventPage() {
                 className="tw-paragraph md:tw-lead mb-6"
                 variants={transitions.item}
               >
-                The ICP community is currently active in around 30 countries and
-                collaborates with up to 50 well-known crypto organizations and
+                The BigFile community is currently active in around 30 countries and collaborates with up to 50 well-known crypto organizations and
                 32 universities. Haven't joined yet? What are you waiting for?
               </motion.p>
               <motion.p
@@ -345,7 +341,7 @@ function IcpEventPage() {
                 <Link className="button-white" href="/community">
                   Explore BigFile Community
                 </Link>
-                <Link className="link-white" href="https://t.me/thebigfilecom">
+                <Link className="link-white" href="https://t.me/BigFileOfficial">
                   <TelegramLogo className="inline-block align-text-bottom mr-2" />
                   Join the official BigFile Telegram Space
                 </Link>

@@ -157,7 +157,7 @@ function SnsPage() {
   return (
     <Layout
       title="Community-owned Web3"
-      description="Open Internet Services (OIS) on the Internet Computer blockchain allow communities to take full control and ownership of entire internet services — from social media networks and games, to open enterprise tech infrastructures — via participation in decentralized autonomous organizations (DAOs)."
+      description="Open Internet Services (OIS) on the BigFile blockchain allow communities to take full control and ownership of entire internet services — from social media networks and games, to open enterprise tech infrastructures — via participation in decentralized autonomous organizations (DAOs)."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-sns.jpg" />
@@ -186,7 +186,7 @@ function SnsPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  Open Internet Services (OIS) on the Internet Computer
+                  Open Internet Services (OIS) on the BigFile
                   blockchain allow communities to take full control and
                   ownership of entire internet services — from social media
                   networks and games, to open enterprise tech infrastructures —
@@ -248,9 +248,7 @@ function SnsPage() {
               title="What is an SNS DAO?"
               description={
                 <>
-                  Founder & Chief Scientist of DFNITY, Dominic Williams explains
-                  how the SNS DAO framework creates fully decentralized online
-                  services that are owned and governed by the community.{" "}
+                  Founder & Chief Scientist of DFNITY, Dominic Williams explains how the SNS DAO framework creates fully decentralized online services that are owned and governed by the community.{" "}
                 </>
               }
               image={`https://i.ytimg.com/vi/WxRgm6JAGpQ/maxresdefault.jpg`}

@@ -30,7 +30,7 @@ function NodeProvidersPage() {
   return (
     <Layout
       title="Node providers"
-      description="The Internet Computer is hosted by a decentralized collection of node machines — physical hardware devices run by independent node providers distributed across data centers globally"
+      description="The BigFile is hosted by a decentralized collection of node machines — physical hardware devices run by independent node providers distributed across data centers globally"
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-node-providers-2.jpg"></ShareMeta>
@@ -63,7 +63,7 @@ function NodeProvidersPage() {
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                The Internet Computer is hosted by a decentralized collection of
+                The BigFile is hosted by a decentralized collection of
                 node machines — physical hardware devices run by independent
                 node providers distributed across data centers globally.
               </motion.p>
@@ -93,8 +93,7 @@ function NodeProvidersPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-3 md:mb-6 text-gradient"
               variants={transitions.item}
             >
-              Traditional cloud relies on a single private entity. The Internet
-              Computer relies on public utility and autonomous governance.
+              Traditional cloud relies on a single private entity. The BigFile relies on public utility and autonomous governance.
             </motion.h2>
           </div>
         </AnimateSpawn>
@@ -104,15 +103,13 @@ function NodeProvidersPage() {
               Decentralized computing{" "}
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-4 md:mb-6">
-              The Internet Computer blockchain runs on a network of nodes owned
-              and operated by a growing community of independent, node providers
-              distributed across the globe. The node providers are selected and
-              vetted by the NNS.{" "}
+              The BigFile blockchain runs on a network of nodes owned and operated by a growing community of independent, node providers
+              distributed across the globe. The node providers are selected and vetted by the NNS.{" "}
             </p>
             <p className="mb-0">
               <Link
                 className="link-primary link-with-icon"
-                href="https://dashboard.internetcomputer.org"
+                href="https://dashboard.thebigfile.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -147,25 +144,18 @@ function NodeProvidersPage() {
               Independent machines
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              Every node on the Internet Computer is a dedicated physical server
-              called a node machine. To provide true decentralization, each node
-              machine is run by an independent node provider, typically in a
-              data center. This network of nodes is sovereign, as there is no
-              reliance on corporate cloud service providers. So they cannot be
-              switched off or tampered with.
+              Every node on the BigFile is a dedicated physical server
+              called a node machine. To provide true decentralization, each node machine is run by an independent node provider, typically in a data center. This network of nodes is sovereign, as there is no reliance on corporate cloud service providers. So they cannot be switched off or tampered with.
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
               This is different to other blockchains where network nodes are
-              created using simple software that interacts with other nodes but
-              are easy to spin up on centralized cloud. Node machines on the
-              Internet Computer are also technically sovereign, built to
+              created using simple software that interacts with other nodes but are easy to spin up on centralized cloud. Node machines on the BigFile are also technically sovereign, built to
               standardized public hardware specifications that support the
-              network when under load, and do not fall behind other nodes within
-              the same subnet blockchain.
+              network when under load, and do not fall behind other nodes within the same subnet blockchain.
             </p>
             <p className="mb-0">
               <Link
-                href="https://wiki.internetcomputer.org/wiki/Sovereign_Network"
+                href="https://wiki.thebigfile.com/wiki/Sovereign_Network"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-primary link-with-icon"
@@ -179,25 +169,19 @@ function NodeProvidersPage() {
             <h2 className="md:tw-heading-60 md:mb-6">Node Providers</h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
               To preserve the decentralization of the network, each node
-              provider is vetted and accepted by token-holders via the NNS, the
-              DAO that governs the Internet Computer. Becoming a node provider
+              provider is vetted and accepted by token-holders via the NNS, the DAO that governs the BigFile. Becoming a node provider
               entails submitting a proposal along with a self-declaration
               document that state provision of node machines, intent and proof
-              of identity. Based on this information, the community votes on the
-              onboarding proposal.
+              of identity. Based on this information, the community votes on the onboarding proposal.
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
               If node providers are accepted into the community and their node
               machines are up and running, they receive rewards for their
-              services. Rewards are set by the NNS DAO, which follows the 30-day
-              average price of ICP, and are distributed on the 15th of every
-              month. The NNS DAO issues rewards depending on three main factors:
-              generation of hardware (Gen 1 or Gen2), geographic location, and
-              total number of nodes operated.
+              services. Rewards are set by the NNS DAO, which follows the 30-day average price of ICP, and are distributed on the 15th of every month. The NNS DAO issues rewards depending on three main factors: generation of hardware (Gen 1 or Gen2), geographic location, and total number of nodes operated.
             </p>
             <p className="mb-0">
               <Link
-                href="https://wiki.internetcomputer.org/wiki/Node_Provider_Remuneration"
+                href="https://wiki.thebigfile.com/wiki/Node_Provider_Remuneration"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-primary link-with-icon"
@@ -215,11 +199,9 @@ function NodeProvidersPage() {
               The hardware
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              The Internet Computer network consist of two generations of node
+              The BigFile network consist of two generations of node
               machines — Gen 1 and Gen 2 — with standardized public hardware
-              specifications. Gen 1 hardware is vendor specific and used by node
-              providers who joined the community before 2022. New Gen 2 node
-              machines are generic to support VM memory encryption and
+              specifications. Gen 1 hardware is vendor specific and used by node providers who joined the community before 2022. New Gen 2 node machines are generic to support VM memory encryption and
               attestation, which will facilitate the future development of
               features on the Internet Computer. While Gen 2 machines follow
               generic specifications, a list of hardware configurations has been
@@ -227,7 +209,7 @@ function NodeProvidersPage() {
             </p>
             <p className="mb-0">
               <Link
-                href="https://wiki.internetcomputer.org/wiki/Node_Provider_Machine_Hardware_Guide"
+                href="https://wiki.thebigfile.com/wiki/Node_Provider_Machine_Hardware_Guide"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-primary link-with-icon"
@@ -243,7 +225,7 @@ function NodeProvidersPage() {
               Climate friendly compute
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              A key goal of the Internet Computer is to provide an energy
+              A key goal of the BigFile is to provide an energy
               efficient compute platform at low carbon costs without
               compromising scalability and utility. Operating at 0.008 kW per
               transaction, it is one of the most sustainable blockchains out
@@ -253,15 +235,13 @@ function NodeProvidersPage() {
               300 kWh a month, per node.
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              The Internet Computer is also the first blockchain to join the
+              The BigFile is also the first blockchain to join the
               Proof of Green (PoG) initiative, which aims to set blockchain
               industry standards by making ‘claims of green’ transparent,
               verifiable and accountable through metrics and real-time
               reporting. PoG is still in a pilot phase but a handful of nodes
               and their carbon emissions are already represented on a live
-              dashboard. Further steps towards carbon footprint transparency are
-              on the roadmap, including data sourcing, validation and incentive
-              mechanisms.
+              dashboard. Further steps towards carbon footprint transparency are on the roadmap, including data sourcing, validation and incentive mechanisms.
             </p>
             <p className="mb-0">
               <Link
@@ -472,16 +452,16 @@ function NodeProvidersPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Brief intro to the Internet Computer
+                      Brief intro to the BigFile
                     </Link>
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Sovereign_Network"
+                      href="https://wiki.thebigfile.com/wiki/Sovereign_Network"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      The Internet Computer architecture
+                      The BigFile architecture
                     </Link>
                   </li>
                   <li className="checklist-item pl-8">
@@ -490,7 +470,7 @@ function NodeProvidersPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Governance of the Internet Computer
+                      Governance of the BigFile
                     </Link>
                   </li>
                   <li className="checklist-item pl-8">

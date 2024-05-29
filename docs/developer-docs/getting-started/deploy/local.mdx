@@ -13,23 +13,23 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-When developing <GlossaryTooltip>canisters</GlossaryTooltip> and projects, it is recommended to first deploy your project to the local development environment. This is so you can fabricate <GlossaryTooltip>cycles</GlossaryTooltip> in your local development environment, which you cannot do on the mainnet. Cycles are charged for the resources used by your canister. You can learn more about cycles [here](/docs/current/developer-docs/gas-cost).
+When developing <GlossaryTooltip>cubes</GlossaryTooltip> and projects, it is recommended to first deploy your project to the local development environment. This is so you can fabricate <GlossaryTooltip>cycles</GlossaryTooltip> in your local development environment, which you cannot do on the mainnet. Cycles are charged for the resources used by your cube. You can learn more about cycles [here](/docs/current/developer-docs/gas-cost).
 
-Deploying to your local development environment is similar to deploying to a testnet. ICP does not have a testnet available for developers to deploy to. Instead, the IC SDK runs a local version of the ICP node software known as the **replica** and provides a single-node environment on your local machine for you to deploy canisters to.
+Deploying to your local development environment is similar to deploying to a testnet. BigFile does not have a testnet available for developers to deploy to. Instead, the BIG SDK runs a local version of the BigFile node software known as the **replica** and provides a single-node environment on your local machine for you to deploy cubes to.
 
 ## Prerequisites
 
-Before you create your first canister, verify the following:
+Before you create your first cube, verify the following:
 
 -   [x] You have an internet connection and access to a shell terminal on your local computer.
 
 -   [x] You have `node.js` installed if you want to include the default template files for frontend development in your project.
 
--   [x] You have downloaded and installed the IC SDK package as described in the [installing the IC SDK](/docs/current/developer-docs/getting-started/install/) page.
+-   [x] You have downloaded and installed the BIG SDK package as described in the [installing the BIG SDK](/docs/current/developer-docs/getting-started/install/) page.
 
 ## Start the local deployment
 
-Before you can build your first project, you need to connect to the local <GlossaryTooltip>replica</GlossaryTooltip>. As a best practice, this step requires you to have **two terminal shells** open, so that you can start and see canister execution operations in one terminal and manage your project in another.
+Before you can build your first project, you need to connect to the local <GlossaryTooltip>replica</GlossaryTooltip>. As a best practice, this step requires you to have **two terminal shells** open, so that you can start and see cube execution operations in one terminal and manage your project in another.
 
 To prepare the local replica:
 
@@ -45,19 +45,19 @@ To prepare the local replica:
 
     Depending on your platform and local security settings, you might see a warning displayed. If you are prompted to allow or deny incoming network connections, click **Allow**.
 
-- #### Step 4:  Leave the terminal window that displays canister execution operations open and switch your focus to the first terminal window where you created your new project.
+- #### Step 4:  Leave the terminal window that displays cube execution operations open and switch your focus to the first terminal window where you created your new project.
 
-    You should perform the remaining steps in the terminal that doesn’t display canister execution operations.
+    You should perform the remaining steps in the terminal that doesn’t display cube execution operations.
 
 ## Register, build, and deploy the application
 
-After you connect to the local canister execution environment you can register, build, and deploy your dapp locally.
+After you connect to the local cube execution environment you can register, build, and deploy your dapp locally.
 
-To deploy your first canister locally:
+To deploy your first cube locally:
 
 - #### Step 1:  Check that you are still in the root directory for your project, if needed.
 
-It is recommended to follow the [creating your first canister](/docs/current/developer-docs/getting-started/default-template) guide to have a simple 'Hello, world!' canister ready to deploy.
+It is recommended to follow the [creating your first canister](/docs/current/developer-docs/getting-started/default-template) guide to have a simple 'Hello, world!' cube ready to deploy.
 
 - #### Step 2:  Ensure that `node` modules are available in your project directory, if needed, by running the following command:
 
@@ -105,14 +105,14 @@ It is recommended to follow the [creating your first canister](/docs/current/dev
         URLs:
           Frontend canister via browser
             hello_frontend: http://127.0.0.1:4943/?canisterId=ryjl3-tyaaa-aaaaa-aaaba-cai
-          Backend canister via Candid interface:
+          Backend cube via Candid interface:
             hello_backend: http://127.0.0.1:4943/?canisterId=r7inp-6aaaa-aaaaa-aaabq-cai&id=rrkah-fqaaa-aaaaa-aaaaq-cai
 
-    If you created a project with a different name, however, your canister names will match your project name instead of `hello_backend` and `hello_frontend`.
+    If you created a project with a different name, however, your cube names will match your project name instead of `hello_backend` and `hello_frontend`.
 
-## Call the canister from the CLI
+## Call the cube from the CLI
 
-Call the `hello_backend` canister and the predefined `greet` function by running the following command:
+Call the `hello_backend` cube and the predefined `greet` function by running the following command:
 
         dfx canister call hello_backend greet everyone
 
@@ -126,7 +126,7 @@ Call the `hello_backend` canister and the predefined `greet` function by running
 
     -   `everyone` is the text data type argument that you want to pass to the `greet` function.
 
-    Remember, however, that if you created a project with a different name, the canister name will match your project name and you’ll need to modify the command line to match the name you used instead of `hello_backend`. If you were to choose `test` as the projects name, your backend canister would be called `test_backend` and the frontend canister `test_frontend`.
+    Remember, however, that if you created a project with a different name, the cube name will match your project name and you’ll need to modify the command line to match the name you used instead of `hello_backend`. If you were to choose `test` as the projects name, your backend cube would be called `test_backend` and the frontend cube `test_frontend`.
 
 Verify the command displays the return value of the `greet` function.
 
@@ -134,16 +134,16 @@ Verify the command displays the return value of the `greet` function.
 
         ("Hello, everyone!")
 
-## Call the canister from browser
+## Call the cube from browser
 
-It is possible to access the frontend canister directly from the browser. You will need to navigate to the URL that was printed in the output of the `dfx deploy` command (your URL might differ):
+It is possible to access the frontend cube directly from the browser. You will need to navigate to the URL that was printed in the output of the `dfx deploy` command (your URL might differ):
 
 ```
-Frontend canister via browser
+Frontend cube via browser
     hello_frontend: http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai
 ```
 
-This will render a webpage with a form that accepts a string and sends it to the backend canister.
+This will render a webpage with a form that accepts a string and sends it to the backend cube.
 
 The source code of the webpage is defined in the `src/hello_frontend/src/index.{html,js}` files.
 
@@ -196,21 +196,21 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 });
 ```
 
-The JavaScript code running in browser uses the [`agent-js`](/docs/current/developer-docs/agents/javascript-intro) library to interact with the backend canister. The library creates a wrapper JavaScript object based on the interface of the canister. That wrapper object provides convenience methods for calling the canister functions as if they were JavaScript functions:
+The JavaScript code running in browser uses the [`agent-js`](/docs/current/developer-docs/agents/javascript-intro) library to interact with the backend cube. The library creates a wrapper JavaScript object based on the interface of the cube. That wrapper object provides convenience methods for calling the cube functions as if they were JavaScript functions:
 
 ```
 const greeting = await hello_backend.greet(name);
 ```
 
-## Stop the local canister execution environment
+## Stop the local cube execution environment
 
-After testing the application in the browser, you can stop the local canister execution environment so that it doesn’t continue running in the background.
+After testing the application in the browser, you can stop the local cube execution environment so that it doesn’t continue running in the background.
 
 To stop the local deployment:
 
 - #### Step 1:  In the terminal that displays the development server, press Control-C to interrupt the development server process.
 
-- #### Step 2:  In the terminal that displays canister execution operations, press Control-C to interrupt the local network process.
+- #### Step 2:  In the terminal that displays cube execution operations, press Control-C to interrupt the local network process.
 
 - #### Step 3:  Stop the local replica running on your local computer by running the following command:
 
@@ -218,7 +218,7 @@ To stop the local deployment:
 
 ## Next steps
 
-Next, you can deploy your canister on the mainnet.
+Next, you can deploy your cube on the mainnet.
 
 - [Mainnet deployment](/docs/current/developer-docs/getting-started/deploy/mainnet)
 

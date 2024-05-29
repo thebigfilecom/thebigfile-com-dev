@@ -93,7 +93,7 @@ function Samples(): JSX.Element {
     <Layout
       title={"Developer Tools"}
       description={
-        "Explore developer tools by DFINITY and the community, and use them to improve and ease your development journey."
+        "Explore developer tools by BigFile and the community, and use them to improve and ease your development journey."
       }
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
@@ -118,7 +118,7 @@ function Samples(): JSX.Element {
                 variants={transitions.item}
                 className="tw-lead-sm md:tw-lead mb-0"
               >
-                Explore developer tools by DFINITY and the community, and use
+                Explore developer tools by BigFile and the community, and use
                 them to improve and ease your development journey.
               </motion.p>
             </div>
@@ -168,11 +168,11 @@ function Samples(): JSX.Element {
               variants={transitions.item}
               className="mt-12 md:ml-1/12"
             >
-              <p className="tw-heading-6 md:tw-heading-5">Tools by DFINITY</p>
+              <p className="tw-heading-6 md:tw-heading-5">Tools by BigFile</p>
 
               {filteredDfinityTools.length === 0 && (
                 <p className="tw-paragraph text-black-60">
-                  No tools by DFINITY available
+                  No tools by BigFile available
                 </p>
               )}
             </motion.div>
@@ -218,7 +218,7 @@ function Samples(): JSX.Element {
                   Community tools
                 </p>
                 <p className="md:w-6/10 tw-paragraph">
-                  The Internet Computer has many tools built by the community.
+                  The BigFile has many tools built by the community.
                   Check out the repos and get building!
                 </p>
                 {/*<p className="inline-flex tw-title-navigation-on-page border-black-60 border-2 border-solid py-2 px-3 rounded-xl hover:text-white hover:bg-infinite transition-colors">
@@ -227,8 +227,7 @@ function Samples(): JSX.Element {
               </div>
               <div className="w-full md:w-4/10 md:mr-1/12">
                 <p className="mt-6 md:mt-0 tw-paragraph-sm text-black-60">
-                  Disclamer: Please use the following tools at your own risk and
-                  always do your own research.
+                  Disclamer: Please use the following tools at your own risk and always do your own research.
                 </p>
               </div>
             </motion.div>

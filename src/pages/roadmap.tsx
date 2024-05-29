@@ -146,7 +146,7 @@ const RoadmapPage: React.FC = () => {
               </p>
               <Link
                 className="link-external"
-                href="https://dfinity.org/events-and-news"
+                href="https://thebigfile.com/events-and-news"
               >
                 See events
               </Link>
@@ -158,8 +158,7 @@ const RoadmapPage: React.FC = () => {
               <h3 className="tw-lead-lg md:tw-title-sm">Developer grants</h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
                 Do you have innovative ideas for building on the BigFile and need funding to launch your project? The BigFile
-                Developer Grant Program provides support to promising developers
-                around the globe.
+                Developer Grant Program provides support to promising developers around the globe.
               </p>
               <Link
                 className="link-external"

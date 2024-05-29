@@ -26,8 +26,8 @@ function InternetIdentityPage() {
 
   return (
     <Layout
-      title="Internet Identity"
-      description="Internet Identity on ICP redefines user experiences by removing friction from the authentication journey and enabling data sovereignty."
+      title="BIG Wallet"
+      description="BIG Wallet on ICP redefines user experiences by removing friction from the authentication journey and enabling data sovereignty."
     >
       <ShareMeta image="/img/shareImages/share-internet-identity.jpg"></ShareMeta>
 
@@ -53,7 +53,7 @@ function InternetIdentityPage() {
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                Internet Identity redefines user experiences by removing
+                BIG Wallet redefines user experiences by removing
                 friction from the authentication journey and enabling data
                 sovereignty.
               </motion.p>
@@ -103,7 +103,7 @@ function InternetIdentityPage() {
                 100% decentralized
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                Internet Identity is fully decentralized because apps built on
+                BIG Wallet is fully decentralized because apps built on
                 ICP store data entirely on-chain. It's more secure and fault
                 tolerant than digital identity solutions hosted on protocols
                 that rely on centralized cloud providers like Amazon Web
@@ -131,8 +131,8 @@ function InternetIdentityPage() {
                 Enhanced security
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                Internet Identity removes the need for apps to store passwords
-                in a database. When a user creates an Internet Identity, they're
+                BIG Wallet removes the need for apps to store passwords
+                in a database. When a user creates an BIG Wallet, they're
                 automatically assigned a public and private key pair. The
                 private key is locked in a tamper-proof chip on the user's
                 device, so nobody can retrieve it.
@@ -144,10 +144,8 @@ function InternetIdentityPage() {
                 Strict privacy
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                Every time a user creates an account with an app using Internet
-                Identity, a new key pair is generated and managed for that app.
-                This means users can interact with an app without worrying that
-                it will share their data (like Big Tech's Single Sign-On).
+                Every time a user creates an account with an app using BIG Wallet, a new key pair is generated and managed for that app.
+                This means users can interact with an app without worrying that it will share their data (like Big Tech's Single Sign-On).
               </p>
             </TranslatedLayout>
             <TranslatedLayout
@@ -157,8 +155,7 @@ function InternetIdentityPage() {
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">Multichain</h3>
               <p className="tw-paragraph md:tw-lead-sm mb-3">
                 Once ICP completes its integration with the Ethereum Virtual
-                Machine, decentralized apps built on the Ethereum protocol will
-                be able to integrate Internet Identity and offer users from both
+                Machine, decentralized apps built on the Ethereum protocol will be able to integrate BIG Wallet and offer users from both
                 ecosystems a convenient, secure, and private way to log in and
                 share verifiable credentials.
               </p>
@@ -168,8 +165,8 @@ function InternetIdentityPage() {
                 Easy integration
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-3 md:mb-6">
-                Internet Identity seamlessly integrates with Web2 and Web3 apps.
-                It deploys canister smart contracts to request authentication
+                BIG Wallet seamlessly integrates with Web2 and Web3 apps.
+                It deploys cube smart contracts to request authentication
                 and verify user identities.
               </p>
               <p className="mb-0">
@@ -180,7 +177,7 @@ function InternetIdentityPage() {
                   className="link-primary"
                 >
                   <LinkArrowRight />
-                  Integrate Internet Identity
+                  Integrate BIG Wallet
                 </Link>
               </p>
             </TranslatedLayout>
@@ -222,7 +219,7 @@ function InternetIdentityPage() {
                 </motion.h2>
                 <motion.div variants={transitions.item}>
                   <p className="mb-0 tw-lead-sm md:tw-lead text-white/80">
-                    Internet Identity is built on WebAuthN, a global
+                    BIG Wallet is built on WebAuthN, a global
                     authentication standard and a key part of the FIDO
                     framework. It removes the need for usernames and passwords
                     and replaces them with passkeys: registered devices like
@@ -260,10 +257,8 @@ function InternetIdentityPage() {
                   <p className="mb-8 tw-lead-sm md:tw-lead text-white/80">
                     Once a user registers for a credential, such as date of
                     birth or nationality, they can reuse it with any apps they
-                    choose. To protect a user's privacy, Internet Identity
-                    creates a temporary identifier when they share a credential,
-                    which prevents issuers and verifiers from tracking their
-                    activity across different apps.
+                    choose. To protect a user's privacy, BIG Wallet
+                    creates a temporary identifier when they share a credential, which prevents issuers and verifiers from tracking their activity across different apps.
                   </p>
                   <p className="mb-0">
                     <Link
@@ -368,8 +363,7 @@ function InternetIdentityPage() {
                 variants={transitions.item}
               >
                 Enhance the user experience by simplifying authentication and
-                credential sharing and reduce costs and cyberthreats by removing
-                the need to store passwords.
+                credential sharing and reduce costs and cyberthreats by removing the need to store passwords.
               </motion.p>
             </TranslatedCard>
             <TranslatedCard
@@ -387,8 +381,7 @@ function InternetIdentityPage() {
                 variants={transitions.item}
               >
                 Add value when designing apps by integrating cutting-edge
-                authentication and credential verification tools into their tech
-                stack.
+                authentication and credential verification tools into their tech stack.
               </motion.p>
             </TranslatedCard>
             <TranslatedCard
@@ -405,8 +398,7 @@ function InternetIdentityPage() {
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                Ensure the integrity and accuracy of academic records by issuing
-                digital copies of degrees, qualifications, and certificates
+                Ensure the integrity and accuracy of academic records by issuing digital copies of degrees, qualifications, and certificates
               </motion.p>
             </TranslatedCard>
             <TranslatedCard
@@ -423,9 +415,7 @@ function InternetIdentityPage() {
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                Provide citizens with a decentralized digital identity solution
-                instead of putting their data in the hands of a private company
-                that may host servers in a different country or jurisdiction.
+                Provide citizens with a decentralized digital identity solution instead of putting their data in the hands of a private company that may host servers in a different country or jurisdiction.
               </motion.p>
             </TranslatedCard>
           </TranslatedCardList>
@@ -441,7 +431,7 @@ function InternetIdentityPage() {
               className="tw-heading-3 md:tw-heading-60 mb-0 text-gradient"
               variants={transitions.item}
             >
-              Internet Identity in action
+              BIG Wallet in action
             </motion.h2>
           </div>
           <div className="md:container-12 grid md:grid-cols-2 gap-5 md:gap-5 pb-16 md:pb-0 bg-white md:bg-transparent">

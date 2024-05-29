@@ -14,7 +14,7 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 <MarkdownChipRow labels={["Beginner", "Getting started", "Tutorial"]} />
 
-This guide shows how to get started developing on ICP quickly by deploying your first 'Hello, world!' smart contract.
+This guide shows how to get started developing on BigFile quickly by deploying your first 'Hello, world!' smart contract.
 
 ## Choosing a developer environment 
 
@@ -24,7 +24,7 @@ To deploy a simple 'Hello, world!' smart contract, you can use a variety of deve
 
 - Cloud-based environments such as Gitpod or GitHub Codespaces.
 
-Each developer environment uses [`dfx`](./install/index.mdx), a command-line tool that is used for developing and deploying smart contracts on ICP. 
+Each developer environment uses [`dfx`](./install/index.mdx), a command-line tool that is used for developing and deploying smart contracts on BigFile. 
 
 :::info
 
@@ -65,7 +65,7 @@ Gitpod and GitHub Codespaces are cloud-based developer environments that can be 
 
 ### Install `dfx`
 
-Download and install the latest version of [dfx](install/index.mdx). `dfx` is a CLI tool used for developing and deploying ICP smart contracts:
+Download and install the latest version of [dfx](install/index.mdx). `dfx` is a CLI tool used for developing and deploying BigFile smart contracts:
 
 ```bash
 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
@@ -84,7 +84,7 @@ nvm install 18
 dfx start
 ```
 
-This command starts a local instance of the ICP <GlossaryTooltip>replica</GlossaryTooltip> using a single node testnet. The output will return a dashboard URL that can be used to view information about the local replica:
+This command starts a local instance of the BigFile <GlossaryTooltip>replica</GlossaryTooltip> using a single node testnet. The output will return a dashboard URL that can be used to view information about the local replica:
 
 ```
 Running dfx start for version 0.15.2
@@ -105,7 +105,7 @@ Use `dfx new <project_name>` to create a new project:
 dfx new hello
 ```
 
-You will be prompted to select the language that your backend <GlossaryTooltip>canister</GlossaryTooltip> will use:
+You will be prompted to select the language that your backend <GlossaryTooltip>cube</GlossaryTooltip> will use:
 
 ```
 ? Select a backend language: ›
@@ -115,7 +115,7 @@ You will be prompted to select the language that your backend <GlossaryTooltip>c
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend <GlossaryTooltip>canister</GlossaryTooltip>, or select 'No frontend canister':
+Then, select a frontend framework for your frontend <GlossaryTooltip>cube</GlossaryTooltip>, or select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -141,11 +141,11 @@ Lastly, you can include extra features to be added to your project:
 
 ## Smart contract code
 
-The default `Hello, world!` dapp uses `dfx`'s default template which contains two canisters, `hello_backend` and `hello_frontend`.
+The default `Hello, world!` dapp uses `dfx`'s default template which contains two cubes, `hello_backend` and `hello_frontend`.
 
-The `hello_frontend` canister is used to store the dapp's frontend assets. This includes files such as HTML, CSS, JavaScript, React, images, and videos.
+The `hello_frontend` cube is used to store the dapp's frontend assets. This includes files such as HTML, CSS, JavaScript, React, images, and videos.
 
-The `hello_backend` canister is used to store the dapp's functions and core logic. 
+The `hello_backend` cube is used to store the dapp's functions and core logic. 
 
 <div class="text--center">
   <img
@@ -156,7 +156,7 @@ The `hello_backend` canister is used to store the dapp's functions and core logi
 </div>
 
 :::info
-It is important to note that a canister is capable of storing both the frontend assets and backend code. However, `dfx` by default uses a project template with a dedicated canister for the frontend since this allows any language to be used for the backend canister without needing to use a library for the assets storage API. 
+It is important to note that a cube is capable of storing both the frontend assets and backend code. However, `dfx` by default uses a project template with a dedicated cube for the frontend since this allows any language to be used for the backend cube without needing to use a library for the assets storage API. 
 :::
 
 <AdornedTabs groupId="language">
@@ -178,7 +178,7 @@ actor {
 
 <TabItem value="rust" label="Rust">
 
-This Rust smart contract has a single function called greet. It is marked as query because it doesn't modify the state of the canister.
+This Rust smart contract has a single function called greet. It is marked as query because it doesn't modify the state of the cube.
 
 The function accepts a name as input and returns a greetings text.
 
@@ -223,7 +223,7 @@ def greet(name: str) -> str:
 
 ## Deploy to the local environment
 
-Deploy the project's <GlossaryTooltip>canisters</GlossaryTooltip> locally:
+Deploy the project's <GlossaryTooltip>cubes</GlossaryTooltip> locally:
 
 ```
 dfx deploy
@@ -333,4 +333,4 @@ Alternatively, you can interact with the smart contract via the web browser if a
 
 - [Token swap example](/docs/current/references/samples/motoko/icrc2-swap/).
 
-- [IC POS example](/docs/current/references/samples/motoko/ic-pos/).
+- [BIG POS example](/docs/current/references/samples/motoko/ic-pos/).

@@ -596,8 +596,8 @@ const config = {
         hideOnScroll: true,
 
         logo: {
-          alt: "DFINITY Logo",
-          src: "/img/IC_logo_horizontal.svg",
+          alt: "BigFile Logo",
+          src: "/img/BIG_logo_horizontal.svg",
         },
         // subnav redeclared to show up in mobile menu
         items: [...navbarItems, ...subnavItems],
@@ -679,7 +679,7 @@ const config = {
               },
               {
                 label: "Telegram",
-                to: "https://t.me/thebigfilecom",
+                to: "https://t.me/BigFileOfficial",
                 iconLight: getImageDataUrl(
                   "./static/img/svgIcons/purple/telegram.svg"
                 ),

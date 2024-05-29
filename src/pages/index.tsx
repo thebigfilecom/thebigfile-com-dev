@@ -39,8 +39,7 @@ export default function Home(): JSX.Element {
         
         <VisionSection>
         BigFile is an all-in-one infrastructure platform that is secure, flexible, easy to use, and highly scalable. 
-        Our blockchain integrates seamlessly with our built-in service layers that enable businesses, infrastructures, and applications to be optimized. 
-        The entire platform is developed as a stack so additional service layers keep systems running without compromising performance.
+        Our blockchain integrates seamlessly with our built-in service layers that enable businesses, infrastructures, and applications to be optimized. The entire platform is developed as a stack so additional service layers keep systems running without compromising performance.
         </VisionSection>
         <IntroCards />
       </Hero>
@@ -64,7 +63,7 @@ export default function Home(): JSX.Element {
               },
               {
                 title: "Dev docs",
-                body: "Get to know the concepts,  architecture and technical breakthroughs that enable the BigFIle. Plus step-by-step guides on how to stake your tokens, and more.",
+                body: "Get to know the concepts, architecture and technical breakthroughs that enable the BigFile. Plus step-by-step guides on how to stake your tokens, and more.",
                 link: "/docs/current/home",
               },
               {

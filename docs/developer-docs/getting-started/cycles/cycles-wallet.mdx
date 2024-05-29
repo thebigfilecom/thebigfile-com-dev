@@ -11,21 +11,21 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-As discussed in [tokens and cycles](/docs/current/concepts/tokens-cycles), ICP tokens can be converted into **cycles** to power <GlossaryTooltip>canister</GlossaryTooltip> operations. Cycles reflect the operational cost of communication, computation, and storage that dapps consume.
+As discussed in [tokens and cycles](/docs/current/concepts/tokens-cycles), BF tokens can be converted into **cycles** to power <GlossaryTooltip>cube</GlossaryTooltip> operations. Cycles reflect the operational cost of communication, computation, and storage that dapps consume.
 
-Unlike ICP tokens, cycles are only associated with canisters and not with user or developer <GlossaryTooltip>principals</GlossaryTooltip>. Because only canisters require cycles to perform operations and pay for the resources they use, users and developers can manage the distribution and ownership of cycles through a special type of canister called a **cycles wallet**.
+Unlike BF tokens, cycles are only associated with cubes and not with user or developer <GlossaryTooltip>principals</GlossaryTooltip>. Because only cubes require cycles to perform operations and pay for the resources they use, users and developers can manage the distribution and ownership of cycles through a special type of canister called a **cycles wallet**.
 
 :::caution
 Please note that the cycles wallet will be removed from dfx in a future release. We recommend using the cycles ledger feature instead, which simplifies the cycles management workflow.
 :::
 
-The cycles wallet holds the cycles required to perform operations such as creating new canisters. These operations are executed using the canister principal of the cycles wallet instead of your user principal.
+The cycles wallet holds the cycles required to perform operations such as creating new cubes. These operations are executed using the cube principal of the cycles wallet instead of your user principal.
 
-For the purposes of using the local canister execution environment, the SDK automatically creates a default cycles wallet for you in every project and most of the operations performed using the cycles wallet happen behind the scenes. For example, the cycles wallet acts on your behalf to register canister principals and deploy canisters in the local canister execution environment.
+For the purposes of using the local cube execution environment, the SDK automatically creates a default cycles wallet for you in every project and most of the operations performed using the cycles wallet happen behind the scenes. For example, the cycles wallet acts on your behalf to register cube principals and deploy cubes in the local cube execution environment.
 
-In a production environment, however, you need to explicitly register and transfer cycles to new canisters, specify the principals that can act as custodians, and manage the principals with ownership rights. You can perform some of these tasks using the default cycles wallet dapp running in a web browser. Depending on the specific action you want to take, you can also perform these cycle and canister management tasks by running `dfx wallet` commands in a terminal or by calling methods in the default cycles wallet canister directly. You can learn more about [how to use `dfx wallet`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet).
+In a production environment, however, you need to explicitly register and transfer cycles to new cubes, specify the principals that can act as custodians, and manage the principals with ownership rights. You can perform some of these tasks using the default cycles wallet dapp running in a web browser. Depending on the specific action you want to take, you can also perform these cycle and cube management tasks by running `dfx wallet` commands in a terminal or by calling methods in the default cycles wallet cube directly. You can learn more about [how to use `dfx wallet`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet).
 
-You should keep in mind, however, that calls to the cycles wallet canister are executed using the cycles wallet principal associated with the currently selected user identity. Depending on your currently selected identity and whether the principal associated with that identity has been added as a controller or a custodian for a wallet, you might see different results or be denied access to a specific method.
+You should keep in mind, however, that calls to the cycles wallet cube are executed using the cycles wallet principal associated with the currently selected user identity. Depending on your currently selected identity and whether the principal associated with that identity has been added as a controller or a custodian for a wallet, you might see different results or be denied access to a specific method.
 
 To check the identity you are currently using, run the following command:
 ```
@@ -36,7 +36,7 @@ dfx identity whoami
 A user principal or canister principal can be assigned to a **controller** or **custodian** role.
 
 :::info
-The controller role this document talks about is NOT the same controller role usually meant when talking about the Internet Computer. Typically, the controller refers to a <GlossaryTooltip>principal</GlossaryTooltip> that controls a canister. Here, a controller is a **wallet-internal** role that happens to have the same name. For a more detailed differentiation, see [this forum post](https://forum.dfinity.org/t/why-is-my-cycles-wallet-canister-slowly-losing-cycles/13190/11).
+The controller role this document talks about is NOT the same controller role usually meant when talking about the BigFile. Typically, the controller refers to a <GlossaryTooltip>principal</GlossaryTooltip> that controls a cube. Here, a controller is a **wallet-internal** role that happens to have the same name. For a more detailed differentiation, see [this forum post](https://forum.dfinity.org/t/why-is-my-cycles-wallet-canister-slowly-losing-cycles/13190/11).
 :::
 
 ### Controllers
@@ -50,16 +50,16 @@ A **controller** is the most privileged role and a principal assigned to the con
 
 -   Access the cycles wallet balance and all other wallet-related information.
 
--   Send cycles to other canisters.
+-   Send cycles to other cubes.
 
--   Accept receipt of cycles from other canisters.
+-   Accept receipt of cycles from other cubes.
 
 -   Rename the cycles wallet.
 
--   Create canisters and additional cycles wallets.
+-   Create cubes and additional cycles wallets.
 
 :::caution
-A canister can have a maximum of 10 controllers. Learn more [here](/docs/current/references/ic-interface-spec#ic-create_canister).
+A cube can have a maximum of 10 controllers. Learn more [here](/docs/current/references/ic-interface-spec#ic-create_canister).
 :::
 
 ### Custodians
@@ -68,11 +68,11 @@ A principal assigned to the **custodian** role can only perform a subset of cycl
 
 -   Access the cycles wallet balance and all other wallet-related information.
 
--   Send cycles to other canisters.
+-   Send cycles to other cubes.
 
--   Accept receipt of cycles from other canisters.
+-   Accept receipt of cycles from other cubes.
 
--   Create canisters.
+-   Create cubes.
 
 Authorizing a principal as a custodian does not automatically grant the principal access to a cycles wallet. The identity assigned to the custodian role must also be assigned a cycles wallet principal. For example, if you authorize the identity `alice_custodian` as a custodian of a cycles wallet (`rwlgt-iiaaa-aaaaa-aaaaa-cai`) in a local project, that user would also need to be assigned to use that wallet with the `dfx identity set-wallet rwlgt-iiaaa-aaaaa-aaaaa-cai` command.
 
@@ -80,15 +80,15 @@ Authorizing a principal as a custodian does not automatically grant the principa
 
 ### Prerequisites
 
-- [x] Install the [IC SDK](/docs/current/developer-docs/getting-started/install/).
+- [x] Install the [BIG SDK](/docs/current/developer-docs/getting-started/install/).
 
 ### Creating a local cycles wallet
 
-If you are doing local development, your local cycles wallet is created when you register a new canister principal using `dfx canister create` or when you register, build, and deploy a canister with `dfx deploy`.
+If you are doing local development, your local cycles wallet is created when you register a new cube principal using `dfx canister create` or when you register, build, and deploy a cube with `dfx deploy`.
 
 ### Creating a cycles wallet on the mainnet
 
-If you are deploying on the Internet Computer mainnet, you typically create your cycles wallet by converting ICP tokens to cycles, transferring the cycles to a new canister principal, and updating the canister with the default cycles wallet WebAssembly module (Wasm).
+If you are deploying on the BigFile mainnet, you typically create your cycles wallet by converting BF tokens to cycles, transferring the cycles to a new cube principal, and updating the cube with the default cycles wallet WebAssembly module (Wasm).
 
 There are dapps that can help you convert ICP to cycles and create a new cycles wallet, e.g., [NNS dapp](/docs/current/developer-docs/daos/nns/nns-app-quickstart#_deploy_a_canister_with_cycles).
 
@@ -96,9 +96,9 @@ There are dapps that can help you convert ICP to cycles and create a new cycles 
 ```
 dfx ledger --network ic create-canister <principal-identifier> --amount <bf-tokens>
 ```
-This command converts the number of ICP tokens you specify for the `--amount` argument into cycles, and associates the cycles with a new canister identifier controlled by the principal you specify.
+This command converts the number of BF tokens you specify for the `--amount` argument into cycles, and associates the cycles with a new cube identifier controlled by the principal you specify.
 
-For example, the following command converts .25 ICP tokens into cycles and specifies the principal identifier for the default identity as the controller of the new canister:
+For example, the following command converts .25 BF tokens into cycles and specifies the principal identifier for the default identity as the controller of the new cube:
 ```
 dfx ledger --network ic create-canister tsqwz-udeik-5migd-ehrev-pvoqv-szx2g-akh5s-fkyqc-zy6q7-snav6-uqe --amount .25
 ```
@@ -107,7 +107,7 @@ If the transaction is successful, the ledger records the event and you should se
 Transfer sent at BlockHeight: 20
 Canister created with id: "gastn-uqaaa-aaaae-aaafq-cai"
 ```
-- #### Step 2:  Install the cycles wallet code in the newly-created canister ID by running a command similar to the following:
+- #### Step 2:  Install the cycles wallet code in the newly-created cube ID by running a command similar to the following:
 ```
 dfx identity --network ic deploy-wallet <canister-identifier>
 ```
@@ -137,7 +137,7 @@ Id: hoqq7-3eo6j-dee4s-aiabk-6rqxw-kwgyo-rhru7-bdgmk-k5ipv-chkhx-cqe, Kind: Unkno
 
 ## Check the cycle balance
 
-In the local canister execution environment or with a cycles wallet on the Internet Computer, you can use the following command to check the current cycles balance:
+In the local cube execution environment or with a cycles wallet on the BigFile, you can use the following command to check the current cycles balance:
 
 ```
 dfx wallet balance
@@ -197,13 +197,13 @@ The command returns the balance using Candid format as a record with an amount f
 
 ## Using your wallet
 
-After you have used the `dfx identity deploy-wallet` command to create a cycles wallet canister tied to an identity, you can use `dfx wallet` commands to modify your cycles wallet settings, send cycles to other cycles wallets, and add or remove controllers and custodians.
+After you have used the `dfx identity deploy-wallet` command to create a cycles wallet cube tied to an identity, you can use `dfx wallet` commands to modify your cycles wallet settings, send cycles to other cycles wallets, and add or remove controllers and custodians.
 
 For more details on each supported method, see the [dfx wallet reference](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet).
 
 ### `dfx` wallet functions
 
-Use the `dfx wallet` command with subcommands and flags to manage the cycles wallets of your identities and to send cycles to the wallets of other account cycles wallet canisters.
+Use the `dfx wallet` command with subcommands and flags to manage the cycles wallets of your identities and to send cycles to the wallets of other account cycles wallet cubes.
 
 The basic syntax for running the dfx wallet commands is:
 
@@ -230,7 +230,7 @@ For reference information and examples that illustrate using dfx wallet commands
 - [`name`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet#dfx-wallet-name): returns the name of the cycles wallet if you've used the dfx wallet set-name command.
 - [`redeem-faucet-coupon`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet#dfx-wallet-redeem-faucet-coupon): redeem a code at the cycles faucet.
 - [`remove-controller`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet#remove-controller): removes a specified controller from the selected identity's cycles wallet.
-- [`send`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet#send): sends a specified amount of cycles from the selected identity's cycles wallet to another cycles wallet using the destination wallet canister ID.
+- [`send`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet#send): sends a specified amount of cycles from the selected identity's cycles wallet to another cycles wallet using the destination wallet cube ID.
 - [`set-name`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet#set-name): specify a name for your cycles wallet.
 - [`upgrade`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet#upgrade): upgrade the cycles wallet's Wasm module to the current Wasm bundled with DFX.
 
@@ -307,11 +307,11 @@ dfx wallet deauthorize dheus-mqf6t-xafkj-d3tuo-gh4ng-7t2kn-7ikxy-vvwad-dfpgu-em2
 
 ## Additional methods that are not exposed as `dfx wallet` commands
 
-The default cycles wallet canister includes additional methods that are not exposed as `dfx wallet` commands. The additional methods support more advanced cycles management tasks such as creating new canisters and managing events.
+The default cycles wallet cube includes additional methods that are not exposed as `dfx wallet` commands. The additional methods support more advanced cycles management tasks such as creating new cubes and managing events.
 
 ### Create a new cycles wallet
 
-Use the `wallet_create_wallet` method to create a new cycles wallet canister with an initial cycle balance and, optionally, with a specific principal as its controller. If you don’t specify a controlling principal, the cycles wallet you use to create the new wallet will be the new wallet’s controller.
+Use the `wallet_create_wallet` method to create a new cycles wallet cube with an initial cycle balance and, optionally, with a specific principal as its controller. If you don’t specify a controlling principal, the cycles wallet you use to create the new wallet will be the new wallet’s controller.
 
 For example, you can run a command similar to the following to create a new wallet and assign a principal as a controller:
 ```
@@ -321,19 +321,19 @@ The command returns the principal for the new wallet:
 ```
 (record { 1_313_628_723 = principal "dcxxq-jqaaa-aaaab-qaavq-cai" })
 ```
-### Register a new canister principal
+### Register a new cube principal
 
-Use the `wallet_create_canister` method to register a new canister principal on the Internet Computer. This method creates a new "empty" canister placeholder with an initial cycle balance and, optionally, with a specific principal as its controller. After you have registered the canister principal, you can install code for your canister as a separate step.
+Use the `wallet_create_canister` method to register a new cube principal on the BigFile. This method creates a new "empty" cube placeholder with an initial cycle balance and, optionally, with a specific principal as its controller. After you have registered the cube principal, you can install code for your cube as a separate step.
 
 For example, you can run a command similar to the following to create a new wallet and assign a principal as a controller:
 ```
 dfx canister --network ic call f3yw6-7qaaa-aaaab-qaabq-cai wallet_create_canister '(record { cycles = 5000000000000 : nat64; controller = principal "vpqee-nujda-46rtu-4noo7-qnxmb-zqs7g-5gvqf-4gy7t-vuprx-u2urx-gqe"})'
 ```
-The command returns the principal for the new canister you created:
+The command returns the principal for the new cube you created:
 ```
 (record { 1_313_628_723 = principal "dxqg5-iyaaa-aaaab-qaawa-cai" })
 ```
-### Receive cycles from a canister
+### Receive cycles from a cube
 
 Use the `wallet_receive` method as an endpoint to receive cycles.
 
@@ -361,7 +361,7 @@ For example, you can use the `get_events` method to return `canister_create` and
 ```
 dfx canister call <cycles-wallet-principal> get_events '(record {from = null; to = null})'
 ```
-If the cycles wallet (`gastn-uqaaa-aaaae-aaafq-cai`) is deployed on the Internet Computer main network, you could run a command that looks like this to return events:
+If the cycles wallet (`gastn-uqaaa-aaaae-aaafq-cai`) is deployed on the BigFile main network, you could run a command that looks like this to return events:
 ```
 dfx canister --network ic call gastn-uqaaa-aaaae-aaafq-cai get_events '(record {from = null; to = null})'
 ```

@@ -1,5 +1,5 @@
 ---
-keywords: [beginner, tutorial, deploy, deploy canisters]
+keywords: [beginner, tutorial, deploy, deploy cubes]
 ---
 
 import TabItem from "@theme/TabItem";
@@ -13,17 +13,17 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 <MarkdownChipRow labels={["Beginner", "Tutorial"]} />
 
-After you have built a <GlossaryTooltip>canister</GlossaryTooltip>, you can deploy it either on the [local canister execution environment](/docs/current/developer-docs/getting-started/deploy/local), a sandbox environment such as the [Motoko playground](/docs/current/developer-docs/setup/playground) or [on the mainnet](/docs/current/developer-docs/getting-started/deploy/mainnet). Your canister must be deployed before you can make calls to it and execute methods.
+After you have built a <GlossaryTooltip>cube</GlossaryTooltip>, you can deploy it either on the [local cube execution environment](/docs/current/developer-docs/getting-started/deploy/local), a sandbox environment such as the [Motoko playground](/docs/current/developer-docs/setup/playground) or [on the mainnet](/docs/current/developer-docs/getting-started/deploy/mainnet). Your cube must be deployed before you can make calls to it and execute methods.
 
 - #### Step 1:  Open a new terminal and navigate to your project directory.
 
-- #### Step 2:  Start the local canister execution environment, if necessary.
+- #### Step 2:  Start the local cube execution environment, if necessary.
 
 ```
 dfx start
 ```
 
-- #### Step 3:  Verify the canisters you'd like to deploy are configured in the project's `dfx.json` file.
+- #### Step 3:  Verify the cubes you'd like to deploy are configured in the project's `dfx.json` file.
 
 Need to create a project? Check out the [Hello, world!](/docs/current/developer-docs/getting-started/hello-world) sample project.
 
@@ -49,9 +49,9 @@ To deploy to the mainnet, use the command:
 dfx deploy --network ic
 ```
 
-Deploying canisters to the mainnet will cost cycles. [Learn more about cycles and how to acquire them](/docs/current/developer-docs/setup/cycles/cycles-faucet).
+Deploying cubes to the mainnet will cost cycles. [Learn more about cycles and how to acquire them](/docs/current/developer-docs/setup/cycles/cycles-faucet).
 
-This command deploys all canisters configured in your `dfx.json` file. To deploy just one canister, specify the canister's name:
+This command deploys all cubes configured in your `dfx.json` file. To deploy just one cube, specify the cube's name:
 
 ```
 dfx deploy hello_backend ## Deploy locally
@@ -77,9 +77,9 @@ To use a custom Motoko version with `dfx deploy`, export the following environme
 DFX_MOC_PATH="$(vessel bin)/moc" dfx deploy
 ```
 
-## Setting a canister's init arguments
+## Setting a cube's init arguments
 
-You can set a canister's init arguments when the canister is deployed by passing the `--argument` flag in either the `dfx install` or `dfx deploy` commands:
+You can set a cube's init arguments when the cube is deployed by passing the `--argument` flag in either the `dfx install` or `dfx deploy` commands:
 
 ```
 dfx canister install <CANISTER_NAME> --argument "(arg in candid)"
@@ -110,16 +110,16 @@ Alternatively, init arguments can be set in `dfx.json` in `dfx` versions `v0.17.
 
 If an init argument is set in `dfx.json` and set with the CLI command, the argument set in the CLI command is used.
 
-## Setting tasks to execute once a canister has been deployed
+## Setting tasks to execute once a cube has been deployed
 
-For certain workflows, it may be important to have a canister execute a task or call as soon as the canister is deployed or started. For this workflow, using [timers](/docs/current/developer-docs/backend/periodic-tasks) can be useful.
+For certain workflows, it may be important to have a cube execute a task or call as soon as the cube is deployed or started. For this workflow, using [timers](/docs/current/developer-docs/backend/periodic-tasks) can be useful.
 
 Here is an example:
 
 <AdornedTabs groupId="language">
 <TabItem value="motoko" label="Motoko" default>
 
-This example uses a global timer that gets called immediately after the canister starts:
+This example uses a global timer that gets called immediately after the cube starts:
 
 ```motoko
 
@@ -135,7 +135,7 @@ You can learn more in the [Motoko Timer library documentation](/docs/current/mot
 
 <TabItem value="rust" label="Rust">
 
-This example creates a periodic timer that gets called immediately after the canister starts:
+This example creates a periodic timer that gets called immediately after the cube starts:
 
 ```rust
 #[ic_cdk::init]
@@ -152,7 +152,7 @@ fn init(timer_interval_secs: u64) {
 
 <AdornedTab value={"typescript"} label="TypeScript" endAdornment={<BetaChip />}>
 
-This example creates a timer function that must be manually called once a canister starts:
+This example creates a timer function that must be manually called once a cube starts:
 
 ```typescript
 import {
@@ -286,7 +286,7 @@ async function getRandomness(): Promise<blob> {
 
 <AdornedTab value={"python"} label="Python" endAdornment={<BetaChip />}>
 
-This example creates a timer function that must be manually called once a cansiter starts:
+This example creates a timer function that must be manually called once a cube starts:
 
 ```python
 from kybra import (
@@ -312,12 +312,12 @@ def timer_callback():
 
 ## Next steps
 
-- [Delete canisters](/docs/current/developer-docs/setup/delete)
+- [Delete cubes](/docs/current/developer-docs/setup/delete)
 
-- [Canister history](/docs/current/developer-docs/production/canister-history)
+- [Cube history](/docs/current/developer-docs/production/canister-history)
 
-- [Import canisters](/docs/current/developer-docs/smart-contracts/maintain/import)
+- [Import cubes](/docs/current/developer-docs/smart-contracts/maintain/import)
 
-- [Recover canisters](/docs/current/developer-docs/production/canister-recovery)
+- [Recover cubes](/docs/current/developer-docs/production/canister-recovery)
 
-- [Canister settings](/docs/current/developer-docs/setup/manage-canisters)
+- [Cube settings](/docs/current/developer-docs/setup/manage-canisters)

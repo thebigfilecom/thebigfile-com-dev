@@ -422,9 +422,7 @@ function CommunityPage() {
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                Be part of the inspiring collective of Web3 creators, builders,
-                educators, and enthusiasts as we set out to explore how the
-                BigFile can address challenges within today's
+                Be part of the inspiring collective of Web3 creators, builders, educators, and enthusiasts as we set out to explore how the BigFile can address challenges within today's
                 blockchain ecosystem.
               </motion.p>
             </div>
@@ -490,7 +488,7 @@ function CommunityPage() {
             <p className="mb-0 tw-paragraph-sm text-black/60">
               Dedicated educational programs designed in cooperation with Web3
               learning platforms to empower talented builders and pave the way
-              for their future projects on the Internet Computer blockchain.
+              for their future projects on the BigFile blockchain.
             </p>
             <p className="mb-0">
               <Link className="link-primary link-with-icon" href="#education">
@@ -511,7 +509,7 @@ function CommunityPage() {
             />
             <h3 className="tw-lead md:tw-title-sm mb-0">BIG.Hubs</h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
-              ICP. Hubs are flourishing worldwide. With 15 hubs already
+              BigFile. Hubs are flourishing worldwide. With 15 hubs already
               established and more in the pipeline, a thriving community is
               actively promoting awareness and adoption, encompassing
               evangelism, education, strategic partnerships, and project
@@ -536,14 +534,12 @@ function CommunityPage() {
             />
             <h3 className="tw-lead md:tw-title-sm mb-0">Events</h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
-              At ICP Events, you'll find fantastic chances to gather, socialize,
-              celebrate, expand your knowledge, and form lasting bonds with
-              fellow visionaries.
+              BigFile Events, you'll find fantastic chances to gather, socialize, celebrate, expand your knowledge, and form lasting bonds with fellow visionaries.
             </p>
             <p className="mb-0">
               <Link
                 className="link-primary link-with-icon"
-                href="https://dfinity.org/events-and-news/"
+                href="https://thebigfile.com/events-and-news/"
               >
                 Discover upcoming events
                 <LinkArrowUpRight />
@@ -583,8 +579,7 @@ function CommunityPage() {
             />
             <h3 className="tw-lead md:tw-title-sm mb-0">Launch an ICP.Hub</h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
-              Calling all Web3 entrepreneurs! Do you believe the Internet
-              Computer deserves a stronger presence in your region? Share your
+              Calling all Web3 entrepreneurs! Do you believe the BigFile deserves a stronger presence in your region? Share your
               business proposal and get ready to ignite the world with your
               visionary ideas.
             </p>
@@ -613,13 +608,12 @@ function CommunityPage() {
             </h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
               For all Web3 content creators, educators, event organizers,
-              influencers, and innovators eager to promote the Internet
-              Computer, the Community Grant Program is your perfect opportunity.
+              influencers, and innovators eager to promote the BigFile, the Community Grant Program is your perfect opportunity.
             </p>
             <p className="mb-0">
               <Link
                 className="link-primary link-with-icon"
-                href="https://dfinity.org/community-grants/"
+                href="https://thebigfile.com/community-grants/"
               >
                 Apply for a grant
                 <LinkArrowUpRight />
@@ -638,7 +632,7 @@ function CommunityPage() {
             />
             <h3 className="tw-lead md:tw-title-sm mb-0">Ambassador Program</h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
-              Be a strong voice advocating for the Internet Computer, its
+              Be a strong voice advocating for the BigFile, its
               unprecented technical capabilities and ever expanding ecosystem.
             </p>
             <p className="mb-0">
@@ -709,15 +703,7 @@ function CommunityPage() {
             </div>
           </div>
         </AnimateSpawn>
-        <AnimateSpawn
-          className="container-12 mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-4 gap-5 relative"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          {upcomingHubs.map((hub) => (
-            <UpcomingHubCard hub={hub} key={hub.name} />
-          ))}
-        </AnimateSpawn>
+        
 
         <AnimateSpawn
           className="container-10 pt-52 md:pt-[400px] relative mb-20"
@@ -739,16 +725,13 @@ function CommunityPage() {
               className="tw-paragraph md:tw-lead-sm mb-4 md:mb-6 md:w-8/10 md:mx-auto"
               variants={transitions.item}
             >
-              ICP communities are forming and taking shape in various regions
-              around the globe, bringing entrepreneurs, developers, venture
-              capitalists, educators, enthusiasts and experts under one regional
-              roof.
+              BigFile communities are forming and taking shape in various regions around the globe, bringing entrepreneurs, developers, venture capitalists, educators, enthusiasts and experts under one regional roof.
             </motion.p>
 
             <motion.p className="mb-0" variants={transitions.item}>
-              <Link className="link-white" href="https://t.me/Official_ICP">
+              <Link className="link-white" href="https://t.me/BigFileOfficial">
                 <TelegramLogo className="inline-block align-text-bottom mr-2" />
-                Join the official ICP Telegram Space
+                Join the official BigFile Telegram Space
               </Link>
             </motion.p>
 
@@ -795,12 +778,12 @@ function CommunityPage() {
               variants={transitions.item}
             >
               <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                TypeScript on ICP
+                TypeScript on BigFile
                 <img src="/img/community/education.svg" alt="" />
               </h3>
               <p className="flex-1 mb-0 tw-paragraph text-black/60">
                 In this beginner course on Decade, you will learn essential
-                Internet Computer concepts and how to write canister smart
+                BigFile concepts and how to write cube smart
                 contracts using TypeScript.
               </p>
               <p className="mb-0">
@@ -818,13 +801,11 @@ function CommunityPage() {
               variants={transitions.item}
             >
               <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                ICP Rust Bootcamp
+                BigFile Rust Bootcamp
                 <img src="/img/community/education.svg" alt="" />
               </h3>
               <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                From core concepts, to the ICP EVM model, to hands-on experience
-                with Rust using the Remix IDE, this Rise In bootcamp will open
-                your eyes to the potential of Web3 development.
+                From core concepts, to the BigFile EVM model, to hands-on experience with Rust using the Remix IDE, this Rise In bootcamp will open your eyes to the potential of Web3 development.
               </p>
               <p className="mb-0">
                 <Link
@@ -841,7 +822,7 @@ function CommunityPage() {
               variants={transitions.item}
             >
               <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                ICP
+                BigFile
                 <br />
                 Developer I
                 <img src="/img/community/education.svg" alt="" />
@@ -849,8 +830,7 @@ function CommunityPage() {
               <p className="flex-1 mb-0 tw-paragraph text-black/60">
                 A 4-week basics course in Spanish that covers canister
                 development using Motoko, creating a backend and frontend
-                canister, and ending with building your own dapp on the Internet
-                Computer.
+                canister, and ending with building your own dapp on the BigFile.
               </p>
               <p className="mb-0">
                 <Link
@@ -867,16 +847,13 @@ function CommunityPage() {
               variants={transitions.item}
             >
               <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                ICP
+                BigFile
                 <br />
                 Developer II
                 <img src="/img/community/education.svg" alt="" />
               </h3>
               <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                This online course offered in Spanish is a continuation of ICP
-                Developer I. Spend 5 days more building your project on the
-                Internet Computer and finish the week with celebrating your
-                first 100% on-chain dapp.
+                This online course offered in Spanish is a continuation of BigFile Developer I. Spend 5 days more building your project on the BigFile and finish the week with celebrating your first 100% on-chain dapp.
               </p>
               <p className="mb-0">
                 <Link
@@ -889,34 +866,7 @@ function CommunityPage() {
             </motion.div>
           </div>
         </AnimateSpawn>
-        <section className="bg-infinite text-white my-20 md:my-40 py-20 md:py-40">
-          <Gallery gallery={communityGallery}>
-            <div className="blob blob-white blob-md blob-x-10 blob-y-0"></div>
-            <div className="md:w-7/10">
-              <motion.h2
-                className="tw-heading-3 sm:tw-heading-4 md:tw-heading-60 mb-8 md:mb-6"
-                variants={transitions.item}
-              >
-                Join, collaborate and connect
-              </motion.h2>
-              <motion.p
-                className="tw-paragraph md:tw-lead mb-6 md:mb-10"
-                variants={transitions.item}
-              >
-                The ICP community is currently active in around 30 countries and
-                collaborates with up to 50 well-known crypto organizations and
-                32 universities. Haven't joined yet? What are you waiting for?
-              </motion.p>
-
-              <motion.p className="mb-0" variants={transitions.item}>
-                <Link className="link-white" href="https://t.me/Official_ICP">
-                  <TelegramLogo className="inline-block align-text-bottom mr-2" />
-                  Join the official ICP Telegram Space
-                </Link>
-              </motion.p>
-            </div>
-          </Gallery>
-        </section>
+        
 
         <Newsletter
           fields={[
@@ -939,7 +889,7 @@ function CommunityPage() {
           className="mb-20"
         >
           <h2 className="text-white tw-heading-5 md:tw-heading-4 mb-6 md:mb-8">
-            Want to meet ICP enthusiasts IRL?
+            Want to meet BigFile enthusiasts IRL?
             <br />
             <span className="text-white-60">Sign up to stay connected</span>
           </h2>
