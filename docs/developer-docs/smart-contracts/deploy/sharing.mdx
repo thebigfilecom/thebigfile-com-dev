@@ -1,5 +1,5 @@
 ---
-keywords: [beginner, tutorial, sharing canisters, sharing links]
+keywords: [beginner, tutorial, sharing cubes, sharing links]
 ---
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
@@ -11,16 +11,16 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-Once a dapp has been deployed to the mainnet, the <GlossaryTooltip>canister</GlossaryTooltip> serves the dapp's frontend via a URL. This URL can be shared with anyone, allowing them to view and interact with your dapp without you needing to configure domain names, DNS records, or other networking configurations.
+Once a dapp has been deployed to the mainnet, the <GlossaryTooltip>cube</GlossaryTooltip> serves the dapp's frontend via a URL. This URL can be shared with anyone, allowing them to view and interact with your dapp without you needing to configure domain names, DNS records, or other networking configurations.
 
 ## Sharing links to dapps
 
-When a canister is deployed to the mainnet (with a command such as `dfx deploy --network ic`), the canister's ID will be returned in the output. For example, when deploying a project with two canisters, the output will resemble:
+When a cube is deployed to the mainnet (with a command such as `dfx deploy --network ic`), the cube's ID will be returned in the output. For example, when deploying a project with two cubes, the output will resemble:
 
 ```
-Deploying all canisters.
-Creating canisters...
-Creating canister "poll_backend"...
+Deploying all cubes.
+Creating cubes...
+Creating cube "poll_backend"...
 "poll_backend" canister created on network "ic" with canister id: "5o6tz-saaaa-aaaaa-qaacq-cai"
 Creating canister "poll_frontend"...
 "poll_frontend" canister created on network "ic" with canister id: "5h5yf-eiaaa-aaaaa-qaada-cai"
@@ -43,10 +43,10 @@ Uploading assets to asset canister...
 /index.js.map (gzip) 1/1 (228404 bytes)
 /index.js.LICENSE.txt 1/1 (499 bytes)
 /index.js.LICENSE.txt (gzip) 1/1 (285 bytes)
-Deployed canisters.
+Deployed cubes.
 ```
 
-There are two canisters deployed, identified by their ids:
+There are two cubes deployed, identified by their ids:
 
 ```
 "poll_backend" canister created on network "ic" with canister id: "5o6tz-saaaa-aaaaa-qaacq-cai"
@@ -54,20 +54,20 @@ There are two canisters deployed, identified by their ids:
 "poll_frontend" canister created on network "ic" with canister id: "5h5yf-eiaaa-aaaaa-qaada-cai"
 ```
 
-You can use the following URL format to access your canister in the web browser:
+You can use the following URL format to access your cube in the web browser:
 
 ```
 https://<canister_id>.icp0.io
 ```
 
-For example, to access a canister with a canister id of `5h5yf-eiaaa-aaaaa-qaada-cai`:
+For example, to access a cube with a cube id of `5h5yf-eiaaa-aaaaa-qaada-cai`:
 
 ```
 https://5h5yf-eiaaa-aaaaa-qaada-cai.icp0.io
 ```
 
 :::info
-If you are sharing a link to a frontend (asset) canister, the frontend of the dapp will be displayed.
+If you are sharing a link to a frontend (asset) cube, the frontend of the dapp will be displayed.
 
-If you are sharing a link to a backend canisters, the [CandidUI](/docs/current/developer-docs/backend/candid/candid-concepts) will be displayed.
+If you are sharing a link to a backend cubes, the [CandidUI](/docs/current/developer-docs/backend/candid/candid-concepts) will be displayed.
 :::
