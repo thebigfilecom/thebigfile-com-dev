@@ -39,7 +39,7 @@ const sidebars = {
             "developer-docs/getting-started/cycles/cycles-faucet",
 	    "developer-docs/getting-started/cycles/cycles-ledger",
             "developer-docs/getting-started/cycles/cycles-wallet",
-            "developer-docs/getting-started/cycles/converting_icp_tokens_into_cycles",
+            "developer-docs/getting-started/cycles/converting_bf_tokens_into_cycles",
           ],
         },
         {
