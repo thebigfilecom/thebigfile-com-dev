@@ -257,7 +257,7 @@ const marketingNav = {
             },
             {
               name: "BIG Wallet",
-              href: "/internet-identity",
+              href: "/big-wallet",
               description: "Web3 authentication",
             },
           ],

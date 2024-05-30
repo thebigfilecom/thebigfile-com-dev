@@ -1,8 +1,8 @@
 ---
 title: Safe guards for the access to the SNS treasury
 links:
-  Forum Post: https://forum.dfinity.org/t/safe-guards-for-the-access-to-the-sns-treasury/19669
-eta: Q3 23
+  Forum Post: https://forum.thebigfile.com/
+eta: Q3 26
 is_community: false
 ---
 Via the proposal action “Transfer SNS Treasury funds” an SNS can vote on transferring funds from its treasury, for example to pay developers for work on code extensions. Currently, this type of proposals follows the same rules as all proposals which can be adopted with only 3% voter participation. There is the risk that a malicious treasury transfer is approved because:

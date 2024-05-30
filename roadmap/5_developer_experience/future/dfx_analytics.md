@@ -1,11 +1,10 @@
 ---
 title: DFX analytics
 links:
-  Forum Link: https://forum.dfinity.org/t/dfx-telemetry-proposal/15834
+  Forum Link: https://forum.thebigfile.com/
   Proposal:
-eta: Q4 22
+eta: Q4 25
 is_community: false
 ---
 
-Work is being conducted on adding (purely opt-in) telemetry collection to the Internet Computer SDK to improve the
-platform's developer experience based on insights derived from behavioral data. 
+Work is being conducted on adding (purely opt-in) telemetry collection to the BigFile SDK to improve the platform's developer experience based on insights derived from behavioral data. 

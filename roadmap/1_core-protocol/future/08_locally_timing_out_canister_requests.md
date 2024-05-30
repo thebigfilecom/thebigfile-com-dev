@@ -1,10 +1,10 @@
 ---
-title: Locally timing out canister requests
+title: Locally timing out cube requests
 links:
-  Forum Link: https://forum.dfinity.org/t/long-term-r-d-scalability-proposal/9387
+  Forum Link: https://forum.thebigfile.com/
   Proposal:
-eta: December 2022
+eta: December 2025
 is_community: false
 ---
 
-As opposed to ingress messages, canister-to-canister messages can not timeout at the moment. This feature will introduce the possiblity for the IC to timeout canister-to-canister requests in high-load phases.
+As opposed to ingress messages, cube-to-cube messages can not timeout at the moment. This feature will introduce the possiblity for the BIG to timeout cube-to-cube requests in high-load phases.

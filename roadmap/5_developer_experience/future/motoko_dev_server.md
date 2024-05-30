@@ -3,7 +3,7 @@ title: Motoko Dev Server
 links:
   Forum Post:
   Proposal:
-eta: Q2 2023
+eta: Q2 2026
 is_community: false
 ---
 

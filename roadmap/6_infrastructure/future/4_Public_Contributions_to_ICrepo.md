@@ -1,5 +1,5 @@
 ---
-title: Public Contributions to IC repository
+title: Public Contributions to BIG repository
 links:
   Forum Post:
   Proposal:
@@ -7,4 +7,4 @@ eta:
 is_community: false
 ---
 
-Currently the IC repo is open source but does not allow for contributions by the publicy community. This features aims to make the IC repository available for public contributions.
+Currently the BIG repo is open source but does not allow for contributions by the publicy community. This features aims to make the BIG repository available for public contributions.

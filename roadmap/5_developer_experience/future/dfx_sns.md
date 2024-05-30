@@ -3,10 +3,8 @@ title: SNS Tooling
 links:
   Forum Post:
   Proposal:
-eta: Q3 23
+eta: Q3 26
 is_community: false
 ---
 
-We want to enable more developers to decentralize their dapps through the SNS. dfx now has more tools
-and capabilities for you to develop your code and test your swap locally, run a simulated swap on mainnet, and
-manage your dapp after it has been launched.
+We want to enable more developers to decentralize their dapps through the SNS. dfx now has more tools and capabilities for you to develop your code and test your swap locally, run a simulated swap on mainnet, and manage your dapp after it has been launched.

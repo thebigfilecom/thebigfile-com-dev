@@ -2,8 +2,8 @@
 title: Motoko Stable Regions
 links:
   Forum Post:
-  Proposal: https://github.com/dfinity/motoko/blob/113f9c72edf4ff36bcc6dacc892fdb2f454ac81d/design/StableRegions-20230209.md
-eta: Q3 2023
+  Proposal: https://github.com/thebigfilecom/motoko/blob/113f9c72edf4ff36bcc6dacc892fdb2f454ac81d/design/StableRegions-20230209.md
+eta: Q3 2026
 is_community: false
 ---
 

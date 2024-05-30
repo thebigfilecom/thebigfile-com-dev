@@ -108,7 +108,7 @@ const RoadmapPage: React.FC = () => {
             <MotionLink
               variants={transitions.item}
               className="button-outline-white"
-              href="https://forum.dfinity.org/t/update-on-the-ic-roadmap-july-2022-summary/14615"
+              href="https://forum.thebigfile.com/"
             >
               Join the conversation
             </MotionLink>
@@ -129,7 +129,7 @@ const RoadmapPage: React.FC = () => {
               </p>
               <Link
                 className="link-external"
-                href="https://forum.dfinity.org/t/update-on-the-ic-roadmap-july-2022-summary/14615"
+                href="https://forum.thebigfile.com/"
               >
                 Submit your suggestions
               </Link>
