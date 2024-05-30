@@ -294,11 +294,9 @@ function TokenHolders(): JSX.Element {
                   participate in network governance simply by staking tokens in
                   neurons and locking them with a specified dissolve delay (time
                   to unlock). A neuron with a dissolve delay greater than 6
-                  months can vote on governance proposals and earn rewards. ICP
+                  months can vote on governance proposals and earn rewards. BF
                   neuron holders can also submit proposals to make changes to
-                  the protocol. This open and autonomous governance system runs
-                  100% on chain, and currently holds over 250 million locked
-                  ICP.
+                  the protocol.
                 </p>
                 <p className="mb-0">
                   <Link
@@ -306,7 +304,7 @@ function TokenHolders(): JSX.Element {
                     className="link-primary link-with-icon items-center"
                   >
                     <LinkArrowRight />
-                    Participate in governance by staking ICP
+                    Participate in governance by staking BF
                   </Link>
                 </p>
               </AnimateSpawn>
@@ -318,13 +316,12 @@ function TokenHolders(): JSX.Element {
                   Burn for cycles
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                  Unlike other smart contract blockchains, the Internet Computer
+                  Unlike other smart contract blockchains, the BigFile
                   runs on a “Reverse Gas Model”. This means computation and
                   storage costs are paid for by developers, and developers are
                   responsible topping up smart contracts with cycles to fuel the
                   compute power and storage of their dapps. The Reverse Gas
-                  Model allows users to interact with dapps on the Internet
-                  Computer without tokens, and as seamlessly as they would on
+                  Model allows users to interact with dapps on the BigFile without tokens, and as seamlessly as they would on
                   any Web2 application.
                 </p>
                 <p className="mb-0">
@@ -442,10 +439,10 @@ function TokenHolders(): JSX.Element {
                       alt=""
                       className="w-20 h-20"
                     ></img>
-                    <h3 className="tw-heading-5 mb-2 mt-8">ICDex</h3>
+                    <h3 className="tw-heading-5 mb-2 mt-8">BFDex</h3>
                     <p className="tw-lead-sm mb-0 text-black/60">
                       First orderbook-based DEX running fully on-chain. Bypass
-                      CEXs and get ICP or CHAT tokens for your BTC.{" "}
+                      CEXs and get BF or CHAT tokens for your BTC.{" "}
                     </p>
                   </Link>
                 </motion.div>
@@ -460,10 +457,9 @@ function TokenHolders(): JSX.Element {
                       alt=""
                       className="w-20 h-20"
                     ></img>
-                    <h3 className="tw-heading-5 mb-2 mt-8">ICP.Swap</h3>
+                    <h3 className="tw-heading-5 mb-2 mt-8">BIG.Swap</h3>
                     <p className="tw-lead-sm mb-0 text-black/60">
-                      Offers the largest number of tokens on the Internet
-                      Computer. Trade meme coins or SNS DAO tokens.
+                      Offers the largest number of tokens on the BigFile. Trade meme coins or SNS DAO tokens.
                     </p>
                   </Link>
                 </motion.div>
@@ -565,8 +561,7 @@ function TokenHolders(): JSX.Element {
               <motion.div className="" variants={transitions.item}>
                 <h3 className="tw-heading-5 mb-6">Mobile app wallets</h3>
                 <p className="tw-paragraph text-black/60 mb-8">
-                  Mobile apps offer easy access to crypto assets for people who
-                  use them frequently.
+                  Mobile apps offer easy access to crypto assets for people who use them frequently.
                 </p>
                 <div className="space-y-4">
                   <WalletCard
