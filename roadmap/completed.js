@@ -8,18 +8,18 @@ const completedRoadmapItems = [
     link: "/how-it-works/web-authentication-identity",
   },
   {
-    title: "Internet Computer Consensus",
+    title: "BigFile Consensus",
     description:
-      "The Internet Computer blockchain runs on a network of nodes in independent data centers located around the world. In each of its subnet blockchains, the participating nodes must process the same messages in the same order to ensure that they achieve the same state. To this end, the Internet Computer relies on a novel consensus protocol, as described in this presentation.",
+      "The BigFile blockchain runs on a network of nodes in independent data centers located around the world. In each of its subnet blockchains, the participating nodes must process the same messages in the same order to ensure that they achieve the same state. To this end, the BigFile relies on a novel consensus protocol, as described in this presentation.",
     image: "/img/roadmap/completed/consensus.jpeg",
     link: "/how-it-works/consensus",
   },
   {
-    title: "Internet Computer Consensus",
+    title: "Digital Bureaucracy Rebranding",
     description:
-      "The Internet Computer blockchain runs on a network of nodes in independent data centers located around the world. In each of its subnet blockchains, the participating nodes must process the same messages in the same order to ensure that they achieve the same state. To this end, the Internet Computer relies on a novel consensus protocol, as described in this presentation.",
-    image: "/img/roadmap/completed/consensus.jpeg",
-    link: "/how-it-works/consensus",
+      "The Digital Bureaucracy ($DBC) Project, is planning rebranding in order to develop its own blockchain.The Digital Bureaucracy Project, which aimed to move all bureaucratic transactions to the blockchain network in a decentralized manner, will be rebranded as the “BigFile Project”. Its usage areas and purposes will be expanded. ",
+    image: "/img/roadmap/completed/dbctobf.jpg",
+    link: "https://bigfile.medium.com/digital-bureaucracy-rebranding-press-release-c0a8921a8198",
   },
 ];
 
