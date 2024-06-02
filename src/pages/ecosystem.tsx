@@ -381,8 +381,7 @@ function ShowcasePage(): JSX.Element {
           <div className="md:w-4/10">
             <h2 className="tw-heading-6 mb-3">Submit your project</h2>
             <p className="tw-paragraph mb-4">
-              See a project missing? All community members are invited to submit
-              their projects to this page.
+              See a project missing? All community members are invited to submit their projects to this page.
             </p>
             <p className="mb-0">
               <Link

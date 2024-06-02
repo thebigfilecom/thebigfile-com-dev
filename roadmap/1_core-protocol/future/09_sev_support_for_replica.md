@@ -1,8 +1,8 @@
 ---
 title: SEV Support for Replica Nodes
 links:
-  Forum Link: https://forum.dfinity.org/t/amd-sev-virtual-machine-support/6156
-  Proposal: https://forum.dfinity.org/t/long-term-r-d-tee-enhanced-ic-proposal/9384/4
+  Forum Link: https://forum.thebigfile.com/
+  Proposal: https://forum.thebigfile.com/
 eta:
 is_community: false
 ---

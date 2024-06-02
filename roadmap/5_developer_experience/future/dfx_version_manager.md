@@ -3,7 +3,7 @@ title: dfx Version Manager
 links:
   Forum Post:
   Proposal:
-eta: Q1 24
+eta: Q1 26
 is_community: true
 ---
 

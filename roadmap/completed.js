@@ -1,9 +1,9 @@
 const completedRoadmapItems = [
   
   {
-    title: "Internet Identity: Anonymizing Blockchain Authentication System",
+    title: "BIG Wallet: Anonymizing Blockchain Authentication System",
     description:
-      "Today, the main means of identity and authentication prevalently used online are usernames and passwords. The Internet Computer blockchain has replaced this model with a more advanced and much more secure method of cryptographic authentication that is more convenient, works across all of a user's devices, and helps to protect user privacy. ",
+      "Today, the main means of identity and authentication prevalently used online are usernames and passwords. The BigFile blockchain has replaced this model with a more advanced and much more secure method of cryptographic authentication that is more convenient, works across all of a user's devices, and helps to protect user privacy.",
     image: "/img/roadmap/completed/internet-identity.jpeg",
     link: "/how-it-works/web-authentication-identity",
   },

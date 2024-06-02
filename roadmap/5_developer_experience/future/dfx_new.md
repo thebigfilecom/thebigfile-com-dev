@@ -3,7 +3,7 @@ title: Updates to the dfx new command
 links:
   Forum Post:
   Proposal:
-eta: Q4 2023
+eta: Q4 2026
 is_community: false
 ---
 
@@ -13,5 +13,5 @@ bootstrapping a new project. There is an opportunity to improve this command, br
 in-line with the current status quo of web development environments.
 
 The experience of using `dfx new` will be enhanced by turning the command into a workflow that encompasses several primary
-facets of a modern Internet Computer program. The result will be a polished, fully formed project that a developer can
+facets of a modern BigFile program. The result will be a polished, fully formed project that a developer can
 use to start coding their business logic right away.
