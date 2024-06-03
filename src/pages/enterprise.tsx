@@ -230,7 +230,7 @@ function EnterprisePage() {
               </p>
               <p className="mb-0">
                 <Link
-                  href="/internet-identity"
+                  href="/big-wallet"
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />

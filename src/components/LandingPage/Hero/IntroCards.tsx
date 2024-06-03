@@ -107,7 +107,7 @@ const IntroCards: React.FC = () => {
               </strong>{" "}
             </p>
             <p className="mb-0">
-              <Link className="button-outline" href="/internet-identity">
+              <Link className="button-outline" href="/big-wallet">
                 One ID for all services
               </Link>
             </p>

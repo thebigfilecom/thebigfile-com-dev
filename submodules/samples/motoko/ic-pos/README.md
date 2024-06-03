@@ -72,7 +72,7 @@ dfx start --clean --background
 
 ### Step 2: Deploy the Internet Identity canister:
 
-Integration with the [Internet Identity](https://internetcomputer.org/internet-identity/) allows store owners to securely setup and manage their store. The Internet Identity canister is already deployed on the IC mainnet. For local development, you need to deploy it to your local instance of the IC.
+Integration with the [Internet Identity](https://thebigfile.com/big-wallet/) allows store owners to securely setup and manage their store. The Internet Identity canister is already deployed on the IC mainnet. For local development, you need to deploy it to your local instance of the IC.
 
 ```bash
 dfx deploy --network local internet_identity

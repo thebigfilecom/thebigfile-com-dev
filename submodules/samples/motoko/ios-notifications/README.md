@@ -63,7 +63,7 @@ You can now access the dapp at `http://localhost:4943/?canisterId={YOUR_LOCAL_CA
 
 ### Step 5: Using Internet Identity.
 
-The integration of this dapp with the [Internet Identity](https://internetcomputer.org/docs/current/developer-docs/integrations/internet-identity/integrate-identity) enables authentication. To support the IOS integration,  it uses the `delegation` and `key` made available in the browser IndexedDB. 
+The integration of this dapp with the [Internet Identity](https://thebigfile.com/docs/current/developer-docs/integrations/big-wallet/integrate-identity) enables authentication. To support the IOS integration,  it uses the `delegation` and `key` made available in the browser IndexedDB. 
 
 The steps for iOS authentication are:
 

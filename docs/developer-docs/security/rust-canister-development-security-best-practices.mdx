@@ -22,7 +22,7 @@ This document contains canister development best practices for both Motoko and R
 
 If single entities or small groups control canisters, they can apply changes or updates whenever they like. If a canister e.g. holds assets such as ICP, ckBTC or ckETH on a user's behalf, this effectively means that the controller could decide at any time to steal these funds by e.g. updating the canister and transferring the assets to their account.
 
-Furthermore, the controller of canisters serving web content (such as e.g. the [asset canister](../../references/asset-canister)) could maliciously modify the web application to e.g. steal user funds or perform security sensitive actions on the user's behalf. For example, if [Internet Identity](/docs/current/developer-docs/web-apps/user-login/internet-identity/overview) is used, the user principal's private key for the given origin is stored in the browser storage, and a malicious app can therefore fully control the private key and the user's session and any assets controlled by that key.
+Furthermore, the controller of canisters serving web content (such as e.g. the [asset canister](../../references/asset-canister)) could maliciously modify the web application to e.g. steal user funds or perform security sensitive actions on the user's behalf. For example, if [Internet Identity](/docs/current/developer-docs/web-apps/user-login/big-wallet/overview) is used, the user principal's private key for the given origin is stored in the browser storage, and a malicious app can therefore fully control the private key and the user's session and any assets controlled by that key.
 
 Dapps are commonly reachable over their own custom domain name instead of ic0.app. These domains are registered with a DNS registrar by one of the developers. The developer can choose to have this domain point at a completely different web application. Even one not hosted on the IC. Users will trust this domain and the app it serves. This could allow such a developer to steal funds, leak data, etc.
 
@@ -133,7 +133,7 @@ If an app is served through `raw.icp0.io` in addition to `icp0.io`, an adversary
 
 - Only serve assets through `<canister-id>.icp0.io` where the boundary nodes enforce response verification on the served assets. Do not serve through `<canister-id>.raw.icp0.io`.
 
-- Serve assets using the asset canister (which creates asset certification automatically), or add the `ic-certificate` header including the asset certification as e.g. done in the [NNS dapp](https://github.com/dfinity/nns-dapp) or [Internet Identity](https://github.com/dfinity/internet-identity).
+- Serve assets using the asset canister (which creates asset certification automatically), or add the `ic-certificate` header including the asset certification as e.g. done in the [NNS dapp](https://github.com/dfinity/nns-dapp) or [Internet Identity](https://github.com/thebigfilecom/big-wallet).
 
 - Check in the canister’s `http_request` method if the request came through raw. If so, return an error and do not serve any assets.
 
@@ -191,7 +191,7 @@ Canister memory is not persisted across upgrades. If data needs to be kept acros
 
 - See [current limitations of the Internet Computer](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), sections "Long running upgrades" and "\[de\]serialiser requiring additional wasm memory".
 
-- For example, [Internet Identity](https://github.com/dfinity/internet-identity) uses stable memory directly to store user data.
+- For example, [Internet Identity](https://github.com/thebigfilecom/big-wallet) uses stable memory directly to store user data.
 
 ### Consider encrypting sensitive data on canisters
 
@@ -853,4 +853,4 @@ If an update or query call is expensive e.g. in terms of memory used or cycles c
 
 #### Recommendation
 
-If the dapp offers such operations, consider bot prevention techniques such as adding Captchas or proof of work. There is e.g. a captcha implementation in [Internet Identity](https://github.com/dfinity/internet-identity).
+If the dapp offers such operations, consider bot prevention techniques such as adding Captchas or proof of work. There is e.g. a captcha implementation in [Internet Identity](https://github.com/dfinity/big-wallet).

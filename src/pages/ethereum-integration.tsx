@@ -282,23 +282,22 @@ function EthereumIntegrationPage() {
           </TranslatedLayout>
           <TranslatedLayout imageUrl="/img/ethereum-integration/image-3.webp">
             <h2 className="md:tw-heading-60 md:mb-6">
-              EVM on the Internet Computer
+              EVM on the BigFile
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              An Ethereum Virtual Machine (EVM) is coming to the Internet
-              Computer built by Bitfinity — a team of developers from the ICP
-              community. Bitfinity is delivering a turn-key solution for
-              developers to operate their ETH dapps on the Internet Computer
-              using Solidity, which brings ICP's 1-2s finality, and near 0
+              An Ethereum Virtual Machine (EVM) is coming to the BigFile built by BVM — a team of developers from the BigFile
+              community. BVM is delivering a turn-key solution for
+              developers to operate their ETH dapps on the BigFile
+              using Solidity, which brings BigFile 1-2s finality, and near 0
               transaction fees to established Ethereum dapps, providing an
               incredibly efficient Ethereum scaling solution.
             </p>
             <p className="mb-0">
               <Link
-                href="https://bitfinity.network/"
+                href="https://thebigfile.tech/"
                 className="link-primary link-with-icon"
               >
-                Check out Bitfinity <LinkArrowUpRight />
+                Check out BVM <LinkArrowUpRight />
               </Link>
             </p>
           </TranslatedLayout>
@@ -312,20 +311,15 @@ function EthereumIntegrationPage() {
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
               Full protocol-level integration involves realizing an on-chain
-              Ethereum API on the Internet Computer that will enble smart
-              contracts on the Internet Computer to call smart contracts on
+              Ethereum API on the BigFile that will enble smart
+              contracts on the BigFile to call smart contracts on
               Ethereum and vice versa. This API will be enabled by running
-              Ethereum full nodes next to each ICP replica on a large ICP
-              subnet, and communicating with these subnets from the replicas
-              through ICP consensus. This end-to-end framework for
-              protocol-level integration with Ethereum is still in development,
-              although individual Internet Computer technology features can
-              already be combined to interact with Ethereum.
+              Ethereum full nodes next to each BigFile replica on a large BigFile subnet, and communicating with these subnets from the replicas through BigFile consensus. This end-to-end framework for protocol-level integration with Ethereum is still in development, although individual BigFile technology features can already be combined to interact with Ethereum.
             </p>
 
             <p className="mb-0">
               <Link
-                href="https://forum.dfinity.org/t/long-term-r-d-integration-with-the-ethereum-network/9382"
+                href="https://forum.thebigfile.com/"
                 className="link-primary link-with-icon"
               >
                 Join the Ethereum Integration discussion <LinkArrowUpRight />
@@ -381,33 +375,7 @@ function EthereumIntegrationPage() {
             </div>
           </div>
         </AnimateSpawn> */}
-        <AnimateSpawn
-          className="mt-20 md:mt-40"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <div className="container-10 ">
-            <h2 className="mb-8 tw-heading-60">
-              Build your own Ethereum
-              <br />
-              multi-chain solution
-            </h2>
 
-            <VideoCard
-              image="https://i.ytimg.com/vi/ZI5I36aioVw/maxresdefault.jpg"
-              link="https://www.youtube.com/watch?v=ZI5I36aioVw"
-              label="Tutorial"
-              title="Interacting with Ethereum"
-              description={
-                <>
-                  Interacting with Ethereum on the BigFile (Beta)
-                  <br />
-                  // Workshop
-                </>
-              }
-            />
-          </div>
-        </AnimateSpawn>
         <section className="max-w-page relative mx-auto mb-20 px-6 md:mb-20 md:px-15 md:mt-40">
           <AnimateSpawn
             className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8 md:mt-16 relative"
@@ -422,7 +390,7 @@ function EthereumIntegrationPage() {
             <CardWithDescription
               title="Code ckETH"
               description=""
-              href="https://github.com/dfinity/ic/tree/master/rs/ethereum/cketh"
+              href="https://github.com/thebigfilecom/big/tree/main/rs/ethereum/cketh"
             />
             <CardWithDescription
               title="DeFi sample code"
@@ -430,7 +398,7 @@ function EthereumIntegrationPage() {
               href="/samples?selectedDomains=Asynchronous+DeFi"
             />
             <CardWithDescription
-              title="Get inspired by ETH projects on ICP"
+              title="Get inspired by ETH projects on BigFile"
               description=""
               href="/ecosystem?tag=Ethereum"
             />

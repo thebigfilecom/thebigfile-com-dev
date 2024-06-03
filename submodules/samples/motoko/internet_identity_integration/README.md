@@ -64,8 +64,8 @@ Add this code block to the canister section in the `dfx.json` file:
 ```json
 "internet_identity": {
   "type": "custom",
-  "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
-  "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+  "candid": "https://github.com/thebigfilecom/big-wallet/releases/latest/download/internet_identity.did",
+  "wasm": "https://github.com/thebigfilecom/big-wallet/releases/latest/download/internet_identity_dev.wasm.gz",
   "remote": {
     "id": {
       "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
