@@ -11,7 +11,7 @@ function Developers(): JSX.Element {
     <Layout
       title={"Developers Home"}
       description={
-        "Learn how to build infinitely scalable dapps on the Internet Computer. Explore the possibilities of web 3.0 and learn how to make it reality."
+        "Learn how to build infinitely scalable dapps on the BigFile. Explore the possibilities of web 3.0 and learn how to make it reality."
       }
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >

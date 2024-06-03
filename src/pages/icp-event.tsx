@@ -199,7 +199,7 @@ function IcpEventPage() {
               </p>
               <Link
                 className="link-primary link-with-icon"
-                href="/internet-identity"
+                href="/big-wallet"
               >
                 <LinkArrowRight /> WAllet on BigFile
               </Link>

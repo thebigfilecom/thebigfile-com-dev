@@ -869,7 +869,7 @@
       "Tools / Infrastructure"
     ],
     "description": "Internet Identity is a privacy-enhancing authentication framework for applications on the Internet Computer. It provides users with a easy-to-use and secure anonymizing login to Web3 services running on ICP without being tracked across dapps.",
-    "github": "https://github.com/dfinity/internet-identity",
+    "github": "https://github.com/thebigfilecom/big-wallet",
     "usesInternetIdentity": true,
     "stats": "1,000,000+ users",
     "logo": "/img/showcase/internetidentity_logo.webp",

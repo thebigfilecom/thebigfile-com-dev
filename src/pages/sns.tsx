@@ -242,19 +242,7 @@ function SnsPage() {
               </Link>
             </motion.p>
           </AnimateSpawn>
-          <AnimateSpawn variants={transitions.item} className="mt-10 md:mt-20">
-            <VideoCard
-              label=""
-              title="What is an SNS DAO?"
-              description={
-                <>
-                  Founder & Chief Scientist of DFNITY, Dominic Williams explains how the SNS DAO framework creates fully decentralized online services that are owned and governed by the community.{" "}
-                </>
-              }
-              image={`https://i.ytimg.com/vi/WxRgm6JAGpQ/maxresdefault.jpg`}
-              link="https://youtu.be/nZBWx6y070Y"
-            />
-          </AnimateSpawn>
+          
         </section>
 
         <section className="container-12 pt-20 md:pt-30">
@@ -375,42 +363,6 @@ function SnsPage() {
             ))}
           </StatsPanel>
         </AnimateSpawn>
-        <section className="" id="sns-dapps">
-          <OpenChatCard
-            className=""
-            data={{
-              ...openChatDao,
-              ...extraMetadata[openChatDao.rootCanisterId],
-              dashboardUrl: dashboardUrlFromRootCanisterId(
-                openChatDao.rootCanisterId
-              ),
-            }}
-          />
-        </section>
-        <AnimateSpawn el={motion.section} variants={transitions.container}>
-          <MediumDaoCardContainer>
-            <MediumDaoCard
-              dashboardUrl={dashboardUrlFromRootCanisterId(
-                goldDao.rootCanisterId
-              )}
-              {...goldDao}
-              {...(extraMetadata[goldDao.rootCanisterId] ?? {})}
-              media={{
-                videoUrl: "/img/sns/gold-dao.mp4",
-                videoType: "video/mp4",
-              }}
-            ></MediumDaoCard>
-
-            <MediumDaoCard
-              dashboardUrl={dashboardUrlFromRootCanisterId(
-                sonicDao.rootCanisterId
-              )}
-              {...sonicDao}
-              {...(extraMetadata[sonicDao.rootCanisterId] ?? {})}
-              media={{ imageUrl: "/img/sns/sonic.webp" }}
-            ></MediumDaoCard>
-          </MediumDaoCardContainer>
-        </AnimateSpawn>
 
         <AnimateSpawn
           variants={transitions.container}
@@ -472,7 +424,7 @@ function SnsPage() {
             <CardWithDescription
               title="SNS DAO dashboard"
               description=""
-              href="https://dashboard.internetcomputer.org/sns"
+              href="https://dashboard.thebigfile.com/sns"
             />
 
             <CardWithDescription

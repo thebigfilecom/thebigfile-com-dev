@@ -376,7 +376,7 @@ function WhatIsIcpPage() {
               </p>
               <Link
                 className="link-primary link-with-icon"
-                href="/internet-identity"
+                href="/big-wallet"
               >
                 <LinkArrowRight /> Wallet on BigFile
               </Link>

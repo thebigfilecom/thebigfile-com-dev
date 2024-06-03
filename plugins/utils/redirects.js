@@ -157,16 +157,16 @@ const redirects = `
   /docs/current/motoko/intro/ /docs/current/motoko/main/getting-started/motoko-introduction
   /docs/current/tutorials/create_your_first_app/ /docs/current/tutorials/developer-journey/
   /docs/quickstart/quickstart-intro.html /docs/current/developer-docs/getting-started/install/
-  /docs/ic-identity-guide/auth-how-to.html /docs/current/developer-docs/web-apps/user-login/internet-identity/integrate-internet-identity/
+  /docs/ic-identity-guide/auth-how-to.html /docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet/
   /docs/current/developer-docs/build/agents/agent-dfinity	/docs/current/developer-docs/developer-tools/off-chain/agents/overview
-  /docs/current/tokenomics/identity-auth/what-is-ic-identity /docs/current/developer-docs/web-apps/user-login/internet-identity/overview
+  /docs/current/tokenomics/identity-auth/what-is-ic-identity /docs/current/developer-docs/web-apps/user-login/big-wallet/overview
   /docs/quickstart/local-quickstart.html /docs/current/developer-docs/getting-started/install/
   /language-guide/ /docs/current/tutorials/developer-journey/level-0/intro-languages
   /docs/current/developer-docs/build/cdks/cdk-rs-dfinity/rust-quickstart /docs/current/developer-docs/backend/rust/
   /docs/quickstart/network-quickstart.html /docs/current/developer-docs/getting-started/install/
   /docs/token-holders/nns-app-quickstart.html /docs/current/developer-docs/daos/nns/nns-app-quickstart
   /developers-guide/quickstart.html /docs/current/tutorials/developer-journey/
-  /docs/current/tokenomics/identity-auth/auth-how-to /docs/current/developer-docs/web-apps/user-login/internet-identity/overview
+  /docs/current/tokenomics/identity-auth/auth-how-to /docs/current/developer-docs/web-apps/user-login/big-wallet/overview
   /docs/developers-guide/tutorials-intro.html /docs/current/tutorials/developer-journey/
   /docs/quickstart/quickstart.html /docs/current/developer-docs/getting-started/install/
   /apis/site/proxy /docs/current/references/http-gateway-protocol-spec
@@ -212,7 +212,7 @@ const redirects = `
   /docs/current/developer-docs/setup/accounts /docs/current/developer-docs/getting-started/accounts
   /docs/current/developer-docs/setup/cycles/cycles-faucet /docs/current/developer-docs/getting-started/cycles/cycles-faucet
   /docs/current/developer-docs/setup/cycles/cycles-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
-  /docs/current/developer-docs/setup/cycles/converting_icp_tokens_into_cycles /docs/current/developer-docs/getting-started/cycles/converting_icp_tokens_into_cycles
+  /docs/current/developer-docs/setup/cycles/converting_bf_tokens_into_cycles /docs/current/developer-docs/getting-started/cycles/converting_bf_tokens_into_cycles
   /docs/current/developer-docs/setup/first-canister /docs/current/developer-docs/getting-started/default-template
   /docs/current/developer-docs/setup/deploy-locally /docs/current/developer-docs/getting-started/deploy/local
   /docs/current/developer-docs/setup/deploy-mainnet /docs/current/developer-docs/getting-started/deploy/mainnet
@@ -340,10 +340,10 @@ const redirects = `
   /docs/current/developer-docs/production/custom-domain/dns-setup /docs/current/developer-docs/web-apps/custom-domains/dns-setup
   /docs/current/developer-docs/backend/design-dapps /docs/current/developer-docs/web-apps/design-dapps
   /docs/current/developer-docs/integrations/independently-verifying-ic-signatures /docs/current/developer-docs/web-apps/independently-verifying-ic-signatures
-  /docs/current/developer-docs/integrations/internet-identity/overview  /docs/current/developer-docs/web-apps/user-login/internet-identity/overview
-  /docs/current/developer-docs/integrations/internet-identity/creating-ii /docs/current/developer-docs/web-apps/user-login/internet-identity/creating-ii
-  /docs/current/developer-docs/integrations/internet-identity/integrate-identity /docs/current/developer-docs/web-apps/user-login/internet-identity/integrate-internet-identity
-  /docs/current/developer-docs/integrations/internet-identity/alternative-origins /docs/current/developer-docs/web-apps/user-login/internet-identity/alternative-origins
+  /docs/current/developer-docs/integrations/big-wallet/overview  /docs/current/developer-docs/web-apps/user-login/big-wallet/overview
+  /docs/current/developer-docs/integrations/big-wallet/creating-ii /docs/current/developer-docs/web-apps/user-login/big-wallet/creating-ii
+  /docs/current/developer-docs/integrations/big-wallet/integrate-identity /docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet
+  /docs/current/developer-docs/integrations/big-wallet/alternative-origins /docs/current/developer-docs/web-apps/user-login/big-wallet/alternative-origins
   /docs/current/developer-docs/http-compatible-canisters/custom-http-canisters /docs/current/developer-docs/web-apps/http-compatible-canisters/custom-http-canisters
   /docs/current/developer-docs/http-compatible-canisters/serving-json-over-http /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-json-over-http
   /docs/current/developer-docs/http-compatible-canisters/serving-static-assets-over-http  /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-static-assets-over-http
@@ -438,7 +438,7 @@ const redirects = `
   /docs/current/references/security/web-app-development-security-best-practices /docs/current/developer-docs/security/web-app-development-security-best-practices
   /docs/current/references/security/ /docs/current/developer-docs/security/general-security-best-practices
   /docs/current/developer-docs/smart-contracts/overview/development-cycle /docs/current/developer-docs/smart-contracts/overview/cube-lifecycle
-  /docs/current/developer-docs/web-apps/user-login/internet-identity/integrate-identity /docs/current/developer-docs/web-apps/user-login/internet-identity/integrate-internet-identity
+  /docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-identity /docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet
   /docs/current/developer-docs/multi-chain/ethereum/cketh /docs/current/developer-docs/multi-chain/ethereum/cketh/overview
   /docs/current/developer-docs/multi-chain/ethereum/siwe /docs/current/developer-docs/multi-chain/ethereum/using-eth/siwe
   /docs/current/developer-docs/multi-chain/bitcoin/ckbtc /docs/current/developer-docs/multi-chain/bitcoin/ckbtc/overview

@@ -1,8 +1,8 @@
-[comment]: # This document is mainly written to be viewed on https://internetcomputer.org/docs/current/developer-docs/integrations/internet-identity/integrate-identity/
+[comment]: # This document is mainly written to be viewed on https://thebigfile.com/docs/current/developer-docs/integrations/big-wallet/integrate-identity/
 
 # Integrating with Internet Identity
 
-This guide shows how to integrate and test a project with Internet Identity. The complete code example can be found [here](https://github.com/dfinity/internet-identity/tree/main/demos/using-dev-build). It uses the development [build flavor](https://github.com/dfinity/internet-identity/blob/main/README.md#build-features-and-flavors) of Internet Identity and the [agent-js](https://github.com/dfinity/agent-js) library.
+This guide shows how to integrate and test a project with Internet Identity. The complete code example can be found [here](https://github.com/thebigfilecom/big-wallet/tree/main/demos/using-dev-build). It uses the development [build flavor](https://github.com/thebigfilecom/big-wallet/blob/main/README.md#build-features-and-flavors) of Internet Identity and the [agent-js](https://github.com/dfinity/agent-js) library.
 
 This is a standalone project that you can copy to your own project.
 

@@ -161,7 +161,7 @@ function InternetIdentityPage() {
               </p>
               <p className="mb-0">
                 <Link
-                  href="/docs/current/developer-docs/integrations/internet-identity/integrate-identity"
+                  href="/docs/current/developer-docs/integrations/big-wallet/integrate-identity"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-primary"

@@ -50,77 +50,12 @@ export const extraMetadata: Record<string, Partial<DaoCardProps>> = {
   },
 
   "3e3x2-xyaaa-aaaaq-aaalq-cai": {
-    // OpenChat
-    twitter: "https://twitter.com/OpenChat",
-    name: "OpenChat raises 1M ICP in 6 hours",
-    description: (
-      <>
-        OpenChat was the first project to launch an SNS DAO on the Internet
-        Computer, marking a significant milestone in the world of blockchain and
-        social media as an open internet service.{" "}
-      </>
-    ),
-  },
-
-  "zxeu2-7aaaa-aaaaq-aaafa-cai": {
-    // Dragginz
-    twitter: "https://twitter.com/dragginzgame",
-    description: (
-      <>
-        A virtual pets game from the creators of Neopets. Non-profit, 100%
-        on-chain baby dragons, crowdsourced world building, magic spells, and a
-        prince in disguise!
-      </>
-    ),
-  },
-
-  "7jkta-eyaaa-aaaaq-aaarq-cai": {
-    // Kinic
-    twitter: "https://twitter.com/kinic_app",
-    description: (
-      <>
-        The first and only dedicated search engine for Web3 content that runs on
-        100% on-chain. Trustless SEO backed by ZKML enables transparent results,
-        instead of ad-based content .
-      </>
-    ),
-  },
-
-  "67bll-riaaa-aaaaq-aaauq-cai": {
-    // Hot or Not
-    twitter: "https://twitter.com/hotornot_dapp",
-    description: (
-      <>
-        A decentralized short-video social media platform governed by the people
-        for the people. Monetized time on social media.
-      </>
-    ),
-  },
-
-  "4m6il-zqaaa-aaaaq-aaa2a-cai": {
-    // IC Ghost
-    twitter: "https://twitter.com/ghost_icp",
-    description: (
-      <>
-        The first decentralized meme coin on the Internet Computer. GHOST is
-        powered by the community and owd by the community.
-      </>
-    ),
-  },
-
-  "x4kx5-ziaaa-aaaaq-aabeq-cai": {
-    // Modclub
-    twitter: "https://twitter.com/ModclubApp",
-    description: (
-      <>
-        A decentralized crowdwork platform that supports dapps by handling
-        resource-intensive tasks such as content moderation, user verification
-        and data labeling.
-      </>
-    ),
-  },
-
-  "xjngq-yaaaa-aaaaq-aabha-cai": {
+    
+    
+    
+    
+    
+    
     // BOOM DAO
     twitter: "https://twitter.com/boomdaosns",
     description: (
@@ -189,5 +124,5 @@ export const extraMetadata: Record<string, Partial<DaoCardProps>> = {
 };
 
 export function dashboardUrlFromRootCanisterId(rootCanisterId: string) {
-  return `https://dashboard.internetcomputer.org/sns/${rootCanisterId}`;
+  return `https://dashboard.thebigfile.com/sns/${rootCanisterId}`;
 }
