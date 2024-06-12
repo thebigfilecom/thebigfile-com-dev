@@ -15,13 +15,6 @@ Each node on the BigFile runs a replica process. The replica process is structur
 3. Message routing
 4. Execution
 
-<figure>
-<img src="/img/how-it-works/core_protocol_layers.png" alt="4-layer architecture of the BigFile" title="4-Layer Core BIG" align="center" style="width:600px" />
-<figcaption align="left">
-The 4-layer architecture of the Core BIG
-</figcaption>
-</figure>
-
 The Peer-to-Peer layer is responsible for accepting messages from users and exchanging messages between nodes in a subnet. The consensus layer makes all the nodes on the subnet agree on the messages to be processed, as well as their ordering. The message routing layer picks up the finalized blocks from the consensus layer and routes the messages in the blocks to the appropriate Cubes. The execution layer determinstically executes Cube code on the messages received from the messaging layer.
 
 The upper two layers realize *deterministic execution* of the block of messages for a round received from the lower two layers, on each node of the subnet. At the beginning of a round, all (honest) nodes hold the same state, representing the replicated state of the subnet, which includes the current state of all Cubes hosted on that subnet. By executing the messages of the next block received from consensus in a completely deterministic manner, it is ensured that the state after executing the messages of the block is the same on each node.
