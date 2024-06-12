@@ -13,10 +13,8 @@ The BigFile is different: Using [chain-key cryptography](/how-it-works/chain-key
 
 The BigFile certification feature is exposed to cubes through _certified variables_. From an application perspective, certified variables can be set during an update call to a cube, when the cube changes its state during a transaction that went through consensus. The certificate can then be read in a subsequent query call, so the cube can respond to a client's request in a trustworthy way but without incurring the additional delay of consensus. Certified variables also underlie many of the BigFile advanced features such as [certified assets](/how-it-works/asset-certification/) and [Internet Identity](/how-it-works/web-authentication-identity/).
 
-More technically, each cube can specify a single 32-byte value that will be certified by the subnet. Well-known concepts such as [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree) or, more generally, [authenticated data structures](https://cs.brown.edu/research/pubs/pdfs/2003/Tamassia-2003-ADS.pdf) can be used to extend the certification from this single 32-byte value to arbitrary amounts of data. Libraries such as [certified-map](https://github.com/dfinity/cdk-rs/tree/main/library/ic-certified-map) make the feature easily accessible for developers.
+More technically, each cube can specify a single 32-byte value that will be certified by the subnet. Well-known concepts such as [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree) or, more generally, [authenticated data structures](https://cs.brown.edu/research/pubs/pdfs/2003/Tamassia-2003-ADS.pdf) can be used to extend the certification from this single 32-byte value to arbitrary amounts of data. Libraries such as [certified-map](https://github.com/thebigfilecom/cdk-rs/tree/main/library/ic-certified-map) make the feature easily accessible for developers.
 
-[![Watch youtube video](https://i.ytimg.com/vi/3mZHEfICi_U/maxresdefault.jpg)](https://www.youtube.com/watch?v=3mZHEfICi_U)
+[How BigFile Responses Are Certified as Authentic](https://medium.com/)
 
-[How Internet Computer Responses Are Certified as Authentic](https://medium.com/dfinity/how-internet-computer-responses-are-certified-as-authentic-2ff1bb1ea659?)
-
-[Certified Variables & Assets](https://assets.ctfassets.net/ywqk17d3hsnp/7AaD21HKM8kV3GguC8qWB4/5023bc305edb6fa3bd4aa593e72335c2/2021-06-10_Certified_variables_and_assets__1_.pdf)
+[Certified Variables & Assets](https://thebigfile.com/Certified.pdf)

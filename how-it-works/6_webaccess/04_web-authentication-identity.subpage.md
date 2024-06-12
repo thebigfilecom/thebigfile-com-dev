@@ -7,7 +7,7 @@ slug: web-authentication-identity
 
 # BIG Wallet
 
-[BIG Wallet](https://identity.ic0.app/) is a privacy-enhancing blockchain based authentication framework built on the BigFile. It integrates with the APIs of WebAuthn, a widely used, secure authentication framework supported by modern browsers and operating systems. Users can connect passkeys to their BIG Wallet, and use the secure TPM chip inside these devices for authentication instead of passwords or clunky 2FAs. Alternatively, BIG Wallet supports devices like YubiKeys or Ledger hardware wallets.
+[BIG Wallet](https://bigwallet.thebigfile.com/) is a privacy-enhancing blockchain based authentication framework built on the BigFile. It integrates with the APIs of WebAuthn, a widely used, secure authentication framework supported by modern browsers and operating systems. Users can connect passkeys to their BIG Wallet, and use the secure TPM chip inside these devices for authentication instead of passwords or clunky 2FAs. Alternatively, BIG Wallet supports devices like YubiKeys or Ledger hardware wallets.
 
 ## Privacy
 
@@ -15,7 +15,7 @@ Using chain-key cryptography, BIG Wallet ensures private authentication by creat
 
 ## Create an BIG Wallet
 
-If you don't yet have an BIG Wallet, you can create one at [https://identity.ic0.app/](https://identity.ic0.app/).
+If you don't yet have an BIG Wallet, you can create one at [https://bigwallet.thebigfile.com/](https://bigwallet.thebigfile.com/).
 
 <figure>
 <img src="/img/how-it-works/ii-1.webp" alt="Internet Identity creation screen" title="Internet Identity creation screen" align="center" style="height:500px; width: auto" />
@@ -28,7 +28,7 @@ If you click "Create BIG Wallet", you are asked to create a passkey. A passkey c
 </figure> 
 
 
-After the BIG Wallet is created, users can already use it to securely and privately authenticate with ICP based dapps, or add more passkeys. It is generally advised to have multiple passkeys connected to your Internet Identity as well as a recovery method setup, such as a recovery phrase.
+After the BIG Wallet is created, users can already use it to securely and privately authenticate with BigFile based dapps, or add more passkeys. It is generally advised to have multiple passkeys connected to your BIG Wallet as well as a recovery method setup, such as a recovery phrase.
 
 <figure>
 <img src="/img/how-it-works/ii-3.webp" alt="Internet Identity screen prompting the user to authorize access to Openchat" title="Internet Identity screen prompting the user to authorize access to Openchat" align="center" style="height:500px; width: auto" />
@@ -40,21 +40,19 @@ Once you added a passkey, you will be assigned an BIG Wallet number. You should 
 <img src="/img/how-it-works/ii-4.webp" alt="Internet Identity screen prompting the user to authorize access to Openchat" title="Internet Identity screen prompting the user to authorize access to Openchat" align="center" style="height:500px; width: auto" />
 </figure>
 
-As mentioned previously, it is also important to add a recovery phrase in case your device gets lost or stolen. Your BIG Wallet also allows you to login to the Network Nervous System (NNS) dapp. NNS is the DAO that governs the Internet Computer, and allows ICP token holders to participate in its governance by staking their tokens.
+As mentioned previously, it is also important to add a recovery phrase in case your device gets lost or stolen. Your BIG Wallet also allows you to login to the Network Nervous System (NNS) dapp. NNS is the DAO that governs the Internet Computer, and allows BF token holders to participate in its governance by staking their tokens.
 
 
-[BIG Wallet App](https://identity.ic0.app/)
+[BIG Wallet App](https://bigwallet.thebigfile.com/)
 
 [BIG Wallet Wiki](https://wiki.thebigfile.com/wiki/Internet_Computer_wiki#Internet_Identity_Introduction)
 
-[BIG Wallet Specification](https://internetcomputer.org/docs/current/references/ii-spec/)
+[BIG Wallet Specification](https://thebigfile.com/docs/current/references/ii-spec/)
 
-[Open Source - BIG Wallet](https://github.com/dfinity/internet-identity)
+[Open Source - BIG Wallet](https://github.com/thebigfilecom/big-wallet)
 
-[Web Authentication and Identity on the BigFile](https://medium.com/dfinity/web-authentication-and-identity-on-the-internet-computer-a9bd5754c547)
+[Web Authentication and Identity on the BigFile](https://medium.com/)
 
-[BIG Wallet: Easy Web3 Authentication](https://medium.com/dfinity/internet-identity-the-end-of-usernames-and-passwords-ff45e4861bf7)
+[BIG Wallet: Easy Web3 Authentication](https://medium.com/)
 
-[Verifying the BIG Wallet Code: A Walkthrough](https://medium.com/dfinity/verifying-the-internet-identity-code-a-walkthrough-c1dd7a53f883)
-
-[IC internals: Internet Identity storage](https://mmapped.blog/posts/11-ii-stable-memory.html)
+[Verifying the BIG Wallet Code: A Walkthrough](https://medium.com/)

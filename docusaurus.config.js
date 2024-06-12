@@ -655,7 +655,7 @@ const config = {
               },
               {
                 label: "Brand Materials",
-                href: "https://dfinity.frontify.com/d/pD7yZhsmpqos",
+                href: "https://thebigfile.com/brand",
               },
               {
                 label: "Press Kit",
