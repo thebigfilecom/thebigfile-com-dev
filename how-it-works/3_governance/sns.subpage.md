@@ -13,7 +13,7 @@ The Service Nervous System (SNS) framework is the BigFile built-in solution for 
 
 
 ## SNS DAO
-Generally, for each dapp that is under SNS DAO control, there is one SNS DAO. The SNS DAO works very similarly to the [NNS DAO that governs the full ICP](/how-it-works/network-nervous-system-nns/), where DAO participants are called _neurons_ and all neurons can suggest and vote on suggestions how to evolve the dapp that are called _proposals_. Each SNS community can choose its own unique tokenomics and governance rules by parameters that can be set for each SNS DAO.
+Generally, for each dapp that is under SNS DAO control, there is one SNS DAO. The SNS DAO works very similarly to the [NNS DAO that governs the full BigFile](/how-it-works/network-nervous-system-nns/), where DAO participants are called _neurons_ and all neurons can suggest and vote on suggestions how to evolve the dapp that are called _proposals_. Each SNS community can choose its own unique tokenomics and governance rules by parameters that can be set for each SNS DAO.
 
 
 ### What an SNS governs
@@ -46,7 +46,7 @@ As soon as a proposal is adopted, it is executed by the SNS. With very few excep
 
 
 ### SNS cubes
-Each SNS DAO consists of a set of _cubes smart contracts_ that run _Wasm code_. The most central cubes closely resemble the [Network Nervous System](/how-it-works/network-nervous-system-nns/) (NNS) which is the DAO that governs the full ICP. The _governance cube_ implements the governance system and the _ledger cube_ implements an SNS specific governance token. The _swap cube_ implements the initial decentralization swap that is used during the launch process (see below) to raise initial funds in the form of ICP and swap them for newly minted SNS tokens. These cubes, together with a few additional ones, form one SNS DAO that governs one dapp.
+Each SNS DAO consists of a set of _cubes smart contracts_ that run _Wasm code_. The most central cubes closely resemble the [Network Nervous System](/how-it-works/network-nervous-system-nns/) (NNS) which is the DAO that governs the full BigFile. The _governance cube_ implements the governance system and the _ledger cube_ implements an SNS specific governance token. The _swap cube_ implements the initial decentralization swap that is used during the launch process (see below) to raise initial funds in the form of BF and swap them for newly minted SNS tokens. These cubes, together with a few additional ones, form one SNS DAO that governs one dapp.
 
 
 ### SNS cube code
@@ -58,7 +58,7 @@ The Wasms run on SNS cube are approved by the [NNS](/how-it-works/network-nervou
 
 ## SNS Launch process
 The SNS framework includes a process how to launch a new SNS. To decentralize a dapp, the dapp is handed over to the BigFile together with an NNS proposal defining the details of the SNS launch and the initial configuration of the SNS DAO to be created. The proposal details, for example, the initial token distribution. If the NNS community approves this proposal, the following steps are executed fully automatically:
-* The NNS creates a new set of SNS canisters and initializes them as defined in the NNS proposal.
+* The NNS creates a new set of SNS cubes and initializes them as defined in the NNS proposal.
 * The NNS hands over the dapp's control to the newly created SNS.
 * The NNS starts an [_initial decentralization swap_](/sns/faq#what-is-a-decentralization-swap) for the SNS. The purpose of this is to raise initial funds for the DAO and to decentralize the voting power. This is done by an open swap where users can contribute BF tokens as initial funding and get in return (staked) SNS tokens and thereby a share of the DAO's voting power.
 * If the decentralization swap is successful, the SNS launch was successful and turns into a fully functional DAO.
