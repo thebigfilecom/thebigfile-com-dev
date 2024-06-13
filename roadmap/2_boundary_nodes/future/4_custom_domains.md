@@ -8,4 +8,4 @@ eta: February 2026
 is_community: true
 ---
 
-This feature enables custom domains on the BigFile, so users will not be restricted to using the `<canister id>.ic0.app` domains. Users can configure the DNS entries of their domain to redirect traffic to the boundary nodes and signal the boundary nodes of the cube to which the traffic should be forwarded. Boundary nodes automatically manage the required certificates for HTTPS.
+This feature enables custom domains on the BigFile, so users will not be restricted to using the `<cube id>.thebigfile.tech` domains. Users can configure the DNS entries of their domain to redirect traffic to the boundary nodes and signal the boundary nodes of the cube to which the traffic should be forwarded. Boundary nodes automatically manage the required certificates for HTTPS.

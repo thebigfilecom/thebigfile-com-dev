@@ -158,8 +158,7 @@ function MultichainPage() {
   return (
     <Layout
       title="Chain Fusion Technology"
-      description="ICP enables direct interoperability with all major blockchains, including Bitcoin, Ethereum, other EVMs (and soon Solana), 
-      without relying on any trusted intermediary. Unique compared to other blockchains, ICP smart contracts can read from 
+      description="BigFile enables direct interoperability with all major blockchains, including Bitcoin, Ethereum, other EVMs (and soon Solana), without relying on any trusted intermediary. Unique compared to other blockchains, BigFile smart contracts can read from 
       and write to different chains, enabling developers to write smart contracts spanning different chains. This is chain fusion."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
@@ -185,12 +184,7 @@ function MultichainPage() {
                 Chain Fusion Technology
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0 animate-fade-up animation-delay-200">
-                ICP enables direct interoperability with all major blockchains,
-                including Bitcoin, Ethereum, other EVMs (and soon Solana),
-                without relying on any trusted intermediary. Unique compared to
-                other blockchains, ICP smart contracts can read from and write
-                to different chains, enabling developers to write smart
-                contracts spanning different chains. This is chain fusion.
+                BigFile enables direct interoperability with all major blockchains, including Bitcoin, Ethereum, other EVMs (and soon Solana), without relying on any trusted intermediary. Unique compared to other blockchains, BigFile smart contracts can read from and write to different chains, enabling developers to write smart contracts spanning different chains. This is chain fusion.
               </p>
             </div>
           </div>
@@ -222,14 +216,7 @@ function MultichainPage() {
             variants={transitions.item}
           >
             The common web3 pattern is building dapps from different
-            blockchains, for instance Ethereum or Solana to store assets, IPFS
-            or Arweave for serving frontends, and Arbitrum or Optimism for the
-            bulk of smart contract computation. However, building dapps like
-            this is very cumbersome. Developers must adapt to various
-            programming models, transaction costs, and settlement times. Chain
-            fusion tremendously simplifies multi-chain dapp development, making
-            it as straightforward and native as building on a single
-            environment.
+            blockchains, for instance Ethereum or Solana to store assets, IPFS or Arweave for serving frontends, and Arbitrum or Optimism for the bulk of smart contract computation. However, building dapps like this is very cumbersome. Developers must adapt to various programming models, transaction costs, and settlement times. Chain fusion tremendously simplifies multi-chain dapp development, making it as straightforward and native as building on a single environment.
           </motion.p>
         </AnimateSpawn>
 
@@ -247,11 +234,10 @@ function MultichainPage() {
               Example Code
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-3">
-              To showcase how powerful chain fusion is, here is a simple example
-              that shows three chains interacting in one smart contract: a{" "}
+              To showcase how powerful chain fusion is, here is a simple example that shows three chains interacting in one smart contract: a{" "}
               single{" "}
               <b>
-                <i>ICP</i>
+                <i>BigFile</i>
               </b>{" "}
               smart contract that can custody{" "}
               <b>
@@ -634,17 +620,10 @@ pub enum MultiGetLogsResult {
                 bridge that make wrapped copies of native tokens for usage on
                 other blockchains. These bridges are slow, inconvenient, but
                 most importantly: they are the achilles heel of web3, this is
-                where majority of hacks happen, tens of billions of dollars of
-                assets have been lost.
+                where majority of hacks happen, tens of billions of dollars of assets have been lost.
                 <br />
                 <br />
-                There are also rollups, which rely on the security of the base
-                L1 chain. However, it is still not possible to easily move
-                assets arbitrarily between different rollup chains as each step
-                transfer relies on the main chain thereby, resulting in
-                expensive L1 gas fees and settlement delays lasting days.
-                Rollups also do not solve smart contract interoperability across
-                chains, such as between Bitcoin, Ethereum and Solana, etc.
+                There are also rollups, which rely on the security of the base L1 chain. However, it is still not possible to easily move assets arbitrarily between different rollup chains as each step transfer relies on the main chain thereby, resulting in expensive L1 gas fees and settlement delays lasting days. Rollups also do not solve smart contract interoperability across chains, such as between Bitcoin, Ethereum and Solana, etc.
               </p>
 
               <h3 className="text-gradient-purple tw-heading-4 md:tw-heading-40">
@@ -652,11 +631,10 @@ pub enum MultiGetLogsResult {
               </h3>
 
               <p className="tw-paragraph md:tw-lead-sm mb-6">
-                True multi-chain capability requires enabling smart contracts to
-                read and write across chains. For instance, you can write a{" "}
+                True multi-chain capability requires enabling smart contracts to read and write across chains. For instance, you can write a{" "}
                 single{" "}
                 <b>
-                  <i>ICP</i>
+                  <i>BigFile</i>
                 </b>{" "}
                 smart contract that can custody{" "}
                 <b>
@@ -672,15 +650,12 @@ pub enum MultiGetLogsResult {
 
               <p className="tw-paragraph md:tw-lead-sm mb-6">
                 <b>Chain-key cryptography</b> is the scientific breakthrough
-                that allows ICP smart contracts to create and sign transactions
-                that are executed on other blockchains &ndash;{" "}
+                that allows BigFile smart contracts to create and sign transactions that are executed on other blockchains &ndash;{" "}
                 <i>writing to other blockchains directly.</i>
               </p>
 
               <p className="tw-paragraph md:tw-lead-sm mb-6">
-                <b>Direct network integration</b> enables ICP smart contracts to
-                query data and smart contracts from other blockchains, validated
-                by ICP consensus &ndash; <i>reading from other blockchains</i>.
+                <b>Direct network integration</b> enables BigFile smart contracts to query data and smart contracts from other blockchains, validated by BigFile consensus &ndash; <i>reading from other blockchains</i>.
               </p>
             </div>
           </div>
@@ -701,16 +676,11 @@ pub enum MultiGetLogsResult {
                     </h2>
                     <p className="tw-paragraph-sm md:tw-paragraph mb-2 mr-4">
                       Explore Chain Fusion technology use cases, including
-                      executing ICP smart contracts on other chains and asset
-                      storage like Bitcoin and Ethereum.
+                      executing BigFile smart contracts on other chains and asset storage like Bitcoin and Ethereum.
                     </p>
 
                     <p className="tw-paragraph-sm md:tw-paragraph mb-10 mr-4">
-                      These applications range from automating tasks on Ethereum
-                      to creating ICP smart contracts that manage
-                      Bitcoin/Ethereum. Developers can also use ckBTC and ckETH
-                      to efficiently build DeFi services, bypassing high costs
-                      and delays.
+                      These applications range from automating tasks on Ethereum to creating BigFile smart contracts that manage Bitcoin/Ethereum. Developers can also use ckBTC and ckETH to efficiently build DeFi services, bypassing high costs and delays.
                     </p>
                   </>
                 }
@@ -733,21 +703,11 @@ pub enum MultiGetLogsResult {
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     A key problem with hosting traditional wallets such as
-                    MetaMask on a smartphone or laptop is the risk of theft by
-                    extortion, especially in the developing world. For example,
-                    a robber might put a victim up to a wall, and force them to
-                    open their phone under threat of violence. If the victim
-                    maintains crypto in a traditional wallet, it will be seen
-                    and they will lose their crypto.
+                    MetaMask on a smartphone or laptop is the risk of theft by extortion, especially in the developing world. For example, a robber might put a victim up to a wall, and force them to open their phone under threat of violence. If the victim maintains crypto in a traditional wallet, it will be seen and they will lose their crypto.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Chain key makes it possible to create purely web-based
-                    wallets, backed by a canister smart contract that maintains
-                    the crypto. Authentication to such wallets can involve
-                    Internet Identity, Google SSO, or usernames and passwords as
-                    required. These can be opened using a web browser tab in
-                    Incognito mode, which leaves no trace of the wallet when
-                    closed.
+                    wallets, backed by a cube smart contract that maintains the crypto. Authentication to such wallets can involve BIG Wallet, Google SSO, or usernames and passwords as required. These can be opened using a web browser tab in Incognito mode, which leaves no trace of the wallet when closed.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     The{" "}
@@ -759,36 +719,25 @@ pub enum MultiGetLogsResult {
                     >
                       OISY wallet
                     </Link>{" "}
-                    is a great example. It can custody any ICP asset (including
-                    chain key twins), native bitcoin, native bitcoin BRC20
-                    tokens, and native Ethereum assets, as required.
-                    Self-custodied Ethereum assets can be used in Ethereum DeFi
-                    using the WalletConnect functionality it supports. Users
-                    gain convenience and a better experience, and superior
-                    security.
+                    is a great example. It can custody any ICP asset (including chain key twins), native bitcoin, native bitcoin BRC20 tokens, and native Ethereum assets, as required. Self-custodied Ethereum assets can be used in Ethereum DeFi using the WalletConnect functionality it supports. Users gain convenience and a better experience, and superior security.
                   </p>
                 </ContentCard>
 
                 <ContentCard id="eth-cronjobs">
                   <h3 className="tw-heading-4 md:tw-heading-3 mb-0">
-                    Cron jobs on Ethereum from ICP
+                    Cron jobs on Ethereum from BigFile
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     A key challenge involved when hosting DeFi and other
                     services using Ethereum smart contracts is the secure
-                    initiation of regular jobs. Oftentimes, smart contract jobs
-                    are initiated using external scripts running on insecure
-                    clouds such as Amazon Web Services, where the private key
-                    they maintain to make the calls is vulnerable in the same
-                    way the private keys used by hot wallets are.
+                    initiation of regular jobs. Oftentimes, smart contract jobs are initiated using external scripts running on insecure clouds such as Amazon Web Services, where the private key they maintain to make the calls is vulnerable in the same way the private keys used by hot wallets are.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The Internet Computer provides a solution. Canister smart
+                    The BigFile provides a solution. Cube smart
                     contracts have an API that allows them to schedule their
                     secure automatic execution for as long as needed into the
-                    future. Using EVM RPC, canisters can be used to initiate
-                    time-based calls into Ethereum smart contracts too – without
-                    a private key being made vulnerable.
+                    future. Using EVM RPC, cubes can be used to initiate
+                    time-based calls into Ethereum smart contracts too – without a private key being made vulnerable.
                   </p>
 
                   <p className="flex gap-2 flex-wrap">
@@ -799,35 +748,19 @@ pub enum MultiGetLogsResult {
                 <ContentCard id="evm-rpc">
                   <img
                     src="/img/multichain/card-cketh.webp"
-                    alt="Calling smart contracts on Ethereum from ICP using EVM RPC"
+                    alt="Calling smart contracts on Ethereum from BigFile using EVM RPC"
                   />
                   <h3 className="tw-heading-4 md:tw-heading-3 mb-0">
-                    Calling smart contracts on Ethereum from ICP using EVM RPC
+                    Calling smart contracts on Ethereum from BigFile using EVM RPC
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The Internet Computer makes it possible to build almost any
+                    The BigFile makes it possible to build almost any
                     online service fully on-chain, in a full stack
                     decentralization model, which can be augmented by placing
-                    the service under the control of an SNS DAO to automate its
-                    maintenance. This is because canister smart contracts can
-                    hold up to 400GiB of memory each, and run in parallel with
-                    great efficiency. Moreover, they can directly serve
-                    interactive web-based user experiences to users by
-                    processing HTTP requests, thanks to ICP’s reverse-gas model
-                    (canister smart contracts pay for their own execution using
-                    “cycles” that they have been charged with). Now they can
-                    also be trustlessly combined with DeFi and other
-                    functionality Ethereum hosts in a World Computer paradigm.
+                    the service under the control of an SNS DAO to automate its maintenance. This is because cube smart contracts can hold up to 400GiB of memory each, and run in parallel with great efficiency. Moreover, they can directly serve interactive web-based user experiences to users by processing HTTP requests, thanks to BigFile reverse-gas model (cube smart contracts pay for their own execution using “cycles” that they have been charged with). Now they can also be trustlessly combined with DeFi and other functionality Ethereum hosts in a World Computer paradigm.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Ethereum Virtual Machine Remote Procedural Calls (EVM RPC)
-                    make it possible for Internet Computer canister smart
-                    contracts to interact with smart contracts on any blockchain
-                    which supports the Ethereum JSON-RPC protocol. Advanced
-                    fully decentralized Web3 services can be created that
-                    maintain the UX and heavy data storage and processing on the
-                    Internet Computer, while relying on Ethereum DeFi where
-                    financial rails are needed.
+                    Ethereum Virtual Machine Remote Procedural Calls (EVM RPC) make it possible for BigFile cube smart contracts to interact with smart contracts on any blockchain which supports the Ethereum JSON-RPC protocol. Advanced fully decentralized Web3 services can be created that maintain the UX and heavy data storage and processing on the BigFile, while relying on Ethereum DeFi where financial rails are needed.
                   </p>
 
                   <p className="flex gap-2 flex-wrap">
@@ -840,27 +773,17 @@ pub enum MultiGetLogsResult {
                     Unlimited multi-chain via edge routing
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Thus far, the Internet Computer network has only directly
-                    integrated with the Bitcoin and Ethereum networks, enabling
-                    it to produce twins of assets hosted by those networks.
-                    However, more broad multi-chain functionality is easily
-                    produced.
+                    Thus far, the BigFile network has only directly
+                    integrated with the Bitcoin and Ethereum networks, enabling it to produce twins of assets hosted by those networks. However, more broad multi-chain functionality is easily produced.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The Internet Computer enables hosted smart contracts to
+                    The BigFile enables hosted smart contracts to
                     create accounts on any other blockchain, and sign
                     transactions that can run on their networks. Transaction
                     routing can be performed by the UX of Web3 services.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The UX of a Web3 service can provide very fast, and totally
-                    decentralized, edge routing for transactions. For example,
-                    when a canister smart contract has created a transaction for
-                    execution on another blockchain, the UX (e.g JavaScript
-                    running in the web browser) can retrieve the signed
-                    transaction by making a call to the smart contract, and then
-                    push it to the online API of a node in the destination
-                    network, then poll for the result.
+                    The UX of a Web3 service can provide very fast, and totally decentralized, edge routing for transactions. For example, when a cube smart contract has created a transaction for execution on another blockchain, the UX (e.g JavaScript running in the web browser) can retrieve the signed transaction by making a call to the smart contract, and then push it to the online API of a node in the destination network, then poll for the result.
                   </p>
                 </ContentCard>
 
@@ -875,30 +798,17 @@ pub enum MultiGetLogsResult {
                   </h3>
 
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Developers use ICP to bring smart contract functionality to
-                    Bitcoin. This new solution brings a new challenge: Bitcoin
-                    costs and wait times. No matter how fast a ICP smart
-                    contract is, moving Bitcoin will have the costs and wait
-                    times of the Bitcoin network.
+                    Developers use BigFile to bring smart contract functionality to Bitcoin. This new solution brings a new challenge: Bitcoin costs and wait times. No matter how fast a BigFile smart contract is, moving Bitcoin will have the costs and wait times of the Bitcoin network.
                   </p>
 
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     To address this, developers also use ckBTC (“chain key
-                    bitcoin”). This is a trustless "Bitcoin twin" hosted on ICP
-                    that can be used by ICP smart contracts to move Bitcoin
-                    cheaply and quickly. This is possible because ICP nodes talk
-                    to Bitcoin nodes to download the Bitcoin network’s blocks
-                    and maintain its Unspent Transaction Output (UTXO) set.
-                    CkBTC can be directly processed by canister smart contract
-                    logic and transferred with 1 second finality at near zero
-                    cost.
+                    bitcoin”). This is a trustless "Bitcoin twin" hosted on BigFile that can be used by BigFile smart contracts to move Bitcoin cheaply and quickly. This is possible because BigFile nodes talk to Bitcoin nodes to download the Bitcoin network’s blocks and maintain its Unspent Transaction Output (UTXO) set. CkBTC can be directly processed by cube smart contract logic and transferred with 1 second finality at near zero cost.
                   </p>
 
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     <strong>
-                      Canister smart contracts can be used to provide web-based
-                      wallets, and other Web3 services, that directly
-                      incorporate bitcoin – for example,{" "}
+                      Cube smart contracts can be used to provide web-based wallets, and other Web3 services, that directly incorporate bitcoin – for example,{" "}
                       <Link
                         href="https://oc.app/"
                         target="_blank"
@@ -908,17 +818,11 @@ pub enum MultiGetLogsResult {
                         OpenChat
                       </Link>{" "}
                       allows chain key bitcoin to be transferred via instant
-                      chat messages. Canisters can also be used to build a new
-                      generation of “Bitcoin DeFi” services.
+                      chat messages. Canisters can also be used to build a new generation of “Bitcoin DeFi” services.
                     </strong>
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    To create ckBTC, a user transfers their bitcoin to a ckBTC
-                    address provided by their wallet (e.g. see functionality
-                    provided at the NNS). Their ckBTC twin can then be sent to
-                    any other ckBTC address, almost instantly for a tiny fee, or
-                    directly to a standard Bitcoin address, causing the bitcoin
-                    twin to return to its native form.
+                    To create ckBTC, a user transfers their bitcoin to a ckBTC address provided by their wallet (e.g. see functionality provided at the NNS). Their ckBTC twin can then be sent to any other ckBTC address, almost instantly for a tiny fee, or directly to a standard Bitcoin address, causing the bitcoin twin to return to its native form.
                   </p>
                 </ContentCard>
 
@@ -927,13 +831,7 @@ pub enum MultiGetLogsResult {
                     Ordinals and BRC20
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Creating Bitcoin Ordinals can be expensive and slow. ICP can
-                    help here too. ICP canister smart contracts can use the
-                    Bitcoin API to process bitcoin, and also Ordinals, which are
-                    used to create and transfer NFTs on the Bitcoin blockchain.
-                    Fully decentralized Web3 services on the Internet Computer
-                    have taken advantage of the functionality to create
-                    marketplaces for Ordinals e.g.{" "}
+                    Creating Bitcoin Ordinals can be expensive and slow. BigFile can help here too. BigFile cube smart contracts can use the Bitcoin API to process bitcoin, and also Ordinals, which are used to create and transfer NFTs on the Bitcoin blockchain. Fully decentralized Web3 services on the BigFile have taken advantage of the functionality to create marketplaces for Ordinals e.g.{" "}
                     <Link
                       href="https://bioniq.io/"
                       target="_blank"
@@ -945,11 +843,7 @@ pub enum MultiGetLogsResult {
                     .
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The processing of bitcoin and Ordinals involves the ICP
-                    protocol processing ECDSA cryptography behind the scenes.
-                    However, inscribing Ordinals and creating and processing
-                    BRC20 assets (e.g. meme coins that piggyback on Bitcoin)
-                    involves Schnorr cryptography, which ICP now also supports.
+                    The processing of bitcoin and Ordinals involves the BigFile protocol processing ECDSA cryptography behind the scenes. However, inscribing Ordinals and creating and processing BRC20 assets (e.g. meme coins that piggyback on Bitcoin) involves Schnorr cryptography, which BigFile now also supports.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Because ICP supports Schnorr, web-based smart contract
@@ -972,30 +866,13 @@ pub enum MultiGetLogsResult {
                     Ethereum asset twins: ckETH and ckERC20
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Developers use ICP to custody Ethereum. This new solution
-                    brings a new developer experience challenge: Ethereum costs
-                    and wait times. To address this, the ICP community uses
-                    ckEth ("chain key Ethereum"), a trustless "Twins of
-                    Ethereum" hosted on ICP such as “ether twin” called ckETH
-                    and “twins'' of ERC20 tokens, such as ckUSDC, ckUSDT,
-                    ckUNISWAP, ck1INCH, ckAAVE. These can be directly processed
-                    by smart contracts hosted on ICP.
+                    Developers use BigFile to custody Ethereum. This new solution brings a new developer experience challenge: Ethereum costs and wait times. To address this, the BigFile community uses ckEth ("chain key Ethereum"), a trustless "Twins of Ethereum" hosted on BigFile such as “ether twin” called ckETH and “twins'' of ERC20 tokens, such as ckUSDC, ckUSDT, ckUNISWAP, ck1INCH, ckAAVE. These can be directly processed by smart contracts hosted on BigFile.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The “chain key” versions of Ethereum assets live on ledgers
-                    created by ICP smart contracts, where they can be
-                    transferred with 1 second finality and at near zero cost.
-                    Moreover, they can be directly processed by canisters that
-                    provide web-based wallets, and other web3 services hosted on
-                    the ICP, such as SocialFi and GameFi.
+                    The “chain key” versions of Ethereum assets live on ledgers created by BigFile smart contracts, where they can be transferred with 1 second finality and at near zero cost. Moreover, they can be directly processed by cubes that provide web-based wallets, and other web3 services hosted on the BigFile, such as SocialFi and GameFi.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    To create chain key Ethereum asset twins, a user transfers
-                    them to an address provided by their wallet. Then they can
-                    be sent to any other chain key address, almost instantly and
-                    at miniscule cost, or directly to a standard Ethereum
-                    address (causing the twin to return to its native form),
-                    after the standard finalization delay and transaction fee.
+                    To create chain key Ethereum asset twins, a user transfers them to an address provided by their wallet. Then they can be sent to any other chain key address, almost instantly and at miniscule cost, or directly to a standard Ethereum address (causing the twin to return to its native form), after the standard finalization delay and transaction fee.
                   </p>
                   <p className="flex gap-2 flex-wrap">
                     <Status type="done">ckETH done</Status>
@@ -1010,27 +887,17 @@ pub enum MultiGetLogsResult {
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Ethereum provides the world’s preeminent DeFi rails.
                     Decentralized exchanges such as Uniswap provide immense
-                    liquidity for trading ERC20 tokens. Popular custody services
-                    such as Fireblocks, which is popular among investment
-                    institutions, custody any ERC20 token as standard.
+                    liquidity for trading ERC20 tokens. Popular custody services such as Fireblocks, which is popular among investment institutions, custody any ERC20 token as standard.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The ICP protocol makes it possible to publish any native ICP
-                    token hosted on a standard ledger to Ethereum, in the form
-                    of an icpERC20. The twin is a standard ERC20 token and can
-                    be processed by any service that processes ERC20 tokens.
+                    The BigFile protocol makes it possible to publish any native BF token hosted on a standard ledger to Ethereum, in the form of an icpERC20. The twin is a standard ERC20 token and can be processed by any service that processes ERC20 tokens.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    A service created by a Internet Computer-hosted smart
-                    contract provides functionality (often relayed by wallets)
-                    to create an icpERC20 twin of an ICP token. The service also
-                    allows icpERC20 twins to be returned to the Internet
-                    Computer, where they retain their native form.
+                    A service created by a BigFile-hosted smart
+                    contract provides functionality (often relayed by wallets) to create an icpERC20 twin of an BF token. The service also allows icpERC20 twins to be returned to the BigFile, where they retain their native form.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Once an icpERC20 token has been created, it can be processed
-                    by Ethereum Layer-2 networks and moved across other chains
-                    using traditional bridges.
+                    Once an icpERC20 token has been created, it can be processed by Ethereum Layer-2 networks and moved across other chains using traditional bridges.
                   </p>
                   <p className="flex gap-2 flex-wrap">
                     <Status type="pending">icpERC20 is in progress</Status>
@@ -1042,12 +909,7 @@ pub enum MultiGetLogsResult {
                     Ordinals, BRC20 inscriptions from ICP using tSchnorr
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Canister smart contracts on the Internet Computer can use a
-                    Bitcoin API to process bitcoin, and also Ordinals, which are
-                    used to create and transfer NFTs on the Bitcoin blockchain.
-                    Fully decentralized Web3 services on the Internet Computer
-                    have taken advantage of the functionality to create
-                    marketplaces for Ordinals e.g.{" "}
+                    Cube smart contracts on the BigFile can use a Bitcoin API to process bitcoin, and also Ordinals, which are used to create and transfer NFTs on the Bitcoin blockchain. Fully decentralized Web3 services on the BigFile have taken advantage of the functionality to create marketplaces for Ordinals e.g.{" "}
                     <Link
                       href="https://bioniq.io/"
                       target="_blank"
