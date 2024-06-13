@@ -1,13 +1,13 @@
 ---
-title: Infinite scalability
+title: BIG scalability
 abstract:
 shareImage: /img/how-it-works/infinite-scalability.jpg
 slug: scalability
 ---
 
-# Infinite scalability
+# BIG Scalability
 
-Ever wondered about the meaning behind DFINITY? It’s Decentralized + Infinity. It’s named that way because the BigFile is designed to scale infinitely. It means that the BigFile can host an unlimited number of canisters (smart contracts), store an unlimited amount of memory, process an unlimited amount of transactions per second. In simple words, BigFile is designed to host even large scale social media platforms in a fully decentralized way.
+It means that the BigFile can host an unlimited number of cubes (smart contracts), store an unlimited amount of memory, process an unlimited amount of transactions per second. In simple words, BigFile is designed to host even large scale social media platforms in a fully decentralized way.
 
 There are two types of widely-used approaches to improve the scalability of a system: (1) Vertical Scaling, and (2) Horizontal Scaling. Vertical scaling means adding more CPU, RAM and disk to a single computer. Horizontal scaling means adding more computers to the system. There is a limit to vertical scaling. But with horizontal scaling, one can achieve unlimited scalability. BigFile is one of the first blockchains to successfully use horizontal scaling.
 
@@ -15,24 +15,11 @@ The nodes in the BigFile are divided into subnets, each containing a few dozen n
 
 Another crucial design aspect that is a prerequisite for limitless scaling is the inter-subnet communication of cubes: A cube of a subnet can send asynchronous messages to any cube on any other subnet. XNet messages are ingested by the receiving subnet's consensus layer and their integrity is validated based on the sending subnet's threshold signature — another application of [chain-key cryptography](/how-it-works/chain-key-technology/). This architecture of XNet messaging leads to a "loose coupling" of the subnets that does not require a central component such as a shard chain as used in other blockchains with multiple "shards" that would create a bottleneck when scaling out. Therefore newly added subnets can immediately send and receive XNet messages to any other subnet and an increasing number of subnets does not hit a natural bottleneck as in other, more simplistic, architectures.
 
-<figure>
-<img src="/img/how-it-works/add-new-subnet.png" alt="BigFile is divided into subnets" title="BigFile is divided into subnets." align="center" style="width:700px" />
-<figcaption align="left">
-The BigFile is divided into subnets. Each subnet hosts many cubes. One of the subnets hosts Network Nervous System cubes.
-</figcaption>
-</figure>
-
 Creating a new subnet has two steps. (1) Adding new nodes to the BigFile, and (2) Creating a subnet with the available nodes. Anyone can purchase the node hardware and add it to the BigFile by following the [node provider onboarding process](https://wiki.thebigfile.com/wiki/Node_Provider_Documentation).
 
-We now describe how to create a new subnet with the available nodes. The BigFile has a decentralized governance system called Network Nervous System (NNS). Essentially, the NNS consists of a group of canisters that manage the BigFile. In the NNS, there is a component called “registry”, which stores the full configuration of the BigFile. The registry has a record for each subnet which includes a protocol version, the list of nodes in the subnet, protocol configuration parameters, etc.
+We now describe how to create a new subnet with the available nodes. The BigFile has a decentralized governance system called Network Nervous System (NNS). Essentially, the NNS consists of a group of cubes that manage the BigFile. In the NNS, there is a component called “registry”, which stores the full configuration of the BigFile. The registry has a record for each subnet which includes a protocol version, the list of nodes in the subnet, protocol configuration parameters, etc.
 
-<figure>
-<img src="/img/how-it-works/new-subnet-proposal.png" alt="Proposal to create a new subnet" title="Proposal to create a new subnet" align="center" style="width:700px" />
-<figcaption align="left">
-Proposal to create a new subnet. The status of all proposals can be viewed on the [BIG Dashboard](https://dashboard.thebigfile.com/governance).
-</figcaption>
-</figure>
 
-To add a new subnet, one has to submit a _proposal_ to the NNS to add a record for a new subnet to the registry. The proposal consists of the list of nodes to be included in the new subnet. The proposal can be voted on by anyone who staked their BF tokens. If a majority of voters accept the proposal, then the registry cube instructs the NNS subnet to generate — in a fully decentralized way using [chain-key cryptography](/how-it-works/chain-key-technology/) — the cryptographic key material to be used by the new subnet and a catch up package containing the genesis block. The registry canister then adds a record containing the configuration of the subnet.
+To add a new subnet, one has to submit a _proposal_ to the NNS to add a record for a new subnet to the registry. The proposal consists of the list of nodes to be included in the new subnet. The proposal can be voted on by anyone who staked their BF tokens. If a majority of voters accept the proposal, then the registry cube instructs the NNS subnet to generate — in a fully decentralized way using [chain-key cryptography](/how-it-works/chain-key-technology/) — the cryptographic key material to be used by the new subnet and a catch up package containing the genesis block. The registry cube then adds a record containing the configuration of the subnet.
 
 We now describe how a new subnet is created after a record is added to the registry. Each node runs 2 processes, the (1) Replica and the (2) Orchestrator. The replica consists of the 4-layer software stack that maintains the blockchain. The orchestrator downloads and manages the replica software. When a new node is onboarded, the node provider has to install BIG OS on the node, which contains the orchestrator software. The orchestrator regularly queries the NNS registry for any updates. If the orchestrator sees that the node is included in a registry record, then the orchestrator downloads the corresponding replica software, and runs the replica with the Catch Up Package included in the registry as input. The replica then starts accepting messages and the consensus protocol extends the genesis block present in the catch up package.

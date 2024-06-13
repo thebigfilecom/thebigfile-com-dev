@@ -1,43 +1,5 @@
 [
   {
-    "id": "helix",
-    "name": "Helix Markets",
-    "oneLiner": "Bringing true ownership and full transparency to crypto trading",
-    "website": "https://www.helixmarkets.io/",
-    "tags": [
-      "Ethereum",
-      "Bitcoin",
-      "DeFi"
-    ],
-    "display": "Large",
-    "stats": "2,000+ users",
-    "twitter": "https://twitter.com/HelixMarkets",
-    "description": "Helix Markets is a decentralized exchange that aims to bring true ownership and full transparency to crypto trading.",
-    "usesInternetIdentity": true,
-    "logo": "/img/showcase/helix_logo.webp",
-    "screenshots": [
-      "/img/showcase/helix_screenshot.png"
-    ]
-  },
-  {
-    "id": "bioniq",
-    "name": "Bioniq",
-    "oneLiner": "The fastest Ordinals marketplace",
-    "website": "https://bioniq.io/",
-    "tags": [
-      "Bitcoin",
-      "Enterprise",
-      "NFT"
-    ],
-    "description": "Bioniq is the fastest Ordinals marketplace. Buy, sell, and trade with no gas fees, near-instant finality, and decentralized secure token bridging..",
-    "display": "Large",
-    "stats": "45,000+ users",
-    "logo": "/img/showcase/bioniq-logo.jpeg",
-    "screenshots": [
-      "/img/showcase/bioniq-screenshot-min.png"
-    ]
-  },
-  {
     "id": "openchat",
     "name": "OpenChat",
     "oneLiner": "Decentralized alternative to WhatsApp",
@@ -256,27 +218,6 @@
     "twitter": "https://twitter.com/ICLighthouse?s=20&t=hL-7QAUfiWo75L8pZzJ7fw",
     "discord": "https://discord.com/invite/FQZFGGq7zv",
     "logo": "/img/showcase/iclighthouse_logo.webp"
-  },
-  {
-    "id": "astrox",
-    "name": "AstroX ME",
-    "oneLiner": "A powerful multichain wallet",
-    "website": "https://astrox.me/#/",
-    "tags": [
-      "Tools / Infrastructure",
-      "Wallet",
-      "Bitcoin",
-      "NFT",
-      "Ethereum"
-    ],
-    "description": "ME wallet securing your assets without seed phrase across any devices.",
-    "github": "https://github.com/AstroxNetwork",
-    "twitter": "https://twitter.com/astrox_network",
-    "logo": "/img/showcase/astroxme_logo.webp",
-    "display": "Large",
-    "screenshots": [
-      "/img/showcase/astrox_me_screenshot.webp"
-    ]
   },
   {
     "id": "yumi",

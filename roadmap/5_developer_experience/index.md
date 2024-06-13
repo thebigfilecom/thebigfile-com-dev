@@ -4,4 +4,4 @@ card: /img/roadmap/dx.card.jpg
 overlay: /img/roadmap/dx.overlay.jpg
 ---
 
-The BigFile team at the wants to make sure that  developers can start building on the BigFile with confidence and ease, which is why at least 10 percent of its resources are  allocated to building developer toolkits that support various programing languages.
+The BigFile team wants developers to be able to start building on BigFile with confidence and ease, so they are developing developer toolkits that support a variety of programming languages.

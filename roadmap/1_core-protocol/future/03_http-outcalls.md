@@ -1,9 +1,9 @@
 ---
-title: HTTPS Outcalls from Canisters
+title: HTTPS Outcalls from Cube
 links:
   Forum Link: https://forum.thebigfile.com/
   Proposal: https://dashboard.thebigfile.com/
-  IC Wiki: https://wiki.thebigfile.com/wiki/HTTPS_outcalls
+  BIG Wiki: https://wiki.thebigfile.com/wiki/HTTPS_outcalls
   Documentation: https://thebigfile.com/https-outcalls
 eta: 2025
 is_community: true

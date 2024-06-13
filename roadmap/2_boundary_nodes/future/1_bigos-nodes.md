@@ -1,5 +1,5 @@
 ---
-title: ICOS Boundary Nodes
+title: BIGOS Boundary Nodes
 links:
   Forum Link: https://forum.thebigfile.com/
   Proposal: https://dashboard.thebigfile.com/

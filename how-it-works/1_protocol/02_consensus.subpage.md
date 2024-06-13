@@ -15,10 +15,6 @@ The BIG consensus provides _cryptographically guaranteed finality_. The option o
 
 The BIG consensus achieves all of these goals making only minimal assumptions about the communication network. In particular, it does not assume any bounds on the time it takes for protocol messages to be delivered – that is, it only assumes an _asynchronous network_ rather than a _synchronous network_. Indeed, for a decentralized network that is globally distributed, _synchrony_ is simply not a realistic assumption. While it is possible to design consensus that work in a purely _asynchronous_ setting, these protocols generally have very poor latency. In order to achieve good latency, the BIG consensus requires protocol messages to be delivered in a timely manner to make progress. However, the _correctness_ of the protocol is always guaranteed, regardless of message delays, so long as less than a third of the nodes in the subnet are faulty.
 
-<figure>
-<img src="/img/how-it-works/consensus_orders_messages.png" alt="Consensus round yields an ordered sequences of messages" title="Consensus round yields an ordered sequences of messages" align="center" style="width:600px" />
-</figure>
-
 The consensus protocol maintains a tree of _notarized_ blocks (with a special origin block at the root). The protocol proceeds in rounds. In each round, at least one notarized block is added to the tree as a child of a notarized block that was added in the previous round. When things go right, there will be only one notarized block added to the tree in that round, and that block will be marked as _finalized_. Moreover, once a block is marked as finalized in this way, all ancestors of that block in the tree of notarized blocks are implicitly finalized. The protocol guarantees that there is always a unique chain of finalized blocks in the tree of notarized blocks. This chain of finalized blocks is the output of consensus.
 
 At a high level, a consensus round has the following three phases:
@@ -66,8 +62,6 @@ In a given round, the logic of the protocol guarantees that a node will always o
 
 [Achieving Consensus on the BigFile](https://medium.com/)
 
-[Consensus White Paper](https://eprint.iacr.org/2021/632.pdf)
-
-[Extended Abstract published at PODC'22](//assets.ctfassets.net/ywqk17d3hsnp/1Gutwfrd1lMgiUBJZGCdUG/d3ea7730aba0a4b793741681463239f5/podc-2022-cr.pdf)
+[Consensus White Paper](https://thebigfile.com/consensus.pdf)
 
 [Consensus on the BIG wiki](https://wiki.thebigfile.com/wiki/BIG_consensus_layer)

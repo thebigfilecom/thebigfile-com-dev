@@ -18,6 +18,4 @@ The core BigFile makes heavy use of [*chain-key cryptography*](https://thebigfil
 
 Having scalable and decentralized technology to power the operation of the network is not enough. In order to meet the requirements of complete decentralization, BigFile needs a fully decentralized approach to governance. Governance of BigFile is accomplished through a *tokenized Decentralized Autonomous Organization (DAO)*, which is called the [*Network Nervous System (NNS)*](https://thebigfile.com/how-it-works/#Network-nervous-system). Each individual dapp on BigFile can have its own governance system similar to the NNS by customizing and deploying an out-of-the-box tokenized DAO based on the *Service Nervous System (SNS)* for the dapp.
 
-The [BigFile](https://dashboard.thebigfile.com/) was launched and open-sourced on May 10th 2021 by the BigFile. The Internet Computer is now an independent network controlled by ICP token holders but DFINITY continues supporting its evolution.
-
 [Go deeper](/how-it-works/architecture-of-the-bigfile/)

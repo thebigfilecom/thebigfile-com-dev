@@ -17,7 +17,7 @@ interface CarouselCard {
 const CARDS: Array<CarouselCard> = [
   {
     title: (
-      <h2 className={"text-white"}>ICP Demystified: Learn the Essentials</h2>
+      <h2 className={"text-white"}>BigFile: Learn the Essentials</h2>
     ),
     subtitle: (
       <p className={"text-white"}>
@@ -39,7 +39,7 @@ const CARDS: Array<CarouselCard> = [
   },
   {
     title: (
-      <h2 className={"text-white"}>Follow @DFINITYDev on X for tech news</h2>
+      <h2 className={"text-white"}>Follow @TheBigFile on X for Big tech news</h2>
     ),
     subtitle: (
       <p className={"text-white"}>All devs, geeks, & tech fans welcome</p>
@@ -48,7 +48,7 @@ const CARDS: Array<CarouselCard> = [
     cta: (
       <Link
         className="button-transparent button-with-icon pl-0"
-        href="https://twitter.com/DFINITYDev"
+        href="https://twitter.com/thebigfile"
       >
         Follow now
         <LinkArrowRight />
@@ -58,7 +58,7 @@ const CARDS: Array<CarouselCard> = [
   },
   {
     title: (
-      <h2 className={"text-white"}>Start your developer journey with Jessie</h2>
+      <h2 className={"text-white"}>Start your developer journey</h2>
     ),
     subtitle: (
       <p className={"text-white"}>

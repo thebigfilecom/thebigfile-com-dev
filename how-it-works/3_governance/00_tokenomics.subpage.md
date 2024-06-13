@@ -48,6 +48,4 @@ Investments via decentralization swaps in DAOs act like rocket fuel for the BIG 
 
 ### Development of total supply
 
-The BIG has inflationary and deflationary mechanisms. Governance participants can convert voting rewards to newly minted BF. Also, node providers receive rewards in the form of newly minted BF tokens. On the other hand, BF is converted to cycles (i.e., burned) in order to pay for computation and storage. This is depicted in the following picture.
-
-![](/img/how-it-works/deflation_inflation.png)
+The BIG has inflationary and deflationary mechanisms. Governance participants can convert voting rewards to newly minted BF. Also, node providers receive rewards in the form of newly minted BF tokens. On the other hand, BF is converted to cycles (i.e., burned) in order to pay for computation and storage. 
