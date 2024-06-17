@@ -6,19 +6,19 @@ keywords: [beginner, tutorial, cycles]
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
-# Converting BF tokens into cycles
+# Converting BIG tokens into cycles
 
 <MarkdownChipRow labels={["Beginner", "Tutorial"]} />
 
 
 ## Overview
-To convert BF tokens into <GlossaryTooltip>cycles</GlossaryTooltip>, you first need to obtain some BF and transfer to the right account. You can get BF tokens on exchanges, or ask someone you know to send you some. To figure out which account to transfer the BF tokens to, run the following:
+To convert BIG tokens into <GlossaryTooltip>cycles</GlossaryTooltip>, you first need to obtain some BIG and transfer to the right account. You can get BIG tokens on exchanges, or ask someone you know to send you some. To figure out which account to transfer the BIG tokens to, run the following:
 
 ``` bash
 dfx ledger account-id
 ```
 
-This will display your account number on the ICP ledger. It looks similar to this:
+This will display your account number on the BIG ledger. It looks similar to this:
 
 ```
 e213184a548871a47fb526f3cba24e2ee2fbbc8129c4ab497ef2ce535130a0a4
@@ -26,9 +26,9 @@ e213184a548871a47fb526f3cba24e2ee2fbbc8129c4ab497ef2ce535130a0a4
 
 ## Obtaining tokens
 
-There are a few different ways you might acquire BF tokens. For example, you might:
+There are a few different ways you might acquire BIG tokens. For example, you might:
 
-- Purchase BF tokens directly through an exchange that lists BF tokens available for trade. To see all available places to purchase BF tokens, check out this [page](https://coinmarketcap.com/currencies/).
+- Purchase BIG tokens directly through an exchange that lists BIG tokens available for trade. To see all available places to purchase BIG tokens, check out this [page](https://coinmarketcap.com/currencies/).
 
 - Receive tokens as rewards for participating in the governance of the BigFile.
 
@@ -40,7 +40,7 @@ $5-$10 USD worth of tokens should be enough to get started. Depending on your wo
 
 ### Checking the balance
 
-Once you have obtained some BF tokens into your ICP ledger account, you can see the balance using this command:
+Once you have obtained some BIG tokens into your BIG ledger account, you can see the balance using this command:
 
 ``` bash
 dfx ledger --network ic balance
@@ -49,12 +49,12 @@ dfx ledger --network ic balance
 This will output something like this:
 
 ```
-12.49840000 ICP
+12.49840000 BIG
 ```
 
-## Convert ICP to cycles
+## Convert BIG to cycles
 
-With those BF tokens ready, you can now convert them into cycles using the following command:
+With those BIG tokens ready, you can now convert them into cycles using the following command:
 
 ```
 dfx cycles convert AMOUNT --network ic

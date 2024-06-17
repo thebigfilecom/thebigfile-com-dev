@@ -39,7 +39,7 @@ const sidebars = {
             "developer-docs/getting-started/cycles/cycles-faucet",
 	    "developer-docs/getting-started/cycles/cycles-ledger",
             "developer-docs/getting-started/cycles/cycles-wallet",
-            "developer-docs/getting-started/cycles/converting_bf_tokens_into_cycles",
+            "developer-docs/getting-started/cycles/converting_big_tokens_into_cycles",
           ],
         },
         {
@@ -609,13 +609,13 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "BF tokens",
+          label: "BIG tokens",
           items: [
-            "developer-docs/defi/bf-tokens/overview",
-            "developer-docs/defi/bf-tokens/ledger-local-setup",
-            "developer-docs/defi/bf-tokens/using-the-ledger",
-            "developer-docs/defi/bf-tokens/icp-index-local-setup",
-            "developer-docs/defi/bf-tokens/account-trimming",
+            "developer-docs/defi/big-tokens/overview",
+            "developer-docs/defi/big-tokens/ledger-local-setup",
+            "developer-docs/defi/big-tokens/using-the-ledger",
+            "developer-docs/defi/big-tokens/icp-index-local-setup",
+            "developer-docs/defi/big-tokens/account-trimming",
           ],
         },
         {

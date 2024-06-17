@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
         headline={<>BIGFILE ON BLOCKCHAIN</>}
         aiPlaceholders={[
           "Is the BigFile decentralized?",
-          "What can I do with BF token?",
+          "What can I do with BIG token?",
           "What is the first step to my BigFile dapp?",
         ]}
       >

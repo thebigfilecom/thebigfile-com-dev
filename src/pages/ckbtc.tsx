@@ -96,7 +96,7 @@ function CkbtcPage(): JSX.Element {
             <div className="-mt-40 md:mt-0 md:absolute md:right-0 md:-top-60 text-center">
               <motion.img
                 variants={transitions.fadeIn}
-                src="/img/bf-tokens/ckBTC-token-1.webp"
+                src="/img/big-tokens/ckBTC-token-1.webp"
                 alt=""
                 className="w-full max-w-sm md:max-w-none aspect-[563/492]"
               />

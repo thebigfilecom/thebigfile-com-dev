@@ -249,7 +249,7 @@ The following language and capitalization of certain terms and phrases should be
   
     When there may be a confusion between ICP referring to Internet Computer Protocol and ICP the token, the words 'Internet Computer Protocol' can be written out for clarity.
   
-- IC SDK: should be used in place of any reference to the IC's SDK.
+- BIG SDK: should be used in place of any reference to the BIG's SDK.
 - mainnet
     - In context: Deploying `to the mainnet` or `on the mainnet`. Note the use of the word `the`.
     - Other contextual usage:

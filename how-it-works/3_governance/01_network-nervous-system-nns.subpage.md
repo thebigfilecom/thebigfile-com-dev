@@ -7,14 +7,14 @@ slug: network-nervous-system-nns
 
 # The Network Nervous System (NNS)
 
-The Network Nervous System (NNS) is the DAO that controls the BigFile blockchain. It is an open, permissionless governance system, where everyone can participate by staking BF utility tokens in so-called _neurons_. Decisions are made by voting on _proposals_, which can be submitted by anyone.
+The Network Nervous System (NNS) is the DAO that controls the BigFile blockchain. It is an open, permissionless governance system, where everyone can participate by staking BIG utility tokens in so-called _neurons_. Decisions are made by voting on _proposals_, which can be submitted by anyone.
 
 
 
 
 ## Governance participation
-Governance participants are called _neurons_. Neurons are created by locking BF utility tokens for a specified period of time. The NNS is a stake-based governance system, where a neuron's voting power is depending on three main factors:
-1) the amount of BF tokens the neuron stakes
+Governance participants are called _neurons_. Neurons are created by locking BIG utility tokens for a specified period of time. The NNS is a stake-based governance system, where a neuron's voting power is depending on three main factors:
+1) the amount of BIG tokens the neuron stakes
 2) the neuron's _dissolve delay_ which is the duration of the staking period
 3) the neuron's _age_, which on a high level is the time since the tokens have been staked.
 
@@ -60,7 +60,7 @@ With the exception of motion proposals, all these decisions are executed fully o
 The NNS is implemented as a set of _cube smart contracts_ on a dedicated _NNS system subnet_. Facilitated by the low computation and storage costs on the BigFile, and since the NNS subnet is cross-subsidized by other subnets, voting on proposals is free of charge and a high volume of votes and proposals can be processed and stored on-chain.
 
 
-Two important cubes are the _governance cube_ that manages neurons, proposals, and the voting process, and the _BigFile ledger cube_ that implements the BF token which is the NNS governance token. In addition, there are other cubes for special purposes, for example the _cycles minting cube (CMC)_ that is responsible to mint _cycles_ - the "gas" used for computation and storage on the BigFile.
+Two important cubes are the _governance cube_ that manages neurons, proposals, and the voting process, and the _BigFile ledger cube_ that implements the BIG token which is the NNS governance token. In addition, there are other cubes for special purposes, for example the _cycles minting cube (CMC)_ that is responsible to mint _cycles_ - the "gas" used for computation and storage on the BigFile.
 
 
 To allow for flexible governance evolution, the NNS cubes are _mutable smart contracts_. Two cubes, called _root_ and _lifeline_, are responsible for upgrading the NNS cubes. As NNS cubes control each other, it is ensured that they can only be changed by an NNS DAO decision.

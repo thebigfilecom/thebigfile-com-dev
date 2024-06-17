@@ -52,10 +52,9 @@ function NnsPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  The NNS is one of the world's largest DAOs that governs the
-                  BigFile. It is a 100% on-chain, permissionless
+                  The NNS is one of the world's largest DAOs that governs the BigFile. It is a 100% on-chain, permissionless
                   system that continuously upgrades the BigFile based
-                  on the voting of BF token holders.
+                  on the voting of BIG token holders.
                 </motion.p>
                 <MotionLink
                   className="button-white"
@@ -102,8 +101,7 @@ function NnsPage() {
               >
                 The BigFile doesn’t require complicated forks to
                 upgrade its capacity. Anyone can submit a proposal to make
-                protocol level changes. Once approved by BF token holders,
-                these changes are automatically deployed by the NNS, seamlessly upgrading the network. For participating in governance, BF token holders receive voting rewards.
+                protocol level changes. Once approved by BIG token holders, these changes are automatically deployed by the NNS, seamlessly upgrading the network. For participating in governance, BIG token holders receive voting rewards.
               </motion.p>
               <MotionLink
                 className="link-external"
@@ -123,18 +121,13 @@ function NnsPage() {
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                Anyone can participate in governance by simply sending BF to
-                the NNS and staking it in neurons. These neurons have to be
-                locked for a specific time between 6 months and 8 years to be
-                eligible for voting and earning voting rewards.
+                Anyone can participate in governance by simply sending BIG to the NNS and staking it in neurons. These neurons have to be locked for a specific time between 6 months and 8 years to be eligible for voting and earning voting rewards.
               </motion.p>
               <motion.p
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                Once locked, neurons can vote on proposals manually or follow
-                the vote of other neurons — this is called liquid democracy. The longer a neuron is locked for, the more voting rewards it
-                collects
+                Once locked, neurons can vote on proposals manually or follow the vote of other neurons — this is called liquid democracy. The longer a neuron is locked for, the more voting rewards it collects
               </motion.p>
               <MotionLink
                 className="button-primary"
@@ -155,8 +148,7 @@ function NnsPage() {
                 variants={transitions.item}
               >
                 Voting rewards are distributed among participants who have
-                locked BF in neurons and are voting either manually or follow
-                other neurons that vote. Rewards are distributed daily to voting neurons as maturity. This maturity is unrealized ICP that can be either staked or spawned. Staking maturity adds to the voting power of the neuron. Spawning mints the maturity into a neuron that becomes liquid after a week so that the ICP contained in the neuron can also be used outside of the NNS.
+                locked BIG in neurons and are voting either manually or follow other neurons that vote. Rewards are distributed daily to voting neurons as maturity. This maturity is unrealized ICP that can be either staked or spawned. Staking maturity adds to the voting power of the neuron. Spawning mints the maturity into a neuron that becomes liquid after a week so that the ICP contained in the neuron can also be used outside of the NNS.
               </motion.p>
               <MotionLink
                 className="link-external"
@@ -187,8 +179,7 @@ function NnsPage() {
               variants={transitions.item}
               className="tw-paragraph md:tw-lead mb-0"
             >
-              Get a high-level overview of how to participate in governance,
-              from acquiring BF tokens to staking and voting.
+              Get a high-level overview of how to participate in governance, from acquiring BIG tokens to staking and voting.
             </motion.p>
           </div>
           <motion.div variants={transitions.item}>
@@ -217,8 +208,7 @@ function NnsPage() {
               className="tw-heading-4 md:tw-heading-60 mb-3 md:mb-8"
               variants={transitions.item}
             >
-              Check out the open and autonomous governance system running 100%
-              on chain
+              Check out the open and autonomous governance system running 100% on chain
             </motion.h2>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-8"

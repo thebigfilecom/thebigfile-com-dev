@@ -29,9 +29,7 @@ export const extraMetadata: Record<string, Partial<DaoCardProps>> = {
     twitter: "https://twitter.com/gldrwa",
     description: (
       <>
-        The Gold DAO represents a groundbreaking fusion of traditional gold and
-        modern blockchain technology, allowing anyone in the world to access
-        physical gold instantaneously, without depending on banks.
+        The Gold DAO represents a groundbreaking fusion of traditional gold and modern blockchain technology, allowing anyone in the world to access physical gold instantaneously, without depending on banks.
       </>
     ),
   },

@@ -1,7 +1,6 @@
 # BigFile developer portal
 
-The BigFile developer portal brings together all the resources needed for developers to build on the
-BigFile. Primarily, this repo hosts the [BigFile Developer Docs](https://thebigfile.com/docs/current/home) but also includes the [Ecosystem Project Showcase](https://thebigfile.com/ecosystem), [community tooling page](https://thebigfile.com/tooling), and the thebigfile.com ['How it works'](https://thebigfile.com/how-it-works) series. 
+The BigFile developer portal brings together all the resources needed for developers to build on the BigFile. Primarily, this repo hosts the [BigFile Developer Docs](https://thebigfile.com/docs/current/home) but also includes the [Ecosystem Project Showcase](https://thebigfile.com/ecosystem), [community tooling page](https://thebigfile.com/tooling), and the thebigfile.com ['How it works'](https://thebigfile.com/how-it-works) series. 
 
 
 ## Running a local development instance of this repo

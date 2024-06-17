@@ -83,8 +83,8 @@ function TokenHolders(): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
       <Layout
-        title="BF Tokens"
-        description="BF, the native utility token of the Internet Computer powers computation, staking, voting, governance and ownership."
+        title="BIG Tokens"
+        description="BIG, the native utility token of the BigFile powers computation, staking, voting, governance and ownership."
         editPath={`https://github.com/thebigfilecim/thebigfile-com-dev/edit/main/${__filename}`}
       >
         <main className="overflow-hidden">
@@ -101,7 +101,7 @@ function TokenHolders(): JSX.Element {
                   className="tw-heading-3 md:tw-heading-2 mb-8 md:mb-6 relative"
                   variants={transitions.item}
                 >
-                  Understanding the BF token{" "}
+                  Understanding the BIG token{" "}
                 </motion.h1>
                 <motion.p
                   className="tw-lead-sm md:tw-lead mb-0 relative"
@@ -122,7 +122,7 @@ function TokenHolders(): JSX.Element {
             <div className="-mt-40 md:mt-0 md:absolute md:right-0 md:-top-60 text-center">
               <motion.img
                 variants={transitions.fadeIn}
-                src="/img/bf-tokens/hero.webp"
+                src="/img/big-tokens/hero.webp"
                 alt=""
                 className="w-full max-w-sm md:max-w-none aspect-[563/492]"
               />
@@ -138,28 +138,21 @@ function TokenHolders(): JSX.Element {
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                The BF token plays a number of roles on the BigFile.
-                Firstly, as a governance token, it can be staked to exercise
-                those governance rights. As a utility token, it can be burned to
-                obtain ‘cycles‘ which serves as gas for computation and storage
-                in Cube smart contracts. It can also be minted to reward
-                ‘node machine‘ providers for providing that compute and storage.
+                The BIG token plays a number of roles on the BigFile.
+                Firstly, as a governance token, it can be staked to exercise those governance rights. As a utility token, it can be burned to obtain ‘cycles‘ which serves as gas for computation and storage in Cube smart contracts. It can also be minted to reward ‘node machine‘ providers for providing that compute and storage.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                In addition to these core uses, BF tokens can be used to
-                participate in decentralisation swaps to become a co-owner of an
-                SNS DAO, and when using many smart contract services built on
-                the BigFile such as registries, marketplaces and
-                exchanges.
+                In addition to these core uses, BIG tokens can be used to
+                participate in decentralisation swaps to become a co-owner of an SNS DAO, and when using many smart contract services built on the BigFile such as registries, marketplaces and exchanges.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-0"
                 variants={transitions.item}
               >
-                The BF token implements the BFRC-20 standard.
+                The BIG token implements the BIGRC-20 standard.
               </motion.p>
             </div>
             <div className="flex flex-col gap-5 md:flex-row md:w-8/10">
@@ -169,13 +162,13 @@ function TokenHolders(): JSX.Element {
               >
                 <h3 className="inline-flex items-center gap-3 mb-6">
                   <img
-                    src="/img/bf-tokens/bf-token-logo.svg"
-                    alt="BF logo"
+                    src="/img/big-tokens/bf-token-logo.svg"
+                    alt="BIG logo"
                     loading="lazy"
                     className="w-16 h-16"
                   />
                   <span className="flex-1 text-gradient tw-heading-5">
-                    BF token utility
+                   BIG token utility
                   </span>
                 </h3>
                 <ul className="checklist space-y-3 mb-0">
@@ -197,7 +190,7 @@ function TokenHolders(): JSX.Element {
               >
                 <h3 className="inline-flex items-center gap-3 mb-6">
                   <img
-                    src="/img/bf-tokens/cycles-logo.svg"
+                    src="/img/big-tokens/cycles-logo.svg"
                     className="w-16 h-16"
                     loading="lazy"
                     alt="Cycles logo"
@@ -277,7 +270,7 @@ function TokenHolders(): JSX.Element {
               variants={transitions.item}
             >
               <h2 className="tw-heading-3 mb-0 md:tw-heading-60">
-                Ways to use BF tokens
+                Ways to use BIG tokens
               </h2>
             </AnimateSpawn>
             <div className="container-12 grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -290,13 +283,8 @@ function TokenHolders(): JSX.Element {
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
                   The BigFile is run by the NNS, the largest
-                  DAO managing an L1 blockchain. BF token holders can
-                  participate in network governance simply by staking tokens in
-                  neurons and locking them with a specified dissolve delay (time
-                  to unlock). A neuron with a dissolve delay greater than 6
-                  months can vote on governance proposals and earn rewards. BF
-                  neuron holders can also submit proposals to make changes to
-                  the protocol.
+                  DAO managing an L1 blockchain. BIG token holders can
+                  participate in network governance simply by staking tokens in neurons and locking them with a specified dissolve delay (time to unlock). A neuron with a dissolve delay greater than 6 months can vote on governance proposals and earn rewards. BIG neuron holders can also submit proposals to make changes to the protocol.
                 </p>
                 <p className="mb-0">
                   <Link
@@ -304,7 +292,7 @@ function TokenHolders(): JSX.Element {
                     className="link-primary link-with-icon items-center"
                   >
                     <LinkArrowRight />
-                    Participate in governance by staking BF
+                    Participate in governance by staking BIG
                   </Link>
                 </p>
               </AnimateSpawn>
@@ -317,12 +305,7 @@ function TokenHolders(): JSX.Element {
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
                   Unlike other smart contract blockchains, the BigFile
-                  runs on a “Reverse Gas Model”. This means computation and
-                  storage costs are paid for by developers, and developers are
-                  responsible topping up smart contracts with cycles to fuel the
-                  compute power and storage of their dapps. The Reverse Gas
-                  Model allows users to interact with dapps on the BigFile without tokens, and as seamlessly as they would on
-                  any Web2 application.
+                  runs on a “Reverse Gas Model”. This means computation and storage costs are paid for by developers, and developers are responsible topping up smart contracts with cycles to fuel the compute power and storage of their dapps. The Reverse Gas Model allows users to interact with dapps on the BigFile without tokens, and as seamlessly as they would on any Web2 application.
                 </p>
                 <p className="mb-0">
                   <Link
@@ -338,7 +321,7 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
                 className="
                 bg-white/80 border border-white border-solid rounded-xl px-6 py-8 md:p-16 md:col-span-2
-                bg-[url(/img/bf-tokens/ecosystem-mobile.webp)] sm:bg-[url(/img/bf-tokens/ecosystem.webp)] 
+                bg-[url(/img/big-tokens/ecosystem-mobile.webp)] sm:bg-[url(/img/big-tokens/ecosystem.webp)] 
                 bg-[center_bottom_-20px] bg-[length:120%] bg-no-repeat 
 
                 sm:bg-[right_-200px_top_-100px] sm:bg-[length:auto_180%]
@@ -348,12 +331,10 @@ function TokenHolders(): JSX.Element {
               >
                 <div className="sm:w-6/10 lg:w-4/10">
                   <h3 className="tw-heading-5 md:tw-heading-4 mb-6">
-                    Use BF in the ecosystem
+                    Use BIG in the ecosystem
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                    Store BF in wallets, swap it on DEXs, collect NFTs or tip
-                    friends while chatting. The BigFile is home to a
-                    growing ecosystem of dapps, many of which use BF.
+                    Store BIG in wallets, swap it on DEXs, collect NFTs or tip friends while chatting. The BigFile is home to a growing ecosystem of dapps, many of which use BIG.
                   </p>
                   <p className="pb-[100%] sm:pb-0 mb-0">
                     <Link
@@ -382,10 +363,10 @@ function TokenHolders(): JSX.Element {
               className="tw-heading-3 md:tw-heading-60 mb-8"
               variants={transitions.item}
             >
-              Where to get BF{" "}
+              Where to get BIG{" "}
             </motion.h2>
             <motion.p className="tw-lead mb-8" variants={transitions.item}>
-              The BF token is widely available on centralized exchanges.
+              The BIG token is widely available on centralized exchanges.
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
@@ -408,15 +389,13 @@ function TokenHolders(): JSX.Element {
                   className="tw-heading-4 md:tw-heading-3 mb-10"
                   variants={transitions.item}
                 >
-                  Swap BTC for BF on a DEX.
+                  Swap BTC for BIG on a DEX.
                 </motion.h2>
                 <motion.p
                   className="tw-paragraph md:tw-lead-sm mb-0"
                   variants={transitions.item}
                 >
-                  Directly fund a ckBTC wallet with BTC and swap it for BF
-                  using any of these DEXs — all without centralized exchanges.
-                  This was made possible on the BigFile through native{" "}
+                  Directly fund a ckBTC wallet with BTC and swap it for BIG using any of these DEXs — all without centralized exchanges. This was made possible on the BigFile through native{" "}
                   <Link
                     className="text-white hover:text-white underline hover:cursor-pointer"
                     href="/bitcoin-integration"
@@ -439,10 +418,9 @@ function TokenHolders(): JSX.Element {
                       alt=""
                       className="w-20 h-20"
                     ></img>
-                    <h3 className="tw-heading-5 mb-2 mt-8">BFDex</h3>
+                    <h3 className="tw-heading-5 mb-2 mt-8">BIGDex</h3>
                     <p className="tw-lead-sm mb-0 text-black/60">
-                      First orderbook-based DEX running fully on-chain. Bypass
-                      CEXs and get BF or CHAT tokens for your BTC.{" "}
+                      First orderbook-based DEX running fully on-chain. Bypass CEXs and get BIG or CHAT tokens for your BTC.{" "}
                     </p>
                   </Link>
                 </motion.div>
@@ -469,7 +447,7 @@ function TokenHolders(): JSX.Element {
                   variants={transitions.fadeIn}
                 >
                   <img
-                    src="/img/bf-tokens/ckBTC-token-1.webp"
+                    src="/img/big-tokens/ckBTC-token-1.webp"
                     alt=""
                     loading="lazy"
                     className="lg:absolute -top-20"
@@ -494,8 +472,7 @@ function TokenHolders(): JSX.Element {
                 className="tw-lead-sm md:tw-lead mb-6 md:mb-8"
                 variants={transitions.item}
               >
-                Understand the benefits and limitations of each custody option
-                so you can choose the wallet that best suits your needs.
+                Understand the benefits and limitations of each custody option so you can choose the wallet that best suits your needs.
               </motion.p>
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
@@ -514,8 +491,7 @@ function TokenHolders(): JSX.Element {
               <motion.div className="" variants={transitions.item}>
                 <h3 className="tw-heading-5 mb-6">Web Wallets</h3>
                 <p className="tw-paragraph text-black/60 mb-8">
-                  Web-based dapps that are easily accessible with the creation
-                  of an BIG Wallet. Great for daily use and small amount
+                  Web-based dapps that are easily accessible with the creation of an BIG Wallet. Great for daily use and small amount
                   transfers.
                 </p>
                 <div className="space-y-4">
@@ -588,8 +564,7 @@ function TokenHolders(): JSX.Element {
                   Browser extension wallets
                 </h3>
                 <p className="tw-paragraph text-black/60 mb-8">
-                  Great for users already familiar with crypto wallets from
-                  other chains.
+                  Great for users already familiar with crypto wallets from other chains.
                 </p>
 
                 <div className="space-y-4">
@@ -716,7 +691,7 @@ function TokenHolders(): JSX.Element {
                 <p className="mb-0">
                   <Link href="/defi" className="link-primary link-with-icon">
                     <LinkArrowRight />
-                    DeFi on BF
+                    DeFi on BIG
                   </Link>
                 </p>
               </motion.div>
@@ -725,15 +700,14 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-lead-lg md:tw-title-sm mb-3">
-                  Join the BFRC conversation
+                  Join the BIGRC conversation
                 </h3>
                 <p className="tw-paragraph-sm mb-3 text-black/60">
-                  Community discussions around extending the BFRC token standard
-                  for all ledgers to optimize functionality is ongoing.
+                  Community discussions around extending the BIGRC token standard for all ledgers to optimize functionality is ongoing.
                 </p>
                 <p className="mb-0">
                   <Link
-                    href="https://forum.dfinity.org"
+                    href="https://forum.thebigfile.com"
                     className="link-primary link-with-icon"
                   >
                     Share your ideas on the Forum

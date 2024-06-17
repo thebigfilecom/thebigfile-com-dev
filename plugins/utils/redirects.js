@@ -126,10 +126,10 @@ const redirects = `
   /docs/current/developer-docs/quickstart/windows-wsl /docs/current/developer-docs/getting-started/install/windows-wsl
   /docs/current/developer-docs/quickstart/hello10mins/ /docs/current/tutorials/developer-journey/
 
-  /docs/rosetta-api/ledger /docs/current/developer-docs/defi/bf-tokens/overview
-  /docs/rosetta-api/ledger-local-setup /docs/current/developer-docs/defi/bf-tokens/ledger-local-setup
-  /docs/integration/ledger-quick-start /docs/current/developer-docs/defi/bf-tokens/overview
-  /docs/current/developer-docs/functionality/ledger/* /docs/current/developer-docs/defi/bf-tokens/ledger-local-setup
+  /docs/rosetta-api/ledger /docs/current/developer-docs/defi/big-tokens/overview
+  /docs/rosetta-api/ledger-local-setup /docs/current/developer-docs/defi/big-tokens/ledger-local-setup
+  /docs/integration/ledger-quick-start /docs/current/developer-docs/defi/big-tokens/overview
+  /docs/current/developer-docs/functionality/ledger/* /docs/current/developer-docs/defi/big-tokens/ledger-local-setup
 
   /docs/base-libraries/* /docs/current/motoko/main/base/:splat
   /base-libraries/* /docs/current/motoko/main/base/:splat
@@ -212,7 +212,7 @@ const redirects = `
   /docs/current/developer-docs/setup/accounts /docs/current/developer-docs/getting-started/accounts
   /docs/current/developer-docs/setup/cycles/cycles-faucet /docs/current/developer-docs/getting-started/cycles/cycles-faucet
   /docs/current/developer-docs/setup/cycles/cycles-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
-  /docs/current/developer-docs/setup/cycles/converting_bf_tokens_into_cycles /docs/current/developer-docs/getting-started/cycles/converting_bf_tokens_into_cycles
+  /docs/current/developer-docs/setup/cycles/converting_big_tokens_into_cycles /docs/current/developer-docs/getting-started/cycles/converting_big_tokens_into_cycles
   /docs/current/developer-docs/setup/first-canister /docs/current/developer-docs/getting-started/default-template
   /docs/current/developer-docs/setup/deploy-locally /docs/current/developer-docs/getting-started/deploy/local
   /docs/current/developer-docs/setup/deploy-mainnet /docs/current/developer-docs/getting-started/deploy/mainnet
@@ -348,11 +348,11 @@ const redirects = `
   /docs/current/developer-docs/http-compatible-canisters/serving-json-over-http /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-json-over-http
   /docs/current/developer-docs/http-compatible-canisters/serving-static-assets-over-http  /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-static-assets-over-http
   /docs/current/developer-docs/integrations/ledger/introduction_and_overview /docs/current/developer-docs/defi/overview
-  /docs/current/developer-docs/integrations/ledger/  /docs/current/developer-docs/defi/bf-tokens/overview
-  /docs/current/developer-docs/integrations/ledger/ledger-local-setup  /docs/current/developer-docs/defi/bf-tokens/ledger-local-setup
-  /docs/current/developer-docs/integrations/ledger/interact-with-ledger  /docs/current/developer-docs/defi/bf-tokens/using-the-ledger
-  /docs/current/developer-docs/integrations/ledger/icp-index-local-setup /docs/current/developer-docs/defi/bf-tokens/icp-index-local-setup
-  /docs/current/developer-docs/integrations/ledger/collecting-dust /docs/current/developer-docs/defi/bf-tokens/account-trimming
+  /docs/current/developer-docs/integrations/ledger/  /docs/current/developer-docs/defi/big-tokens/overview
+  /docs/current/developer-docs/integrations/ledger/ledger-local-setup  /docs/current/developer-docs/defi/big-tokens/ledger-local-setup
+  /docs/current/developer-docs/integrations/ledger/interact-with-ledger  /docs/current/developer-docs/defi/big-tokens/using-the-ledger
+  /docs/current/developer-docs/integrations/ledger/icp-index-local-setup /docs/current/developer-docs/defi/big-tokens/icp-index-local-setup
+  /docs/current/developer-docs/integrations/ledger/collecting-dust /docs/current/developer-docs/defi/big-tokens/account-trimming
   /docs/current/developer-docs/integrations/icrc-1/index /docs/current/references/icrc1-standard
   /docs/current/developer-docs/integrations/icrc-1/ /docs/current/references/icrc1-standard
   /docs/current/developer-docs/integrations/icrc-1/icrc1-ledger-setup /docs/current/developer-docs/defi/icrc-1/icrc1-ledger-setup

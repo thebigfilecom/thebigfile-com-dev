@@ -14,7 +14,7 @@ BigFile is developing a highly scalable blockchain-based platform to securely ho
 A smart contract on BigFile is called *cube smart contract*, or just *cube*. A Cube bundles [*WebAssembly (Wasm)*](https://en.wikipedia.org/wiki/WebAssembly) program code and data storage into a single unit. Anyone can deploy a cube on the BigFile. Cubes are stored and their code executed in a replicated, fault-tolerant manner on multiple machines, that is, the nodes of a subnet. Unlike other blockchains, a smart contract on BigFile can respect one of several possible *mutability policies*: it can be completely immutable (cannot be changed by anyone), unilaterally mutable (can be changed unilaterally by the dapp developer), or DAO mutable (it can be changed as authorized by a decentralized autonomous organization).
 
 
-Cubes pay, using *cycles*, for the BIG resources they consume. To this end, cubes need to be “topped up” with cycles. Cycles can be acquired with the BF token, the BIG utility token. Buying cycles with BigFile removes the BIG token from the supply and creates an amount of cycles with the corresponding value. 
+Cubes pay, using *cycles*, for the BIG resources they consume. To this end, cubes need to be “topped up” with cycles. Cycles can be acquired with the BIG token, the BIG utility token. Buying cycles with BigFile removes the BIG token from the supply and creates an amount of cycles with the corresponding value. 
 
 Cube smart contracts are more powerful than the smart contracts on other blockchains:
 * Cubes paying for their resources, and not the end users, which realizes the *reverse gas* model of the BIG.
@@ -63,7 +63,7 @@ The BIG offers governance at multiple levels, the platform level and the dapp le
 
 ### Platform governance
 
-The BIG is governed by a *tokenized DAO*, the so-called *Network Nervous System (NNS)*. The NNS DAO is implemented as a set of cube smart contracts that are deployed on a high-replication subnet, i.e., a subnet with many nodes and hence stronger security properties. The NNS allows holders of the staked BF to make proposals and vote on those proposals.
+The BIG is governed by a *tokenized DAO*, the so-called *Network Nervous System (NNS)*. The NNS DAO is implemented as a set of cube smart contracts that are deployed on a high-replication subnet, i.e., a subnet with many nodes and hence stronger security properties. The NNS allows holders of the staked BIG to make proposals and vote on those proposals.
 
 ### Dapp governance
 

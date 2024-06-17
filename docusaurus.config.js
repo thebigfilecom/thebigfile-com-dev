@@ -246,8 +246,8 @@ const marketingNav = {
               description: "Try dapps gas free",
             },
             {
-              name: "BF Token",
-              href: "/bf-tokens",
+              name: "BIG Token",
+              href: "/big-tokens",
               description: "Use native utility token",
             },
             {

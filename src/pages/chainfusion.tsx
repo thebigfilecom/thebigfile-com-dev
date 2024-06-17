@@ -719,7 +719,7 @@ pub enum MultiGetLogsResult {
                     >
                       OISY wallet
                     </Link>{" "}
-                    is a great example. It can custody any BF asset (including chain key twins), native bitcoin, native bitcoin BRC20 tokens, and native Ethereum assets, as required. Self-custodied Ethereum assets can be used in Ethereum DeFi using the WalletConnect  functionality it supports. Users gain convenience and a better experience, and superior security.
+                    is a great example. It can custody any BIG asset (including chain key twins), native bitcoin, native bitcoin BRC20 tokens, and native Ethereum assets, as required. Self-custodied Ethereum assets can be used in Ethereum DeFi using the WalletConnect functionality it supports. Users gain convenience and a better experience, and superior security.
                   </p>
                 </ContentCard>
 
@@ -734,10 +734,7 @@ pub enum MultiGetLogsResult {
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     The BigFile provides a solution. Cube smart
-                    contracts have an API that allows them to schedule their
-                    secure automatic execution for as long as needed into the
-                    future. Using EVM RPC, cubes can be used to initiate
-                    time-based calls into Ethereum smart contracts too – without a private key being made vulnerable.
+                    contracts have an API that allows them to schedule their secure automatic execution for as long as needed into the future. Using EVM RPC, cubes can be used to initiate time-based calls into Ethereum smart contracts too – without a private key being made vulnerable.
                   </p>
 
                   <p className="flex gap-2 flex-wrap">
@@ -756,8 +753,7 @@ pub enum MultiGetLogsResult {
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     The BigFile makes it possible to build almost any
                     online service fully on-chain, in a full stack
-                    decentralization model, which can be augmented by placing
-                    the service under the control of an SNS DAO to automate its maintenance. This is because cube smart contracts can hold up to 400GiB of memory each, and run in parallel with great efficiency. Moreover, they can directly serve interactive web-based user experiences to users by processing HTTP requests, thanks to BigFile reverse-gas model (cube smart contracts pay for their own execution using “cycles” that they have been charged with). Now they can also be trustlessly combined with DeFi and other functionality Ethereum hosts in a World Computer paradigm.
+                    decentralization model, which can be augmented by placing the service under the control of an SNS DAO to automate its maintenance. This is because cube smart contracts can hold up to 400GiB of memory each, and run in parallel with great efficiency. Moreover, they can directly serve interactive web-based user experiences to users by processing HTTP requests, thanks to BigFile reverse-gas model (cube smart contracts pay for their own execution using “cycles” that they have been charged with). Now they can also be trustlessly combined with DeFi and other functionality Ethereum hosts in a World Computer paradigm.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Ethereum Virtual Machine Remote Procedural Calls (EVM RPC) make it possible for BigFile cube smart contracts to interact with smart contracts on any blockchain which supports the Ethereum JSON-RPC protocol. Advanced fully decentralized Web3 services can be created that maintain the UX and heavy data storage and processing on the BigFile, while relying on Ethereum DeFi where financial rails are needed.
@@ -779,8 +775,7 @@ pub enum MultiGetLogsResult {
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     The BigFile enables hosted smart contracts to
                     create accounts on any other blockchain, and sign
-                    transactions that can run on their networks. Transaction
-                    routing can be performed by the UX of Web3 services.
+                    transactions that can run on their networks. Transaction routing can be performed by the UX of Web3 services.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     The UX of a Web3 service can provide very fast, and totally decentralized, edge routing for transactions. For example, when a cube smart contract has created a transaction for execution on another blockchain, the UX (e.g JavaScript running in the web browser) can retrieve the signed transaction by making a call to the smart contract, and then push it to the online API of a node in the destination network, then poll for the result.
@@ -802,8 +797,7 @@ pub enum MultiGetLogsResult {
                   </p>
 
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    To address this, developers also use ckBTC (“chain key
-                    bitcoin”). This is a trustless "Bitcoin twin" hosted on BigFile that can be used by BigFile smart contracts to move Bitcoin cheaply and quickly. This is possible because BigFile nodes talk to Bitcoin nodes to download the Bitcoin network’s blocks and maintain its Unspent Transaction Output (UTXO) set. CkBTC can be directly processed by cube smart contract logic and transferred with 1 second finality at near zero cost.
+                    To address this, developers also use ckBTC (“chain key bitcoin”). This is a trustless "Bitcoin twin" hosted on BigFile that can be used by BigFile smart contracts to move Bitcoin cheaply and quickly. This is possible because BigFile nodes talk to Bitcoin nodes to download the Bitcoin network’s blocks and maintain its Unspent Transaction Output (UTXO) set. CkBTC can be directly processed by cube smart contract logic and transferred with 1 second finality at near zero cost.
                   </p>
 
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
@@ -817,8 +811,7 @@ pub enum MultiGetLogsResult {
                       >
                         OpenChat
                       </Link>{" "}
-                      allows chain key bitcoin to be transferred via instant
-                      chat messages. Canisters can also be used to build a new generation of “Bitcoin DeFi” services.
+                      allows chain key bitcoin to be transferred via instant chat messages. Canisters can also be used to build a new generation of “Bitcoin DeFi”  services.
                     </strong>
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
@@ -890,11 +883,11 @@ pub enum MultiGetLogsResult {
                     liquidity for trading ERC20 tokens. Popular custody services such as Fireblocks, which is popular among investment institutions, custody any ERC20 token as standard.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The BigFile protocol makes it possible to publish any native BF token hosted on a standard ledger to Ethereum, in the form of an icpERC20. The twin is a standard ERC20 token and can be processed by any service that processes ERC20 tokens.
+                    The BigFile protocol makes it possible to publish any native BIG token hosted on a standard ledger to Ethereum, in the form of an icpERC20. The twin is a standard ERC20 token and can be processed by any service that processes ERC20 tokens.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     A service created by a BigFile-hosted smart
-                    contract provides functionality (often relayed by wallets) to create an icpERC20 twin of an BF token. The service also allows icpERC20 twins to be returned to the BigFile, where they retain their native form.
+                    contract provides functionality (often relayed by wallets) to create an icpERC20 twin of an BIG token. The service also allows icpERC20 twins to be returned to the BigFile, where they retain their native form.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Once an icpERC20 token has been created, it can be processed by Ethereum Layer-2 networks and moved across other chains using traditional bridges.
@@ -921,21 +914,13 @@ pub enum MultiGetLogsResult {
                     .
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The processing of bitcoin and Ordinals involves the ICP
-                    protocol processing ECDSA cryptography behind the scenes.
-                    However, inscribing Ordinals and creating and processing
-                    BRC20 assets (e.g. meme coins that piggyback on Bitcoin)
-                    involves Schnorr cryptography, which ICP now also supports.
+                    The processing of bitcoin and Ordinals involves the ICP protocol processing ECDSA cryptography behind the scenes. However, inscribing Ordinals and creating and processing BRC20 assets (e.g. meme coins that piggyback on Bitcoin) involves Schnorr cryptography, which ICP now also supports.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Because ICP supports Schnorr, web-based smart contract
-                    wallets such as OISY can self-host BRC20, Ethereum, and
-                    native ICP assets.
+                    Because ICP supports Schnorr, web-based smart contract wallets such as OISY can self-host BRC20, Ethereum, and native ICP assets.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    A further advantage is that canister smart contracts can
-                    sign transactions for execution on chains such as Cardano
-                    and Solana.
+                    A further advantage is that cube smart contracts can sign transactions for execution on chains such as Cardano and Solana.
                   </p>
 
                   <p className="flex gap-2 flex-wrap">
@@ -960,8 +945,7 @@ pub enum MultiGetLogsResult {
                       className="link-primary"
                       href="/ecosystem?tag=Ethereum"
                     >
-                      <LinkArrowRight /> Open source projects with Ethereum
-                      integration
+                      <LinkArrowRight /> Open source projects with Ethereum integration
                     </Link>
                     <Link
                       className="link-primary"
@@ -997,11 +981,11 @@ pub enum MultiGetLogsResult {
                   </p>
                   <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
                     {[
-                      "IC ETH Starter",
-                      "Add ERC-20 to IC ETH Starter",
+                      "BIG ETH Starter",
+                      "Add ERC-20 to BIG ETH Starter",
                       "OISY",
                       "PoS app for ckBTC",
-                      "ICRC2 Swap Demo",
+                      "BIGRC2 Swap Demo",
                       "Multi-subnet Bitcoin Custody",
                       "ETH Payment Tutorials",
                       "B3 Wallet",

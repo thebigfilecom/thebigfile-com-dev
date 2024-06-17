@@ -11,9 +11,9 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-As discussed in [tokens and cycles](/docs/current/concepts/tokens-cycles), BF tokens can be converted into **cycles** to power <GlossaryTooltip>cube</GlossaryTooltip> operations. Cycles reflect the operational cost of communication, computation, and storage that dapps consume.
+As discussed in [tokens and cycles](/docs/current/concepts/tokens-cycles), BIG tokens can be converted into **cycles** to power <GlossaryTooltip>cube</GlossaryTooltip> operations. Cycles reflect the operational cost of communication, computation, and storage that dapps consume.
 
-Unlike BF tokens, cycles are only associated with cubes and not with user or developer <GlossaryTooltip>principals</GlossaryTooltip>. Because only cubes require cycles to perform operations and pay for the resources they use, users and developers can manage the distribution and ownership of cycles through a special type of canister called a **cycles wallet**.
+Unlike BIG tokens, cycles are only associated with cubes and not with user or developer <GlossaryTooltip>principals</GlossaryTooltip>. Because only cubes require cycles to perform operations and pay for the resources they use, users and developers can manage the distribution and ownership of cycles through a special type of canister called a **cycles wallet**.
 
 :::caution
 Please note that the cycles wallet will be removed from dfx in a future release. We recommend using the cycles ledger feature instead, which simplifies the cycles management workflow.
@@ -88,17 +88,17 @@ If you are doing local development, your local cycles wallet is created when you
 
 ### Creating a cycles wallet on the mainnet
 
-If you are deploying on the BigFile mainnet, you typically create your cycles wallet by converting BF tokens to cycles, transferring the cycles to a new cube principal, and updating the cube with the default cycles wallet WebAssembly module (Wasm).
+If you are deploying on the BigFile mainnet, you typically create your cycles wallet by converting BIG tokens to cycles, transferring the cycles to a new cube principal, and updating the cube with the default cycles wallet WebAssembly module (Wasm).
 
 There are dapps that can help you convert ICP to cycles and create a new cycles wallet, e.g., [NNS dapp](/docs/current/developer-docs/daos/nns/nns-app-quickstart#_deploy_a_canister_with_cycles).
 
 - #### Step 1:  Create a new canister with cycles by transferring ICP tokens from your ledger account. You can do so by running a command similar to the following:
 ```
-dfx ledger --network ic create-canister <principal-identifier> --amount <bf-tokens>
+dfx ledger --network ic create-canister <principal-identifier> --amount <big-tokens>
 ```
-This command converts the number of BF tokens you specify for the `--amount` argument into cycles, and associates the cycles with a new cube identifier controlled by the principal you specify.
+This command converts the number of BIG tokens you specify for the `--amount` argument into cycles, and associates the cycles with a new cube identifier controlled by the principal you specify.
 
-For example, the following command converts .25 BF tokens into cycles and specifies the principal identifier for the default identity as the controller of the new cube:
+For example, the following command converts .25 BIG tokens into cycles and specifies the principal identifier for the default identity as the controller of the new cube:
 ```
 dfx ledger --network ic create-canister tsqwz-udeik-5migd-ehrev-pvoqv-szx2g-akh5s-fkyqc-zy6q7-snav6-uqe --amount .25
 ```
