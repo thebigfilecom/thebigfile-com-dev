@@ -197,7 +197,7 @@ function MultichainPage() {
                 style={{ overflow: "hidden", borderRadius: "10px" }}
               >
                 <img
-                  src="/img/multichain/hero3.webp"
+                  src="/img/multichain/hero3.svg"
                   alt=""
                   className="w-full h-full object-cover rounded-xl"
                 />
@@ -719,7 +719,7 @@ pub enum MultiGetLogsResult {
                     >
                       OISY wallet
                     </Link>{" "}
-                    is a great example. It can custody any ICP asset (including chain key twins), native bitcoin, native bitcoin BRC20 tokens, and native Ethereum assets, as required. Self-custodied Ethereum assets can be used in Ethereum DeFi using the WalletConnect functionality it supports. Users gain convenience and a better experience, and superior security.
+                    is a great example. It can custody any BF asset (including chain key twins), native bitcoin, native bitcoin BRC20 tokens, and native Ethereum assets, as required. Self-custodied Ethereum assets can be used in Ethereum DeFi using the WalletConnect  functionality it supports. Users gain convenience and a better experience, and superior security.
                   </p>
                 </ContentCard>
 
@@ -1044,7 +1044,7 @@ pub enum MultiGetLogsResult {
               className="tw-heading-3 text-center mb-0 w-full mx-auto md:tw-heading-60 md:w-7/10 lg:w-8/12"
               variants={transitions.item}
             >
-              Learn more about multi&#8209;chain on ICP
+              Learn more about multi&#8209;chain on BigFile
             </motion.h2>
           </AnimateSpawn>
           <AnimateSpawn

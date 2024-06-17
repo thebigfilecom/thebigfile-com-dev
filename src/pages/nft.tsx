@@ -324,13 +324,12 @@ function NftPage() {
         <section className="bg-gradient-to-bl from-[#e07934] via-[#964680] to-[#4421a0] py-20 md:py-48 text-white">
           <div className="container-12">
             <h2 className="tw-heading-4 md:tw-heading-60  text-white-60 md:w-8/12 md:mx-auto mb-10 md:mb-20">
-              Cost of storing <span className="text-white">1GB</span> of NFT
-              collections on-chain
+              Cost of storing <span className="text-white">1GB</span> of NFT collections on-chain
             </h2>
 
             <div className="flex flex-col md:flex-row gap-4 mb-16 md:mb-24">
               <div className="flex-1 border border-solid border-white-30 rounded-xl flex flex-col gap-4 py-10 items-center panel-gradient">
-                <h3 className="tw-heading-7-caps mb-0">Internet Computer</h3>
+                <h3 className="tw-heading-7-caps mb-0">BigFile</h3>
                 <img src="/img/nft/ic-logo.webp" alt="" className="w-20" />
                 <div>
                   <span className="tw-heading-3">$5</span>{" "}
