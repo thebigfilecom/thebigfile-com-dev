@@ -291,7 +291,7 @@ function AcceleratorPage() {
               },
             ]}
             ctaLabel="Get updates!"
-            postUrl="https://dfinity.us16.list-manage.com/subscribe/post?u=33c727489e01ff5b6e1fb6cc6&amp;id=7e9469a315&amp;f_id=00bac2e1f0"
+            postUrl="https://thebigfile.us14.list-manage.com/subscribe/post?u=c077aedaaac14cbbf2fb9522b&amp;id=38a1cc340f&amp;f_id=00647ae0f0"
             decoration={
               <img
                 src="/img/newsletter/email-image-2.webp"

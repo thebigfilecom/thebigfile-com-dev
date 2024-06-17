@@ -255,10 +255,10 @@ const stats: {
   fallbackValue: string;
 }[][] = [
   [
-    { title: "Active Countries", value: "30", fallbackValue: "" },
+    { title: "Active Countries", value: "5", fallbackValue: "" },
     { title: "Grants Awarded", value: "76", fallbackValue: "" },
     { title: "Events Launched", value: "20", fallbackValue: "" },
-    { title: "Official BIG.Hubs", value: "15", fallbackValue: "" },
+    { title: "Official BIG.Hubs", value: "2", fallbackValue: "" },
   ],
 
   [
@@ -422,8 +422,7 @@ function CommunityPage() {
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                Be part of the inspiring collective of Web3 creators, builders, educators, and enthusiasts as we set out to explore how the BigFile can address challenges within today's
-                blockchain ecosystem.
+                Be part of the inspiring collective of Web3 creators, builders, educators, and enthusiasts as we set out to explore how the BigFile can address challenges within today's blockchain ecosystem.
               </motion.p>
             </div>
             <Globe
@@ -486,9 +485,7 @@ function CommunityPage() {
             />
             <h3 className="tw-lead md:tw-title-sm mb-0">Education</h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
-              Dedicated educational programs designed in cooperation with Web3
-              learning platforms to empower talented builders and pave the way
-              for their future projects on the BigFile blockchain.
+              Dedicated educational programs designed in cooperation with Web3 learning platforms to empower talented builders and pave the way for their future projects on the BigFile blockchain.
             </p>
             <p className="mb-0">
               <Link className="link-primary link-with-icon" href="#education">
@@ -509,11 +506,7 @@ function CommunityPage() {
             />
             <h3 className="tw-lead md:tw-title-sm mb-0">BIG.Hubs</h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
-              BigFile. Hubs are flourishing worldwide. With 15 hubs already
-              established and more in the pipeline, a thriving community is
-              actively promoting awareness and adoption, encompassing
-              evangelism, education, strategic partnerships, and project
-              acceleration.
+              BigFile. Hubs are flourishing worldwide. With 15 hubs already established and more in the pipeline, a thriving community is actively promoting awareness and adoption, encompassing evangelism, education, strategic partnerships, and project acceleration.
             </p>
             <p className="mb-0">
               <Link className="link-primary link-with-icon" href="#hubs">
@@ -645,67 +638,6 @@ function CommunityPage() {
         </AnimateSpawn>
 
         <AnimateSpawn
-          className="container-10 mt-20 md:mt-40 relative mb-10"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <div className="blob blob-infinite blob-md blob-x-13 sm:blob-x-10 blob-y-8 z-[-1]"></div>
-          <div className="md:w-8/10">
-            <motion.h2
-              className="tw-heading-5 sm:tw-heading-4 md:tw-heading-60 mb-0 text-gradient"
-              variants={transitions.item}
-            >
-              The best of BIG.Hubs
-            </motion.h2>
-          </div>
-        </AnimateSpawn>
-        <AnimateSpawn
-          className="md:container-12"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <div className="md:rounded-[32px] backdrop-blur-2xl bg-white-60 relative flex flex-col md:flex-row md:gap-10 lg:gap-0 px-6 md:px-0">
-            <div className="max-w-sm mx-auto md:max-w-none md:mx-0 flex-1 md:self-center md:order-2 lg:self-start mb-12 md:mb-0">
-              <motion.img
-                src="/img/community/asia-alliance-hero-img.webp"
-                alt=""
-                className="w-full relative"
-                variants={transitions.item}
-                loading="lazy"
-              />
-            </div>
-            <div className="flex-1 md:order-1 pb-10 md:py-30 flex flex-col justify-center">
-              <div className="md:ml-2/12 flex flex-col">
-                <motion.h2
-                  className=" text-transparent bg-clip-text gradient-text tw-heading-3 md:tw-heading-60 mb-6"
-                  variants={transitions.item}
-                >
-                  ICP Asia Alliance
-                </motion.h2>
-                <motion.p
-                  className="tw-lead-sm md:tw-lead mb-8"
-                  variants={transitions.item}
-                >
-                  The ICP Asia Alliance is at the forefront of fostering a
-                  vibrant Web3 and AI ecosystem in Asia.
-                </motion.p>
-
-                <motion.p className="mb-0" variants={transitions.item}>
-                  <Link
-                    className="link-primary link-with-icon"
-                    href="/community/asia-alliance"
-                  >
-                    <LinkArrowRight />
-                    See alliance’s mission & vision
-                  </Link>
-                </motion.p>
-              </div>
-            </div>
-          </div>
-        </AnimateSpawn>
-        
-
-        <AnimateSpawn
           className="container-10 pt-52 md:pt-[400px] relative mb-20"
           el={motion.section}
           variants={transitions.container}
@@ -782,8 +714,7 @@ function CommunityPage() {
                 <img src="/img/community/education.svg" alt="" />
               </h3>
               <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                In this beginner course on Decade, you will learn essential
-                BigFile concepts and how to write cube smart
+                In this beginner course on Decade, you will learn essential BigFile concepts and how to write cube smart
                 contracts using TypeScript.
               </p>
               <p className="mb-0">
@@ -828,9 +759,9 @@ function CommunityPage() {
                 <img src="/img/community/education.svg" alt="" />
               </h3>
               <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                A 4-week basics course in Spanish that covers canister
+                A 4-week basics course in Spanish that covers cube
                 development using Motoko, creating a backend and frontend
-                canister, and ending with building your own dapp on the BigFile.
+                cube, and ending with building your own dapp on the BigFile.
               </p>
               <p className="mb-0">
                 <Link
@@ -878,7 +809,7 @@ function CommunityPage() {
             },
           ]}
           ctaLabel="Get updates!"
-          postUrl="https://dfinity.us16.list-manage.com/subscribe/post?u=33c727489e01ff5b6e1fb6cc6&amp;id=7e9469a315&amp;f_id=00bac2e1f0"
+          postUrl="https://thebigfile.us14.list-manage.com/subscribe/post?u=c077aedaaac14cbbf2fb9522b&amp;id=38a1cc340f&amp;f_id=00647ae0f0"
           decoration={
             <img
               src="/img/newsletter/email-image-1.webp"
