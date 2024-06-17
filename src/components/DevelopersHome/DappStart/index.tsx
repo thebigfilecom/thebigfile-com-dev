@@ -42,8 +42,7 @@ function Index() {
             <div className={styles.bodyContainer}>
               <p className={styles.informationTitle}>Developer grants</p>
               <p className={styles.informationBody}>
-                The DFINITY Developer Grant Program aims to catalyze the growth
-                of the Internet Computer ecosystem.
+                The BigFile Developer Grant Program aims to catalyze the growth of the BigFile ecosystem.
               </p>
             </div>
             <RightArrowSVG className={styles.informationIcon} />
@@ -61,9 +60,7 @@ function Index() {
             <div className={styles.bodyContainer}>
               <p className={styles.informationTitle}>Beacon fund</p>
               <p className={styles.informationBody}>
-                Beacon invests early in strong teams who can launch and grow the
-                open internet services and decentralized financial systems of
-                the future.
+                Beacon invests early in strong teams who can launch and grow the open internet services and decentralized financial systems of the future.
               </p>
             </div>
             <RightArrowSVG className={styles.informationIcon} />
@@ -81,7 +78,7 @@ function Index() {
               <p className={styles.informationTitle}>Cycles faucet</p>
               <p className={styles.informationBody}>
                 Get free cycles to use for testing and deployment of your
-                project on the Internet Computer.
+                project on the BigFile.
               </p>
             </div>
             <RightArrowSVG className={styles.informationIcon} />

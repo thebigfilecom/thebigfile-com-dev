@@ -82,7 +82,7 @@ function DefiPage() {
   return (
     <Layout
       title="DeFi"
-      description="From fully on-chain order book DEXs, to bridgeless multi-chain swaps, the Internet Computer provides an unmatched tech stack for DEXs to thrive on and DeFi to flourish."
+      description="From fully on-chain order book DEXs, to bridgeless multi-chain swaps, the BigFile provides an unmatched tech stack for DEXs to thrive on and DeFi to flourish."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-defi.jpg"></ShareMeta>
@@ -112,9 +112,7 @@ function DefiPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  From fully on-chain order book DEXs, to bridgeless multi-chain
-                  swaps, the Internet Computer provides an unmatched tech stack
-                  for DEXs to thrive on and DeFi to flourish.
+                  From fully on-chain order book DEXs, to bridgeless multi-chain swaps, the BigFile provides an unmatched tech stack for DEXs to thrive on and DeFi to flourish.
                 </motion.p>
               </div>
             </div>
@@ -147,13 +145,7 @@ function DefiPage() {
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              The risks of trading and holding tokens on centralized exchanges
-              is high. Even decentralized exchanges with frontends hosted on
-              centralized cloud providers are not safe from hacks or rug pulls.
-              Thanks to the web-serving capability of canister smart contracts
-              on the Internet Computer, and their ability to host large amounts
-              of data, DeFi platforms can exist 100% on the blockchain with no
-              dependency on centralized components.
+              The risks of trading and holding tokens on centralized exchanges is high. Even decentralized exchanges with frontends hosted on centralized cloud providers are not safe from hacks or rug pulls. Thanks to the web-serving capability of cube smart contracts on the BigFile, and their ability to host large amounts of data, DeFi platforms can exist 100% on the blockchain with no dependency on centralized components.
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -189,11 +181,9 @@ function DefiPage() {
                   Multi-chain swaps
                 </h2>
                 <p className="tw-paragraph md:tw-lead text-black mb-8">
-                  Via Chain-Key Signatures, the Internet Computer has the
+                  Via Chain-Key Signatures, the BigFile has the
                   ability to sign native transactions on other blockchains
-                  without using risky bridges. Today, users can seamlessly swap
-                  between BTC/ETH in seconds for a few cents with 0 gas fees by
-                  using ckBTC, ckETH, and soon ckERC-20 tokens.{" "}
+                  without using risky bridges. Today, users can  seamlessly swap between BTC/ETH in seconds for a few cents with 0 gas fees by using ckBTC, ckETH, and soon ckERC-20 tokens.{" "}
                 </p>
                 <p className="mb-0 flex flex-col gap-6 items-start">
                   <Link
@@ -206,7 +196,7 @@ function DefiPage() {
                     BTC &lt;&gt; ICP user guide
                   </Link>
                   <Link
-                    href="https://dashboard.internetcomputer.org/bitcoin/transactions"
+                    href="https://dashboard.thebigfile.com/bitcoin/transactions"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button-primary"
@@ -233,16 +223,13 @@ function DefiPage() {
           <div className="flex flex-col gap-16 md:gap-40">
             <TranslatedLayout imageUrl="/img/defi/icdex.webp" reverse={true}>
               <div className="tw-heading-6 md:tw-heading-5 mb-2 md:mb-6">
-                ICDex
+                BIGDex
               </div>
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Fully on-chain order book DEX
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                ICDex provides the world’s first fully on-chain order book DEX.
-                Create limit orders or swap tokens instantly with complete
-                transparency and decentralization. ckBTC/ckETH swaps now
-                possible.
+                BIGDex provides the world’s first fully on-chain order book DEX. Create limit orders or swap tokens instantly with complete transparency and decentralization. ckBTC/ckETH swaps now possible.
               </p>
               <Link
                 className="link-primary link-with-icon"
@@ -250,7 +237,7 @@ function DefiPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get ckBTC/ckETH on ICDex <LinkArrowUpRight />
+                Get ckBTC/ckETH on BIGDex <LinkArrowUpRight />
               </Link>
             </TranslatedLayout>
             <TranslatedLayout imageUrl="/img/defi/sonic.webp" reverse={false}>
@@ -261,11 +248,7 @@ function DefiPage() {
                 SNS DAO-controlled DEX
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                One-stop access to decentralized finance and the first DEX on
-                the Internet Computer to become an SNS DAO. Swap tokens, earn
-                fees as a liquidity provider and participate in governance and
-                decision-making through Sonic token membership. Now supports
-                ckBTC/ckETH pair.
+                One-stop access to decentralized finance and the first DEX on the BigFile to become an SNS DAO. Swap tokens, earn fees as a liquidity provider and participate in governance and decision-making through Sonic token membership. Now supports ckBTC/ckETH pair.
               </p>
               <Link
                 className="link-primary link-with-icon"
@@ -284,9 +267,7 @@ function DefiPage() {
                 Swap any ICP based token
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                ICP.Swap offers the largest number of tokens on the Internet
-                Computer, including ckBTC and ckETH. Trade the latest meme coins
-                or the most successful SNS DAO governance tokens.
+                ICP.Swap offers the largest number of tokens on the BigFile, including ckBTC and ckETH. Trade the latest meme coins or the most successful SNS DAO governance tokens.
               </p>
               <Link
                 className="link-primary link-with-icon"
@@ -330,9 +311,7 @@ function DefiPage() {
                     className="md:tw-lead mb-6 md:mb-6"
                     variants={transitions.item}
                   >
-                    Multi-chain wallets already exist on the Internet Computer
-                    that allow users to store and transfer ckBTC, ckETH and more
-                    with ease.
+                    Multi-chain wallets already exist on the BigFile that allow users to store and transfer ckBTC, ckETH and more with ease.
                   </motion.p>
                   <motion.p className="mb-0" variants={transitions.item}>
                     <Link
@@ -360,8 +339,7 @@ function DefiPage() {
                     />
                     <h3 className="tw-heading-5 mb-2 mt-4">AstroX ME</h3>
                     <p className="text-white/60 tw-lead-sm mb-0">
-                      Secure assets such as ckBTC and ckETH across all your
-                      devices without the need for a seed phrase.
+                      Secure assets such as ckBTC and ckETH across all your devices without the need for a seed phrase.
                     </p>
                   </Link>
                 </motion.div>
@@ -375,8 +353,7 @@ function DefiPage() {
                     <img src="/img/defi/nns.webp" alt="" className="w-20" />
                     <h3 className="tw-heading-5 mb-2 mt-4">NNS </h3>
                     <p className="text-white/60 tw-lead-sm mb-0">
-                      Chose your ckBTC account to send and receive BTC from the
-                      Bitcoin network. Full ETH functionality coming soon.
+                      Chose your ckBTC account to send and receive BTC from the Bitcoin network. Full ETH functionality coming soon.
                     </p>
                   </Link>
                 </motion.div>

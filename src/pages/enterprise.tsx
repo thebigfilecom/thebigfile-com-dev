@@ -213,12 +213,10 @@ function EnterprisePage() {
                 Tokenized business models
               </h2>
               <p className="tw-lead-sm">
-                From loyalty programs to memberships and ticketing, businesses
-                need to manage customer relationships to be successful. The BigFile provides a common digital wallet that makes the handling of digital assets and identities much simpler.
+                From loyalty programs to memberships and ticketing, businesses need to manage customer relationships to be successful. The BigFile provides a common digital wallet that makes the handling of digital assets and identities much simpler.
               </p>
               <p className="tw-lead-sm">
-                Organizations can effectively include their customers in the
-                product development life cycle by leveraging built-in tokenized voting tools that are native to the BigFile, incentivizing users to actively participate.
+                Organizations can effectively include their customers in the product development life cycle by leveraging built-in tokenized voting tools that are native to the BigFile, incentivizing users to actively participate.
               </p>
             </TranslatedLayout>
             <TranslatedLayout
@@ -232,17 +230,7 @@ function EnterprisePage() {
                 BigFile smart contracts can both process and create HTTP requests, which allows them to host complete web apps on the blockchain, as well as directly make calls to APIs of any online service running on traditional cloud or elsewhere. This gives businesses the option to add blockchain capabilities to their existing software instead of developing the whole application on the blockchain from scratch.
               </p>
             </TranslatedLayout>
-            <TranslatedLayout
-              imageUrl="/img/enterprise/x-org-collaboration.webp"
-            >
-              <h2 className="tw-heading-4 md:tw-heading-3 md:mb-0">
-                Secure X-org collaboration
-              </h2>
-              <p className="md:mb-6">(coming soon)</p>
-              <p className="tw-lead-sm">
-                Enterprises today face a choice of exchanging sensitive documents via emails with no audit trail of who accessed and edited them, or using expensive US hosted SaaS services with the associated vendor lock-in and geographical data protection issues. On-chain encryption enabled by 'Verifiable Encrypted Threshold Keys' (VETKeys) will enable customized cross-org workflows via tamperproof smart contract that store private data securely encrypted on chain.
-              </p>
-            </TranslatedLayout>
+            
           </div>
         </section>
         <section className="mt-20 md:mt-48">
@@ -335,29 +323,7 @@ function EnterprisePage() {
             </div>
           </div>
         </section>
-        <section className="container-10 py-30 md:pt-60 pb-60 sm:pb-[320px] md:pb-[550px] relative">
-          <div className="sm:w-8/10 md:w-6/10">
-            <motion.h2
-              className="tw-heading-4 md:tw-heading-3 mb-8 text-gradient"
-              variants={transitions.item}
-            >
-              The BigFile processes vast numbers of computational transactions daily, supporting enterprise cloud and blockchain-specific use cases.
-            </motion.h2>
-            <motion.p className="mb-24">
-              <Link
-                href="mailto:comms@dfinity.org"
-                className="button-primary"
-              >
-                Get in touch to talk use cases
-              </Link>
-            </motion.p>
-          </div>
-          <img
-            src="/img/enterprise/big-visual.svg"
-            alt=""
-            className="absolute w-[600px] max-w-none sm:max-w-full sm:w-auto bottom-0 sm:bottom-auto sm:top-5/12 md:top-3/10 sm:-right-3/10"
-          />
-        </section>        
+        
         <section className="container-12 py-30 md:py-48">
           <div className="text-center mb-16 md:mb-30">
             <AnimateSpawn
@@ -374,44 +340,8 @@ function EnterprisePage() {
           </div>
 
           <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout imageUrl="/img/enterprise/italy-large.webp">
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                100% made in Italy
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                FEDERITALY is a non-profit organization that promotes and
-                protects Italian entrepreneurship. In collaboration with the ORIGYN Foundation, they are building a solution on the BigFile to improve their “100% made in Italy” verification service. Consumers benefit from product authenticity of origin certificates stored fully on-chain
-                and protected by tamperproof smart contracts.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://www.bloomberg.com/press-releases/2023-03-21/a-digital-certificate-for-authentic-italian-products"
-              >
-                <LinkArrowRight /> See press release
-              </Link>
-            </TranslatedLayout>
-            <TranslatedLayout
-              imageUrl="/img/enterprise/nft-large.webp"
-              reverse={true}
-            >
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                NFTs as employee rewards
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                  As part of their global rebranding to Pluxee, French multinational, {" "}
-                  <Link className="link-subtle" href="https://www.sodexo.com/en/services/pluxee">
-                  Sodexo Benefits & Rewards Services
-                  </Link>{" "}
-                  partnered with Yumi NFT Marketplace on the
-                  BigFile to modernize their employee reward program and create a dynamic company culture within the organization. Pluxee launched an exclusive NFT collection (X Collection) for its 5'000 employees. Pluxee pledged to donate to the Stop Hunger Foundation for each employee NFT claimed.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://decrypt.co/146830/sodexo-drops-nfts-twist-employees-not-public"
-              >
-                <LinkArrowRight /> More on the X Collection
-              </Link>
-            </TranslatedLayout>
+            
+            
             <AnimateSpawn
               className="container-12"
               variants={transitions.container}

@@ -33,8 +33,7 @@ function Index() {
           Developer Resources
         </motion.p>
         <motion.p variants={transitions.item} className={styles.Text}>
-          As the IC ecosystem grows so do our resources. This is the home of
-          documentation, sample code, tooling, and support.
+          As the BIG ecosystem grows so do our resources. This is the home of documentation, sample code, tooling, and support.
         </motion.p>
         <motion.div
           variants={transitions.item}
