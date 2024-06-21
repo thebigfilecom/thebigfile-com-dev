@@ -30,7 +30,7 @@ This is a Motoko example that does not currently have a Rust variant.
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 Begin by opening a terminal window.
@@ -64,9 +64,9 @@ The output will resemble the following:
 
 ## Resources
 
-- [Actors and sync data](https://internetcomputer.org/docs/current/motoko/main/actors-async).
-- [Basic Motoko concepts and terms](https://internetcomputer.org/docs/current/motoko/main/basic-concepts).
+- [Actors and sync data](https://thebigfile.com/docs/current/motoko/main/actors-async).
+- [Basic Motoko concepts and terms](https://thebigfile.com/docs/current/motoko/main/basic-concepts).
 
 # Security considerations best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on ICP. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on ICP. This example may not implement all the best practices.

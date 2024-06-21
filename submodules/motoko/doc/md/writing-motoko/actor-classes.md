@@ -80,7 +80,7 @@ On ICP, the primary constructor of an imported actor class always creates a new 
 To provide further control over actor class installation, Motoko endows each imported actor class with an extra, secondary constructor. This constructor takes an additional first argument that specifies the desired installation mode. The constructor is only available via special syntax that stresses its `system` functionality.
 
 Using this syntax, it's possible to specify initial canister settings (such as an array of controllers), manually install, upgrade and reinstall canisters, exposing all of the
-lower-level facilities of the Internet Computer.
+lower-level facilities of the BigFile.
 
 See [actor class management](../reference/language-manual#actor-class-management) for more details.
 

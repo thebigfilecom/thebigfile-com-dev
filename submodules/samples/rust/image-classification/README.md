@@ -18,7 +18,7 @@ The ICP mainnet subnets and `dfx` running a replica version older than [463296](
 
 # Dependencies
 
-Install `dfx`, Rust, etc: https://internetcomputer.org/docs/current/developer-docs/getting-started/hello-world
+Install `dfx`, Rust, etc: https://thebigfile.com/docs/current/developer-docs/getting-started/hello-world
 
 Install WASI SDK 21:
 

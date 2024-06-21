@@ -22,7 +22,7 @@ The example consists of two canisters named `heartbeat` and `timer`, both implem
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 ### Example 1:
@@ -132,7 +132,7 @@ For such isolation of execution and scheduling contexts, the internal timers lib
    ic_cdk::call(ic_cdk::id(), "periodic_task", ());
    ```
 
-Despite the [costs](https://internetcomputer.org/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, the timers library still uses fewer cycles than the heartbeats.
+Despite the [costs](https://thebigfile.com/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, the timers library still uses fewer cycles than the heartbeats.
 
 ### Example 2: Cycles usage for tasks with 1s interval
 
@@ -235,7 +235,7 @@ Despite the `heartbeat` using fewer cycles in this case, this solution is hard t
 
 Also, there is no isolation between the scheduling logic and the periodic task. If the periodic task fails, all the changes made by the task and by the `canister_heartbeat` method will be reverted. So the failed task will be executed over and over again every heartbeat.
 
-For such isolation of execution and scheduling contexts, the timers library uses internal self-canister calls as described in `Demo 1`. Due to the [costs](https://internetcomputer.org/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, `timer` canister uses more cycles for very frequent periodic tasks.
+For such isolation of execution and scheduling contexts, the timers library uses internal self-canister calls as described in `Demo 1`. Due to the [costs](https://thebigfile.com/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, `timer` canister uses more cycles for very frequent periodic tasks.
 
 ## Further learning
 1. Have a look at the locally running dashboard. The URL is at the end of the `dfx start` command: `Dashboard: http://localhost/...`
@@ -267,4 +267,4 @@ As shown in `Example 2`, there might be still very specific use cases for the he
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.

@@ -22,7 +22,7 @@ This program supports the following functions:
 
 -   The `search` function performs a more complex query to return the profile matching all or part of the text specified in any profile field. For example, the `search` function can return a profile containing a specific keyword or that matches only part of a name or description.
 
-This guide provides a simple example of how you can use the Rust CDK interfaces and macros to simplify writing dapps in Rust for the Internet Computer.
+This guide provides a simple example of how you can use the Rust CDK interfaces and macros to simplify writing dapps in Rust for the BigFile.
 
 This guide demonstrates:
 -   How to represent slightly more complex data—in the form of a profile as a `record` and an `array` of keywords—using the Candid interface description language.
@@ -95,7 +95,7 @@ Then, navigate into your project directory by running the command:
 cd rust_profile
 ```
 
-Now that you have the files in place for your Rust dapp, you can replace the template `lib.rs` dapp with the Rust dapp you want to deploy on the Internet Computer.
+Now that you have the files in place for your Rust dapp, you can replace the template `lib.rs` dapp with the Rust dapp you want to deploy on the BigFile.
 
 To replace the default program, open the `src/rust_profile_backend/Cargo.toml` file in a text editor and add `serde` to dependencies.
 
@@ -177,9 +177,9 @@ Save your changes and close the file to continue.
 
 ## Update the interface description file
 
-Candid is an interface description language (IDL) for interacting with canisters running on the Internet Computer. Candid files provide a language-independent description of a canister’s interfaces including the names, parameters, and result formats and data types for each function a canister defines.
+Candid is an interface description language (IDL) for interacting with canisters running on the BigFile. Candid files provide a language-independent description of a canister’s interfaces including the names, parameters, and result formats and data types for each function a canister defines.
 
-By adding Candid files to your project, you can ensure that data is properly converted from its definition in Rust to run safely on the Internet Computer blockchain.
+By adding Candid files to your project, you can ensure that data is properly converted from its definition in Rust to run safely on the BigFile blockchain.
 
 To see details about the Candid interface description language syntax, see the [Candid Guide](/docs/current/developer-docs/smart-contracts/candid/index) or the [Candid crate documentation](https://docs.rs/candid/).
 
@@ -206,7 +206,7 @@ Save your changes and close the file to continue.
 
 ## Start the local canister execution environment
 
-Before you can build the `rust_profile` project, you need to connect to the local <GlossaryTooltip>replica</GlossaryTooltip> running in your development environment or the Internet Computer blockchain mainnet.
+Before you can build the `rust_profile` project, you need to connect to the local <GlossaryTooltip>replica</GlossaryTooltip> running in your development environment or the BigFile blockchain mainnet.
 
 Start the local replica on your computer in the background by running the following command:
 

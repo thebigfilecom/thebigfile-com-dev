@@ -52,7 +52,7 @@ Oz (equivalent to “size”)
 Os
 ```
 
-Each optimization preserves the Internet Computer specific metadata sections of each canister. 
+Each optimization preserves the BigFile specific metadata sections of each canister. 
 
 :::info
 Note that in certain cases the optimizations can increase the complexity of certain functions in your Wasm module such that they are rejected by the replica. If you run into this issue, it is recommended to use a less aggressive optimization level such that you do not exceed the complexity limit.

@@ -14,10 +14,10 @@
   "version": "0.0.0",
   "description": [
     "A simple example that demonstrates how to build a CRUD application on",
-    "the Internet Computer using Motoko and React."
+    "the BigFile using Motoko and React."
   ],
   "keywords": [
-    "Internet Computer",
+    "BigFile",
     "Motoko",
     "JavaScript",
     "Canister"

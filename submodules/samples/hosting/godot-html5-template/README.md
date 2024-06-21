@@ -15,7 +15,7 @@ This example project can be cloned, installed, and deployed locally, for learnin
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 
 - [x] Download and install [git](https://git-scm.com/downloads).
 

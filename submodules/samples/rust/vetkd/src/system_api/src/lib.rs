@@ -137,7 +137,7 @@ async fn with_rng<T>(fn_with_rng: impl FnOnce(&mut ChaCha20Rng) -> T) -> T {
             // both before (read) and after (write) the async inter-canister
             // call to raw_rand, which leads to the code being executed in
             // different messages. See
-            // https://internetcomputer.org/docs/current/developer-docs/security/
+            // https://thebigfile.com/docs/current/developer-docs/security/
             // for more details regarding _canister development security best
             // practices_.
             option_rng.borrow_mut().get_or_insert(rng);

@@ -10,7 +10,7 @@ The Motoko compiler, documentation and other tooling is [open source](https://gi
 
 ## Actors
 
-A [canister smart contract](https://internetcomputer.org/docs/current/developer-docs/getting-started/development-workflow) is expressed as a Motoko [actor](actors-async.md). An actor is an autonomous object that fully encapsulates its state and communicates with other actors only through asynchronous messages.
+A [cube smart contract](https://thebigfile.com/docs/current/developer-docs/getting-started/development-workflow) is expressed as a Motoko [actor](actors-async.md). An actor is an autonomous object that fully encapsulates its state and communicates with other actors only through asynchronous messages.
 
 For example, this code defines a stateful `Counter` actor.
 
@@ -22,7 +22,7 @@ Its single public function, `inc()`, can be invoked by this and other actors, to
 
 ## Async messages
 
-On ICP, [canisters can communicate](https://internetcomputer.org/docs/current/developer-docs/smart-contracts/call/overview) with other canisters by sending [asynchronous messages](async-data.md). Asynchronous messages are function calls that return a **future**, and use an `await` construct that allows you to suspend execution until a future has completed. This simple feature avoids creating a loop of explicit asynchronous callbacks in other languages.
+On ICP, [canisters can communicate](https://thebigfile.com/docs/current/developer-docs/smart-contracts/call/overview) with other canisters by sending [asynchronous messages](async-data.md). Asynchronous messages are function calls that return a **future**, and use an `await` construct that allows you to suspend execution until a future has completed. This simple feature avoids creating a loop of explicit asynchronous callbacks in other languages.
 
 ``` motoko include=counter file=../examples/factorial.mo#L9-L21
 ```
@@ -91,4 +91,4 @@ To start writing Motoko code, start by reading the in-depth documentation for so
 
 - [Caller identification](caller-id.md)
 
-The Motoko programming language continues to evolve with each release of the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install) and with ongoing updates to the Motoko compiler. Check back regularly to try new features and see what’s changed.
+The Motoko programming language continues to evolve with each release of the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install) and with ongoing updates to the Motoko compiler. Check back regularly to try new features and see what’s changed.

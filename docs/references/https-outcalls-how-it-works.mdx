@@ -18,7 +18,7 @@ The HTTPS outcalls feature allows canisters to make outgoing HTTP calls to conve
 
 ### How an HTTPS outcall is processed by ICP
 
-The canister HTTPS outcalls feature is implemented as part of the Internet Computer replica and is exposed as an API of the management canister. Next, this guide outlines, in a simplified form, how a request made by a canister is processed. The HTTP request functionality is realized at the level of subnets, i.e., each subnet handles canister HTTP requests of its canisters independently of other subnets and HTTP requests are never routed to other subnets for execution.
+The canister HTTPS outcalls feature is implemented as part of the BigFile replica and is exposed as an API of the management canister. Next, this guide outlines, in a simplified form, how a request made by a canister is processed. The HTTP request functionality is realized at the level of subnets, i.e., each subnet handles canister HTTP requests of its canisters independently of other subnets and HTTP requests are never routed to other subnets for execution.
 
 - #### Step 1: A canister makes an outgoing HTTP request by calling the management canister API using the `http_request` method.
 - #### Step 2: The request is stored temporarily in the replicated state of the subnet.
@@ -38,9 +38,9 @@ In this case, consensus provides this response back to the management canister A
 
 The above figure shows a high-level view of how a canister interacts with the feature and the communication patterns of the subnet replicas with external servers.
 
-To summarize, to perform an HTTP request, each replica pushes an (optionally-transformed) instance of the received HTTP response from the external web server through the Internet Computer's consensus layer, so that the replicas of the subnet can agree on the response provided to the canister, based on all server responses received by the replicas. The optional transformation ensures that, if responses received on different replicas from the server are different in some parts, those differences are eliminated and the same transformed response is provided to consensus on every (honest) replica. This guarantees that on every replica the exact same response (or none at all) is used for canister execution, thereby ensuring that divergence does not happen when using this feature and the replicated state machine properties of the subnet are preserved.
+To summarize, to perform an HTTP request, each replica pushes an (optionally-transformed) instance of the received HTTP response from the external web server through the BigFile's consensus layer, so that the replicas of the subnet can agree on the response provided to the canister, based on all server responses received by the replicas. The optional transformation ensures that, if responses received on different replicas from the server are different in some parts, those differences are eliminated and the same transformed response is provided to consensus on every (honest) replica. This guarantees that on every replica the exact same response (or none at all) is used for canister execution, thereby ensuring that divergence does not happen when using this feature and the replicated state machine properties of the subnet are preserved.
 
-As you can see, the transformation function and the Internet Computer Protocol's consensus play a crucial role for this feature: The transformation function ensures that differences in the responses received by the replicas are removed and transformed responses on different replicas will be exactly the same, thus enabling consensus to provide the agreed-upon response to the calling canister. By running the responses received by the replicas through consensus, the Internet Computer ensures that every replica provides the same response to the smart contract Wasm execution environment.
+As you can see, the transformation function and the BigFile consensus play a crucial role for this feature: The transformation function ensures that differences in the responses received by the replicas are removed and transformed responses on different replicas will be exactly the same, thus enabling consensus to provide the agreed-upon response to the calling canister. By running the responses received by the replicas through consensus, the BigFile ensures that every replica provides the same response to the smart contract Wasm execution environment.
 
 ### Trust model and programming Model
 
@@ -65,9 +65,9 @@ Overall, the canister HTTP outcalls feature allows us to achieve what oracles or
 
 ## Benefits for developers
 
-For developers, the canister HTTP requests feature has the benefit that they do not need to make a decision on which party (oracle) they want to trust in addition to the Internet Computer Protocol that they already need to trust anyway. They don't need to decide on whether they want to use a single oracle or multiple oracles to reduce trust assumptions and get better decentralization, but rather they get this out of the box with HTTP outcalls.
+For developers, the canister HTTP requests feature has the benefit that they do not need to make a decision on which party (oracle) they want to trust in addition to the BigFile that they already need to trust anyway. They don't need to decide on whether they want to use a single oracle or multiple oracles to reduce trust assumptions and get better decentralization, but rather they get this out of the box with HTTP outcalls.
 
-The cost of the HTTP outcall is likely much lower than paying an established oracle provider for their services and the associated ingress cost, thus the Internet Computer has a clear economic advantage to use HTTP calls. Freed from making all those non-trivial trust decisions, a developer can focus on their business logic and simply make the HTTP call they need (and write a corresponding transform function), which is more natural.
+The cost of the HTTP outcall is likely much lower than paying an established oracle provider for their services and the associated ingress cost, thus the BigFile has a clear economic advantage to use HTTP calls. Freed from making all those non-trivial trust decisions, a developer can focus on their business logic and simply make the HTTP call they need (and write a corresponding transform function), which is more natural.
 
 ## Benefits for end users
 
@@ -100,13 +100,13 @@ As already hinted at above, a compromised replica is a more general problem: Suc
 
 Note, however, that this problem cannot be easily solved with oracles either: A compromised oracle can do exactly the same as a compromised replica. Multiple oracles do not solve the problem either for `POST`s. Solving this requires either advanced (cryptographic) mechanisms such as threshold TLS being used or some support from the side of the server. E.g., the server could keep a log of all state changes being done for a given API key and the canister can read back this log securely and at least detect calls made by compromised replicas. Tracking the IP address of the requestor may help in identifying the faulty replica and taking legal and other action against it.
 
-One example of securing the write integration between the Internet Computer and Web 2.0 servers is to sign `POST` requests with a subnet signature using chain key cryptography and to have the server check the signature. Such approach requires adaptation of the server, but can resolve the remaining security problems of dishonest replicas making arbitrary requests.
+One example of securing the write integration between the BigFile and Web 2.0 servers is to sign `POST` requests with a subnet signature using chain key cryptography and to have the server check the signature. Such approach requires adaptation of the server, but can resolve the remaining security problems of dishonest replicas making arbitrary requests.
 
 As you have seen, completely removing the impact that dishonest replicas can have on `POST` calls may require support by the HTTP 2.0 service. With such support, seamless and secure interoperability between Web 3.0 and Web 2.0 can be achieved.
 
 ### IPv6-only support
 
-Currently, as ICP itself is an IPv6-based system, the canister HTTP outcalls feature is therefore an IPv6-only feature. IPv4 support may be added in the future depending on demand from the community. The main reason for not supporting IPv4 now is that the Internet Computer does not have sufficiently many IPv4 addresses such that every replica of ICP could get its own IPv4 address and thus it would need to either route traffic over boundary nodes or use other mechanisms to allow for IPv4 communications. Any of those approaches leads to a reduced decentralization and thus a weaker trust model compared to replicas directly communicating with the Web 2.0 server.
+Currently, as ICP itself is an IPv6-based system, the canister HTTP outcalls feature is therefore an IPv6-only feature. IPv4 support may be added in the future depending on demand from the community. The main reason for not supporting IPv4 now is that the BigFile does not have sufficiently many IPv4 addresses such that every replica of ICP could get its own IPv4 address and thus it would need to either route traffic over boundary nodes or use other mechanisms to allow for IPv4 communications. Any of those approaches leads to a reduced decentralization and thus a weaker trust model compared to replicas directly communicating with the Web 2.0 server.
 
 ### Rate limiting by servers
 
@@ -122,11 +122,11 @@ The ICP does currently not implement any rate limiting in ICP protocol stack as 
 
 As mentioned already further above, there are multiple possible extensions under consideration to be implemented in the future, based on demand in the community. The current MVP does not include them as it allows us to go to market faster because of the reduced feature set.
 * **IPv4 support:** IPv4 support would help canisters reach servers that are not available on IPv6, but IPv4 only.
-* **Reduced quorum:** a canister can define that a reduced quorum should be used for a request, e.g., only $1$ replica of the subnet making the request instead of all $n$ replicas. This trivially helps resolve the idempotency problem with `POST` requests. It may also be interesting for making reads where trust does not matter, but where the Internet Computer wants to reduce the request amplification instead, e.g., because of quotas the server has in place.
+* **Reduced quorum:** a canister can define that a reduced quorum should be used for a request, e.g., only $1$ replica of the subnet making the request instead of all $n$ replicas. This trivially helps resolve the idempotency problem with `POST` requests. It may also be interesting for making reads where trust does not matter, but where the BigFile wants to reduce the request amplification instead, e.g., because of quotas the server has in place.
 
 ## Coding HTTPS outcalls
 
-Next, this guide provides important information for engineers who want to use canister HTTP requests in their canister smart contracts. Using canister HTTP requests is somewhat harder in the general case than doing HTTP requests in a regular enterprise application as you need to consider aspects like responses going through consensus and idempotency of `POST` requests. Refer to the API definition of the feature in [the Internet Computer interface specification](/references/ic-interface-spec.md#ic-http_request) for more information.
+Next, this guide provides important information for engineers who want to use canister HTTP requests in their canister smart contracts. Using canister HTTP requests is somewhat harder in the general case than doing HTTP requests in a regular enterprise application as you need to consider aspects like responses going through consensus and idempotency of `POST` requests. Refer to the API definition of the feature in [the BigFile interface specification](/references/ic-interface-spec.md#ic-http_request) for more information.
 
 ### Recipe for coding a canister HTTP call
 
@@ -150,7 +150,7 @@ If you do not set the optional `max_response_bytes` parameter, a response size o
 
 ### Transformation function
 
-The purpose of the transformation function is to transform each response $r_i$ received by a replica $i$, where the $r_i$ s received by different replicas may be different. The transformation function transforms a response $r_i$ to a transformed response $r'_i$ with the intention that all $r'_i$ s of honest replicas be equal in order to be able to agree on the response as part of the Internet Computer Protcol's consensus. The transformation function must be provided by the canister programmer and is exposed by the canister as a query. An arbitrary number of transformation functions can be defined by a canister. When making an `http_request` call to the management canister, a transformation function can be optionally provided as input.
+The purpose of the transformation function is to transform each response $r_i$ received by a replica $i$, where the $r_i$ s received by different replicas may be different. The transformation function transforms a response $r_i$ to a transformed response $r'_i$ with the intention that all $r'_i$ s of honest replicas be equal in order to be able to agree on the response as part of the BigFile consensus. The transformation function must be provided by the canister programmer and is exposed by the canister as a query. An arbitrary number of transformation functions can be defined by a canister. When making an `http_request` call to the management canister, a transformation function can be optionally provided as input.
 
 Depending on the purpose of the HTTP request being made, there are different approaches to writing the transformation function:
 * **Extract only the information item(s) of interest:** this can, e.g., be a list of pairs each comprising a date and an asset price to be forwarded to the canister, or a single asset price. This approach makes sense if the full HTTP response is not required in the canister, but only specific information items are.

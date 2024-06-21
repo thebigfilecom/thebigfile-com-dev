@@ -1,7 +1,7 @@
 # ExperimentalCycles
-Managing cycles within actors on the Internet Computer (IC).
+Managing cycles within actors on the BigFile (BIG).
 
-The usage of the Internet Computer is measured, and paid for, in _cycles_.
+The usage of the BigFile is measured, and paid for, in _cycles_.
 This library provides imperative operations for observing cycles, transferring cycles, and
 observing refunds of cycles.
 

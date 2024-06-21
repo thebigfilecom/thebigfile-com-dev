@@ -22,7 +22,7 @@ import Hex "./utils/Hex";
 shared ({ caller = initializer }) actor class () {
 
     // Currently, a single canister smart contract is limited to 4 GB of heap size.
-    // For the current limits see https://internetcomputer.org/docs/current/developer-docs/production/resource-limits.
+    // For the current limits see https://thebigfile.com/docs/current/developer-docs/production/resource-limits.
     // To ensure that our canister does not exceed the limit, we put various restrictions (e.g., max number of users) in place.
     // This should keep us well below a memory usage of 2 GB because
     // up to 2x memory may be needed for data serialization during canister upgrades.
@@ -54,13 +54,13 @@ shared ({ caller = initializer }) actor class () {
 
     // Define private fields
     // Stable actor fields are automatically retained across canister upgrades.
-    // See https://internetcomputer.org/docs/current/motoko/main/upgrades/
+    // See https://thebigfile.com/docs/current/motoko/main/upgrades/
 
     // Design choice: Use globally unique note identifiers for all users.
     //
     // The keyword `stable` makes this (scalar) variable keep its value across canister upgrades.
     //
-    // See https://internetcomputer.org/docs/current/developer-docs/setup/manage-canisters#upgrade-a-canister
+    // See https://thebigfile.com/docs/current/developer-docs/setup/manage-canisters#upgrade-a-canister
     private stable var nextNoteId : Nat = 1;
 
     // Store notes by their ID, so that note-specific encryption keys can be derived.
@@ -73,7 +73,7 @@ shared ({ caller = initializer }) actor class () {
     // While accessing _heap_ data is more efficient, we use the following _stable memory_
     // as a buffer to preserve data across canister upgrades.
     // Stable memory is currently 96GB. For the current limits see
-    // https://internetcomputer.org/docs/current/developer-docs/production/resource-limits.
+    // https://thebigfile.com/docs/current/developer-docs/production/resource-limits.
     // See also: [preupgrade], [postupgrade]
     private stable var stable_notesById : [(NoteId, EncryptedNote)] = [];
     private stable var stable_noteIdsByOwner : [(PrincipalName, List.List<NoteId>)] = [];
@@ -102,7 +102,7 @@ shared ({ caller = initializer }) actor class () {
     // Shared functions, i.e., those specified with [shared], are
     // accessible to remote callers.
     // The extra parameter [caller] is the caller's principal
-    // See https://internetcomputer.org/docs/current/motoko/main/actors-async
+    // See https://thebigfile.com/docs/current/motoko/main/actors-async
 
     // Add new empty note for this [caller].
     //
@@ -149,7 +149,7 @@ shared ({ caller = initializer }) actor class () {
     // functions gets through consensus. Otherwise, this function could e.g. omit some notes
     // if it got executed by a malicious node. (To make the dapp more efficient, one could
     // use an approach in which both queries and updates are combined.)
-    // See https://internetcomputer.org/docs/current/concepts/canisters-code#query-and-update-methods
+    // See https://thebigfile.com/docs/current/concepts/canisters-code#query-and-update-methods
     //
     // Returns:
     //      Future of array of EncryptedNote
@@ -368,7 +368,7 @@ shared ({ caller = initializer }) actor class () {
     };
 
     // Below, we implement the upgrade hooks for our canister.
-    // See https://internetcomputer.org/docs/current/motoko/main/upgrades/
+    // See https://thebigfile.com/docs/current/motoko/main/upgrades/
 
     // The work required before a canister upgrade begins.
     system func preupgrade() {

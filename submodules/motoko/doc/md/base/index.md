@@ -10,8 +10,8 @@
 * [Debug](Debug.md) Utility functions for debugging.
 * [Deque](Deque.md) Double-ended queue (deque) of a generic element type `T`.
 * [Error](Error.md) Error values and inspection.
-* [ExperimentalCycles](ExperimentalCycles.md) Managing cycles within actors on the Internet Computer (IC).
-* [ExperimentalInternetComputer](ExperimentalInternetComputer.md) Low-level interface to the Internet Computer.
+* [ExperimentalCycles](ExperimentalCycles.md) Managing cycles within actors on the BigFile (BIG).
+* [ExperimentalInternetComputer](ExperimentalInternetComputer.md) Low-level interface to the BigFile.
 * [ExperimentalStableMemory](ExperimentalStableMemory.md) Byte-level access to (virtual) _stable memory_.
 * [Float](Float.md) Double precision (64-bit) floating-point numbers in IEEE 754 representation.
 * [Func](Func.md) Functions on functions, creating functions from simpler inputs.
@@ -37,7 +37,7 @@
 * [Prelude](Prelude.md) General utilities
 * [Principal](Principal.md) Module for interacting with Principals (users and canisters).
 * [RBTree](RBTree.md) Key-value map implemented as a red-black tree (RBTree) with nodes storing key-value pairs.
-* [Random](Random.md) A module for obtaining randomness on the Internet Computer (IC).
+* [Random](Random.md) A module for obtaining randomness on the BigFile (BIG).
 * [Region](Region.md) Byte-level access to isolated, (virtual) stable memory _regions_.
 * [Result](Result.md) Error handling with the Result type.
 * [Stack](Stack.md) Class `Stack<X>` provides a Minimal LIFO stack of elements of type `X`.

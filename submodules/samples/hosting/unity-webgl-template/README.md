@@ -14,7 +14,7 @@ The Unity WebGL build is deployed as frontend, no backend is needed in this samp
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 
 - [x] Download and install [git](https://git-scm.com/downloads).
 

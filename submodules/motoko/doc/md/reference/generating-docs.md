@@ -10,7 +10,7 @@ sidebar_position: 4
 
 ## Quickstart
 
-Download `mo-doc` from Motoko's [GitHub releases page](https://github.com/dfinity/motoko/releases) or simply use the binary included in your [dfx](https://internetcomputer.org/docs/current/developer-docs/setup/install) installation:
+Download `mo-doc` from Motoko's [GitHub releases page](https://github.com/dfinity/motoko/releases) or simply use the binary included in your [dfx](https://thebigfile.com/docs/current/developer-docs/setup/install) installation:
 
 ```
 $(dfx cache show)/mo-doc [options]

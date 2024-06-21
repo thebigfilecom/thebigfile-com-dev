@@ -14,7 +14,7 @@ On ICP, a canister can selectively inspect, then choose to accept or decline ing
 >
 > The `canister_inspect_message` is not invoked for HTTP query calls, inter-canister calls or calls to the management canister.
 >
-> —  [IC Interface Specification](https://internetcomputer.org/docs/current/references/ic-interface-spec/#system-api-inspect-message)
+> —  [IC Interface Specification](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-inspect-message)
 
 Message inspection mitigates some denial of service attacks that are designed to drain canisters of cycles by placing unsolicited free calls.
 
@@ -56,7 +56,7 @@ An actor that fails to declare system field `inspect` will simply accept all ing
 
 :::danger
 
-System function `inspect` should **not** be used for definitive access control. This is because `inspect` is executed by a single replica, without going through full consensus. Its result could be spoofed by a malicious boundary node. Also `inspect` is not invoked for inter-canister calls. Reliable access control checks can only be performed within the `shared` functions guarded by `inspect`. See [canister development security best practices](https://internetcomputer.org/docs/current/developer-docs/security/rust-canister-development-security-best-practices#do-not-rely-on-ingress-message-inspection) for more information.
+System function `inspect` should **not** be used for definitive access control. This is because `inspect` is executed by a single replica, without going through full consensus. Its result could be spoofed by a malicious boundary node. Also `inspect` is not invoked for inter-canister calls. Reliable access control checks can only be performed within the `shared` functions guarded by `inspect`. See [canister development security best practices](https://thebigfile.com/docs/current/developer-docs/security/rust-canister-development-security-best-practices#do-not-rely-on-ingress-message-inspection) for more information.
 
 :::
 

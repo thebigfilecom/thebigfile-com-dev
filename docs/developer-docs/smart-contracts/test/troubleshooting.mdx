@@ -68,11 +68,11 @@ Many of the bugs you might encounter can be addressed by uninstalling and reinst
 
 If you only have one version of the IC SDK installed in your development environment, you can usually run the following command to uninstall and reinstall the latest version of IC SDK:
 
-    ~/.cache/dfinity/uninstall.sh && sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+    ~/.cache/dfinity/uninstall.sh && sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 
 If you have modified the location of the IC SDK binary (the binary is titled `dfx`), you might want run the following command to uninstall the version of the IC SDK that is in your PATH, then reinstall the latest version of the IC SDK:
 
-    rm -rf ~/.cache/dfinity && rm $(which dfx) && sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+    rm -rf ~/.cache/dfinity && rm $(which dfx) && sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 
 ## Xcode prerequisite
 
@@ -141,5 +141,5 @@ Fixing memory leaks is an ongoing process. If you encounter any error messages r
 
 Alternatively, you can remove the `.cache/dfinity` directory and re-install the latest IC SDK `dfx` binary. For example:
 ```
-rm -rf ~/.cache/dfinity && sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+rm -rf ~/.cache/dfinity && sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 ```

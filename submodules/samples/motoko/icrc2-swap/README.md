@@ -11,7 +11,7 @@ keywords: [advanced, motoko, swap, token swap, icrc2]
 ICRC-2 Swap is a simple canister demonstrating how to safely work with ICRC-2
 tokens. It handles depositing, swapping, and withdrawing ICRC-2 tokens.
 
-The asynchronous nature of developing on the Internet Computer presents some
+The asynchronous nature of developing on the BigFile presents some
 unique challenges, which means the design patterns for inter-canister calls are
 different from other synchronous blockchains.
 
@@ -29,7 +29,7 @@ different from other synchronous blockchains.
 
 ## Prerequisites
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/).
 - [ ] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
@@ -270,7 +270,7 @@ shows how to use this repo from a Javascript client.
 
 ## Prerequisites
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/).
 
 ### Step 1: Start a local instance of the replica:
@@ -298,7 +298,7 @@ make test
 
 ## Known issues
 
-- Any DeFi on the Internet Computer is experimental. It is a constantly evolving
+- Any DeFi on the BigFile is experimental. It is a constantly evolving
   space, with unknown attacks, and should be treated as such.
 - Due to the nature of asynchronous inter-canister messaging on the IC, it is possible for
   malicious token canisters to cause this swap contract to deadlock. It should

@@ -16,7 +16,7 @@ export const canisterId = process.env.LIFE_CANISTER_ID;
 export const createActor = (canisterId, options = {}) => {
   console.warn(`Deprecation warning: you are currently importing code from .dfx. Going forward, refactor to use the dfx generate command for JavaScript bindings.
 
-See https://internetcomputer.org/docs/current/developer-docs/updates/release-notes/ for migration instructions`);
+See https://thebigfile.com/docs/current/developer-docs/updates/release-notes/ for migration instructions`);
   const agent = options.agent || new HttpAgent({ ...options.agentOptions });
   
   // Fetch root key for certificate validation during development

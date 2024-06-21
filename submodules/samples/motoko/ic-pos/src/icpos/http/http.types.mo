@@ -3,7 +3,7 @@ module Types {
   public type Timestamp = Nat64;
 
   //1. Type that describes the Request arguments for an HTTPS Outcall
-  //See: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-http_request
+  //See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
   public type HttpRequestArgs = {
     url : Text;
     max_response_bytes : ?Nat64;
@@ -33,7 +33,7 @@ module Types {
   //2. HTTPS outcalls have an optional "transform" key. These two types help describe it.
   //"The transform function may, for example, transform the body in any way, add or remove headers,
   //modify headers, etc. "
-  //See: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-http_request
+  //See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
 
   //2.1 This type describes a function called "TransformRawResponse" used in line 14 above
   //"If provided, the calling canister itself must export this function."

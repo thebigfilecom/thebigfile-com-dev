@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## Overview
 
-The `ExperimentalStableMemory` library provides low-level access to Internet Computer stable memory.
+The `ExperimentalStableMemory` library provides low-level access to BigFile stable memory.
 
 :::danger
 This library has been superseded by the similar, but safer, [`Region` library](../base/Region.md).

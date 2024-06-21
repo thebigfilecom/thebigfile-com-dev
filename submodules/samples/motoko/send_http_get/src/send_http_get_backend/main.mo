@@ -93,11 +93,11 @@ actor {
 
     //The IC specification spec says, "Cycles to pay for the call must be explicitly transferred with the call"
     //IC management canister will make the HTTP request so it needs cycles
-    //See: https://internetcomputer.org/docs/current/motoko/main/cycles
+    //See: https://thebigfile.com/docs/current/motoko/main/cycles
     
     //The way Cycles.add() works is that it adds those cycles to the next asynchronous call
     //"Function add(amount) indicates the additional amount of cycles to be transferred in the next remote call"
-    //See: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-http_request
+    //See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
     Cycles.add(230_949_972_000);
     
     //4. MAKE HTTPS REQUEST AND WAIT FOR RESPONSE

@@ -5,15 +5,15 @@ import Changelog from './_attachments/interface-spec-changelog.md';
 
 ## Introduction
 
-Welcome to *the BigFile*! We speak of "the" BigFile, because although under the hood a large number of physical computers are working together in a blockchain protocol, in the end we have the appearance of a single, shared, secure and world-wide accessible computer. Developers who want to build decentralized applications (or *dapps* for short) that run on the Internet Computer blockchain and end-users who want to use those dapps need to know very little, if anything, about the underlying protocol. However, knowing some details about the interfaces that the Internet Computer exposes can allow interested developers and architects to take fuller advantages of the unique features that the Internet Computer provides.
+Welcome to *the BigFile*! We speak of "the" BigFile, because although under the hood a large number of physical computers are working together in a blockchain protocol, in the end we have the appearance of a single, shared, secure and world-wide accessible computer. Developers who want to build decentralized applications (or *dapps* for short) that run on the BigFile blockchain and end-users who want to use those dapps need to know very little, if anything, about the underlying protocol. However, knowing some details about the interfaces that the BigFile exposes can allow interested developers and architects to take fuller advantages of the unique features that the BigFile provides.
 
 ### Target audience
 
-This document describes this *external* view of the Internet Computer, i.e. the low-level interfaces it provides to dapp developers and users, and what will happen when they use these interfaces.
+This document describes this *external* view of the BigFile, i.e. the low-level interfaces it provides to dapp developers and users, and what will happen when they use these interfaces.
 
 :::note
 
-While this document describes the external interface and behavior of the Internet Computer, it is not intended as end-user or end-developer documentation. Most developers will interact with the Internet Computer through additional tooling like the SDK, Canister Development Kits and Motoko. Please see the [developer docs](https://internetcomputer.org/docs/current/home) for suitable documentation.
+While this document describes the external interface and behavior of the BigFile, it is not intended as end-user or end-developer documentation. Most developers will interact with the BigFile through additional tooling like the SDK, Canister Development Kits and Motoko. Please see the [developer docs](https://thebigfile.com/docs/current/home) for suitable documentation.
 
 :::
 
@@ -21,27 +21,27 @@ The target audience of this document are
 
 -   those who use these low-level interfaces (e.g. implement agents, canister developments kits, emulators, other tooling).
 
--   those who implement these low-level interfaces (e.g. developers of the Internet Computer implementation)
+-   those who implement these low-level interfaces (e.g. developers of the BigFile implementation)
 
--   those who want to understand the intricacies of the Internet Computer's behavior in great detail (e.g. to do a security analysis)
+-   those who want to understand the intricacies of the BigFile's behavior in great detail (e.g. to do a security analysis)
 
 :::note
 
-This document is a rigorous, technically dense reference. It is not an introduction to the Internet Computer, and as such most useful to those who understand the high-level concepts. Please see more high-level documentation first.
+This document is a rigorous, technically dense reference. It is not an introduction to the BigFile, and as such most useful to those who understand the high-level concepts. Please see more high-level documentation first.
 
 :::
 
 ### Scope of this document
 
-If you think of the Internet Computer as a distributed engine that executes WebAssembly-based dapps, then this document describes exclusively the aspect of executing those dapps. To the extent possible, this document will *not* talk about consensus protocols, nodes, subnets, orthogonal persistence or governance.
+If you think of the BigFile as a distributed engine that executes WebAssembly-based dapps, then this document describes exclusively the aspect of executing those dapps. To the extent possible, this document will *not* talk about consensus protocols, nodes, subnets, orthogonal persistence or governance.
 
-This document tries to be implementation agnostic: It would apply just as well to a (hypothetical) compatible reimplementation of the Internet Computer. This implies that this document does not cover interfaces towards those running the Internet Computer (e.g. data center operators, protocol developers, governance users), as topics like node update, monitoring, logging are inherently tied to the actual *implementation* and its architecture.
+This document tries to be implementation agnostic: It would apply just as well to a (hypothetical) compatible reimplementation of the BigFile. This implies that this document does not cover interfaces towards those running the BigFile (e.g. data center operators, protocol developers, governance users), as topics like node update, monitoring, logging are inherently tied to the actual *implementation* and its architecture.
 
-### Overview of the Internet Computer
+### Overview of the BigFile
 
-Dapps on the Internet Computer, or *IC* for short, are implemented as *canister smart contracts*, or *canisters* for short. If you want to build on the Internet Computer as a dapp developer, you first create a *canister module* that contains the WebAssembly code and configuration for your dapp, and deploy it using the [HTTPS interface](#http-interface). You can create canister modules using the Motoko language and the SDK, which is more convenient. If you want to use your own tooling, however, then this document describes [what a canister module looks like](#canister-module-format) and how the [WebAssembly code can interact with the IC](#system-api).
+Dapps on the BigFile, or *IC* for short, are implemented as *canister smart contracts*, or *canisters* for short. If you want to build on the BigFile as a dapp developer, you first create a *canister module* that contains the WebAssembly code and configuration for your dapp, and deploy it using the [HTTPS interface](#http-interface). You can create canister modules using the Motoko language and the SDK, which is more convenient. If you want to use your own tooling, however, then this document describes [what a canister module looks like](#canister-module-format) and how the [WebAssembly code can interact with the IC](#system-api).
 
-Once your dapp is running on the Internet Computer, it is a canister smart contract, and users can interact with it. They can use the [HTTPS interface](#http-interface) to interact with the canister according to the [System API](#system-api).
+Once your dapp is running on the BigFile, it is a canister smart contract, and users can interact with it. They can use the [HTTPS interface](#http-interface) to interact with the canister according to the [System API](#system-api).
 
 The user can also use the HTTPS interface to issue read-only queries, which are faster, but cannot change the state of a canister.
 
@@ -62,15 +62,15 @@ The user can also use the HTTPS interface to issue read-only queries, which are 
     return "Hello world!"
     User <-- IC : "Hello World!"
 ```
-**A typical use of the Internet Computer. (This is a simplified view; some of the arrows represent multiple interaction steps or polling.)**
+**A typical use of the BigFile. (This is a simplified view; some of the arrows represent multiple interaction steps or polling.)**
 
-Sections "[HTTPS Interface](#http-interface)" and "[Canister interface (System API)](#system-api)" describe these interfaces, together with a brief description of what they do. Afterwards, you will find a [more formal description](#abstract-behavior) of the Internet Computer that describes its abstract behavior with more rigor.
+Sections "[HTTPS Interface](#http-interface)" and "[Canister interface (System API)](#system-api)" describe these interfaces, together with a brief description of what they do. Afterwards, you will find a [more formal description](#abstract-behavior) of the BigFile that describes its abstract behavior with more rigor.
 
 ### Nomenclature
 
 To get some consistency in this document, we try to use the following terms with precision:
 
-We avoid the term "client", as it could be the client of the Internet Computer or the client inside the distributed network that makes up the Internet Computer. Instead, we use the term *user* to denote the external entity interacting with the Internet Computer, even if in most cases it will be some code (sometimes called "agent") acting on behalf of a (human) user.
+We avoid the term "client", as it could be the client of the BigFile or the client inside the distributed network that makes up the BigFile. Instead, we use the term *user* to denote the external entity interacting with the BigFile, even if in most cases it will be some code (sometimes called "agent") acting on behalf of a (human) user.
 
 The public entry points of canisters are called *methods*. Methods can be declared to be either *update methods* (state mutation is preserved, can call update and query methods of arbitrary canisters), *query methods* (state mutation is discarded, no further calls can be made), or *composite query* methods (state mutation is discarded, can call query and composite query methods of canisters on the same subnet).
 
@@ -83,7 +83,7 @@ Internally, a call or a response is transmitted as a *message* from a *sender* t
 
 WebAssembly *functions* are exported by the WebAssembly module or provided by the System API. These are *invoked* and can either *trap* or *return*, possibly with a return value. Functions, too, have parameters and take arguments.
 
-External *users* interact with the Internet Computer by issuing *requests* on the HTTPS interface. Requests have responses which can either be replies or rejects. Some requests cause internal messages to be created.
+External *users* interact with the BigFile by issuing *requests* on the HTTPS interface. Requests have responses which can either be replies or rejects. Some requests cause internal messages to be created.
 
 Canisters and users are identified by a *principal*, sometimes also called an *id*.
 
@@ -1452,7 +1452,7 @@ Eventually, the canister will want to respond to the original call, either by re
 
 -   `ic0.msg_reply_data_append : (src : i32, size : i32) → ()`
 
-    Appends data it to the (initially empty) data reply. Traps if the total appended data exceeds the [maximum response size](https://internetcomputer.org/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
+    Appends data it to the (initially empty) data reply. Traps if the total appended data exceeds the [maximum response size](https://thebigfile.com/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
 
     This traps if the current call already has been or does not need to be responded to.
 
@@ -1574,7 +1574,7 @@ There must be at most one call to `ic0.call_on_cleanup` between `ic0.call_new` a
 
 -   `ic0.call_data_append : (src : i32, size : i32) -> ()`
 
-    Appends the specified bytes to the argument of the call. Initially, the argument is empty. Traps if the total appended data exceeds the [maximum inter-canister call payload](https://internetcomputer.org/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
+    Appends the specified bytes to the argument of the call. Initially, the argument is empty. Traps if the total appended data exceeds the [maximum inter-canister call payload](https://thebigfile.com/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
 
     This may be called multiple times between `ic0.call_new` and `ic0.call_perform`.
 
@@ -1730,7 +1730,7 @@ This call traps if the amount of cycles refunded does not fit into a 64-bit valu
 
 Canisters have the ability to store and retrieve data from a secondary memory. The purpose of this *stable memory* is to provide space to store data beyond upgrades. The interface mirrors roughly the memory-related instructions of WebAssembly, and tries to be forward compatible with exposing this feature as an additional memory.
 
-The stable memory is initially empty and can be grown up to the [Wasm stable memory limit](https://internetcomputer.org/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits) (provided the subnet has capacity).
+The stable memory is initially empty and can be grown up to the [Wasm stable memory limit](https://thebigfile.com/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits) (provided the subnet has capacity).
 
 -   `ic0.stable_size : () → (page_count : i32)`
 
@@ -2276,7 +2276,7 @@ This method is only available in local development instances.
 
 ## The IC Bitcoin API {#ic-bitcoin-api}
 
-The Bitcoin functionality is exposed via the management canister. Information about Bitcoin can be found in the [Bitcoin developer guides](https://developer.bitcoin.org/devguide/). Invoking the functions of the Bitcoin API will cost cycles. We refer the reader to the [Bitcoin documentation](https://internetcomputer.org/docs/current/developer-docs/integrations/bitcoin/bitcoin-how-it-works) for further relevant information and the [IC pricing page](https://internetcomputer.org/docs/current/developer-docs/gas-cost) for information on pricing for the Bitcoin mainnet and testnet.
+The Bitcoin functionality is exposed via the management canister. Information about Bitcoin can be found in the [Bitcoin developer guides](https://developer.bitcoin.org/devguide/). Invoking the functions of the Bitcoin API will cost cycles. We refer the reader to the [Bitcoin documentation](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/bitcoin-how-it-works) for further relevant information and the [IC pricing page](https://thebigfile.com/docs/current/developer-docs/gas-cost) for information on pricing for the Bitcoin mainnet and testnet.
 
 ### IC method `bitcoin_get_utxos` {#ic-bitcoin_get_utxos}
 

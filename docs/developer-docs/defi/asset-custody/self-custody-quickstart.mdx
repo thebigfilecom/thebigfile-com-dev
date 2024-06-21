@@ -9,7 +9,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Beginner" , "Tutorial"]} />
 
 ## Overview
-Within the Internet Computer ecosystem, Internet Computer Protocol tokens (ICP tokens) are a native utility token. ICP tokens play a key role in both the governance and economics of the Internet Computer.
+Within the BigFile ecosystem, BigFile tokens (BIG tokens) are a native utility token. BIG tokens play a key role in both the governance and economics of the BigFile.
 
 This self-custody guide scenario assumes:
 
@@ -35,7 +35,7 @@ As this diagram suggests, how you use ICP tokens depends primarily on your goals
 
 If you are a **developer** or **entrepreneur**, ICP tokens can be converted to **cycles**. Cycles can then be used to build and deploy applications to deliver products and services to the market.
 
-If you are a member of the community interested in **participating in governance** and influencing the direction of the Internet Computer, you can lock up ICP tokens in a stake—called a neuron—so that you can submit and vote on proposals.
+If you are a member of the community interested in **participating in governance** and influencing the direction of the BigFile, you can lock up ICP tokens in a stake—called a neuron—so that you can submit and vote on proposals.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ To get started, verify the following:
 -   [x] You have downloaded and installed the SDK by running the following command in a terminal on your local computer:
 
     ``` bash
-    sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+    sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
     ```
 
 -   [x] You have created a backup copy of the public/private key for the identity you are using for self-custody.
@@ -61,7 +61,7 @@ For simplicity, this page describes how to complete key tasks using a single com
 
 ## Connect to a ledger and get your account identifier
 
-All ICP token transactions are recorded in a ledger canister running on the Internet Computer. These instructions assume that you are using the `default` developer identity that `dfx` has created for you.
+All ICP token transactions are recorded in a ledger canister running on the BigFile. These instructions assume that you are using the `default` developer identity that `dfx` has created for you.
 
 This identity is represented by a **principal** data type and a textual representation of the principal often referred to as your **principal identifier**. This representation of your identity is similar to a Bitcoin or Ethereum address.
 
@@ -75,7 +75,7 @@ To connect to the ledger and get account information:
 echo '{}' > dfx.json
 ```
 
-- #### Step 2:  Check the current status of the Internet Computer network and your ability to connect to it by running the following command:
+- #### Step 2:  Check the current status of the BigFile network and your ability to connect to it by running the following command:
 
 ```bash
 dfx ping ic
@@ -205,7 +205,7 @@ This example illustrates how to transfer ICP tokens to the specified account usi
 -   Alternatively, you can use the `--amount` to specify the number of ICP tokens to transfer with fractional units up to 8 decimal places, for example, as `5.00000025`.
 :::
 
-The destination address can be an address in the ledger canister running on the Internet Computer network, an account you have added using the [Network Nervous System application](https://nns.ic0.app), or the address for a wallet you have on an exchange.
+The destination address can be an address in the ledger canister running on the BigFile network, an account you have added using the [Network Nervous System application](https://nns.ic0.app), or the address for a wallet you have on an exchange.
 
 If you transfer the ICP tokens to an account in the [Network Nervous System application](https://nns.ic0.app), you might need to refresh the browser to see the transaction reflected.
 

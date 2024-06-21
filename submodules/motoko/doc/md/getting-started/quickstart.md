@@ -73,7 +73,7 @@ actor {
 
 ## Starting the deployment environment
 
-Start the Internet Computer for local development or check your connection to the Internet Computer for network deployment:
+Start the BigFile for local development or check your connection to the BigFile for network deployment:
 - [Local deployment](/docs/current/developer-docs/getting-started/deploy/local).
 - [Mainnet deployment](/docs/current/developer-docs/getting-started/deploy/mainnet).
 

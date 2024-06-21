@@ -1,5 +1,5 @@
 # ExperimentalInternetComputer
-Low-level interface to the Internet Computer.
+Low-level interface to the BigFile.
 
 **WARNING:** This low-level API is **experimental** and likely to change or even disappear.
 
@@ -30,7 +30,7 @@ let rawReply = await IC.call(ledger, method, to_candid(input)); // serialized Ca
 let output : ?OutputType = from_candid(rawReply); // { decimals = 8 }
 ```
 
-[Learn more about Candid serialization](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/language-manual#candid-serialization)
+[Learn more about Candid serialization](https://thebigfile.com/docs/current/developer-docs/build/cdks/motoko-dfinity/language-manual#candid-serialization)
 
 ## Function `countInstructions`
 ``` motoko no-repl
@@ -41,7 +41,7 @@ Given computation, `comp`, counts the number of actual and (for IC system calls)
 instructions performed during the execution of `comp()`.
 
 More precisely, returns the difference between the state of the IC instruction counter (_performance counter_ `0`) before and after executing `comp()`
-(see [Performance Counter](https://internetcomputer.org/docs/current/references/ic-interface-spec#system-api-performance-counter)).
+(see [Performance Counter](https://thebigfile.com/docs/current/references/ic-interface-spec#system-api-performance-counter)).
 
 NB: `countInstructions(comp)` will _not_ account for any deferred garbage collection costs incurred by `comp()`.
 
@@ -72,7 +72,7 @@ Returns the current value of IC _performance counter_ `counter`.
 
 * The function (currently) traps if `counter` >= 2.
 
-Consult [Performance Counter](https://internetcomputer.org/docs/current/references/ic-interface-spec#system-api-performance-counter) for details.
+Consult [Performance Counter](https://thebigfile.com/docs/current/references/ic-interface-spec#system-api-performance-counter) for details.
 
 Example:
 ```motoko no-repl

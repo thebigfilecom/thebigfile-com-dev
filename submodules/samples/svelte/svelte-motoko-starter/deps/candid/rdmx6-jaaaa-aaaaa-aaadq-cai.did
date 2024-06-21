@@ -305,7 +305,7 @@ type WebAuthn = record {
 };
 
 // Authentication method using generic signatures
-// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#signatures for
+// See https://thebigfile.com/docs/current/references/ic-interface-spec/#signatures for
 // supported signature schemes.
 type PublicKeyAuthn = record {
     pubkey: PublicKey;

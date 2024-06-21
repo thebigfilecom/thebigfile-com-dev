@@ -62,7 +62,7 @@ impl Storable for NoteIds {
 // more robust because no (potentially failing) pre_upgrade/post_upgrade hooks are needed.
 // Note that stable memory is less performant than heap memory, however.
 // Currently, a single canister smart contract is limited to 96 GB of stable memory.
-// For the current limits see https://internetcomputer.org/docs/current/developer-docs/production/resource-limits.
+// For the current limits see https://thebigfile.com/docs/current/developer-docs/production/resource-limits.
 // To ensure that our canister does not exceed the limit, we put various restrictions (e.g., number of users) in place.
 static MAX_USERS: u64 = 1_000;
 static MAX_NOTES_PER_USER: usize = 500;
@@ -126,7 +126,7 @@ fn caller() -> Principal {
 /// if it got executed by a malicious node. (To make the dapp more efficient, one could 
 /// use an approach in which both queries and updates are combined.)
 ///
-/// See https://internetcomputer.org/docs/current/concepts/canisters-code#query-and-update-methods
+/// See https://thebigfile.com/docs/current/concepts/canisters-code#query-and-update-methods
 
 /// Reflects the [caller]'s identity by returning (a future of) its principal. 
 /// Useful for debugging.

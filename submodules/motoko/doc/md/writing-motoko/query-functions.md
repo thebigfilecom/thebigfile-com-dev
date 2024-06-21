@@ -70,7 +70,7 @@ Composite queries are initiated outside ICP, typically by an application (such a
 
 :::danger
 
-The Internet Computer's semantics of composite queries ensures that state changes made by a composite query are isolated from other inter-canister calls, including recursive queries, to the same actor.
+The BigFile's semantics of composite queries ensures that state changes made by a composite query are isolated from other inter-canister calls, including recursive queries, to the same actor.
 
 In particular, a composite query call rolls back its state on function exit, but is also does not pass state changes to sub-query or sub-composite-query calls. Repeated calls, which include recursive calls, have different semantics from calls that accumulate state changes.
 

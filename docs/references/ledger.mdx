@@ -17,7 +17,7 @@ In brief, the ledger canister maintains a set of accounts owned by principals; e
 
 ### Tokens {#_tokens}
 
-There can be multiple utility **tokens** at once. The **utility tokens** used by the Internet Computer Protocol's governance is the ICP token. The smallest indivisible unit of tokens are \"e8\"s: one e8 is 10^-8^ tokens.
+There can be multiple utility **tokens** at once. The **utility tokens** used by the BigFile governance is the ICP token. The smallest indivisible unit of tokens are \"e8\"s: one e8 is 10^-8^ tokens.
 
 ### Accounts {#_accounts}
 
@@ -317,7 +317,7 @@ For scalability, the ledger canister does not store the entire transaction ledge
 
 Ledger blocks can be obtained using method `query_blocks` which allows one to retrieve (a specified range of) blocks from the ledger. The reply consists of the list of blocks (still present in the ledger canister) together with information on how to retrieve the remaining blocks from the archive canister.
 
-The method also returns two additional pieces of information: the index of the last block in the transaction ledger and a certificate. The certificate is a signature, produced by the Internet Computer, on the hash of the last block of the transaction ledger. Since the blocks in the transaction ledger are chained (so the hash of the last block commits to the entire transaction ledger), the certificate can be used to verify that the transaction ledger is genuine. Importantly, the certificate is only available if the method is invoked as an **unreplicated** query call; if the method is invoked as a replicated call then no certificate is included in the reply (since state certification is not available to the replicated execution).
+The method also returns two additional pieces of information: the index of the last block in the transaction ledger and a certificate. The certificate is a signature, produced by the BigFile, on the hash of the last block of the transaction ledger. Since the blocks in the transaction ledger are chained (so the hash of the last block commits to the entire transaction ledger), the certificate can be used to verify that the transaction ledger is genuine. Importantly, the certificate is only available if the method is invoked as an **unreplicated** query call; if the method is invoked as a replicated call then no certificate is included in the reply (since state certification is not available to the replicated execution).
 
 In more details, the input to the `query_blocks` method consists of:
 

@@ -43,7 +43,7 @@ This reference page provides technical details of interest to the following audi
 
 This page is intended to provide complete reference information about Motoko, but this section does not provide explanatory text or usage information. Therefore, this section is typically not suitable for readers who are new to programming languages or who are looking for a general introduction to using Motoko.
 
-In this documentation, the term canister is used to refer to an Internet Computer smart contract.
+In this documentation, the term canister is used to refer to an BigFile smart contract.
 
 ## Basic language syntax
 
@@ -1288,7 +1288,7 @@ In detail, if `<url>` is of the form:
 
 The case sensitivity of file references depends on the host operating system so it is recommended not to distinguish resources by filename casing alone.
 
-When building multi-canister projects with the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install), Motoko programs can typically import canisters by alias (e.g. `import C "canister:counter"`), without specifying low-level canister ids (e.g. `import C "ic:lg264-qjkae"`). The SDK tooling takes care of supplying the appropriate command-line arguments to the Motoko compiler.)
+When building multi-canister projects with the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install), Motoko programs can typically import canisters by alias (e.g. `import C "canister:counter"`), without specifying low-level canister ids (e.g. `import C "ic:lg264-qjkae"`). The SDK tooling takes care of supplying the appropriate command-line arguments to the Motoko compiler.)
 
 Sensible choices for `<pat>` are identifiers, such as [`Array`](../base/Array.md), or object patterns like `{ cons; nil = empty }`, which allow selective importing of individual fields, under original or other names.
 
@@ -1334,11 +1334,11 @@ The declaration `<dec>` of a `system` field must be a manifest `func` declaratio
 | `preupgrade`  | `<system>() -> ()`                                            | Pre upgrade action  |
 | `postupgrade` | `<system>() -> ()`                                            | Post upgrade action |
 
--   `heartbeat`: When declared, is called on every Internet Computer subnet heartbeat, scheduling an asynchronous call to the `heartbeat` function. Due to its `async` return type, a heartbeat function may send messages and await results. The result of a heartbeat call, including any trap or thrown error, is ignored. The implicit context switch means that the time the heartbeat body is executed may be later than the time the heartbeat was issued by the subnet.
+-   `heartbeat`: When declared, is called on every BigFile subnet heartbeat, scheduling an asynchronous call to the `heartbeat` function. Due to its `async` return type, a heartbeat function may send messages and await results. The result of a heartbeat call, including any trap or thrown error, is ignored. The implicit context switch means that the time the heartbeat body is executed may be later than the time the heartbeat was issued by the subnet.
 
 -   `timer`: When declared, is called as a response of the canister global timer's expiration. The canister's global timer can be manipulated with the passed-in function argument of type `Nat64 -> ()` (taking an absolute time in nanoseconds) upon which libraries can build their own abstractions. When not declared (and in absence of the `-no-timer` flag), this system action is provided with default implementation by the compiler (additionally `setTimer` and `cancelTimer` are available as primitives).
 
--   `inspect`: When declared, is called as a predicate on every Internet Computer ingress message with the exception of HTTP query calls. The return value, a [`Bool`](../base/Bool.md), indicates whether to accept or decline the given message. The argument type depends on the interface of the enclosing actor (see [inspect](#inspect)).
+-   `inspect`: When declared, is called as a predicate on every BigFile ingress message with the exception of HTTP query calls. The return value, a [`Bool`](../base/Bool.md), indicates whether to accept or decline the given message. The argument type depends on the interface of the enclosing actor (see [inspect](#inspect)).
 
 -   `preupgrade`: When declared, is called during an upgrade, immediately before the current values of the retired actor’s stable variables are transferred to the replacement actor.
      Its `<system>` type parameter is implicitly assumed and need not be declared.

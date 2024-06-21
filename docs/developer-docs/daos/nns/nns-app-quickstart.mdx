@@ -9,7 +9,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Beginner", "Governance", "Tutorial"]} />
 
 ## Overview
-All changes to the configuration and behavior of the Internet Computer are controlled by an algorithmic governance system called the Network Nervous System (NNS). The NNS controls all aspects of the Internet Computer blockchain configuration and is responsible for performing many network management operations. For example, the Network Nervous System (NNS) is responsible for:
+All changes to the configuration and behavior of the BigFile are controlled by an algorithmic governance system called the Network Nervous System (NNS). The NNS controls all aspects of the BigFile blockchain configuration and is responsible for performing many network management operations. For example, the Network Nervous System (NNS) is responsible for:
 
 -   Upgrading the protocol and guest operating system software used by the nodes machines.
 -   Inducting new node providers and machines into the network.
@@ -26,7 +26,7 @@ For network participants to be able to vote on proposals, they need to lock up a
 
 Because neurons represent a stake of ICP utility tokens, they also represent an identity with a **ICP ledger account** and a principal that controls the  account.
 
-Neurons provide the stability required for responsible governance of the Internet Computer by ensuring that the ICP utility tokens they represent cannot be exchanged for a specific period of time referred to as the **lock-up** period.
+Neurons provide the stability required for responsible governance of the BigFile by ensuring that the ICP utility tokens they represent cannot be exchanged for a specific period of time referred to as the **lock-up** period.
 
 The following diagram provides a simplified view of the workflow for creating a neuron and the relationship between the neuron and ledger canisters.
 
@@ -43,9 +43,9 @@ It's **dissolve delay** determins the time it takes for a neuron to be unlocked 
 
 The dissolved neuron ceases to exist and the stake of ICP utility tokens that the neuron represented is released to the appropriate ledger canister account.
 
-## Connect to the Internet Computer
+## Connect to the BigFile
 
-To connect to the Internet Computer using the Network Nervous System (NNS) dapp:
+To connect to the BigFile using the Network Nervous System (NNS) dapp:
 
 - #### Step 1:  Open a browser and navigate to the [Network Nervous System (NNS)](https://nns.ic0.app) dapp.
 
@@ -69,7 +69,7 @@ After you have registered, you can click **Login** to authenticate using your an
 
 ### Add an account
 
-Logging on using an Internet Identity creates a main account for you in the Internet Computer ledger. If your ICP utility tokens are associated with your developer identity; that is, the identity created by the SDK `dfx` command-line interface. Your main account displays 0.00 for your ICP utility token balance. For example:
+Logging on using an Internet Identity creates a main account for you in the BigFile ledger. If your ICP utility tokens are associated with your developer identity; that is, the identity created by the SDK `dfx` command-line interface. Your main account displays 0.00 for your ICP utility token balance. For example:
 
 ![nns app main](../_attachments/nns3.png)
 
@@ -161,7 +161,7 @@ This example illustrates how to transfer ICP utility tokens to using a whole num
 -   Alternatively, you can use the `--amount` to specify the number of ICP utility tokens to transfer with fractional units up to 8 decimal places, for example, as `5.00000025`.
 :::
 
-The destination address can be an address in the ledger canister running on the Internet Computer network, an account you have added using the [Network Nervous System dapp](https://nns.ic0.app), or the address for a wallet you have on an exchange.
+The destination address can be an address in the ledger canister running on the BigFile network, an account you have added using the [Network Nervous System dapp](https://nns.ic0.app), or the address for a wallet you have on an exchange.
 
 If you transfer the ICP utility tokens to an account in the [Network Nervous System dapp](https://nns.ic0.app), you might need to refresh the browser to see the transaction reflected.
 
@@ -169,7 +169,7 @@ For more information about using the `dfx ledger` command-line options, see [dfx
 
 ### Using the NNS dapp
 
-- #### Step 1: On the default 'Tokens' tab, assure that The Internet Computer token has been selected, then click **Send** on the bottom of the window.
+- #### Step 1: On the default 'Tokens' tab, assure that The BigFile token has been selected, then click **Send** on the bottom of the window.
 
 ![Send](../_attachments/nns4.png)
 
@@ -185,7 +185,7 @@ The maximum amount you can send is your token balance minus the ledger fee. The 
 
 ## Stake ICP utility tokens in a neuron
 
-After you transfer ICP utility tokens to the Network Nervous System dapp, you can use the Network Nervous System dapp to create and manage neurons, vote on proposals, and create canisters on the Internet Computer.
+After you transfer ICP utility tokens to the Network Nervous System dapp, you can use the Network Nervous System dapp to create and manage neurons, vote on proposals, and create canisters on the BigFile.
 
 Neurons are required to participate in governance and earn rewards. To create a neuron, you must lock up some number of ICP utility tokens for a period of time. The minimum stake required to create a neuron is one ICP utility token. You can configure the period of time the stake is locked from six months up to a maximum of eight years.
 
@@ -232,7 +232,7 @@ To increase the stake in an existing neuron:
 
 - #### Step 1:  Follow the steps in [stake ICP utility tokens in a neuron](#stake-icp) to stake the original neuron using the [Network Nervous System (NNS)](https://nns.ic0.app) dapp.
 
-- #### Step 2:  Look up the transaction in the Internet Computer Association [transaction dashboard](https://dashboard.internetcomputer.org/transactions) to get the neuron address.
+- #### Step 2:  Look up the transaction in the BigFile Association [transaction dashboard](https://dashboard.internetcomputer.org/transactions) to get the neuron address.
 
 You can use the account identifier for your main ICP ledger account to search for your transactions.
 
@@ -344,11 +344,11 @@ To spawn new neurons from an existing neuron:
 
 ## Vote on proposals
 
-Active participation in governance is an important factor in the long-term health of the Internet Computer. Voting on proposals is also an important factor in calculating the rewards you receive in return for locking up ICP utility tokens in neurons.
+Active participation in governance is an important factor in the long-term health of the BigFile. Voting on proposals is also an important factor in calculating the rewards you receive in return for locking up ICP utility tokens in neurons.
 
 However, voting directly on every proposal submitted to the NNS presents several challenges. For example, proposals might be submitted and require a vote when you are unavailable or propose changes that you lack the expertise to evaluate. To address these challenges, you can configure neurons to vote automatically to adopt or reject proposals by following the votes of a group of neurons.
 
-To maximize your rewards, you should vote on as many proposals as possible by following the active neuron holders who have interests aligned with your own. For example, you might follow the Internet Computer Association (ICA) on some topics such **SubnetManagement** and other neuron holders on topics such as **Governance**.
+To maximize your rewards, you should vote on as many proposals as possible by following the active neuron holders who have interests aligned with your own. For example, you might follow the BigFile Association (ICA) on some topics such **SubnetManagement** and other neuron holders on topics such as **Governance**.
 
 You can choose the proposal types and proposal topics that you see and vote on either directly or by following other neuron stakeholders using filters in the Network Nervous System dapp. For example, if you want to review and vote on all proposals that involve network participants such as data center identities and node operators, but aren’t interested in viewing proposals related to the current market value of ICP, as measured by an International Monetary Fund (IMF) Special Drawing Right (SDR), you can select the **ParticipantManagement** topic filter and deselect the **ExchangeRate** topic filter.
 
@@ -360,7 +360,7 @@ To manually vote on proposals:
 
 - #### Step 2: Then, select which Nervous System you'd like to view proposals for.
 
-By default, the Internet Computer NNS proposals are shown, but other proposals for SNS's like OpenChat and Kinic are also available.
+By default, the BigFile NNS proposals are shown, but other proposals for SNS's like OpenChat and Kinic are also available.
 
 - #### Step 3:  Click on any proposals to view more information on it, such as the proposals summary, the type of proposals, the topic, and when the proposal's voting ends.
 
@@ -389,7 +389,7 @@ If you want to start submitting proposals right away, however, you can access a 
 
 You can participate in SNS decentralization swaps from the NNS dapp using the 'Launchpad' tab. An SNS is an advanced version of a decentralized autonomous organization, where the participants of the SNS can vote on proposals, such as a new feature, roadmap item, or allocation of SNS funds.
 
-You can learn more about SNS [here](https://internetcomputer.org/sns)
+You can learn more about SNS [here](https://thebigfile.com/sns)
 
 To view current and past SNS decentralization swaps from the NNS dapp:
 

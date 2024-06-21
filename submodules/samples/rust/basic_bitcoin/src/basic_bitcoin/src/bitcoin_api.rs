@@ -15,7 +15,7 @@ const SEND_TRANSACTION_PER_BYTE_CYCLES: u64 = 20_000_000;
 /// Returns the balance of the given bitcoin address.
 ///
 /// Relies on the `bitcoin_get_balance` endpoint.
-/// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_balance
+/// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_balance
 pub async fn get_balance(network: BitcoinNetwork, address: String) -> u64 {
     let balance_res: Result<(Satoshi,), _> = call_with_payment(
         Principal::management_canister(),
@@ -35,7 +35,7 @@ pub async fn get_balance(network: BitcoinNetwork, address: String) -> u64 {
 /// Returns the UTXOs of the given bitcoin address.
 ///
 /// NOTE: Relies on the `bitcoin_get_utxos` endpoint.
-/// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_utxos
+/// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_utxos
 pub async fn get_utxos(network: BitcoinNetwork, address: String) -> GetUtxosResponse {
     let utxos_res: Result<(GetUtxosResponse,), _> = call_with_payment(
         Principal::management_canister(),
@@ -56,7 +56,7 @@ pub async fn get_utxos(network: BitcoinNetwork, address: String) -> GetUtxosResp
 /// Percentiles are computed from the last 10,000 transactions (if available).
 ///
 /// Relies on the `bitcoin_get_current_fee_percentiles` endpoint.
-/// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_current_fee_percentiles
+/// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_current_fee_percentiles
 pub async fn get_current_fee_percentiles(network: BitcoinNetwork) -> Vec<MillisatoshiPerByte> {
     let res: Result<(Vec<MillisatoshiPerByte>,), _> = call_with_payment(
         Principal::management_canister(),
@@ -74,7 +74,7 @@ pub async fn get_current_fee_percentiles(network: BitcoinNetwork) -> Vec<Millisa
 /// Sends a (signed) transaction to the bitcoin network.
 ///
 /// Relies on the `bitcoin_send_transaction` endpoint.
-/// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction
+/// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction
 pub async fn send_transaction(network: BitcoinNetwork, transaction: Vec<u8>) {
     let transaction_fee = SEND_TRANSACTION_BASE_CYCLES
         + (transaction.len() as u64) * SEND_TRANSACTION_PER_BYTE_CYCLES;

@@ -128,7 +128,7 @@ fn init() {}
 /// if it got executed by a malicious node. (To make the dapp more efficient, one could 
 /// use an approach in which both queries and updates are combined.)
 ///
-/// See https://internetcomputer.org/docs/current/concepts/canisters-code#query-and-update-methods
+/// See https://thebigfile.com/docs/current/concepts/canisters-code#query-and-update-methods
 
 /// Reflects the [caller]'s identity by returning (a future of) its principal. 
 /// Useful for debugging.

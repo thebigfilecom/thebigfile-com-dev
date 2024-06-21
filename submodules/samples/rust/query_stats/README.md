@@ -29,7 +29,7 @@ The `get_query_stats` is the function that queries the status endpoint and retur
 
 ### Prerequisites 
 This example requires an installation of:
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install `node.js` (to build the web frontend).
 
 
@@ -84,4 +84,4 @@ One way to go from here is to get the query stats in a regular interval using a 
 
 ## Security considerations and security best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.

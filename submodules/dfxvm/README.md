@@ -1,6 +1,6 @@
 # dfxvm: The dfx version manager
 
-*dfxvm* installs the [Internet Computer SDK][sdk] (dfx), enabling you
+*dfxvm* installs the [BigFile SDK][sdk] (dfx), enabling you
 to easily switch between different versions.
 
 ## Documentation
@@ -13,14 +13,14 @@ documentation on using dfxvm.
 You can install dfxvm via `curl`.
 
 ``` bash
-sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 You will have an opportunity to select the version,
 but you can also specify it on the command line:
 
 ``` bash
-DFX_VERSION=0.15.1 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+DFX_VERSION=0.15.1 sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 ## Contribution

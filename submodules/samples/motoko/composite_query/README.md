@@ -104,10 +104,10 @@ dfx canister call --query Map get '(15)'
 
 ## Resources
 
-- [Actor classes](https://internetcomputer.org/docs/current/motoko/main/actor-classes).
-- [Managing cycles](https://internetcomputer.org/docs/current/motoko/main/cycles).
-- [Composite queries](https://internetcomputer.org/docs/current/motoko/main/actors-async#composite-query-functions).
+- [Actor classes](https://thebigfile.com/docs/current/motoko/main/actor-classes).
+- [Managing cycles](https://thebigfile.com/docs/current/motoko/main/cycles).
+- [Composite queries](https://thebigfile.com/docs/current/motoko/main/actors-async#composite-query-functions).
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on ICP. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on ICP. This example may not implement all the best practices.

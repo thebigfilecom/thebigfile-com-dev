@@ -11,20 +11,20 @@ This tutorial will walk you through how to deploy a sample [canister smart contr
 
 ## Architecture
 
-This example internally leverages the [ECDSA API](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key)
-and [Bitcoin API](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin-api) of the Internet Computer.
+This example internally leverages the [ECDSA API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key)
+and [Bitcoin API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin-api) of the Internet Computer.
 
 For a deeper understanding of the ICP < > BTC integration, see the [Bitcoin integration documentation](https://wiki.internetcomputer.org/wiki/Bitcoin_Integration).
 
 ## Prerequisites
 
-* [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+* [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 
 ## Step 1: Building and deploying sample code
 
 ### Clone the smart contract
 
-This tutorial has the **same smart contract** written in different programming languages: in [Motoko](https://internetcomputer.org/docs/current/developer-docs/backend/motoko/index.md) and [Rust](https://internetcomputer.org/docs/current/developer-docs/backend/rust/index.md).
+This tutorial has the **same smart contract** written in different programming languages: in [Motoko](https://thebigfile.com/docs/current/developer-docs/backend/motoko/index.md) and [Rust](https://thebigfile.com/docs/current/developer-docs/backend/rust/index.md).
 
 You can clone and deploy either one, as they both function in the same way.
 
@@ -40,7 +40,7 @@ git submodule update --init --recursive
 
 ### Acquire cycles to deploy
 
-Deploying to the Internet Computer requires [cycles](https://internetcomputer.org/docs/current/developer-docs/setup/cycles) (the equivalent of "gas" in other blockchains). You can get free cycles from the [cycles faucet](https://internetcomputer.org/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
+Deploying to the Internet Computer requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles) (the equivalent of "gas" in other blockchains). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
 
 ### Deploy the smart contract to the Internet Computer
 
@@ -79,7 +79,7 @@ In the output above, to see the Candid Web UI for your bitcoin canister, you wou
 
 Bitcoin has different types of addresses (e.g. P2PKH, P2SH). Most of these
 addresses can be generated from an ECDSA public key. The example code
-showcases how your canister can generate a [P2PKH address](https://en.bitcoin.it/wiki/Transaction#Pay-to-PubkeyHash) using the [ecdsa_public_key](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key) API.
+showcases how your canister can generate a [P2PKH address](https://en.bitcoin.it/wiki/Transaction#Pay-to-PubkeyHash) using the [ecdsa_public_key](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key) API.
 
 On the Candid UI of your canister, click the "Call" button under `get_p2pkh_address` to
 generate a P2PKH Bitcoin address.
@@ -118,7 +118,7 @@ Alternatively, make the call using the command line. Be sure to replace `mheyfRs
 dfx canister --network=ic call basic_bitcoin get_balance '("mheyfRsAQ1XrjtzjfU1cCH2B6G1KmNarNL")'
 ```
 
-Checking the balance of a Bitcoin address relies on the [bitcoin_get_balance](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_balance) API.
+Checking the balance of a Bitcoin address relies on the [bitcoin_get_balance](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_balance) API.
 
 ## Step 5: Sending bitcoin
 
@@ -135,12 +135,12 @@ dfx canister --network=ic call basic_bitcoin send '(record { destination_address
 
 The `send` endpoint can send bitcoin by:
 
-1. Getting the percentiles of the most recent fees on the Bitcoin network using the [bitcoin_get_current_fee_percentiles API](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_current_fee_percentiles).
-2. Fetching your unspent transaction outputs (UTXOs), using the [bitcoin_get_utxos API](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_utxos).
+1. Getting the percentiles of the most recent fees on the Bitcoin network using the [bitcoin_get_current_fee_percentiles API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_current_fee_percentiles).
+2. Fetching your unspent transaction outputs (UTXOs), using the [bitcoin_get_utxos API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_utxos).
 3. Building a transaction, using some of the UTXOs from step 2 as input and the destination address and amount to send as output.
    The fee percentiles obtained from step 1 is used to set an appropriate fee.
-4. Signing the inputs of the transaction using the [sign_with_ecdsa API](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-sign_with_ecdsa).
-5. Sending the signed transaction to the Bitcoin network using the [bitcoin_send_transaction API](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction).
+4. Signing the inputs of the transaction using the [sign_with_ecdsa API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-sign_with_ecdsa).
+5. Sending the signed transaction to the Bitcoin network using the [bitcoin_send_transaction API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction).
 
 The `send` endpoint returns the ID of the transaction it sent to the network.
 You can track the status of this transaction using a block explorer. Once the
@@ -160,13 +160,13 @@ In this tutorial, you were able to:
 
 This example is extensively documented in the following tutorials:
 
-* [Deploying your first Bitcoin dapp](https://internetcomputer.org/docs/current/samples/deploying-your-first-bitcoin-dapp).
-* [Developing Bitcoin dapps locally](https://internetcomputer.org/docs/current/developer-docs/integrations/bitcoin/local-development).
+* [Deploying your first Bitcoin dapp](https://thebigfile.com/docs/current/samples/deploying-your-first-bitcoin-dapp).
+* [Developing Bitcoin dapps locally](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/local-development).
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
-* [Certify query responses if they are relevant for security](https://internetcomputer.org/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since the app e.g. offers a method to read balances.
-* [Use a decentralized governance system like SNS to make a canister have a decentralized controller](https://internetcomputer.org/docs/current/references/security/rust-canister-development-security-best-practices#use-a-decentralized-governance-system-like-sns-to-make-a-canister-have-a-decentralized-controller), since decentralized control may be essential for canisters holding Bitcoin on behalf of users.
+* [Certify query responses if they are relevant for security](https://thebigfile.com/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since the app e.g. offers a method to read balances.
+* [Use a decentralized governance system like SNS to make a canister have a decentralized controller](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#use-a-decentralized-governance-system-like-sns-to-make-a-canister-have-a-decentralized-controller), since decentralized control may be essential for canisters holding Bitcoin on behalf of users.

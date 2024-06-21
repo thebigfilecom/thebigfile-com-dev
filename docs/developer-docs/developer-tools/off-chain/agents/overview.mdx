@@ -8,9 +8,9 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Intermediate", "Agents" ]} />
 
-In the Internet Computer ecosystem, a library that is used to make calls to the ICP public interface is called an **agent**. An agent has a few key responsibilities, which make it convenient to work with in your language of choice.
+In the BigFile ecosystem, a library that is used to make calls to the ICP public interface is called an **agent**. An agent has a few key responsibilities, which make it convenient to work with in your language of choice.
 
-If you have a canister running, either on your local machine or live on the Internet Computer, you will have two main ways to interact with your canister smart contract.
+If you have a canister running, either on your local machine or live on the BigFile, you will have two main ways to interact with your canister smart contract.
 You can talk to the canister using the v2 API using an **agent** that follows the interface specification, or you can use the canister's HTTP interface.
 
 Smart contracts are able to define their own API's using the Candid Interface Declaration Language (IDL), and they will respond to calls through the public API.
@@ -53,7 +53,7 @@ If you're interested in building an agent in another language please reach out t
 
 ### Structuring data
 
-A `call` to the Internet Computer can take two common forms - an `update` or a `query`. The **agent** submits a `POST` request to `/api/v2/canister/<effective_canister_id>/call`, and includes the following components:
+A `call` to the BigFile can take two common forms - an `update` or a `query`. The **agent** submits a `POST` request to `/api/v2/canister/<effective_canister_id>/call`, and includes the following components:
 
 - `request_type`
 - Authentication
@@ -75,7 +75,7 @@ Once the data has been returned from ICP, the **agent** takes the certificate fr
 
 ### Managing authentication
 
-Calls to the Internet Computer always need to have a cryptographic identity attached. That identity will either be **anonymous** or **authenticated**, using a cryptographic signature. Since identities are required, canisters can use the identity attached to a call to decide how to respond to that call. This enables contracts to use those identities for other purposes.
+Calls to the BigFile always need to have a cryptographic identity attached. That identity will either be **anonymous** or **authenticated**, using a cryptographic signature. Since identities are required, canisters can use the identity attached to a call to decide how to respond to that call. This enables contracts to use those identities for other purposes.
 
 #### Accepted identities
 

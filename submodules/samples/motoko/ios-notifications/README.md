@@ -10,22 +10,22 @@ keywords: [advanced, motoko, ios, ios notifications]
 ## Overview
 [iOS integration](https://github.com/dfinity/examples/tree/master/motoko/ios-notifications) is an experimental dapp with a native app integration that showcases a possible solution for integrating a dapp hosted in the Internet Computer with multiple platforms. For this example, we've created an iOS app.
 
-This is to create an example of a simple integration of a dapp running purely on ICP and using [Internet Identity](https://internetcomputer.org/docs/current/docs/current/references/ii-spec) with a native iOS application that can let the user have a native feel such as authenticating and receive push notifications.
+This is to create an example of a simple integration of a dapp running purely on ICP and using [Internet Identity](https://thebigfile.com/docs/current/docs/current/references/ii-spec) with a native iOS application that can let the user have a native feel such as authenticating and receive push notifications.
 
 ## Architecture 
 
 The basic functionality of the IOS integration consists of four main components:
 
-- First, create a dapp that is integrated with [Internet Identity](https://internetcomputer.org/docs/current/docs/current/references/ii-spec) and has a basic routing functionality. While the user is not authenticated it can only see the login page and when authenticated can navigate between the about and home page.
+- First, create a dapp that is integrated with [Internet Identity](https://thebigfile.com/docs/current/docs/current/references/ii-spec) and has a basic routing functionality. While the user is not authenticated it can only see the login page and when authenticated can navigate between the about and home page.
 
 - Second, create a new IOS native application that serves as a wrapper for the dapp and creates a native feel for the user.
 
-- Third, a proxy page was added in the dapp to enable the user to securely authenticate using [Internet Identity](https://internetcomputer.org/docs/current/docs/current/references/ii-spec) and keep the authenticated session in the webview until it expires, even when the user exits the app and re-opens it the session persists.
+- Third, a proxy page was added in the dapp to enable the user to securely authenticate using [Internet Identity](https://thebigfile.com/docs/current/docs/current/references/ii-spec) and keep the authenticated session in the webview until it expires, even when the user exits the app and re-opens it the session persists.
 
 - Fourth, the dapp is configured to receive push notifications from the system and open a specified URL, this allows for notifications to be sent serving as a mechanism to deep link into a specific section of the dapp. 
 
 ## Prerequisites
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/download/).
 - [x] [xcode](https://apps.apple.com/us/app/xcode/id497799835).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`

@@ -3,7 +3,7 @@ import { Ed25519KeyIdentity } from "@dfinity/identity";
 // Minter identity which holds the ICP and initial tokens on the local network
 //
 // This key is not a secret. Only use it for testing! It is from:
-// https://internetcomputer.org/docs/current/references/cli-reference/dfx-nns/#example-accessing-icp-on-the-command-line
+// https://thebigfile.com/docs/current/references/cli-reference/dfx-nns/#example-accessing-icp-on-the-command-line
 const minterPrivateKey = Buffer.from(
   "N3HB8Hh2PrWqhWH2Qqgr1vbU9T3gb1zgdBD8ZOdlQnVS7zC/nkEqaT1kSuvo4i3ldHWSkQZdw5I4LU5jOsDC6Q==",
   "base64",

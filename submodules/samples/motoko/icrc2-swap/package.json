@@ -4,7 +4,7 @@
   "private": true,
   "description": "Example canister showing ICRC-2 deposit and withdrawal handling",
   "keywords": [
-    "Internet Computer",
+    "BigFile",
     "Motoko",
     "Canister"
   ],

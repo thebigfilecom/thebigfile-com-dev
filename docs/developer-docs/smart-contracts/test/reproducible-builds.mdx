@@ -11,20 +11,20 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
 ## Overview
-Thanks to its consensus protocol, the Internet Computer always runs <GlossaryTooltip>canister</GlossaryTooltip> code correctly. But this doesn’t mean that it’s running the **correct** code for a canister. If you are using a canister somebody else developed, you may want to verify that the canister is indeed running the intended code before giving it control to make important decision for you, e.g., sending your ICP to another canister. Verifying this requires answering two questions:
+Thanks to its consensus protocol, the BigFile always runs <GlossaryTooltip>canister</GlossaryTooltip> code correctly. But this doesn’t mean that it’s running the **correct** code for a canister. If you are using a canister somebody else developed, you may want to verify that the canister is indeed running the intended code before giving it control to make important decision for you, e.g., sending your ICP to another canister. Verifying this requires answering two questions:
 
 1.  Which WebAssembly (Wasm) code is being executed for a canister?
 2.  The canisters are normally written in a higher-level language, such as Motoko or Rust, and not directly in Wasm. The second question is then: is the Wasm that’s running really the result of compiling the purported source code?
 
-The rest of the document answers these questions. For the first question, you will see how the Internet Computer provides information about canister code. To be able to answer the second question, canister authors should ensure trusted and [reproducible builds](https://reproducible-builds.org/docs/definition/) of the Wasm code from the source. Such builds allow anyone to follow the same steps as the canister authors and yield the exact same Wasm code, which can then be compared to the Wasm code executing in the canister on the Internet Computer.
+The rest of the document answers these questions. For the first question, you will see how the BigFile provides information about canister code. To be able to answer the second question, canister authors should ensure trusted and [reproducible builds](https://reproducible-builds.org/docs/definition/) of the Wasm code from the source. Such builds allow anyone to follow the same steps as the canister authors and yield the exact same Wasm code, which can then be compared to the Wasm code executing in the canister on the BigFile.
 
 The impatient reader who is familiar with the topic of reproducible builds can skip straight to the [conclusion](#repro-build-summary).
 
-## Finding out which canister code the Internet Computer is executing
+## Finding out which canister code the BigFile is executing
 
-Internet Computer does not allow you to access the Wasm code of an arbitrary canister. This is a design decision, as developers might want to keep some code private. However, the Internet Computer does allow you to access the SHA-256 of the Wasm code of a canister.
+BigFile does not allow you to access the Wasm code of an arbitrary canister. This is a design decision, as developers might want to keep some code private. However, the BigFile does allow you to access the SHA-256 of the Wasm code of a canister.
 
-To obtain this hash, you must first note the principal of the Internet Computer canister whose code you want to check. For example, assume we’re interested in the code of the Internet Identity canister, whose principal is `rdmx6-jaaaa-aaaaa-aaadq-cai`. Then, the easiest way to access this data is using the [IC SDK](https://internetcomputer.org/developers/) from the terminal. Open your terminal, and run:
+To obtain this hash, you must first note the principal of the BigFile canister whose code you want to check. For example, assume we’re interested in the code of the Internet Identity canister, whose principal is `rdmx6-jaaaa-aaaaa-aaadq-cai`. Then, the easiest way to access this data is using the [IC SDK](https://thebigfile.com/developers/) from the terminal. Open your terminal, and run:
 
 ```
 dfx canister --network ic info rdmx6-jaaaa-aaaaa-aaadq-cai
@@ -34,9 +34,9 @@ Module hash: 0xa9a5d0492d1455d6b6b84fdc102fb182f55975145a2f99a403eb10ea7e37aee6
 
 If you are running an older version of the IC SDK, you will need to run this command from a directory that contains a valid `dfx.json` file. If you don’t have such a directory, you can create it using `dfx new`.
 
-Here, the Internet Computer tells us that the hash of the Wasm module of the `rdmx6-jaaaa-aaaaa-aaadq-cai` canister (which happens to be the Internet Identity canister) is `0xa9a5d0492d1455d6b6b84fdc102fb182f55975145a2f99a403eb10ea7e37aee6`.
+Here, the BigFile tells us that the hash of the Wasm module of the `rdmx6-jaaaa-aaaaa-aaadq-cai` canister (which happens to be the Internet Identity canister) is `0xa9a5d0492d1455d6b6b84fdc102fb182f55975145a2f99a403eb10ea7e37aee6`.
 
-The check above provides you the **current** hash of the canister’s Wasm module, but the **controllers** of an Internet Computer canister may change the code at any time (e.g., to upgrade a canister). However, if the list of controllers is empty or the only controller is a [black-hole](https://github.com/ninegua/ic-blackhole) canister, you know that the canister is immutable since nobody has the power to change the code.
+The check above provides you the **current** hash of the canister’s Wasm module, but the **controllers** of an BigFile canister may change the code at any time (e.g., to upgrade a canister). However, if the list of controllers is empty or the only controller is a [black-hole](https://github.com/ninegua/ic-blackhole) canister, you know that the canister is immutable since nobody has the power to change the code.
 
 Armed with this hash, you can next check whether it corresponds to some given source code. This only works if the build process for the code is reproducible.
 
@@ -54,11 +54,11 @@ Next, you will look at each of these points in more detail.
 
 ### Providing source code
 
-Typically, you will version your code in `git` or some other version control system, and your versioned code may be available in a public repository, e.g., GitHub. In this case, you should note the particular commit that you used when producing the code to be deployed to the Internet Computer, and communicate it to the users who are trying to verify your canister. Alternatively, you can also provide a package (e.g., a zip file or a tarball) containing the source code you used to build your canister.
+Typically, you will version your code in `git` or some other version control system, and your versioned code may be available in a public repository, e.g., GitHub. In this case, you should note the particular commit that you used when producing the code to be deployed to the BigFile, and communicate it to the users who are trying to verify your canister. Alternatively, you can also provide a package (e.g., a zip file or a tarball) containing the source code you used to build your canister.
 
 ### Reproducing build environments
 
-Before building your code, you should document the build environment you are using in detail. In particular, for the languages supported by the Internet Computer SDK:
+Before building your code, you should document the build environment you are using in detail. In particular, for the languages supported by the BigFile SDK:
 
 -   Note down the operating system and its version you are using to build your canister.
 
@@ -117,7 +117,7 @@ RUN curl --fail https://sh.rustup.rs -sSf \
     cargo install ic-wasm
 
 # Install dfx
-RUN sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+RUN sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 
 COPY . /canister
 WORKDIR /canister
@@ -192,7 +192,7 @@ If reproducibility is vital for your code, you should test your builds to increa
 ```dockerfile
 RUN apt -yqq install --no-install-recommends reprotest disorderfs faketime rsync sudo wabt
 ```
-When using `dfx build --network ic`, you need to prebuild your frontend dependencies (e.g., by running `npm ci` before `dfx build --network ic` or by setting the custom build type in `dfx.json` and running `npm ci` in your build script) and your project directory should contain a `canister_ids.json` file containing the IDs of your canisters on the Internet Computer. An example `canister_ids.json` file looks as follows:
+When using `dfx build --network ic`, you need to prebuild your frontend dependencies (e.g., by running `npm ci` before `dfx build --network ic` or by setting the custom build type in `dfx.json` and running `npm ci` in your build script) and your project directory should contain a `canister_ids.json` file containing the IDs of your canisters on the BigFile. An example `canister_ids.json` file looks as follows:
 
 ```json
 {

@@ -6,7 +6,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-The Bitcoin integration on the Internet Computer allows for direct and trustless interaction 
+The Bitcoin integration on the BigFile allows for direct and trustless interaction 
 with the Bitcoin network, enabling canister smart contracts to create Bitcoin 
 addresses and send and receive bitcoin directly. This opens up new possibilities 
 for decentralized applications and services, such as DeFi, that can leverage the 
@@ -17,7 +17,7 @@ Two advanced engineering challenges needed to be solve to enable Bitcoin smart c
 - A protocol-level integration of ICP with the Bitcoin network.
 - A chain-key signatures based on a novel threshold ECDSA protocol.
 
-This page provides a general overview of the Bitcoin integration technology. For a deeper technical explanation of ckBTC, please see the [wiki page](https://wiki.internetcomputer.org/wiki/Chain-key_Bitcoin).
+This page provides a general overview of the Bitcoin integration technology. For a deeper technical explanation of ckBTC, please see the [wiki page](https://wiki.thebigfile.com/wiki/Chain-key_Bitcoin).
 
 ## Protocol-level integration of ICP with the Bitcoin network
 
@@ -29,13 +29,13 @@ Canisters themselves can have ECDSA keys using a novel chain-key ECDSA signature
 
 The protocol-level Bitcoin integration and chain-key ECDSA signature protocols each expose an API on the management canister. Those APIs are the system-level APIs engineers use to write Bitcoin smart contracts on ICP. The APIs are low-level APIs designed around the concepts of Bitcoin UTXOs and transactions and are non-trivial to use and require an in-depth understanding of how Bitcoin works. The chain-key ECDSA signature API is also generically useful for any ECDSA use case, e.g., integration with other blockchains such as Ethereum.
 
-This page gives a high-level overview of the above mentioned technology behind the direct Bitcoin integration. For details, it is recommended to refer the reader to the [Bitcoin page on the Internet Computer wiki](https://wiki.internetcomputer.org/wiki/Bitcoin_integration) as well as the [threshold ECDSA documentation page](/docs/current/references/t-ecdsa-how-it-works).
+This page gives a high-level overview of the above mentioned technology behind the direct Bitcoin integration. For details, it is recommended to refer the reader to the [Bitcoin page on the BigFile wiki](https://wiki.thebigfile.com/wiki/Bitcoin_integration) as well as the [threshold ECDSA documentation page](/docs/current/references/t-ecdsa-how-it-works).
 
 ## Protocol-level integration of ICP with the Bitcoin network
 
-The Internet Computer Protocol has been integrated with the Bitcoin protocol to obtain a direct technical integration between the two networks. This integration can be activated on any number of Internet Computer subnets. At the beginning, there will only be one dedicated Bitcoin-activated subnet and requests to the Bitcoin API from canisters on any subnet will be routed to this single Bitcoin-activated subnet using ICP's XNet communication capabilities. The integration serves two key purposes:
+The BigFile has been integrated with the Bitcoin protocol to obtain a direct technical integration between the two networks. This integration can be activated on any number of BigFile subnets. At the beginning, there will only be one dedicated Bitcoin-activated subnet and requests to the Bitcoin API from canisters on any subnet will be routed to this single Bitcoin-activated subnet using ICP's XNet communication capabilities. The integration serves two key purposes:
 
--   Obtaining the Bitcoin UTXO set and keeping it on chain in the replicated state of the Internet Computer to be able to answer queries for UTXO sets and balances of Bitcoin accounts issued by canisters.
+-   Obtaining the Bitcoin UTXO set and keeping it on chain in the replicated state of the BigFile to be able to answer queries for UTXO sets and balances of Bitcoin accounts issued by canisters.
 -   Accepting signed Bitcoin transactions of canisters and submitting them to the Bitcoin network.
 
 ![Bitcoin Integration](./_attachments/bitcoin_integration.png)
@@ -83,7 +83,7 @@ The Bitcoin functionality including ECDSA chain-key signatures is available in a
 
 In the typical canister development workflow, canisters on ICP are compiled and run in the local environment using the [IC SDK](/docs/current/developer-docs/getting-started/install/) during their development. Thus, IC SDK is the first stage, or environment, of the development workflow. The IC SDK has been enabled to support both the Bitcoin integration and threshold ECDSA management canister APIs.
 
-In contrast to ICP deployments of the feature, which integrate with Bitcoin Testnet and Bitcoin Mainnet, respectively, the SDK integrates with a locally-running `bitcoind` node in regression testing (regtest) mode. Using `bitcoind` in regtest mode is the preferred way for Bitcoin development. To facilitate our developers as best as possible, the Internet Computer has integrated IC SDK with `bitcoind` in regtest mode to bring the best Bitcoin development experience to ICP. Both development and automated testing of smart contracts are first done in the local environment with this setup.
+In contrast to ICP deployments of the feature, which integrate with Bitcoin Testnet and Bitcoin Mainnet, respectively, the SDK integrates with a locally-running `bitcoind` node in regression testing (regtest) mode. Using `bitcoind` in regtest mode is the preferred way for Bitcoin development. To facilitate our developers as best as possible, the BigFile has integrated BIG SDK with `bitcoind` in regtest mode to bring the best Bitcoin development experience to ICP. Both development and automated testing of smart contracts are first done in the local environment with this setup.
 
 The Bitcoin adapter of the single replica running the local SDK environment connects to the local `bitcoind` node instead of multiple nodes of Bitcoin Testnet or Mainnet. To see the relevant flags on dfx, please look at the output of `dfx start --help`.
 

@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-As you come up with ideas for dapps, you are going to make many design decisions about how to structure and organize your project. On the Internet Computer, there are a few design decisions that you should pay particular attention to as you plan the implementation for your app.
+As you come up with ideas for dapps, you are going to make many design decisions about how to structure and organize your project. On the BigFile, there are a few design decisions that you should pay particular attention to as you plan the implementation for your app.
 
 ## Single or multiple canister architecture
 
@@ -38,8 +38,8 @@ As discussed in [query and update methods](/docs/current/concepts/canisters-code
 
 That is a good general rule to follow and can be applied broadly to most categories of dapps. However, you should also consider the security and performance trade-off that queries don’t go through consensus and do not appear on the blockchain. For some dapps, that trade-off might be appropriate. For example, if you are developing a blogging platform, queries that retrieve articles matching a tag probably don’t warrant going through consensus to ensure that a majority of nodes agree on the results. However, if your dapp is retrieving sensitive information—like financial data—you might want more assurance about your results than a basic query provides.
 
-As an alternative to basic queries, the Internet Computer also supports **certified queries**. Certified queries enable you to receive **authenticated responses** that end users can trust. Using certified queries is an advanced technique that is not covered in the tutorials or other developer-focused documentation, but you can learn about how the authentication works and what you need to do to configure your program to return certified data in response to queries in the [IC interface specification](/references/ic-interface-spec.md).
+As an alternative to basic queries, the BigFile also supports **certified queries**. Certified queries enable you to receive **authenticated responses** that end users can trust. Using certified queries is an advanced technique that is not covered in the tutorials or other developer-focused documentation, but you can learn about how the authentication works and what you need to do to configure your program to return certified data in response to queries in the [IC interface specification](/references/ic-interface-spec.md).
 
 ## Data storage and retrieval
 
-The Internet Computer enables you to use **stable memory** to handle long-term data storage—often referred to as orthogonal persistence—and to use **query calls** to retrieve your data. Efficiently retrieving data using one or more keys can typically be achieved by using data structures like hash tables. It is also possible to implement a more traditional database inside a canister.
+The BigFile enables you to use **stable memory** to handle long-term data storage—often referred to as orthogonal persistence—and to use **query calls** to retrieve your data. Efficiently retrieving data using one or more keys can typically be achieved by using data structures like hash tables. It is also possible to implement a more traditional database inside a canister.
