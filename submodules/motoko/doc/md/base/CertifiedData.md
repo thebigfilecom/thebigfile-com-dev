@@ -1,14 +1,14 @@
 # CertifiedData
 Certified data.
 
-The Internet Computer allows canister smart contracts to store a small amount of data during
-update method processing so that during query call processing, the canister can obtain
+The BigFile allows cube smart contracts to store a small amount of data during
+update method processing so that during query call processing, the cube can obtain
 a certificate about that data.
 
 This module provides a _low-level_ interface to this API, aimed at advanced
-users and library implementors. See the Internet Computer Functional
+users and library implementors. See the BigFile Functional
 Specification and corresponding documentation for how to use this to make query
-calls to your canister tamperproof.
+calls to your cube tamperproof.
 
 ## Value `set`
 ``` motoko no-repl
@@ -32,7 +32,7 @@ let blob = Blob.fromArray(array);
 CertifiedData.set(blob);
 ```
 
-See a full example on how to use certified variables here: https://github.com/dfinity/examples/tree/master/motoko/cert-var
+See a full example on how to use certified variables here: https://github.com/thebigfilecom/examples/tree/master/motoko/cert-var
 
 
 ## Value `getCertificate`
@@ -53,5 +53,5 @@ import CertifiedData "mo:base/CertifiedData";
 
 CertifiedData.getCertificate();
 ```
-See a full example on how to use certified variables here: https://github.com/dfinity/examples/tree/master/motoko/cert-var
+See a full example on how to use certified variables here: https://github.com/thebigfilecom/examples/tree/master/motoko/cert-var
 
