@@ -768,7 +768,7 @@ Like other errors, call errors can be caught and handled using `try ... catch ..
 
 ### Type `Region`
 
-The type `Region` represents opaque stable memory regions. Region objects are dynamically allocated and independently growable. They represent isolated partitions of IC stable memory.
+The type `Region` represents opaque stable memory regions. Region objects are dynamically allocated and independently growable. They represent isolated partitions of BIG stable memory.
 
 The region type is stable but not shared and its objects, which are stateful, may be stored in stable variables and data structures.
 
@@ -1186,7 +1186,7 @@ module {
 }
 ```
 
-On ICP, if this library is imported as identifier `Lib`, then calling `await Lib.<id>(<exp1>, ..., <expn>)`, installs a fresh instance of the actor class as an isolated IC canister, passing the values of `<exp1>`, ...​, `<expn>` as installation arguments, and returns a reference to a remote actor of type `Lib.<id>`, that is, `T`. Installation is necessarily asynchronous.
+On ICP, if this library is imported as identifier `Lib`, then calling `await Lib.<id>(<exp1>, ..., <expn>)`, installs a fresh instance of the actor class as an isolated BIG canister, passing the values of `<exp1>`, ...​, `<expn>` as installation arguments, and returns a reference to a remote actor of type `Lib.<id>`, that is, `T`. Installation is necessarily asynchronous.
 
 
 #### Actor class management

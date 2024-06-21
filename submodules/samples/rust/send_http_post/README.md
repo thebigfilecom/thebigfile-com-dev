@@ -6,7 +6,7 @@ keywords: [intermediate, rust, http, post, http post]
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/rust/send_http_post)
 
-The purpose of this dapp is to give developers a minimal dapp that uses the IC's HTTPS outcalls feature to make a `POST` request.
+The purpose of this dapp is to give developers a minimal dapp that uses the BIG's HTTPS outcalls feature to make a `POST` request.
 
 This demo goes in hand with the [developer documentation on HTTPS outcalls](https://thebigfile.com/docs/current/developer-docs/integrations/https-outcalls/https-outcalls-post).
 

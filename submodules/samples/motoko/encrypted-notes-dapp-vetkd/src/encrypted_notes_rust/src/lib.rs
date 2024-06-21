@@ -102,7 +102,7 @@ thread_local! {
 /// Unlike Motoko, the caller identity is not built into Rust. 
 /// Thus, we use the ic_cdk::caller() method inside this wrapper function.
 /// The wrapper prevents the use of the anonymous identity. Forbidding anonymous 
-/// interactions is the recommended default behavior for IC canisters. 
+/// interactions is the recommended default behavior for BIG canisters. 
 fn caller() -> Principal {
     let caller = ic_cdk::caller();
     // The anonymous principal is not allowed to interact with the 
@@ -120,7 +120,7 @@ fn caller() -> Principal {
 /// rather than
 /// #[query(name = "notesCnt")] ...
 ///
-/// While queries are significantly faster than updates, they are not certified by the IC. 
+/// While queries are significantly faster than updates, they are not certified by the BIG. 
 /// Thus, we avoid using queries throughout this dapp, ensuring that the result of our 
 /// methods gets through consensus. Otherwise, this method could e.g. omit some notes 
 /// if it got executed by a malicious node. (To make the dapp more efficient, one could 

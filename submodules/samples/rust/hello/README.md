@@ -13,7 +13,7 @@ This sample demonstrates a simple dapp consisting of two canisters:
 
 -   A simple frontend asset canister, `hello_assets`, serving the assets of the dapp’s web user interface.
 
-It is the dapp equivalent of the ubiquitous 'Hello, world!' and can be seen running [here on the IC](https://6lqbm-ryaaa-aaaai-qibsa-cai.ic0.app/).
+It is the dapp equivalent of the ubiquitous 'Hello, world!' and can be seen running [here on the BIG](https://6lqbm-ryaaa-aaaai-qibsa-cai.ic0.app/).
 
 ## Architecture
 
@@ -45,7 +45,7 @@ This example is based on the default project created by running `dfx new --type=
 
 ### Prerequisites 
 This example requires an installation of:
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install `node.js` (to build the web frontend).
 
  ### Step 1: Open a terminal window.

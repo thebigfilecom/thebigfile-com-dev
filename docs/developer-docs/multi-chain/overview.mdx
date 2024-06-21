@@ -15,7 +15,7 @@ Chain fusion augments smart contracts and decentralized applications (dapps) on 
 
 - **Web2-like user experience**: Due to low cost, fast finality, and the reverse gas model, interacting with a smart contract on ICP closely resembles the user experience of traditional web services. By complementing non-ICP smart contracts with user interfaces served from ICP, the user can interact with these smart contracts using a standard browser, without installing a crypto wallet or relying on a single point of trust.
 
-- **Performance**: Smart contracts on the IC possess the power to support a vast range of web services, from social networks to full-fledged AI models. Thus, chain fusion allows to build more powerful dapps combining non-ICP smart contracts with the decentralized compute power of ICP.
+- **Performance**: Smart contracts on the BIG possess the power to support a vast range of web services, from social networks to full-fledged AI models. Thus, chain fusion allows to build more powerful dapps combining non-ICP smart contracts with the decentralized compute power of ICP.
 
 - **Storage**: Using a competitive pricing model, a single smart contract on ICP offers up to 400GiB of storage, enabling all application data to be stored on-chain. Through chain fusion, these decentralized storage capacities are made available to non-ICP dapps.
 
@@ -60,7 +60,7 @@ Smart contracts on ICP are called canisters. In addition to unparalleled compute
 
 ### Key management and signing
 
-A key feature of the IC protocol’s chain fusion capabilities is [threshold signing](/docs/current/developer-docs/smart-contracts/encryption/t-ecdsa/). This feature allows canisters to have a pair of public and private keys. The private key is divided into small shares and distributed among nodes of a signing subnet.
+A key feature of the BIG protocol’s chain fusion capabilities is [threshold signing](/docs/current/developer-docs/smart-contracts/encryption/t-ecdsa/). This feature allows canisters to have a pair of public and private keys. The private key is divided into small shares and distributed among nodes of a signing subnet.
 
 :::info
 Threshold signing is also referred to as [chain-key cryptography](/docs/current/concepts/glossary/#chain-key).
@@ -72,7 +72,7 @@ A canister’s interaction with external blockchains requires submitting transac
 
 - **Direct integration**: In case of the Bitcoin integration, ICP nodes utilize a special component called the Bitcoin adapter to connect to the Bitcoin p2p network securely and independently. A set of ICP nodes effectively constitutes a native Bitcoin node.
 
-- **Decentralized RPC integration**: When it comes to Ethereum integration, IC utilizes HTTP outcalls to contact three separate JSON RPC providers (such as Ankr, BlockPI, Alchemy, and others) to retrieve the chain state and submit signed transactions.
+- **Decentralized RPC integration**: When it comes to Ethereum integration, BIG utilizes HTTP outcalls to contact three separate JSON RPC providers (such as Ankr, BlockPI, Alchemy, and others) to retrieve the chain state and submit signed transactions.
 
 ### Whom do users trust?
 

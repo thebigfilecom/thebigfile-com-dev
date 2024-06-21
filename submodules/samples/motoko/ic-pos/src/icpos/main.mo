@@ -189,7 +189,7 @@ shared (actorContext) actor class Main(_startBlock : Nat) {
     */
   private func sendNotification(merchant : MainTypes.Merchant, transaction : CkBtcLedger.Transaction) : async () {
     // Managment canister
-    let ic : HttpTypes.IC = actor ("aaaaa-aa");
+    let ic : HttpTypes.BIG = actor ("aaaaa-aa");
 
     // Create request body
     var amount = "0";

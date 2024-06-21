@@ -40,7 +40,7 @@ This starter template also includes integration with Internet Identity. Internet
 If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for creating frontends:
-* [Use a well-audited authentication service and client side IC libraries](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#use-a-well-audited-authentication-service-and-client-side-ic-libraries)
+* [Use a well-audited authentication service and client side BIG libraries](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#use-a-well-audited-authentication-service-and-client-side-ic-libraries)
 * [Define security headers including a Content Security Policy (CSP)](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#define-security-headers-including-a-content-security-policy-csp)
 * [Don’t load JavaScript (and other assets) from untrusted domains](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#dont-load-javascript-and-other-assets-from-untrusted-domains)
 

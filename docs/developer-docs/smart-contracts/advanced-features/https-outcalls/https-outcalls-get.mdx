@@ -65,7 +65,7 @@ actor {
   public func foo() : async Text {
 
     //1. DECLARE MANAGEMENT CANISTER
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //2. SETUP ARGUMENTS FOR HTTP GET request
     let request : Types.HttpRequestArgs = {
@@ -216,7 +216,7 @@ actor {
 
     //1. DECLARE MANAGEMENT CANISTER
     //You need this so you can use it to make the HTTP request
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //2. SETUP ARGUMENTS FOR HTTP GET request
 
@@ -251,7 +251,7 @@ actor {
 
     //3. ADD CYCLES TO PAY FOR HTTP REQUEST
 
-    //The IC specification spec says, "Cycles to pay for the call must be explicitly transferred with the call"
+    //The BIG specification spec says, "Cycles to pay for the call must be explicitly transferred with the call"
     //The management canister will make the HTTP request so it needs cycles
     //See: /docs/current/motoko/main/cycles
 
@@ -576,7 +576,7 @@ module Types {
 
 
     //3. Declaring the management canister which you use to make the HTTPS outcall
-    public type IC = actor {
+    public type BIG = actor {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 

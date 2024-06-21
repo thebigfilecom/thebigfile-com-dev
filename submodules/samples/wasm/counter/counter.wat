@@ -1,12 +1,12 @@
 (module
-  ;; Import IC system API
+  ;; Import BIG system API
   (import "ic0" "msg_reply" (func $msg_reply))                                 ;; msg_reply : () -> ()
   (import "ic0" "msg_reply_data_append" (func $reply_append (param i32 i32)))  ;; msg_reply_data_append : (src : i32, size : i32) -> ()
   (import "ic0" "msg_arg_data_size" (func $arg_size (result i32)))             ;; msg_arg_data_size : () -> i32
   (import "ic0" "msg_arg_data_copy" (func $arg_copy (param i32 i32 i32)))      ;; msg_arg_data_copy : (dst : i32, offset : i32, size : i32) -> ()
   (import "ic0" "trap" (func $trap (param i32 i32)))                           ;; trap : (src : i32, size : i32) -> ()
 
-  ;; Export functions to IC
+  ;; Export functions to BIG
   (export "canister_query get" (func $get))
   (export "canister_update inc" (func $inc))
   (export "canister_update set" (func $set))

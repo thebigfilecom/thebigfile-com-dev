@@ -13,7 +13,7 @@ This is an NFT wallet example dapp that utilizes minted NFTs from the Rust dip72
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 Begin by opening a terminal window.
@@ -38,7 +38,7 @@ cd ..
 ./deploy.sh
 ```
 
-### Step 2: If you'd like to deploy on the IC network run the command:
+### Step 2: If you'd like to deploy on the BIG network run the command:
 
 ```bash
 ./deploy.sh --network ic

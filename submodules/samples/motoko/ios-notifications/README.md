@@ -25,7 +25,7 @@ The basic functionality of the IOS integration consists of four main components:
 - Fourth, the dapp is configured to receive push notifications from the system and open a specified URL, this allows for notifications to be sent serving as a mechanism to deep link into a specific section of the dapp. 
 
 ## Prerequisites
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/download/).
 - [x] [xcode](https://apps.apple.com/us/app/xcode/id497799835).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`

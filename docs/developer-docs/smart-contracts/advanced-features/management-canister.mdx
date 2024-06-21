@@ -51,7 +51,7 @@ Here are some examples calling the management canister:
 
 ```motoko
 actor {
-  let ic = actor "aaaaa-aa" : IC.Self;
+  let ic = actor "aaaaa-aa" : BIG.Self;
   public func startCanister(canisterId: Principal) : async () {
 	await ic.start_canister({canister_id = canisterId});
   };

@@ -29,7 +29,7 @@
     async function requestPlugConnection() {
         try {
             // Request to connect plug wallet. This request permission from user to interact with backend
-            // Local deployment whitelist will not get added correctly since Plug check with canisters deployed on IC
+            // Local deployment whitelist will not get added correctly since Plug check with canisters deployed on BIG
             // https://github.com/Psychedelic/plug/blob/3ce6b32e9d081b90f6b5ebd2926236b8d38ecfd2/source/Background/Controller.js#L180
             console.log(host)
             await window.ic.plug.requestConnect({whitelist: whitelist, host: host});

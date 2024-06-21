@@ -38,9 +38,9 @@ You will primarily be using CLI-based tools, such as `dfx` and `git`, in this de
 
 `dfx` is not natively supported on Windows. To download `dfx` on Windows, you will need to download the Windows Subsystem for Linux. [Learn more about how to install dfx on Windows](/docs/current/developer-docs/getting-started/install/).
 
-### Download and install the IC SDK
+### Download and install the BIG SDK
 
-To download and install the IC SDK, first open a terminal window. Then, run the following command in that window:
+To download and install the BIG SDK, first open a terminal window. Then, run the following command in that window:
 
 ```bash
 sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
@@ -52,7 +52,7 @@ This command will prompt you to read and accept the license agreement before the
 If you are using a machine running Apple silicon, you will need to have Rosetta installed. You can install [Rosetta](https://support.apple.com/en-us/HT211861) by running `softwareupdate --install-rosetta` in your terminal.
 :::
 
-Then, to verify that the IC SDK is ready to use, run the following command:
+Then, to verify that the BIG SDK is ready to use, run the following command:
 
 ```bash
 dfx --version
@@ -62,7 +62,7 @@ This command should output information about the latest version of `dfx`. This o
 
 #### Why does this matter?
 
-The IC SDK is composed of several components that are required for developing on the Internet Computer. These components are:
+The BIG SDK is composed of several components that are required for developing on the Internet Computer. These components are:
 
 - `dfx`: The CLI tool used to interact with and develop canisters on ICP. Motoko is included in the installation of dfx.
 - `moc`: The Motoko runtime compiler.

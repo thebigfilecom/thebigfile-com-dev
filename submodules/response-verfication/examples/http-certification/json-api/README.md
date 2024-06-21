@@ -199,7 +199,7 @@ Responses are certified with several steps, which are encapsulated into a reusab
 For more information on creating certifications, see the relevant section in the [`ic-http-certification` docs](https://docs.rs/ic-http-certification/latest/ic_http_certification/#creating-certifications).
 
 ```rust
-const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "IC-CertificateExpression";
+const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "BIG-CertificateExpression";
 
 fn certify_response(
     request: HttpRequest,
@@ -354,7 +354,7 @@ fn certify_not_found_response() {
 When serving a certified response, an additional header must be added to the response that will act as proof of certification for the [HTTP gateway](https://thebigfile.com/docs/current/references/http-gateway-protocol-spec) that will perform validation. Adding this header to the response has been abstracted into a separate function:
 
 ```rust
-const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
+const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
 fn add_certificate_header(
     response: &mut HttpResponse,
     entry: &HttpCertificationTreeEntry,
@@ -391,7 +391,7 @@ With this reusable function, serving certified responses is relatively straightf
 - First, check if a response for the current request URL and method exists.
 - If a response exists, serve it.
 - Otherwise, serve the fallback "Not found" response.
-- Add the `IC-Certificate` response header.
+- Add the `BIG-Certificate` response header.
 
 ```rust
 fn query_handler(request: &HttpRequest, _params: &Params) -> HttpResponse {

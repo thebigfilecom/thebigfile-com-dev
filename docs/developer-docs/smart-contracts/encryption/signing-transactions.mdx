@@ -30,7 +30,7 @@ To sign transactions, first you need to obtain a public key by making a call to 
 
 ```motoko
   // Declare "ic" to be the management canister, which is evoked by `actor("aaaaa-aa")`.:
-  let ic : IC = actor("aaaaa-aa");
+  let ic : BIG = actor("aaaaa-aa");
 
   public shared (msg) func public_key() : async { #Ok : { public_key: Blob }; #Err : Text } {
     let caller = Principal.toBlob(msg.caller);

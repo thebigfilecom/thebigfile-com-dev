@@ -21,7 +21,7 @@ This is a Motoko example that does not currently have a Rust variant.
 
 
 ## Prerequisites
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/download/).
 - [x] Download and install the `@dfinity/auth-client` package with the command `npm install @dfinity/auth-client`. 
 - [x] Download the following project files from GitHub: `git clone https://github.com/dfinity/examples`
@@ -331,7 +331,7 @@ loginButton.onclick = async (e) => {
 
     // At this point we're authenticated, and we can get the identity from the auth client:
     const identity = authClient.getIdentity();
-    // Using the identity obtained from the auth client, we can create an agent to interact with the IC.
+    // Using the identity obtained from the auth client, we can create an agent to interact with the BIG.
     const agent = new HttpAgent({identity});
     // Using the interface description of our webapp, we create an actor that we use to call the service methods.
     actor = createActor(process.env.GREET_BACKEND_CANISTER_ID, {

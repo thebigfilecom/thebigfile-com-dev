@@ -29,7 +29,7 @@ different from other synchronous blockchains.
 
 ## Prerequisites
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/).
 - [ ] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
@@ -270,7 +270,7 @@ shows how to use this repo from a Javascript client.
 
 ## Prerequisites
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/).
 
 ### Step 1: Start a local instance of the replica:
@@ -300,7 +300,7 @@ make test
 
 - Any DeFi on the BigFile is experimental. It is a constantly evolving
   space, with unknown attacks, and should be treated as such.
-- Due to the nature of asynchronous inter-canister messaging on the IC, it is possible for
+- Due to the nature of asynchronous inter-canister messaging on the BIG, it is possible for
   malicious token canisters to cause this swap contract to deadlock. It should
   only be used with trusted token canisters.
 - Currently, there are no limits on the state size of this canister. This could

@@ -14,12 +14,12 @@ In a nutshell, this example code demonstrates "response certification" for a can
 - Backend (BE) canister logic in Motoko (`main.mo`).
 - Frontend (FE) logic in JS (`index.js`).
 
-To detect an attacker in the middle between the FE and the IC and our "true" BE canister running there, we must either:
+To detect an attacker in the middle between the FE and the BIG and our "true" BE canister running there, we must either:
 
 - Perform update calls that use "full consensus" (and wait for ~2 sec).
-- Perform (fast) query calls whose responses that we, the client, certify, using the coordination of the IC and our canister running there.
+- Perform (fast) query calls whose responses that we, the client, certify, using the coordination of the BIG and our canister running there.
 
-The FE and BE code demonstrates the second approach in a minimal setting. The BE holds a single certified variable, as a 32-bit number, and the FE code queries and certifies this number's "current certificate". The BE prepares for the FE certification by giving the FE a "current certificate" within the response; this certificate is signed by the entire IC, using a special system feature.
+The FE and BE code demonstrates the second approach in a minimal setting. The BE holds a single certified variable, as a 32-bit number, and the FE code queries and certifies this number's "current certificate". The BE prepares for the FE certification by giving the FE a "current certificate" within the response; this certificate is signed by the entire BIG, using a special system feature.
 
 Before the FE trusts the response from the apparent BE canister, it interrogates it and verifies its authenticity, the FE does four checks:
 
@@ -32,7 +32,7 @@ For steps 2, 3, and 4, the FE accesses data from the certificate (Blob).
 
 The `Certificate` class from the `agent-js` library provides a way to access those items using their paths, like a filesystem, each addressing a Blob, encoding something.
 
-In the case of time and our data, the encodings are each Candid. The IC spec represents time using a LEB128 encoding, and certified data uses little endian.
+In the case of time and our data, the encodings are each Candid. The BIG spec represents time using a LEB128 encoding, and certified data uses little endian.
 
 Ideally, we should use a proper library to decode these numbers. To prevent an extra dependency, we take advantage of the fact that the Candid value encoding of Nat and Nat32 use the same representation.
 
@@ -49,7 +49,7 @@ This is a Motoko example that does not currently have a Rust variant.
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Download [npm](https://nodejs.org/en/download/).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 

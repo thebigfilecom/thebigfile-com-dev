@@ -1,10 +1,10 @@
 # Region
 Byte-level access to isolated, (virtual) stable memory _regions_.
 
-This is a moderately lightweight abstraction over IC _stable memory_ and supports persisting
+This is a moderately lightweight abstraction over BIG _stable memory_ and supports persisting
 regions of binary data across Motoko upgrades.
 Use of this module is fully compatible with Motoko's use of
-_stable variables_, whose persistence mechanism also uses (real) IC stable memory internally, but does not interfere with this API.
+_stable variables_, whose persistence mechanism also uses (real) BIG stable memory internally, but does not interfere with this API.
 It is also fully compatible with existing uses of the `ExperimentalStableMemory` library, which has a similar interface, but,
 only supported a single memory region, without isolation between different applications.
 
@@ -13,7 +13,7 @@ The `Region` type is stable and can be used in stable data structures.
 A new, empty `Region` is allocated using function `new()`.
 
 Regions are stateful objects and can be distinguished by the numeric identifier returned by function `id(region)`.
-Every region owns an initially empty, but growable sequence of virtual IC stable memory pages. 
+Every region owns an initially empty, but growable sequence of virtual BIG stable memory pages. 
 The current size, in pages, of a region is returned by function `size(region)`.
 The size of a region determines the range, [ 0, ..., size(region)*2^16 ), of valid byte-offsets into the region; these offsets are used as the source and destination of `load`/`store` operations on the region.
 
@@ -38,11 +38,11 @@ Text values can be handled by using `Text.decodeUtf8` and `Text.encodeUtf8`, in 
 
 The current region allocation and region contents are preserved across upgrades.
 
-NB: The IC's actual stable memory size (`ic0.stable_size`) may exceed the
+NB: The BIG's actual stable memory size (`ic0.stable_size`) may exceed the
 total page size reported by summing all regions sizes.
 This (and the cap on growth) are to accommodate Motoko's stable variables and bookkeeping for regions.
 Applications that plan to use Motoko stable variables sparingly or not at all can
-increase `--max-stable-pages` as desired, approaching the IC maximum (initially 8GiB, then 32Gib, currently 64Gib).
+increase `--max-stable-pages` as desired, approaching the BIG maximum (initially 8GiB, then 32Gib, currently 64Gib).
 All applications should reserve at least one page for stable variable data, even when no stable variables are used.
 
 Usage:
@@ -55,7 +55,7 @@ import Region "mo:base/Region";
 type Region = Prim.Types.Region
 ```
 
-A stateful handle to an isolated region of IC stable memory.
+A stateful handle to an isolated region of BIG stable memory.
 `Region` is a stable type and regions can be stored in stable variables.
 
 ## Value `new`

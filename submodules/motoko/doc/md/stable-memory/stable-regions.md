@@ -39,7 +39,7 @@ More general `loadBlob` and `storeBlob` operations are also available for readin
 ``` motoko no-repl
 module {
 
-  // A stateful handle to an isolated region of IC stable memory.
+  // A stateful handle to an isolated region of BIG stable memory.
   //  `Region` is a stable type and regions can be stored in stable variables.
   type Region = Prim.Types.Region;
 

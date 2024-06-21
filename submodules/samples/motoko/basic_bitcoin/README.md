@@ -18,7 +18,7 @@ For a deeper understanding of the ICP < > BTC integration, see the [Bitcoin inte
 
 ## Prerequisites
 
-* [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+* [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 
 ## Step 1: Building and deploying sample code
 

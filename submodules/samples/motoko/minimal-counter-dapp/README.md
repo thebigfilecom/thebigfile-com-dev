@@ -16,7 +16,7 @@ The purpose of this example dapp is to build a minimalistic dapp, based on the d
 
 This example covers:
 
-- Create a new canister smart contract using the IC SDK (`dfx`).
+- Create a new canister smart contract using the BIG SDK (`dfx`).
 - Use the default project as a template as the starting point for the new project.
 - Add backend functions for a counter (count, get count, and reset count).
 - Implement backend functions in the frontend.
@@ -27,7 +27,7 @@ This example covers:
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/download/).
 - [x] Download and install [git.](https://git-scm.com/downloads)
 - [ ] Clone the example dapp project: `git clone https://github.com/dfinity/examples`

@@ -34,7 +34,7 @@ To avoid the current limitations of stable variables, developers can use the rec
 The main difference between the two libraries is that `ExperimentalStableMemory` provides a single memory, a global resource, that must be shared by all clients, using, requiring coordination and trust.
 The `Region` library instead provides multiple, isolated memories that can only be accessed by the owner(s) of a particular memory.
 
-Similar to the `Regions` library, Motoko runtime system ensures there is no interference between the abstraction presented by the `ExperimentalStableMemory` library and an actor’s stable variables, even though the two abstractions ultimately use the same underlying  stable memory facilities available to all IC canisters. This runtime support means that is safe for a Motoko program to exploit both stable variables and `ExperimentalStableMemory`, within the same application.
+Similar to the `Regions` library, Motoko runtime system ensures there is no interference between the abstraction presented by the `ExperimentalStableMemory` library and an actor’s stable variables, even though the two abstractions ultimately use the same underlying  stable memory facilities available to all BIG canisters. This runtime support means that is safe for a Motoko program to exploit both stable variables and `ExperimentalStableMemory`, within the same application.
 
 ## Using `ExperimentalStableMemory`
 
@@ -75,7 +75,7 @@ module {
   storeBlob : (offset : Nat64, value : Blob) -> ()
 
   // Returns a query that, when called, returns the number of bytes of
-  // (real) IC stable memory that would be occupied by persisting its
+  // (real) BIG stable memory that would be occupied by persisting its
   // current stable variables before an upgrade.
   stableVarQuery : () -> (shared query () -> async {size : Nat64})
 }

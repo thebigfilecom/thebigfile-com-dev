@@ -18,7 +18,7 @@ With this, users don't need to pass the private key around, also they don't need
 
 ## Deployment
 
-If you never work on the IC and don't know how to deploy a dapp, please refer to the [Hello World sample](https://thebigfile.com/docs/current/developer-docs/getting-started/hello-world) to learn the basic knowledge about the IC.
+If you never work on the BIG and don't know how to deploy a dapp, please refer to the [Hello World sample](https://thebigfile.com/docs/current/developer-docs/getting-started/hello-world) to learn the basic knowledge about the BIG.
 
 ### Set up the `apple-app-site-association` file
 
@@ -26,7 +26,7 @@ In order to support iOS Universal Links, the website needs to serve an `apple-ap
 
 For how to generate an apple-app-site-association file, please refer to the [Associated domain file ](https://developer.apple.com/documentation/xcode/supporting-associated-domains#Add-the-associated-domain-file-to-your-website) document.
 
-One thing to remind is `.well-known` folder will be ignored while deploying to the IC, please add a `.ic-assets.json` file insider a directory listed in `sources` in the `dfx.json` file, with the below content.
+One thing to remind is `.well-known` folder will be ignored while deploying to the BIG, please add a `.ic-assets.json` file insider a directory listed in `sources` in the `dfx.json` file, with the below content.
 
 ```
 [
@@ -42,10 +42,10 @@ Here is an example of [.ic-assets.json](./src/universallink_website/assets/.ic-a
 
 ### Deploy the Dapp
 
-Once you set up the IC development environment locally and update the example as you want, you can follow the below steps to deploy to the IC mainnet.
+Once you set up the BIG development environment locally and update the example as you want, you can follow the below steps to deploy to the BIG mainnet.
 
 1. Enter the `ii_integration_dapp` directory from the command line
 2. Run `npm install` to install the npm packages
 3. Run `dfx start --background`
 4. Run `dfx deploy --network=ic --with-cycles=1000000000000`  
-   Here we recommend deploying the dapp to the IC mainnet as it's easier to access it from your iOS devices.
+   Here we recommend deploying the dapp to the BIG mainnet as it's easier to access it from your iOS devices.

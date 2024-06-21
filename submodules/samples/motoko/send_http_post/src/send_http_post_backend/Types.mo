@@ -60,8 +60,8 @@ module Types {
     };
 
 
-    //3. Declaring the IC management canister which we use to make the HTTPS outcall
-    public type IC = actor {
+    //3. Declaring the BIG management canister which we use to make the HTTPS outcall
+    public type BIG = actor {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 

@@ -17,7 +17,7 @@ You try the live version of the dapp running on the mainnet here: [https://khpe2
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 - [x] Install `node.js` to build the web frontend. Make sure the version is at least `12.20`.
 - [x] Make sure your rust version is up-to-date (e.g., run `rustup update`).
 - [x] Add the `wasm32` target to your rust installation (by running `rustup target add wasm32-unknown-unknown`).

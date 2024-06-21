@@ -1,4 +1,4 @@
-namespace IC.GameKit
+namespace BIG.GameKit
 {
     public class DelegationModel
     {

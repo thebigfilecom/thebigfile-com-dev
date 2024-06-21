@@ -16,7 +16,7 @@ This sample will use the Rust variant.
 
 This example requires an installation of:
 
--   [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+-   [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 -   [x] Download and install [git.](https://git-scm.com/downloads)
 
 ## How to get there

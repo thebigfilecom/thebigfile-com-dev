@@ -16,7 +16,7 @@ This is a Motoko example that does not currently have a Rust variant.
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 - [ ] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 Begin by opening a terminal window.

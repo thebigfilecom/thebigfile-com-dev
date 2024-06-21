@@ -101,7 +101,7 @@ Note that PKCS#11 is not supported on the linux-musl build and Ledger is not sup
 
 HSM commands ask for your PIN interactively, and for security cannot be piped. To use them in a script, you can instead pass the PIN via the `QUILL_HSM_PIN` environment variable. The other three flags can also be specified via `QUILL_HSM_SLOT`, `QUILL_HSM_LIBPATH`, and `QUILL_HSM_ID`.
 
-Quill will by default use the well-known public key of the BigFile. However, for local development of canisters, Quill, or the IC, you may want to run it against a local replica. In such a case, you can use the `--insecure-local-dev-mode` flag to fetch the root key and trust it. Never use this flag if attempting a real transaction; never use this flag with your real keys. The URL that sent messages go to can be set via the `IC_URL` environment variable.
+Quill will by default use the well-known public key of the BigFile. However, for local development of canisters, Quill, or the BIG, you may want to run it against a local replica. In such a case, you can use the `--insecure-local-dev-mode` flag to fetch the root key and trust it. Never use this flag if attempting a real transaction; never use this flag with your real keys. The URL that sent messages go to can be set via the `IC_URL` environment variable.
 
 For a description of `--qr`, see [`quill qr-code`].
 

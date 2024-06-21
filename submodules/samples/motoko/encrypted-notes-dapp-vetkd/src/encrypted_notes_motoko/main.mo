@@ -144,7 +144,7 @@ shared ({ caller = initializer }) actor class () {
     // --- Queries vs. Updates ---
     // Note that this method is declared as an *update* call (see `shared`) rather than *query*.
     //
-    // While queries are significantly faster than updates, they are not certified by the IC.
+    // While queries are significantly faster than updates, they are not certified by the BIG.
     // Thus, we avoid using queries throughout this dapp, ensuring that the result of our
     // functions gets through consensus. Otherwise, this function could e.g. omit some notes
     // if it got executed by a malicious node. (To make the dapp more efficient, one could
@@ -310,7 +310,7 @@ shared ({ caller = initializer }) actor class () {
         let _ = notesById.remove(note_id);
     };
 
-    // Only the vetKD methods in the IC management canister are required here.
+    // Only the vetKD methods in the BIG management canister are required here.
     type VETKD_SYSTEM_API = actor {
         vetkd_public_key : ({
             canister_id : ?Principal;

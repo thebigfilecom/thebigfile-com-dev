@@ -75,7 +75,7 @@ Motoko has been designed to be intuitive to those familiar with JavaScript and o
 
 A Motoko actor always presents a typed interface to its clients as a suite of named functions with argument and future result types.
 
-The Motoko compiler and IC SDK can emit this interface in a language neutral format called Candid, so other canisters, browser resident code and smart phone apps that support Candid can use the actor’s services. The Motoko compiler can consume and produce Candid files, allowing Motoko to seamlessly interact with canisters implemented in other programming languages, provided they also support Candid.
+The Motoko compiler and BIG SDK can emit this interface in a language neutral format called Candid, so other canisters, browser resident code and smart phone apps that support Candid can use the actor’s services. The Motoko compiler can consume and produce Candid files, allowing Motoko to seamlessly interact with canisters implemented in other programming languages, provided they also support Candid.
 
 ### Orthogonal persistence
 

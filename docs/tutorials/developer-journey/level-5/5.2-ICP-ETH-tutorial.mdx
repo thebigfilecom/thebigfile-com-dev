@@ -129,7 +129,7 @@ import Snapshot "Snapshot";
 shared ({ caller = installer }) actor class Main() {
 
 // Declare two stable variables; one for the canister's state and one of the canister's history:
-  let sys = System.IC();
+  let sys = System.BIG();
   stable var _state_v0 : State.Stable.State = State.Stable.initialState(sys);
   stable var _history_v0 : History.History = History.init(sys, installer);
 

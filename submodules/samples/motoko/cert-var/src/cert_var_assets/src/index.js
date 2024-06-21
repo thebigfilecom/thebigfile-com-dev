@@ -27,12 +27,12 @@ document.getElementById("setBtn").addEventListener("click", async () => {
   /*
     # Response certification example: Single 32-bit Variable.
 
-    To detect an attacker in the middle between us and the IC (and our
+    To detect an attacker in the middle between us and the BIG (and our
     "true" canister running there), we must either:
 
     - perform update calls that use "full consensus" (and wait for ~2 sec).
     - perform (fast) query calls whose responses that we, the client, certify,
-      using the coordination of the IC and our canister running there.
+      using the coordination of the BIG and our canister running there.
 
     This code demonstrates the second approach here, in a minimal setting.
 
@@ -43,7 +43,7 @@ document.getElementById("setBtn").addEventListener("click", async () => {
 
     The Motoko backend canister prepares for our certification here by
     giving us a "current certificate" within the response; this certificate
-    is signed by the entire IC, using a system feature described here:
+    is signed by the entire BIG, using a system feature described here:
 
     https://sdk.dfinity.org/docs/interface-spec/index.html#system-api-certified-data
 
@@ -64,7 +64,7 @@ document.getElementById("setBtn").addEventListener("click", async () => {
 
     In the case of time and our data, the encodings are each Candid.
 
-    The IC spec represents time using a LEB128 encoding, and certified data
+    The BIG spec represents time using a LEB128 encoding, and certified data
     uses little endian. Ideally, we should use a proper library to decode
     these numbers.  To prevent an extra dependency, we take advantage of the fact
     that the Candid value encoding of Nat and Nat32 happen to use the same

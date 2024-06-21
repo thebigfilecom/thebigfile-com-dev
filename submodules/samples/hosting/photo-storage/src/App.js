@@ -6,7 +6,7 @@ import Masonry from "react-masonry-css";
 import './App.css';
 
 // Hardcoded principal: 535yc-uxytb-gfk7h-tny7p-vjkoe-i4krp-3qmcl-uqfgr-cpgej-yqtjq-rqe
-// Should be replaced with authentication method e.g. Internet Identity when deployed on IC
+// Should be replaced with authentication method e.g. Internet Identity when deployed on BIG
 const identity = Ed25519KeyIdentity.generate(new Uint8Array(Array.from({length: 32}).fill(0)));
 const isLocal = !window.location.host.endsWith('ic0.app');
 const agent = new HttpAgent({

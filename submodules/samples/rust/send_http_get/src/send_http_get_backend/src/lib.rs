@@ -1,4 +1,4 @@
-//1. IMPORT IC MANAGEMENT CANISTER
+//1. IMPORT BIG MANAGEMENT CANISTER
 //This includes all methods and types needed
 use ic_cdk::api::management_canister::http_request::{
     http_request, CanisterHttpRequestArgument, HttpHeader, HttpMethod, HttpResponse, TransformArgs,

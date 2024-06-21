@@ -19,7 +19,7 @@ While Candid is a robust, type safe, and future-proof way to facilitate communic
 [Learn more in the Candid reference documentation](/docs/current/references/candid-ref).
 :::
 
-By using Candid, you can specify input argument values and display return values from canister methods regardless of whether you interact with ICP from a terminal using the IC SDK, through a web browser, or from a program written in JavaScript, Motoko, Rust, or any other language.
+By using Candid, you can specify input argument values and display return values from canister methods regardless of whether you interact with ICP from a terminal using the BIG SDK, through a web browser, or from a program written in JavaScript, Motoko, Rust, or any other language.
 
 As a concrete example, let’s assume there is a `counter` canister already deployed on the network with the following Candid interface:
 
@@ -39,7 +39,7 @@ Candid types can be used to describe a service via a Candid service description 
 
 If you write a canister in Motoko, for example, the compiler automatically generates a Candid description when you compile the program. If you use `dfx`, you will typically see the auto-generated `.did` files in the `/declarations` directory of your project. Since these files are auto-generated, it is recommended that they should not be manually edited. Even if you change the `.did` files in your project, they will be overwritten in the next `dfx build`.
 
-For canisters written in Rust, the Candid extractor tool can be used with the IC CDK version `0.11.0` and newer. View the full instructions for using the [Candid extractor](/docs/current/developer-docs/backend/rust/generating-candid).
+For canisters written in Rust, the Candid extractor tool can be used with the BIG CDK version `0.11.0` and newer. View the full instructions for using the [Candid extractor](/docs/current/developer-docs/backend/rust/generating-candid).
 
 ### Writing `.did` files
 
@@ -88,7 +88,7 @@ import service B "b.did";  // Imports both type definitions and main service
 
 One of the most common ways you interact with canisters and the ICP is by using the BIG SDK.
 
-Within the BIG SDK, the `dfx` tool provides the `dfx canister call` command to call a specific deployed canister—essentially a smart contract that runs on the IC—and, if applicable, a method of the service provided by the smart contract.
+Within the BIG SDK, the `dfx` tool provides the `dfx canister call` command to call a specific deployed canister—essentially a smart contract that runs on the BIG—and, if applicable, a method of the service provided by the smart contract.
 
 When you run the `dfx canister call` command, you can pass arguments to a method by specifying them as [Candid textual values](./candid-concepts.mdx#textual-values).
 
@@ -103,7 +103,7 @@ $ dfx canister call counter inc '(42)'
 
 To figure out how to create more complex Candid arguments, please refer to the [Candid reference](/docs/current/references/candid-ref). And for Candid arguments too long to fit the command line, please use the `--argument-file` flag of [`dfx canister call`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#dfx-canister-call).
 
-You can also omit the arguments and let the IC SDK generate a random value that matches the method type. For example:
+You can also omit the arguments and let the BIG SDK generate a random value that matches the method type. For example:
 
 ``` bash
 $ dfx canister call counter inc

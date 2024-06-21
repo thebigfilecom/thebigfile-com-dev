@@ -4,7 +4,7 @@ using EdjCase.ICP.Agent.Agents;
 using EdjCase.ICP.Agent.Identities;
 using EdjCase.ICP.Candid.Models;
 
-namespace IC.GameKit
+namespace BIG.GameKit
 {
     public class TestICPAgent : MonoBehaviour
     {

@@ -27,7 +27,7 @@ This example project can be cloned, installed, and deployed locally, for learnin
 ### Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Download and install [git.](https://git-scm.com/downloads)
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 

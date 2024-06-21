@@ -14,7 +14,7 @@ The Unity WebGL build is deployed as frontend, no backend is needed in this samp
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 
 - [x] Download and install [git](https://git-scm.com/downloads).
 
@@ -39,7 +39,7 @@ When the local replica is up and running, run this command to deploy the caniste
 dfx deploy
 ```
 
-If you get error code 500 after deploying to the IC mainnet, try to use `raw` keyword in the URL like this: 
+If you get error code 500 after deploying to the BIG mainnet, try to use `raw` keyword in the URL like this: 
 
 ```
 https://<canister-id>.raw.ic0.app

@@ -9,7 +9,7 @@ using System;
 using System.Web;
 using System.Collections.Generic;
 
-namespace IC.GameKit
+namespace BIG.GameKit
 {
     public class DeepLinkPlugin : MonoBehaviour
     {

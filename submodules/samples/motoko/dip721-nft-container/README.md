@@ -8,7 +8,7 @@ keywords: [advanced, motoko, nfts, dip721]
 
 This example demonstrates implementing an NFT canister. NFTs (non-fungible tokens) are unique tokens with arbitrary
 metadata, usually an image of some kind, to form the digital equivalent of trading cards. There are a few different
-NFT standards for the BigFile (e.g [EXT](https://github.com/Toniq-Labs/extendable-token), [IC-NFT](https://github.com/rocklabs-io/ic-nft)), but for this tutorial you will use [DIP-721](https://github.com/Psychedelic/DIP721). You can see a quick introduction on [YouTube](https://youtu.be/1po3udDADp4).
+NFT standards for the BigFile (e.g [EXT](https://github.com/Toniq-Labs/extendable-token), [BIG-NFT](https://github.com/rocklabs-io/ic-nft)), but for this tutorial you will use [DIP-721](https://github.com/Psychedelic/DIP721). You can see a quick introduction on [YouTube](https://youtu.be/1po3udDADp4).
 
 The canister is a basic implementation of the standard, with support for the minting, burning, and notification interface extensions.
 
@@ -66,7 +66,7 @@ To see how data is certified in the NFT example canister, look at the function `
 
 For the response to be verified, it has to be checked that a) the served content is part of the tree, and b) the tree containing that content actually can be hashed to the certified hash.
 The function `witness` is responsible for creating a tree with minimal content that still can be verified to fulfill a) and b).
-Once this minimal tree is constructed, the certificate and minimal hash tree are sent as part of the `IC-Certificate` header.
+Once this minimal tree is constructed, the certificate and minimal hash tree are sent as part of the `BIG-Certificate` header.
 
 For a much more detailed explanation of how certification works, see [this explanation video](https://thebigfile.com/how-it-works/response-certification).
 
@@ -83,7 +83,7 @@ The NFT example canister keeps access control in these three levels very simple:
 
 Burning an NFT is a special case. To burn an NFT means to either delete the NFT (not intended in DIP-721) or to set ownership to `null` (or a similar value).
 On the BigFile, this non-existing principal is called the [management canister](https://thebigfile.com/docs/current/references/ic-interface-spec.md#the-ic-management-canister).
-> "The IC management canister is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.)," and its address is `aaaaa-aa`.
+> "The BIG management canister is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.)," and its address is `aaaaa-aa`.
 Using this management canister address, we can construct its principal and set the management canister as the owner of a burned NFT.
 
 ## NFT sample code tutorial

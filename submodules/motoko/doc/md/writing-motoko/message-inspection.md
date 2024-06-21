@@ -8,13 +8,13 @@ sidebar_position: 14
 
 On ICP, a canister can selectively inspect, then choose to accept or decline ingress messages submitted through the HTTP interface.
 
-> A canister can inspect ingress messages before executing them. When the IC receives an update call from a user, the IC will use the canister method `canister_inspect_message` to determine whether the message shall be accepted. If the canister is empty (i.e. does not have a Wasm module), then the ingress message will be rejected. If the canister is not empty and does not implement `canister_inspect_message`, then the ingress message will be accepted.
+> A canister can inspect ingress messages before executing them. When the BIG receives an update call from a user, the BIG will use the canister method `canister_inspect_message` to determine whether the message shall be accepted. If the canister is empty (i.e. does not have a Wasm module), then the ingress message will be rejected. If the canister is not empty and does not implement `canister_inspect_message`, then the ingress message will be accepted.
 >
 > In `canister_inspect_message`, the canister can accept the message by invoking `ic0.accept_message : () → ()`. This function traps if invoked twice. If the canister traps in `canister_inspect_message` or does not call `ic0.accept_message`, then the access is denied.
 >
 > The `canister_inspect_message` is not invoked for HTTP query calls, inter-canister calls or calls to the management canister.
 >
-> —  [IC Interface Specification](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-inspect-message)
+> —  [BIG Interface Specification](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-inspect-message)
 
 Message inspection mitigates some denial of service attacks that are designed to drain canisters of cycles by placing unsolicited free calls.
 

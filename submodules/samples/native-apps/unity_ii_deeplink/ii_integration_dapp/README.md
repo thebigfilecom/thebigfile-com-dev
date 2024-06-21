@@ -18,14 +18,14 @@ With this, users don't need to pass the private key around, also they don't need
 
 ## Deployment
 
-If you never work on the IC and don't know how to deploy a dapp, please refer to the [Hello World sample](https://thebigfile.com/docs/current/developer-docs/getting-started/hello-world) to learn the basic knowledge about the IC. 
+If you never work on the BIG and don't know how to deploy a dapp, please refer to the [Hello World sample](https://thebigfile.com/docs/current/developer-docs/getting-started/hello-world) to learn the basic knowledge about the BIG. 
 
 And this example is configured to launch the Unity Android/iOS app by opening the `internetidentity://authorize` URL, you can change the URL scheme as you want in [index.js](./src/greet_frontend/src/index.js).
 
-Once you set up the IC development environment locally and update the example as you want, you can follow the below steps to deploy to the IC mainnet.
+Once you set up the BIG development environment locally and update the example as you want, you can follow the below steps to deploy to the BIG mainnet.
 
 1. Enter the `ii_integration_dapp` directory from the command line
 2. Run `npm install` to install the npm packages
 3. Run `dfx start --background`
 4. Run `dfx deploy --network=ic --with-cycles=1000000000000`  
-   Here we recommend deploying the dapp to the IC mainnet as it's easier to access it from your mobile devices. Or you can use the [deployed dapp](https://qsgof-4qaaa-aaaan-qekqq-cai.icp0.io) instead.
+   Here we recommend deploying the dapp to the BIG mainnet as it's easier to access it from your mobile devices. Or you can use the [deployed dapp](https://qsgof-4qaaa-aaaan-qekqq-cai.icp0.io) instead.

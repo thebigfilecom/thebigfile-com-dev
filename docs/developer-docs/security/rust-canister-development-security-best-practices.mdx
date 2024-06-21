@@ -24,11 +24,11 @@ If single entities or small groups control canisters, they can apply changes or 
 
 Furthermore, the controller of canisters serving web content (such as e.g. the [asset canister](../../references/asset-canister)) could maliciously modify the web application to e.g. steal user funds or perform security sensitive actions on the user's behalf. For example, if [Internet Identity](/docs/current/developer-docs/web-apps/user-login/big-wallet/overview) is used, the user principal's private key for the given origin is stored in the browser storage, and a malicious app can therefore fully control the private key and the user's session and any assets controlled by that key.
 
-Dapps are commonly reachable over their own custom domain name instead of ic0.app. These domains are registered with a DNS registrar by one of the developers. The developer can choose to have this domain point at a completely different web application. Even one not hosted on the IC. Users will trust this domain and the app it serves. This could allow such a developer to steal funds, leak data, etc.
+Dapps are commonly reachable over their own custom domain name instead of ic0.app. These domains are registered with a DNS registrar by one of the developers. The developer can choose to have this domain point at a completely different web application. Even one not hosted on the BIG. Users will trust this domain and the app it serves. This could allow such a developer to steal funds, leak data, etc.
 
 A dapp might have privileged features which are only accessible to principals that are on an allow list. For example, minting new tokens, debug functions, permissions management, removing NFTs for digital rights violations, etc. This means that whoever controls that principal (this could e.g. be dapp developers) may have central control over these privileged features.
 
-For performance or privacy reasons, some components of a dapp may be hosted off-chain, e.g. in the cloud. These off-chain components often control principals used to interact with the on-chain components, and are usually controlled by a developer holding credentials to the off-chain cloud environment. On top of that, cloud providers can inspect and manipulate data in this environment if they choose. They could take IC principal private keys out of this environment and call privileged operations on the canisters. Off-chain components can quickly lead to many additional centrally trusted parties. Depending on the value managed by a dapp, these parties could be tempted to act maliciously.
+For performance or privacy reasons, some components of a dapp may be hosted off-chain, e.g. in the cloud. These off-chain components often control principals used to interact with the on-chain components, and are usually controlled by a developer holding credentials to the off-chain cloud environment. On top of that, cloud providers can inspect and manipulate data in this environment if they choose. They could take BIG principal private keys out of this environment and call privileged operations on the canisters. Off-chain components can quickly lead to many additional centrally trusted parties. Depending on the value managed by a dapp, these parties could be tempted to act maliciously.
 
 #### Recommendations
 
@@ -312,7 +312,7 @@ We proceed to discuss “journaling”, which is currently our recommended way o
 
 #### Journaling
 
-Journaling can be used for ensuring that tasks are completed correctly in an asynchronous context, where any instruction or async task can fail. Journaling is generally useful in any security critical application canister on the IC. The journaling concept we describe here is inspired and adapted from journaling in file systems.
+Journaling can be used for ensuring that tasks are completed correctly in an asynchronous context, where any instruction or async task can fail. Journaling is generally useful in any security critical application canister on the BIG. The journaling concept we describe here is inspired and adapted from journaling in file systems.
 
 Conceptually, a journal is a chronological list of records kept in a canister’s storage. It keeps track of tasks before they begin and when they are completed. Before each failable task, the journal records the intent to execute the task, and after the task, the journal records the result. The journal supports idempotent task flows by providing the necessary information for the canister to resume flows that failed to complete, report progress for ongoing flows, and report results for completed flows. Retries can be initiated by calls, automatically on a [heartbeat](/docs/current/developer-docs/smart-contracts/advanced-features/periodic-tasks#heartbeats) or using [timers](/docs/current/developer-docs/smart-contracts/advanced-features/periodic-tasks#timers). If the task flow was completed in a heartbeat or a timer, a user can take advantage of idempotency to check the result.
 
@@ -566,7 +566,7 @@ If a canister traps or panics in `pre_upgrade`, this can lead to permanently blo
 
 #### Security Concern
 
-Global timers are deactivated upon changes to the canister's Wasm module. The [IC specification](../../references/ic-interface-spec#timer) states this as follows:
+Global timers are deactivated upon changes to the canister's Wasm module. The [BIG specification](../../references/ic-interface-spec#timer) states this as follows:
 
 > "The timer is also deactivated upon changes to the canister's Wasm module (calling install_code, uninstall_code methods of the management canister or if the canister runs out of cycles). In particular, the function canister_global_timer won't be scheduled again unless the canister sets the global timer again (using the System API function ic0.global_timer_set)."
 

@@ -1,10 +1,10 @@
 # DEFI Example
 
-To enable DEFI application on the IC, canisters need to interact with token canisters and the ledger canister. This example dApp provides an example on how to facilitate these interactions.
+To enable DEFI application on the BIG, canisters need to interact with token canisters and the ledger canister. This example dApp provides an example on how to facilitate these interactions.
 
 ## Architecture
 
-The design of the IC allows for more complex on-chain computation. In combination with cheap storage, it is possible to have on-chain order books. This example takes advantage of these features and stores user balances and orders inside the exchange canister. The example exchange functionality can be condensed into the following steps:
+The design of the BIG allows for more complex on-chain computation. In combination with cheap storage, it is possible to have on-chain order books. This example takes advantage of these features and stores user balances and orders inside the exchange canister. The example exchange functionality can be condensed into the following steps:
 
 1. Exchange takes custody of funds (different mechanism for tokens and ICP, see below).
 2. Exchange updates internal balance book.

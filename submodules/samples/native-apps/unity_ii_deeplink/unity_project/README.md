@@ -3,7 +3,7 @@ This sample demonstrates one way to integrate Identity Integration with Unity on
 
 ## Overview
 
-In this example, you can learn how to communicate with the IC from C#. As we described in [Internet Identity Integration](../README.md#workflow), the game mainly focuses on:
+In this example, you can learn how to communicate with the BIG from C#. As we described in [Internet Identity Integration](../README.md#workflow), the game mainly focuses on:
 
 1. Provide a plugin to handle the communication between C# and the browser.
 2. Register the DeepLink URL scheme.

@@ -200,7 +200,7 @@ actor {
   public func get_icp_usd_exchange() : async Text {
 
     //First, declare the management canister
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //Next, you need to set the arguments for our GET request
 
@@ -348,7 +348,7 @@ actor {
 
   public func get_icp_usd_exchange() : async Text {
 
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     let ONE_MINUTE : Nat64 = 60;
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
@@ -459,7 +459,7 @@ module Types {
 
 
     // Lastly, declare the management canister which you use to make the HTTPS outcall.
-    public type IC = actor {
+    public type BIG = actor {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 
@@ -563,7 +563,7 @@ actor {
   public func send_http_post_request() : async Text {
 
     // First, declare the management canister
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     // Next, setup the URL and its query parameters. This portion uses a free API.
     let host : Text = "putsreq.com";
@@ -687,7 +687,7 @@ actor {
 
   public func send_http_post_request() : async Text {
 
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     let host : Text = "putsreq.com";
     let url = "https://putsreq.com/aL1QS5IbaQd4NTqN3a81";
@@ -806,7 +806,7 @@ module Types {
 
 
     // Lastly, declare the management canister which you use to make the HTTPS outcall.
-    public type IC = actor {
+    public type BIG = actor {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 

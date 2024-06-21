@@ -9,7 +9,7 @@ keywords: [beginner, rust, counter]
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 - [x] Download the following project files from GitHub: `git clone https://github.com/dfinity/examples/`
 
 Begin by opening a terminal window.

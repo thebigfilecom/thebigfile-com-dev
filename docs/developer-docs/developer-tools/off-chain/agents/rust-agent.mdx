@@ -48,7 +48,7 @@ async fn create_a_canister() -> Result<Principal, Box<dyn std::error::Error>> {
     .with_url(URL)
     .with_identity(create_identity())
     .build()?;
-  // Only do the following call when not contacting the IC main net (e.g. a local emulator).
+  // Only do the following call when not contacting the BIG main net (e.g. a local emulator).
   // This is important as the main net public key is static and a rogue network could return
   // a different key.
   // If you know the root key ahead of time, you can use `agent.set_root_key(root_key);`.

@@ -24,12 +24,12 @@ This walkthrough focuses on the version of the sample canister code written in [
 
 
 ## Prerequisites
--   [x] Download and [install the IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md) if you do not already have it.
+-   [x] Download and [install the BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md) if you do not already have it.
 -   [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 ## Getting started
 
-Sample code for `threshold-ecdsa` is provided in the [examples repository](https://github.com/dfinity/examples), under either [`/motoko`](https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa) or [`/rust`](https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa) sub-directories. It requires at least [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md) version 0.11.0 for local development.
+Sample code for `threshold-ecdsa` is provided in the [examples repository](https://github.com/dfinity/examples), under either [`/motoko`](https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa) or [`/rust`](https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa) sub-directories. It requires at least [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md) version 0.11.0 for local development.
 
 ### Deploy and test the canister locally 
 
@@ -43,8 +43,8 @@ dfx deploy
 ```
 
 #### What this does
-- `dfx start --background` starts a local instance of the IC via the IC SDK
-- `dfx deploy` deploys the code in the user's directory as a canister on the local version of the IC
+- `dfx start --background` starts a local instance of the BIG via the BIG SDK
+- `dfx deploy` deploys the code in the user's directory as a canister on the local version of the BIG
 
 If successful, you should see something like this:
 
@@ -74,7 +74,7 @@ To deploy the sample code, the canister needs the right key ID for the right env
 
 There are three options:
 
-* `dfx_test_key`: a default key ID that is used in deploying to a local version of IC (via IC SDK).
+* `dfx_test_key`: a default key ID that is used in deploying to a local version of BIG (via BIG SDK).
 * `test_key_1`: a master **test** key ID that is used in mainnet.
 * `key_1`: a master **production** key ID that is used in mainnet.
 
@@ -101,10 +101,10 @@ let { signature } = await ic.sign_with_ecdsa({
 ```
 
 :::caution
-To deploy to IC mainnet, one needs to replace the value in `key_id` fields with the values `"dfx_test_key"` to instead have either `"test_key_1"` or `"key_1"` depending on the desired intent.
+To deploy to BIG mainnet, one needs to replace the value in `key_id` fields with the values `"dfx_test_key"` to instead have either `"test_key_1"` or `"key_1"` depending on the desired intent.
 :::
 
-#### Deploy to the mainnet via IC SDK
+#### Deploy to the mainnet via BIG SDK
 
 To [deploy via the mainnet](https://thebigfile.com/docs/current/developer-docs/setup/deploy-mainnet.md), run the following commands:
 
@@ -146,7 +146,7 @@ Open the file `main.mo`, which will show the following Motoko code that demonstr
 
 ```motoko
   //declare "ic" to be the management canister, which is evoked by `actor("aaaaa-aa")`. This is how we will obtain an ECDSA public key 
-  let ic : IC = actor("aaaaa-aa");
+  let ic : BIG = actor("aaaaa-aa");
 
   public shared (msg) func public_key() : async { #Ok : { public_key: Blob }; #Err : Text } {
     let caller = Principal.toBlob(msg.caller);
@@ -174,10 +174,10 @@ Open the file `main.mo`, which will show the following Motoko code that demonstr
   };
 ```
 
-In the code above, the canister calls the `ecdsa_public_key` method of the [IC management canister](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-management-canister) (`aaaaa-aa`). 
+In the code above, the canister calls the `ecdsa_public_key` method of the [BIG management canister](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-management-canister) (`aaaaa-aa`). 
 
 
-**The [IC management canister](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-management-canister) is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.). It is an ergonomic way for canisters to call the system API of the IC (as if it were a single canister). In the code below, we use the management canister to create an ECDSA public key. `let ic : IC = actor("aaaaa-aa")` declares the IC management canister in the code above.**
+**The [BIG management canister](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-management-canister) is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.). It is an ergonomic way for canisters to call the system API of the BIG (as if it were a single canister). In the code below, we use the management canister to create an ECDSA public key. `let ic : BIG = actor("aaaaa-aa")` declares the BIG management canister in the code above.**
 
 ### Canister root public key
 

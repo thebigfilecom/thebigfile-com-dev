@@ -22,7 +22,7 @@ View the [canister service definition](https://github.com/dfinity/examples/blob/
 ### Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 - [x] To run the test scripts, you need to download [ic-repl](https://github.com/chenyan2002/ic-repl/releases).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 

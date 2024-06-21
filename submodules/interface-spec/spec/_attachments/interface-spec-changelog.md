@@ -4,7 +4,7 @@
 * The maximum length of a nonce in an ingress message is 32 bytes.
 * Update specification of responses from the endpoint `/api/v2/status`.
 * Stop canister calls might be rejected upon timeout.
-* The IC sends a `user-agent` header with the value `ic/1.0` in canister HTTPS outcalls if the canister does not provide one.
+* The BIG sends a `user-agent` header with the value `ic/1.0` in canister HTTPS outcalls if the canister does not provide one.
 * Add a management canister method for retrieving node metrics.
 * Specify the resource reservation mechanism.
 * Allow `in_replicated_execution` system API method to be executed during `canister_start`.
@@ -35,14 +35,14 @@
 * Added a new mode for canister upgrades skipping pre-upgrade method's execution.
 
 ### 0.20.0 (2023-07-11) {#0_20_0}
-* IC Bitcoin API, ECDSA API, canister HTTPS outcalls API, and 128-bit cycles System API are considered stable.
+* BIG Bitcoin API, ECDSA API, canister HTTPS outcalls API, and 128-bit cycles System API are considered stable.
 * Add conditions on requested paths in read state requests.
 * Add composite queries.
 * Specify that the canister version is incremented upon every successful message execution except for successful message execution of a query method.
 
 ### 0.19.0 (2023-06-08) {#0_19_0}
 * canister version can be specified in some management canister calls (canister creation, canister code changes, canister settings changes)
-* IC records canister history (canister creation, canister code changes, and canister controllers changes)
+* BIG records canister history (canister creation, canister code changes, and canister controllers changes)
 * added a new `canister_info` management canister call returning current module hash, current controllers, and canister history
 * added a new system API call `ic0.is_controller` (checking if a principal is a controller of the canister)
 * stable memory System API calls can be invoked in the WebAssembly module `(start)` function
@@ -55,7 +55,7 @@
 * conditions on envelope delegations have been revised (relaxed max number of delegations, restricted max number of targets per delegation, forbidden cycles in the delegation chain)
 * added a new optional field `senders` in envelope delegations (restricting users to which a delegation applies)
 * all `/request_status/<request_id>` paths must refer to the same `request_id` in a `read_state` request
-* IC protocol execution error conditions (such as failing `inspect_message` method of a canister) are returned as 200 HTTP responses with a cbor body describing the error (instead of 4xx or 5xx HTTP responses)
+* BIG protocol execution error conditions (such as failing `inspect_message` method of a canister) are returned as 200 HTTP responses with a cbor body describing the error (instead of 4xx or 5xx HTTP responses)
 
 ### 0.18.9 (2022-12-06) {#0_18_9}
 * Global timers
@@ -295,7 +295,7 @@
   user, not the canister or user itself
 * The signature of a request needs to be calculated using a domain separator
 * Describe the `controller` attribute, add a request to change it
-* The IC management canister is introduced
+* The BIG management canister is introduced
 
 
 ### 0.2.16 (2020-05-29) {#v0_2_16}

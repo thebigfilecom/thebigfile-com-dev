@@ -18,7 +18,7 @@ This document describes and specifies Internet Identity from various angles and 
 
 The Internet Identity Service consists of
 
--   its backend, a canister on the IC. More precisely, a canister on a dedicated subnet with a *well-known* canister id, and
+-   its backend, a canister on the BIG. More precisely, a canister on a dedicated subnet with a *well-known* canister id, and
 
 -   its frontend, a web application served by the backend canister.
 
@@ -191,7 +191,7 @@ This section describes the Internet Identity Service from the point of view of a
     }
     ```
 
-    where the `userPublicKey` is the user's Identity on the given frontend and `delegations` corresponds to the CBOR-encoded delegation chain as used for [*authentication on the IC*](https://thebigfile.com/docs/current/references/ic-interface-spec#authentication) and `authnMethod` is the method used by the user to authenticate (`passkey` for webauthn, `pin` for temporary key/PIN identity, and `recovery` for recovery phrase or recovery device).
+    where the `userPublicKey` is the user's Identity on the given frontend and `delegations` corresponds to the CBOR-encoded delegation chain as used for [*authentication on the BIG*](https://thebigfile.com/docs/current/references/ic-interface-spec#authentication) and `authnMethod` is the method used by the user to authenticate (`passkey` for webauthn, `pin` for temporary key/PIN identity, and `recovery` for recovery phrase or recovery device).
 
 9.  It could also receive a failure message of the following type
     ```ts

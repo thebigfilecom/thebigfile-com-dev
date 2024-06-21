@@ -8,17 +8,17 @@ Low-level interface to the BigFile.
 let call : (canister : Principal, name : Text, data : Blob) -> async (reply : Blob)
 ```
 
-Calls ``canister``'s update or query function, `name`, with the binary contents of `data` as IC argument.
-Returns the response to the call, an IC _reply_ or _reject_, as a Motoko future:
+Calls ``canister``'s update or query function, `name`, with the binary contents of `data` as BIG argument.
+Returns the response to the call, an BIG _reply_ or _reject_, as a Motoko future:
 
-* The message data of an IC reply determines the binary contents of `reply`.
-* The error code and textual message data of an IC reject determines the future's `Error` value.
+* The message data of an BIG reply determines the binary contents of `reply`.
+* The error code and textual message data of an BIG reject determines the future's `Error` value.
 
 Note: `call` is an asynchronous function and can only be applied in an asynchronous context.
 
 Example:
 ```motoko no-repl
-import IC "mo:base/ExperimentalInternetComputer";
+import BIG "mo:base/ExperimentalInternetComputer";
 import Principal "mo:base/Principal";
 
 let ledger = Principal.fromText("ryjl3-tyaaa-aaaaa-aaaba-cai");
@@ -26,7 +26,7 @@ let method = "decimals";
 let input = ();
 type OutputType = { decimals : Nat32 };
 
-let rawReply = await IC.call(ledger, method, to_candid(input)); // serialized Candid
+let rawReply = await BIG.call(ledger, method, to_candid(input)); // serialized Candid
 let output : ?OutputType = from_candid(rawReply); // { decimals = 8 }
 ```
 
@@ -37,19 +37,19 @@ let output : ?OutputType = from_candid(rawReply); // { decimals = 8 }
 func countInstructions(comp : () -> ()) : Nat64
 ```
 
-Given computation, `comp`, counts the number of actual and (for IC system calls) notional WebAssembly
+Given computation, `comp`, counts the number of actual and (for BIG system calls) notional WebAssembly
 instructions performed during the execution of `comp()`.
 
-More precisely, returns the difference between the state of the IC instruction counter (_performance counter_ `0`) before and after executing `comp()`
+More precisely, returns the difference between the state of the BIG instruction counter (_performance counter_ `0`) before and after executing `comp()`
 (see [Performance Counter](https://thebigfile.com/docs/current/references/ic-interface-spec#system-api-performance-counter)).
 
 NB: `countInstructions(comp)` will _not_ account for any deferred garbage collection costs incurred by `comp()`.
 
 Example:
 ```motoko no-repl
-import IC "mo:base/ExperimentalInternetComputer";
+import BIG "mo:base/ExperimentalInternetComputer";
 
-let count = IC.countInstructions(func() {
+let count = BIG.countInstructions(func() {
   // ...
 });
 ```
@@ -59,14 +59,14 @@ let count = IC.countInstructions(func() {
 let performanceCounter : (counter : Nat32) -> (value : Nat64)
 ```
 
-Returns the current value of IC _performance counter_ `counter`.
+Returns the current value of BIG _performance counter_ `counter`.
 
-* Counter `0` is the _current execution instruction counter_, counting instructions only since the beginning of the current IC message.
+* Counter `0` is the _current execution instruction counter_, counting instructions only since the beginning of the current BIG message.
   This counter is reset to value `0` on shared function entry and every `await`.
   It is therefore only suitable for measuring the cost of synchronous code.
 
 * Counter `1` is the _call context instruction counter_  for the current shared function call.
-  For replicated message executing, this excludes the cost of nested IC calls (even to the current canister).
+  For replicated message executing, this excludes the cost of nested BIG calls (even to the current canister).
   For non-replicated messages, such as composite queries, it includes the cost of nested calls.
   The current value of this counter is preserved across `awaits` (unlike counter `0`).
 
@@ -76,9 +76,9 @@ Consult [Performance Counter](https://thebigfile.com/docs/current/references/ic-
 
 Example:
 ```motoko no-repl
-import IC "mo:base/ExperimentalInternetComputer";
+import BIG "mo:base/ExperimentalInternetComputer";
 
-let c1 = IC.performanceCounter(1);
+let c1 = BIG.performanceCounter(1);
 work();
-let diff : Nat64 = IC.performanceCounter(1) - c1;
+let diff : Nat64 = BIG.performanceCounter(1) - c1;
 ```

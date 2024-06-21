@@ -22,7 +22,7 @@ Fig.1. Architectural overview of the Encrypted Notes dapp using client-side end-
 
 ## Disclaimer: please read carefully
 
-This is an **example dapp** that demonstrates the potential of building **canisters** for the IC. Please do not use this code in production and/or scenarios in which sensitive data could be involved. While this dapp illustrates end-to-end encryption, there are **several open security issues** that should be addressed before the dapp could be considered production-ready:
+This is an **example dapp** that demonstrates the potential of building **canisters** for the BIG. Please do not use this code in production and/or scenarios in which sensitive data could be involved. While this dapp illustrates end-to-end encryption, there are **several open security issues** that should be addressed before the dapp could be considered production-ready:
 
 - The frontend re-uses the generated public and private key pair for every identity in the same browser. In a better implementation, this key pair should be unique per principal.
 - The public/private key pair should not be managed by the web browser at all. [WebAuthn](https://en.wikipedia.org/wiki/WebAuthn) should be used to push the key management to the operating system.
@@ -37,23 +37,23 @@ This is an **example dapp** that demonstrates the potential of building **canist
 
 You can play around with the [dapp deployed on ICP](https://cvhrw-2yaaa-aaaaj-aaiqa-cai.icp0.io/) and see a quick introduction on [YouTube](https://youtu.be/DZQmtPSxvbs).
 
-We wanted to build an example of a simple (but not too simple) dapp running purely on the IC. This example relies upon the **web-serving** and **storage capabilities** of the IC. We focused on the following two key features for our example dapp: 
+We wanted to build an example of a simple (but not too simple) dapp running purely on the BIG. This example relies upon the **web-serving** and **storage capabilities** of the BIG. We focused on the following two key features for our example dapp: 
 1. Client-side **end-to-end encryption**. 
 2. **Multi-user** and **multi-device** support.
 
-To demonstrate the potential of the IC as a platform for developing such dapps, we implemented this example using two distinct canister development kits (CDKs). The Motoko CDK allows developers to implement actor-based dapps using the [Motoko](https://thebigfile.com/docs/current/motoko/getting-started/motoko-introduction) language. The Rust CDK allows implementing dapps in [Rust](https://thebigfile.com/docs/current/developer-docs/backend/rust/index). In both cases, canisters are compiled into WebAssembly files that are then deployed onto the IC.
+To demonstrate the potential of the BIG as a platform for developing such dapps, we implemented this example using two distinct canister development kits (CDKs). The Motoko CDK allows developers to implement actor-based dapps using the [Motoko](https://thebigfile.com/docs/current/motoko/getting-started/motoko-introduction) language. The Rust CDK allows implementing dapps in [Rust](https://thebigfile.com/docs/current/developer-docs/backend/rust/index). In both cases, canisters are compiled into WebAssembly files that are then deployed onto the BIG.
 
 ## Architecture
 
 The basic functionality of the encrypted notes consists of two main components.
 
-First, we re-used the code of a non-encrypted dapp called [IC Notes](https://github.com/pattad/ic_notes). In particular, IC Notes relies on the Internet Identity (II) canister for user authentication, an approach that is also inherited by the encrypted notes dapp. For development purposes, we deploy a local instance of the II canister, along with a local instance of encrypted notes. When deploying the encrypted notes dapp onto the mainnet, the real-world instance of II is used for authentication.
+First, we re-used the code of a non-encrypted dapp called [BIG Notes](https://github.com/pattad/ic_notes). In particular, BIG Notes relies on the Internet Identity (II) canister for user authentication, an approach that is also inherited by the encrypted notes dapp. For development purposes, we deploy a local instance of the II canister, along with a local instance of encrypted notes. When deploying the encrypted notes dapp onto the mainnet, the real-world instance of II is used for authentication.
 
-Second, we enabled client-side, end-to-end encryption for the note contents, borrowing the solution from another existing dapp called [IC Vault](https://github.com/timohanke/icvault). Our encrypted notes dapp follows the approach of IC Vault to support managing multiple devices.
+Second, we enabled client-side, end-to-end encryption for the note contents, borrowing the solution from another existing dapp called [BIG Vault](https://github.com/timohanke/icvault). Our encrypted notes dapp follows the approach of BIG Vault to support managing multiple devices.
 
 In the context of the canisters discussed in this document, a device is not necessarily a separate physical device but a logical instance device, e.g., a web browser, with its own local data storage. For example, we consider two web browsers running on the same laptop as two independent devices, since these browsers generate their encryption keys. In contrast, the II canister relies on hardware-generated encryption keys, distinguishing only hardware devices.
 
-To support multiple devices per user, IC Vault employs a device manager; a canister that securely synchronizes device-specific keys across all the devices that are associated with a user. The remainder of this document focuses on the encrypted notes dapp canister that similarly implements a device manager but as part of its main canister.
+To support multiple devices per user, BIG Vault employs a device manager; a canister that securely synchronizes device-specific keys across all the devices that are associated with a user. The remainder of this document focuses on the encrypted notes dapp canister that similarly implements a device manager but as part of its main canister.
 
 For further details and user stories, please refer to the [README file](https://github.com/dfinity/examples/blob/master/motoko/encrypted-notes-dapp/README.md).
 
@@ -109,7 +109,7 @@ Once authenticated with II:
 Follow the steps below to deploy this sample project.
 
 ## Prerequisites
-- [x] Install the [IC SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index).
 - [x] Download and install [Docker](https://docs.docker.com/get-docker/) if using the Docker option. 
 - [x] Download the GitHub repo containing this project's files: `git clone https://github.com/dfinity/examples`
 
@@ -307,7 +307,7 @@ Fig. 2. Basic single-device scenario for a user.
 - #### Step 1: Open the main page of the `Encrypted Notes` dapp. You will see a _login_ button.
 
    1. If deployed locally, visit the following link: http://localhost:8000?canisterId=rkp4c-7iaaa-aaaaa-aaaca-cai
-   2. If deployed to the mainnet IC, visit the corresponding canister URL.
+   2. If deployed to the mainnet BIG, visit the corresponding canister URL.
 
    At this moment, only one _deviceAlias_ variable is stored in the _Local Storage_ (see Fig. 2(a)).
 
@@ -426,7 +426,7 @@ Some errors like `Could not initialize crypto service` might occur due to browse
 Some browsers may block local resources based on invalid SSL certificates. If while testing a locally deployed version of the Encrypted Notes dapp you observe certificate issues in your browser's console, please change the browser settings to _ignore certificates for resources loaded from localhost_. For example, this can be done in Google Chrome via [chrome://flags/#allow-insecure-localhost](chrome://flags/#allow-insecure-localhost).
 
 ## dfx.json file structure
-`dfx.json` is the configuration of the project when deploying to either the local replica or to the IC, it assists in the creation of the `.dfx` directory (which contains `canister_ids.json` — which merely maps canister by name to their id on both local replica and the IC). There are various configuration options here and this is not exhaustive. This will primarily discuss target types for canisters (which all exist under the `canisters` key).
+`dfx.json` is the configuration of the project when deploying to either the local replica or to the BIG, it assists in the creation of the `.dfx` directory (which contains `canister_ids.json` — which merely maps canister by name to their id on both local replica and the BIG). There are various configuration options here and this is not exhaustive. This will primarily discuss target types for canisters (which all exist under the `canisters` key).
 
 ```sh
 {
@@ -465,12 +465,12 @@ Some browsers may block local resources based on invalid SSL certificates. If wh
 }
 ```
 **encrypted_notes_motoko**:
-Motoko is the IC-specific language for building and deploying Canisters. Two keys are necessary:
+Motoko is the BIG-specific language for building and deploying Canisters. Two keys are necessary:
 `main`: The directory location of the entry point file of your canister.
 `type`: needs to be "motoko", informing `dfx` of how to properly build the canister.
 
 **encrypted_notes_rust**:
-Rust natively supports WebAssembly — the binary format of the Internet Computer, and there is a crate ic_cdk that allows hooks into the IC. Unlike Motoko, `dfx` does not yet have a native Rust target that infers as much as Motoko canisters. So the keys that need to be provided are:
+Rust natively supports WebAssembly — the binary format of the Internet Computer, and there is a crate ic_cdk that allows hooks into the BIG. Unlike Motoko, `dfx` does not yet have a native Rust target that infers as much as Motoko canisters. So the keys that need to be provided are:
 `type`: custom (letting `dfx` know that it's going to need to do some user-defined work)
 `build`: whatever command is needed to turn your project into a Wasm binary. In this repo, it's:
 ```sh
@@ -479,7 +479,7 @@ cargo build --package encrypted_notes_rust --target wasm32-unknown-unknown --rel
 `wasm`: wherever the wasm binary ends up at the end of the "build" command.
 `candid`: There is not yet Rust autogeneration for candid IDL built into `dfx`, so DFX needs to know where your Candid file for the canister built by "build" resides.
 **www**:
-frontend www canister (an "asset" canister) is the way we describe a set of files or a static website that we are deploying to the IC. Our project frontend is built in [Svelte](https://svelte.dev/). The keys we used are as follows:
+frontend www canister (an "asset" canister) is the way we describe a set of files or a static website that we are deploying to the BIG. Our project frontend is built in [Svelte](https://svelte.dev/). The keys we used are as follows:
 `dependencies`: an array of whatever canisters are being used to serve your app, to ensure that `dfx` builds and deploys them before your app.
 `frontend: { entrypoint: ""}`: This set of keys tells `dfx` to build it as a frontend canister, and entrypoint is wherever your app entrypoint winds up residing at the end of an npm build
 `source`: where the rest of your app resides at the end of npm build
@@ -517,6 +517,6 @@ In Chrome, go to: _Developer Tools→Application→Local Storage_/_IndexedDB_.
 
 
 ## Acknowledgments
-We thank the author of [IC Notes](https://github.com/pattad/ic_notes) whose code was the starting point for the frontend component used in this project.
+We thank the author of [BIG Notes](https://github.com/pattad/ic_notes) whose code was the starting point for the frontend component used in this project.
 
-We thank the authors of [IC Vault](https://github.com/timohanke/icvault) whose code was the starting point for this project's backend, browser-based encryption, and device management.
+We thank the authors of [BIG Vault](https://github.com/timohanke/icvault) whose code was the starting point for this project's backend, browser-based encryption, and device management.

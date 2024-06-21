@@ -194,7 +194,7 @@ The next function to look at is a reusable function that can certify any asset.
 Note that when the certification is created, the `HttpAssetResponse` is converted into an `HttpResponse`, which will temporarily clone the entire asset body, but this will then be dropped once it goes out of scope.
 
 ```rust
-const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "IC-CertificateExpression";
+const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "BIG-CertificateExpression";
 fn certify_asset_response(
     body: &'static [u8],
     additional_headers: Vec<HeaderField>,

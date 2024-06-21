@@ -40,9 +40,9 @@ The HTTP Gateway needs to know the canister ID of the canister to talk to, and o
 
 3. Check whether the canister ID is embedded in the hostname by splitting the hostname and finding the first occurrence of a valid canister ID from the right. If there is a canister ID embedded in the hostname, use it.
 
-4. Check whether the canister is hosted on the IC using a custom domain. There are two options:
+4. Check whether the canister is hosted on the BIG using a custom domain. There are two options:
 
-   - Check whether there is a TXT record containing a canister ID at the `_canister-id`-subdomain (e.g., to see whether `foo.com` is hosted on the IC, make a DNS lookup for the TXT record of `_canister-id.foo.com`) and use the specified canister ID;
+   - Check whether there is a TXT record containing a canister ID at the `_canister-id`-subdomain (e.g., to see whether `foo.com` is hosted on the BIG, make a DNS lookup for the TXT record of `_canister-id.foo.com`) and use the specified canister ID;
 
    - Make a `HEAD` request to the hostname. If the response contains an `x-ic-canister-id` header, use the value of this header as the canister ID.
 
@@ -130,23 +130,23 @@ Response verification fills the security gap left by query calls. It is a versio
 
 ### Response Verification Outline
 
-1. Case-insensitive search for the `IC-Certificate` response header.
+1. Case-insensitive search for the `BIG-Certificate` response header.
    - If no such header is found, verification fails.
    - If the header value is not structured as per [the certificate header](#the-certificate-header), verification fails.
-2. Parse the `certificate` and `tree` fields from the `IC-Certificate` header value as per [the certificate header](#the-certificate-header).
+2. Parse the `certificate` and `tree` fields from the `BIG-Certificate` header value as per [the certificate header](#the-certificate-header).
 3. Perform [certificate validation](#certificate-validation).
-4. Parse the `version` field from the `IC-Certificate` header value as per [the certificate header](#the-certificate-header).
+4. Parse the `version` field from the `BIG-Certificate` header value as per [the certificate header](#the-certificate-header).
    - If the `version` field is missing or equal to `1` then proceed with [legacy response verification](#legacy-response-verification).
    - If the `version` field is equal to `2` then continue.
    - Otherwise, verification fails.
-5. Parse the `expr_path` field from the `IC-Certificate` header value as per [the certificate header](#the-certificate-header).
+5. Parse the `expr_path` field from the `BIG-Certificate` header value as per [the certificate header](#the-certificate-header).
 6. The parsed `expr_path` is valid as per [Expression Path](#expression-path) otherwise, verification fails.
-7. Case-insensitive search for the `IC-CertificateExpression` header.
+7. Case-insensitive search for the `BIG-CertificateExpression` header.
    - If no such header is found, verification fails.
    - If the header value is not structured as per [the certificate expression header](#the-certificate-expression-header), verification fails.
 8. Let `expr_hash` be the label of the node in the tree at path `expr_path`.
    - If no such label exists, verification fails.
-   - If `expr_hash` does not match the sha256 hash of the `IC-CertificateExpression` header value, verification fails.
+   - If `expr_hash` does not match the sha256 hash of the `BIG-CertificateExpression` header value, verification fails.
    - If `no_certification` is set, verification succeeds.
    - Let `response_hash` be the response hash calculated according to [Response Hash Calculation](#response-hash-calculation)
    - If `no_request_certification` is set:
@@ -157,7 +157,7 @@ Response verification fills the security gap left by query calls. It is a versio
 
 ### The Certificate Header
 
-The `IC-Certificate` header is a structured header according to [RFC 8941](https://www.rfc-editor.org/rfc/rfc8941.html) with the following mandatory fields:
+The `BIG-Certificate` header is a structured header according to [RFC 8941](https://www.rfc-editor.org/rfc/rfc8941.html) with the following mandatory fields:
 
 - `certificate`: [Base64 encoded](https://www.rfc-editor.org/rfc/rfc4648#section-4) string of self-describing, [CBOR-encoded](https://www.rfc-editor.org/rfc/rfc8949.html) bytes that decode into a valid [certificate](https://thebigfile.com/docs/current/references/ic-interface-spec/#certification).
 - `tree`: [Base64 encoded](https://www.rfc-editor.org/rfc/rfc4648#section-4) string of self-describing, [CBOR-encoded](https://www.rfc-editor.org/rfc/rfc8949.html) bytes that decode into a valid hash tree as per [certificate encoding](https://thebigfile.com/docs/current/references/ic-interface-spec/#certification-encoding).
@@ -183,7 +183,7 @@ The decoded `expr_path` field of [The Certificate Header](#the-certificate-heade
 
 Certificate validation is performed as part of [response verification](#response-verification) as per [Canister Signatures](https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures) and [Certification](https://thebigfile.com/docs/current/references/ic-interface-spec/#certificate). It is expanded on here concerning [response verification](#response-verification) for completeness:
 
-1. Case-insensitive search for a response header called `IC-Certificate`.
+1. Case-insensitive search for a response header called `BIG-Certificate`.
 2. The value of the header corresponds to the format described in [the certificate header](#the-certificate-header) section.
 3. The decoded `certificate` must pass the following validations:
    - The certificate is signed by the root key of the NNS subnet or by a subnet delegation signed by that same root key.
@@ -194,17 +194,17 @@ Certificate validation is performed as part of [response verification](#response
 
 ### The Certificate Expression Header
 
-The `IC-CertificateExpression` header carries additional information instructing the HTTP Gateway how to reconstruct the certification, it can instruct the HTTP Gateway to:
+The `BIG-CertificateExpression` header carries additional information instructing the HTTP Gateway how to reconstruct the certification, it can instruct the HTTP Gateway to:
 
 - Exclude the complete request/response pair or the request only.
 - Include specific request headers.
 - Include specific request URL query parameters.
 - Include or exclude specific response headers.
 
-The format of the `IC-CertificateExpression` header is as follows:
+The format of the `BIG-CertificateExpression` header is as follows:
 
 ```
-IC-CertificateExpression: default_certification(ValidationArgs{<literal field values>})
+BIG-CertificateExpression: default_certification(ValidationArgs{<literal field values>})
 ```
 
 The value of this header must have valid [CEL syntax](https://github.com/google/cel-spec), such that `default_certification` could be implemented as a function provided by the HTTP Gateway to validate the certification.
@@ -216,10 +216,10 @@ The properties supplied to this function are as follows:
 - `certified_query_parameters` - a list of request URL query parameter names to include. This list can be empty.
   - Mutually exclusive with the `no_request_certification` property.
 - `certified_response_headers` - a list of response header names to include.
-  - Must not include `IC-Certificate` or `IC-CertificateExpression`.
+  - Must not include `BIG-Certificate` or `BIG-CertificateExpression`.
   - Mutually exclusive with the `response_header_exclusions` property.
 - `response_header_exclusions` - a list of response header names to exclude. All other headers are included.
-  - Must not include `IC-Certificate` or `IC-CertificateExpression`.
+  - Must not include `BIG-Certificate` or `BIG-CertificateExpression`.
   - Mutually exclusive with the `certified_response_headers` property.
 - `no_request_certification` - disables certification of the request for this HTTP response.
   - Mutually exclusive with the `certified_request_headers` and `certified_query_parameters` properties.
@@ -281,7 +281,7 @@ VALIDATION-ARGS = 'ValidationArgs{', ('no_certification:Empty{}' | 'certificatio
 
 HEADER-VALUE = 'default_certification(', VALIDATION-ARGS, ')'
 
-HEADER = 'IC-CertificateExpression:', HEADER-VALUE
+HEADER = 'BIG-CertificateExpression:', HEADER-VALUE
 ```
 
 :::note
@@ -312,16 +312,16 @@ The response hash is calculated as follows:
 
 1. Let `response_headers_hash` be the [representation-independent hash](https://thebigfile.com/docs/current/references/ic-interface-spec#hash-of-map) of the response headers:
    - The header names are lower-cased.
-   - The `IC-Certificate` header is always excluded.
-   - The `IC-CertificateExpression` header is always included.
+   - The `BIG-Certificate` header is always excluded.
+   - The `BIG-CertificateExpression` header is always included.
    - If the `no_certification` field of [the certificate expression header](#the-certificate-expression-header) is present:
      - This request/response pair is exempt from certification and the response hash calculation can be skipped altogether
    - If the `certified_response_headers` field of [the certificate expression header](#the-certificate-expression-header) is present:
-     - All headers listed by certified_response_headers are included (except for the `IC-Certificate` header)
-     - All others are excluded (except for the `IC-CertificateExpression` header)
+     - All headers listed by certified_response_headers are included (except for the `BIG-Certificate` header)
+     - All others are excluded (except for the `BIG-CertificateExpression` header)
    - If the `response_header_exclusions` field of [the certificate expression header](#the-certificate-expression-header) is present:
-     - All headers listed (except for the `IC-CertificateExpression` header) are excluded from the certification
-     - All other headers (except for the IC-Certificate header) are included in the certification
+     - All headers listed (except for the `BIG-CertificateExpression` header) are excluded from the certification
+     - All other headers (except for the BIG-Certificate header) are included in the certification
    - Headers can be repeated and each repetition should be included.
    - Include an additional `:ic-cert-status` header that contains the numerical HTTP status code of the response.
 2. Let `response_body_hash` be the sha256 of the response body.
