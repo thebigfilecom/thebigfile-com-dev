@@ -127,7 +127,7 @@ const cardsData: CardData[] = [
   {
     title: "The brain of the BigFile",
     description:
-      "The BigFile is governed by a fully on-chain permissionless system that regularly upgrades the protocol following the intentions of BF token holders expressed through their votes.",
+      "The BigFile is governed by a fully on-chain permissionless system that regularly upgrades the protocol following the intentions of BIG token holders expressed through their votes.",
     image: "/img/features/nns-image.webp",
     href: "/nns",
     refText: "Participate in BigFile governance",

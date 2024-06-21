@@ -1,10 +1,10 @@
 ---
 title: BIG Wallet
 abstract:  BIG Wallet is an advanced and secure method of cryptographic authentication, which is convenient to use, works across all of a user's devices, and helps to protect user privacy.
-coverImage: /img/how-it-works/internet-identity.webp
+coverImage: /img/how-it-works/big-wallet.webp
 ---
 
-![](/img/how-it-works/internet-identity.webp)
+![](/img/how-it-works/big-wallet.webp)
 
 # BIG Wallet
 

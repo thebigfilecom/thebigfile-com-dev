@@ -246,8 +246,8 @@ const marketingNav = {
               description: "Try dapps gas free",
             },
             {
-              name: "BF Token",
-              href: "/bf-tokens",
+              name: "BIG Token",
+              href: "/big-tokens",
               description: "Use native utility token",
             },
             {
@@ -625,10 +625,6 @@ const config = {
           {
             items: [
               {
-                label: "Internet Computer Association",
-                href: "https://lbbne-haaaa-aaaam-absda-cai.icp0.io/",
-              },
-              {
                 label: "Wiki",
                 href: "https://wiki.thebigfile.com/",
               },
@@ -652,15 +648,6 @@ const config = {
               {
                 label: "Support & Feedback",
                 href: "https://support.thebigfile.com/",
-              },
-              {
-                label: "Brand Materials",
-                href: "https://thebigfile.com/brand",
-              },
-              {
-                label: "Press Kit",
-                href: "/press-kit.zip",
-                isDownload: true,
               },
             ],
           },

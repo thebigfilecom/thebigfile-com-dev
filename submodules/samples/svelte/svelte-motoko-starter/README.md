@@ -168,13 +168,13 @@ npm run dev
 
 from the project root directory, it is not necessary to deploy it to the frontend canister during development.
 
-## Deploying to the IC
+## Deploying to the BIG
 
-To host the frontend and backend on the IC, you'll need to have some cycles available. Cycles pay for the execution of your app, and they are also needed to create canisters.
+To host the frontend and backend on the BIG, you'll need to have some cycles available. Cycles pay for the execution of your app, and they are also needed to create canisters.
 
-You can get $20 worth of cycles for free from the Cycles Faucet, if you have a GitHub account. To claim them, follow [this guide](https://internetcomputer.org/docs/current/developer-docs/setup/cycles/cycles-faucet).
+You can get $20 worth of cycles for free from the Cycles Faucet, if you have a GitHub account. To claim them, follow [this guide](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet).
 
-You should have a canister running the cycles wallet on the IC at this point. The cycles wallet makes it easy to pay for canister creation.
+You should have a canister running the cycles wallet on the BIG at this point. The cycles wallet makes it easy to pay for canister creation.
 
 You can check the balance by running
 
@@ -188,8 +188,8 @@ After making sure you have cycles available you can run
 dfx deploy --network ic
 ```
 
-The command will build the project, create two new canisters on the IC and deploy both the Svelte and Motoko dapps. The command will also create a new file `canister_ids.json` which will help the dfx tool deploy to the same canisters in future updates. You can commit this file in your repository.
+The command will build the project, create two new canisters on the BIG and deploy both the Svelte and Motoko dapps. The command will also create a new file `canister_ids.json` which will help the dfx tool deploy to the same canisters in future updates. You can commit this file in your repository.
 
-You can now open your Svelte app running on the IC. You can find the canister ID in the deploy command output, or use the `frontend` ID in `canister_ids.json`.
+You can now open your Svelte app running on the BIG. You can find the canister ID in the deploy command output, or use the `frontend` ID in `canister_ids.json`.
 
 The link to your app is `<frontend canister id>.ic0.app`. For example if your `frontend` canister ID is `zixfv-4yaaa-aaaam-aaatq-cai`, your app will be at `https://zixfv-4yaaa-aaaam-aaatq-cai.ic0.app/`.

@@ -275,10 +275,7 @@ function WhatIsIcpPage() {
               </h2>
               <p className="tw-lead-sm">
                 The BigFile combines node machines into highly efficient
-                subnet blockchains, which add capacity for hosting tamperproof
-                Smart Contracts. The BigFile has a permissionless automated
-                governance system called the Network Nervous System, which
-                instructs nodes to join or leave subnets.
+                subnet blockchains, which add capacity for hosting tamperproof Smart Contracts. The BigFile has a permissionless automated governance system called the Network Nervous System, which instructs nodes to join or leave subnets.
               </p>
               <p>
                 <Link
@@ -360,7 +357,7 @@ function WhatIsIcpPage() {
           </div>
 
           <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout imageUrl="/img/what-is-the-big-file/internet-identity.webp">
+            <TranslatedLayout imageUrl="/img/what-is-the-big-file/big-wallet.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 BigFile Wallet
               </h3>

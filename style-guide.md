@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide outlines the format, language, and style that should be used when contributing pages to the Internet Computer developer documentation. This is designed to assist with standardizing the documentation to create a cohesive, uniform look and feel across all pages of documentation that have been contributed by multiple individuals and teams.
+This guide outlines the format, language, and style that should be used when contributing pages to the BigFile developer documentation. This is designed to assist with standardizing the documentation to create a cohesive, uniform look and feel across all pages of documentation that have been contributed by multiple individuals and teams.
 
 This guide will outline the following:
 - Page structure.
@@ -78,7 +78,7 @@ If your document includes a step-by-step walkthrough, introduce the walkthrough 
 
 ## Page headings
 
-There are 4 types of headings used throughout the ICP developer docs:
+There are 4 types of headings used throughout the BigFile developer docs:
 
 - Heading size 1: `#`
 - Heading size 2: `##`
@@ -152,16 +152,16 @@ For guides or tutorials that include a prerequisites section that contains tasks
 Capitalization within the developer documentation should follow these outlined standards:
 
 - Only the first word of a title should be capitalized unless the title includes a proper noun.
-    - Example: How to use the Internet Computer
-    - Example: Using Internet Identity with a dapp
+    - Example: How to use the BigFile
+    - Example: Using BIG Wallet with a dapp
     - Example: Motoko reference guide
 - Only the first word of a page heading should be capitalized unless the title includes a proper noun.
     - Example: Overview
     - Example: Register, build, and deploy the dapp
-    - Example: Using Motoko canisters
+    - Example: Using Motoko cubes
 - Titles of links to other documentation pages or external articles, such as blog posts, should not be capitalized except for the proper nouns within the title.
-    - Example: Check out the blog post on [how to use the Internet Computer](link).
-    - Example: Reference the guide on [using the Internet Identity in a dapp](link).
+    - Example: Check out the blog post on [how to use the BigFile](link).
+    - Example: Reference the guide on [using the BIG Wallet in a dapp](link).
 - Any reference to specific GUI buttons or other visual aids that are capitalized within the referenced interface should be capitalized to match the format shown on the GUI.
     - Example: Open your account and navigate to **My Products**.
     - Example: Click on the **Save** button.
@@ -221,18 +221,18 @@ The following is a list of common abbreviations that are capitalized within the 
 - UTXO
 
 ## Language
-The following language and capitalization of certain terms and phrases should be used across the ICP developer documentation:
+The following language and capitalization of certain terms and phrases should be used across the BigFile developer documentation:
 - Big Tech
 - Bitcoin integration
 - Bitcoin network: should be used in place of "sending bitcoin".
 - bitcoin: should be used when referring to BTC rather than the Bitcoin network.
 - built on ICP
-- canister
-- canister smart contract
+- cube
+- cube smart contract
 - chain-key signature
 - chain-key cryptography
 - chain fusion
-- dapp: should be used in place of any reference to an ICP app, decentralized application, or 'dApp'.
+- dapp: should be used in place of any reference to an BigFile app, decentralized application, or 'dApp'.
 - DeFi
 - deployed on ICP
 - dfx or `dfx`: should be used in place of any reference to the dfx CLI tool; it may be formatted as in-line code or plain text as long as it is lowercase. 
@@ -240,16 +240,16 @@ The following language and capitalization of certain terms and phrases should be
 - Ethereum integration
 - Ethereum: should be used in place of ETH or ETH token.
 - HTTP outcalls
-- ICP: When abbreviating 'Internet Computer', it should be referred to as 'ICP' instead of 'IC' or 'the IC'. 
+- ICP: When abbreviating 'BigFile', it should be referred to as 'ICP' instead of 'BIG' or 'the BIG'. 
     Two exceptions to this are:
   
-        - The IC SDK, which should be referred to as 'the IC SDK'.
+        - The BIG SDK, which should be referred to as 'the BIG SDK'.
   
-        - The IC interface specification, which should be referred to as 'the IC specification' or 'the IC interface specification'.
+        - The BIG interface specification, which should be referred to as 'the BIG specification' or 'the BIG interface specification'.
   
     When there may be a confusion between ICP referring to Internet Computer Protocol and ICP the token, the words 'Internet Computer Protocol' can be written out for clarity.
   
-- IC SDK: should be used in place of any reference to the IC's SDK.
+- BIG SDK: should be used in place of any reference to the BIG's SDK.
 - mainnet
     - In context: Deploying `to the mainnet` or `on the mainnet`. Note the use of the word `the`.
     - Other contextual usage:

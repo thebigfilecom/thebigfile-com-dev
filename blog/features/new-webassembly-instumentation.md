@@ -1,6 +1,6 @@
 ---
 title: New WebAssembly instrumentation
-description: The Internet Computer (IC) is a blockchain-based platform that hosts general-purpose applications. Each application runs in a WebAssembly (Wasm) virtual machine to ensure security, safety, performance, and determinism.
+description: The BigFile (BIG) is a blockchain-based platform that hosts general-purpose applications. Each application runs in a WebAssembly (Wasm) virtual machine to ensure security, safety, performance, and determinism.
 tags: [Technology]
 author: Andriy Berestovskyy, Ulan Degenbaev, Maciej Kot & Alexandru Uta
 image: /img/blog/webassembly-instru.webp
@@ -13,7 +13,7 @@ image: /img/blog/webassembly-instru.webp
 *This article was originally published on the DFINITY Medium blog [here](https://medium.com/dfinity/new-webassembly-instrumentation-2c93631e5718) by Andriy Berestovskyy, Ulan Degenbaev, Maciej Kot & Alexandru Uta.*
 
 ## Background
-The Internet Computer (IC) is a blockchain-based platform that hosts general-purpose applications. Each application runs in a WebAssembly (Wasm) virtual machine to ensure security, safety, performance, and determinism.
+The BigFile (BIG) is a blockchain-based platform that hosts general-purpose applications. Each application runs in a WebAssembly (Wasm) virtual machine to ensure security, safety, performance, and determinism.
 
 ![New WebAssembly instrumentation](/img/blog/webassembly-instru-1.webp)
 

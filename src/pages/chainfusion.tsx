@@ -293,7 +293,7 @@ import ic "ic:aaaaa-aa";
 import Cycles "mo:base/ExperimentalCycles";
 import Timer "mo:base/Timer";
 
-//Actor is the computational unit of ICP smart contract
+//Actor is the computational unit of BIG smart contract
 actor {
   let EVM_FEE = 1_000_000_000;
   let BITCOIN_FEE = 1_000_000_000;
@@ -851,7 +851,7 @@ pub enum MultiGetLogsResult {
                     native ICP assets.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    A further advantage is that canister smart contracts can
+                    A further advantage is that cube smart contracts can
                     sign transactions for execution on chains such as Cardano
                     and Solana.
                   </p>
@@ -882,7 +882,7 @@ pub enum MultiGetLogsResult {
 
                 <ContentCard id="icpERC20">
                   <h3 className="tw-heading-4 md:tw-heading-3 mb-0">
-                    icpERC20 tokens on Ethereum
+                  BIGERC20 tokens on Ethereum
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Ethereum provides the world’s preeminent DeFi rails.
@@ -890,23 +890,23 @@ pub enum MultiGetLogsResult {
                     liquidity for trading ERC20 tokens. Popular custody services such as Fireblocks, which is popular among investment institutions, custody any ERC20 token as standard.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The BigFile protocol makes it possible to publish any native BF token hosted on a standard ledger to Ethereum, in the form of an icpERC20. The twin is a standard ERC20 token and can be processed by any service that processes ERC20 tokens.
+                    The BigFile protocol makes it possible to publish any native BIG token hosted on a standard ledger to Ethereum, in the form of an BIGERC20. The twin is a standard ERC20 token and can be processed by any service that processes ERC20 tokens.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     A service created by a BigFile-hosted smart
-                    contract provides functionality (often relayed by wallets) to create an icpERC20 twin of an BF token. The service also allows icpERC20 twins to be returned to the BigFile, where they retain their native form.
+                    contract provides functionality (often relayed by wallets) to create an BIGERC20 twin of an BIG token. The service also allows BIGERC20 twins to be returned to the BigFile, where they retain their native form.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Once an icpERC20 token has been created, it can be processed by Ethereum Layer-2 networks and moved across other chains using traditional bridges.
+                    Once an BIGERC20 token has been created, it can be processed by Ethereum Layer-2 networks and moved across other chains using traditional bridges.
                   </p>
                   <p className="flex gap-2 flex-wrap">
-                    <Status type="pending">icpERC20 is in progress</Status>
+                    <Status type="pending">BIGERC20 is in progress</Status>
                   </p>
                 </ContentCard>
 
                 <ContentCard id="bitcoin-ordinals-2">
                   <h3 className="tw-heading-4 md:tw-heading-3 mb-0">
-                    Ordinals, BRC20 inscriptions from ICP using tSchnorr
+                    Ordinals, BRC20 inscriptions from BIG using tSchnorr
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Cube smart contracts on the BigFile can use a Bitcoin API to process bitcoin, and also Ordinals, which are used to create and transfer NFTs on the Bitcoin blockchain. Fully decentralized Web3 services on the BigFile have taken advantage of the functionality to create marketplaces for Ordinals e.g.{" "}
@@ -921,19 +921,19 @@ pub enum MultiGetLogsResult {
                     .
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    The processing of bitcoin and Ordinals involves the ICP
+                    The processing of bitcoin and Ordinals involves the BigFile
                     protocol processing ECDSA cryptography behind the scenes.
                     However, inscribing Ordinals and creating and processing
                     BRC20 assets (e.g. meme coins that piggyback on Bitcoin)
-                    involves Schnorr cryptography, which ICP now also supports.
+                    involves Schnorr cryptography, which BIG now also supports.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Because ICP supports Schnorr, web-based smart contract
+                    Because BIG supports Schnorr, web-based smart contract
                     wallets such as OISY can self-host BRC20, Ethereum, and
-                    native ICP assets.
+                    native BIG assets.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    A further advantage is that canister smart contracts can
+                    A further advantage is that cube smart contracts can
                     sign transactions for execution on chains such as Cardano
                     and Solana.
                   </p>
@@ -1044,7 +1044,7 @@ pub enum MultiGetLogsResult {
               className="tw-heading-3 text-center mb-0 w-full mx-auto md:tw-heading-60 md:w-7/10 lg:w-8/12"
               variants={transitions.item}
             >
-              Learn more about multi&#8209;chain on ICP
+              Learn more about multi&#8209;chain on BIG
             </motion.h2>
           </AnimateSpawn>
           <AnimateSpawn

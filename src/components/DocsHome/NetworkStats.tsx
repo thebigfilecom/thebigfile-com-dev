@@ -49,21 +49,21 @@ export const NetworkStats = () => {
         <figcaption className="tw-paragraph-sm font-medium text-black/60 inline-flex gap-2 items-center mb-2">
           Storage Costs
           <Tooltip
-            tooltip="Cost of storing 1 GB for a year in a canister smart contract"
+            tooltip="Cost of storing 1 GB for a year in a cube smart contract"
             className="w-52 whitespace-normal"
             wrapperClassName="inline-flex items-center"
           >
             <InfoIcon />
           </Tooltip>
         </figcaption>
-        <div className="tw-heading-6">$5 / GB / Year</div>
+        <div className="tw-heading-6">$3 / GB / Year</div>
       </figure>
       <Divider />
       <figure className="m-0">
         <figcaption className="tw-paragraph-sm font-medium text-black/60 inline-flex gap-2 items-center mb-2">
           Cost per Instruction
           <Tooltip
-            tooltip="Cost per instruction when executing canister smart contact code"
+            tooltip="Cost per instruction when executing cube smart contact code"
             className="w-52 whitespace-normal"
             wrapperClassName="inline-flex items-center"
           >
@@ -75,9 +75,9 @@ export const NetworkStats = () => {
       <Divider />
       <figure className="m-0">
         <figcaption className="tw-paragraph-sm font-medium text-black/60 inline-flex gap-2 items-center mb-2">
-          Canisters
+          Cubes
           <Tooltip
-            tooltip="Number of running canister smart contracts"
+            tooltip="Number of running cube smart contracts"
             className="w-52 whitespace-normal"
             wrapperClassName="inline-flex items-center"
           >

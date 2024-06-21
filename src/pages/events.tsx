@@ -337,7 +337,7 @@ function GlobalEventsPage() {
           </AnimateSpawn>
         </section>
         <NewsletterSection
-          formUrl="https://dfinity.us16.list-manage.com/subscribe/post?u=33c727489e01ff5b6e1fb6cc6&amp;id=7e9469a315&amp;f_id=00bac2e1f0"
+          formUrl="https://thebigfile.us14.list-manage.com/subscribe/post?u=c077aedaaac14cbbf2fb9522b&amp;id=38a1cc340f&amp;f_id=00647ae0f0"
           className="mt-20 mb-20"
         >
           Want to meet ICP enthusiasts IRL?{" "}

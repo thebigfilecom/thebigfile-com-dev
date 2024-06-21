@@ -10,22 +10,22 @@ import contribute from "@site/static/img/developers/contribute.webp";
 const cardsContent = [
   {
     title: "Technical working groups",
-    body: "Help shape IC development ",
-    link: "https://forum.dfinity.org/t/announcing-technical-working-groups/11781",
+    body: "Help shape BIG development ",
+    link: "https://forum.thebigfile.com/",
   },
   {
     title: "Join the developer forum",
     body: "Discuss with the community",
-    link: "https://forum.dfinity.org/",
+    link: "https://forum.thebigfile.com/",
   },
   {
-    title: "Dev Discord Office Hours",
-    body: "Every Wednesday at 9am CET and 7pm CET",
-    link: "https://discord.gg/jnjVVQaE2C",
+    title: "Dev Discord",
+    body: "Every day",
+    link: "https://discord.gg/nyTAmMntqp",
   },
   {
-    title: "DFINITY developer grants and bounties",
-    body: "Kickstart your idea or get paid to build on ICP",
+    title: "BigFile developer grants and bounties",
+    body: "Kickstart your idea or get paid to build on BigFile",
     link: "https://dfinity.org/grants/",
   },
   {
@@ -65,7 +65,7 @@ function Index() {
     >
       <div id="features" />
       <motion.p variants={transitions.item} className={styles.title}>
-        Contribute to the <br /> Internet Computer
+        Contribute to the <br /> BigFile
       </motion.p>
       <motion.p variants={transitions.item} className={styles.subtitle}>
         Take a deeper dive into further resources in the developer ecosystem.

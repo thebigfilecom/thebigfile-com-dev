@@ -140,7 +140,7 @@ function SocialMediaDappsPage() {
                 </motion.p>
                 <motion.p className="" variants={transitions.item}>
                   <Link href="#web3-dapps" className="button-white">
-                    Try ICP social dapps
+                    Try BigFile social dapps
                   </Link>
                 </motion.p>
               </div>
@@ -182,14 +182,7 @@ function SocialMediaDappsPage() {
               className="tw-lead-sm md:tw-lead mb-8 md:mb-12 md:w-6/10"
               variants={transitions.item}
             >
-              We're entering a new era of social media. The success of the new
-              wave of Web3 social media applications lies in decentralization.
-              Today, it is the boards of tech giants that steer the direction of
-              social media apps, often to exploit users for profit. Centralized
-              apps have also been known to selectively suppress opinions.
-              Internet Computer blockchain flips the script by enabling
-              decentralized apps (dapps) to turn into DAOs that put the control
-              in the hands of the community.
+              We're entering a new era of social media. The success of the new wave of Web3 social media applications lies in decentralization. Today, it is the boards of tech giants that steer the direction of social media apps, often to exploit users for profit. Centralized apps have also been known to selectively suppress opinions. BigFile blockchain flips the script by enabling decentralized apps (dapps) to turn into DAOs that put the control in the hands of the community.
             </motion.p>
           </AnimateSpawn>
           <div className="relative z-[-1]">
@@ -226,18 +219,13 @@ function SocialMediaDappsPage() {
               >
                 A social media DAO incentivizes users to contribute to the
                 success of its dapp by offering rewards in the form of
-                governance tokens. As a user you get free tokens just for using
-                the service, while at the same time you have a say on what new
-                features should be added.
+                governance tokens. As a user you get free tokens just for using the service, while at the same time you have a say on what new features should be added.
               </motion.p>
               <motion.p
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                As a developer, you benefit from the tokenization of your dapp.
-                Increased user engagement can organically fuel viral growth,
-                while user contributions can significantly reduce costs of
-                content moderation or even development and design.
+                As a developer, you benefit from the tokenization of your dapp. Increased user engagement can organically fuel viral growth, while user contributions can significantly reduce costs of content moderation or even development and design.
               </motion.p>
             </ColumnCard>
             <ColumnCard
@@ -248,11 +236,7 @@ function SocialMediaDappsPage() {
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                Transitioning from Web2 to Web3 has never been easier. Not only
-                does the Internet Computer enable true decentralization, it also
-                offers an enhanced web3 user experience. No gas fees,
-                non-trackable web authentication, served at web speed 100% on
-                the blockchain - no centralized cloud required.
+                Transitioning from Web2 to Web3 has never been easier. Not only does the BigFile enable true decentralization, it also offers an enhanced web3 user experience. No gas fees, non-trackable web authentication, served at web speed 100% on the blockchain - no centralized cloud required.
               </motion.p>
             </ColumnCard>
           </div>
@@ -272,10 +256,8 @@ function SocialMediaDappsPage() {
               Top web3 social media platforms
             </motion.h2>
             <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
-              The Internet Computer is a true world computer. It hosts the
-              largest collection of Web3 social media services fully on-chain.
-              Services like OpenChat, DSCVR and distrikt are already well on
-              their way to mass adoption, with over 300,000 users combined.
+              The BigFile is a true world computer. It hosts the
+              largest collection of Web3 social media services fully on-chain. Services like OpenChat, DSCVR and distrikt are already well on their way to mass adoption, with over 300,000 users combined.
             </motion.p>
             <MotionLink
               className="link-external"
@@ -361,15 +343,13 @@ function SocialMediaDappsPage() {
               </motion.h2>
               <motion.div className="mt-3" variants={transitions.item}>
                 <p className="tw-paragraph md:tw-lead-sm mb-4">
-                  Distrupt the world of social media by coding your own. The
-                  Internet Computer blockchain provides the first complete tech
-                  stack for developers to build a new era of DAO-governed social
-                  media sevices to replace Big Tech.
+                  Distrupt the world of social media by coding your own. The BigFile blockchain provides the first complete tech
+                  stack for developers to build a new era of DAO-governed social media sevices to replace Big Tech.
                 </p>
 
                 <div className="">
                   <p className="tw-paragraph md:tw-lead-sm mb-4">
-                    The Internet Computer is the only blockchain that can:
+                    The BigFile is the only blockchain that can:
                   </p>
                   <ul className="checklist tw-paragraph md:tw-lead-sm mb-6 space-y-3">
                     <li className="checklist-item leading-6 pl-8">Serve web</li>
@@ -487,8 +467,7 @@ function SocialMediaDappsPage() {
               Dev corner
             </h2>
             <p className="tw-lead-sm mb-8 text-center md:tw-lead md:w-8/12 md:mx-auto md:mb-16">
-              This corner is for the pioneers. Developers who are crazy enough
-              to think they can reinvent social media are the ones who do.
+              This corner is for the pioneers. Developers who are crazy enough to think they can reinvent social media are the ones who do.
             </p>
           </AnimateSpawn>
 
@@ -498,17 +477,17 @@ function SocialMediaDappsPage() {
           >
             <CardWithDescription
               title="Sample code"
-              description="Get inspired by existing social dapps on the Internet Computer."
+              description="Get inspired by existing social dapps on the BigFile."
               href="/samples"
             ></CardWithDescription>
             <CardWithDescription
               title="Quick start"
-              description="New to the Internet Computer? Learn how to create your first dapp here in 10 minutes."
+              description="New to the BigFile? Learn how to create your first dapp here in 10 minutes."
               href="/docs/current/tutorials/developer-journey/"
             ></CardWithDescription>
             <CardWithDescription
               title="Developer docs"
-              description="Get to know the Internet Computer and how to build on it."
+              description="Get to know the BigFile and how to build on it."
               href="/developers"
               className="md:col-span-2"
             ></CardWithDescription>
