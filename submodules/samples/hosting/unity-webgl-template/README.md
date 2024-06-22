@@ -6,7 +6,7 @@ keywords: [unity, unity webgl, beginner]
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/hosting/unity-webgl-template)
 
-The example shows how to deploy a simple Unity WebGL build on ICP in an asset canister. It just shows a Unity WebGL build with the URP template installed. 
+The example shows how to deploy a simple Unity WebGL build on BIG in an asset canister. It just shows a Unity WebGL build with the URP template installed. 
 
 The Unity WebGL build is deployed as frontend, no backend is needed in this sample.
 

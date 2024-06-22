@@ -7,7 +7,7 @@ sidebar_position: 3
 
 ## Overview
 
-To develop and deploy Motoko canister smart contracts, you will need a developer environment that contains the Motoko compiler and base library. It is recommended to use the [BIG SDK](https://github.com/dfinity/sdk#readme), which includes Motoko, along with `dfx`, a command-line tool used to create, build, and deploy canisters on ICP.
+To develop and deploy Motoko canister smart contracts, you will need a developer environment that contains the Motoko compiler and base library. It is recommended to use the [BIG SDK](https://github.com/dfinity/sdk#readme), which includes Motoko, along with `dfx`, a command-line tool used to create, build, and deploy canisters on BIG.
 
 Developer environments come in several types and formats, making developing flexible and accessible.
 
@@ -17,14 +17,14 @@ Developer environments come in several types and formats, making developing flex
 
 Here are some starter projects for online Motoko canister development:
 
-* [ICP Hello World Motoko](https://github.com/dfinity/icp-hello-world-motoko#readme)
+* [BIG Hello World Motoko](https://github.com/dfinity/icp-hello-world-motoko#readme)
 * [Vite + React + Motoko](https://github.com/rvanasa/vite-react-motoko#readme)
 
 Learn more about [Gitpod](/docs/current/developer-docs/developer-tools/ide/gitpod) and [GitHub Codespaces](/docs/current/developer-docs/developer-tools/ide/codespaces) for Motoko development.
 
 ## Container environments
 
-Developers may want to setup a containerized environment for Motoko and other ICP-related development. Container environments are especially useful for Windows-based systems, since `dfx` is not natively supported on Windows.
+Developers may want to setup a containerized environment for Motoko and other BIG-related development. Container environments are especially useful for Windows-based systems, since `dfx` is not natively supported on Windows.
 
 Learn more about [developer containers](/docs/current/developer-docs/developer-tools/ide/dev-containers) and [Docker containers](/docs/current/developer-docs/developer-tools/ide/dev-containers#using-docker-directly) for Motoko development.
 

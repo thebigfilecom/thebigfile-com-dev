@@ -54,9 +54,9 @@ Balance: 9_811_813_913_485 Cycles
 Module hash: 0xe7866e1949e3688a78d8d29bd63e1c13cd6bfb8fbe29444fa606a20e0b1e33f0
 ```
 
-### Option 1: If you have ICP on your account
+### Option 1: If you have BIG on your account
 
-If you have ICP on the account associated with a `dfx` identity, you can tell the ledger canister to take some of that ICP, convert it to cycles, and give it to a canister of your choice: `dfx ledger [OPTIONS] top-up --amount <AMOUNT> <DESTINATION>`
+If you have BIG on the account associated with a `dfx` identity, you can tell the ledger canister to take some of that BIG, convert it to cycles, and give it to a canister of your choice: `dfx ledger [OPTIONS] top-up --amount <AMOUNT> <DESTINATION>`
 
 ```
 dfx ledger top-up jqylk-byaaa-aaaal-qbymq-cai--network ic --amount 0.1
@@ -71,7 +71,7 @@ dfx ledger top-up jqylk-byaaa-aaaal-qbymq-cai --network ic --amount 0.1
 -   The `dfx ledger account-id` returns the ledger account id of the current `dfx` identity used.
 -   `--network ic` tells `dfx` to use the mainnet as the network (not anything local for example).
 -   The `dfx ledger --network ic balance` command checks how much balance is on the `account` associated with the current `dfx` identity used.
--   `top-up --amount 0.1 jqylk-byaaa-aaaal-qbymq-cai` command converts 0.1 ICP into cycles and uses them to refill canister `jqylk-byaaa-aaaal-qbymq-cai`.
+-   `top-up --amount 0.1 jqylk-byaaa-aaaal-qbymq-cai` command converts 0.1 BIG into cycles and uses them to refill canister `jqylk-byaaa-aaaal-qbymq-cai`.
 
 
 ### Option 2: If you have cycles
@@ -114,11 +114,11 @@ You can also top up any canister via the [NNS frontend dapp](https://nns.ic0.app
 - #### Step 2: Click **Link Canister**.
 - #### Step 3: Add a canister principal (it is not necessary for the user to actually control said canister).
 - #### Step 4: Once canister is added, click on that canister.
-- #### Step 5: Click `add cycles` to add cycles using the ICP in your NNS frontend dapp.
+- #### Step 5: Click `add cycles` to add cycles using the BIG in your NNS frontend dapp.
 
 ## Managing cycle depletion with freezing threshold
 
-ICP features a mechanism to prevent canisters from running out of cycles. Canisters have a configurable `freezing_threshold`, dynamically evaluated in cycles.
+BIG features a mechanism to prevent canisters from running out of cycles. Canisters have a configurable `freezing_threshold`, dynamically evaluated in cycles.
 
 In the output of the `dfx canister status` command, you may have noticed the `freezing threshold` value. The freezing threshold is a value defined in seconds, which is used to calculate how many cycles a canister must retain in its cycles balance. This calculation is based off of the canister's memory consumption. The default freezing threshold value is `2_592_000s`, which corresponds to 30 days.
 

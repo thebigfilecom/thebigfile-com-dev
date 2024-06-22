@@ -1,17 +1,17 @@
-# ICP transfer
+# BIG transfer
 
 [View this samples code on GitHub](https://github.com/dfinity/examples/tree/master/rust/icp_transfer).
 
 ## Overview
 
-ICP transfer is a canister that can transfer ICP from its account to other accounts. It is an example of a canister that uses the ledger canister. Sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/icp_transfer) and [Rust](https://github.com/dfinity/examples/tree/master/rust/icp_transfer).
+BIG transfer is a canister that can transfer BIG from its account to other accounts. It is an example of a canister that uses the ledger canister. Sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/icp_transfer) and [Rust](https://github.com/dfinity/examples/tree/master/rust/icp_transfer).
 
 > [!NOTE]
-> The ICP ledger supports the ICRC1 standard, which is the recommended standard for token transfers. You can read more about the differences [here](https://thebigfile.com/docs/current/developer-docs/defi/overview) and find an example of how to transfer ICRC1 tokens from a canister in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/token_transfer) and [Rust](https://github.com/dfinity/examples/tree/master/rust/token_transfer).
+> The BIG ledger supports the ICRC1 standard, which is the recommended standard for token transfers. You can read more about the differences [here](https://thebigfile.com/docs/current/developer-docs/defi/overview) and find an example of how to transfer ICRC1 tokens from a canister in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/token_transfer) and [Rust](https://github.com/dfinity/examples/tree/master/rust/token_transfer).
 
 ## Architecture
 
-The sample code revolves around one core transfer function which takes as input the amount of ICP to transfer, the account (and optionally the subaccount) to which to transfer ICP and returns either success or an error in case e.g. the ICP transfer canister doesn’t have enough ICP to do the transfer. In case of success, a unique identifier of the transaction is returned. This identifier will be stored in the memo of the transaction in the ledger.
+The sample code revolves around one core transfer function which takes as input the amount of BIG to transfer, the account (and optionally the subaccount) to which to transfer BIG and returns either success or an error in case e.g. the BIG transfer canister doesn’t have enough BIG to do the transfer. In case of success, a unique identifier of the transaction is returned. This identifier will be stored in the memo of the transaction in the ledger.
 
 This sample will use the Rust variant.
 
@@ -39,7 +39,7 @@ cd icp_transfer
 ### Step 2: Determine ledger file locations
 
 > [!NOTE]
-> You can read more about how to setup the ICP ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/big-tokens/ledger-local-setup).
+> You can read more about how to setup the BIG ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/big-tokens/ledger-local-setup).
 
 Go to the [releases overview](https://dashboard.internetcomputer.org/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
@@ -48,7 +48,7 @@ The URL for the ledger Wasm module is `https://download.dfinity.systems/ic/<REVI
 The URL for the ledger.did file is `https://raw.githubusercontent.com/dfinity/ic/<REVISION>/rs/rosetta-api/icp_ledger/ledger.did`, so with the above revision it would be `https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icp_ledger/ledger.did`.
 
 [OPTIONAL]
-If you want to make sure you have the latest ICP ledger files, you can run the following script. Please ensure that you have [`jq`](https://jqlang.github.io/jq/) installed as the script relies on it.
+If you want to make sure you have the latest BIG ledger files, you can run the following script. Please ensure that you have [`jq`](https://jqlang.github.io/jq/) installed as the script relies on it.
 
 ```sh
 curl -o download_latest_icp_ledger.sh "https://raw.githubusercontent.com/dfinity/ic/00a4ab409e6236d4082cee4a47544a2d87b7190d/rs/rosetta-api/scripts/download_latest_icp_ledger.sh"
@@ -116,13 +116,13 @@ export DEFAULT_ACCOUNT_ID=$(dfx ledger account-id)
 
 ### Step 7: Deploy the ledger canister to your network:
 
-Take a moment to read the details of the call made below. Not only are you deploying the ICP ledger canister, you are also:
+Take a moment to read the details of the call made below. Not only are you deploying the BIG ledger canister, you are also:
 
 -   Deploying the canister to the same canister ID as the mainnet ledger canister. This is to make it easier to switch between local and mainnet deployments and set in `dfx.json` using `specified_id`.
 -   Setting the minting account to the account identifier you saved in a previous step (MINTER_ACCOUNT_ID).
--   Minting 100 ICP tokens to the DEFAULT_ACCOUNT_ID (1 ICP is equal to 10^8 e8s, hence the name).
--   Setting the transfer fee to 0.0001 ICP.
--   Naming the token Local ICP / LICP
+-   Minting 100 BIG tokens to the DEFAULT_ACCOUNT_ID (1 BIG is equal to 10^8 e8s, hence the name).
+-   Setting the transfer fee to 0.0001 BIG.
+-   Naming the token Local BIG / LICP
 
 ```bash
 dfx deploy icp_ledger_canister --argument "
@@ -142,7 +142,7 @@ dfx deploy icp_ledger_canister --argument "
         e8s = 10_000 : nat64;
       };
       token_symbol = opt \"LICP\";
-      token_name = opt \"Local ICP\";
+      token_name = opt \"Local BIG\";
     }
   })
 "
@@ -296,7 +296,7 @@ If successful, the output should be:
 
 ### Step 13: Transfer funds from the canister:
 
-Now that the canister owns ICP on the ledger, you can transfer funds from the canister to another account, in this case back to the default account:
+Now that the canister owns BIG on the ledger, you can transfer funds from the canister to another account, in this case back to the default account:
 
 ```bash
 dfx canister call icp_transfer_backend transfer "(record { amount = record { e8s = 1_00_000_000 }; to_principal = principal \"$(dfx identity get-principal)\"})"

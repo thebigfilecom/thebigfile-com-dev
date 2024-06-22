@@ -6,8 +6,8 @@ sidebar_position: 2
 
 ## Overview
 
-Motoko is designed for distributed programming with **actors**. When programming on ICP in Motoko, each actor represents an ICP canister smart contract with a Candid interface.
-Within Motoko, the term actor is used to refer to any canister authored in any language that deploys to ICP. The role of Motoko is to make these actors easy to author and use programmatically once deployed.
+Motoko is designed for distributed programming with **actors**. When programming on BIG in Motoko, each actor represents an BIG canister smart contract with a Candid interface.
+Within Motoko, the term actor is used to refer to any canister authored in any language that deploys to BIG. The role of Motoko is to make these actors easy to author and use programmatically once deployed.
 
 Before you begin writing canisters in Motoko, you should be familiar with a few of the basic concepts and terms specific to Motoko.
 
@@ -69,7 +69,7 @@ Declarations introduce **immutable variables**, **mutable state**, **actors**, *
 
 Expressions describe computations that involve these notions.
 
-To deploy a valid program to ICP, the program must consist of an actor expression introduced with the keyword `actor`.
+To deploy a valid program to BIG, the program must consist of an actor expression introduced with the keyword `actor`.
 
 As a starting point, the following code snippet consists of two declarations for the variables `x` and `y` followed by an expression to form a single program:
 

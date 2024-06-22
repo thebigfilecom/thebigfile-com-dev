@@ -4,7 +4,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Reference"]} />
 
-Signs a message to request a refund from the SNS swap canister. If the swap was aborted or failed, or some of your contributed ICP never made it into a neuron, this command can retrieve your unused ICP, minus transaction fees.
+Signs a message to request a refund from the SNS swap canister. If the swap was aborted or failed, or some of your contributed BIG never made it into a neuron, this command can retrieve your unused BIG, minus transaction fees.
 
 ## Basic usage
 
@@ -24,7 +24,7 @@ quill sns get-swap-refund [option]
 
 | Option                    | Description                                                          |
 |---------------------------|----------------------------------------------------------------------|
-| `--principal <PRINCIPAL>` | The principal that made the ICP contribution and should be refunded. |
+| `--principal <PRINCIPAL>` | The principal that made the BIG contribution and should be refunded. |
 
 ## Remarks
 

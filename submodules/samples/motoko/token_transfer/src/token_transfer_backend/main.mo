@@ -36,7 +36,7 @@ actor {
       fee = null;
       // the account we want to transfer tokens to
       to = args.toAccount;
-      // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current ICP time
+      // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current BIG time
       created_at_time = null;
     };
 

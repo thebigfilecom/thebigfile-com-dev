@@ -8,7 +8,7 @@ keywords: [advanced, motoko, crud, crud application]
 
 ## Overview
 
-This example demonstrates how to build a CRUD application on ICP using Motoko and React.
+This example demonstrates how to build a CRUD application on BIG using Motoko and React.
 
 This is a Motoko example that does not currently have a Rust variant. 
 

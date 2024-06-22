@@ -6,7 +6,7 @@ sidebar_position: 14
 
 ## Overview
 
-On ICP, a canister can selectively inspect, then choose to accept or decline ingress messages submitted through the HTTP interface.
+On BIG, a canister can selectively inspect, then choose to accept or decline ingress messages submitted through the HTTP interface.
 
 > A canister can inspect ingress messages before executing them. When the BIG receives an update call from a user, the BIG will use the canister method `canister_inspect_message` to determine whether the message shall be accepted. If the canister is empty (i.e. does not have a Wasm module), then the ingress message will be rejected. If the canister is not empty and does not implement `canister_inspect_message`, then the ingress message will be accepted.
 >

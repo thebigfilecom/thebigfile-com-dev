@@ -6,7 +6,7 @@ sidebar_position: 25
 
 ## Overview
 
-ICP canisters can set an arbitrary number of single-expiration or recurring timers. See the [`Timer.mo`](../base/Timer.md) module in the base library.
+BIG canisters can set an arbitrary number of single-expiration or recurring timers. See the [`Timer.mo`](../base/Timer.md) module in the base library.
 
 ## Example
 

@@ -14,7 +14,7 @@ This tutorial will walk you through how to deploy a sample [canister smart contr
 This example internally leverages the [ECDSA API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key)
 and [Bitcoin API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin-api) of the BigFile.
 
-For a deeper understanding of the ICP < > BTC integration, see the [Bitcoin integration documentation](/docs/current/developer-docs/multi-chain/bitcoin/overview).
+For a deeper understanding of the BIG < > BTC integration, see the [Bitcoin integration documentation](/docs/current/developer-docs/multi-chain/bitcoin/overview).
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ dfx deploy --network=ic basic_bitcoin --argument '(variant { testnet })'
 
 #### What this does
 - `dfx deploy` tells the command line interface to `deploy` the smart contract
-- `--network=ic` tells the command line to deploy the smart contract to the mainnet ICP blockchain
+- `--network=ic` tells the command line to deploy the smart contract to the mainnet BIG blockchain
 - `--argument '(variant { Testnet })'` passes the argument `Testnet` to initialize the smart contract, telling it to connect to the Bitcoin testnet
 
 **We're initializing the canister with `variant { Testnet }`, so that the canister connects to the the [Bitcoin testnet](https://en.bitcoin.it/wiki/Testnet). To be specific, this connects to `Testnet3`, which is the current Bitcoin test network used by the Bitcoin community.**
@@ -148,8 +148,8 @@ reflected in your current balance.
 
 In this tutorial, you were able to:
 
-* Deploy a canister smart contract on the ICP blockchain that can receive & send Bitcoin.
-* Use a cycles faucet to deploy the canister to ICP blockchain on the mainnet for free.
+* Deploy a canister smart contract on the BIG blockchain that can receive & send Bitcoin.
+* Use a cycles faucet to deploy the canister to BIG blockchain on the mainnet for free.
 * Connect the canister to the Bitcoin testnet.
 * Send the canister some testnet BTC.
 * Check the testnet BTC balance of the canister.

@@ -1,10 +1,10 @@
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
-# Properties of message executions on ICP
+# Properties of message executions on BIG
 
 <MarkdownChipRow labels={["Reference"]} />
 
-There are a few key properties that one needs to understand about the execution model on ICP. Let's walk through them.
+There are a few key properties that one needs to understand about the execution model on BIG. Let's walk through them.
 
 ### Property 1
 
@@ -63,6 +63,6 @@ For example, if a trap in the second message (dotted circle) of the above exampl
 
 Inter-canister calls are not guaranteed to make it to the destination canister. If the call does reach the destination canister, the destination canister can trap or return a **reject** response while processing the call.
 
-Every inter-canister call is guaranteed to receive a response, either from the callee canister, or synthetically produced by ICP. However, the response does not need to be successful. It can be a **reject** response. A **reject** response means that the message hasn’t been successfully processed by the receiver, but it does not guarantee that the receiver’s state hasn’t been modified. 
+Every inter-canister call is guaranteed to receive a response, either from the callee canister, or synthetically produced by BIG. However, the response does not need to be successful. It can be a **reject** response. A **reject** response means that the message hasn’t been successfully processed by the receiver, but it does not guarantee that the receiver’s state hasn’t been modified. 
 
 For more details, refer to the Interface Specification [section on ordering guarantees](/docs/current/references/ic-interface-spec#ordering-guarantees) and the [section on abstract behavior](/docs/current/references/ic-interface-spec#abstract-behavior) which defines message execution in more detail.

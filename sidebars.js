@@ -1046,7 +1046,7 @@ const sidebars = {
               },
               items: [
                 "tutorials/developer-journey/level-5/5.1-vetKeys-tutorial",
-                "tutorials/developer-journey/level-5/5.2-ICP-ETH-tutorial",
+                "tutorials/developer-journey/level-5/5.2-BIG-ETH-tutorial",
                 "tutorials/developer-journey/level-5/5.3-token-swap-tutorial",
                 "tutorials/developer-journey/level-5/5.4-NFT-tutorial",
                 "tutorials/developer-journey/level-5/5.5-auction-tutorial",

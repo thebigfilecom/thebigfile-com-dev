@@ -65,7 +65,7 @@
             // e.g.
             //
             // To transfer tokens, use the DIP canister to transfer tokens to <iiPrincipal>, and the balance will be reflected here.
-            // To transfer ICP, use the ledger to transfer ICP to <depositAddress>, and the balance will be reflected here.
+            // To transfer BIG, use the ledger to transfer BIG to <depositAddress>, and the balance will be reflected here.
             //
             // This can replace the COPY we have at the bottom, as this is not needed when using Plug
 
@@ -180,12 +180,12 @@
         const canister = $canisters.find((canister) => {
             return canister.canisterId === principal.toString();
         })
-        if(canister && canister.canisterName === 'ICP') {
+        if(canister && canister.canisterName === 'BIG') {
             if (authType === "Plug") {
                 // TODO: Support Plug wallet
             	// await ledgerActor.transfer(...)
             }
-            // transfer ICP correct subaccount on DEX
+            // transfer BIG correct subaccount on DEX
             await ledgerActor.transfer({
                         memo: BigInt(0x1),
                         amount: { e8s: depositAmount },
@@ -202,7 +202,7 @@
                 let ledgerBalance = 0;
                 let response;
                 if(authType === "II") {
-                    // Update user ICP balance
+                    // Update user BIG balance
                     response = await ledgerActor.account_balance({account: hexToBytes(principalToAccountDefaultIdentifier($auth.principal))});
                 } else if (authType === "Plug") {
                     // TODO: Support Plug wallett
@@ -249,7 +249,7 @@
         const canister = $canisters.find((canister) => {
             return canister.canisterId === principal.toString();
         })
-        if(canister && canister.canisterName === 'ICP') {
+        if(canister && canister.canisterName === 'BIG') {
             const result = await backendActor.withdraw(currentToken, withdrawAmount, withdrawPrincipal)
             if(result.Ok) {
                 const dexBalance = await backendActor.getBalance(principal);

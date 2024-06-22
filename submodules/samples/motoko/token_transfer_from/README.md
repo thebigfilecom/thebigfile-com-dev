@@ -211,7 +211,7 @@ actor {
       fee = null;
       // we take the principal and subaccount from the arguments and convert them into an account identifier
       to = args.toAccount;
-      // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current ICP time
+      // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current BIG time
       created_at_time = null;
     };
 

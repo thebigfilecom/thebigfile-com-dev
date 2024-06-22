@@ -35,7 +35,7 @@ The argument `type` decides which performance counter to return:
     (ignoring WebAssembly instructions executed within any further downstream calls
     of `composite_query_helper`).
 
-In the future, ICP might expose more performance counters.
+In the future, BIG might expose more performance counters.
 
 ## Prerequisites
 

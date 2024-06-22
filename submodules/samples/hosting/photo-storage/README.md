@@ -6,7 +6,7 @@ keywords: [photo storage, store photos, photo app, photos, beginner]
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/hosting/photo-storage)
 
-The example shows how to store photos on ICP in an asset canister with the `@dfinity/assets` package. The photo
+The example shows how to store photos on BIG in an asset canister with the `@dfinity/assets` package. The photo
 storage app is deployed as a frontend in an asset canister which is also used for photo upload.
 
 This example project can be cloned, installed, and deployed locally, for learning and testing purposes. The instructions
@@ -63,7 +63,7 @@ To authorize an identity to upload files, it must be authorized first:
 dfx canister call photo-storage authorize '(principal "535yc-uxytb-gfk7h-tny7p-vjkoe-i4krp-3qmcl-uqfgr-cpgej-yqtjq-rqe")'
 ```
 
-Before deployment on ICP, the hardcoded identity (defined in `src/App.js`) should be replaced by an authentication
+Before deployment on BIG, the hardcoded identity (defined in `src/App.js`) should be replaced by an authentication
 method such as Internet Identity.
 
 ## Example photos

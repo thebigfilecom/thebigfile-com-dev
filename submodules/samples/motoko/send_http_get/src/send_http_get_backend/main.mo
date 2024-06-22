@@ -15,7 +15,7 @@ import Types "Types";
 actor {
 
 //This method sends a GET request to a URL with a free API we can test.
-//This method returns Coinbase data on the exchange rate between USD and ICP 
+//This method returns Coinbase data on the exchange rate between USD and BIG 
 //for a certain day.
 //The API response looks like this:
 //  [
@@ -25,7 +25,7 @@ actor {
 //         5.718, <-- highest price during range
 //         5.714, <-- price at open
 //         5.714, <-- price at close
-//         243.5678 <-- volume of ICP traded
+//         243.5678 <-- volume of BIG traded
 //     ],
 // ]
 
@@ -65,7 +65,7 @@ actor {
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
     let end_timestamp : Types.Timestamp = 1682978520;//May 1, 2023 22:02:00 GMT
     let host : Text = "api.pro.coinbase.com";
-    let url = "https://" # host # "/products/ICP-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(start_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
+    let url = "https://" # host # "/products/BIG-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(start_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
 
     // 2.2 prepare headers for the system http_request call
     let request_headers = [

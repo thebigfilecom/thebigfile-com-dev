@@ -9,42 +9,42 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Intermediate" , "Tutorial"]} />
 
 ## Overview
-There are multiple ways to interact with the ICP ledger. They depend on whether you want to interact with the ICP ledger on mainnet, the `dfx ledger` default ICP ledger on a local network, or whether you have deployed your own local ledger version. Also, how you interact with the ICP ledger is dependent on whether you want to interact with it from the command line, from your web app, or from another canister.
+There are multiple ways to interact with the BIG ledger. They depend on whether you want to interact with the BIG ledger on mainnet, the `dfx ledger` default BIG ledger on a local network, or whether you have deployed your own local ledger version. Also, how you interact with the BIG ledger is dependent on whether you want to interact with it from the command line, from your web app, or from another canister.
 
-This guide will discuss the different ways to interact with the ICP ledger. In this guide, the following workflows will be covered:
-- `dfx ledger`: the built in `dfx` shortcut for interacting with the ICP ledger.
+This guide will discuss the different ways to interact with the BIG ledger. In this guide, the following workflows will be covered:
+- `dfx ledger`: the built in `dfx` shortcut for interacting with the BIG ledger.
 - `dfx canister`: the generic canister call from `dfx`.
-- `nns-js`: interact with the ICP ledger from your web app.
-- `ic-cdk`: inter-canister calls for the ICP ledger.
+- `nns-js`: interact with the BIG ledger from your web app.
+- `ic-cdk`: inter-canister calls for the BIG ledger.
 
-## Interacting with ICP ledger via `dfx ledger`
+## Interacting with BIG ledger via `dfx ledger`
 
-`dfx` provides a convenience command to interact with the ICP ledger canister and related functionality. You can find the documentation [here](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger) or just enter the following command into your console:
+`dfx` provides a convenience command to interact with the BIG ledger canister and related functionality. You can find the documentation [here](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger) or just enter the following command into your console:
 
 ``` bash
 dfx ledger --help
 ```
 
 It's worth checking out the `--help` flag of the subcommands as well.
-`dfx` does not come with an ICP ledger instance installed by default. To be able to use this command you will need to install the ICP ledger locally. You can do that by following this [guide](./ledger-local-setup.mdx) or by installing the NNS locally:
+`dfx` does not come with an BIG ledger instance installed by default. To be able to use this command you will need to install the BIG ledger locally. You can do that by following this [guide](./ledger-local-setup.mdx) or by installing the NNS locally:
 ``` bash
 dfx extension install nns
 dfx nns install
 ```
-The ICP ledger will then run locally with the canister ID `ryjl3-tyaaa-aaaaa-aaaba-cai`.
-Currently, `dfx` exposes only a subset of the ICP ledger functionality, namely `balance` and `transfer`.
-Both commands provide a flag to specify a ledger canister id (`--ledger-canister-id`). This simplifies interacting with a local ledger deployment or other tokens that provide the same interface. If you do not specify the canister ID `dfx ledger` will assume you want to interact with a ICP ledger that has a canister ID of `ryjl3-tyaaa-aaaaa-aaaba-cai` or with the ICP ledger on the mainnet. For the latter, you need to specify the mainnet as the network of choice using the flag `--network ic`.
+The BIG ledger will then run locally with the canister ID `ryjl3-tyaaa-aaaaa-aaaba-cai`.
+Currently, `dfx` exposes only a subset of the BIG ledger functionality, namely `balance` and `transfer`.
+Both commands provide a flag to specify a ledger canister id (`--ledger-canister-id`). This simplifies interacting with a local ledger deployment or other tokens that provide the same interface. If you do not specify the canister ID `dfx ledger` will assume you want to interact with a BIG ledger that has a canister ID of `ryjl3-tyaaa-aaaaa-aaaba-cai` or with the BIG ledger on the mainnet. For the latter, you need to specify the mainnet as the network of choice using the flag `--network ic`.
 
 :::info
 Summary of different `dfx ledger` commands:
-- `dfx ledger ...`: interact with the ICP ledger on your local network with canister ID `ryjl3-tyaaa-aaaaa-aaaba-cai`.
-- `dfx ledger --network ic ...`: interact with the ICP ledger on the mainnet.
-- `dfx ledger --ledger-canister-id <CANISTER_ID> ...`: interact with the [locally deployed](./ledger-local-setup.mdx) ICP ledger on your local network.
+- `dfx ledger ...`: interact with the BIG ledger on your local network with canister ID `ryjl3-tyaaa-aaaaa-aaaba-cai`.
+- `dfx ledger --network ic ...`: interact with the BIG ledger on the mainnet.
+- `dfx ledger --ledger-canister-id <CANISTER_ID> ...`: interact with the [locally deployed](./ledger-local-setup.mdx) BIG ledger on your local network.
 :::
 
 ### Balance
 
-Get the ICP balance of a specific account:
+Get the BIG balance of a specific account:
 
 ``` bash
 dfx ledger --network ic balance <account-id>
@@ -64,49 +64,49 @@ dfx ledger --network ic balance $(dfx ledger account-id --of-principal <principa
 
 ### Transfer
 
-The transfer function can be used to transfer ICP from your account to another.
+The transfer function can be used to transfer BIG from your account to another.
 
 ``` bash
 dfx ledger --network ic transfer --amount <amount> --memo <memo> <receiver-account-id>
 ```
 
-## Interacting with ICP ledger via `dfx canister`
-For this subsection it is assumed that you have deployed an ICP ledger either locally or you want to communicate with the mainnet ICP ledger using `dfx canister`. The ICP ledger canister ID is assumed to be `ryjl3-tyaaa-aaaaa-aaaba-cai`, if your locally deployed ICP ledger's canister ID is different you will need to replace `ryjl3-tyaaa-aaaaa-aaaba-cai` with it. You can find all endpoints that can be called in the `icp_ledger.did` file. How to retrieve it is discussed in the [ICP local deployment guide](./ledger-local-setup.mdx).
+## Interacting with BIG ledger via `dfx canister`
+For this subsection it is assumed that you have deployed an BIG ledger either locally or you want to communicate with the mainnet BIG ledger using `dfx canister`. The BIG ledger canister ID is assumed to be `ryjl3-tyaaa-aaaaa-aaaba-cai`, if your locally deployed BIG ledger's canister ID is different you will need to replace `ryjl3-tyaaa-aaaaa-aaaba-cai` with it. You can find all endpoints that can be called in the `icp_ledger.did` file. How to retrieve it is discussed in the [BIG local deployment guide](./ledger-local-setup.mdx).
 
-This guide will only go into the ICP ledger specific endpoints. To call the ICRC-1 endpoints you can have a look at [the ICRC-1 setup guide](/docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger). To find a more detailed description of the data types used in these commands you can have a look at [this guide](/docs/current/references/ledger#_getting_ledger_blocks).
+This guide will only go into the BIG ledger specific endpoints. To call the ICRC-1 endpoints you can have a look at [the ICRC-1 setup guide](/docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger). To find a more detailed description of the data types used in these commands you can have a look at [this guide](/docs/current/references/ledger#_getting_ledger_blocks).
 
-To fetch the symbol of the ICP ledger:
+To fetch the symbol of the BIG ledger:
 ```
 dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai symbol '()'
 ```
-This command returns the ICP symbol:
+This command returns the BIG symbol:
 ```
-(record { symbol = "ICP" })
+(record { symbol = "BIG" })
 ```
-To fetch the name of the ICP ledger:
+To fetch the name of the BIG ledger:
 
 ```
 dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai name '()'
 ```
-This command returns the ICP name:
+This command returns the BIG name:
 ```
 (record { name = "Internet Computer" })
 ```
 
-To fetch the decimals of the ICP ledger:
+To fetch the decimals of the BIG ledger:
 ```
 dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai decimals '()'
 ```
-This command returns the ICP decimals:
+This command returns the BIG decimals:
 ```
 (record { decimals = 8 : nat32 })
 ```
 
-To fetch the archives of the ICP ledger:
+To fetch the archives of the BIG ledger:
 ```
 dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai archives '()'
 ```
-This command returns the ICP archives. In this case no archives have been created so far:
+This command returns the BIG archives. In this case no archives have been created so far:
 ```
 (record { archives = vec {} })
 ```
@@ -119,7 +119,7 @@ You can get the principal of an identity by calling:
 ```
 dfx identity get-principal --identity <IDENTITY>
 ```
-If you have an identity called `default2` and you want to send ICP to this principals default `AccountIdentifier` you would call:
+If you have an identity called `default2` and you want to send BIG to this principals default `AccountIdentifier` you would call:
  ```
 dfx identity get-principal --identity default2
 ```
@@ -154,7 +154,7 @@ It returns the the balance in e8s of the `AccountIdentifier` `d52f7f2b7277f025bc
 (record { e8s = 200_000_000 : nat64 })
 ```
 
-To query the created blocks from the ICP ledger you can call:
+To query the created blocks from the BIG ledger you can call:
 ```
 dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai query_blocks '(record {start = 1:nat64; length = 1:nat64})'
 ```
@@ -196,7 +196,7 @@ This command will return output that resembles the following:
 )
 ```
 
-To only query the encoded blocks from the ICP ledger you can call:
+To only query the encoded blocks from the BIG ledger you can call:
 ```
 dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai query_encoded_blocks '(record {start = 1:nat64; length = 1:nat64})'
 ```
@@ -215,16 +215,16 @@ It is a similar format but you will only receive the CBOR encoded block:
 )
 ```
 
-## Interact with ICP ledger from your web application
+## Interact with BIG ledger from your web application
 
-In order to simplify working with ICP ledger from JavaScript applications, you can use the [nns-js library](https://github.com/dfinity/nns-js).
-To interact with the ICRC-1 endpoints of the ICP ledger you can have a look at the guide on [interacting with an ICRC-1 ledger](/docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger).
-## Interacting with ICP from a canister (inter-canister calls via `ic-cdk`)
-You can look at the documentation of [inter-canister calls] (/docs/developer-docs/backend/rust/intercanister) to see how you can interact with the another canister from inside a canister. This guide will give you a couple of examples on how to make such a call in the case of the ICP ledger.
+In order to simplify working with BIG ledger from JavaScript applications, you can use the [nns-js library](https://github.com/dfinity/nns-js).
+To interact with the ICRC-1 endpoints of the BIG ledger you can have a look at the guide on [interacting with an ICRC-1 ledger](/docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger).
+## Interacting with BIG from a canister (inter-canister calls via `ic-cdk`)
+You can look at the documentation of [inter-canister calls] (/docs/developer-docs/backend/rust/intercanister) to see how you can interact with the another canister from inside a canister. This guide will give you a couple of examples on how to make such a call in the case of the BIG ledger.
 
-Here is an example on how fetch the name from the ICP ledger using Rust and the `ic-cdk` [library](https://github.com/dfinity/cdk-rs) from withing a canister:
+Here is an example on how fetch the name from the BIG ledger using Rust and the `ic-cdk` [library](https://github.com/dfinity/cdk-rs) from withing a canister:
 ```
-// You will need the principal of the ICP ledger. The canister id of the ICP ledger on mainnet and the dfx default ICP ledger locally is `ryjl3-tyaaa-aaaaa-aaaba-cai`.
+// You will need the principal of the BIG ledger. The canister id of the BIG ledger on mainnet and the dfx default BIG ledger locally is `ryjl3-tyaaa-aaaaa-aaaba-cai`.
 let ledger_id = Principal::from_text("ryjl3-tyaaa-aaaaa-aaaba-cai").unwrap();
 // The request object of the `icrc1_name` endpoint is empty.
     let req = ();
@@ -233,12 +233,12 @@ let ledger_id = Principal::from_text("ryjl3-tyaaa-aaaaa-aaaba-cai").unwrap();
             .await.unwrap();
 ```
 
-For all other endpoints you can use the request and response structure from the `ledger.did` Candid file. How to retrieve the Candid file is explained in [the guide on deploying an ICP ledger locally](./ledger-local-setup.mdx).
+For all other endpoints you can use the request and response structure from the `ledger.did` Candid file. How to retrieve the Candid file is explained in [the guide on deploying an BIG ledger locally](./ledger-local-setup.mdx).
 
 ### `icrc-ledger-types` Rust crate
-As explained in the introduction of the [ledgers and tokens section](./overview.mdx), the ICP ledger supports all ICRC-1 endpoints. You will need to define the structures used for these endpoints.
+As explained in the introduction of the [ledgers and tokens section](./overview.mdx), the BIG ledger supports all ICRC-1 endpoints. You will need to define the structures used for these endpoints.
 To interact with ICRC-1 and ICRC-2 endpoints, the Rust crate [icrc-ledger-types](https://crates.io/crates/icrc-ledger-types) can be used.
-This is true for the ICP ledger as well as any other canister that supports ICRC-1 or any of the ICRC-1 extension standards (i.e ICRC-2, ICRC-3,...).
+This is true for the BIG ledger as well as any other canister that supports ICRC-1 or any of the ICRC-1 extension standards (i.e ICRC-2, ICRC-3,...).
 The crate can be installed with the command:
 
 ```
@@ -254,9 +254,9 @@ icrc-ledger-types = "0.1.1"
 The documentation for this crate can be found [here](https://docs.rs/icrc-ledger-types/0.1.1/icrc_ledger_types/).
 
 
-### Receiving ICP
+### Receiving BIG
 
-If you want a canister to receive payment in ICP you need to make sure that the canister knows about the payment, because a transfer only involves the sender and the ledger canister.
+If you want a canister to receive payment in BIG you need to make sure that the canister knows about the payment, because a transfer only involves the sender and the ledger canister.
 
 There are currently two main patterns to achieve this. Furthermore, there is a [chartered working group](https://forum.dfinity.org/t/announcing-technical-working-groups/11781) on Ledger & Tokenization which is focused on defining a standard ledger/token interface as well payment flows.
 
@@ -267,29 +267,29 @@ The following diagram shows a simplified illustration of this pattern:
 
 ```plantuml
     participant Sender
-    participant "ICP Ledger"
+    participant "BIG Ledger"
     participant Receiver
 
-    Sender -> "ICP Ledger": transfer()
-    "ICP Ledger" --> Sender: blockNumber
+    Sender -> "BIG Ledger": transfer()
+    "BIG Ledger" --> Sender: blockNumber
     Sender -> Receiver: notify(blockNumber)
-    Receiver -> "ICP Ledger": query_blocks(blockNumber)
-    "ICP Ledger" --> Receiver: block
+    Receiver -> "BIG Ledger": query_blocks(blockNumber)
+    "BIG Ledger" --> Receiver: block
     Receiver -> Receiver: verify payment
 ```
 
 
-#### Notification by ICP ledger (currently disabled)
+#### Notification by BIG ledger (currently disabled)
 
 In this pattern the ledger itself notifies the receiver. Thereby, the receiver can trust the notification immediately. However, this flow is currently disabled because the call to the receiver is not yet implemented as a one-way call.
 
 ```plantuml
     participant Sender
-    participant "ICP Ledger"
+    participant "BIG Ledger"
     participant Receiver
 
-    Sender -> "ICP Ledger": transfer()
-    "ICP Ledger" --> Sender: blockNumber
-    Sender -> "ICP Ledger": notify(blockNumber, receiver)
-    "ICP Ledger" -> "Receiver": transaction_notification(details)
+    Sender -> "BIG Ledger": transfer()
+    "BIG Ledger" --> Sender: blockNumber
+    Sender -> "BIG Ledger": notify(blockNumber, receiver)
+    "BIG Ledger" -> "Receiver": transaction_notification(details)
 ```

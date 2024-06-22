@@ -27,7 +27,7 @@ async fn get_icp_usd_exchange() -> String {
     let seconds_of_time: u64 = 60; //we start with 60 seconds
     let host = "api.pro.coinbase.com";
     let url = format!(
-        "https://{}/products/ICP-USD/candles?start={}&end={}&granularity={}",
+        "https://{}/products/BIG-USD/candles?start={}&end={}&granularity={}",
         host,
         start_timestamp.to_string(),
         start_timestamp.to_string(),

@@ -444,7 +444,7 @@ cargo build --package encrypted_notes_rust --target wasm32-unknown-unknown --rel
 `wasm`: Wherever the Wasm binary ends up at the end of the "build" command.
 `candid`: There is not yet Rust auto-generation for candid IDL built into `dfx`, so `dfx` needs to know where your Candid file for the canister built by "build" resides.
 **www**:
-Frontend www canister (an "asset" canister) is the way to describe a set of files or a static website that is deployed to ICP. Our project frontend is built in [Svelte](https://svelte.dev/). The keys we used are as follows:
+Frontend www canister (an "asset" canister) is the way to describe a set of files or a static website that is deployed to BIG. Our project frontend is built in [Svelte](https://svelte.dev/). The keys we used are as follows:
 `dependencies`: An array of whatever canisters are being used to serve your app, to ensure that `dfx` builds and deploys them before your app.
 `frontend: { entrypoint: ""}`: This set of keys tells `dfx` to build it as a frontend canister, and entrypoint is wherever your app entrypoint winds up residing at the end of an npm build.
 `source`: Where the rest of your app resides at the end of npm build.

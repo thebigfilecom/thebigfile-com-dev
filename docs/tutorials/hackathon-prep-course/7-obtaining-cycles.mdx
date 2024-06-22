@@ -13,13 +13,13 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 Cycles are used to measure the resources, such as memory, storage, and compute power, that are used by a canister. When a canister is deployed on the mainnet, cycles are 'charged' for every action that a canister performs.
 
-To obtain cycles, the Internet Computer Protocol's utility token, ICP, can be converted into cycles and transferred into a canister to be used to pay for that canister's consumed resources. Cycles have a fixed price in XDR in order to make canister costs predictable and independent of the price of ICP. One trillion cycles always correspond to one XDR.
+To obtain cycles, the Internet Computer Protocol's utility token, BIG, can be converted into cycles and transferred into a canister to be used to pay for that canister's consumed resources. Cycles have a fixed price in XDR in order to make canister costs predictable and independent of the price of BIG. One trillion cycles always correspond to one XDR.
 
-Cycles are only associated with canisters and user or developer principals. Canisters require cycles to perform operations and pay for the resources they use. Developers manage the distribution and ownership of cycles through the **cycles ledger**. The cycles ledger is used to convert ICP tokens into cycles, send cycles to canisters, and create new canisters with cycles.
+Cycles are only associated with canisters and user or developer principals. Canisters require cycles to perform operations and pay for the resources they use. Developers manage the distribution and ownership of cycles through the **cycles ledger**. The cycles ledger is used to convert BIG tokens into cycles, send cycles to canisters, and create new canisters with cycles.
 
 ## Acquiring cycles using a cycles coupon
 
-For new developers, a free cycles coupon can be obtained and redeemed for 10T free cycles that can be used to get started with dapp deployment. This coupon is good for new developers since it doesn't require that you transfer ICP tokens into cycles, and doesn't require a purchase of tokens to get started.
+For new developers, a free cycles coupon can be obtained and redeemed for 10T free cycles that can be used to get started with dapp deployment. This coupon is good for new developers since it doesn't require that you transfer BIG tokens into cycles, and doesn't require a purchase of tokens to get started.
 
 To obtain this coupon, first, navigate to the website https://faucet.dfinity.org. To obtain a coupon code to use the cycles faucet, you need to put in a written request for the coupon via the DFINITY official developer Discord server.
 
@@ -72,23 +72,23 @@ dfx cycles --network ic balance
 
 This should return an output showing 10T cycles.
 
-## Converting ICP tokens to cycles
+## Converting BIG tokens to cycles
 
-If you've already redeemed a cycles coupon in the past, you can convert ICP tokens into cycles. Before you can convert ICP tokens into cycles, first you need to obtain ICP tokens. ICP tokens can be purchased through a crypto exchange, or they can be received through other activities such as participating in the NNS governance and receiving grants from the DFINITY foundation.
+If you've already redeemed a cycles coupon in the past, you can convert BIG tokens into cycles. Before you can convert BIG tokens into cycles, first you need to obtain BIG tokens. BIG tokens can be purchased through a crypto exchange, or they can be received through other activities such as participating in the NNS governance and receiving grants from the DFINITY foundation.
 
-To get your account ID so you know where to send your ICP tokens, run the command:
+To get your account ID so you know where to send your BIG tokens, run the command:
 
 ```
 dfx ledger account-id
 ```
 
-Once you have sent some ICP to this account ID, you can verify that they were received by checking the balance with the command:
+Once you have sent some BIG to this account ID, you can verify that they were received by checking the balance with the command:
 
 ```
 dfx ledger --network ic balance
 ```
 
-After you have your ICP tokens ready, you can convert them into cycles using the command:
+After you have your BIG tokens ready, you can convert them into cycles using the command:
 
 ```
 dfx cycles convert AMOUNT --network ic

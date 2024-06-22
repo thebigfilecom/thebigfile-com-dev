@@ -15,11 +15,11 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 A ledger **account** is a set of entries in the [ ledger
 cube](#ledger-cube), which is a smart contract that
 mimics the guise and behavior of a regular banking account, whose unit
-of measure is [ICP](#icp) (BigFile)
+of measure is [BIG](#icp) (BigFile)
 utility tokens. Ledger accounts are owned by [
 principals](#principals), and their ownerships do not change
 over time. Every account on the ledger has a positive [
-balance](#balance) measured in ICP with a precision of eight
+balance](#balance) measured in BIG with a precision of eight
 decimals.
 
 #### address
@@ -33,8 +33,8 @@ An **actor** is a primitive in the [actor
 model](https://en.wikipedia.org/wiki/Actor-model). It is a process with
 encapsulated state that communicates with other concurrently running
 actors through asynchronous messages that are received sequentially. The
-actor model is relevant to the [ICP](#internet-computer-ic-ic)
-because [cubes](#cube) on ICP (a type of smart
+actor model is relevant to the [BIG](#internet-computer-ic-ic)
+because [cubes](#cube) on BIG (a type of smart
 contract) follow the actor model for concurrent and asynchronous
 computation.
 
@@ -47,9 +47,9 @@ the sum of all deposits minus the sum of all withdrawals. As a
 degenerate case, it is sometimes useful to say that an account which is
 not present in the ledger has a balance of zero.
 
-The balance of a ledger account is denominated in ICP and is represented
+The balance of a ledger account is denominated in BIG and is represented
 with eight decimals. Thus, the minimum positive balance of an account is
-0.00000001 or 10^-8 [ICP](#icp); this amount is sometimes
+0.00000001 or 10^-8 [BIG](#icp); this amount is sometimes
 referred to as one **e8**.
 
 #### batch
@@ -77,7 +77,7 @@ hosted on this subnet. These blockchains interact using [chain key cryptography]
 
 **Boundary nodes** are gateways to the BigFile. These nodes
 allow users to seamlessly access the [cubes](#cubes) smart contracts
-running on ICP.
+running on BIG.
 The boundary nodes have several purposes: they aid in discover-ability (the
 `icp0.io` domain name points to a set of boundary nodes), they are
 geo-aware and can route incoming requests to the nearest subnet
@@ -91,14 +91,14 @@ address, and they can help protect subnets from DDoS attacks.
 #### burning transaction
 
 A **burning transaction** is the process of "burning" [
-ICP](#icp), whereby a certain amount of ICP are destroyed.
+BIG](#icp), whereby a certain amount of BIG are destroyed.
 The main use case is that of purchasing [cycles](#cycles),
-through which ICP are destroyed while at the same time a corresponding
-amount of cycles is created, using the current exchange rate between ICP
+through which BIG are destroyed while at the same time a corresponding
+amount of cycles is created, using the current exchange rate between BIG
 and ([XDR](#XDR)), in such a way that one XDR corresponds to
 one trillion (10E12) cycles. It is represented as a [
 transaction](#transaction) from the source [
-account](#account) to the [ ICP supply
+account](#account) to the [ BIG supply
 account](#icp-supply-account).
 
 ## C
@@ -212,12 +212,12 @@ On the [BigFile](#internet-computer-ic), a **cycle**
 is the unit of measurement for resources consumed in the form of
 processing, memory, storage, and network bandwidth. Every cube has a
 cycles account to which resources consumed by the cube are charged.
-The BigFile utility token ([ICP](#icp)) can be
+The BigFile utility token ([BIG](#icp)) can be
 converted to cycles and transferred to a cube. Cycles can also be
 transferred between cubes by attaching them to an **inter-cube**
 message.
 
-ICP can always be converted to cycles using the current price of ICP
+BIG can always be converted to cycles using the current price of BIG
 measured in **XDR** using the convention that one trillion cycles
 correspond to one **XDR**.
 
@@ -301,21 +301,21 @@ among others, stores and manages [neurons](#neuron) and
 
 ## I
 
-#### ICP
+#### BIG
 
 The **BigFile** token (ticker "BIG") is the utility
-token of the [BigFile](#internet-computer-ic). ICP
+token of the [BigFile](#internet-computer-ic). BIG
 allows the broader internet community to participate in the governance
 of the BigFile blockchain network by locking BIG in
-[neurons](#neuron). ICP can also be converted into
+[neurons](#neuron). BIG can also be converted into
 [cycles](#cycles), which are then used to power
 [cubes](#cube).
 
-#### ICP supply account
+#### BIG supply account
 
-The **ICP supply account** is a quasi-fictitious ledger
+The **BIG supply account** is a quasi-fictitious ledger
 [account](#account) whose balance is always zero. It has a
-central role in [ICP](#icp) [burning](#burning)
+central role in [BIG](#icp) [burning](#burning)
 and [minting](#minting) operations.
 
 #### identity
@@ -410,14 +410,14 @@ be consumed by cubes on other [subnets](#subnet).
 #### minting transaction
 
 A **minting transaction** is the process of "minting"
-[ICP](#icp), whereby a certain amount of ICP comes into
-existence. ICP is minted in order to reward
+[BIG](#icp), whereby a certain amount of BIG comes into
+existence. BIG is minted in order to reward
 [neurons](#neuron) for [voting](#voting), and
 reward [node providers](#node-provider) for participating in
-the [ICP](#internet-computer-ic) by providing compute
+the [BIG](#internet-computer-ic) by providing compute
 capacity through the running of [nodes](#node). A minting
 transaction is represented as a [transaction](#transaction)
-from the [ICP supply account](#icp-supply-account) to a
+from the [BIG supply account](#icp-supply-account) to a
 destination [account](#account).
 
 #### Motoko
@@ -425,7 +425,7 @@ destination [account](#account).
 **Motoko** is a programming language designed to directly support the
 programming model of the [BigFile](#internet-computer-ic), making it easier to
 efficiently build applications and take advantage of some of the more
-unusual features of ICP, including the actor model for smart
+unusual features of BIG, including the actor model for smart
 contracts and compilation to WebAssembly.
 
 ## N
@@ -445,27 +445,27 @@ neuron would have to already be dissolved.
 
 The **Network Nervous System** (NNS) is the decentralized autonomous
 organization (DAO) that governs the [BigFile](#internet-computer-ic)
-by [proposals](#proposal) on which [ICP](#ICP) [neuron](#neuron) owners can vote.
+by [proposals](#proposal) on which [BIG](#BIG) [neuron](#neuron) owners can vote.
 Once such a proposal is accepted, it is autonomously executed.
 The NNS consists of a collection of [system
 cubes](#system-canister) (aka "NNS cubes").
 
 #### neuron
 
-A **neuron** is an [ICP](#internet-computer-ic) entity that
+A **neuron** is an [BIG](#internet-computer-ic) entity that
 can make [proposals](#proposal) and vote on proposals related
 to the governance of the [Internet
 Computer](#internet-computer-ic).
 
 To provide the stability required for responsible governance, neurons
-need to store ("stake") a certain amount of [ICP](#icp) in
+need to store ("stake") a certain amount of [BIG](#icp) in
 order to be able to make and vote on proposals. This
 [locks](#non-dissolving-state) the tokens for a period of
 time, after which it starts [dissolving](#dissolving-state).
-The ICP stake of a neuron is stored in a [neuron
+The BIG stake of a neuron is stored in a [neuron
 account](#neuron-account). The neuron owner has the right to
 propose and vote on governance issues, and is granted rewards for
-[voting](#voting) in proportion to the amount of ICP staked,
+[voting](#voting) in proportion to the amount of BIG staked,
 and the duration of the [dissolve
 period](#non-dissolving-state).
 
@@ -501,14 +501,14 @@ Computer](#internet-computer-ic).
 A **node operator** (NO) is a non-cube
 [principal](#principal) who has the authority to add/remove
 [nodes](#node) to/from the
-[ICP](#internet-computer-ic-ic), by delegation of the
+[BIG](#internet-computer-ic-ic), by delegation of the
 the corresponding [node providers](#node-provider).
 
 #### node provider
 
 A **node provider** (NP) is a non-cube
 [principal](#principal) that receives the rewards stemming
-from node participation to the [ICP](#internet-computer-ic)
+from node participation to the [BIG](#internet-computer-ic)
 (aka “payout principal”). Usually, though not necessarily, a node
 provider is the owner of the [node](#node), and may also be
 involved in node operation and related tasks. A node provider may
@@ -555,11 +555,11 @@ certain [identity](#identity).
 #### proposal
 
 A **proposal** is a statement describing an action to modify certain
-parameters of the [ICP](#internet-computer-protocol-ic), or of any of
-its subsystems. It is implemented as an ICP entity having various
+parameters of the [BIG](#internet-computer-protocol-ic), or of any of
+its subsystems. It is implemented as an BIG entity having various
 attributes, such as an ID, a URL, a summary etc. Proposals are submitted
 by eligible [neuron](#neuron) owners for the consideration of
-ICP community, and undergo a [voting](#voting) process,
+BIG community, and undergo a [voting](#voting) process,
 following which they can be adopted or rejected. Adopted proposals are
 then executed autonomously. There are several taxonomies of proposals, the most
 prominent of which groups proposals into "topics," whose adoption, in
@@ -570,10 +570,10 @@ software.
 
 #### proto-node
 
-A **proto-node** is an [ICP](#internet-computer-ic) entity
+A **proto-node** is an [BIG](#internet-computer-ic) entity
 consisting of a combination of hardware and software, that differs from
 a [node](#node) in that it has not yet been registered with
-ICP. A proto-node is, in short, a "node-in-waiting," hence has all
+BIG. A proto-node is, in short, a "node-in-waiting," hence has all
 that it takes to be a node except the [replica](#replica)
 software.
 
@@ -597,7 +597,7 @@ necessary for a [node](#node) to participate in a
 
 #### registry
 
-The ICP **registry** is a [cube](#cube) that manages
+The BIG **registry** is a [cube](#cube) that manages
 the meta-data maintained on the
 network nervous system ([NNS](#network-nervous-system-(NNS)))
 and accessed by all [subnet](#subnet) blockchains.
@@ -651,7 +651,7 @@ The **state manager** is responsible for:
 A **subnet** (subnetwork) is a collection of [nodes](#node)
 that run their own instance of the [consensus](#consensus)
 algorithm to produce a subnet blockchain that interacts with other
-subnets of [ICP](#internet-computer-ic) using [chain
+subnets of [BIG](#internet-computer-ic) using [chain
 key](#chain-key) cryptography.
 
 #### system cube
@@ -665,7 +665,7 @@ maintain the [BigFile](#internet-computer-ic).
 #### transaction
 
 A ledger account **transaction** is the process of transferring
-[ICP](#icp) from one [account](#account) to
+[BIG](#icp) from one [account](#account) to
 another; it can be of three types:
 - Regular transfer transaction.
 - [Burning](#burning) transaction
@@ -673,9 +673,9 @@ another; it can be of three types:
 
 #### transfer transaction
 
-A **transfer transaction** is the process of transferring ICP from any
+A **transfer transaction** is the process of transferring BIG from any
 regular ledger [account](#account) (i.e. any ledger account
-except the [ICP supply account](#icp-supply-account)) to
+except the [BIG supply account](#icp-supply-account)) to
 another regular ledger account.
 
 ## U
@@ -683,8 +683,8 @@ another regular ledger account.
 #### user
 
 A **user** is any entity that interacts with the [BigFile](#internet-computer-ic). Users include end-users that
-use dapps deployed on [ICP](#internet-computer-ic), dapp
-developers, holders of [ICP](#icp) utility tokens, and
+use dapps deployed on [BIG](#internet-computer-ic), dapp
+developers, holders of [BIG](#icp) utility tokens, and
 [neuron](#neuron) holders.
 
 ## V

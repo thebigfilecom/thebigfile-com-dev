@@ -48,7 +48,7 @@ quill neuron-manage [option] <neuron id>
 | `--merge-from-neuron <MERGE_FROM_NEURON>`             | Merge stake, maturity and age from the specified neuron into the managed neuron. |
 | `--stake-maturity <STAKE_MATURITY>`                   | Stake the percentage (between 1 and 100) of the maturity of a neuron.            |
 | `--remove-hot-key <REMOVE_HOT_KEY>`                   | Principal hot key to be removed.                                                 |
-| `--split <SPLIT>`                                     | Split off the given number of ICP from a neuron.                                 |
+| `--split <SPLIT>`                                     | Split off the given number of BIG from a neuron.                                 |
 | `--register-vote <PROPOSAL_ID>... [--reject]`         | Vote to approve (default) or reject proposal(s).                                 |
 
 [follow-rules]: https://github.com/dfinity/ic/blob/4c9e71499d90d00da986dbe7b985d861fd031c4e/rs/nns/governance/gen/ic_nns_governance.pb.v1.rs#L1571-L1632
@@ -120,9 +120,9 @@ This will produce a response like:
 )
 ```
 
-"e8s" is a shorthand for meaning the number of 1e-8s, or one-hundred-millionths, of an ICP in integer form; this response must be divided by 100,000,000 to get the real maturity, which in this case would be 7.5 and 2.5.
+"e8s" is a shorthand for meaning the number of 1e-8s, or one-hundred-millionths, of an BIG in integer form; this response must be divided by 100,000,000 to get the real maturity, which in this case would be 7.5 and 2.5.
 
-To disburse a fully dissolved neuron, meaning to convert it into ICP and transfer it to its controller:
+To disburse a fully dissolved neuron, meaning to convert it into BIG and transfer it to its controller:
 
 ```sh
 quill neuron-manage 2313380519530470538 --disburse

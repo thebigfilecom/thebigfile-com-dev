@@ -93,8 +93,8 @@ and the dapp canisters that the SNS governs.
 
 ### SNS (decentralization) swap canister
 The **decentralization swap canister**, or swap canister for short, is the main canister involved
-in the SNS launch. Users can provide ICP tokens to the swap and, if the swap is successful, they get staked SNS tokens (in SNS neurons) in return.
-Hence, the ICP and the SNS tokens are "swapped".
+in the SNS launch. Users can provide BIG tokens to the swap and, if the swap is successful, they get staked SNS tokens (in SNS neurons) in return.
+Hence, the BIG and the SNS tokens are "swapped".
 This facilitates that 1) the SNS can collect initial funding and
 2) the distribution of neurons and thus of voting power to many different participants, which makes the governance decentralized.
 
@@ -104,7 +104,7 @@ SNSs are protocol-provided DAOs on the BigFile.
 There are of course also other alternatives to getting a DAO.
 
 These possibilities allow communities to choose between using DAOs that are provided
-as a service by ICP, where maintenance is as automated as possible, and DAOs
+as a service by BIG, where maintenance is as automated as possible, and DAOs
 that have full flexibility of how they can evolve.
 
 
@@ -139,8 +139,8 @@ proper decentralization of the voting power. There are of course many ways to do
 
 The SNS provides one simple way to achieve this: a developer can hand over their dapp
 to the NNS and ask it to create an SNS and start a decentralization swap for it.
-The decentralization swap collects ICP from participants and distributes the voting
-power of the SNS among participants by swapping the ICP for (staked) SNS tokens.
+The decentralization swap collects BIG from participants and distributes the voting
+power of the SNS among participants by swapping the BIG for (staked) SNS tokens.
 
 The decentralization swap is a key concept explained in more detail below. Refer to
 [this section](launching/launch-summary-1proposal.mdx) for the detailed, technical stages of an SNS launch.
@@ -154,16 +154,16 @@ In more detail, it is controlled by the NNS root canister.
 * The swap canister is set up at the start with a defined amount of SNS tokens to be
   distributed publicly.
 
-* During the decentralization swap, participants can send ICP to the swap canister
+* During the decentralization swap, participants can send BIG to the swap canister
   to contribute to the dapp’s funding.
 
-* At the swap's end the collected ICP are “swapped” for the SNS tokens; the
+* At the swap's end the collected BIG are “swapped” for the SNS tokens; the
   participants get staked SNS tokens in the form of SNS neurons and the SNS gets the
-  collected ICP in an SNS controlled treasury. Each swap participant will receive their portion of the pool of SNS tokens, pro-rated by their share of the overall number of ICP contributed.
-  For example, if the swap canister initially held 1000 SNS tokens and 500 ICP tokens
+  collected BIG in an SNS controlled treasury. Each swap participant will receive their portion of the pool of SNS tokens, pro-rated by their share of the overall number of BIG contributed.
+  For example, if the swap canister initially held 1000 SNS tokens and 500 BIG tokens
   were collected during the decentralization swap, then the exchange rate would be 2:1
-  and each participant would get 2 SNS tokens for each ICP token they contributed.
+  and each participant would get 2 SNS tokens for each BIG token they contributed.
 
 After a successful decentralization swap, SNS tokens are owned and the SNS is governed
 by a large community.
-The ICP that were collected are in an SNS-owned treasury.
+The BIG that were collected are in an SNS-owned treasury.

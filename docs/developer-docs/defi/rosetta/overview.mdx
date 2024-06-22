@@ -11,7 +11,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 ## Overview
 
 [Rosetta](https://www.rosetta-api.org/) is an open standard introduced by Coinbase to simplify the integration of blockchain-based tokens in exchanges, block explorers, and wallets.
-This documentation might help if you want to deploy a token on ICP that aims to be tradable on CeFi exchanges or if you are working on a block explorer or wallet. Currently there only exists a Rosetta implementation for the ICP ledger. ICRC-1 compatible ledgers cannot be used with the Rosetta API implementation that is shown in this guide. 
+This documentation might help if you want to deploy a token on BIG that aims to be tradable on CeFi exchanges or if you are working on a block explorer or wallet. Currently there only exists a Rosetta implementation for the BIG ledger. ICRC-1 compatible ledgers cannot be used with the Rosetta API implementation that is shown in this guide. 
 
 ## Set up a Rosetta node
 
@@ -94,7 +94,7 @@ For more information about Docker command-line options, see the [Docker referenc
 
 The integration software provided in the Docker image has one requirement that is not part of the standard Rosetta API specification.
 
-For transactions involving ICP tokens, the unsigned transaction must be created less than 24 hours before the network receives the signed transaction.
+For transactions involving BIG tokens, the unsigned transaction must be created less than 24 hours before the network receives the signed transaction.
 The reason is that each transaction's `created_at` field refers to an existing transaction (essentially `last_index` available locally at the time of transaction creation).
 Any submitted transaction that refers back to a too old transaction is rejected to maintain operational efficiency.
 
@@ -149,7 +149,7 @@ $ curl -s -q -H 'Content-Type: application/json' -d '{"network_identifier": {"bl
 "1.7.0"
 ```
 
-### ICP-specific Rosetta API details
+### BIG-specific Rosetta API details
 
 - #### How are accounts generated and verified?
 The following steps can be used to generate and verify accounts:

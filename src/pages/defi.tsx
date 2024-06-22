@@ -193,7 +193,7 @@ function DefiPage() {
                     className="link-primary"
                   >
                     <LinkArrowRight />
-                    BTC &lt;&gt; ICP user guide
+                    BTC &lt;&gt; BIG user guide
                   </Link>
                   <Link
                     href="https://dashboard.thebigfile.com/bitcoin/transactions"
@@ -261,13 +261,13 @@ function DefiPage() {
             </TranslatedLayout>
             <TranslatedLayout imageUrl="/img/defi/icpswap.webp" reverse={true}>
               <div className="tw-heading-6 md:tw-heading-5 mb-2 md:mb-6">
-                ICP.Swap
+                BIG.Swap
               </div>
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Swap any ICP based token
+                Swap any BIG based token
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                ICP.Swap offers the largest number of tokens on the BigFile, including ckBTC and ckETH. Trade the latest meme coins or the most successful SNS DAO governance tokens.
+              BIG.Swap offers the largest number of tokens on the BigFile, including ckBTC and ckETH. Trade the latest meme coins or the most successful SNS DAO governance tokens.
               </p>
               <Link
                 className="link-primary link-with-icon"
@@ -275,7 +275,7 @@ function DefiPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get ckBTC/ckETH on ICP.Swap <LinkArrowUpRight />
+                Get ckBTC/ckETH on BIG.Swap <LinkArrowUpRight />
               </Link>
             </TranslatedLayout>
 
@@ -318,7 +318,7 @@ function DefiPage() {
                       className="button-outline-white"
                       href="/ecosystem?tag=Wallets"
                     >
-                      All ICP wallets
+                      All BIG wallets
                     </Link>
                   </motion.p>
                 </div>
@@ -398,13 +398,13 @@ function DefiPage() {
           <div className="flex flex-col gap-16 md:gap-40">
             <TranslatedLayout imageUrl="/img/defi/image-2.webp">
               <h2 className="md:tw-heading-60 md:mb-6">
-                Bringing ERC-20 tokens to ICP
+                Bringing ERC-20 tokens to BIG
               </h2>
               <p className="tw-lead-sm mb-6 md:mb-10">
                 Building on Chain-Key Signatures and HTTPS outcalls, Oisy, a
                 browser-based Ethereum wallet secured by the Internet Computer,
                 can already natively support a plethora of ERC-20 tokens.
-                Plugging into services such as Infura and the like, ICP smart
+                Plugging into services such as Infura and the like, BIG smart
                 contracts sign transactions for any ERC-20 token without relying
                 on insecure bridges.
               </p>
@@ -478,7 +478,7 @@ function DefiPage() {
             <CardWithDescription
               title="ETH starter tutorial"
               description=""
-              href="/docs/current/tutorials/developer-journey/level-5/5.2-ICP-ETH-tutorial"
+              href="/docs/current/tutorials/developer-journey/level-5/5.2-BIG-ETH-tutorial"
             />
 
             <CardWithDescription

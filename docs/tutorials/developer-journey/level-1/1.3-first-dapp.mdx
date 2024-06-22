@@ -152,7 +152,7 @@ public query func getQuestion() : async Text {
 
 This `getQuestion` method takes the current value of the `question` variable and returns it to the caller. There are some important things regarding methods and their behavior to be aware of, such as:
 
-- All methods that return values on ICP have to be declared as `async` in order to allow asynchronous execution.
+- All methods that return values on BIG have to be declared as `async` in order to allow asynchronous execution.
 - Since the `getQuestion` method doesn't change any data, it can be declared as a `query` call. you'll dive further into this shortly.
 - This method uses the `Text` type that you previously have already imported at the top of the file.
 :::
@@ -421,7 +421,7 @@ actor {
 
 ### Deploying the dapp locally
 
-To deploy your dapp locally, first assure that your local ICP execution environment is currently running. If you need to start the local canister execution environment, run the command:
+To deploy your dapp locally, first assure that your local BIG execution environment is currently running. If you need to start the local canister execution environment, run the command:
 
 ```bash
 dfx start --clean --background
@@ -459,7 +459,7 @@ Start by creating the file `/src/poll_frontend/src/index.html` that contains the
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple poll dapp hosted on an ICP canister smart contract</title>
+    <title>Simple poll dapp hosted on an BIG canister smart contract</title>
 
     <style>
       body {
@@ -584,7 +584,7 @@ Start by creating the file `/src/poll_frontend/src/index.html` that contains the
 
 :::info
 **What does this code do?**
-The HTML code above is a simple form that provides the end user with options to select using radio buttons. There is nothing 'Web3' or specific to ICP about this code.
+The HTML code above is a simple form that provides the end user with options to select using radio buttons. There is nothing 'Web3' or specific to BIG about this code.
 
 Then, the `<head>` tag is used to include some basic CSS for the page's styling. To learn more about adding a stylesheet, see: [add a stylesheet](/docs/current/developer-docs/web-apps/application-frontends/add-stylesheet).
 :::
@@ -765,9 +765,9 @@ You can find the [finished code's repo](https://github.com/jessiemongeon1/dev-jo
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -785,7 +785,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 

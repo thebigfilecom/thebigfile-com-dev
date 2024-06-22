@@ -257,155 +257,6 @@ function NodeProvidersPage() {
           </TranslatedLayout>
         </section>
 
-        <section className="container-10 mt-20 md:mt-40">
-          <AnimateSpawn
-            className="md:w-6/10 md:mx-auto text-center"
-            variants={transitions.container}
-          >
-            <motion.h2
-              className="tw-heading-3 md:tw-heading-60 mb-6"
-              variants={transitions.item}
-            >
-              Node provider community{" "}
-            </motion.h2>
-            <motion.p
-              className="tw-lead-sm mb-6 md:mb-10"
-              variants={transitions.item}
-            >
-              The ICP community of node providers consists of independent
-              entities evenly distributed across the globe, including...
-            </motion.p>
-            <motion.p className="mb-0" variants={transitions.item}>
-              <Link
-                href="https://forum.dfinity.org/t/ic-topology-node-diversification-part-ii/23553"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read about node diversification
-              </Link>
-            </motion.p>
-          </AnimateSpawn>
-          <AnimateSpawn
-            className="flex flex-wrap gap-5 justify-center items-center mt-12"
-            variants={transitions.container}
-          >
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-electric.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-scalar.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-eterna.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-signum.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-icp-global.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-tomahawk.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-warburg-serres.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-9yards.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-kr1.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-zondax.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-anonstake.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-one-sixty-two.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-archery.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-polychain.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-dfinity.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-            <motion.img
-              variants={transitions.item}
-              src="/img/node-providers/np-rivram.webp"
-              alt=""
-              loading="lazy"
-              className="h-20 md:h-30"
-            />
-          </AnimateSpawn>
-        </section>
-
         <section className=" mt-20 md:mt-40 mb-30 md:mb-60">
           <AnimateSpawn
             className="container-10"
@@ -448,7 +299,7 @@ function NodeProvidersPage() {
                 <ul className="checklist space-y-3 tw-paragraph md:tw-lead-sm">
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Introduction_to_ICP"
+                      href="https://wiki.thebigfile.com/wiki/Introduction_to_ICP"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -466,7 +317,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Governance_of_the_Internet_Computer"
+                      href="https://wiki.thebigfile.com/wiki/Governance_of_the_Internet_Computer"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -475,7 +326,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Node_Provider_Documentation"
+                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -497,7 +348,7 @@ function NodeProvidersPage() {
                 <ul className="checklist space-y-3 tw-paragraph md:tw-lead-sm">
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Node_Provider_Documentation"
+                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -506,7 +357,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Node_Provider_Onboarding"
+                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Onboarding"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -516,7 +367,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Node_Provider_Matrix_channel"
+                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Matrix_channel"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -525,7 +376,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Node_Provider_Machine_Hardware_Guide"
+                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Machine_Hardware_Guide"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -534,7 +385,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.internetcomputer.org/wiki/Node_Provider_Onboarding"
+                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Onboarding"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -544,7 +395,7 @@ function NodeProvidersPage() {
                 </ul>
                 <p className="">
                   <Link
-                    href="https://wiki.internetcomputer.org/wiki/Node_Provider_Documentation"
+                    href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button-primary"

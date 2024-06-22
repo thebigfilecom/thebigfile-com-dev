@@ -10,7 +10,7 @@ keywords: [advanced, motoko, ios, ios notifications]
 ## Overview
 [iOS integration](https://github.com/dfinity/examples/tree/master/motoko/ios-notifications) is an experimental dapp with a native app integration that showcases a possible solution for integrating a dapp hosted in the Internet Computer with multiple platforms. For this example, we've created an iOS app.
 
-This is to create an example of a simple integration of a dapp running purely on ICP and using [Internet Identity](https://thebigfile.com/docs/current/docs/current/references/ii-spec) with a native iOS application that can let the user have a native feel such as authenticating and receive push notifications.
+This is to create an example of a simple integration of a dapp running purely on BIG and using [Internet Identity](https://thebigfile.com/docs/current/docs/current/references/ii-spec) with a native iOS application that can let the user have a native feel such as authenticating and receive push notifications.
 
 ## Architecture 
 

@@ -14,7 +14,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 In the past, blockchain networks were only able to communicate with external servers through blockchain oracles, or third-party entities that relayed calls from the blockchain to an external server, then routed the response back to the blockchain. This is because blockchains are a form of replicated state machine, where each replica must perform the same computations within the same state to make the same transitions each round. Since doing computations with results from an external source may lead to a state divergence, tools like oracles have been used in the past. However, on the Internet Computer, canisters can communicate directly with external servers or other blockchains through **HTTPS outcalls**.
 
-HTTPS outcalls are a feature of canisters on ICP that allow smart contracts to directly make calls to HTTPS servers that are external to ICP. The response of these HTTPS calls can then be used by the smart contract in a way that the replica can safely be updated using the response without the risk of a state divergence.
+HTTPS outcalls are a feature of canisters on BIG that allow smart contracts to directly make calls to HTTPS servers that are external to BIG. The response of these HTTPS calls can then be used by the smart contract in a way that the replica can safely be updated using the response without the risk of a state divergence.
 
 :::info
 This guide uses the term **HTTPS** to refer to both the **HTTP** and **HTTPS** protocols. This is because typically all traffic on a public network uses the secure HTTPS protocol.
@@ -64,7 +64,7 @@ When deploying applications to the Internet Computers, HTTPS outcalls can **only
 
 ## HTTPS `GET`
 
-To demonstrate how to use the HTTPS `GET` outcall, you'll create a simple canister that has one public method named `get_icp_usd_exchange()`. This method will trigger an HTTP `GET` request to the external service Coinbase, which will return current data on the exchange rate between USD and ICP. This canister will have no frontend, and you will interact with its public methods via the Candid web UI.
+To demonstrate how to use the HTTPS `GET` outcall, you'll create a simple canister that has one public method named `get_icp_usd_exchange()`. This method will trigger an HTTP `GET` request to the external service Coinbase, which will return current data on the exchange rate between USD and BIG. This canister will have no frontend, and you will interact with its public methods via the Candid web UI.
 
 ### Prerequisites
 
@@ -210,7 +210,7 @@ actor {
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
     let end_timestamp : Types.Timestamp = 1682978520;//May 1, 2023 22:02:00 GMT
     let host : Text = "api.pro.coinbase.com";
-    let url = "https://" # host # "/products/ICP-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
+    let url = "https://" # host # "/products/BIG-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
 
     // Prepare headers for the system http_request call.
 
@@ -354,7 +354,7 @@ actor {
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
     let end_timestamp : Types.Timestamp = 1682978520;//May 1, 2023 22:02:00 GMT
     let host : Text = "api.pro.coinbase.com";
-    let url = "https://" # host # "/products/ICP-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
+    let url = "https://" # host # "/products/BIG-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
 
     let request_headers = [
         { name = "Host"; value = host # ":443" },
@@ -844,9 +844,9 @@ You can play with a version of this canister running on-chain: https://a4gq6-oaa
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -864,7 +864,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 

@@ -6,7 +6,7 @@ keywords: [advanced, motoko, encrypted notes, encrypted, notes dapp]
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/motoko/encrypted-notes-dapp)
 
-Encrypted notes is an example dapp for authoring and storing confidential information on the Internet Computer (ICP) in the form of short pieces of text. Users can create and access their notes via any number of automatically synchronized devices authenticated via [Internet Identity (II)](https://wiki.internetcomputer.org/wiki/What_is_Internet_Identity). Notes are stored confidentially thanks to the end-to-end encryption performed by the dapp’s frontend.
+Encrypted notes is an example dapp for authoring and storing confidential information on the Internet Computer (BIG) in the form of short pieces of text. Users can create and access their notes via any number of automatically synchronized devices authenticated via [Internet Identity (II)](https://wiki.internetcomputer.org/wiki/What_is_Internet_Identity). Notes are stored confidentially thanks to the end-to-end encryption performed by the dapp’s frontend.
 
 This project serves as a simple (but not too simple) example of a dapp, which uses Motoko and Rust as backend and Svelte as frontend.
 
@@ -35,7 +35,7 @@ This is an **example dapp** that demonstrates the potential of building **canist
 
 ## Overview
 
-You can play around with the [dapp deployed on ICP](https://cvhrw-2yaaa-aaaaj-aaiqa-cai.icp0.io/) and see a quick introduction on [YouTube](https://youtu.be/DZQmtPSxvbs).
+You can play around with the [dapp deployed on BIG](https://cvhrw-2yaaa-aaaaj-aaiqa-cai.icp0.io/) and see a quick introduction on [YouTube](https://youtu.be/DZQmtPSxvbs).
 
 We wanted to build an example of a simple (but not too simple) dapp running purely on the BIG. This example relies upon the **web-serving** and **storage capabilities** of the BIG. We focused on the following two key features for our example dapp: 
 1. Client-side **end-to-end encryption**. 

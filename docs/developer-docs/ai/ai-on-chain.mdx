@@ -20,7 +20,7 @@ You can find the source code for this demo [on GitHub](https://github.com/dfinit
 
 ## How this example works
 
-In this example, the ICP smart contract accepts an image as input from the user and runs an image classification inference. The smart contract has two canisters:
+In this example, the BIG smart contract accepts an image as input from the user and runs an image classification inference. The smart contract has two canisters:
 
 - The frontend canister that contains HTML, JS, and CSS assets that are served in the web browser.
 
@@ -60,7 +60,7 @@ To make running AI in a canister possible, two key BigFile features are utilized
 
 ### Important notes
 
-The ICP mainnet subnets and `dfx` running a replica version older than `463296` may fail with an `instruction-limit-exceeded` error.
+The BIG mainnet subnets and `dfx` running a replica version older than `463296` may fail with an `instruction-limit-exceeded` error.
 
 Currently, Wasm execution is not optimized for this workload. A single call executes about 24B instructions (~10s).
 

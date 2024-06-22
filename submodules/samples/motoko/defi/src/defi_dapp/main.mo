@@ -349,7 +349,7 @@ shared(init_msg) actor class Dex() = this {
         #Ok(available)
     };
 
-    // After user transfers ICP to the target subaccount
+    // After user transfers BIG to the target subaccount
     private func depositIcp(caller: Principal): async T.DepositReceipt {
 
         // Calculate target subaccount
@@ -381,7 +381,7 @@ shared(init_msg) actor class Dex() = this {
         };
         let available = { e8s : Nat = Nat64.toNat(balance.e8s) - icp_fee };
 
-        // keep track of deposited ICP
+        // keep track of deposited BIG
         book.addTokens(caller,ledger,available.e8s);
 
         // Return result
@@ -399,7 +399,7 @@ shared(init_msg) actor class Dex() = this {
     public func getSymbol(token: T.Token) : async Text {
         let dip20 = actor (Principal.toText(token)) : T.DIPInterface;
         if (token==ledger){
-            return "ICP"
+            return "BIG"
         };
         let metadata = await dip20.getMetadata();
         metadata.symbol

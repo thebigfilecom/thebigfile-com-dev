@@ -1,7 +1,7 @@
-using EdjCase.ICP.Agent.Agents;
-using EdjCase.ICP.Candid.Models;
-using EdjCase.ICP.Candid;
-using EdjCase.ICP.Agent.Responses;
+using EdjCase.BIG.Agent.Agents;
+using EdjCase.BIG.Candid.Models;
+using EdjCase.BIG.Candid;
+using EdjCase.BIG.Agent.Responses;
 
 namespace GreetingClient
 {
@@ -12,7 +12,7 @@ namespace GreetingClient
 		public Principal CanisterId { get; }
 
 #nullable enable
-		public EdjCase.ICP.Candid.CandidConverter? Converter { get; }
+		public EdjCase.BIG.Candid.CandidConverter? Converter { get; }
 
 		public GreetingClient(IAgent agent, Principal canisterId, CandidConverter? converter = default)
 		{

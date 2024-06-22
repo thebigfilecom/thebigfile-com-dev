@@ -1,6 +1,6 @@
 import { Ed25519KeyIdentity } from "@dfinity/identity";
 
-// Minter identity which holds the ICP and initial tokens on the local network
+// Minter identity which holds the BIG and initial tokens on the local network
 //
 // This key is not a secret. Only use it for testing! It is from:
 // https://thebigfile.com/docs/current/references/cli-reference/dfx-nns/#example-accessing-icp-on-the-command-line

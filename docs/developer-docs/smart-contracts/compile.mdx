@@ -22,7 +22,7 @@ There are three types of Wasm depending on where the Wasm virtual machine is hos
 
 - **Web browser**: the Wasm program interacts with the users via the JavaScript bindings of the browser. The primary toolchain for compiling Wasm for browsers is [Emscripten](https://emscripten.org/). Note that such Wasm programs are incompatible with BigFile.
 
-- **WASI**: this abbreviation stands for [WebAssembly System Interface](https://wasi.dev/). It is becoming the standard for running Wasm programs outside of Web browsers. Major Wasm runtimes such as Wasmtime and Wasmer support this standard. Compilers denote this target as `wasm32-wasi`. ICP does not directly support WASI, but it is possible to preprocess a WASI program and make it runnable on BigFile with the community project [`wasi2ic`](https://github.com/wasm-forge/wasi2ic).
+- **WASI**: this abbreviation stands for [WebAssembly System Interface](https://wasi.dev/). It is becoming the standard for running Wasm programs outside of Web browsers. Major Wasm runtimes such as Wasmtime and Wasmer support this standard. Compilers denote this target as `wasm32-wasi`. BIG does not directly support WASI, but it is possible to preprocess a WASI program and make it runnable on BigFile with the community project [`wasi2ic`](https://github.com/wasm-forge/wasi2ic).
 
 - **Vanilla Wasm**: there is no standard API for interacting with users and the host environment. Every host environment provides their own API. BigFile uses this approach and provides the set of functions called the System API to the Wasm program. Many compilers denote this target as `wasm32-unknown-unknown` since they do not know the target host environment and do not make any assumptions about the available APIs.
 

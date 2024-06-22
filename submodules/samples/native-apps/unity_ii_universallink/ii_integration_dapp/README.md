@@ -8,7 +8,7 @@ This example shows a use case to support login with the two delegations on the `
 
 As we described in [Internet Identity Integration](https://github.com/dfinity/examples/blob/master/native-apps/unity_ii_universallink/README.md#workflow), users can log in with II from the game. Usually what they do is
 
-1. Generate the `Ed25519KeyIdentity` supported by [ICP.NET](https://github.com/BoomDAO/ICP.NET) in the Unity game.
+1. Generate the `Ed25519KeyIdentity` supported by [BIG.NET](https://github.com/BoomDAO/BIG.NET) in the Unity game.
 2. For security purposes, only pass the public key of the `Ed25519KeyIdentity` to the Web browser for login. And only the public key is necessary when creating a `DelegationChain`.
 3. In [index.js](./src/greet_frontend/src/index.js), we describe how to
     - log in with Internet Identity with the frontend generated session key

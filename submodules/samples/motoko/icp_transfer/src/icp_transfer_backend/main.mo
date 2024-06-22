@@ -33,13 +33,13 @@ actor {
       memo = 0;
       // the amount we want to transfer
       amount = args.amount;
-      // the ICP ledger charges 10_000 e8s for a transfer
+      // the BIG ledger charges 10_000 e8s for a transfer
       fee = { e8s = 10_000 };
       // we are transferring from the canisters default subaccount, therefore we don't need to specify it
       from_subaccount = null;
       // we take the principal and subaccount from the arguments and convert them into an account identifier
       to = Blob.toArray(Principal.toLedgerAccount(args.toPrincipal, args.toSubaccount));
-      // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current ICP time
+      // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current BIG time
       created_at_time = null;
     };
 

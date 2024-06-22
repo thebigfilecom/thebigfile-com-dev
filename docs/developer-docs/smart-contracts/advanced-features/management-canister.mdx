@@ -8,19 +8,19 @@ import { AdornedTab } from "/src/components/Tabs/AdornedTab";
 import { BetaChip } from "/src/components/Chip/BetaChip";
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
-# ICP management canister
+# BIG management canister
 
 <MarkdownChipRow labels={["Advanced", "Concept"]} />
 
 ## Overview
 
-The ICP management canister is used to provide access to system features, such as managing canisters, integrating with Bitcoin, making HTTPS outcalls, signing with threshold ECDSA, and securely retrieving randomness.
+The BIG management canister is used to provide access to system features, such as managing canisters, integrating with Bitcoin, making HTTPS outcalls, signing with threshold ECDSA, and securely retrieving randomness.
 
 
-The management canister is a virtual canister in the sense that it does not exist with an isolated state or Wasm module, but rather is implemented as part of ICP itself. For most practical purposes, the management canister behaves like a canister, i.e. it can accept messages from users or other canisters and can respond to those messages just like any other canister.
+The management canister is a virtual canister in the sense that it does not exist with an isolated state or Wasm module, but rather is implemented as part of BIG itself. For most practical purposes, the management canister behaves like a canister, i.e. it can accept messages from users or other canisters and can respond to those messages just like any other canister.
 
 
-The address of the ICP management canister is `aaaaa-aa` (i.e. the empty blob). It is present on any ICP subnet. By using this address, a canister can access the management canister either on the local or remote subnet -- ICP will take care of routing the request to the appropriate subnet transparently. The cost of making the call is charged to the calling canister just like any other inter-canister call.
+The address of the BIG management canister is `aaaaa-aa` (i.e. the empty blob). It is present on any BIG subnet. By using this address, a canister can access the management canister either on the local or remote subnet -- BIG will take care of routing the request to the appropriate subnet transparently. The cost of making the call is charged to the calling canister just like any other inter-canister call.
 
 :::note
 
@@ -38,11 +38,11 @@ The management canister can also be called by users. Most methods are only permi
 You might be familiar with the [System API](/docs/current/references/ic-interface-spec#system-api) that allows canisters to interact with other canisters and perform special actions like sending messages or transferring cycles. A natural expectation would be to provide canister management through the same System API. However, the System API only works for synchronous calls that can be returned immediately. Some of the canister management operations are asynchronous in nature – the controlled canister might not even be in the same subnet as the controller. Therefore, an asynchronous API is needed.
 
 
-Providing this functionality through a virtual canister, i.e. the management canister, allows for ICP to reuse a lot of the mechanics that are already available and provides a familiar approach to users and canisters to access this API through inter-canister calls.
+Providing this functionality through a virtual canister, i.e. the management canister, allows for BIG to reuse a lot of the mechanics that are already available and provides a familiar approach to users and canisters to access this API through inter-canister calls.
 
 ## How can you interact with the management canister?
 
-Since the management canister behaves like a canister, users or other canisters can call its provided interfaces like any other canister on ICP.
+Since the management canister behaves like a canister, users or other canisters can call its provided interfaces like any other canister on BIG.
 
 Here are some examples calling the management canister:
 
@@ -115,7 +115,7 @@ def get_raw_rand() -> Async[RawRandResult]:
 
 ## Typical workflows involving the management canister
 
-The management canister offers a variety of endpoints that provide access to special features available on ICP. These can be grouped into a few main areas. Let's explore some of those.
+The management canister offers a variety of endpoints that provide access to special features available on BIG. These can be grouped into a few main areas. Let's explore some of those.
 
 ### Managing canisters
 
@@ -123,15 +123,15 @@ The most commonly used APIs of the management canister are those that are relate
 
 ### Signing and submitting Bitcoin transactions
 
-One of the special features of ICP is its direct integration with the [Bitcoin](/docs/current/developer-docs/integrations/bitcoin/) network. This is exposed to users through a set of APIs on the management canister that allow users to sign transactions using [threshold ECDSA](/docs/current/developer-docs/smart-contracts/encryption/t-ecdsa) signatures and submit transactions to the Bitcoin network, all done through smart contracts on ICP. The relevant APIs are [sign_with_ecdsa](/docs/current/references/ic-interface-spec#ic-sign_with_ecdsa) and [bitcoin_send_transaction](/docs/current/references/ic-interface-spec#ic-bitcoin_send_transaction).
+One of the special features of BIG is its direct integration with the [Bitcoin](/docs/current/developer-docs/integrations/bitcoin/) network. This is exposed to users through a set of APIs on the management canister that allow users to sign transactions using [threshold ECDSA](/docs/current/developer-docs/smart-contracts/encryption/t-ecdsa) signatures and submit transactions to the Bitcoin network, all done through smart contracts on BIG. The relevant APIs are [sign_with_ecdsa](/docs/current/references/ic-interface-spec#ic-sign_with_ecdsa) and [bitcoin_send_transaction](/docs/current/references/ic-interface-spec#ic-bitcoin_send_transaction).
 
 
-[Read more about ICP's direct integration with Bitcoin.](/docs/current/developer-docs/integrations/bitcoin/)
+[Read more about BIG's direct integration with Bitcoin.](/docs/current/developer-docs/integrations/bitcoin/)
 
 ### HTTPS outcalls
 
-One more special feature of ICP is the ability for canisters to make http requests to off-chain systems using the [HTTPS outcalls](/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-overview) feature. This is available through the management canister's [http_request](/docs/current/references/ic-interface-spec#ic-http_request) API. HTTPS outcalls enable canisters to obtain off-chain data, call RPC services of other blockchain networks, or interact with Web2 services and enterprise IT systems off-chain.
+One more special feature of BIG is the ability for canisters to make http requests to off-chain systems using the [HTTPS outcalls](/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-overview) feature. This is available through the management canister's [http_request](/docs/current/references/ic-interface-spec#ic-http_request) API. HTTPS outcalls enable canisters to obtain off-chain data, call RPC services of other blockchain networks, or interact with Web2 services and enterprise IT systems off-chain.
 
 ### Retrieving randomness
 
-Canisters on ICP can request random bits via the management canister's [raw_rand](/docs/current/references/ic-interface-spec#ic-raw_rand) API. These random bits come from ICP's own random tape that is also used in its consensus algorithm. A key property of the randomness returned by the management canister is that it's unknown at the time of request submission. ICP will only resolve this call in the next execution round (using the latest value coming from its random tape), which makes it impossible to predict the value of these random bits.
+Canisters on BIG can request random bits via the management canister's [raw_rand](/docs/current/references/ic-interface-spec#ic-raw_rand) API. These random bits come from BIG's own random tape that is also used in its consensus algorithm. A key property of the randomness returned by the management canister is that it's unknown at the time of request submission. BIG will only resolve this call in the next execution round (using the latest value coming from its random tape), which makes it impossible to predict the value of these random bits.

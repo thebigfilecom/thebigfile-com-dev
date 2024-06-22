@@ -386,7 +386,7 @@ table:
   </tbody>
 </table>
 
-ICP and SNS tokens are considered separately.
+BIG and SNS tokens are considered separately.
 
 For example, if the treasury contains 75_000 XDR worth of SNS tokens, then this amount is considered
 "small". In this case up to 75_000 XDR worth of SNS tokens can be transferred from the treasury.
@@ -394,11 +394,11 @@ For example, if the treasury contains 75_000 XDR worth of SNS tokens, then this 
 To assess the tokens in the treasury, external price information is fetched at the time of proposal
 submission.
 
-The price of ICP is taken from the cycles minting canister's
+The price of BIG is taken from the cycles minting canister's
 [get_average_icp_xdr_conversion_rate](https://sourcegraph.com/github.com/dfinity/ic@8efb7e81a1f1257a38621b1f12eccc8b8b1c7e39/-/blob/rs/nns/cmc/src/main.rs?L901:33-901:44)
 method.
 
-The price of the SNS token in ICP is taken from the swap canister's [get_derived_state](https://sourcegraph.com/github.com/dfinity/ic@8efb7e81a1f1257a38621b1f12eccc8b8b1c7e39/-/blob/rs/sns/swap/proto/ic_sns_swap/pb/v1/swap.proto?L1304-1325) method.
+The price of the SNS token in BIG is taken from the swap canister's [get_derived_state](https://sourcegraph.com/github.com/dfinity/ic@8efb7e81a1f1257a38621b1f12eccc8b8b1c7e39/-/blob/rs/sns/swap/proto/ic_sns_swap/pb/v1/swap.proto?L1304-1325) method.
 
 #### Relevant type signatures
 
@@ -431,9 +431,9 @@ Example in bash:
 ```bash
 quill sns make-proposal <PROPOSER_NEURON_ID> --proposal '(
     record {
-        title = "Transfer 41100 ICP to Foo Labs";
+        title = "Transfer 41100 BIG to Foo Labs";
         url = "https://sns-examples.com/proposal/42";
-        summary = "Transfer 411 ICP to Foo Labs";
+        summary = "Transfer 411 BIG to Foo Labs";
         action = opt variant {
             TransferSnsTreasuryFunds = record {
 
@@ -580,9 +580,9 @@ Example in bash:
 ```bash
 quill sns make-proposal <PROPOSER_NEURON_ID> --proposal '(
     record {
-        title = "Mint 41100 ICP to Foo Labs";
+        title = "Mint 41100 BIG to Foo Labs";
         url = "https://sns-examples.com/proposal/42";
-        summary = "Mint 411 ICP to Foo Labs";
+        summary = "Mint 411 BIG to Foo Labs";
         action = opt variant {
             MintSnsTokens = record {
 

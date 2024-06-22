@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-The Motoko programming language is a new, modern and type safe language for developers who want to build the next generation of distributed applications on ICP, as it is specifically designed to support the unique features of ICP while providing a familiar, yet robust, programming environment. As a new language, Motoko is constantly evolving with support for new features and other improvements.
+The Motoko programming language is a new, modern and type safe language for developers who want to build the next generation of distributed applications on BIG, as it is specifically designed to support the unique features of BIG while providing a familiar, yet robust, programming environment. As a new language, Motoko is constantly evolving with support for new features and other improvements.
 
 The Motoko compiler, documentation and other tooling is [open source](https://github.com/dfinity/motoko) and released under the Apache 2.0 license. Contributions are welcome.
 
@@ -22,7 +22,7 @@ Its single public function, `inc()`, can be invoked by this and other actors, to
 
 ## Async messages
 
-On ICP, [canisters can communicate](https://thebigfile.com/docs/current/developer-docs/smart-contracts/call/overview) with other canisters by sending [asynchronous messages](async-data.md). Asynchronous messages are function calls that return a **future**, and use an `await` construct that allows you to suspend execution until a future has completed. This simple feature avoids creating a loop of explicit asynchronous callbacks in other languages.
+On BIG, [canisters can communicate](https://thebigfile.com/docs/current/developer-docs/smart-contracts/call/overview) with other canisters by sending [asynchronous messages](async-data.md). Asynchronous messages are function calls that return a **future**, and use an `await` construct that allows you to suspend execution until a future has completed. This simple feature avoids creating a loop of explicit asynchronous callbacks in other languages.
 
 ``` motoko include=counter file=../examples/factorial.mo#L9-L21
 ```
@@ -50,9 +50,9 @@ service Counter : {
 
 ## Orthogonal persistence
 
-ICP persists the memory and other state of your canister as it executes. The state of a Motoko actor, including its in-memory data structures, survive indefinitely. Actor state does not need to be explicitly restored and saved to external storage.
+BIG persists the memory and other state of your canister as it executes. The state of a Motoko actor, including its in-memory data structures, survive indefinitely. Actor state does not need to be explicitly restored and saved to external storage.
 
-For example, in the following `Registry` actor that assigns sequential IDs to textual names, the state of the hash table is preserved across calls, even though the state of the actor is replicated across many ICP node machines and typically not resident in memory:
+For example, in the following `Registry` actor that assigns sequential IDs to textual names, the state of the hash table is preserved across calls, even though the state of the actor is replicated across many BIG node machines and typically not resident in memory:
 
 ``` motoko file=../examples/Registry.mo
 ```

@@ -758,10 +758,10 @@ Exiting an async block or shared function with a non-`#canister-reject` system e
 
 :::note
 
-On ICP, the act of issuing a call to a canister function can fail, so that the call cannot (and will not be) performed.
+On BIG, the act of issuing a call to a canister function can fail, so that the call cannot (and will not be) performed.
 This can happen due to a lack of canister resources, typically because the local message queue for the destination canister is full,
 or because performing the call would reduce the current cycle balance of the calling canister to a level below its freezing threshold.
-Such call failures are reported by throwing an [`Error`](../base/Error.md) with code `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such call failures are reported by throwing an [`Error`](../base/Error.md) with code `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 Like other errors, call errors can be caught and handled using `try ... catch ...` expressions, if desired.
 
 :::
@@ -1186,15 +1186,15 @@ module {
 }
 ```
 
-On ICP, if this library is imported as identifier `Lib`, then calling `await Lib.<id>(<exp1>, ..., <expn>)`, installs a fresh instance of the actor class as an isolated BIG canister, passing the values of `<exp1>`, ...​, `<expn>` as installation arguments, and returns a reference to a remote actor of type `Lib.<id>`, that is, `T`. Installation is necessarily asynchronous.
+On BIG, if this library is imported as identifier `Lib`, then calling `await Lib.<id>(<exp1>, ..., <expn>)`, installs a fresh instance of the actor class as an isolated BIG canister, passing the values of `<exp1>`, ...​, `<expn>` as installation arguments, and returns a reference to a remote actor of type `Lib.<id>`, that is, `T`. Installation is necessarily asynchronous.
 
 
 #### Actor class management
 
-On ICP, the primary constructor of an imported actor class always creates a new principal and installs a fresh instance of the class as the code for that principal.
-While that is one way to install a canister on ICP, it is not the only way.
+On BIG, the primary constructor of an imported actor class always creates a new principal and installs a fresh instance of the class as the code for that principal.
+While that is one way to install a canister on BIG, it is not the only way.
 
-To provide further control over the installation of actor classes, Motoko endows each imported actor class with an extra, secondary constructor, for use on ICP.
+To provide further control over the installation of actor classes, Motoko endows each imported actor class with an extra, secondary constructor, for use on BIG.
 This constructor takes an additional first argument that tailors the installation. The constructor is only available via special syntax that stresses its
 `system` functionality.
 
@@ -1235,11 +1235,11 @@ If `<exp>` is:
 
 - `#new s`, where `s` has type `CanisterSettings`:
 
-    - The call creates a fresh ICP principal `p`, with settings `s`, and installs the instance to principal `p`.
+    - The call creates a fresh BIG principal `p`, with settings `s`, and installs the instance to principal `p`.
 
 - `#install p`, where `p` has type [`Principal`](../base/Principal.md):
 
-    - The call installs the actor to an already created ICP principal `p`. The principal must be empty, having no previously installed code, or the call will return an error.
+    - The call installs the actor to an already created BIG principal `p`. The principal must be empty, having no previously installed code, or the call will return an error.
 
 -  `#upgrade a`, where `a` has type (or supertype) `actor {}`:
 
@@ -1251,13 +1251,13 @@ If `<exp>` is:
 
 :::note
 
-On ICP, calling the primary constructor `Lib.<id>` is equivalent to calling the secondary constructor `(system Lib.<id>)` with argument `(#new {settings = null})` i.e. using default settings.
+On BIG, calling the primary constructor `Lib.<id>` is equivalent to calling the secondary constructor `(system Lib.<id>)` with argument `(#new {settings = null})` i.e. using default settings.
 
 :::
 
 :::note
 
-On ICP, calls to `Lib.<id>` and  `(system Lib.<id>)(#new ...)` must be provisioned with enough cycles for the creation of a new principal. Other call variants will use the cycles of the already allocated principal or actor.
+On BIG, calls to `Lib.<id>` and  `(system Lib.<id>)(#new ...)` must be provisioned with enough cycles for the creation of a new principal. Other call variants will use the cycles of the already allocated principal or actor.
 
 :::
 
@@ -1351,7 +1351,7 @@ During an upgrade, a trap occurring in the implicit call to `preupgrade()` or `p
 
 ##### `inspect`
 
-Given a record of message attributes, this function produces a [`Bool`](../base/Bool.md) that indicates whether to accept or decline the message by returning `true` or `false`. The function is invoked by the system on each ingress message issue as an ICP update call, excluding non-replicated query calls. Similar to a query, any side-effects of an invocation are transient and discarded. A call that traps due to some fault has the same result as returning `false` message denial.
+Given a record of message attributes, this function produces a [`Bool`](../base/Bool.md) that indicates whether to accept or decline the message by returning `true` or `false`. The function is invoked by the system on each ingress message issue as an BIG update call, excluding non-replicated query calls. Similar to a query, any side-effects of an invocation are transient and discarded. A call that traps due to some fault has the same result as returning `false` message denial.
 
 The argument type of `inspect` depends on the interface of the enclosing actor. In particular, the formal argument of `inspect` is a record of fields of the following types:
 
@@ -2132,7 +2132,7 @@ The exhaustiveness side condition on `shared` function expressions ensures that 
 :::note
 
 Calls to local functions with `async` return type and `shared` functions can fail due to a lack of canister resources.
-Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 
 Earlier versions of Motoko would trap in such situations, making it difficult for the calling canister to mitigate such failures.
 Now, a caller can handle these errors using enclosing `try ... catch ...` expressions, if desired.
@@ -2411,7 +2411,7 @@ Evaluation of `async <block-or-exp>` queues a message to evaluate `<block-or-exp
 
 Because it involves messaging, evaluating an `async` expression can fail due to a lack of canister resources.
 
-Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 
 Earlier version of Motoko would trap in such situations, making it difficult for the producer of the async expression to mitigate such failures. Now, the producer can handle these errors using an enclosing `try ... catch ...` expression, if desired.
 
@@ -2443,7 +2443,7 @@ Using `await` signals that the computation will commit its current state and sus
 :::note
 
 Because it involves additional messaging, an `await` on a completed future can, in rare circumstances, fail due to a lack of canister resources.
-Such failures will result in the call immediately throwing an error with `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such failures will result in the call immediately throwing an error with `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 
 The error is produced eagerly, without suspending nor committing state.
 Earlier versions of Motoko would trap in such situations, making it difficult for the consumer of the `await` to mitigate such failures. Now, the consumer can handle these errors by using an enclosing `try ... catch ...` expression, if desired.

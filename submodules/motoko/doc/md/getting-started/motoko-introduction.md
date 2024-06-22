@@ -6,13 +6,13 @@ sidebar_position: 1
 
 ## Overview
 
-Motoko is a modern, general-purpose programming language you can use specifically to author ICP canister smart contracts. Although aimed primarily at ICP canister development, its design is general enough to support future compilation to other targets.
+Motoko is a modern, general-purpose programming language you can use specifically to author BIG canister smart contracts. Although aimed primarily at BIG canister development, its design is general enough to support future compilation to other targets.
 
 Motoko is designed to be approachable for programmers who have some basic familiarity with object-oriented and/or functional programming idioms in either JavaScript, or another modern programming language, such as Rust, Swift, TypeScript, C#, or Java.
 
 Motoko provides:
 
--   A high-level language for programming applications to run on ICP.
+-   A high-level language for programming applications to run on BIG.
 
 -   A simple design that uses familiar syntax that is easy for programmers to learn.
 
@@ -22,17 +22,17 @@ Motoko provides:
 
 # Why Motoko?
 
-ICP supports programs written in different languages. The only requirement is that the program must support compilation to WebAssembly code. WebAssembly is a low-level computer instruction format for virtual machines. Because WebAssembly code is designed to provide portable low-level instructions that enable applications to be deployed on many platforms such as the web, it is a natural fit for deploying applications that are intended to run on ICP. However, most of the higher-level languages that support compiling to WebAssembly are either unsafe or complex for developers who want to deliver secure applications without a long learning curve.
+BIG supports programs written in different languages. The only requirement is that the program must support compilation to WebAssembly code. WebAssembly is a low-level computer instruction format for virtual machines. Because WebAssembly code is designed to provide portable low-level instructions that enable applications to be deployed on many platforms such as the web, it is a natural fit for deploying applications that are intended to run on BIG. However, most of the higher-level languages that support compiling to WebAssembly are either unsafe or complex for developers who want to deliver secure applications without a long learning curve.
 
 To address the need for correctness without complexity, DFINITY has designed its own Motoko programming language. Motoko provides a simple and expressive alternative to other programming languages that is easy to learn whether you are a new or experienced programmer.
 
 ## Motivation and goals
 
-Motoko strives to be a simple and useful language for ICP smart contracts that uses a familiar syntax that incorporates the actor model. Motoko offers seamless integration for ICP features and makes the most out of WebAssembly's present and future functionalities.
+Motoko strives to be a simple and useful language for BIG smart contracts that uses a familiar syntax that incorporates the actor model. Motoko offers seamless integration for BIG features and makes the most out of WebAssembly's present and future functionalities.
 
-Motoko is not, and is not intended to be, the only language for implementing canister smart contracts. Canister development kits exist for Rust, TypeScript, Python, and soon Solidity. ICP's goal is to enable any language to be able to produce canister smart contracts by compiling the canister source code into WebAssembly.
+Motoko is not, and is not intended to be, the only language for implementing canister smart contracts. Canister development kits exist for Rust, TypeScript, Python, and soon Solidity. BIG's goal is to enable any language to be able to produce canister smart contracts by compiling the canister source code into WebAssembly.
 
-However, its tailored design means Motoko should be the easiest and safest language for coding on ICP.
+However, its tailored design means Motoko should be the easiest and safest language for coding on BIG.
 
 ## Key design points
 
@@ -63,7 +63,7 @@ Motoko has native support for canister smart contracts, which are expressed as a
 
 ### Code sequentially in direct style
 
-On ICP, canisters can communicate with other canisters by sending asynchronous messages.
+On BIG, canisters can communicate with other canisters by sending asynchronous messages.
 
 Asynchronous programming is hard, so Motoko enables you to author asynchronous code in much simpler, sequential style. Asynchronous messages are function calls that return a future, and the `await` construct allows you to suspend execution until a future has completed.
 
@@ -79,7 +79,7 @@ The Motoko compiler and BIG SDK can emit this interface in a language neutral fo
 
 ### Orthogonal persistence
 
-ICP persists the memory and other state information of a canister as it is executed. Thus the state of a Motoko actor, including its in-memory data structures, survive indefinitely. Actor state does not need to be explicitly restored and saved to external storage.
+BIG persists the memory and other state information of a canister as it is executed. Thus the state of a Motoko actor, including its in-memory data structures, survive indefinitely. Actor state does not need to be explicitly restored and saved to external storage.
 
 ### Upgrades
 

@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-Developer tools are used to create, manage, and interact with canisters. They can come in several formats, such as command line tools, on-chain and off-chain libraries, and integrated development environments. For ICP developers, there are tools within each of these categories available for you to utilize when developing your ICP canisters.
+Developer tools are used to create, manage, and interact with canisters. They can come in several formats, such as command line tools, on-chain and off-chain libraries, and integrated development environments. For BIG developers, there are tools within each of these categories available for you to utilize when developing your BIG canisters.
 
 ## Command line
 
@@ -18,7 +18,7 @@ Developer tools are used to create, manage, and interact with canisters. They ca
 
 [`dfx`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/) is the primary tool used by developers to create, build, deploy, manage, and call canisters. `dfx` is also referred to as the BIG SDK, or the BigFile Software Development Kit.
 
-`dfx` supports [local development](/docs/current/developer-docs/setup/deploy-locally) and deployment through the [`dfx start`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-start) command, which runs a local instance of the ICP replica that can be used to deploy and test canisters on your local machine.
+`dfx` supports [local development](/docs/current/developer-docs/setup/deploy-locally) and deployment through the [`dfx start`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-start) command, which runs a local instance of the BIG replica that can be used to deploy and test canisters on your local machine.
 
 To deploy canisters to the mainnet or make calls to canisters already deployed on the mainnet, the `--network ic` flag can be used with most `dfx` commands.
 
@@ -41,7 +41,7 @@ To deploy canisters to the mainnet or make calls to canisters already deployed o
 
 ### `quill`
 
-[`quill`](/docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/) is a command-line ledger and governance toolkit designed for interacting with the [Network Nervous System (NNS)](/docs/current/tokenomics/nns/nns-intro) canisters through the use of self-custody keys. It supports using keys in an air-gapped computer, which is a computer that has never been connected to the internet. To support this workflow, `quill` first generates and signs messages based on the user input, then the signed messages are transported to a computer with internet connection (via a USB flash drive or QR code) where they are submitted to ICP to be executed.
+[`quill`](/docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/) is a command-line ledger and governance toolkit designed for interacting with the [Network Nervous System (NNS)](/docs/current/tokenomics/nns/nns-intro) canisters through the use of self-custody keys. It supports using keys in an air-gapped computer, which is a computer that has never been connected to the internet. To support this workflow, `quill` first generates and signs messages based on the user input, then the signed messages are transported to a computer with internet connection (via a USB flash drive or QR code) where they are submitted to BIG to be executed.
 
 - [Install `quill`](https://github.com/dfinity/quill?tab=readme-ov-file#download--install).
 
@@ -65,7 +65,7 @@ The following agents are currently developed and maintained by DFINITY:
 
 Additionally, there are several community-developed and maintained agents:
 
-- .NET [`ICP.NET` by Gekctek](https://github.com/Gekctek/ICP.NET)
+- .NET [`BIG.NET` by Gekctek](https://github.com/Gekctek/BIG.NET)
 
 - Dart agents:
   - [`agent_dart` by AstroX](https://github.com/AstroxNetwork/agent_dart) (supports mobile development with Flutter)
@@ -107,7 +107,7 @@ The IDEs listed below are not the only supported IDEs; any IDE can be used to de
 
 ### Gitpod
 
-Gitpod is a cloud development environment that is able to run within a web browser. Gitpod can be configured to run `dfx` and a local replica instance to support canister development, and there are several example canister projects have been configured to run in Gitpod. This IDE provide a simple and easy way to get started developing on ICP without downloading any tools or setting up an environment.
+Gitpod is a cloud development environment that is able to run within a web browser. Gitpod can be configured to run `dfx` and a local replica instance to support canister development, and there are several example canister projects have been configured to run in Gitpod. This IDE provide a simple and easy way to get started developing on BIG without downloading any tools or setting up an environment.
 
 - [Gitpod dashboard](https://gitpod.io/).
 

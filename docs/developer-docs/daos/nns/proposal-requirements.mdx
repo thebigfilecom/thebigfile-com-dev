@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-Only [neurons](/docs/current/concepts/governance) with at least 10 ICP and 6 months of dissolve delay can submit proposals to the NNS. To learn more on how to submit a proposal, refer to the [how to create an NNS motion proposal](https://wiki.internetcomputer.org/wiki/How-To:_Create_an_NNS_motion_proposal).
+Only [neurons](/docs/current/concepts/governance) with at least 10 BIG and 6 months of dissolve delay can submit proposals to the NNS. To learn more on how to submit a proposal, refer to the [how to create an NNS motion proposal](https://wiki.internetcomputer.org/wiki/How-To:_Create_an_NNS_motion_proposal).
 
 ## Neurons
 
@@ -18,7 +18,7 @@ Neurons have the following attributes:
 
 * **Identity (uint64)**: The general identity of the neuron object. When a neuron is configured to follow another neuron, this is the value that is used. This is a random 64-bit value selected by NNS governance at neuron creation.
 
-* **Account (bytes)**: The ledger account where the locked ICP balance resides.
+* **Account (bytes)**: The ledger account where the locked BIG balance resides.
 
 * **Controller (principal ID)**: The principal that actually controls the neuron. The principal must identify a public key pair, which acts as a “master key,” such that the corresponding secret key should be kept very secure. The principal might control many neurons.
 
@@ -34,7 +34,7 @@ Neurons have the following attributes:
 
 * **DissolveDelay (duration)**: When the dissolve timer is stopped, this stores how much time the dissolve timer will be started with. It can be eight years at most. At any time while in this state, the neuron owner may (re)start dissolving, in which case WhenDissolved will get assigned to the timestamp when the action is taken plus DissolveDelay.
 
-* **Maturity (positive number – percent)**: The maturity of a neuron, which determines its ability to spawn a new neuron and corresponding locked balance of newly minted ICP in expectation equal to this value in percent of the stake of the spawning neuron. When new neurons are created, their maturity is zero. When neurons vote, over time the NNS increases their maturity to reward them.
+* **Maturity (positive number – percent)**: The maturity of a neuron, which determines its ability to spawn a new neuron and corresponding locked balance of newly minted BIG in expectation equal to this value in percent of the stake of the spawning neuron. When new neurons are created, their maturity is zero. When neurons vote, over time the NNS increases their maturity to reward them.
 
 * **Follow relationships (mapping from topic to list of followers)**: A neuron can be configured to vote automatically by following other neurons on a topic-by-topic basis. For any valid topic, a list of followers can be specified, and the neuron will follow the vote of a majority of the followers on a proposal with a type belonging to that topic. If a null topic is specified, this acts as a catch-all that enables the neuron to follow the vote of followees where a rule has not been specified.
 
@@ -58,11 +58,11 @@ The principal that controls a neuron may instruct it to perform some of these po
 
 * **Stop dissolving**: A neuron that is dissolving can be instructed to stop, whereupon its dissolve delay stops falling with time.
 
-* **Disburse**: When the dissolve delay of the neuron is 0, its controlling principal can instruct it to disburse the neuron’s stake. Its locked ICP balance is transferred to a specified new ledger account, and the neuron and its own ledger account disappear.
+* **Disburse**: When the dissolve delay of the neuron is 0, its controlling principal can instruct it to disburse the neuron’s stake. Its locked BIG balance is transferred to a specified new ledger account, and the neuron and its own ledger account disappear.
 
 * **Increase dissolve delay**: The dissolve delay of a neuron can be increased up to a maximum of eight years.
 
-* **Spawn**: When the maturity of a neuron has risen above a threshold, it can be instructed to spawn a new neuron. This creates a new neuron that locks a new balance of ICP on the ledger. The new neuron can remain controlled by the same principal as its parent, or be assigned to a new principal. When a neuron spawns a new neuron, its maturity is decreased by the amount that was spawned to the new neuron.
+* **Spawn**: When the maturity of a neuron has risen above a threshold, it can be instructed to spawn a new neuron. This creates a new neuron that locks a new balance of BIG on the ledger. The new neuron can remain controlled by the same principal as its parent, or be assigned to a new principal. When a neuron spawns a new neuron, its maturity is decreased by the amount that was spawned to the new neuron.
 
 * **Add hot key**: Add a new hot key that can be used to manage the neuron. This provides an alternative to using the principal’s cold key to manage the neuron, which might be onerous and difficult to keep secure, especially if it is used regularly. A hot key might be a WebAuthn key that is maintained inside a user device, such as a smartphone.
 
@@ -116,13 +116,13 @@ Each proposal is an instance of a specific “proposal type”, which determines
 
 * **ManageNetworkEconomics (#NetworkEconomics)**: This is a single proposal type that can update one or several economic parameters:
 
-    * **Reject cost**: The amount of ICP the proposer of a rejected proposal will be charged to prevent the spamming of frivolous proposals.
+    * **Reject cost**: The amount of BIG the proposer of a rejected proposal will be charged to prevent the spamming of frivolous proposals.
 
-    * **Minimum neuron stake**: Set the minimum number of ICP required for the creation of a neuron. The same limit must also be respected when increasing the dissolve delay or changing the neuron state from dissolving to aging.
+    * **Minimum neuron stake**: Set the minimum number of BIG required for the creation of a neuron. The same limit must also be respected when increasing the dissolve delay or changing the neuron state from dissolving to aging.
 
-    * **Neuron management fee**: The cost in ICP per neuron management proposal. Here the NNS is doing work on behalf of a specific neuron, and a small fee will be applied to prevent overuse of this feature (i.e., spam).
+    * **Neuron management fee**: The cost in BIG per neuron management proposal. Here the NNS is doing work on behalf of a specific neuron, and a small fee will be applied to prevent overuse of this feature (i.e., spam).
 
-    * **Minimum ICP/SDR rate**: To prevent mistakes, there is a lower bound for the ICP/SDR rate, managed by network economic proposals.
+    * **Minimum BIG/SDR rate**: To prevent mistakes, there is a lower bound for the BIG/SDR rate, managed by network economic proposals.
 
     * **Dissolve delay of spawned neurons**: The dissolve delay of a neuron spawned from the maturity of an existing neuron.
 
@@ -135,11 +135,11 @@ Each proposal is an instance of a specific “proposal type”, which determines
 * **Motion (#Governance)**: A motion is a text that can be adopted or rejected. No code is executed when a motion is adopted. An adopted motion should guide the future strategy of the BigFile ecosystem.
 
 * **ApproveGenesisKYC (#KYC)**: When new neurons are created at Genesis, they have GenesisKYC=false. This restricts what actions they can perform. Specifically, they cannot spawn new neurons, and once their dissolve delays are zero, they cannot be disbursed and their balances unlocked to new accounts. This proposal sets GenesisKYC=true for batches of principals.
-(Special note: The Genesis event disburses all ICP in the form of neurons, whose principals must be KYCed. Consequently, all neurons created after Genesis have GenesisKYC=true set automatically since they must have been derived from balances that have already been KYCed.)
+(Special note: The Genesis event disburses all BIG in the form of neurons, whose principals must be KYCed. Consequently, all neurons created after Genesis have GenesisKYC=true set automatically since they must have been derived from balances that have already been KYCed.)
 
 * **AddOrRemoveNodeProvider (#ParticipantManagement)**: Assign (or revoke) an identity to a node provider, associating key information regarding the legal person associated that should provide a way to uniquely identify it.
 
-* **RewardNodeProvider (#NodeProviderRewards)**: Propose to reward a Gen-1 node provider an amount of ICP as compensation for providing Gen-1 nodes to ICP.
+* **RewardNodeProvider (#NodeProviderRewards)**: Propose to reward a Gen-1 node provider an amount of BIG as compensation for providing Gen-1 nodes to BIG.
 
 * **SetDefaultFollowees (#Governance)**: Specify the list of followers that a freshly created neuron should have.
 
@@ -159,11 +159,11 @@ The following is a list of proposal types that call other NNS canisters:
 
 * **UpdateSubnetConfig (#SubnetManagement)**: Update a subnet’s configuration. This proposal updates the subnet record in the registry, with the changes being picked up by the nodes on the subnet when they reference the respective registry version. Subnet configuration comprises protocol parameters that must be consistent across the subnet (e.g., message sizes).
 
-* **AssignNPID (#ParticipantManagement)**: Assign an identity to a node operator associating key information regarding its ownership, the jurisdiction in which it is located, and other information. The node operator is stored as a record in the registry. It contains the remaining node allowance for that node operator, that is the number of nodes the node operator can still add to ICP. When an additional node is added by the node operator, the remaining allowance is decreased.
+* **AssignNPID (#ParticipantManagement)**: Assign an identity to a node operator associating key information regarding its ownership, the jurisdiction in which it is located, and other information. The node operator is stored as a record in the registry. It contains the remaining node allowance for that node operator, that is the number of nodes the node operator can still add to BIG. When an additional node is added by the node operator, the remaining allowance is decreased.
 
 * **RootUpgrade (#NetworkCanisterManagement)**: A proposal to upgrade the root canister in the NNS subnetwork. The proposal is processed by the Lifeline canister, which controls the root canister. The proposal updates the Wasm module as well as the authorization settings.
 
-* **SetICPSDR (#ExchangeRate)**: Instruct the NNS about the market value of 1 ICP as measured by an IMF SDR. This setting affects cycles pricing (as the value of cycles shall be constant concerning IMF SDRs).
+* **SetICPSDR (#ExchangeRate)**: Instruct the NNS about the market value of 1 BIG as measured by an IMF SDR. This setting affects cycles pricing (as the value of cycles shall be constant concerning IMF SDRs).
 
 * **UpgradeSubnetToReplicaVersion (#SubnetManagement)**: Update the replica version running on a given subnet. The proposal changes the replica version that is used on the specified subnet. The version must be contained in the list of blessed replica versions. The upgrade is performed when the subnet creates the next regular CUP.
 
@@ -179,28 +179,28 @@ The following is a list of proposal types that call other NNS canisters:
 
 * **StopOrStartNNSCanister (#NetworkCanisterManagement)**: Stop or start an NNS canister.
 
-## ICP tokens
-ICP are native utility tokens that play three key roles in the network:
+## BIG tokens
+BIG are native utility tokens that play three key roles in the network:
 
-* **Facilitating network governance**: ICP tokens can be locked to create neurons that participate in network governance by voting, through which they can earn economic rewards.
+* **Facilitating network governance**: BIG tokens can be locked to create neurons that participate in network governance by voting, through which they can earn economic rewards.
 
-* **Production of cycles for compute**: ICP provides a source store of value that can be converted into “cycles,” which power computation in the role of fuel that is burned when it is used. The NNS converts ICP to cycles at a variable rate, so chosen to ensure users of the network can always create new cycles at approximately constant cost concerning IMF SDR, such that the cost of acquiring fuel is predictable.
+* **Production of cycles for compute**: BIG provides a source store of value that can be converted into “cycles,” which power computation in the role of fuel that is burned when it is used. The NNS converts BIG to cycles at a variable rate, so chosen to ensure users of the network can always create new cycles at approximately constant cost concerning IMF SDR, such that the cost of acquiring fuel is predictable.
 
 * **Rewarding participants**: The network provides rewards to incentivize those playing important roles that enable the network to function, including a) the provision of “voting rewards” to those participating in governance, and b) the provision of “node provider rewards” to those operating the node machines that are hosting the network.
 
 ## Ledger
-The ICP ledger is hosted within the NNS and records all balances of ICP in the manner similar to a spreadsheet. Each row is called an “account,” which has two fields (i.e., there are two “columns”):
+The BIG ledger is hosted within the NNS and records all balances of BIG in the manner similar to a spreadsheet. Each row is called an “account,” which has two fields (i.e., there are two “columns”):
 
 * **Account identifier (bytes)**: A unique value that is derived from the identity of the “principal” that “controls” the account. Currently, the principal must either be (i) the owner of a public key pair, or (ii) a canister smart contract that is part of the NNS. Account identifiers are derived by hashing the concatenation of a domain separator, the principal ID, and the subaccount (or zeros if no subaccount is given).
 
-* **Balance**: The quantity of ICP assigned to the account.
+* **Balance**: The quantity of BIG assigned to the account.
 
 When the principal is a public key or Canister, they can apply the following operation to an account:
 
-* **Send**: Transfer a portion of the ICP balance to another account. If all the ICP is sent to another account, then the transfering account ceases to exist (i.e., is deleted from the ledger).
+* **Send**: Transfer a portion of the BIG balance to another account. If all the BIG is sent to another account, then the transfering account ceases to exist (i.e., is deleted from the ledger).
 
 Operations that require interaction between the ledger and the governance system (Neurons):
 
-* **Create neuron**: When the principal is a public key holder, they may lock a portion of their balance inside a new neuron. Technically, creating the neuron is done in two stages. First, transfer the ICP to be staked to an account of the governance canister (which corresponds to a new neuron — the details of the association are omitted here). Then notify the governance canister of the incoming transfer which updates its internal neuron bookkeeping. To move these ICP to a different account, such as back to the original account, where they can once again be controlled like a normal balance, the associated neuron must be fully dissolved and disbursed (destroyed).
+* **Create neuron**: When the principal is a public key holder, they may lock a portion of their balance inside a new neuron. Technically, creating the neuron is done in two stages. First, transfer the BIG to be staked to an account of the governance canister (which corresponds to a new neuron — the details of the association are omitted here). Then notify the governance canister of the incoming transfer which updates its internal neuron bookkeeping. To move these BIG to a different account, such as back to the original account, where they can once again be controlled like a normal balance, the associated neuron must be fully dissolved and disbursed (destroyed).
 
 * **Refresh stake**: The stake of a neuron may be increased by transferring to its address/account in the ledger and notifying the governance canister of the incoming transfer. Refreshing the stake will change the maturity and age of the neuron prorated. For example, if the stake is doubled, the maturity and age will be halved, so spawning will yield the same amount and the age bonus will be the same as before (in absolute terms).

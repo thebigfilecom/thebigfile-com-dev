@@ -30,7 +30,7 @@ You’ll need the following to complete this guide:
 
 -  [x] An ed25519 key and your favorite tools to sign messages using that key.
 
--  [x] At least 2 ICP on the ledger account controlled by your key (see [Compute the ledger account for staking](#_compute_the_ledger_account_for_staking) section).
+-  [x] At least 2 BIG on the ledger account controlled by your key (see [Compute the ledger account for staking](#_compute_the_ledger_account_for_staking) section).
 
 ## Deriving account identifiers
 
@@ -117,7 +117,7 @@ Important considerations:
 
 -   Replace `address` fields below with addresses you got on the previous steps. Only the second `TRANSACTION` operation (with index 1 in the snippet below) should use the ledger address of the neuron. All other operations should use the ledger address of the controller of the neuron.
 
--   The amount in the `TRANSACTION` operation is the amount you stake. In this example, the amount is 1 ICP.
+-   The amount in the `TRANSACTION` operation is the amount you stake. In this example, the amount is 1 BIG.
 
 -   Adjust the `dissolve_time_utc_seconds` metadata field of the `SET_DISSOLVE_TIMESTAMP` operation. The current timestamp plus 31,557,600 seconds corresponds to a one-year stake.
 
@@ -138,7 +138,7 @@ curl -0 -X POST http://localhost:8080/construction/payloads \
       },
       "amount": {
         "value": "-100000000",
-        "currency": { "symbol": "ICP", "decimals": 8 }
+        "currency": { "symbol": "BIG", "decimals": 8 }
       }
     },
     {
@@ -149,7 +149,7 @@ curl -0 -X POST http://localhost:8080/construction/payloads \
       },
       "amount": {
         "value": "100000000",
-        "currency": { "symbol": "ICP", "decimals": 8 }
+        "currency": { "symbol": "BIG", "decimals": 8 }
       }
     },
     {
@@ -160,7 +160,7 @@ curl -0 -X POST http://localhost:8080/construction/payloads \
       },
       "amount": {
         "value": "-10000",
-        "currency": { "symbol": "ICP", "decimals": 8 }
+        "currency": { "symbol": "BIG", "decimals": 8 }
       }
     },
     {
@@ -279,7 +279,7 @@ The `payloads` field of the response contains the list of payloads that need to 
 
 :::info
 
-According to the Rosetta API specification ([Flow of Operations](https://www.rosetta-api.org/docs/construction_api_introduction.html#flow-of-operations)), the client should call `/construction/preprocess` and `/construction/metadata` before calling `/construction/payloads` because there might be some metadata that needs to be attached to the payloads request. Currently, there is no need to do it for the ICP Rosetta node implementation, so these unnecessary steps were skipped.
+According to the Rosetta API specification ([Flow of Operations](https://www.rosetta-api.org/docs/construction_api_introduction.html#flow-of-operations)), the client should call `/construction/preprocess` and `/construction/metadata` before calling `/construction/payloads` because there might be some metadata that needs to be attached to the payloads request. Currently, there is no need to do it for the BIG Rosetta node implementation, so these unnecessary steps were skipped.
 
 :::
 
@@ -319,7 +319,7 @@ The response must match the transaction intent.
       },
       "amount": {
         "value": "-100000000",
-        "currency": {"symbol": "ICP", "decimals": 8}
+        "currency": {"symbol": "BIG", "decimals": 8}
       }
     },
     {
@@ -331,7 +331,7 @@ The response must match the transaction intent.
       },
       "amount": {
         "value": "100000000",
-        "currency": {"symbol": "ICP", "decimals": 8}
+        "currency": {"symbol": "BIG", "decimals": 8}
       }
     },
     {
@@ -343,7 +343,7 @@ The response must match the transaction intent.
       },
       "amount": {
         "value": "-10000",
-        "currency": {"symbol": "ICP", "decimals": 8}
+        "currency": {"symbol": "BIG", "decimals": 8}
       }
     },
     {
@@ -566,7 +566,7 @@ The response must match the transaction intent.
       },
       "amount": {
         "value": "-100000000",
-        "currency": {"symbol": "ICP", "decimals": 8}
+        "currency": {"symbol": "BIG", "decimals": 8}
       }
     },
     {
@@ -578,7 +578,7 @@ The response must match the transaction intent.
       },
       "amount": {
         "value": "100000000",
-        "currency": {"symbol": "ICP", "decimals": 8}
+        "currency": {"symbol": "BIG", "decimals": 8}
       }
     },
     {
@@ -590,7 +590,7 @@ The response must match the transaction intent.
       },
       "amount": {
         "value": "-10000",
-        "currency": {"symbol": "ICP", "decimals": 8}
+        "currency": {"symbol": "BIG", "decimals": 8}
       }
     },
     {
@@ -669,7 +669,7 @@ The response should look like the following:
         },
         "amount": {
           "value": "-100000000",
-          "currency": { "symbol": "ICP", "decimals": 8 }
+          "currency": { "symbol": "BIG", "decimals": 8 }
         }
       },
       {
@@ -681,7 +681,7 @@ The response should look like the following:
         },
         "amount": {
           "value": "100000000",
-          "currency": { "symbol": "ICP", "decimals": 8 }
+          "currency": { "symbol": "BIG", "decimals": 8 }
         }
       },
       {
@@ -693,7 +693,7 @@ The response should look like the following:
         },
         "amount": {
           "value": "-10000",
-          "currency": { "symbol": "ICP", "decimals": 8 }
+          "currency": { "symbol": "BIG", "decimals": 8 }
         }
       },
       {
@@ -788,7 +788,7 @@ The response should look like the following:
   "balances": [
     {
       "value": "100000000",
-      "currency": { "symbol": "ICP", "decimals": 8 }
+      "currency": { "symbol": "BIG", "decimals": 8 }
     }
   ],
   "metadata": {

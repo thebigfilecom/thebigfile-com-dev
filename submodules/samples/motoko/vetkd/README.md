@@ -24,7 +24,7 @@ The implementation of [the proposed vetKD system API](https://github.com/dfinity
 ## Prerequisites
 - [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 - [x] Install [Node.js](https://nodejs.org/en/download/).
-- [x] Install [Rust](https://www.rust-lang.org/tools/install), and add Wasm as a target (`rustup target add wasm32-unknown-unknown`). Note that Rust is only needed for compiling the (insecure) canister offering the vetKD system API, which later would be directly integrated into ICP.
+- [x] Install [Rust](https://www.rust-lang.org/tools/install), and add Wasm as a target (`rustup target add wasm32-unknown-unknown`). Note that Rust is only needed for compiling the (insecure) canister offering the vetKD system API, which later would be directly integrated into BIG.
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 ## Running locally

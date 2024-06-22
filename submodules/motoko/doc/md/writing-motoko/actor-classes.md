@@ -69,13 +69,13 @@ Clients of actor class `Map` are now free to determine the maximum number of buc
 
 :::note
 
-On ICP, calls to a class constructor must be provisioned with cycles to pay for the creation of a principal. See [ExperimentalCycles](../base/ExperimentalCycles.md) for instructions on how to add cycles to a call using the imperative `ExperimentalCycles.add<system>(cycles)` function.
+On BIG, calls to a class constructor must be provisioned with cycles to pay for the creation of a principal. See [ExperimentalCycles](../base/ExperimentalCycles.md) for instructions on how to add cycles to a call using the imperative `ExperimentalCycles.add<system>(cycles)` function.
 
 :::
 
 ## Configuring and managing actor class instances
 
-On ICP, the primary constructor of an imported actor class always creates a new principal and installs a fresh instance of the class as the code for that principal.
+On BIG, the primary constructor of an imported actor class always creates a new principal and installs a fresh instance of the class as the code for that principal.
 
 To provide further control over actor class installation, Motoko endows each imported actor class with an extra, secondary constructor. This constructor takes an additional first argument that specifies the desired installation mode. The constructor is only available via special syntax that stresses its `system` functionality.
 

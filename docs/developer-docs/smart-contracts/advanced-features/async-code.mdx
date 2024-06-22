@@ -5,13 +5,13 @@
 In programming, the [async/await pattern](https://en.wikipedia.org/wiki/Async/await) is a syntactic feature of many programming languages that allows an asynchronous, non-blocking function to be structured in a similar way to an ordinary synchronous function.
 
 
-On ICP, `async/await` is useful in the context of inter-canister calls. Inter-canister calls cannot be handled synchronously (as the two canisters
+On BIG, `async/await` is useful in the context of inter-canister calls. Inter-canister calls cannot be handled synchronously (as the two canisters
 interacting might not even be in the same subnet), so when a canister sends a call to another, it will have to wait until a response comes back
 before it can continue processing the call it received.
 
 
 The `async/await` pattern makes this look straightforward, as the developer can write code as if processing happens sequentially and the call to
-the callee is handled “synchronously”. However, given ICP's message passing model, one has to be careful in case there are [concurrent calls that
+the callee is handled “synchronously”. However, given BIG's message passing model, one has to be careful in case there are [concurrent calls that
 message executions can interleave](/docs/current/references/message-execution-properties/) as these can lead to inconsistencies if they are not anticipated.
 
 ## Overview of language runtime for asynchronous code
@@ -24,7 +24,7 @@ result of the asynchronous computation is ready or not. The language runtime can
 is not ready, the code will typically yield execution and the future will be polled again later.
 
 
-In order to implement inter-canister calls on ICP, there would need to be a future which, once created, takes care of calling
+In order to implement inter-canister calls on BIG, there would need to be a future which, once created, takes care of calling
 [the respective system APIs](/docs/current/references/ic-interface-spec#system-api-call) to make the call and will
 become ready once the response from the calling canister is received. The language runtime can poll the future once it's ready and retrieve the
 result of the inter-canister call.

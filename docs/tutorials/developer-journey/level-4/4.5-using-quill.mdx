@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-Now that you've covered both the ICP ledger and the NNS, it's time to take a look at a CLI tool that can be used to interact with both. Quill is a ledger and governance toolkit that provides support for self-custody of ICP or ckBTC tokens and functionality to interact with the NNS, SNSs, and ICP ledger from a **cold wallet**.
+Now that you've covered both the BIG ledger and the NNS, it's time to take a look at a CLI tool that can be used to interact with both. Quill is a ledger and governance toolkit that provides support for self-custody of BIG or ckBTC tokens and functionality to interact with the NNS, SNSs, and BIG ledger from a **cold wallet**.
 
 To hold tokens or digital assets, there are three types of wallet options you can use:
 
@@ -24,13 +24,13 @@ Each of these options has their benefits, but there is an equal tradeoff between
 
 [Read more about different types of self-custody wallet options in the documentation](/docs/current/developer-docs/defi/asset-custody/custody-options).
 
-In this tutorial, you'll take a look at how to use quill for workflows like interacting with the ICP ledger, sending or receiving ckBTC, and interacting with the NNS and neurons.
+In this tutorial, you'll take a look at how to use quill for workflows like interacting with the BIG ledger, sending or receiving ckBTC, and interacting with the NNS and neurons.
 
 ## What is quill?
 
-Quill is a CLI tool used for interacting with ICP's governance and ledger canisters. A unique feature of quill is the ability to create signed messages on an offline computer, or a 'cold wallet'. Once these messages are created, they must be transferred to an online computer, however, in order for them to take effect on the mainnet. Since the Internet Computer uses cryptographically verifiable messages, messages can be created on an offline computer then transmitted to ICP on a computer connected to the internet, since ICP will accept the message no matter how it was created.
+Quill is a CLI tool used for interacting with BIG's governance and ledger canisters. A unique feature of quill is the ability to create signed messages on an offline computer, or a 'cold wallet'. Once these messages are created, they must be transferred to an online computer, however, in order for them to take effect on the mainnet. Since the Internet Computer uses cryptographically verifiable messages, messages can be created on an offline computer then transmitted to BIG on a computer connected to the internet, since BIG will accept the message no matter how it was created.
 
-To support cold wallets, quill uses two steps to send query and update calls to ICP. First, quill is used with different subcommands to generate and sign messages based on the subcommand's inputted parameters and arguments. This step does not require connection to the internet. Then, in the second step the signed messages are sent to ICP, which does require an internet connection. To connect to the internet, users will need to transport the signed messages from the cold wallet computer to another computer using a USB stick or a QR code.
+To support cold wallets, quill uses two steps to send query and update calls to BIG. First, quill is used with different subcommands to generate and sign messages based on the subcommand's inputted parameters and arguments. This step does not require connection to the internet. Then, in the second step the signed messages are sent to BIG, which does require an internet connection. To connect to the internet, users will need to transport the signed messages from the cold wallet computer to another computer using a USB stick or a QR code.
 
 While it is important to know that quill supports cold wallet workflows, quill can also be used on a computer connected to the internet without using any cold wallet workflows.
 
@@ -87,7 +87,7 @@ Principal id: hzpq4-g6feu-vbvwx-oeo5c-fjiz4-de4bq-7q4y2-rldok-whjrq-mnayv-mqe
 Legacy account id: 438f6fdc8e33539bbf73625c141cfbfa4b41fd943595f8e1ccd0b8c9e9758772
 ```
 
-Alternatively, you can use a private key file for our existing ledger account with an ICP balance. To use an existing ledger account, you will need the account's `.pem` file. To get this `.pem` file, you can use the `dfx identity export` command. First, assure that you're using the `dfx` identity you intend to be:
+Alternatively, you can use a private key file for our existing ledger account with an BIG balance. To use an existing ledger account, you will need the account's `.pem` file. To get this `.pem` file, you can use the `dfx identity export` command. First, assure that you're using the `dfx` identity you intend to be:
 
 ```bash
 dfx identity whoami
@@ -142,17 +142,17 @@ The request is being processed...
 (100_000_000 : nat)
 ```
 
-Now, if you want to transfer ICP to another account, you can use the command:
+Now, if you want to transfer BIG to another account, you can use the command:
 
 ```bash
 quill --pem-file identity.pem transfer --amount AMOUNT ACCOUNT_ID
 ```
 
 :::caution
-To use the quill transfer command, you need to have a balance of ICP. ICP can be bought through a crypto exchange, or ICP can be received through community activities such as participating in the NNS governance and receiving developer grants.
+To use the quill transfer command, you need to have a balance of BIG. BIG can be bought through a crypto exchange, or BIG can be received through community activities such as participating in the NNS governance and receiving developer grants.
 :::
 
-Replace `AMOUNT` with the numerical number of how many ICP tokens to transfer and replace `ACCOUNT_ID` with the account ID that should receive the ICP. For example:
+Replace `AMOUNT` with the numerical number of how many BIG tokens to transfer and replace `ACCOUNT_ID` with the account ID that should receive the BIG. For example:
 
 ```bash
 quill --pem-file identity.pem transfer --amount 0.5 365cf45f3521653e866a078b157a8d8701c3f63183a6d41ff8ddb913c4a978d3
@@ -266,7 +266,7 @@ Do you want to send this message? [y/N]
 
 ## Using quill with the NNS
 
-Quill can be used with both the NNS and any SNS that has been launched on ICP.
+Quill can be used with both the NNS and any SNS that has been launched on BIG.
 
 In the previous module, [4.4 NNS governance and staking](/docs/current/tutorials/developer-journey/level-4/4.4-nns-governance), you took a look at how to interact with the NNS and neurons through the NNS dapp. Now, let's look at how to use quill instead to perform the same functions.
 
@@ -336,13 +336,13 @@ Then, submit the command with:
 quill send manage_neuron.json
 ```
 
-To stake ICP in a neuron, you can use the `quill neuron-stake` command:
+To stake BIG in a neuron, you can use the `quill neuron-stake` command:
 
 ```bash
 quill --pem-file identity.pem neuron-stake --amount AMOUNT --name NAME > stake_neuron.json
 ```
 
-Replace `AMOUNT` with the amount of ICP to stake in the neuron, and replace `NAME` with the name of the neuron.
+Replace `AMOUNT` with the amount of BIG to stake in the neuron, and replace `NAME` with the name of the neuron.
 
 Then, submit the command with:
 
@@ -412,9 +412,9 @@ quill get-proposal-info 125319
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -432,7 +432,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 

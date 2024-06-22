@@ -12,7 +12,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-The JavaScript agent (`agent-js`) is used to interact with the public API endpoints of ICP and canisters deployed on ICP from a JavaScript program. 
+The JavaScript agent (`agent-js`) is used to interact with the public API endpoints of BIG and canisters deployed on BIG from a JavaScript program. 
 
 The JavaScript agent supports both JavaScript and TypeScript languages.
 
@@ -43,9 +43,9 @@ For this guide, use the project created by the command:
 
 ### Simple call
 
-This guide covers connecting to ICP from JavaScript in a web browser. [Learn more about calling ICP from Node.js](/docs/current/developer-docs/developer-tools/off-chain/agents/nodejs).
+This guide covers connecting to BIG from JavaScript in a web browser. [Learn more about calling BIG from Node.js](/docs/current/developer-docs/developer-tools/off-chain/agents/nodejs).
 
-Talking to ICP from your application starts with the canister interface. Let's take a very simple one to begin with.
+Talking to BIG from your application starts with the canister interface. Let's take a very simple one to begin with.
 
 In most cases, it is easier to configure your project to have a canister defined in `dfx.json`, and to generate your declarations automatically using the `dfx generate` command. 
 
@@ -146,7 +146,7 @@ export const idlFactory = ({ IDL }) => {
 
 ```
 
-Unlike our `did.d.ts` declarations, this `idlFactory` needs to be available during runtime. The `idlFactory` gets loaded by an [actor](https://agent-js.icp.host/agent/interfaces/Actor.html) interface, which is what will handle structuring the network calls according to the ICP API and the provided candid spec.
+Unlike our `did.d.ts` declarations, this `idlFactory` needs to be available during runtime. The `idlFactory` gets loaded by an [actor](https://agent-js.icp.host/agent/interfaces/Actor.html) interface, which is what will handle structuring the network calls according to the BIG API and the provided candid spec.
 
 This factory again represents a service with a `greet` method, and the same arguments as before. You may notice, however, that the `IDL.Func` has a third argument, which here is an empty array. That represents any additional annotations the function may be tagged with, which most commonly will be `"query"`.
 
@@ -194,7 +194,7 @@ When you are building apps that run in the browser, here are some things to cons
 
 ### Performance
 
-Updates to ICP may feel slow to your users, at around 2-4 seconds. When you are building your application, take that latency into consideration, and consider following some best practices:
+Updates to BIG may feel slow to your users, at around 2-4 seconds. When you are building your application, take that latency into consideration, and consider following some best practices:
 
 * Avoid blocking UI interactions while you wait for the result of your update. Instead, allow users to continuing to make other updates and interactions, and inform your users of success asynchronously. 
 * Try to avoid making inter-canister calls. If the backend needs to talk to other canisters, the duration can add up quickly.

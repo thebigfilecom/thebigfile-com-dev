@@ -8,7 +8,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Advanced", "Ethereum", "Tutorial"]} />
 
-**EVM RPC** is an ICP canister smart contract for communicating with [Ethereum](https://ethereum.org/en/) and other [EVM blockchains](https://chainlist.org/?testnets=true) using an on-chain API. Communication with EVM-compatible chains includes obtaining and sending information such as:
+**EVM RPC** is an BIG canister smart contract for communicating with [Ethereum](https://ethereum.org/en/) and other [EVM blockchains](https://chainlist.org/?testnets=true) using an on-chain API. Communication with EVM-compatible chains includes obtaining and sending information such as:
 
 - The logs of a specific block or transaction.
 
@@ -26,7 +26,7 @@ The source code for this project is available on GitHub ([internet-computer-prot
 
 ## Goal
 
-The goal of the EVM RPC canister is to act as a gateway between canisters on ICP and EVM-compatible networks through RPC services such as Alchemy, Ankr, or Cloudflare. The EVM RPC canister provides the necessary methods for other ICP canisters to send requests to the Ethereum JSON-RPC API and receive responses.
+The goal of the EVM RPC canister is to act as a gateway between canisters on BIG and EVM-compatible networks through RPC services such as Alchemy, Ankr, or Cloudflare. The EVM RPC canister provides the necessary methods for other BIG canisters to send requests to the Ethereum JSON-RPC API and receive responses.
 
 ## Terminology
 
@@ -50,7 +50,7 @@ RPC providers often require API keys be used to authenticate RPC requests. Authe
 
 - When a dapp developer controls an API key, the dapp is considered less decentralized.
 
-- Storing API keys securely is not supported at the platform level and requires developers to use their own strategies for protecting their keys, creating an additional complexity for developers who want to use reproducible builds. Personal keys are also visible to all nodes on the ICP subnet. [Learn more about authentication](how-it-works.mdx#authentication).
+- Storing API keys securely is not supported at the platform level and requires developers to use their own strategies for protecting their keys, creating an additional complexity for developers who want to use reproducible builds. Personal keys are also visible to all nodes on the BIG subnet. [Learn more about authentication](how-it-works.mdx#authentication).
 
 To provide a solution for developers, the production EVM RPC manages the API keys for each RPC provider on behalf of the developer. If a developer wants to use their own API keys, however, they can [pass their own keys](evm-rpc-canister.mdx#replacing-api-keys) to the EVM RPC canister. Test variations of the EVM RPC canister do not use API keys.
 

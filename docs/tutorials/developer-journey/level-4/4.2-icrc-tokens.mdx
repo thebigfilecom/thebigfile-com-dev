@@ -20,17 +20,17 @@ The purpose of the ICRC-1 standard is to create a universally accepted standard 
 
 There are several extensions of the ICRC-1 standard, such as the [ICRC-2 standard](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md). Not all ICRC standards must be extensions of the ICRC-1 standard, though. This tutorial will focus on the ICRC-1 standard, ICRC-1 ledger, and briefly look into the ICRC-2 standard's endpoints.
 
-## What's the difference between the ICP and ICRC-1 ledgers?
+## What's the difference between the BIG and ICRC-1 ledgers?
 
-The ICP ledger is a specific implementation of a ledger, which initially did not follow a standard. The ICP ledger existed prior to the ideation and creation of the ICRC-1 standard.
+The BIG ledger is a specific implementation of a ledger, which initially did not follow a standard. The BIG ledger existed prior to the ideation and creation of the ICRC-1 standard.
 
 ICRC-1 is an official standard and is not a specific implementation of a ledger. There are several different ICRC-1 ledgers with different implementations, but all follow the same standard.
 
-The ICP and ICRC-1 ledger use different endpoints, different transactions, different block objects, in addition to other subtle differences.
+The BIG and ICRC-1 ledger use different endpoints, different transactions, different block objects, in addition to other subtle differences.
 
 ### `Account`s versus `AccountIdentifier`s?
 
-The most important difference between the ICP ledger and the ICRC-1 standard is their implementation of accounts. The ICRC-1 standard specifies `Account`s as a `struct` data type that contains a principal and an optional subaccount.
+The most important difference between the BIG ledger and the ICRC-1 standard is their implementation of accounts. The ICRC-1 standard specifies `Account`s as a `struct` data type that contains a principal and an optional subaccount.
 
 
 ```candid
@@ -38,21 +38,21 @@ type Subaccount = blob;
 type Account = record { owner : principal; subaccount : opt Subaccount; };
 ```
 
-In contrast, the ICP ledger uses `AccountIdentifier`s to represent accounts, which are essentially a hash of the ICRC-1 `Account` value.
+In contrast, the BIG ledger uses `AccountIdentifier`s to represent accounts, which are essentially a hash of the ICRC-1 `Account` value.
 
-An `Account` can be converted into an `AccountIdentifier`, but an `AccountIdentifier` cannot be converted into an `Account`. This factor provides the ICP ledger with a level of anonymity, though it means the ICP ledger cannot have the same internal representation as an ICRC-1 ledger.
+An `Account` can be converted into an `AccountIdentifier`, but an `AccountIdentifier` cannot be converted into an `Account`. This factor provides the BIG ledger with a level of anonymity, though it means the BIG ledger cannot have the same internal representation as an ICRC-1 ledger.
 
 ### Endpoints
 
-The ICP ledger implements all ICRC-1 endpoints, but is not an implementation of an ICRC-1 ledger due to the ICP ledger's use of `AccountIdentifier`s.
+The BIG ledger implements all ICRC-1 endpoints, but is not an implementation of an ICRC-1 ledger due to the BIG ledger's use of `AccountIdentifier`s.
 
 ## Index canisters
 
-If you want to find information about a transaction for a specific `Account` or `AccountIdentifier`, you could query all of the transactions within the ICP or ICRC-1 ledger, then parse through the transaction records for the results you're looking for. If you're querying a local ledger canister, the transaction history may not be very long and this process may have low latency. However, if you're using the mainnet ledgers, parsing the transaction history may be a hassle.
+If you want to find information about a transaction for a specific `Account` or `AccountIdentifier`, you could query all of the transactions within the BIG or ICRC-1 ledger, then parse through the transaction records for the results you're looking for. If you're querying a local ledger canister, the transaction history may not be very long and this process may have low latency. However, if you're using the mainnet ledgers, parsing the transaction history may be a hassle.
 
-As an alternative, an **index** canister can be queried. The index canister provides an endpoint for querying the transaction list for a specific account, as well as other information such as an account's current balance. Since the ICP and ICRC-1 ledgers use different account representations (`Account` and `AccountIdentifier`), the ICP and ICRC-1 index canisters do not use the same endpoints.
+As an alternative, an **index** canister can be queried. The index canister provides an endpoint for querying the transaction list for a specific account, as well as other information such as an account's current balance. Since the BIG and ICRC-1 ledgers use different account representations (`Account` and `AccountIdentifier`), the BIG and ICRC-1 index canisters do not use the same endpoints.
 
-On the mainnet, the ICP index canister runs on the NNS subnet and has the canister ID [qhbym-qaaaa-aaaaa-aaafq-cai](https://dashboard.internetcomputer.org/canister/qhbym-qaaaa-aaaaa-aaafq-cai).
+On the mainnet, the BIG index canister runs on the NNS subnet and has the canister ID [qhbym-qaaaa-aaaaa-aaafq-cai](https://dashboard.internetcomputer.org/canister/qhbym-qaaaa-aaaaa-aaafq-cai).
 
 There are several ICRC-1 compatible ledgers, and in turn several ICRC-1 index canisters. One example is the ICRC-1 ledger for ckBTC transactions, which has the canister ID [n5wcd-faaaa-aaaar-qaaea-cai](https://dashboard.internetcomputer.org/canister/n5wcd-faaaa-aaaar-qaaea-cai).
 
@@ -82,7 +82,7 @@ The ICRC-1 token standard allows for several optional metadata fields to be spec
 
 ## Deploying a ICRC-1 ledger locally
 
-Deploying an ICRC-1 ledger canister locally uses the same steps that you used in the last module to deploy the local ICP canister, but you'll use different Wasm and Candid files.
+Deploying an ICRC-1 ledger canister locally uses the same steps that you used in the last module to deploy the local BIG canister, but you'll use different Wasm and Candid files.
 
 ### Prerequisites
 
@@ -163,7 +163,7 @@ Remember, by default `dfx new` creates a new project in the Motoko language. If 
 
 ### Locating the Wasm and Candid files
 
-You can access the Wasm and Candid files in the same way that you located the ICP ledger files. Remember that you'll need the latest replica version, which can be found on the [dashboard](https://dashboard.internetcomputer.org/releases) under the **Elect new replica binary revision** field.
+You can access the Wasm and Candid files in the same way that you located the BIG ledger files. Remember that you'll need the latest replica version, which can be found on the [dashboard](https://dashboard.internetcomputer.org/releases) under the **Elect new replica binary revision** field.
 
 Then, use the following URL to download the Wasm module: `https://download.dfinity.systems/ic/<VERSION>/canisters/ic-icrc1-ledger.wasm.gz`. In this tutorial you'll use the URL https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ic-icrc1-ledger.wasm.gz.
 
@@ -191,7 +191,7 @@ Open the `dfx.json` file in the project's directory and replace the existing con
 }
 ```
 
-Next, you'll use the `minter` identity you created in the last module, [4.1 Using the ICP ledger](/docs/current/tutorials/developer-journey/level-4/4.1-icp-ledger). If you need to export the `minter` identity's principal again, run the commands:
+Next, you'll use the `minter` identity you created in the last module, [4.1 Using the BIG ledger](/docs/current/tutorials/developer-journey/level-4/4.1-icp-ledger). If you need to export the `minter` identity's principal again, run the commands:
 
 ```bash
 dfx identity use minter
@@ -209,7 +209,7 @@ export TOKEN_SYMBOL="DJTK"
 
 The environment variable `TOKEN_SYMBOL` is the token's ticker symbol, and the `TOKEN_NAME` variable is the token's full name.
 
-Then, set the identity that you want to use to deploy the ledger. In the previous module [4.1 Using the ICP ledger](/docs/current/tutorials/developer-journey/level-4/4.1-icp-ledger), you used the `DevJourney` identity, which you'll use again:
+Then, set the identity that you want to use to deploy the ledger. In the previous module [4.1 Using the BIG ledger](/docs/current/tutorials/developer-journey/level-4/4.1-icp-ledger), you used the `DevJourney` identity, which you'll use again:
 
 ```bash
 dfx identity use DevJourney
@@ -302,7 +302,7 @@ To deploy an instance of the ICRC-1 ledger on the mainnet, there are several imp
 
 ## Interacting with the ICRC-1 ledger
 
-Like the ICP ledger, the ICRC-1 ledger can be interacted with using the `dfx canister` command or the Candid UI. You can also use the `ic-cdk` for making inter-canister calls to the ICRC-1 ledger or the `ledger-icrc-js` library. This tutorial will cover using `dfx canister` and the Candid UI, and provide resources for the `ic-cdk` and `ledger-icrc-js` options.
+Like the BIG ledger, the ICRC-1 ledger can be interacted with using the `dfx canister` command or the Candid UI. You can also use the `ic-cdk` for making inter-canister calls to the ICRC-1 ledger or the `ledger-icrc-js` library. This tutorial will cover using `dfx canister` and the Candid UI, and provide resources for the `ic-cdk` and `ledger-icrc-js` options.
 
 ### Using the `dfx canister` command with ICRC-1 endpoints
 
@@ -502,9 +502,9 @@ This URL will display the following Candid UI:
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -522,7 +522,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 

@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-A subnet on ICP is a collection of interacting replicas that run their own, separate instance of the ICP consensus mechanism, effectively creating their own blockchain on which a set of canisters can run. Each subnet can communicate with other subnets and is controlled by a root subnet. The root subnet uses chain-key cryptography to delegate its authority to the various subnets.
+A subnet on BIG is a collection of interacting replicas that run their own, separate instance of the BIG consensus mechanism, effectively creating their own blockchain on which a set of canisters can run. Each subnet can communicate with other subnets and is controlled by a root subnet. The root subnet uses chain-key cryptography to delegate its authority to the various subnets.
 
 You can learn more about subnets and how they work [here](/docs/current/concepts/nodes-subnets).
 
@@ -18,11 +18,11 @@ There are three primary types of subnets: system, application, and the European 
 
 ## Application subnets
 
-Application subnets are the most common type of subnet on ICP. Almost all canisters run on an application subnet. Application subnets can be individually configured to have different features enabled or disabled, for example the Bitcoin integration subnet. 
+Application subnets are the most common type of subnet on BIG. Almost all canisters run on an application subnet. Application subnets can be individually configured to have different features enabled or disabled, for example the Bitcoin integration subnet. 
 
 ## System subnets
 
-System subnets are reserved for running canisters that provide a system functionality to ICP, such as the NNS canisters. System subnets have special configurations, such as not charging cycles to any of the canisters running on the subnet since system canisters need to be available at all times. System subnets also have a more generous per-call instruction limit and a more generous Wasm module size limit.
+System subnets are reserved for running canisters that provide a system functionality to BIG, such as the NNS canisters. System subnets have special configurations, such as not charging cycles to any of the canisters running on the subnet since system canisters need to be available at all times. System subnets also have a more generous per-call instruction limit and a more generous Wasm module size limit.
 
 ## Fiduciary subnets
 
@@ -84,7 +84,7 @@ You can check the current balance for that principal by running the command:
 dfx ledger --network=ic balance
 ```
 
-To top up your principal's balance, you can send cycles to the principal using the [NNS dapp](https://nns.ic0.app/wallet/), or [learn how to convert ICP tokens into cycles](/docs/current/tutorials/developer-journey/level-1/1.4-using-cycles#converting-icp-tokens-to-cycles).
+To top up your principal's balance, you can send cycles to the principal using the [NNS dapp](https://nns.ic0.app/wallet/), or [learn how to convert BIG tokens into cycles](/docs/current/tutorials/developer-journey/level-1/1.4-using-cycles#converting-icp-tokens-to-cycles).
 
 ### Creating a cycles wallet
 
@@ -102,7 +102,7 @@ It is recommended to use the cycles ledger instead, which does not require any s
 
 Replace `CONTROLLER` with the principal ID that you took note of earlier after running the `dfx identity get-principal` command.
 
-Adjust the `--amount 0.5` to the number of ICP tokens that you want to send the new canister. More information can be found in the [documentation](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger/#options). 
+Adjust the `--amount 0.5` to the number of BIG tokens that you want to send the new canister. More information can be found in the [documentation](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger/#options). 
 
 This command will return a canister ID. Using that canister ID, you can deploy the wallet canister code to the new canister with the command:
 

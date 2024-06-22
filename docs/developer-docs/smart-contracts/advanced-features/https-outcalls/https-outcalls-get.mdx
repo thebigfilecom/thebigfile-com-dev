@@ -17,7 +17,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 A minimal example to make a `GET` HTTPS request. The purpose of this dapp is only to show how to make HTTP requests from a canister.
 
-The sample code is in both Motoko and Rust. This sample canister sends a `GET` request to the Coinbase API and retrieves some historical data about the ICP token.
+The sample code is in both Motoko and Rust. This sample canister sends a `GET` request to the Coinbase API and retrieves some historical data about the BIG token.
 
 
 **The main intent of this canister is to show developers how to make idempotent `GET` requests.**
@@ -31,7 +31,7 @@ The canister in this tutorial will have only **one public method** named `get_ic
 
 ![Candid web UI](../_attachments/https-get.webp)
 
-The `get_icp_usd_exchange()` method returns Coinbase data on the exchange rate between USD and ICP for a certain day. The data will look like this:
+The `get_icp_usd_exchange()` method returns Coinbase data on the exchange rate between USD and BIG for a certain day. The data will look like this:
 
 The API response looks like this:
 ```
@@ -198,7 +198,7 @@ import Types "Types";
 actor {
 
 //This method sends a GET request to a URL with a free API you can test.
-//This method returns Coinbase data on the exchange rate between USD and ICP
+//This method returns Coinbase data on the exchange rate between USD and BIG
 //for a certain day.
 //The API response looks like this:
 //  [
@@ -208,7 +208,7 @@ actor {
 //         5.718, <-- highest price during range
 //         5.714, <-- price at open
 //         5.714, <-- price at close
-//         243.5678 <-- volume of ICP traded
+//         243.5678 <-- volume of BIG traded
 //     ],
 // ]
 
@@ -225,7 +225,7 @@ actor {
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
     let end_timestamp : Types.Timestamp = 1682978520;//May 1, 2023 22:02:00 GMT
     let host : Text = "api.pro.coinbase.com";
-    let url = "https://" # host # "/products/ICP-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(start_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
+    let url = "https://" # host # "/products/BIG-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(start_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
 
     // 2.2 prepare headers for the system http_request call
     let request_headers = [
@@ -362,7 +362,7 @@ async fn get_icp_usd_exchange() -> String {
     let seconds_of_time: u64 = 60; //start with 60 seconds
     let host = "api.pro.coinbase.com";
     let url = format!(
-        "https://{}/products/ICP-USD/candles?start={}&end={}&granularity={}",
+        "https://{}/products/BIG-USD/candles?start={}&end={}&granularity={}",
         host, start_timestamp, start_timestamp, seconds_of_time
     );
 

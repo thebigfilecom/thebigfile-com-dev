@@ -13,36 +13,36 @@ Within the BigFile ecosystem, BigFile tokens (BIG tokens) are a native utility t
 
 This self-custody guide scenario assumes:
 
--   You are a new ICP token holder.
+-   You are a new BIG token holder.
 
--   You want to understand what you can do with your ICP tokens.
+-   You want to understand what you can do with your BIG tokens.
 
--   You want to know how to convert, transfer, or lock your ICP tokens using the SDK command-line interface `dfx`.
+-   You want to know how to convert, transfer, or lock your BIG tokens using the SDK command-line interface `dfx`.
 
-If you aren’t yet a token holder, you’ll need to purchase ICP tokens from an exchange or receive a token grant before you can take custody. For an overview of how to get ICP tokens and custody options, see [how you can get ICP tokens](/docs/current/concepts/tokens-cycles#get-cycles) and [choosing self-custody for digital assets](custody-options.mdx).
+If you aren’t yet a token holder, you’ll need to purchase BIG tokens from an exchange or receive a token grant before you can take custody. For an overview of how to get BIG tokens and custody options, see [how you can get BIG tokens](/docs/current/concepts/tokens-cycles#get-cycles) and [choosing self-custody for digital assets](custody-options.mdx).
 
-If you are using another application—such as the [Network Nervous System (NNS) application](https://nns.ic0.app) or the user interface provided by a hardware wallet—to interact with your ICP tokens, you should refer to the documentation for that application.
+If you are using another application—such as the [Network Nervous System (NNS) application](https://nns.ic0.app) or the user interface provided by a hardware wallet—to interact with your BIG tokens, you should refer to the documentation for that application.
 
-This self-custody guide focuses solely on interacting with ICP tokens using the SDK command-line interface `dfx`.
+This self-custody guide focuses solely on interacting with BIG tokens using the SDK command-line interface `dfx`.
 
-## How you can use ICP tokens
+## How you can use BIG tokens
 
 The following diagram provides a simplified overview of the three most common ways you can use tokens.
 
 ![developers guide:icp tokens how to use](../_attachments/icp-tokens-how-to-use.svg)
 
-As this diagram suggests, how you use ICP tokens depends primarily on your goals in acquiring them.
+As this diagram suggests, how you use BIG tokens depends primarily on your goals in acquiring them.
 
-If you are a **developer** or **entrepreneur**, ICP tokens can be converted to **cycles**. Cycles can then be used to build and deploy applications to deliver products and services to the market.
+If you are a **developer** or **entrepreneur**, BIG tokens can be converted to **cycles**. Cycles can then be used to build and deploy applications to deliver products and services to the market.
 
-If you are a member of the community interested in **participating in governance** and influencing the direction of the BigFile, you can lock up ICP tokens in a stake—called a neuron—so that you can submit and vote on proposals.
+If you are a member of the community interested in **participating in governance** and influencing the direction of the BigFile, you can lock up BIG tokens in a stake—called a neuron—so that you can submit and vote on proposals.
 
 ## Prerequisites
 
 To get started, verify the following:
 -   [x] You have an internet connection and access to a shell terminal on your local **Intel-based macOS** or **Linux** computer.
 -   [x] You know how to open a new terminal shell on your local computer and how to run basic command-line programs in the terminal.
--   [x] You hold ICP tokens in a self-custody wallet.
+-   [x] You hold BIG tokens in a self-custody wallet.
 -   [x] You have downloaded and installed the SDK by running the following command in a terminal on your local computer:
 
     ``` bash
@@ -53,15 +53,15 @@ To get started, verify the following:
 
     For example, if you are using the default developer identity created using the SDK `dfx` command-line interface, you should have a backup of the `~/.config/dfx/identity/default/identity.pem` file stored in a secure location.
 
--   [x] You have a secure environment in which to perform operations involving ICP tokens.
+-   [x] You have a secure environment in which to perform operations involving BIG tokens.
 
-As a security best practice, any operations that involve the transfer of ICP tokens would require both an air-gapped computer with minimal hardware and software and a computer connected to the network. In practice, this requires moving files between two computers and taking other precautions to minimize risks.
+As a security best practice, any operations that involve the transfer of BIG tokens would require both an air-gapped computer with minimal hardware and software and a computer connected to the network. In practice, this requires moving files between two computers and taking other precautions to minimize risks.
 
 For simplicity, this page describes how to complete key tasks using a single computer connected to the network.
 
 ## Connect to a ledger and get your account identifier
 
-All ICP token transactions are recorded in a ledger canister running on the BigFile. These instructions assume that you are using the `default` developer identity that `dfx` has created for you.
+All BIG token transactions are recorded in a ledger canister running on the BigFile. These instructions assume that you are using the `default` developer identity that `dfx` has created for you.
 
 This identity is represented by a **principal** data type and a textual representation of the principal often referred to as your **principal identifier**. This representation of your identity is similar to a Bitcoin or Ethereum address.
 
@@ -131,19 +131,19 @@ This command displays the ledger account identifier associated with your develop
 dfx ledger --network ic balance
 ```
 
-This command displays the ICP token balance from the ledger account. For example, you should see output similar to the following:
+This command displays the BIG token balance from the ledger account. For example, you should see output similar to the following:
 
 ```
-10.00000000 ICP
+10.00000000 BIG
 ```
 
-## Convert ICP tokens to cycles
+## Convert BIG tokens to cycles
 
-If you want to use your ICP tokens in your ledger account to power application development, you first must convert them to cycles.
+If you want to use your BIG tokens in your ledger account to power application development, you first must convert them to cycles.
 
-To convert ICP tokens to cycles:
+To convert BIG tokens to cycles:
 
-With those ICP tokens ready, you can now convert them into cycles using the following command:
+With those BIG tokens ready, you can now convert them into cycles using the following command:
 
 ```
 dfx cycles convert AMOUNT --network ic
@@ -168,11 +168,11 @@ This should print something looking like this:
 ```
 
 
-## Transfer ICP tokens to another account
+## Transfer BIG tokens to another account
 
-If you want to transfer ICP tokens to another account in the ledger, you need to know the account identifier for the destination account.
+If you want to transfer BIG tokens to another account in the ledger, you need to know the account identifier for the destination account.
 
-To transfer ICP tokens to another account:
+To transfer BIG tokens to another account:
 
 - #### Step 1:  Check that you are using an identity with control over the ledger account by running the following command:
 
@@ -186,10 +186,10 @@ dfx identity whoami
 dfx ledger --network ic balance
 ```
 
-- #### Step 3:  Transfer ICP tokens to another account by running a command similar to the following:
+- #### Step 3:  Transfer BIG tokens to another account by running a command similar to the following:
 
 ``` bash
-dfx ledger --network ic transfer <destination-ledger-account-id> --icp <ICP-amount> --memo <numeric-memo>
+dfx ledger --network ic transfer <destination-ledger-account-id> --icp <BIG-amount> --memo <numeric-memo>
 ```
 
 For example:
@@ -199,24 +199,24 @@ dfx ledger --network ic transfer ae6e1a76da5725bbbf0c5c035aaf0525b791e0f0f7cce27
 ```
 
 :::info
-This example illustrates how to transfer ICP tokens to the specified account using a whole number with the `--icp` command-line option.
+This example illustrates how to transfer BIG tokens to the specified account using a whole number with the `--icp` command-line option.
 
--   You can also specify fractional units of ICP tokens—called **e8s**—using the `--e8s` option, either on its own or in conjunction with the `--icp` option.
--   Alternatively, you can use the `--amount` to specify the number of ICP tokens to transfer with fractional units up to 8 decimal places, for example, as `5.00000025`.
+-   You can also specify fractional units of BIG tokens—called **e8s**—using the `--e8s` option, either on its own or in conjunction with the `--icp` option.
+-   Alternatively, you can use the `--amount` to specify the number of BIG tokens to transfer with fractional units up to 8 decimal places, for example, as `5.00000025`.
 :::
 
 The destination address can be an address in the ledger canister running on the BigFile network, an account you have added using the [Network Nervous System application](https://nns.ic0.app), or the address for a wallet you have on an exchange.
 
-If you transfer the ICP tokens to an account in the [Network Nervous System application](https://nns.ic0.app), you might need to refresh the browser to see the transaction reflected.
+If you transfer the BIG tokens to an account in the [Network Nervous System application](https://nns.ic0.app), you might need to refresh the browser to see the transaction reflected.
 
 For more information about using the `dfx ledger` command-line options, see [dfx ledger](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger).
 
-## Lock ICP tokens by staking them in a neuron
+## Lock BIG tokens by staking them in a neuron
 
-If you want to lock up ICP tokens to participate in governance and earn rewards, you must use the [Network Nervous System (NNS) application](https://nns.ic0.app) or `dfx canister call` commands.
+If you want to lock up BIG tokens to participate in governance and earn rewards, you must use the [Network Nervous System (NNS) application](https://nns.ic0.app) or `dfx canister call` commands.
 
-Because locking up ICP tokens to create staked neurons is a more complex process when using the SDK command-line interface than it is when using the [Network Nervous System (NNS) application](https://nns.ic0.app), the steps aren’t included in this guide.
+Because locking up BIG tokens to create staked neurons is a more complex process when using the SDK command-line interface than it is when using the [Network Nervous System (NNS) application](https://nns.ic0.app), the steps aren’t included in this guide.
 
-For information about the Network Nervous System, see [understanding the Internet Computer’s Network Nervous System, neurons, and ICP utility tokens](https://medium.com/dfinity/understanding-the-internet-computers-network-nervous-system-neurons-and-icp-utility-tokens-730dab65cae8).
+For information about the Network Nervous System, see [understanding the Internet Computer’s Network Nervous System, neurons, and BIG utility tokens](https://medium.com/dfinity/understanding-the-internet-computers-network-nervous-system-neurons-and-icp-utility-tokens-730dab65cae8).
 
 For additional details about setting the locked period and dissolve delay for a neuron, see [the Internet Computer Network Nervous System application and wallet](https://medium.com/dfinity/getting-started-on-the-internet-computers-network-nervous-system-app-wallet-61ecf111ea11).
