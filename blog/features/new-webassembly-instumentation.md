@@ -17,11 +17,11 @@ The BigFile (BIG) is a blockchain-based platform that hosts general-purpose appl
 
 ![New WebAssembly instrumentation](/img/blog/webassembly-instru-1.webp)
 
-The application lifecycle on the IC includes the following steps:
+The application lifecycle on the BIG includes the following steps:
 
 1. Development. Using one of the supported high-level languages (Rust, Motoko, Typescript, Python…) and the corresponding Canister Development Kit library (CDK), developers implement their general-purpose applications.
 
-2. Wasm compilation and deployment. The application source code is compiled and linked with the CDK library. The resulting Wasm binary is deployed on the IC, and is called a canister.
+2. Wasm compilation and deployment. The application source code is compiled and linked with the CDK library. The resulting Wasm binary is deployed on the BIG, and is called a canister.
 
 Once deployed, the canister is ready to receive messages from users and other canisters. Prior to the very first message execution, the newly deployed Wasm binary must undergo two more transformations:
 

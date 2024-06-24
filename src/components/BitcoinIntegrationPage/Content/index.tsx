@@ -186,7 +186,7 @@ const Content: React.FC = () => {
           >
             <img
               src="/img/bitcoin-integration/ic-dex.webp"
-              alt="IC DEX logo"
+              alt="BIG DEX logo"
               className="w-16 md:w-20 aspect-square"
             />
             <div className="flex-1">

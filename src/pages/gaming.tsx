@@ -56,7 +56,7 @@ function GamingPage() {
                 Enabled by smart contracts, Autonomous Worlds are a paradigm
                 shift in gaming, enabling developers, modders and players to
                 build composable, and permissionless game worlds that live on
-                the blockchain forever. Now possible on the Internet Computer —
+                the blockchain forever. Now possible on the BigFile —
                 100% on-chain.
               </motion.p>
             </div>
@@ -81,7 +81,7 @@ function GamingPage() {
             variants={transitions.item}
           >
             Web2 gaming often prioritizes profits at the expense of player
-            enjoyment. Autonomous Worlds on the Internet Computer, prioritize
+            enjoyment. Autonomous Worlds on the BigFile, prioritize
             the player experience.
           </motion.h2>
         </AnimateSpawn>
@@ -154,7 +154,7 @@ function GamingPage() {
                 using NFTs, fungible tokens, and smart contracts. However, most
                 of the gameplay lived, and still live off-chain relying on
                 centralized cloud providers. Combining Autonomous Worlds and the
-                Internet Computer, whole game worlds can now exist 100% on the
+                BigFile, whole game worlds can now exist 100% on the
                 blockchain, providing unique gameplay mechanics.
               </p>
             </TranslatedLayout>
@@ -261,8 +261,8 @@ function GamingPage() {
               Uncover new worlds
             </motion.h2>
             <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
-              Discover, and build new worlds on the Internet Computer! Utilizing
-              canister smart contracts, developers and players can build
+              Discover, and build new worlds on the BigFile! Utilizing
+              cube smart contracts, developers and players can build
               large-scale, extendable game worlds hosted end-to-end on the
               blockchain. Reverse gas model enables novel revenue models, and
               lowers the barrier of entry for new players who don’t want to
@@ -280,109 +280,7 @@ function GamingPage() {
           </AnimateSpawn>
         </section>
 
-        <AnimateSpawn
-          className="md:container-12 mt-20 md:mt-0 md:pt-40 grid md:grid-cols-2 gap-16 md:gap-10 pb-16 md:pb-0 bg-white md:bg-transparent"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <div className="md:col-span-2 md:rounded-[32px] backdrop-blur-2xl md:bg-white-60 relative flex flex-col md:flex-row gap-10 md:gap-10 px-6 md:px-0 pt-20 md:pt-0">
-            <div className=" flex-1 md:self-center md:order-2 lg:self-start flex rounded-[32px] overflow-hidden">
-              <img
-                src="/img/gaming/cubetopia.webp"
-                alt=""
-                className="w-full relative object-cover"
-              />
-            </div>
-            <div className="md:flex-1 md:order-1 md:py-20">
-              <div className="md:ml-2/12">
-                <motion.h2
-                  className=" text-transparent bg-clip-text gradient-text tw-heading-4 md:tw-heading-3 mb-6"
-                  variants={transitions.item}
-                >
-                  Cubetopia
-                </motion.h2>
-                <motion.p
-                  className="tw-lead-sm mb-8"
-                  variants={transitions.item}
-                >
-                  Build anything on your own unique voxel island saved as a
-                  mutable NFT world, or visit the worlds others have built —
-                  100% on-chain, on the Internet Computer.
-                </motion.p>
-
-                <motion.p className="mb-0" variants={transitions.item}>
-                  <Link
-                    className="link-primary link-with-icon"
-                    href="https://e5owu-aaaaa-aaaah-abs5a-cai.raw.ic0.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Play it here
-                    <LinkArrowUpRight />
-                  </Link>
-                </motion.p>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:rounded-[32px] md:bg-white/60 md:backdrop-blur-2xl px-6 md:p-12">
-            <img
-              src="/img/gaming/unfoldvr.webp"
-              alt=""
-              loading="lazy"
-              className="rounded-2xl w-full"
-            />
-            <div className="md:pr-20">
-              <h3 className="tw-heading-5 md:tw-heading-4 text-gradient mb-4 mt-6 md:mb-6 md:mt-12">
-                UnfoldVR
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-5">
-                Blockchain meets virtual reality. UnfoldVR empowers the
-                immersive creator economy. Enter the VR canvas, build 3D
-                environments, objects, sculptures or abstract art and save them
-                on the blockchain.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://jmorc-qiaaa-aaaam-aaeda-cai.ic0.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Build your own VR world
-                <LinkArrowUpRight />
-              </Link>
-            </div>
-          </div>
-          <div className="md:rounded-[32px] md:bg-white/60 md:backdrop-blur-2xl px-6 md:p-12">
-            <img
-              src="/img/gaming/plethora.webp"
-              alt=""
-              loading="lazy"
-              className="rounded-2xl w-full"
-            />
-            <div className="md:pr-20">
-              <h3 className="tw-heading-5 md:tw-heading-4 text-gradient mb-4 mt-6 md:mb-6 md:mt-12">
-                Plethora
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-5">
-                Fully on-chain web3 platformer with the goal of rewarding users
-                both with fun gameplay and NFTs. Plethora empowers NFT projects
-                to launch their collections with immersive experiences
-                customized for you. Play now to compete, have fun, and earn
-                rewards
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://plethora.game/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Play Plethora
-                <LinkArrowUpRight />
-              </Link>
-            </div>
-          </div>
-        </AnimateSpawn>
+       
 
         <AnimateSpawn
           className="container-12 mt-20 md:mt-30 relative"
@@ -393,7 +291,7 @@ function GamingPage() {
             className="tw-heading-4 md:tw-heading-60 mb-6 md:mb-12 text-center md:w-6/10 md:mx-auto"
             variants={transitions.item}
           >
-            Advantages of ICP
+            Advantages of BIG
           </motion.h2>
           <div className="flex flex-col md:flex-row gap-5">
             <motion.div
@@ -408,8 +306,8 @@ function GamingPage() {
               />
               <h3 className="tw-lead md:tw-title-sm mb-0">100% on-chain</h3>
               <p className="mb-0 tw-paragraph-sm text-black/60">
-                The Internet Computer enables these worlds to be hosted fully on
-                the blockchain. As canister smart contracts serve web,
+                The BigFile enables these worlds to be hosted fully on
+                the blockchain. As cube smart contracts serve web,
                 developers can now get rid of the last centralized component,
                 and host even the game client on chain. This allows the creation
                 of DAOs that control all aspects of these worlds.
@@ -427,9 +325,9 @@ function GamingPage() {
               />
               <h3 className="tw-lead md:tw-title-sm mb-0">300M TXs per day</h3>
               <p className="mb-0 tw-paragraph-sm text-black/60">
-                The Internet Computer processes close to 0.3B transactions a
+                The BigFile processes close to 0.3B transactions a
                 day. Being the highest throughput blockchain, games hosted on
-                ICP can serve unparalleled numbers of players, and horizontally
+                BIG can serve unparalleled numbers of players, and horizontally
                 scale out with new subnet blockchains with increased network
                 usage.
               </p>
@@ -448,8 +346,8 @@ function GamingPage() {
                 0 gas fees for players
               </h3>
               <p className="mb-0 tw-paragraph-sm text-black/60">
-                The Internet Computer was designed with mass adoption in mind.
-                Canister smart contracts implement the reverse gas fee model,
+                The BigFile was designed with mass adoption in mind.
+                Cube smart contracts implement the reverse gas fee model,
                 which means that end-users can interact with canisters without
                 paying gas, or even creating a wallet. This enables novel
                 revenue models, and removes a high barrier of entry.
@@ -482,8 +380,7 @@ function GamingPage() {
                 className="tw-lead-sm md:tw-lead-sm mb-12"
                 variants={transitions.item}
               >
-                Since ICP dapps can be 100% on-chain, DAOs on the Internet
-                Computer can govern complete game worlds end-to-end, including a
+                Since BIG dapps can be 100% on-chain, DAOs on the BigFile can govern complete game worlds end-to-end, including a
                 web-based game client.
               </motion.p>
             </div>
@@ -494,81 +391,12 @@ function GamingPage() {
               >
                 <Link className="link-primary link-with-icon" href="/sns">
                   <LinkArrowRight />
-                  More on ICP DAOs
+                  More on BIG DAOs
                 </Link>
               </motion.p>
             </div>
           </div>
         </AnimateSpawn>
-
-        <section className="bg-infinite text-white py-20 md:pb-0 md:mt-30">
-          <div className="container-10 md:w-4/10 md:mx-auto">
-            <motion.h2
-              className="tw-heading-3 md:tw-heading-60 text-center mb-12"
-              variants={transitions.item}
-            >
-              Don’t build from scratch
-            </motion.h2>
-          </div>
-          <div className=" container-12 flex flex-col gap-16 md:gap-40 relative md:pb-30">
-            <div className="blob blob-white blob-sm md:blob-md blob-x-10 blob-y-0"></div>
-
-            <TranslatedLayout
-              video={{
-                videoUrl: "/img/gaming/boomdao.mp4",
-                videoContentType: "video/mp4",
-              }}
-            >
-              <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">BOOOOM!</h2>
-
-              <p className="tw-lead-sm mb-10">
-                Building an entire smart contract based game is challenging.
-                BOOM DAO has spent a year building ready-to-use, free, and
-                open-sourced game tooling that handles most of the complex smart
-                contract infrastructure, so you can focus on gameplay, and your
-                game client. Player interactions, NFT minting/burning, and the
-                on-chain game server is managed by BOOM DAO's World Engine
-                Protocol.
-              </p>
-
-              <p className="mb-0 text-white">
-                <Link
-                  href="https://u52bf-3qaaa-aaaal-qb5wq-cai.icp0.io/"
-                  className="link-white link-with-icon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Start Building with BOOM DAO
-                  <LinkArrowUpRight />
-                </Link>
-              </p>
-            </TranslatedLayout>
-          </div>
-        </section>
-
-        <section
-          className="
-          bg-[linear-gradient(180deg,#3b00b9_0%,#3b00b9_75%,transparent_75%,transparent_100%)] 
-          sm:bg-[linear-gradient(180deg,#3b00b9_0%,#3b00b9_87%,transparent_87%,transparent_100%)] 
-          md:bg-[linear-gradient(180deg,#3b00b9_0%,#3b00b9_50%,transparent_50%,transparent_100%)] 
-          relative
-          "
-        >
-          <AnimateSpawn
-            el={motion.section}
-            variants={transitions.item}
-            className="container-10"
-          >
-            <VideoCard
-              label="Workshop"
-              title="Rapidly Build Fully On-Chain Games with BOOM DAO Tools"
-              description="With Tommy M"
-              image="/img/gaming/boomdao-workshop.webp"
-              link="https://youtu.be/LHVVi4pN6CI?si=VZXpfMLkJMvhA-6b"
-            />
-          </AnimateSpawn>
-        </section>
-
         <section className="max-w-page relative mx-auto mb-20 px-6 md:mb-30 md:px-15 mt-30">
           <AnimateSpawn
             className=" relative text-white"
@@ -582,7 +410,7 @@ function GamingPage() {
               className="tw-heading-3 text-center mb-2 w-full mx-auto md:tw-heading-60 md:mb-6 lg:w-6/12"
               variants={transitions.item}
             >
-              Start hacking on ICP
+              Start hacking on BigFile
             </motion.h2>
           </AnimateSpawn>
 

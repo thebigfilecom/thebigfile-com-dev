@@ -127,7 +127,7 @@ const ProjectInfo: React.FC<{
 
             {project.usesInternetIdentity && (
               <Tooltip
-                tooltip="Uses Internet Identity"
+                tooltip="Uses BIG Wallet"
                 className="text-center w-44"
               >
                 <img

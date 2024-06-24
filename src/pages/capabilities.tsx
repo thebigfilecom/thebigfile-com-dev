@@ -503,7 +503,7 @@ function FeaturesPage() {
               className="tw-heading-3 md:tw-heading-60 mb-3 md:mb-6"
               variants={transitions.item}
             >
-              ICP as a DePIN Network
+              BIG as a DePIN Network
             </motion.h2>
             <motion.p
               className="tw-lead-sm  md:tw-lead mb-0"
@@ -511,8 +511,7 @@ function FeaturesPage() {
             >
               Decentralized physical infrastructure networks (DePINs) are
               blockchain protocols that build, maintain, and operate hardware
-              infrastructure in an open and decentralized manner. The Internet
-              Computer is one of the leading DePIN networks, hosted by special
+              infrastructure in an open and decentralized manner. The BigFile is one of the leading DePIN networks, hosted by special
               node machines dedicated to creating a sovereign network, governed
               by an advanced DAO. Canister smart contracts can rent compute and
               storage on the network.
@@ -656,7 +655,7 @@ function FeaturesPage() {
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
-                href="https://wiki.internetcomputer.org/wiki/Extend_Bitcoin,_Ethereum_and_other_blockchains"
+                href="https://wiki.thebigfile.com/wiki/Extend_Bitcoin,_Ethereum_and_other_blockchains"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
