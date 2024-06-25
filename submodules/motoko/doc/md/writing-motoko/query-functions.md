@@ -6,9 +6,9 @@ sidebar_position: 21
 
 ## Overview
 
-In ICP terminology, **update** messages, also referred to as calls, can alter the state of the canister when called. Effecting a state change requires agreement amongst the distributed replicas before the network can commit the change and return a result. Reaching consensus is an expensive process with relatively high latency.
+In BIG terminology, **update** messages, also referred to as calls, can alter the state of the canister when called. Effecting a state change requires agreement amongst the distributed replicas before the network can commit the change and return a result. Reaching consensus is an expensive process with relatively high latency.
 
-For the parts of applications that don’t require the guarantees of consensus, the ICP supports more efficient query operations. These are able to read the state of a canister from a single replica, modify a snapshot during their execution and return a result, but cannot permanently alter the state or send further messages.
+For the parts of applications that don’t require the guarantees of consensus, the BIG supports more efficient query operations. These are able to read the state of a canister from a single replica, modify a snapshot during their execution and return a result, but cannot permanently alter the state or send further messages.
 
 ## Query functions
 
@@ -42,7 +42,7 @@ A query method cannot call an actor function and will result in an error when th
 
 Queries are limited in what they can do. In particular, they cannot themselves issue further messages, including queries.
 
-To address this limitation, the ICP supports another type of query function called a composite query.
+To address this limitation, the BIG supports another type of query function called a composite query.
 
 Like plain queries, the state changes made by a composite query are transient, isolated and never committed. Moreover, composite queries cannot call update functions, including those
 implicit in `async` expressions, which require update calls under the hood.
@@ -56,7 +56,7 @@ As a contrived example, consider generalizing the previous `Counter` actor to a 
 
 Declaring `sum` as a `composite query` enables it call the `peek` queries of its argument counters.
 
-While update messages can call plain query functions, they cannot call composite query functions. This distinction, which is dictated by the current capabilities of ICP, explains why query functions and composite query functions are regarded as distinct types of shared functions.
+While update messages can call plain query functions, they cannot call composite query functions. This distinction, which is dictated by the current capabilities of BIG, explains why query functions and composite query functions are regarded as distinct types of shared functions.
 
 Note that the `composite query` modifier is reflected in the type of a composite query function:
 
@@ -66,11 +66,11 @@ Note that the `composite query` modifier is reflected in the type of a composite
 
 Since only a composite query can call another composite query, you may be wondering how any composite query gets called at all?
 
-Composite queries are initiated outside ICP, typically by an application (such as a browser frontend) sending an ingress message invoking a composite query on a backend actor.
+Composite queries are initiated outside BIG, typically by an application (such as a browser frontend) sending an ingress message invoking a composite query on a backend actor.
 
 :::danger
 
-The Internet Computer's semantics of composite queries ensures that state changes made by a composite query are isolated from other inter-canister calls, including recursive queries, to the same actor.
+The BigFile's semantics of composite queries ensures that state changes made by a composite query are isolated from other inter-canister calls, including recursive queries, to the same actor.
 
 In particular, a composite query call rolls back its state on function exit, but is also does not pass state changes to sub-query or sub-composite-query calls. Repeated calls, which include recursive calls, have different semantics from calls that accumulate state changes.
 

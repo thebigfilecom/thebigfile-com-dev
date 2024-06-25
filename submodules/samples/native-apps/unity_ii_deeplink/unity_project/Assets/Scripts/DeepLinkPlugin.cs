@@ -1,15 +1,15 @@
 using UnityEngine;
-using EdjCase.ICP.Agent;
-using EdjCase.ICP.Agent.Identities;
-using EdjCase.ICP.Agent.Models;
-using EdjCase.ICP.Candid.Models;
-using EdjCase.ICP.Candid.Utilities;
+using EdjCase.BIG.Agent;
+using EdjCase.BIG.Agent.Identities;
+using EdjCase.BIG.Agent.Models;
+using EdjCase.BIG.Candid.Models;
+using EdjCase.BIG.Candid.Utilities;
 using Newtonsoft.Json;
 using System;
 using System.Web;
 using System.Collections.Generic;
 
-namespace IC.GameKit
+namespace BIG.GameKit
 {
     public class DeepLinkPlugin : MonoBehaviour
     {

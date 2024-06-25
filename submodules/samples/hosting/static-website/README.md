@@ -7,7 +7,7 @@ keywords: [static website, basic website, html, host a website, beginner]
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/hosting/static-website)
 
 ## Overview
-The example shows how to deploy a simple, static website on the IC in an asset canister. The website is very simple, it just shows the DFINITY logo and has a basic styling of the logo. 
+The example shows how to deploy a simple, static website on the BIG in an asset canister. The website is very simple, it just shows the DFINITY logo and has a basic styling of the logo. 
 
 ![Website](README_images/website.png)
 
@@ -24,7 +24,7 @@ This example covers:
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 
 - [x] Download and install [git](https://git-scm.com/downloads).
 
@@ -106,7 +106,7 @@ The `dfx.json` file is a configuration file which specifies the canister used fo
 }
 ```
 
-This is all needed for creating a canister smart contract for hosting a static website on the IC.
+This is all needed for creating a canister smart contract for hosting a static website on the BIG.
 
 ## Deployment
 The local replica is started by running:

@@ -11,9 +11,9 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-When developing projects on ICP, there are two primary forms of data storage that your <GlossaryTooltip>canisters</GlossaryTooltip> can utilize. The first type of storage is the canister's **heap memory**, sometimes referred to as the canister's *main memory*. Heap memory is **temporary**, and any data stored in a canister's heap memory is cleared whenever the canister is stopped or upgraded.
+When developing projects on BIG, there are two primary forms of data storage that your <GlossaryTooltip>canisters</GlossaryTooltip> can utilize. The first type of storage is the canister's **heap memory**, sometimes referred to as the canister's *main memory*. Heap memory is **temporary**, and any data stored in a canister's heap memory is cleared whenever the canister is stopped or upgraded.
 
-The second type of storage available to a canister is **stable memory**. Stable memory is a unique feature of ICP that  defines a separate data store aside from a canister's regular Wasm heap memory data storage. It is a secondary storage type that can be used to store data long-term, since all data stored in stable memory will persist across all canister processes.
+The second type of storage available to a canister is **stable memory**. Stable memory is a unique feature of BIG that  defines a separate data store aside from a canister's regular Wasm heap memory data storage. It is a secondary storage type that can be used to store data long-term, since all data stored in stable memory will persist across all canister processes.
 
 ## Heap memory
 
@@ -23,7 +23,7 @@ Heap memory is limited to a maximum of 4GiB of data.
 
 ## Stable memory
 
-Stable memory is a feature unique to the Internet Computer Protocol that provides a long-term, persistent data storage option separate from a canister's heap memory. When a canister is stopped or upgraded, the data stored in stable memory is not cleared or removed. The stable memory is preserved throughout the process while any other WebAssembly state is discarded.
+Stable memory is a feature unique to the BigFile that provides a long-term, persistent data storage option separate from a canister's heap memory. When a canister is stopped or upgraded, the data stored in stable memory is not cleared or removed. The stable memory is preserved throughout the process while any other WebAssembly state is discarded.
 
 To use stable memory, you must anticipate which portions of the canister's data that you want to persist across upgrades by indicating within the canister code. More information about this can be found in the section below, [Storage handling in different languages](#storage-handling-in-different-languages).
 
@@ -77,7 +77,7 @@ In Motoko, the default garbage collection process uses a copying approach, which
   },
 ```
 
-Both of these garbage collectors, however, are unable to collect the entire heap memory pool due to the instruction limit per message on ICP. Since these garbage collectors cannot collect the entire heap memory pool, canisters do not benefit from fully utilizing the entire 4GiB memory pool, as there must be some heap memory space left for the garbage collector to operate.
+Both of these garbage collectors, however, are unable to collect the entire heap memory pool due to the instruction limit per message on BIG. Since these garbage collectors cannot collect the entire heap memory pool, canisters do not benefit from fully utilizing the entire 4GiB memory pool, as there must be some heap memory space left for the garbage collector to operate.
 
 A beta incremental garbage collection process is available, which uses incremental messages that distributes the garbage collection work across multiple messages when needed. This form of garbage collection allows for the allocation of up to 3x more heap space after it has been run, while consuming less cycles on average. Using this garbage collection service, canisters can benefit from using the entire 4GiB of heap memory, as it can garbage collect the entire heap memory pool.
 

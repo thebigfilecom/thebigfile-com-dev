@@ -85,7 +85,7 @@ async fn deposit_icp(caller: Principal) -> Result<Nat, DepositErr> {
         .map_err(|_| DepositErr::TransferFailure)?;
 
     ic_cdk::println!(
-        "Deposit of {} ICP in account {:?}",
+        "Deposit of {} BIG in account {:?}",
         balance - Tokens::from_e8s(ICP_FEE),
         &account
     );
@@ -156,7 +156,7 @@ pub async fn get_symbol(token_canister_id: Principal) -> String {
         .unwrap_or(MAINNET_LEDGER_CANISTER_ID);
 
     if token_canister_id == ledger_canister_id {
-        "ICP".to_string()
+        "BIG".to_string()
     } else {
         DIP20::new(token_canister_id).get_metadata().await.symbol
     }
@@ -264,7 +264,7 @@ async fn withdraw_icp(amount: &Nat, account_id: AccountIdentifier) -> Result<Nat
         return Err(e);
     }
 
-    ic_cdk::println!("Withdrawal of {} ICP to account {:?}", amount, &account_id);
+    ic_cdk::println!("Withdrawal of {} BIG to account {:?}", amount, &account_id);
 
     Ok(amount.to_owned() + ICP_FEE)
 }

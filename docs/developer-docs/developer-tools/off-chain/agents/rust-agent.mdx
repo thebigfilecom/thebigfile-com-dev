@@ -10,9 +10,9 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-The Rust agent by DFINTY is a simple library that enables you to build applications and interact with ICP. It serves as a Rust-based low-level backend for the BIG SDK.
+The Rust agent by DFINTY is a simple library that enables you to build applications and interact with BIG. It serves as a Rust-based low-level backend for the BIG SDK.
 
-The agent is designed to be compatible with multiple versions of the replica API. It exposes both low-level APIs for communicating with ICP components like the replica and provides higher-level APIs for communicating with software applications deployed as canisters.
+The agent is designed to be compatible with multiple versions of the replica API. It exposes both low-level APIs for communicating with BIG components like the replica and provides higher-level APIs for communicating with software applications deployed as canisters.
 
 One example of a project that uses the `ic-agent` is [dfx](https://github.com/dfinity/sdk).
 
@@ -48,7 +48,7 @@ async fn create_a_canister() -> Result<Principal, Box<dyn std::error::Error>> {
     .with_url(URL)
     .with_identity(create_identity())
     .build()?;
-  // Only do the following call when not contacting the IC main net (e.g. a local emulator).
+  // Only do the following call when not contacting the BIG main net (e.g. a local emulator).
   // This is important as the main net public key is static and a rogue network could return
   // a different key.
   // If you know the root key ahead of time, you can use `agent.set_root_key(root_key);`.

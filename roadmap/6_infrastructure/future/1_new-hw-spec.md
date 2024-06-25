@@ -2,7 +2,7 @@
 title: A New Replica Node Hardware Specification
 links:
   Forum Post: https://forum.thebigfile.com/
-  IC Wiki: https://wiki.thebigfile.com/wiki/Node_provider_hardware
+  BIG Wiki: https://wiki.thebigfile.com/wiki/Node_provider_hardware
 eta: January 2026
 is_community: true
 ---

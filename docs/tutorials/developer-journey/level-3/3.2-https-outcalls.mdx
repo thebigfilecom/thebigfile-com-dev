@@ -8,19 +8,18 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gEyfbFMyhwc?si=2Tmy6FZj-IQ9xU5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Overview
 
 In the past, blockchain networks were only able to communicate with external servers through blockchain oracles, or third-party entities that relayed calls from the blockchain to an external server, then routed the response back to the blockchain. This is because blockchains are a form of replicated state machine, where each replica must perform the same computations within the same state to make the same transitions each round. Since doing computations with results from an external source may lead to a state divergence, tools like oracles have been used in the past. However, on the Internet Computer, canisters can communicate directly with external servers or other blockchains through **HTTPS outcalls**.
 
-HTTPS outcalls are a feature of canisters on ICP that allow smart contracts to directly make calls to HTTPS servers that are external to ICP. The response of these HTTPS calls can then be used by the smart contract in a way that the replica can safely be updated using the response without the risk of a state divergence.
+HTTPS outcalls are a feature of canisters on BIG that allow smart contracts to directly make calls to HTTPS servers that are external to BIG. The response of these HTTPS calls can then be used by the smart contract in a way that the replica can safely be updated using the response without the risk of a state divergence.
 
 :::info
 This guide uses the term **HTTPS** to refer to both the **HTTP** and **HTTPS** protocols. This is because typically all traffic on a public network uses the secure HTTPS protocol.
 :::
 
-HTTPS outcalls provide the ability for different use cases and have several advantages compared to using oracles to handle external requests. Some of these are HTTPS outcalls use a stronger trust model since there are no external intermediaries, such as an oracle, required for the canister to communicate with external servers, and using HTTPS outcalls for communicating with external servers makes using canisters feel much closer to a "traditional" programming workflow that may not use blockchains or oracles. Most real-world dapps have a need for accessing data stored in off-chain entities, since most digital data is still stored in traditional, 'Web 2', services.
+HTTPS outcalls provide the ability for different use cases and have several advantages compared to using oracles to handle external requests. Some of these are HTTPS outcalls use a stronger trust model since there are no external intermediaries, such as an oracle, required for the cube to communicate with external servers, and using HTTPS outcalls for communicating with external servers makes using canisters feel much closer to a "traditional" programming workflow that may not use blockchains or oracles. Most real-world dapps have a need for accessing data stored in off-chain entities, since most digital data is still stored in traditional, 'Web 2', services.
 
 ## Supported HTTPS methods
 
@@ -32,7 +31,7 @@ Cycles used to pay for an HTTPS call must be explicitly transferred with the cal
 
 ## HTTPS outcalls API
 
-A canister can make an HTTPS outcall by using the `http_request` method. This method uses the following parameters:
+A cube can make an HTTPS outcall by using the `http_request` method. This method uses the following parameters:
 
 - `url`: Specifies the requested URL; must be valid per the standard [RFC-3986](https://www.ietf.org/rfc/rfc3986.txt). The length must not exceed `8192` and may include a custom port number.
 
@@ -48,7 +47,7 @@ It is recommended to set `max_response_bytes`, since using it appropriately can 
 
 - `body`: Specifies the content of the request's body. This field is optional.
 
-- `transform`: Specifies a function that transforms raw responses to sanitized responses, and a byte-encoded context that is provided to the function upon invocation, along with the response to be sanitized. This field is optional; if it is provided, the calling canister itself must export this function.
+- `transform`: Specifies a function that transforms raw responses to sanitized responses, and a byte-encoded context that is provided to the function upon invocation, along with the response to be sanitized. This field is optional; if it is provided, the calling cube itself must export this function.
 
 The returned response, including the response to the `transform` function if specified, will contain the following content:
 
@@ -64,7 +63,7 @@ When deploying applications to the Internet Computers, HTTPS outcalls can **only
 
 ## HTTPS `GET`
 
-To demonstrate how to use the HTTPS `GET` outcall, you'll create a simple canister that has one public method named `get_icp_usd_exchange()`. This method will trigger an HTTP `GET` request to the external service Coinbase, which will return current data on the exchange rate between USD and ICP. This canister will have no frontend, and you will interact with its public methods via the Candid web UI.
+To demonstrate how to use the HTTPS `GET` outcall, you'll create a simple cube that has one public method named `get_icp_usd_exchange()`. This method will trigger an HTTP `GET` request to the external service Coinbase, which will return current data on the exchange rate between USD and BIG. This cube will have no frontend, and you will interact with its public methods via the Candid web UI.
 
 ### Prerequisites
 
@@ -89,7 +88,7 @@ dfx start --clean --background
 dfx new https_get
 ```
 
-You will be prompted to select the language that your backend canister will use. Select 'Motoko':
+You will be prompted to select the language that your backend cube will use. Select 'Motoko':
 
 ```
 ? Select a backend language: ›
@@ -99,7 +98,7 @@ You will be prompted to select the language that your backend canister will use.
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend canister. Select 'No frontend canister':
+Then, select a frontend framework for your frontend cube. Select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -108,7 +107,7 @@ Then, select a frontend framework for your frontend canister. Select 'No fronten
   Vue
   Vanilla JS
   No JS template
-❯ No frontend canister
+❯ No frontend cube
 ```
 
 Lastly, you can include extra features to be added to your project:
@@ -199,8 +198,8 @@ actor {
 
   public func get_icp_usd_exchange() : async Text {
 
-    //First, declare the management canister
-    let ic : Types.IC = actor ("aaaaa-aa");
+    //First, declare the management cube
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //Next, you need to set the arguments for our GET request
 
@@ -210,7 +209,7 @@ actor {
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
     let end_timestamp : Types.Timestamp = 1682978520;//May 1, 2023 22:02:00 GMT
     let host : Text = "api.pro.coinbase.com";
-    let url = "https://" # host # "/products/ICP-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
+    let url = "https://" # host # "/products/BIG-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
 
     // Prepare headers for the system http_request call.
 
@@ -240,7 +239,7 @@ actor {
     // Now, you need to add some cycles to your call, since cycles to pay for the call must be transferred with the call.
     // The way Cycles.add() works is that it adds those cycles to the next asynchronous call.
     // "Function add(amount) indicates the additional amount of cycles to be transferred in the next remote call".
-    // See: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-http_request
+    // See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
 
     Cycles.add(20_949_972_000);
 
@@ -303,7 +302,7 @@ When developing locally, this function doesn't have much of an effect since only
 When HTTP calls are used on the mainnet, a common error message may appear that indicates not all replicas on the subnet get the same response:
 
 ```
-Reject text: Canister http responses were different across replicas, and no consensus was reached
+Reject text: Cube http responses were different across replicas, and no consensus was reached
 ```
 
 This error occurs when the replicas on the subnet don't all return the same value for a piece of data within the HTTP response. For example, if you have an application that sends an HTTP request to the Coinbase API for the current price of a token, due to latency the replicas will not all return the same response. To remedy this, you can request the token price for a specific timestamp to assure that the replicas all return the same response.
@@ -348,13 +347,13 @@ actor {
 
   public func get_icp_usd_exchange() : async Text {
 
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     let ONE_MINUTE : Nat64 = 60;
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
     let end_timestamp : Types.Timestamp = 1682978520;//May 1, 2023 22:02:00 GMT
     let host : Text = "api.pro.coinbase.com";
-    let url = "https://" # host # "/products/ICP-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
+    let url = "https://" # host # "/products/BIG-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(end_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
 
     let request_headers = [
         { name = "Host"; value = host # ":443" },
@@ -458,8 +457,8 @@ module Types {
     };
 
 
-    // Lastly, declare the management canister which you use to make the HTTPS outcall.
-    public type IC = actor {
+    // Lastly, declare the management cube which you use to make the HTTPS outcall.
+    public type BIG = actor {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 
@@ -468,7 +467,7 @@ module Types {
 
 The code above is annotated with detailed notes and explanations. Take a moment to read through the code's content and annotations to fully understand the code's functionality.
 
-Now, you can deploy the canister locally with the commands:
+Now, you can deploy the cube locally with the commands:
 
 ```bash
 dfx start --clean --background
@@ -476,13 +475,13 @@ dfx deploy
 ```
 
 :::caution
-Recall that if you'd like to deploy this canister on the mainnet, you can use the `--network ic` flag.
+Recall that if you'd like to deploy this cube on the mainnet, you can use the `--network ic` flag.
 :::
 
-These commands should return the canister's URL. Open the `http_get_backend` canister's URL to open the Candid UI:
+These commands should return the cube's URL. Open the `http_get_backend` cube's URL to open the Candid UI:
 
 ```bash
-  Backend canister via Candid interface:
+  Backend cube via Candid interface:
     http_get_backend: http://127.0.0.1:4943/?canisterId=a3shf-5eaaa-aaaaa-qaafa-cai&id=avqkn-guaaa-aaaaa-qaaea-cai
 ```
 
@@ -492,11 +491,11 @@ Once you open the Candid UI, you can use the 'Call' button to call the `get_icp_
 
 ![HTTP GET](../_attachments/http_get_candid.png)
 
-You can play with a version of this canister running on-chain: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=fm664-jyaaa-aaaap-qbomq-cai
+You can play with a version of this cube running on-chain: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=fm664-jyaaa-aaaap-qbomq-cai
 
 ## HTTPS `POST`
 
-To demonstrate how to use the HTTPS `POST` outcall, you'll create a simple canister that has one public method named `send_http_post_request()`. This method will trigger an HTTP `POST` request to a public API service where the HTTPS request can be inspected and you can inspect the request's headers and body to validate that it reflects what the canister sent.
+To demonstrate how to use the HTTPS `POST` outcall, you'll create a simple cube that has one public method named `send_http_post_request()`. This method will trigger an HTTP `POST` request to a public API service where the HTTPS request can be inspected and you can inspect the request's headers and body to validate that it reflects what the cube sent.
 
 The following are some important notes on `POST` requests:
 
@@ -562,8 +561,8 @@ actor {
   // This function sends our POST request
   public func send_http_post_request() : async Text {
 
-    // First, declare the management canister
-    let ic : Types.IC = actor ("aaaaa-aa");
+    // First, declare the management cube
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     // Next, setup the URL and its query parameters. This portion uses a free API.
     let host : Text = "putsreq.com";
@@ -609,7 +608,7 @@ actor {
     // Now, you need to add some cycles to your call, since cycles to pay for the call must be transferred with the call.
     // The way Cycles.add() works is that it adds those cycles to the next asynchronous call
     // "Function add(amount) indicates the additional amount of cycles to be transferred in the next remote call"
-    // See: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-http_request
+    // See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
 
     Cycles.add(21_850_258_000);
 
@@ -687,7 +686,7 @@ actor {
 
   public func send_http_post_request() : async Text {
 
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     let host : Text = "putsreq.com";
     let url = "https://putsreq.com/aL1QS5IbaQd4NTqN3a81";
@@ -805,8 +804,8 @@ module Types {
     };
 
 
-    // Lastly, declare the management canister which you use to make the HTTPS outcall.
-    public type IC = actor {
+    // Lastly, declare the management cube which you use to make the HTTPS outcall.
+    public type BIG = actor {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 
@@ -815,7 +814,7 @@ module Types {
 
 The code above is annotated with detailed notes and explanations. Take a moment to read through the code's content and annotations to fully understand the code's functionality.
 
-Now, you can deploy the canister locally with the commands:
+Now, you can deploy the cube locally with the commands:
 
 ```bash
 dfx start --clean --background
@@ -823,13 +822,13 @@ dfx deploy
 ```
 
 :::caution
-Recall that if you'd like to deploy this canister on the mainnet, you can use the `--network ic` flag.
+Recall that if you'd like to deploy this cube on the mainnet, you can use the `--network ic` flag.
 :::
 
-These commands should return the canister's URL. Open the `http_get_backend` canister's URL to open the Candid UI:
+These commands should return the cube's URL. Open the `http_get_backend` cube's URL to open the Candid UI:
 
 ```
-  Backend canister via Candid interface:
+  Backend cube via Candid interface:
     http_post_backend: http://127.0.0.1:4943/?canisterId=a3shf-5eaaa-aaaaa-qaafa-cai&id=avqkn-aaaaa-guaaa-qaaea-cai
 ```
 
@@ -839,14 +838,14 @@ Once you open the Candid UI, you can use the 'Call' button to call the `send_htt
 
 ![HTTP POST](../_attachments/http_post_candid.png)
 
-You can play with a version of this canister running on-chain: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=fc4tu-siaaa-aaaap-qbonq-cai.
+You can play with a version of this cube running on-chain: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app/?id=fc4tu-siaaa-aaaap-qbonq-cai.
 
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -864,7 +863,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 

@@ -8,7 +8,7 @@ keywords: [advanced, motoko, threshold ecdsa, signature, ecdsa]
 
 ## Overview
 
-We present a minimal example canister smart contract for showcasing the [threshold ECDSA](https://internetcomputer.org/docs/current/developer-docs/integrations/t-ecdsa) API. 
+We present a minimal example canister smart contract for showcasing the [threshold ECDSA](https://thebigfile.com/docs/current/developer-docs/integrations/t-ecdsa) API. 
 
 The example canister is a signing oracle that creates ECDSA signatures with keys derived from an input string. 
 
@@ -18,19 +18,19 @@ More specifically:
 - The sample canister hashes the message and uses the key derivation string for the derivation path. 
 - The sample canister uses the above to request a signature from the threshold ECDSA [subnet](https://wiki.internetcomputer.org/wiki/Subnet_blockchain) (the threshold ECDSA is a subnet specializing in generating threshold ECDSA signatures).
 
-This tutorial gives a complete overview of the development, starting with downloading the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/index.md), up to the deployment and trying out the code on the IC mainnet.
+This tutorial gives a complete overview of the development, starting with downloading the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md), up to the deployment and trying out the code on the BIG mainnet.
 
 :::info
-This walkthrough focuses on the version of the sample canister code written in [Motoko](https://internetcomputer.org/docs/current/developer-docs/backend/motoko/index.md) programming language, but no specific knowledge of Motoko is needed to follow along. There is also a [Rust](https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa) version available in the same repo and follows the same commands for deploying.
+This walkthrough focuses on the version of the sample canister code written in [Motoko](https://thebigfile.com/docs/current/developer-docs/backend/motoko/index.md) programming language, but no specific knowledge of Motoko is needed to follow along. There is also a [Rust](https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa) version available in the same repo and follows the same commands for deploying.
 :::
 
 ## Prerequisites
--   [x] Download and [install the IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/index.md) if you do not already have it.
+-   [x] Download and [install the BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md) if you do not already have it.
 -   [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 ## Getting started
 
-Sample code for `threshold-ecdsa` is provided in the [examples repository](https://github.com/dfinity/examples), under either [`/motoko`](https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa) or [`/rust`](https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa) sub-directories. It requires at least [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/index.md) version 0.11.0 for local development.
+Sample code for `threshold-ecdsa` is provided in the [examples repository](https://github.com/dfinity/examples), under either [`/motoko`](https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa) or [`/rust`](https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa) sub-directories. It requires at least [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md) version 0.11.0 for local development.
 
 ## Deploy and test the canister locally 
 
@@ -44,8 +44,8 @@ dfx deploy
 ```
 
 #### What this does
-- `dfx start --background` starts a local instance of the IC via the IC SDK
-- `dfx deploy` deploys the code in the user's directory as a canister on the local version of the IC
+- `dfx start --background` starts a local instance of the BIG via the BIG SDK
+- `dfx deploy` deploys the code in the user's directory as a canister on the local version of the BIG
 
 If successful, you should see something like this:
 
@@ -68,7 +68,7 @@ To deploy this canister to the mainnet, one needs to do two things:
 
 #### Acquire cycles to deploy
 
-Deploying to the Internet Computer requires [cycles](https://internetcomputer.org/docs/current/developer-docs/setup/cycles). You can get free cycles from the [cycles faucet](https://internetcomputer.org/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
+Deploying to the Internet Computer requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
 
 #### Update source code with the right key ID
 
@@ -76,7 +76,7 @@ To deploy the sample code, the canister needs the right key ID for the right env
 
 There are three options:
 
-* `dfx_test_key`: a default key ID that is used in deploying to a local version of IC (via IC SDK).
+* `dfx_test_key`: a default key ID that is used in deploying to a local version of BIG (via BIG SDK).
 * `test_key_1`: a master **test** key ID that is used in mainnet.
 * `key_1`: a master **production** key ID that is used in mainnet.
 
@@ -103,12 +103,12 @@ let { signature } = await ic.sign_with_ecdsa({
 ```
 
 :::caution
-To deploy to IC mainnet, one needs to replace the value in `key_id` fields with the values `"dfx_test_key"` to instead have either `"test_key_1"` or `"key_1"` depending on the desired intent.
+To deploy to BIG mainnet, one needs to replace the value in `key_id` fields with the values `"dfx_test_key"` to instead have either `"test_key_1"` or `"key_1"` depending on the desired intent.
 :::
 
-### Deploy to the mainnet via IC SDK
+### Deploy to the mainnet via BIG SDK
 
-To [deploy via mainnet](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-mainnet.md), run the following commands:
+To [deploy via mainnet](https://thebigfile.com/docs/current/developer-docs/setup/deploy-mainnet.md), run the following commands:
 
 ```bash
 npm install
@@ -148,7 +148,7 @@ Open the file `main.mo`, which will show the following Motoko code that demonstr
 
 ```motoko
   //declare "ic" to be the management canister, which is evoked by `actor("aaaaa-aa")`. This is how we will obtain an ECDSA public key 
-  let ic : IC = actor("aaaaa-aa");
+  let ic : BIG = actor("aaaaa-aa");
 
   public shared (msg) func public_key() : async { #Ok : { public_key: Blob }; #Err : Text } {
     let caller = Principal.toBlob(msg.caller);
@@ -176,10 +176,10 @@ Open the file `main.mo`, which will show the following Motoko code that demonstr
   };
 ```
 
-In the code above, the canister calls the `ecdsa_public_key` method of the [IC management canister](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-management-canister) (`aaaaa-aa`). 
+In the code above, the canister calls the `ecdsa_public_key` method of the [BIG management canister](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-management-canister) (`aaaaa-aa`). 
 
 
-**The [IC management canister](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-management-canister) is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.). It is an ergonomic way for canisters to call the system API of the IC (as if it were a single canister). In the code below, we use the management canister to create an ECDSA public key. `let ic : IC = actor("aaaaa-aa")` declares the IC management canister in the code above.**
+**The [BIG management canister](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-management-canister) is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.). It is an ergonomic way for canisters to call the system API of the BIG (as if it were a single canister). In the code below, we use the management canister to create an ECDSA public key. `let ic : BIG = actor("aaaaa-aa")` declares the BIG management canister in the code above.**
 
 ### Canister root public key
 

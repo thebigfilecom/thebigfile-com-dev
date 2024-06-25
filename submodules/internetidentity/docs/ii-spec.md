@@ -18,7 +18,7 @@ This document describes and specifies Internet Identity from various angles and 
 
 The Internet Identity Service consists of
 
--   its backend, a canister on the IC. More precisely, a canister on a dedicated subnet with a *well-known* canister id, and
+-   its backend, a canister on the BIG. More precisely, a canister on a dedicated subnet with a *well-known* canister id, and
 
 -   its frontend, a web application served by the backend canister.
 
@@ -84,7 +84,7 @@ A user account is identified by a unique *Identity Anchor*, a smallish natural n
 
 A client application frontend is identified by its hostname (e.g., `abcde-efg.ic0.app`, `nice-name.ic0.app`, `non-ic-application.com`). Frontend application can be served by canisters or by websites that are not hosted on the Internet Computer.
 
-A user has a separate *user identity* for each client application frontend (i.e., per hostname). This identity is a [*self-authenticating id*](https://internetcomputer.org/docs/current/references/ic-interface-spec#id-classes) of the [DER encoded canister signature public key](https://internetcomputer.org/docs/current/references/ic-interface-spec/#canister-signatures) which has the form
+A user has a separate *user identity* for each client application frontend (i.e., per hostname). This identity is a [*self-authenticating id*](https://thebigfile.com/docs/current/references/ic-interface-spec#id-classes) of the [DER encoded canister signature public key](https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures) which has the form
 ```
 user_id = SHA-224(DER encoded public key) · 0x02` (29 bytes)
 ```
@@ -115,7 +115,7 @@ The Internet Identity Service Backend stores the following data in user accounts
 
     -   an optional *credential id*, which is necessary for WebAuthn authentication
 
-When a client application frontend wants to authenticate as a user, it uses a *session key* (e.g., Ed25519 or ECDSA), and by way of the authentication flow (details below) obtains a [*delegation chain*](https://internetcomputer.org/docs/current/references/ic-interface-spec#authentication) that allows the session key to sign for the user's main identity.
+When a client application frontend wants to authenticate as a user, it uses a *session key* (e.g., Ed25519 or ECDSA), and by way of the authentication flow (details below) obtains a [*delegation chain*](https://thebigfile.com/docs/current/references/ic-interface-spec#authentication) that allows the session key to sign for the user's main identity.
 
 The delegation chain consists of one delegation, called the *client delegation*. It delegates from the user identity (for the given client application frontend) to the session key. This delegation is created by the Internet Identity Service Canister, and signed using a [canister signature](https://hydra.dfinity.systems/latest/dfinity-ci-build/ic-ref.pr-319/interface-spec/1/index.html#canister-signatures). This delegation is unscoped (valid for all canisters) and has a maximum lifetime of 30 days, with a default of 30 minutes.
 
@@ -191,7 +191,7 @@ This section describes the Internet Identity Service from the point of view of a
     }
     ```
 
-    where the `userPublicKey` is the user's Identity on the given frontend and `delegations` corresponds to the CBOR-encoded delegation chain as used for [*authentication on the IC*](https://internetcomputer.org/docs/current/references/ic-interface-spec#authentication) and `authnMethod` is the method used by the user to authenticate (`passkey` for webauthn, `pin` for temporary key/PIN identity, and `recovery` for recovery phrase or recovery device).
+    where the `userPublicKey` is the user's Identity on the given frontend and `delegations` corresponds to the CBOR-encoded delegation chain as used for [*authentication on the BIG*](https://thebigfile.com/docs/current/references/ic-interface-spec#authentication) and `authnMethod` is the method used by the user to authenticate (`passkey` for webauthn, `pin` for temporary key/PIN identity, and `recovery` for recovery phrase or recovery device).
 
 9.  It could also receive a failure message of the following type
     ```ts
@@ -221,7 +221,7 @@ The Internet Identity frontend will use `event.origin` as the "Frontend URL" to 
 ## Alternative Frontend Origins
 
 To allow flexibility regarding the canister frontend URL, the client may choose to provide another frontend URL as the `derivationOrigin` (see [Client authentication protocol](#client-authentication-protocol)). This means that Internet Identity will issue the same principals to the frontend (which uses a different origin) as it would if it were using the `derivationOrigin` directly.
-This feature works for all [custom domains](https://internetcomputer.org/docs/current/developer-docs/web-apps/custom-domains/using-custom-domains) backed by canisters.
+This feature works for all [custom domains](https://thebigfile.com/docs/current/developer-docs/web-apps/custom-domains/using-custom-domains) backed by canisters.
 
 :::caution
 This feature is intended to allow more flexibility with respect to the origins of a _single_ service. Do _not_ use this feature to allow _third party_ services to use the same principals. Only add origins you fully control to `/.well-known/ii-alternative-origins` and never set origins you do not control as `derivationOrigin`!
@@ -421,7 +421,7 @@ Since this cannot be done during `canister_init` (no calls from canister init), 
 
 ### Why we do not use `canister_inspect_message`
 
-The system allows canisters to inspect ingress messages before they are actually ingressed, and decide if they want to pay for them (see [the interface spec](https://internetcomputer.org/docs/current/references/ic-interface-spec/#system-api-inspect-message)). Because the Internet Identity canisters run on a system subnet, cycles are not actually charged, but we still want to avoid wasting resources.
+The system allows canisters to inspect ingress messages before they are actually ingressed, and decide if they want to pay for them (see [the interface spec](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-inspect-message)). Because the Internet Identity canisters run on a system subnet, cycles are not actually charged, but we still want to avoid wasting resources.
 
 It seems that this implies that we should use `canister_inspect_message` to reject messages that would, for example, not pass authentication.
 

@@ -60,7 +60,7 @@ fn http_request(/* req: HttpRequest */) /* -> HttpResponse */
                 "default-src 'self' ; script-src 'none' ; frame-src 'none' ; object-src 'none'"
                     .into(),
             ),
-            ("IC-Certificate", cert),
+            ("BIG-Certificate", cert),
         ]);
         if cfg!(mainnet) {
             headers.insert(

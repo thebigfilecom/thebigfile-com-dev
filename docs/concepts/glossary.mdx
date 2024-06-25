@@ -13,13 +13,13 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 #### account
 
 A ledger **account** is a set of entries in the [ ledger
-canister](#ledger-canister), which is a smart contract that
+cube](#ledger-cube), which is a smart contract that
 mimics the guise and behavior of a regular banking account, whose unit
-of measure is [ICP](#icp) (Internet Computer Protocol)
+of measure is [BIG](#icp) (BigFile)
 utility tokens. Ledger accounts are owned by [
 principals](#principals), and their ownerships do not change
 over time. Every account on the ledger has a positive [
-balance](#balance) measured in ICP with a precision of eight
+balance](#balance) measured in BIG with a precision of eight
 decimals.
 
 #### address
@@ -33,8 +33,8 @@ An **actor** is a primitive in the [actor
 model](https://en.wikipedia.org/wiki/Actor-model). It is a process with
 encapsulated state that communicates with other concurrently running
 actors through asynchronous messages that are received sequentially. The
-actor model is relevant to the [ICP](#internet-computer-ic-ic)
-because [canisters](#canister) on ICP (a type of smart
+actor model is relevant to the [BIG](#internet-computer-ic-ic)
+because [cubes](#cube) on BIG (a type of smart
 contract) follow the actor model for concurrent and asynchronous
 computation.
 
@@ -47,9 +47,9 @@ the sum of all deposits minus the sum of all withdrawals. As a
 degenerate case, it is sometimes useful to say that an account which is
 not present in the ledger has a balance of zero.
 
-The balance of a ledger account is denominated in ICP and is represented
+The balance of a ledger account is denominated in BIG and is represented
 with eight decimals. Thus, the minimum positive balance of an account is
-0.00000001 or 10^-8 [ICP](#icp); this amount is sometimes
+0.00000001 or 10^-8 [BIG](#icp); this amount is sometimes
 referred to as one **e8**.
 
 #### batch
@@ -69,20 +69,19 @@ account (see [fiduciary](#fiduciary)).
 #### blockchain
 
 A **blockchain** is a growing list of cryptographically linked blocks,
-agreed upon by [consensus](#consensus). On the [Internet
-Computer](#internet-computer-ic), every [subnet](#subnet) maintains its own
-blockchain with blocks containing messages for the [canisters](#canisters)
+agreed upon by [consensus](#consensus). On the [BigFile](#internet-computer-ic), every [subnet](#subnet) maintains its own
+blockchain with blocks containing messages for the [cubes](#cubes)
 hosted on this subnet. These blockchains interact using [chain key cryptography](#chain-key).
 
 #### boundary nodes
 
-**Boundary nodes** are gateways to the Internet Computer. These nodes
-allow users to seamlessly access the [canisters](#canisters) smart contracts
-running on ICP.
+**Boundary nodes** are gateways to the BigFile. These nodes
+allow users to seamlessly access the [cubes](#cubes) smart contracts
+running on BIG.
 The boundary nodes have several purposes: they aid in discover-ability (the
 `icp0.io` domain name points to a set of boundary nodes), they are
 geo-aware and can route incoming requests to the nearest subnet
-[node](#node) that hosts the [canister](#canister)
+[node](#node) that hosts the [cube](#cube)
 involved, they can help load balance query
 [transactions](#transaction), they can cache
 cryptographically verified data in the role of a content distribution
@@ -92,69 +91,67 @@ address, and they can help protect subnets from DDoS attacks.
 #### burning transaction
 
 A **burning transaction** is the process of "burning" [
-ICP](#icp), whereby a certain amount of ICP are destroyed.
+BIG](#icp), whereby a certain amount of BIG are destroyed.
 The main use case is that of purchasing [cycles](#cycles),
-through which ICP are destroyed while at the same time a corresponding
-amount of cycles is created, using the current exchange rate between ICP
+through which BIG are destroyed while at the same time a corresponding
+amount of cycles is created, using the current exchange rate between BIG
 and ([XDR](#XDR)), in such a way that one XDR corresponds to
 one trillion (10E12) cycles. It is represented as a [
 transaction](#transaction) from the source [
-account](#account) to the [ ICP supply
+account](#account) to the [ BIG supply
 account](#icp-supply-account).
 
 ## C
 
 #### Candid
 
-**Candid** is an IDL crafted specifically for the Internet Computer,
+**Candid** is an IDL crafted specifically for the BigFile,
 providing a common language for application interfaces to facilitate
 communication between services that are written in different programming
 languages.
 
-#### canister
+#### cube
 
-A **canister** is a type of smart contract that bundles **code** and
-**state**. A canister can be deployed as a [smart
-contract](#smart-contract) on the [Internet
-Computer](#internet-computer-ic) and accessed over the Internet.
+A **cube** is a type of smart contract that bundles **code** and
+**state**. A cube can be deployed as a [smart
+contract](#smart-contract) on the [BigFile](#internet-computer-ic) and accessed over the Internet.
 
-#### canister account
+#### cube account
 
-A **canister account** is a ledger account owned by a [
-canister](#canister) (i.e. whose
-[fiduciary](#fiduciary) is a canister). A non-canister
-account is a ledger account whose fiduciary is a non-canister
+A **cube account** is a ledger account owned by a [
+cube](#cube) (i.e. whose
+[fiduciary](#fiduciary) is a cube). A non-cube
+account is a ledger account whose fiduciary is a non-cube
 [principal](#principal).
 
-#### canister development kit (CDK)
+#### cube development kit (CDK)
 
-A **canister development kit** is an adapter used by the BIG SDK that provides a programming language with the features necessary to create and manage canisters. The BIG SDK comes with a few CDKs already installed for you so you can use them in the language of your choice.
+A **cube development kit** is an adapter used by the BIG SDK that provides a programming language with the features necessary to create and manage cubes. The BIG SDK comes with a few CDKs already installed for you so you can use them in the language of your choice.
 
-#### canister identifier
+#### cube identifier
 
-The **canister identifier** or **canister ID** is a globally-unique
-identifier that identifies a [ canister](#canister) and can
+The **cube identifier** or **cube ID** is a globally-unique
+identifier that identifies a [ cube](#cube) and can
 be used to interact with it.
 
-#### canister signature
+#### cube signature
 
-A **canister signature** uses a signature scheme based on [certified
+A **cube signature** uses a signature scheme based on [certified
 variables](#certified-variables). Public “keys” include a
-[canister id](#canister-identifier) plus a seed (so that
-every [canister](#canister) has many public keys); signatures
-are certificates that prove that the canister has put the signed message
-at a specific place in its state tree. Details can be found in the [Internet Computer interface specification](/references/ic-interface-spec.md#canister-signatures).
+[cube id](#canister-identifier) plus a seed (so that
+every [cube](#cube) has many public keys); signatures
+are certificates that prove that the cube has put the signed message
+at a specific place in its state tree. Details can be found in the [BigFile interface specification](/references/ic-interface-spec.md#canister-signatures).
 
-#### canister state
+#### cube state
 
-A **canister state** is the entire state of a
-[canister](#canister) at a given point in time. A canister’s
+A **cube state** is the entire state of a
+[cube](#cube) at a given point in time. A cube’s
 state is divided into **user state** and **system state**. The user state is
 a [WebAssembly](#WebAssembly) module instance and the system
-state is the auxiliary state maintained by the [Internet
-Computer](#internet-computer-ic-ic) on behalf of the canister, such
+state is the auxiliary state maintained by the [BigFile](#internet-computer-ic-ic) on behalf of the cube, such
 as its compute allocation, balance of [cycles](#cycles),
-input and output queues, and other metadata. A canister interacts with
+input and output queues, and other metadata. A cube interacts with
 its own system state either implicitly, such as when consuming cycles,
 or through the System API, such as when sending messages.
 
@@ -171,21 +168,21 @@ certified.
 
 #### certified variable
 
-A piece of data that a [canister](#canister) can store in its
+A piece of data that a [cube](#cube) can store in its
 [subnet](#subnet)’s canonical state in the processing of an
-update call (or inter-canister call), so that during the handling of a
-[query](#query) call, the canister can return a certificate
+update call (or inter-cube call), so that during the handling of a
+[query](#query) call, the cube can return a certificate
 to the user that proves that it really committed to that value.
 
 #### chain key
 
 **Chain key** cryptography consists of a set of cryptographic protocols
 that orchestrate the [nodes](#node) that make up the
-[Internet Computer](#internet-computer-ic). The most visible
-innovation of chain key cryptography is that the Internet Computer has a
+[BigFile](#internet-computer-ic). The most visible
+innovation of chain key cryptography is that the BigFile has a
 single public key. This is a huge advantage as it allows any device,
 including smart watches and mobile phones, to verify the authenticity of
-artifacts from the Internet Computer.
+artifacts from the BigFile.
 
 #### consensus
 
@@ -202,25 +199,25 @@ the [message routing](#message-routing) layer.
 
 #### controller
 
-A **controller** of a [canister](#canister) is a person,
-organization, or other canister that has administrative rights over the
-canister. Controllers are identified by their
+A **controller** of a [cube](#cube) is a person,
+organization, or other cube that has administrative rights over the
+cube. Controllers are identified by their
 [principals](#principal). For example, a controller of a
-canister can upgrade the [WebAssembly](#WebAssembly) code of
-the canister or delete the canister.
+cube can upgrade the [WebAssembly](#WebAssembly) code of
+the cube or delete the cube.
 
 #### cycle
 
-On the [Internet Computer](#internet-computer-ic), a **cycle**
+On the [BigFile](#internet-computer-ic), a **cycle**
 is the unit of measurement for resources consumed in the form of
-processing, memory, storage, and network bandwidth. Every canister has a
-cycles account to which resources consumed by the canister are charged.
-The Internet Computer’s utility token ([ICP](#icp)) can be
-converted to cycles and transferred to a canister. Cycles can also be
-transferred between canisters by attaching them to an **inter-canister**
+processing, memory, storage, and network bandwidth. Every cube has a
+cycles account to which resources consumed by the cube are charged.
+The BigFile utility token ([BIG](#icp)) can be
+converted to cycles and transferred to a cube. Cycles can also be
+transferred between cubes by attaching them to an **inter-cube**
 message.
 
-ICP can always be converted to cycles using the current price of ICP
+BIG can always be converted to cycles using the current price of BIG
 measured in **XDR** using the convention that one trillion cycles
 correspond to one **XDR**.
 
@@ -230,14 +227,13 @@ correspond to one **XDR**.
 
 A **dapp**, or decentralised application, is a software program that runs
 on a decentralised computer network instead of a single computer. On the
-[Internet Computer](#internet-computer-ic) dapps are composed of
-[canister](#canister) smart contracts.
+[BigFile](#internet-computer-ic) dapps are composed of
+[cube](#cube) smart contracts.
 
 #### data center
 
 A **data center** (DC) is a physical site that hosts
-[nodes](#node) which contribute to the [Internet
-Computer](#internet-computer-ic). It includes the hardware and
+[nodes](#node) which contribute to the [BigFile](#internet-computer-ic). It includes the hardware and
 software infrastructure required for node deployment.
 Data centers are nodes that are selected and vetted by the [NNS](#NNS).
 
@@ -288,16 +284,16 @@ neuron holder). The fiduciary of a (ledger) account does not change over
 time.
 
 The distinction between fiduciary and beneficiary is also important for
-DeFi dapps (canisters) that interact with ICP ledger: in this case,
-the fiduciary is the DeFi canister while the beneficiary is the
+DeFi dapps (cubes) that interact with BIG ledger: in this case,
+the fiduciary is the DeFi cube while the beneficiary is the
 individual or organisation [principal](#principal) that uses the
-DeFi canister’s services.
+DeFi cube’s services.
 
 ## G
 
-#### governance canister
+#### governance cube
 
-The **governance canister** is a [system canister](#system-canister) that implements the
+The **governance cube** is a [system cube](#system-canister) that implements the
 [NNS](#network-nervous-system-(NNS)) governance system, i.e.,
 among others, stores and manages [neurons](#neuron) and
 [proposals](#proposal), and implements the NNS
@@ -305,47 +301,47 @@ among others, stores and manages [neurons](#neuron) and
 
 ## I
 
-#### ICP
+#### BIG
 
-The **Internet Computer Protocol** token (ticker "ICP") is the utility
-token of the [Internet Computer](#internet-computer-ic). ICP
+The **BigFile** token (ticker "BIG") is the utility
+token of the [BigFile](#internet-computer-ic). BIG
 allows the broader internet community to participate in the governance
-of the Internet Computer blockchain network by locking ICP in
-[neurons](#neuron). ICP can also be converted into
+of the BigFile blockchain network by locking BIG in
+[neurons](#neuron). BIG can also be converted into
 [cycles](#cycles), which are then used to power
-[canisters](#canister).
+[cubes](#cube).
 
-#### ICP supply account
+#### BIG supply account
 
-The **ICP supply account** is a quasi-fictitious ledger
+The **BIG supply account** is a quasi-fictitious ledger
 [account](#account) whose balance is always zero. It has a
-central role in [ICP](#icp) [burning](#burning)
+central role in [BIG](#icp) [burning](#burning)
 and [minting](#minting) operations.
 
 #### identity
 
 An **identity** is a byte string that is used to identify an entity,
 such as a [principal](#principal), that interacts with the
-[Internet Computer](#internet-computer-ic). For users, the
+[BigFile](#internet-computer-ic). For users, the
 identity is the SHA-224 hash of the DER-encoded public key of the user.
-[The Internet Computer interface specification](/references/ic-interface-spec.md) has more
+[The BigFile interface specification](/references/ic-interface-spec.md) has more
 detail.
 
-#### Internet Identity
+#### BIG Wallet
 
-**Internet Identity** is an anonymizing blockchain authentication system
-running on the [Internet Computer](#internet-computer-ic).
+**BIG Wallet** is an anonymizing blockchain authentication system
+running on the [BigFile](#internet-computer-ic).
 
 #### induction pool
 
 The **induction pool** of a [subnet](#subnet) blockchain is
 the collection of all [input queues](#input-queue) of all
-[canisters](#canister) residing on the subnet.
+[cubes](#cube) residing on the subnet.
 
 #### ingress message
 
 An **ingress message** is a [message](#message) sent by an
-end-user to a [canister](#canister) running on a
+end-user to a [cube](#cube) running on a
 [subnet](#subnet) blockchain. The message is signed by the
 secret key corresponding to the end-user’s
 [identity](#identity) and sent to one of the
@@ -362,32 +358,32 @@ messages.
 
 #### input queue
 
-The **input queue** of a [canister](#canister) contains all
-[messages](#message) bound for the canister. See also
-[induction pool](#induction-pool). When the canister is
+The **input queue** of a [cube](#cube) contains all
+[messages](#message) bound for the cube. See also
+[induction pool](#induction-pool). When the cube is
 scheduled for execution, messages from its input queue will be executed.
 
-#### inter-canister message
+#### inter-cube message
 
-An **inter-canister message** is a [message](#message) sent
-from one [canister](#canister) to another. Inter-canister
+An **inter-cube message** is a [message](#message) sent
+from one [cube](#cube) to another. Inter-cube
 messages are different from user-initiated [ingress
 messages](#ingress-message).
 
-#### Internet Computer Protocol (ICP)
+#### BigFile (BIG)
 
-The **Internet Computer Protocol** (ICP) is a decentralized blockchain that
+The **BigFile** (BIG) is a decentralized blockchain that
 provides scalable compute capacity for running
-[canisters](#canister) through independent [node
+[cubes](#cube) through independent [node
 providers](#node-provider) running [nodes](#node)
 in geographically distributed [data centers](#data-center).
 
 ## L
 
-#### ledger canister
+#### ledger cube
 
-The **ledger canister** is a [system
-canister](#system-canister) whose main role is to store
+The **ledger cube** is a [system
+cube](#system-cube) whose main role is to store
 [accounts](#account) and their corresponding
 [transactions](#transaction).
 
@@ -395,42 +391,41 @@ canister](#system-canister) whose main role is to store
 
 #### message
 
-A **message** is data sent from one [canister](#canister) to
-another or from a user to a canister.
+A **message** is data sent from one [cube](#cube) to
+another or from a user to a cube.
 
 #### message routing
 
 The **message routing** layer receives [batches](#batch) from
 the [consensus](#consensus) layer and inducts them into the
 [induction pool](#induction-pool). Message routing then
-schedules a set of [canisters](#canister) to execute messages
+schedules a set of [cubes](#cube) to execute messages
 from their [input queues](#input-queue).
 
 After [messages](#message) have been executed, the message
 routing layer takes any messages produced in the execution round from
 the output queues and puts those messages into the outgoing streams to
-be consumed by canisters on other [subnets](#subnet).
+be consumed by cubes on other [subnets](#subnet).
 
 #### minting transaction
 
 A **minting transaction** is the process of "minting"
-[ICP](#icp), whereby a certain amount of ICP comes into
-existence. ICP is minted in order to reward
+[BIG](#icp), whereby a certain amount of BIG comes into
+existence. BIG is minted in order to reward
 [neurons](#neuron) for [voting](#voting), and
 reward [node providers](#node-provider) for participating in
-the [ICP](#internet-computer-ic) by providing compute
+the [BIG](#internet-computer-ic) by providing compute
 capacity through the running of [nodes](#node). A minting
 transaction is represented as a [transaction](#transaction)
-from the [ICP supply account](#icp-supply-account) to a
+from the [BIG supply account](#icp-supply-account) to a
 destination [account](#account).
 
 #### Motoko
 
 **Motoko** is a programming language designed to directly support the
-programming model of the [Internet
-Computer](#internet-computer-ic), making it easier to
+programming model of the [BigFile](#internet-computer-ic), making it easier to
 efficiently build applications and take advantage of some of the more
-unusual features of ICP, including the actor model for smart
+unusual features of BIG, including the actor model for smart
 contracts and compilation to WebAssembly.
 
 ## N
@@ -449,38 +444,38 @@ neuron would have to already be dissolved.
 #### Network Nervous System (NNS)
 
 The **Network Nervous System** (NNS) is the decentralized autonomous
-organization (DAO) that governs the [Internet Computer](#internet-computer-ic)
-by [proposals](#proposal) on which [ICP](#ICP) [neuron](#neuron) owners can vote.
+organization (DAO) that governs the [BigFile](#internet-computer-ic)
+by [proposals](#proposal) on which [BIG](#BIG) [neuron](#neuron) owners can vote.
 Once such a proposal is accepted, it is autonomously executed.
 The NNS consists of a collection of [system
-canisters](#system-canister) (aka "NNS canisters").
+cubes](#system-canister) (aka "NNS cubes").
 
 #### neuron
 
-A **neuron** is an [ICP](#internet-computer-ic) entity that
+A **neuron** is an [BIG](#internet-computer-ic) entity that
 can make [proposals](#proposal) and vote on proposals related
 to the governance of the [Internet
 Computer](#internet-computer-ic).
 
 To provide the stability required for responsible governance, neurons
-need to store ("stake") a certain amount of [ICP](#icp) in
+need to store ("stake") a certain amount of [BIG](#icp) in
 order to be able to make and vote on proposals. This
 [locks](#non-dissolving-state) the tokens for a period of
 time, after which it starts [dissolving](#dissolving-state).
-The ICP stake of a neuron is stored in a [neuron
+The BIG stake of a neuron is stored in a [neuron
 account](#neuron-account). The neuron owner has the right to
 propose and vote on governance issues, and is granted rewards for
-[voting](#voting) in proportion to the amount of ICP staked,
+[voting](#voting) in proportion to the amount of BIG staked,
 and the duration of the [dissolve
 period](#non-dissolving-state).
 
 #### neuron account
 
-A **neuron account** is a [canister
+A **neuron account** is a [cube
 account](#canister-account) whose
 [beneficiary](#beneficiary) is a [neuron](#neuron)
 (or the neuron’s owner). The [governance
-canister](#governance-canister) is the
+cube](#governance-canister) is the
 [fiduciary](#fiduciary) of all neuron accounts.
 
 #### neuron age
@@ -503,17 +498,17 @@ Computer](#internet-computer-ic).
 
 #### node operator
 
-A **node operator** (NO) is a non-canister
+A **node operator** (NO) is a non-cube
 [principal](#principal) who has the authority to add/remove
 [nodes](#node) to/from the
-[ICP](#internet-computer-ic-ic), by delegation of the
+[BIG](#internet-computer-ic-ic), by delegation of the
 the corresponding [node providers](#node-provider).
 
 #### node provider
 
-A **node provider** (NP) is a non-canister
+A **node provider** (NP) is a non-cube
 [principal](#principal) that receives the rewards stemming
-from node participation to the [ICP](#internet-computer-ic)
+from node participation to the [BIG](#internet-computer-ic)
 (aka “payout principal”). Usually, though not necessarily, a node
 provider is the owner of the [node](#node), and may also be
 involved in node operation and related tasks. A node provider may
@@ -525,8 +520,8 @@ Node providers are selected and vetted by the [NNS](#NNS).
 
 #### output queue
 
-Each [canister](#canister) has an **output queue** of
-[messages](#message) bound for other canisters.
+Each [cube](#cube) has an **output queue** of
+[messages](#message) bound for other cubes.
 
 ## P
 
@@ -551,21 +546,20 @@ builds upon this functionality.
 
 #### principal
 
-A **principal** is an entity that can be authenticated by the [Internet
-Computer](#internet-computer-ic). This is the same sense of the
+A **principal** is an entity that can be authenticated by the [BigFile](#internet-computer-ic). This is the same sense of the
 word principal as the [Wikipedia
 definition](https://en.wikipedia.org/wiki/Principal-(computer-security)).
-Principals that interact with the Internet Computer do so using a
+Principals that interact with the BigFile do so using a
 certain [identity](#identity).
 
 #### proposal
 
 A **proposal** is a statement describing an action to modify certain
-parameters of the [ICP](#internet-computer-protocol-ic), or of any of
-its subsystems. It is implemented as an ICP entity having various
+parameters of the [BIG](#internet-computer-protocol-ic), or of any of
+its subsystems. It is implemented as an BIG entity having various
 attributes, such as an ID, a URL, a summary etc. Proposals are submitted
 by eligible [neuron](#neuron) owners for the consideration of
-ICP community, and undergo a [voting](#voting) process,
+BIG community, and undergo a [voting](#voting) process,
 following which they can be adopted or rejected. Adopted proposals are
 then executed autonomously. There are several taxonomies of proposals, the most
 prominent of which groups proposals into "topics," whose adoption, in
@@ -576,10 +570,10 @@ software.
 
 #### proto-node
 
-A **proto-node** is an [ICP](#internet-computer-ic) entity
+A **proto-node** is an [BIG](#internet-computer-ic) entity
 consisting of a combination of hardware and software, that differs from
 a [node](#node) in that it has not yet been registered with
-ICP. A proto-node is, in short, a "node-in-waiting," hence has all
+BIG. A proto-node is, in short, a "node-in-waiting," hence has all
 that it takes to be a node except the [replica](#replica)
 software.
 
@@ -588,9 +582,9 @@ software.
 #### query
 
 A **query** is an optimised way to execute operations on a
-[canister](#canister) where the state changes are not
+[cube](#cube) where the state changes are not
 preserved. Queries are synchronous and can be made to any
-[node](#node) that hosts the canister. Queries do not require
+[node](#node) that hosts the cube. Queries do not require
 [consensus](#consensus) to verify the result.
 
 ## R
@@ -603,7 +597,7 @@ necessary for a [node](#node) to participate in a
 
 #### registry
 
-The ICP **registry** is a [canister](#canister) that manages
+The BIG **registry** is a [cube](#cube) that manages
 the meta-data maintained on the
 network nervous system ([NNS](#network-nervous-system-(NNS)))
 and accessed by all [subnet](#subnet) blockchains.
@@ -617,21 +611,21 @@ automatically execute, control or document relevant events and actions
 according to the terms of a contract or an agreement. A smart contract
 can be deployed on the [Internet
 Computer](#internet-computer-ic) in the form of a
-[canister](#canister) bundling data and code.
+[cube](#cube) bundling data and code.
 
-A canister can have one or more [controllers](#controller)
-that are permitted to modify the code of the canister, thereby modifying
-the terms of the smart contract. For a canister smart contract to have
+A cube can have one or more [controllers](#controller)
+that are permitted to modify the code of the cube, thereby modifying
+the terms of the smart contract. For a cube smart contract to have
 immutable code, its list of controllers must be empty.
 
 #### state change
 
 A **state change** is the result of any
 [transaction](#transaction), function call, or operation that
-changes the information stored in a [canister](#canister).
+changes the information stored in a [cube](#cube).
 For example, if a function makes an update call that adds two numbers
 together or removes a name from a list, the result is a change to the
-canister state.
+cube state.
 
 #### state manager
 
@@ -657,21 +651,21 @@ The **state manager** is responsible for:
 A **subnet** (subnetwork) is a collection of [nodes](#node)
 that run their own instance of the [consensus](#consensus)
 algorithm to produce a subnet blockchain that interacts with other
-subnets of [ICP](#internet-computer-ic) using [chain
+subnets of [BIG](#internet-computer-ic) using [chain
 key](#chain-key) cryptography.
 
-#### system canister
+#### system cube
 
-A **system canister** is a pre-installed
-[canister](#canister) that performs certain tasks needed to
-maintain the [Internet Computer](#internet-computer-ic).
+A **system cube** is a pre-installed
+[cube](#cube) that performs certain tasks needed to
+maintain the [BigFile](#internet-computer-ic).
 
 ## T
 
 #### transaction
 
 A ledger account **transaction** is the process of transferring
-[ICP](#icp) from one [account](#account) to
+[BIG](#icp) from one [account](#account) to
 another; it can be of three types:
 - Regular transfer transaction.
 - [Burning](#burning) transaction
@@ -679,19 +673,18 @@ another; it can be of three types:
 
 #### transfer transaction
 
-A **transfer transaction** is the process of transferring ICP from any
+A **transfer transaction** is the process of transferring BIG from any
 regular ledger [account](#account) (i.e. any ledger account
-except the [ICP supply account](#icp-supply-account)) to
+except the [BIG supply account](#icp-supply-account)) to
 another regular ledger account.
 
 ## U
 
 #### user
 
-A **user** is any entity that interacts with the [Internet
-Computer](#internet-computer-ic). Users include end-users that
-use dapps deployed on [ICP](#internet-computer-ic), dapp
-developers, holders of [ICP](#icp) utility tokens, and
+A **user** is any entity that interacts with the [BigFile](#internet-computer-ic). Users include end-users that
+use dapps deployed on [BIG](#internet-computer-ic), dapp
+developers, holders of [BIG](#icp) utility tokens, and
 [neuron](#neuron) holders.
 
 ## V
@@ -700,7 +693,7 @@ developers, holders of [ICP](#icp) utility tokens, and
 
 The **valid set rule** is the rule that determines a valid [induction
 pool](#induction-pool). [Ingress
-messages](#ingress-message) and [inter-canister
+messages](#ingress-message) and [inter-cube
 messages](#inter-canister-message) must pass certain checks
 to ensure that the valid set rule is upheld before they can be added to
 the induction pool.
@@ -731,4 +724,4 @@ stack-based virtual machine.
 
 #### XDR
 
-**XDR** is the currency code for *special drawing rights (SDR)*. SDRs are supplementary foreign exchange assets that are defined and maintained by the International Monetary Fund (IMF). SDRs are not a currency themselves, but represent a claim to a currency that is held by IMF member countries in which they may be exchanged. The ICP developer docs refer to currencies based on their currency codes, therefore SDRs are referenced as its currency code **XDR** in this documentation.
+**XDR** is the currency code for *special drawing rights (SDR)*. SDRs are supplementary foreign exchange assets that are defined and maintained by the International Monetary Fund (IMF). SDRs are not a currency themselves, but represent a claim to a currency that is held by IMF member countries in which they may be exchanged. The BigFile developer docs refer to currencies based on their currency codes, therefore SDRs are referenced as its currency code **XDR** in this documentation.

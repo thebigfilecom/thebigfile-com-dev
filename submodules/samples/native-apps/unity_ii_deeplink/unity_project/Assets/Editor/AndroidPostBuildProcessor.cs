@@ -4,7 +4,7 @@ using System.IO;
 using System.Xml;
 using UnityEditor.Android;
 
-namespace IC.GameKit
+namespace BIG.GameKit
 {
     public class AndroidPostProcessor : IPostGenerateGradleAndroidProject
     {

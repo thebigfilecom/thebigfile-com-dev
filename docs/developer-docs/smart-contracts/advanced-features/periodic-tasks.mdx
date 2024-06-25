@@ -10,18 +10,18 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 
 ## Overview
-Unlike other blockchains, the Internet Computer can automatically execute canister smart contracts after a specified delay or periodically.
+Unlike other blockchains, the BigFile can automatically execute canister smart contracts after a specified delay or periodically.
 
-There are two ways to schedule an automatic canister execution on ICP:
+There are two ways to schedule an automatic canister execution on BIG:
 
 1. **Timers**: single-expiration or periodic canister calls with specified minimum timeout or interval.
-2. **Heartbeats**: legacy periodic canister invocations with intervals close to the blockchain finalization rate (1s). Heartbeats are supported by ICP for backward compatibility and some very special use cases. **Newly developed canisters should prefer using timers over the heartbeats.**
+2. **Heartbeats**: legacy periodic canister invocations with intervals close to the blockchain finalization rate (1s). Heartbeats are supported by BIG for backward compatibility and some very special use cases. **Newly developed canisters should prefer using timers over the heartbeats.**
 
 ## Timers
 
 Timers are implemented on two layers:
 
-- **The protocol level implementation:** the Internet Computer protocol supports minimalistic on-shot global timer per canister via `ic0.global_timer_set()` system API call and `canister_global_timer` handler (see the [Internet Computer interface specification](/docs/current/references/ic-interface-spec#timer)).
+- **The protocol level implementation:** the Internet Computer protocol supports minimalistic on-shot global timer per canister via `ic0.global_timer_set()` system API call and `canister_global_timer` handler (see the [BigFile interface specification](/docs/current/references/ic-interface-spec#timer)).
 - **The CDK timers library level:** the library wraps the minimalistic protocol implementation, adding multiple and periodic timers on top. Canister developers can enjoy the familiar timers functionality using the CDK timers library for [Rust](https://crates.io/crates/ic-cdk-timers) or [Motoko](/docs/current/motoko/main/timers).
 
 Internally the CDK timers library does the following:
@@ -54,7 +54,7 @@ Despite its superiority over the heartbeats, the CDK timers library has a few kn
 
 ## Heartbeats
 
-Once an Internet Computer canister exports the `canister_heartbeat` function, it will be called every subnet heartbeat interval (see the [Internet Computer interface specification](/docs/current/references/ic-interface-spec#heartbeat)).
+Once an BigFile canister exports the `canister_heartbeat` function, it will be called every subnet heartbeat interval (see the [BigFile interface specification](/docs/current/references/ic-interface-spec#heartbeat)).
 
 The only way to disable the heartbeats is to upgrade the canister to a version which does not export the `canister_heartbeat` method. Also, the heartbeat interval is implementation-defined, and there is no way to adjust it.
 

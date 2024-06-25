@@ -497,36 +497,21 @@ function TokenHolders(): JSX.Element {
                 <div className="space-y-4">
                   <WalletCard
                     title="NNS Dapp"
-                    description="Store and stake ICP, participate in governance."
-                    link="https://nns.ic0.app/"
+                    description="Store and stake BIG, participate in governance."
+                    link="https://nns.thebigfile.tech/"
                     icon="/img/showcase/nnsfront-enddapp_logo.webp"
                   />
+                  
+                  
                   <WalletCard
-                    title="Stoic"
-                    description="The native wallet of ICP’s largest NFT marketplace, Entrepot."
-                    link="https://www.stoicwallet.com/"
-                    icon="/img/showcase/stoicwallet_logo.webp"
-                  />
-                  <WalletCard
-                    title="AstroX ME"
-                    description="ME wallet secures crypto assets without seed phrase across any device."
-                    link="https://astrox.me/"
-                    icon="/img/showcase/astroxme_logo.webp"
-                  />
-                  <WalletCard
-                    title="OpenChat"
-                    description="Chat accounts are crypto wallets. Send ICP, ckBTC and SNS tokens via messages."
+                    title="BIGChat"
+                    description="Chat accounts are crypto wallets. Send BIG, ckBTC and SNS tokens via messages."
                     link="https://oc.app"
                     icon="/img/showcase/openchat_logo.webp"
                   />
+                  
                   <WalletCard
-                    title="TAGGR"
-                    description="DAO controlled social media dapp. Every account comes with wallet out of the box."
-                    link="https://taggr.link/"
-                    icon="/img/showcase/taggr_logo.webp"
-                  />
-                  <WalletCard
-                    title="NFID"
+                    title="BIGID"
                     description="Web3 Identity. Every new account creates an untraceable hardware wallet."
                     link="https://nfid.one/"
                     icon="/img/showcase/nfid_logo.webp"
@@ -574,12 +559,7 @@ function TokenHolders(): JSX.Element {
                     link="https://plugwallet.ooo/"
                     icon="/img/showcase/plug_logo.webp"
                   />
-                  <WalletCard
-                    title="Bitfinity Wallet"
-                    description="Store and transfer BTC, ICP, SNS-1, and other tokens. One-click login to dapps."
-                    link="https://wallet.infinityswap.one/"
-                    icon="/img/showcase/bitfinitywallet_logo.webp"
-                  />
+                  
                 </div>
               </motion.div>
               {/* Column 3 */}
@@ -604,7 +584,7 @@ function TokenHolders(): JSX.Element {
                   />
                   <WalletCard
                     title="Quill"
-                    description="Provides a command line tool to manage ICP in an air gapped computer."
+                    description="Provides a command line tool to manage BIG in an air gapped computer."
                     link="https://github.com/dfinity/quill"
                     icon="/img/showcase/quill_logo.webp"
                   />

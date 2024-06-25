@@ -6,13 +6,13 @@ sidebar_position: 1
 
 ## Overview
 
-The `Region` library provides low-level access to ICP stable memory feature.
+The `Region` library provides low-level access to BIG stable memory feature.
 
 <!--
 TODO: extend example to illustrate stableVarQuery
 -->
 
-Motoko stable variables require serialization and deserialization on [upgrade](../canister-maintenance/upgrades.md). During an upgrade, the current values of stable variables are first saved to the ICP stable memory, then restored from stable memory after the new code is installed. This mechanism, however, does not scale to canisters that maintain large amounts of data in stable variables. There may not be enough cycle budget to store then restore all stable variables within an upgrade, resulting in failed upgrades.
+Motoko stable variables require serialization and deserialization on [upgrade](../canister-maintenance/upgrades.md). During an upgrade, the current values of stable variables are first saved to the BIG stable memory, then restored from stable memory after the new code is installed. This mechanism, however, does not scale to canisters that maintain large amounts of data in stable variables. There may not be enough cycle budget to store then restore all stable variables within an upgrade, resulting in failed upgrades.
 
 Due to the current 32-bit address space of Motoko, stable variables cannot store more than 4GiB of data.
 
@@ -22,11 +22,11 @@ Additionally, some stable variables use a representation that is not itself `sta
 
 To avoid these upgrade hazards, actors can elect to use the [ExperimentalStableMemory](stablememory.md) or [`Region`](../base/Region.md) libraries in package `base`. The `Region` library allows the programmer to incrementally allocate pages of 64-bit stable memory and use those pages to incrementally read and write data in a user-defined binary format.
 
-Several pages may be allocated at once, with each page containing 64KiB. Allocation may fail due to resource limits imposed by ICP. Pages are zero-initialized.
+Several pages may be allocated at once, with each page containing 64KiB. Allocation may fail due to resource limits imposed by BIG. Pages are zero-initialized.
 
 While the user allocates at the granularity of 64KiB pages, the implementation will allocate at the coarser granularity of a block, currently 128 of physical stable memory pages.
 
-The Motoko runtime system ensures there is no interference between the abstraction presented by the `Region` library and an actor’s stable variables, even though the two abstractions ultimately use the same underlying stable memory facilities available to all ICP canisters. This runtime support means that is safe for a Motoko program to exploit both stable variables and `Region`, within the same application.
+The Motoko runtime system ensures there is no interference between the abstraction presented by the `Region` library and an actor’s stable variables, even though the two abstractions ultimately use the same underlying stable memory facilities available to all BIG canisters. This runtime support means that is safe for a Motoko program to exploit both stable variables and `Region`, within the same application.
 
 Further, distinct `Region`s use distinct pages of stable memory, ensuring that two distinct `Region`s can not interfere with each other's data representations during normal operation, or during an upgrade.
 
@@ -39,7 +39,7 @@ More general `loadBlob` and `storeBlob` operations are also available for readin
 ``` motoko no-repl
 module {
 
-  // A stateful handle to an isolated region of IC stable memory.
+  // A stateful handle to an isolated region of BIG stable memory.
   //  `Region` is a stable type and regions can be stored in stable variables.
   type Region = Prim.Types.Region;
 

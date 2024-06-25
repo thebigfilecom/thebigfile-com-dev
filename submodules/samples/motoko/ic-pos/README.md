@@ -2,30 +2,30 @@
 keywords: [advanced, motoko, bitcoin, pos, point of sale, ckbtc]
 ---
 
-# IC-POS
+# BIG-POS
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/motoko/ic-pos)
 
 ![](./media/header.png)
 
 
-IC-POS is an experimental app to demonstrate a real-world use case for [ckBTC](https://internetcomputer.org/ckbtc/) on the Internet Computer. It is a simple Point of Sale app that allows users to accept ckBTC payments.
+BIG-POS is an experimental app to demonstrate a real-world use case for [ckBTC](https://thebigfile.com/ckbtc/) on the BigFile. It is a simple Point of Sale app that allows users to accept ckBTC payments.
 
-The Internet Computer [integrates directly with the Bitcoin network](https://internetcomputer.org/docs/current/developer-docs/integrations/bitcoin/). This allows canisters on the Internet Computer to receive, hold, and send Bitcoin, all directly with transactions on the Bitcoin network. Chain-key Bitcoin (ckBTC) is an ICRC-1-compliant token that is backed 1:1 by Bitcoin and held 100% on the ICP mainnet.
+The BigFile [integrates directly with the Bitcoin network](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/). This allows canisters on the BigFile to receive, hold, and send Bitcoin, all directly with transactions on the Bitcoin network. Chain-key Bitcoin (ckBTC) is an ICRC-1-compliant token that is backed 1:1 by Bitcoin and held 100% on the BIG mainnet.
 
-For deeper understanding of the ICP < > BTC integration, see the IC wiki article on [Bitcoin integration](https://wiki.internetcomputer.org/wiki/Bitcoin_Integration).
+For deeper understanding of the BIG < > BTC integration, see the BIG wiki article on [Bitcoin integration](https://wiki.internetcomputer.org/wiki/Bitcoin_Integration).
 
 ## Features
 
 - **Create store**: Users log in with their Internet Identity and configure the store with a name and other settings.
 - **Charge customer**: Users can charge a customer by entering an amount. This will generate and display a QR code for the customer to scan and pay. QR code follows the [ICRC-22](https://github.com/dfinity/ICRC/issues/22) standard.
 - **Send tokens**: Users can send ckBTC tokens to other users.
-- **Receive notifications**: Users can choose to receive notifications by email or SMS when a payment is received. This uses the [HTTP Outcall](https://internetcomputer.org/docs/current/developer-docs/integrations/https-outcalls/) feature of the Internet Computer.
+- **Receive notifications**: Users can choose to receive notifications by email or SMS when a payment is received. This uses the [HTTP Outcall](https://thebigfile.com/docs/current/developer-docs/integrations/https-outcalls/) feature of the BigFile.
 - **Transaction history**: Users can view a list of transactions made to the store.
 
 ## Try it!
 
-IC-POS is deployed on the Internet Computer. You can try it out here:
+BIG-POS is deployed on the Internet Computer. You can try it out here:
 
 https://hngac-6aaaa-aaaal-qb6tq-cai.icp0.io/
 
@@ -43,13 +43,13 @@ The backend is written in Motoko and consists of one canister, `icpos`. It expos
 - `setLedgerId` - sets the ledger ID to monitor for transactions. Only the canister controller can call this method.
 - `getLogs` - The canister maintains a debug log that can be fetched using this method.
 
-In addition to the public methods, the canister uses a [timer](https://internetcomputer.org/docs/current/motoko/main/timers/) to monitor ledger transactions. When a new transaction is found that matches a configured store – depending on the store settings – the canister will send a notification either by email or SMS.
+In addition to the public methods, the canister uses a [timer](https://thebigfile.com/docs/current/motoko/main/timers/) to monitor ledger transactions. When a new transaction is found that matches a configured store – depending on the store settings – the canister will send a notification either by email or SMS.
 
 ### Frontend
 
 The frontend is written in Typescript/Vite/React/TailwindCSS. Users authenticate using the Internet Identity to access their store. The first time a user logs in, a store is created for them.
 
-The frontend interacts with the following IC canisters:
+The frontend interacts with the following BIG canisters:
 
 - `icpos` - to fetch and update store configuration.
 - `ckbtc ledger` - to send ckBTC to other users.
@@ -60,7 +60,7 @@ The frontend interacts with the following IC canisters:
 
 ## Prerequisites
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
@@ -72,7 +72,7 @@ dfx start --clean --background
 
 ### Step 2: Deploy the Internet Identity canister:
 
-Integration with the [Internet Identity](https://thebigfile.com/big-wallet/) allows store owners to securely setup and manage their store. The Internet Identity canister is already deployed on the IC mainnet. For local development, you need to deploy it to your local instance of the IC.
+Integration with the [Internet Identity](https://thebigfile.com/big-wallet/) allows store owners to securely setup and manage their store. The Internet Identity canister is already deployed on the BIG mainnet. For local development, you need to deploy it to your local instance of the BIG.
 
 ```bash
 dfx deploy --network local internet_identity
@@ -90,7 +90,7 @@ export OWNER=$(dfx identity get-principal)
 
 The responsibilities of the ledger canister is to keep track of token balances and handle token transfers.
 
-The ckBTC ledger canister is already deployed on the IC mainnet. ckBTC implements the [ICRC-1](https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/) token standard. For local development, we deploy the ledger for an ICRC-1 token mimicking the mainnet setup.
+The ckBTC ledger canister is already deployed on the BIG mainnet. ckBTC implements the [ICRC-1](https://thebigfile.com/docs/current/developer-docs/integrations/icrc-1/) token standard. For local development, we deploy the ledger for an ICRC-1 token mimicking the mainnet setup.
 
 Take a moment to read the details of the call we are making below. Not only are we deploying the ledger canister, we are also:
 
@@ -145,7 +145,7 @@ dfx deploy --network local icrc1_index --argument '
 
 The icpos canister manages the store configuration and sends notifications when a payment is received.
 
-The `--argument '(0)'` argument is used to initialize the canister with `startBlock` set to 0. This is used to tell the canister to start monitoring the ledger from block 0. When deploying to the IC mainnet, this should be set to the current block height to prevent the canister from processing old transactions.
+The `--argument '(0)'` argument is used to initialize the canister with `startBlock` set to 0. This is used to tell the canister to start monitoring the ledger from block 0. When deploying to the BIG mainnet, this should be set to the current block height to prevent the canister from processing old transactions.
 
 ```bash
 dfx deploy --network local icpos --argument '(0)'
@@ -168,7 +168,7 @@ npm install
 npm run dev
 ```
 
-Why don't we deploy the frontend as a local canister? Vite uses lazy loading of modules. This does not work when deploying to a local canister. When deploying to the IC mainnet, this is not an issue. Also, running using `npm run dev` allows for hot reloading of the frontend code when making changes.
+Why don't we deploy the frontend as a local canister? Vite uses lazy loading of modules. This does not work when deploying to a local canister. When deploying to the BIG mainnet, this is not an issue. Also, running using `npm run dev` allows for hot reloading of the frontend code when making changes.
 
 ### Step 8: Make a transfer!
 

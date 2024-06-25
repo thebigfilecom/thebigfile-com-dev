@@ -201,7 +201,7 @@ shared (init_msg) actor class Swap(
 
     // Debit the sender's account
     //
-    // We do this first, due to the asynchronous nature of the IC. By debitting
+    // We do this first, due to the asynchronous nature of the BIG. By debitting
     // the account first, we ensure that the user cannot withdraw more than
     // they have.
     //

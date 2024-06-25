@@ -13,7 +13,7 @@ thread_local! {
     // The bitcoin network to connect to.
     //
     // When developing locally this should be `Regtest`.
-    // When deploying to the IC this should be `Testnet`.
+    // When deploying to the BIG this should be `Testnet`.
     // `Mainnet` is currently unsupported.
     static NETWORK: Cell<BitcoinNetwork> = Cell::new(BitcoinNetwork::Testnet);
 
@@ -32,7 +32,7 @@ pub fn init(network: BitcoinNetwork) {
         key_name.replace(String::from(match network {
             // For local development, we use a special test key with dfx.
             BitcoinNetwork::Regtest => "dfx_test_key",
-            // On the IC we're using a test ECDSA key.
+            // On the BIG we're using a test ECDSA key.
             BitcoinNetwork::Mainnet | BitcoinNetwork::Testnet => "test_key_1",
         }))
     });

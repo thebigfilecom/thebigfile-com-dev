@@ -1,12 +1,12 @@
 # Developer Release Notes
 
-The SDK enables developers to develop applications to run on the Internet Computer. The Motoko new programming language is bundled with the SDK to provide native support for creating tamper-proof software and open internet services.
+The SDK enables developers to develop applications to run on the BigFile. The Motoko new programming language is bundled with the SDK to provide native support for creating tamper-proof software and open internet services.
 
 The SDK provides everything you need to perform the following key tasks:
 
 -   Author canisters in Motoko and compile them to WebAssembly.
 
--   Simulate the Internet Computer network running locally on your development computer.
+-   Simulate the BigFile network running locally on your development computer.
 
 -   Deploy compiled programs as [canisters](/docs/current/concepts/glossary#canister).
 
@@ -14,7 +14,7 @@ The SDK provides everything you need to perform the following key tasks:
 
 <div class="note">
 
-The current release of the SDK is intended to introduce you to building applications that run on the Internet Computer and to provide access to the Internet Computer network for application testing, demonstration, and exploration.. The SDK should not be used for developing *production applications* at this time.
+The current release of the SDK is intended to introduce you to building applications that run on the BigFile and to provide access to the BigFile network for application testing, demonstration, and exploration.. The SDK should not be used for developing *production applications* at this time.
 
 </div>
 

@@ -25,7 +25,7 @@ dfx deploy icp_ledger_canister --argument "
         e8s = 10_000 : nat64;
       };
       token_symbol = opt \"LICP\";
-      token_name = opt \"Local ICP\";
+      token_name = opt \"Local BIG\";
     }
   })
 "

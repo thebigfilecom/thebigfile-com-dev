@@ -73,7 +73,7 @@ actor {
   public func foo() : async Text {
 
     //1. DECLARE MANAGEMENT CANISTER
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //2. SETUP ARGUMENTS FOR HTTP GET request
     let request : Types.HttpRequestArgs = {
@@ -218,7 +218,7 @@ actor {
 
     //1. DECLARE MANAGEMENT CANISTER
     //You need this so you can use it to make the HTTP request
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //2. SETUP ARGUMENTS FOR HTTP GET request
 
@@ -596,7 +596,7 @@ module Types {
 
 
     //3. Declaring the management canister which is used to make the HTTPS outcall
-    public type IC = actor {
+    public type BIG = actor {
         http_request : HttpRequestArgs -> async HttpResponsePayload;
     };
 

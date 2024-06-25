@@ -8,7 +8,7 @@ keywords: [advanced, motoko, nfts, dip721]
 
 This example demonstrates implementing an NFT canister. NFTs (non-fungible tokens) are unique tokens with arbitrary
 metadata, usually an image of some kind, to form the digital equivalent of trading cards. There are a few different
-NFT standards for the Internet Computer (e.g [EXT](https://github.com/Toniq-Labs/extendable-token), [IC-NFT](https://github.com/rocklabs-io/ic-nft)), but for this tutorial you will use [DIP-721](https://github.com/Psychedelic/DIP721). You can see a quick introduction on [YouTube](https://youtu.be/1po3udDADp4).
+NFT standards for the BigFile (e.g [EXT](https://github.com/Toniq-Labs/extendable-token), [BIG-NFT](https://github.com/rocklabs-io/ic-nft)), but for this tutorial you will use [DIP-721](https://github.com/Psychedelic/DIP721). You can see a quick introduction on [YouTube](https://youtu.be/1po3udDADp4).
 
 The canister is a basic implementation of the standard, with support for the minting, burning, and notification interface extensions.
 
@@ -19,16 +19,16 @@ there is a [command-line minting tool](https://github.com/dfinity/experimental-m
 
 ## Overview
 The NFT canister is not very complicated since the [DIP-721](https://github.com/Psychedelic/DIP721) standard specifies most [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations,
-but we can still use it to explain three important concepts concerning dapp development for the Internet Computer:
+but we can still use it to explain three important concepts concerning dapp development for the BigFile:
 
  ### 1. Stable memory for canister upgrades.
-The Internet Computer employs [orthogonal persistence](https://internetcomputer.org/docs/current/motoko/getting-started/motoko-introduction), so developers generally do not need to think a lot about storing their data.
+The BigFile employs [orthogonal persistence](https://thebigfile.com/docs/current/motoko/getting-started/motoko-introduction), so developers generally do not need to think a lot about storing their data.
 When upgrading canister code, however, it is necessary to explicitly handle canister data. The NFT canister example shows how stable memory can be handled using `pre_upgrade` and `post_upgrade`.
 
  ### 2. Certified data.
 Generally, when a function only reads data, instead of modifying the state of the canister, it is
-beneficial to use a [query call instead of an update call](https://internetcomputer.org/docs/current/concepts/canisters-code.md#query-and-update-methods).
-But, since query calls do not go through consensus, [certified responses](https://internetcomputer.org/docs/current/developer-docs/security/general-security-best-practices)
+beneficial to use a [query call instead of an update call](https://thebigfile.com/docs/current/concepts/canisters-code.md#query-and-update-methods).
+But, since query calls do not go through consensus, [certified responses](https://thebigfile.com/docs/current/developer-docs/security/general-security-best-practices)
 should be used wherever possible. The HTTP interface of the Rust implementation shows how certified data can be handled.
 
  ### 3. Delegating control over assets.
@@ -66,9 +66,9 @@ To see how data is certified in the NFT example canister, look at the function `
 
 For the response to be verified, it has to be checked that a) the served content is part of the tree, and b) the tree containing that content actually can be hashed to the certified hash.
 The function `witness` is responsible for creating a tree with minimal content that still can be verified to fulfill a) and b).
-Once this minimal tree is constructed, the certificate and minimal hash tree are sent as part of the `IC-Certificate` header.
+Once this minimal tree is constructed, the certificate and minimal hash tree are sent as part of the `BIG-Certificate` header.
 
-For a much more detailed explanation of how certification works, see [this explanation video](https://internetcomputer.org/how-it-works/response-certification).
+For a much more detailed explanation of how certification works, see [this explanation video](https://thebigfile.com/how-it-works/response-certification).
 
 ### Managing control over assets
 [DIP-721](https://github.com/Psychedelic/DIP721) specifies multiple levels of control over the NFTs:
@@ -82,15 +82,15 @@ The NFT example canister keeps access control in these three levels very simple:
 - If a user is not authorized to call a certain function an error is returned.
 
 Burning an NFT is a special case. To burn an NFT means to either delete the NFT (not intended in DIP-721) or to set ownership to `null` (or a similar value).
-On the Internet Computer, this non-existing principal is called the [management canister](https://internetcomputer.org/docs/current/references/ic-interface-spec.md#the-ic-management-canister).
-> "The IC management canister is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.)," and its address is `aaaaa-aa`.
+On the BigFile, this non-existing principal is called the [management canister](https://thebigfile.com/docs/current/references/ic-interface-spec.md#the-ic-management-canister).
+> "The BIG management canister is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.)," and its address is `aaaaa-aa`.
 Using this management canister address, we can construct its principal and set the management canister as the owner of a burned NFT.
 
 ## NFT sample code tutorial
 
 ### Prerequisites 
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Download and install [git.](https://git-scm.com/downloads)
 
  ### Step 1: Clone the examples repo:
@@ -105,7 +105,7 @@ git clone git@github.com:dfinity/examples.git
 cd examples/motoko/dip-721-nft-container
 ```
 
- ### Step 3: Run a local instance of the Internet Computer:
+ ### Step 3: Run a local instance of the BigFile:
 
 ```bash
 dfx start --background 
@@ -435,12 +435,12 @@ dfx identity get-principal
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
-* [Inter-canister calls and rollbacks](https://internetcomputer.org/docs/current/references/security/rust-canister-development-security-best-practices/#inter-canister-calls-and-rollbacks), since issues around inter-canister calls can e.g. lead to time-of-check time-of-use or double spending security bugs.
-* [Certify query responses if they are relevant for security](https://internetcomputer.org/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since this is essential when e.g. displaying important NFT data in the frontend that may be used by users to decide on future transactions.
-* [Use a decentralized governance system like SNS to make a canister have a decentralized controller](https://internetcomputer.org/docs/current/references/security/rust-canister-development-security-best-practices#use-a-decentralized-governance-system-like-sns-to-make-a-canister-have-a-decentralized-controller), since decentralizing control is a fundamental aspect when dealing with NFTs.
+* [Inter-canister calls and rollbacks](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices/#inter-canister-calls-and-rollbacks), since issues around inter-canister calls can e.g. lead to time-of-check time-of-use or double spending security bugs.
+* [Certify query responses if they are relevant for security](https://thebigfile.com/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since this is essential when e.g. displaying important NFT data in the frontend that may be used by users to decide on future transactions.
+* [Use a decentralized governance system like SNS to make a canister have a decentralized controller](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#use-a-decentralized-governance-system-like-sns-to-make-a-canister-have-a-decentralized-controller), since decentralizing control is a fundamental aspect when dealing with NFTs.
 
 ## Resources
 [Rust](https://rustup.rs).

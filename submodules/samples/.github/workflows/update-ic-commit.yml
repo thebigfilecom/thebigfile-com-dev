@@ -1,5 +1,5 @@
-# A GitHub Actions workflow that regularly creates a pull request to update the IC artifacts
-name: IC Artifacts Update
+# A GitHub Actions workflow that regularly creates a pull request to update the BIG artifacts
+name: BIG Artifacts Update
 
 on:
   workflow_dispatch:
@@ -71,9 +71,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: master
           add-paths: ./.ic-commit
-          commit-message: Update commit of IC artifacts
+          commit-message: Update commit of BIG artifacts
           committer: GitHub <noreply@github.com>
           author: SDK <team-sdk@dfinity.org>
           branch: bot-ic-update
           delete-branch: true
-          title: 'Update commit of IC artifacts'
+          title: 'Update commit of BIG artifacts'

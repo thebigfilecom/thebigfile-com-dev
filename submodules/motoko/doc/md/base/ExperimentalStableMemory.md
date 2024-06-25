@@ -10,10 +10,10 @@ Going forward, users should consider using library `Region.mo` to allocate *isol
 Using dedicated regions for different user applications ensures that writing
 to one region will not affect the state of another, unrelated region.
 
-This is a lightweight abstraction over IC _stable memory_ and supports persisting
+This is a lightweight abstraction over BIG _stable memory_ and supports persisting
 raw binary data across Motoko upgrades.
 Use of this module is fully compatible with Motoko's use of
-_stable variables_, whose persistence mechanism also uses (real) IC stable memory internally, but does not interfere with this API.
+_stable variables_, whose persistence mechanism also uses (real) BIG stable memory internally, but does not interfere with this API.
 
 Memory is allocated, using `grow(pages)`, sequentially and on demand, in units of 64KiB pages, starting with 0 allocated pages.
 New pages are zero initialized.
@@ -31,11 +31,11 @@ Text values can be handled by using `Text.decodeUtf8` and `Text.encodeUtf8`, in 
 
 The current page allocation and page contents is preserved across upgrades.
 
-NB: The IC's actual stable memory size (`ic0.stable_size`) may exceed the
+NB: The BIG's actual stable memory size (`ic0.stable_size`) may exceed the
 page size reported by Motoko function `size()`.
 This (and the cap on growth) are to accommodate Motoko's stable variables.
 Applications that plan to use Motoko stable variables sparingly or not at all can
-increase `--max-stable-pages` as desired, approaching the IC maximum (initially 8GiB, then 32Gib, currently 64Gib).
+increase `--max-stable-pages` as desired, approaching the BIG maximum (initially 8GiB, then 32Gib, currently 64Gib).
 All applications should reserve at least one page for stable variable data, even when no stable variables are used.
 
 Usage:
@@ -92,7 +92,7 @@ afterSize - beforeSize // => 10
 let stableVarQuery : () -> (shared query () -> async { size : Nat64 })
 ```
 
-Returns a query that, when called, returns the number of bytes of (real) IC stable memory that would be
+Returns a query that, when called, returns the number of bytes of (real) BIG stable memory that would be
 occupied by persisting its current stable variables before an upgrade.
 This function may be used to monitor or limit real stable memory usage.
 The query computes the estimate by running the first half of an upgrade, including any `preupgrade` system method.

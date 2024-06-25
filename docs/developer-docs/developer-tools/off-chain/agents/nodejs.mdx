@@ -12,9 +12,9 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-Node.js is a runtime for JavaScript, so you can use the [JavaScript agent](https://www.npmjs.com/package/@dfinity/agent) with it to interact with a canister. This can be useful to run an oracle, connect an existing Node.js application to ICP, or to introduce a websocket layer to your application.
+Node.js is a runtime for JavaScript, so you can use the [JavaScript agent](https://www.npmjs.com/package/@dfinity/agent) with it to interact with a canister. This can be useful to run an oracle, connect an existing Node.js application to BIG, or to introduce a websocket layer to your application.
 
-[More information about calling ICP from JavaScript in a web browser](/docs/current/developer-docs/developer-tools/off-chain/agents/javascript-agent).
+[More information about calling BIG from JavaScript in a web browser](/docs/current/developer-docs/developer-tools/off-chain/agents/javascript-agent).
 
 In this example, you will run a simple Node.js websocket provider, proxying a canister keeping track of a stack of events.
 
@@ -22,10 +22,10 @@ First, you need to get started with a project. Let's take the DIP721 example cod
 
 ## Prerequisites
 
-- [x] This project uses features introduced in dfx 0.11.2. You can install the latest version of the IC SDK with the command:
+- [x] This project uses features introduced in dfx 0.11.2. You can install the latest version of the BIG SDK with the command:
 
 ```
-sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 - [x] Download and install [Node.js v0.16.0+](https://nodejs.org/en).
@@ -226,7 +226,7 @@ const seed = "test test test test test test test test test test test test";
 export const identity = await Secp256k1KeyIdentity.fromSeedPhrase(seed);
 ```
 
-As you can see, the seed phrase is derived from the word `test`, repeated 12 times. This is useful for testing purposes and local development. When you are deploying your contract to ICP, you should change the seed out for something private.
+As you can see, the seed phrase is derived from the word `test`, repeated 12 times. This is useful for testing purposes and local development. When you are deploying your contract to BIG, you should change the seed out for something private.
 
 :::caution
 Remember to store any seed phrase you use in production in a secure place. Use environment variables and never commit a real seed phrase in plaintext in your codebase.

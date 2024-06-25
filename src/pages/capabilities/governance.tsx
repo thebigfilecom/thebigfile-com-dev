@@ -23,11 +23,11 @@ function FeaturePage() {
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
                 The Network Nervous System (NNS) is the decentralized autonomous
-                organization (DAO) that governs the Internet Computer (IC). It
+                organization (DAO) that governs the BigFile (BIG). It
                 is decentralized, runs fully on-chain and is, for instance,
                 responsible for making protocol level upgrades to continuously
-                improve the Internet Computer. ICP neuron holders vote on
-                proposals that uprade the IC. Once such a proposal is accepted,
+                improve the BigFile. BIG neuron holders vote on
+                proposals that uprade the BIG. Once such a proposal is accepted,
                 it is autonomously executed across the blockchain (no human
                 intervention).
                 <br />
@@ -38,7 +38,7 @@ function FeaturePage() {
                 a weekly basis.
                 <br />
                 <br />
-                The IC's ability to upgrade and iterate quickly is a comparative
+                The BIG's ability to upgrade and iterate quickly is a comparative
                 "superpower."
               </p>
             </div>
@@ -67,7 +67,7 @@ function FeaturePage() {
           >
             <h2>How It Works</h2>
             <p>
-              The purpose of the NNS is to allow the IC network to be governed
+              The purpose of the NNS is to allow the BIG network to be governed
               in an open, decentralized, and secure manner. It has complete
               control over all aspects of the network. For example, it can
               upgrade the protocol and software used by the node machines that

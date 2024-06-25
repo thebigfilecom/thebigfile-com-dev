@@ -26,7 +26,7 @@ The NNS community's approval is relevant in Stage 3.
   * The tokenomics and how governance will work.
   * The initial token distribution.
   * The conditions for the decentralization swap, including the swap's start date and
-    how many ICP tokens should at least and at most be collected.
+    how many BIG tokens should at least and at most be collected.
 
   Therefore defining these parameters usually requires a lot of preparation and
   community engagement already (see [here](../tokenomics/sns-checklist.mdx) for
@@ -341,7 +341,7 @@ The swap was initialized with a defined start time.
 Once this start time is reached,
 the swap will automatically be started and is open for participation.
 
-End users can participate in the decentralization swap by transferring ICP tokens to the
+End users can participate in the decentralization swap by transferring BIG tokens to the
 swap canister.
 
 This means, you will have the following situation:
@@ -389,7 +389,7 @@ This means, you will have the following situation:
 ### 9. (Automatically) SNS swap ends.
 The swap was also initialized with a defined end time.
 When this time is reached, the swap automatically ends.
-The swap can also end earlier if the maximum ICP participation is reached before the end
+The swap can also end earlier if the maximum BIG participation is reached before the end
 time.
 
 This means, you will have the following situation:
@@ -437,7 +437,7 @@ This means, you will have the following situation:
 
 ### 10. (Automatically) SNS swap finalizes.
 When the decentralization swap ends, it is first established whether
-it was successful, e.g., enough ICP have been collected.
+it was successful, e.g., enough BIG have been collected.
 If the swap was successful,
 the exchange rate is determined and all SNS tokens are given to the swap participants in
 neurons.
@@ -449,7 +449,7 @@ Thus, the governance canister is set to be fully functional.
 If the swap is not successful, the decentralization attempt failed and everything
 is reverted to the state before the SNS launch attempt, including that the dapp’s control
 is handed back to the original developers of the dapp, and the
-collected ICP are refunded to the swap participants.
+collected BIG are refunded to the swap participants.
 
 If successful, at the end of stage, you have:
 

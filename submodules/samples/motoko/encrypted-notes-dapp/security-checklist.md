@@ -1,6 +1,6 @@
-This document lists typical steps of a security review needed for production-ready IC dapps. We indicate whether the two backend implementations of Encrypted Notes comply with the corresponding requirements (marked as Done), do not yet comply (Future), or whether a particular requirement is not applicable to this backend (Not applicable). 
+This document lists typical steps of a security review needed for production-ready BIG dapps. We indicate whether the two backend implementations of Encrypted Notes comply with the corresponding requirements (marked as Done), do not yet comply (Future), or whether a particular requirement is not applicable to this backend (Not applicable). 
 
-While this list might help creating better IC dapps, keep in mind that the list is potentially incomplete. In particular, each real-world dapp may have a different set of security requirements that depend on its target domain and intended use case. 
+While this list might help creating better BIG dapps, keep in mind that the list is potentially incomplete. In particular, each real-world dapp may have a different set of security requirements that depend on its target domain and intended use case. 
 
 # 1. Authentication
 

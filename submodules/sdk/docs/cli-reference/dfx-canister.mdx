@@ -5,7 +5,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Reference"]} />
 
 Use the `dfx canister` command with options and subcommands to manage canister operations and interaction with the
-Internet Computer or the local canister execution environment. In most cases, you use `dfx canister` subcommands after
+BigFile or the local canister execution environment. In most cases, you use `dfx canister` subcommands after
 you compile a program to manage the canister lifecycle and to perform key tasks such as calling program functions.
 
 The basic syntax for running `dfx canister` commands is:
@@ -40,7 +40,7 @@ For reference information and examples that illustrate using `dfx canister` comm
 | [`send`](#dfx-canister-send)                       | Send a previously-signed message.                                                                                                                      |
 | [`sign`](#dfx-canister-send)                       | Sign a canister call and generate message file.                                                                                                        |
 | [`start`](#dfx-canister-start)                     | Starts a stopped canister.                                                                                                                             |
-| [`status`](#dfx-canister-status)                   | Returns the current status of a canister as defined [here](https://internetcomputer.org/docs/current/references/ic-interface-spec#ic-canister_status). |
+| [`status`](#dfx-canister-status)                   | Returns the current status of a canister as defined [here](https://thebigfile.com/docs/current/references/ic-interface-spec#ic-canister_status). |
 | [`stop`](#dfx-canister-stop)                       | Stops a currently running canister.                                                                                                                    |
 | [`uninstall-code`](#dfx-canister-uninstall-code)   | Uninstalls a canister, removing its code and state. Does not delete the canister.                                                                      |
 | [`update-settings`](#dfx-canister-update-settings) | Update one or more of a canister's settings (i.e its controller, compute allocation, or memory allocation.).                                           |
@@ -48,7 +48,7 @@ For reference information and examples that illustrate using `dfx canister` comm
 ## Overriding the default deployment environment
 
 By default, `dfx canister` commands run on the local canister execution environment specified in the `dfx.json` file. If
-you want to send a `dfx canister` subcommand to the Internet Computer or a testnet without changing the settings in
+you want to send a `dfx canister` subcommand to the BigFile or a testnet without changing the settings in
 your `dfx.json` configuration file, you can explicitly specify the URL to connect to using the `--network` option.
 
 For example, to register unique canister identifiers for a project on the local canister execution environment, you can
@@ -58,14 +58,14 @@ run the following command:
 dfx canister create --all
 ```
 
-If you want to register unique canister identifiers for the same project on the Internet Computer, you can run the
+If you want to register unique canister identifiers for the same project on the BigFile, you can run the
 following command:
 
 ``` bash
 dfx canister create --all --network ic
 ```
 
-The SDK comes with an alias of `ic`, which is configured to point to the Internet Computer. You can also pass a URL as a
+The SDK comes with an alias of `ic`, which is configured to point to the BigFile. You can also pass a URL as a
 network option, or you can configure additional aliases in `dfx.json` under the `networks` configuration, or
 in `$HOME/.config/dfx/networks.json`.
 
@@ -77,7 +77,7 @@ dfx canister call counter get --network http://192.168.3.1:5678
 
 ## Performing a call through the wallet
 
-By default, most `dfx canister` commands to the Internet Computer are signed by and sent from your own principal. (
+By default, most `dfx canister` commands to the BigFile are signed by and sent from your own principal. (
 Exceptions are commands that require cycles: `dfx canister create` and `dfx canister deposit-cycles`. Those
 automatically go through the wallet.) Occasionally, you may want to make a call from your wallet, e.g. when only your
 wallet is allowed to call a certain function. To send a call through your wallet, you can use the `--wallet` option like
@@ -152,7 +152,7 @@ dfx canister call counter get --async
 ```
 
 In this example, the command includes the `--async` option to indicate that you want to make a separate `request-status`
-call rather than waiting to poll the local canister execution environment or the Internet Computer for the result.
+call rather than waiting to poll the local canister execution environment or the BigFile for the result.
 The `--async` option is useful when processing an operation might take some time to complete. The option enables you to
 continue performing other operations then check for the result using a separate `dfx canister request-status` command.
 The returned result will be displayed as the IDL textual format.
@@ -230,7 +230,7 @@ These are the mappings:
 
 Use the `dfx canister create` command to register one or more canister identifiers without compiled code. The new
 canister principals are then recorded in `canister_ids.json` for non-local networks. You must be connected to the local
-canister execution environment or the Internet Computer to run this command.
+canister execution environment or the BigFile to run this command.
 
 Note that you can only run this command from within the project directory structure. For example, if your project name
 is `hello_world`, your current working directory must be the `hello_world` top-level project directory or one of its
@@ -250,7 +250,7 @@ You can use the following options with the `dfx canister create` command.
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `-c`, `--compute-allocation <allocation>` | Specifies the canister's compute allocation. This should be a percent in the range [0..100].                                                                                                                                                                                                                                                                                             |
 | `--controller <principal>`                | Specifies the identity name or the principal of the new controller.                                                                                                                                                                                                                                                                                                                      |
-| `--created-at-time <timestamp>`           | Transaction timestamp, in nanoseconds, for use in controlling transaction deduplication, default is system time. https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-                                                                                                                                                                |
+| `--created-at-time <timestamp>`           | Transaction timestamp, in nanoseconds, for use in controlling transaction deduplication, default is system time. https://thebigfile.com/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-                                                                                                                                                                |
 | `--from-subaccount <subaccount>`          | Subaccount of the selected identity to spend cycles from.                                                                                                                                                                                                                                                                                                                                |
 | `--memory-allocation <memory>`            | Specifies how much memory the canister is allowed to use in total. This should be a value in the range [0..12 GiB]. A setting of 0 means the canister will have access to memory on a “best-effort” basis: It will only be charged for the memory it uses, but at any point in time may stop running if it tries to allocate more memory when there isn’t space available on the subnet. |
 | `--reserved-cycles-limit <limit>`         | Specifies the upper limit for the canister's reserved cycles.                                                                                                                                                                                                                                                                                                                            |
@@ -310,7 +310,7 @@ canisters use the default setting, processing occurs in a round-robin fashion.
 ## dfx canister delete
 
 Use the `dfx canister delete` command to delete a stopped canister from the local canister execution environment or the
-Internet Computer. By default, this withdraws remaining cycles to your wallet before deleting the canister.
+BigFile. By default, this withdraws remaining cycles to your wallet before deleting the canister.
 
 Note that you can only run this command from within the project directory structure. For example, if your project name
 is `hello_world`, your current working directory must be the `hello_world` top-level project directory or one of its
@@ -354,7 +354,7 @@ To delete the `hello_world` canister, you can run the following command:
 dfx canister delete hello_world
 ```
 
-To delete all of the canisters you have deployed on the `ic` Internet Computer and configured in your `dfx.json`, you
+To delete all of the canisters you have deployed on the `ic` BigFile and configured in your `dfx.json`, you
 can run the following command:
 
 ``` bash
@@ -388,7 +388,7 @@ You can use the following options with the `dfx canister deposit-cycles` command
 
 | Option                           | Description                                                                                                                                                                                                               |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--created-at-time <timestamp>`  | Transaction timestamp, in nanoseconds, for use in controlling transaction deduplication, default is system time. https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication- |
+| `--created-at-time <timestamp>`  | Transaction timestamp, in nanoseconds, for use in controlling transaction deduplication, default is system time. https://thebigfile.com/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication- |
 | `--from-subaccount <subaccount>` | Subaccount of the selected identity to spend cycles from.                                                                                                                                                                 |
 
 
@@ -494,7 +494,7 @@ Module hash: 0x2cfb6f216fd6ab367364c02960afbbc5c444f5481225ee676992ac9058fd41e3
 
 ## dfx canister install
 
-Use the `dfx canister install` command to install compiled code as a canister on the Internet Computer or on the local
+Use the `dfx canister install` command to install compiled code as a canister on the BigFile or on the local
 canister execution environment.
 
 ### Basic usage
@@ -512,7 +512,7 @@ You can use the following options with the `dfx canister install` command.
 | `--argument <argument>`           | Specifies an argument to pass to the canister during installation.                                                                                                                                                                                                    |
 | `--argument-type <argument-type>` | Specifies the data type for the argument when making the call using an argument [possible values: idl, raw]                                                                                                                                                           |
 | `--argument-file <argument-file>` | Specifies the file from which to read the argument to pass to the init method.  Stdin may be referred to as `-`.                                                                                                                                                      |
-| `--async-call`                    | Enables you to continue without waiting for the result of the installation to be returned by polling the Internet Computer or the local canister execution environment.                                                                                               |
+| `--async-call`                    | Enables you to continue without waiting for the result of the installation to be returned by polling the BigFile or the local canister execution environment.                                                                                               |
 | `-m`, `--mode <mode>`             | Specifies whether you want to `install`, `reinstall`, or `upgrade` canisters. Defaults to `install`. For more information about installation modes and canister management, see [managing canisters](/docs/current/developer-docs/smart-contracts/maintain/settings). |
 | `--no-wallet`                     | Performs the call with the user Identity as the Sender of messages. Bypasses the Wallet canister. Enabled by default.                                                                                                                                                 |
 | `--no-asset-upgrade`              | Skips upgrading the asset canister, to only install the assets themselves.                                                                                                                                                                                            |
@@ -535,7 +535,7 @@ You can use the following arguments with the `dfx canister install` command.
 ### Examples
 
 You can use the `dfx canister install` command to deploy WebAssembly you have compiled using the `dfx build` command as
-a canister on the Internet Computer or on the local canister execution environment. The most common use case is to
+a canister on the BigFile or on the local canister execution environment. The most common use case is to
 install all of the canisters by running the following command:
 
 ``` bash
@@ -727,7 +727,7 @@ Use the `dfx canister sign` command before sending a message with the `dfx canis
 separate these steps, rather than using the single `dfx canister call` command. Using separate calls can add security to
 the transaction. For example, when creating your neuron stake, you might want to use the `dfx canister sign` command to
 create a signed `message.json` file using an air-gapped computer, then use the `dfx canister send` command to deliver
-the signed message from a computer connected to the Internet Computer.
+the signed message from a computer connected to the BigFile.
 
 ### Basic usage
 
@@ -771,7 +771,7 @@ command similar to the following:
 
 `dfx canister sign --network=ic --expire-after=1h rno2w-sqaaa-aaaaa-aaacq-cai create_neurons ‘(“PUBLIC_KEY”)’`
 
-This command illustrates how to creates a `message.json` file to create neurons on the Internet Computer specified by
+This command illustrates how to creates a `message.json` file to create neurons on the BigFile specified by
 the `ic` alias, that is signed using your principal identifier as the message sender and with an expiration window that
 ends in one hour.
 
@@ -792,7 +792,7 @@ command:
 
 ## dfx canister start
 
-Use the `dfx canister start` command to restart a stopped canister on the Internet Computer or the local canister
+Use the `dfx canister start` command to restart a stopped canister on the BigFile or the local canister
 execution environment.
 
 In most cases, you run this command after you have stopped a canister to properly terminate any pending requests as a
@@ -827,7 +827,7 @@ To start the `hello_world` canister, you can run the following command:
 dfx canister start hello_world
 ```
 
-To start all of the canisters you have deployed on the `ic` Internet Computer, you can run the following command:
+To start all of the canisters you have deployed on the `ic` BigFile, you can run the following command:
 
 ``` bash
 dfx canister start --all --network=ic
@@ -836,7 +836,7 @@ dfx canister start --all --network=ic
 ## dfx canister status
 
 Use the `dfx canister status` command to check whether a canister is currently running, in the process of stopping, or
-currently stopped on the Internet Computer or on the local canister execution environment.
+currently stopped on the BigFile or on the local canister execution environment.
 
 Note that you can only run this command from within the project directory structure. For example, if your project name
 is `hello_world`, your current working directory must be the `hello_world` top-level project directory or one of its
@@ -867,7 +867,7 @@ To check the status of the `hello_world` canister, you can run the following com
 dfx canister status hello_world
 ```
 
-To check the status for all of the canisters you have deployed on the `ic` Internet Computer, you can run the following
+To check the status for all of the canisters you have deployed on the `ic` BigFile, you can run the following
 command:
 
 ``` bash
@@ -876,7 +876,7 @@ dfx canister status --all --network=ic
 
 ## dfx canister stop
 
-Use the `dfx canister stop` command to stop a canister that is currently running on the Internet Computer or on the
+Use the `dfx canister stop` command to stop a canister that is currently running on the BigFile or on the
 local canister execution environment.
 
 In most cases, you run this command to properly terminate any pending requests as a prerequisite to upgrading the
@@ -911,7 +911,7 @@ To stop the `hello_world` canister, you can run the following command:
 dfx canister stop hello_world
 ```
 
-To stop all of the canisters you have deployed on the `ic` Internet Computer, you can run the following command:
+To stop all of the canisters you have deployed on the `ic` BigFile, you can run the following command:
 
 ``` bash
 dfx canister stop --all --network=ic
@@ -920,7 +920,7 @@ dfx canister stop --all --network=ic
 ## dfx canister uninstall-code
 
 Use the `dfx canister uninstall-code` command to uninstall the code that a canister that is currently running on the
-Internet Computer or on the local canister execution environment.
+BigFile or on the local canister execution environment.
 
 This method removes a canister’s code and state, making the canister empty again. Only the controller of the canister
 can uninstall code. Uninstalling a canister’s code will reject all calls that the canister has not yet responded to, and
@@ -956,7 +956,7 @@ To uninstall the `hello_world` canister, you can run the following command:
 dfx canister uninstall-code hello_world
 ```
 
-To uninstall all of the canisters you have deployed on the `ic` Internet Computer, you can run the following command:
+To uninstall all of the canisters you have deployed on the `ic` BigFile, you can run the following command:
 
 ``` bash
 dfx canister uninstall-code --all --network=ic
@@ -993,7 +993,7 @@ You can specify the following options for the `dfx canister update-settings` com
 | `--reserved-cycles-limit <limit>`         | Specifies the upper limit of the canister's reserved cycles.                                                                                                                                                                                                                                                                                                                             |
 | `--wasm-memory-limit <limit>`             | Specifies a soft upper limit for the canister's heap memory.                                                                                                                                                                                                                                                                                                                             |
 | `--remove-controller <principal>`         | Removes a principal from the list of controllers of the canister.                                                                                                                                                                                                                                                                                                                        |
-| `--freezing-threshold <seconds>`          | Set the [freezing threshold](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-create_canister) in seconds for a canister. This should be a value in the range [0..2^64^-1]. Very long thresholds require the `--confirm-very-long-freezing-threshold` option.                                                                                                  |
+| `--freezing-threshold <seconds>`          | Set the [freezing threshold](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-create_canister) in seconds for a canister. This should be a value in the range [0..2^64^-1]. Very long thresholds require the `--confirm-very-long-freezing-threshold` option.                                                                                                  |
 | `-y`, `--yes`                             | Skips yes/no checks by answering 'yes'. Such checks can result in loss of control, so this is not recommended outside of CI.                                                                                                                                                                                                                                                             |
 
 ### Arguments

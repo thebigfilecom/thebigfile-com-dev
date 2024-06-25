@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # Overview
 
-The Motoko programming language is a new, modern and type safe language for developers who want to build the next generation of distributed applications on ICP, as it is specifically designed to support the unique features of ICP while providing a familiar, yet robust, programming environment. As a new language, Motoko is constantly evolving with support for new features and other improvements.
+The Motoko programming language is a new, modern and type safe language for developers who want to build the next generation of distributed applications on BIG, as it is specifically designed to support the unique features of BIG while providing a familiar, yet robust, programming environment. As a new language, Motoko is constantly evolving with support for new features and other improvements.
 
 The Motoko compiler, documentation and other tooling is [open source](https://github.com/dfinity/motoko) and released under the Apache 2.0 license. Contributions are welcome.
 
 ## Actors
 
-A [canister smart contract](https://internetcomputer.org/docs/current/developer-docs/getting-started/development-workflow) is expressed as a Motoko [actor](actors-async.md). An actor is an autonomous object that fully encapsulates its state and communicates with other actors only through asynchronous messages.
+A [cube smart contract](https://thebigfile.com/docs/current/developer-docs/getting-started/development-workflow) is expressed as a Motoko [actor](actors-async.md). An actor is an autonomous object that fully encapsulates its state and communicates with other actors only through asynchronous messages.
 
 For example, this code defines a stateful `Counter` actor.
 
@@ -22,7 +22,7 @@ Its single public function, `inc()`, can be invoked by this and other actors, to
 
 ## Async messages
 
-On ICP, [canisters can communicate](https://internetcomputer.org/docs/current/developer-docs/smart-contracts/call/overview) with other canisters by sending [asynchronous messages](async-data.md). Asynchronous messages are function calls that return a **future**, and use an `await` construct that allows you to suspend execution until a future has completed. This simple feature avoids creating a loop of explicit asynchronous callbacks in other languages.
+On BIG, [canisters can communicate](https://thebigfile.com/docs/current/developer-docs/smart-contracts/call/overview) with other canisters by sending [asynchronous messages](async-data.md). Asynchronous messages are function calls that return a **future**, and use an `await` construct that allows you to suspend execution until a future has completed. This simple feature avoids creating a loop of explicit asynchronous callbacks in other languages.
 
 ``` motoko include=counter file=../examples/factorial.mo#L9-L21
 ```
@@ -38,7 +38,7 @@ Motoko has been designed to be intuitive to those familiar with JavaScript and o
 
 A Motoko actor always presents a typed interface to its clients as a suite of named functions with argument and result types.
 
-The Motoko compiler and the IC SDK can emit this interface in a language neutral format called [Candid](candid-ui.md). Other canisters, browser resident code, and mobile apps that support Candid can use the actor’s services. The Motoko compiler can consume and produce Candid files, allowing Motoko to seamlessly interact with canisters implemented in other programming languages (provided they support Candid).
+The Motoko compiler and the BIG SDK can emit this interface in a language neutral format called [Candid](candid-ui.md). Other canisters, browser resident code, and mobile apps that support Candid can use the actor’s services. The Motoko compiler can consume and produce Candid files, allowing Motoko to seamlessly interact with canisters implemented in other programming languages (provided they support Candid).
 
 For example, the previous Motoko `Counter` actor has the following Candid interface:
 
@@ -50,9 +50,9 @@ service Counter : {
 
 ## Orthogonal persistence
 
-ICP persists the memory and other state of your canister as it executes. The state of a Motoko actor, including its in-memory data structures, survive indefinitely. Actor state does not need to be explicitly restored and saved to external storage.
+BIG persists the memory and other state of your canister as it executes. The state of a Motoko actor, including its in-memory data structures, survive indefinitely. Actor state does not need to be explicitly restored and saved to external storage.
 
-For example, in the following `Registry` actor that assigns sequential IDs to textual names, the state of the hash table is preserved across calls, even though the state of the actor is replicated across many ICP node machines and typically not resident in memory:
+For example, in the following `Registry` actor that assigns sequential IDs to textual names, the state of the hash table is preserved across calls, even though the state of the actor is replicated across many BIG node machines and typically not resident in memory:
 
 ``` motoko file=../examples/Registry.mo
 ```
@@ -91,4 +91,4 @@ To start writing Motoko code, start by reading the in-depth documentation for so
 
 - [Caller identification](caller-id.md)
 
-The Motoko programming language continues to evolve with each release of the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install) and with ongoing updates to the Motoko compiler. Check back regularly to try new features and see what’s changed.
+The Motoko programming language continues to evolve with each release of the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install) and with ongoing updates to the Motoko compiler. Check back regularly to try new features and see what’s changed.

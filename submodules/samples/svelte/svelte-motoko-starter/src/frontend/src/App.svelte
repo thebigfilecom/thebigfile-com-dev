@@ -11,7 +11,7 @@
     rel="noopener noreferrer"
     class="logo"
   >
-    <img src="images/icp.svg" alt="ICP logo" />
+    <img src="images/icp.svg" alt="BIG logo" />
   </a>
   <h1>Svelte Starter dApp</h1>
   <Auth />

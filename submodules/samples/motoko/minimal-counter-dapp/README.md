@@ -16,7 +16,7 @@ The purpose of this example dapp is to build a minimalistic dapp, based on the d
 
 This example covers:
 
-- Create a new canister smart contract using the IC SDK (`dfx`).
+- Create a new canister smart contract using the BIG SDK (`dfx`).
 - Use the default project as a template as the starting point for the new project.
 - Add backend functions for a counter (count, get count, and reset count).
 - Implement backend functions in the frontend.
@@ -27,7 +27,7 @@ This example covers:
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/download/).
 - [x] Download and install [git.](https://git-scm.com/downloads)
 - [ ] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
@@ -197,8 +197,8 @@ This project is licensed under the Apache 2.0 license, see LICENSE.md for detail
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
-* [Use HTTP asset certification and avoid serving your dApp through raw.ic0.app](https://internetcomputer.org/docs/current/references/security/rust-canister-development-security-best-practices#use-http-asset-certification-and-avoid-serving-your-dapp-through-rawic0app), since this app serves a frontend. 
-* [Certify query responses if they are relevant for security](https://internetcomputer.org/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since this app uses query calls.
+* [Use HTTP asset certification and avoid serving your dApp through raw.ic0.app](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#use-http-asset-certification-and-avoid-serving-your-dapp-through-rawic0app), since this app serves a frontend. 
+* [Certify query responses if they are relevant for security](https://thebigfile.com/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since this app uses query calls.

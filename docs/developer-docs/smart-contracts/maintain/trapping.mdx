@@ -9,11 +9,11 @@ Trapping, in the context of WebAssembly code, refers to an interruption of code 
 *“Under some conditions, certain instructions may produce a trap, which immediately aborts execution. Traps cannot be handled by WebAssembly code, but are reported to the outside environment, where they typically can be caught.”*
 
 
-On ICP, canister code is compiled into WebAssembly before it is executed. This means that canisters can trap. Some example cases when canisters might trap include:
+On BIG, canister code is compiled into WebAssembly before it is executed. This means that canisters can trap. Some example cases when canisters might trap include:
 
 - Canister code panics (e.g. in Rust)
 - Dividing by zero
-- Calling a System API in a context that is not permitted by ICP ([see overview of imports for a list of APIs and which contexts they are available in](/docs/current/references/ic-interface-spec#system-api-imports))
+- Calling a System API in a context that is not permitted by BIG ([see overview of imports for a list of APIs and which contexts they are available in](/docs/current/references/ic-interface-spec#system-api-imports))
 - Accessing [heap data](/docs/current/developer-docs/smart-contracts/maintain/storage) that is out of bounds
 
 ## What happens when a canister traps?

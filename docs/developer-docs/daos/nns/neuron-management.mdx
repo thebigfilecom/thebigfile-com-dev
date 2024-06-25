@@ -18,21 +18,21 @@ To keep up to date with new NNS release proposals from DFINITY, you can subscrib
 
 ## Neuron attributes
 Before explaining how to modify a neuron, it is important to understand the most important parts of a neuron.
-Every user can stake ICP utility tokens into a neuron and pariticipate in the NNS DAO with this neuron.
+Every user can stake BIG utility tokens into a neuron and pariticipate in the NNS DAO with this neuron.
 
 * **Neuron ID**: Each neuron has an identity selected by NNS governance at neuron creation.
-* **Account**: Each neuron has an associated account on the ICP ledger where the locked ICP balance resides. This account is owned by the NNS governance canister and therefore a user cannot move staked tokens.
+* **Account**: Each neuron has an associated account on the BIG ledger where the locked BIG balance resides. This account is owned by the NNS governance canister and therefore a user cannot move staked tokens.
 * **Controller**: The principal that controls the neuron and which cannot be changed. A principal corresponds to the public key of a public-private key pair and anyone with possession of the corresponding private key will have full control of the neuron. Therefore, the private key of the controller principal should be kept very secure. A principal can control many neurons.
 * **Hot Keys**: In addition to the controller, a neuron can have hot keys. Hot keys are defined by a list of principal ID and can be used to perform actions with limited privileges, namely voting, following (see below), and reading the full information about the neuron.
 
 * **Dissolve delay & dissolve state**: The tokens in a neuron are locked for a specified duration, called the _dissolve delay_. This can be thought of like a kitchen timer that can only be turned in one direction. It can be arbitrarily increased, but only reduced by turning on the countdown and waiting for the time to pass. A neuron must have a dissolve delay of at least 6 months to be eligible to vote.
   * A neuron can be _non-dissolving_ which means that the timer is stopped and the neuron's dissolve delay remains the same.
   * A neuron can be _dissolving_ which means that the timer is decreasing the neuron's dissolve delay as time passes.
-  * Once the timer has counted down, a neuron is _dissolved_ and the ICP tokens can be unstaked again.
+  * Once the timer has counted down, a neuron is _dissolved_ and the BIG tokens can be unstaked again.
 * **Age**: Every non-dissolving neuron has an age, which denotes how long it has been in the non-dissolving state.
 A neuron's voting power increases as its age increases. A neuron's voting power also increases if its controller increases its dissolv delay.
 
-* **Maturity**:  When neurons vote, over time the NNS increases their maturity to reward them. Maturity can be converted into ICP by spawning (see below).
+* **Maturity**:  When neurons vote, over time the NNS increases their maturity to reward them. Maturity can be converted into BIG by spawning (see below).
 
 ### Getting information about a neuron
 Before diving deeper into how a neuron can be created and modified, let's first understand how to get information about a user's existing neurons.
@@ -59,7 +59,7 @@ The answer to such a query is defined by `ListNeuronsResponse`. First, it contai
 In addition, for each requested neuron that exists and for which the calling user is authorized to read the full neuron (controller or hot key), the full neuron is returned.
 
 ## Interacting with neurons
-All neuron modifications go through the following API on the NNS governance canister. This includes everything in a neuron's lifetime such as the neuron's creation, modifications and voting, and unstaking the ICP tokens.
+All neuron modifications go through the following API on the NNS governance canister. This includes everything in a neuron's lifetime such as the neuron's creation, modifications and voting, and unstaking the BIG tokens.
 ```
 type ManageNeuron = record {
   id : opt NeuronId;
@@ -69,9 +69,9 @@ type ManageNeuron = record {
 ```
 
 ### Creating a neuron and topping it up
-Staking ICP utility tokens in a neuron involves three steps:
+Staking BIG utility tokens in a neuron involves three steps:
 1. Compute the neuron's address on the ledger, where the staked tokens will be held. This corresponds to a subaccount of the NNS governance canister.
-2. Send ICP utility tokens to the neuron's address computed in (1).
+2. Send BIG utility tokens to the neuron's address computed in (1).
 3. Claim the neuron on the NNS governance canister, which tells the governance canister that the transfer in (2) happened, upon which the NNS governance will create a new neuron.
 
 Let us go through these steps in more detail.
@@ -96,9 +96,9 @@ It is recommended to test the corresponding code thoroughly.
 
 :::
 
-**Send ICP to the neuron's account**
+**Send BIG to the neuron's account**
 
-After having computed the neuron's address, make a transfer to this address. For this, view the [relevant `candid` interface of the ICP ledger](https://github.com/dfinity/ic/blob/846886223adf11f86b70b5f19c345b3fe6f33fed/rs/rosetta-api/icp_ledger/ledger.did#L432C5-L432C13) which contains the following details for a transfer.
+After having computed the neuron's address, make a transfer to this address. For this, view the [relevant `candid` interface of the BIG ledger](https://github.com/dfinity/ic/blob/846886223adf11f86b70b5f19c345b3fe6f33fed/rs/rosetta-api/icp_ledger/ledger.did#L432C5-L432C13) which contains the following details for a transfer.
 ```
 service: (LedgerCanisterPayload) -> {
   transfer : (TransferArgs) -> (TransferResult);
@@ -116,7 +116,7 @@ type TransferArgs = record {
 };
 ```
 To make a transfer to the correct account, choose the `memo` equal to your chosen nonce (from Step (1a)).
-To stake a neuron, the `amount` must be at least 1 ICP. Set the `fee` to the standard fee of the ICP ledger canister, which is 10000 e8s.
+To stake a neuron, the `amount` must be at least 1 BIG. Set the `fee` to the standard fee of the BIG ledger canister, which is 10000 e8s.
 You can make the transfer from any `from_subaccount` account that you control. For the `to` account, use the account that you have computed in Step (1).
 
 **Claim the neuron**
@@ -134,7 +134,7 @@ _Required permissions:_ Anyone can make this call and claim a neuron for the spe
 
 **Topping up a neuron**
 Topping up an existing neuron with more tokens is called _refreshing_ a neuron and works similarly to claiming a neuron.
-1. Send additional ICP utility tokens to the (existing) neuron's address.
+1. Send additional BIG utility tokens to the (existing) neuron's address.
 2. Refresh the neuron on the NNS governance canister, which tells the governance canister that the transfer in (1) happened, upon which the NNS governance will update the neuron's stake.
 
 :::info
@@ -209,7 +209,7 @@ Only a neuron's controller can start or stop dissolving a neuron or increase its
 
 
 ### Spawning a neuron's rewards
-When a neuron's maturity has risen above a threshold, one can spawn a portion of the maturity. In a first step, this creates a new neuron in a special spawning state containing the spawned maturity. After 7 days, the maturity is replaced with newly minted ICP, taking some [maturity modulation function](https://wiki.internetcomputer.org/wiki/Maturity_modulation#:~:text=The%20maturity%20modulation%20function%20introduces,NNS%20neurons%20and%20SNS%20neurons.) into account. In the end, the new neuron will be dissolved and have these ICP as stake - which can then be disbursed to any account.
+When a neuron's maturity has risen above a threshold, one can spawn a portion of the maturity. In a first step, this creates a new neuron in a special spawning state containing the spawned maturity. After 7 days, the maturity is replaced with newly minted BIG, taking some [maturity modulation function](https://wiki.internetcomputer.org/wiki/Maturity_modulation#:~:text=The%20maturity%20modulation%20function%20introduces,NNS%20neurons%20and%20SNS%20neurons.) into account. In the end, the new neuron will be dissolved and have these BIG as stake - which can then be disbursed to any account.
 The new neuron can remain controlled by the same principal as the parent neuron, or be assigned to a new principal.
 
 The following command spawns a neuron.
@@ -234,7 +234,7 @@ Only a neuron's controller can spawn maturity from a neuron.
 
 ### Disbursing / unstaking a neuron
 When a neuron is dissolved, i.e., its dissolve delay is zero, the neuron's controlling principal can instruct it to _disburse_ the neuron’s stake.
-This means that the staked ICP balance is transferred to a specified ledger account and is liquid again.
+This means that the staked BIG balance is transferred to a specified ledger account and is liquid again.
 The following command can be used to disburse a neuron.
 ```
 type Disburse = record {
@@ -242,7 +242,7 @@ type Disburse = record {
   amount : opt Amount;
 };
 ```
-The command takes as argument the ledger account `to_account` to which the ICP tokens should be transferred to and the amount `amount` that should be disbursed. The latter allows to only disburse a portion of a neuron's stake.
+The command takes as argument the ledger account `to_account` to which the BIG tokens should be transferred to and the amount `amount` that should be disbursed. The latter allows to only disburse a portion of a neuron's stake.
 
 _Required permissions:_
 Only a neuron's controller can disburse a neuron.

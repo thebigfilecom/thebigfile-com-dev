@@ -4,20 +4,20 @@ keywords: [intermediate, tokens, tutorial, index]
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
-# ICP index local setup
+# BIG index local setup
 
 <MarkdownChipRow labels={["Intermediate" , "Tutorial"]} />
 
 ## Overview
-This guide will show you how to deploy an ICP index canister locally, how to connect it to your local ICP ledger, and how to interact with the ICP index canister.
+This guide will show you how to deploy an BIG index canister locally, how to connect it to your local BIG ledger, and how to interact with the BIG index canister.
 
-If you are working in a local development environment, i.e with a local replica instead of the public Internet Computer, you can't access the ICP ledger nor the ICP index canister. If your application is using the ICP index canister and you want to test it, you can setup the ICP index and ICP ledger locally. Neither of the two canisters will have any information about the state of the ICP ledger on the mainnet. You will have to create your own transactions on the ICP ledger so that the ICP index can serve them through its endpoints.
+If you are working in a local development environment, i.e with a local replica instead of the public BigFile, you can't access the BIG ledger nor the BIG index canister. If your application is using the BIG index canister and you want to test it, you can setup the BIG index and BIG ledger locally. Neither of the two canisters will have any information about the state of the BIG ledger on the mainnet. You will have to create your own transactions on the BIG ledger so that the BIG index can serve them through its endpoints.
 
-### Step 1: Read the guide on deploying a local ICP ledger.
-If you have not done so already, read this guide to [setup an ICP ledger](./ledger-local-setup.mdx) and then continue with this guide. It is assumed that you have read the steps described in the guide on setting up a local ICP ledger and that all prerequisites are fulfilled. For this guide most steps will assume that there is an ICP ledger running with ledger ID ´ryjl3-tyaaa-aaaaa-aaaba-cai´. If you followed the guide on [setting up an ICP ledger](./ledger-local-setup.mdx) and chose a different canister ID you will have to replace the ledger ID with that which you received upon deployment.
+### Step 1: Read the guide on deploying a local BIG ledger.
+If you have not done so already, read this guide to [setup an BIG ledger](./ledger-local-setup.mdx) and then continue with this guide. It is assumed that you have read the steps described in the guide on setting up a local BIG ledger and that all prerequisites are fulfilled. For this guide most steps will assume that there is an BIG ledger running with ledger ID ´ryjl3-tyaaa-aaaaa-aaaba-cai´. If you followed the guide on [setting up an BIG ledger](./ledger-local-setup.mdx) and chose a different canister ID you will have to replace the ledger ID with that which you received upon deployment.
 
 ### Step 2 [Optional]: Create a new project folder.
-It is advised you use the same project folder that you created during the local ledger setup. Alternatively, you can create a new one for the ICP index canister using the following command:
+It is advised you use the same project folder that you created during the local ledger setup. Alternatively, you can create a new one for the BIG index canister using the following command:
 
 ```
 dfx new icp_index_canister
@@ -25,19 +25,19 @@ cd icp_index_canister
 ```
 
 **OPTIONAL:**
-If you created a new project folder, you will either have to make sure the `dfx.json` file contains the correct data on the ICP ledger (as described in the [local ledger setup guide](./ledger-local-setup.mdx)) or you communicate with the ICP ledger from its project folder that contains the correct `dfx.json` file. If you try to communicate with the ICP ledger from a new project folder where the `dfx.json` file does not contain information on the ICP ledger canister, you will not be able to create transactions.
+If you created a new project folder, you will either have to make sure the `dfx.json` file contains the correct data on the BIG ledger (as described in the [local ledger setup guide](./ledger-local-setup.mdx)) or you communicate with the BIG ledger from its project folder that contains the correct `dfx.json` file. If you try to communicate with the BIG ledger from a new project folder where the `dfx.json` file does not contain information on the BIG ledger canister, you will not be able to create transactions.
 
 
-### Step 3:  Fetch the ICP index Wasm and Candid files.
+### Step 3:  Fetch the BIG index Wasm and Candid files.
 
 Go to the [releases overview](https://dashboard.internetcomputer.org/releases) and copy the latest replica binary revision (IC_VERSION). At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
-The URL for the ICP index Wasm module is `curl -o index.wasm.gz "https://download.dfinity.systems/ic/$IC_VERSION/canisters/ic-icp-index-canister.wasm.gz"`, so with the above revision it would be `https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ic-icp-index-canister.wasm.gz`.
+The URL for the BIG index Wasm module is `curl -o index.wasm.gz "https://download.dfinity.systems/ic/$IC_VERSION/canisters/ic-icp-index-canister.wasm.gz"`, so with the above revision it would be `https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ic-icp-index-canister.wasm.gz`.
 
-The URL for the ICP index .did file is `curl -o index.did "https://raw.githubusercontent.com/dfinity/ic/$IC_VERSION/rs/rosetta-api/icp_ledger/index/index.did"`, so with the above revision it would be `curl -o index.did "https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icp_ledger/index/index.did"`.
+The URL for the BIG index .did file is `curl -o index.did "https://raw.githubusercontent.com/dfinity/ic/$IC_VERSION/rs/rosetta-api/icp_ledger/index/index.did"`, so with the above revision it would be `curl -o index.did "https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icp_ledger/index/index.did"`.
 
 ### Step 4: Configuring the `dfx.json` file.
-Open the `dfx.json` file in your project's directory. Add the `icp_index_canister` canister data and insert the canister data for your ICP ledger. If you followed the guide on local ledger setup and you used the same project folder for both the ICP ledger and ICP index, your `dfx.json` file should look like this:
+Open the `dfx.json` file in your project's directory. Add the `icp_index_canister` canister data and insert the canister data for your BIG ledger. If you followed the guide on local ledger setup and you used the same project folder for both the BIG ledger and BIG index, your `dfx.json` file should look like this:
 
 ``` json
 {
@@ -77,16 +77,16 @@ This step can be skipped if you already have a local replica up and running.
 dfx start --clean --background
 ```
 
-### Step 6: Deploy the ICP index canister:
-Here it is assumed that the canister ID of your local ICP ledger is `ryjl3-tyaaa-aaaaa-aaaba-cai`, otherwise replace it with your ICP ledger canister ID.
+### Step 6: Deploy the BIG index canister:
+Here it is assumed that the canister ID of your local BIG ledger is `ryjl3-tyaaa-aaaaa-aaaba-cai`, otherwise replace it with your BIG ledger canister ID.
 
 ```
 dfx deploy icp_index_canister --specified-id qhbym-qaaaa-aaaaa-aaafq-cai --argument '(record {ledger_id = principal "ryjl3-tyaaa-aaaaa-aaaba-cai"})'
 ```
 
-The ICP index canister will start synching right away and will automatically try to fetch new blocks from the ICP ledger every few seconds.
+The BIG index canister will start synching right away and will automatically try to fetch new blocks from the BIG ledger every few seconds.
 
-### Step 7: Check the status and ICP ledger id on the ICP index canister.
+### Step 7: Check the status and BIG ledger id on the BIG index canister.
 
 You can check that the correct ledger ID was set but running the following command.
 
@@ -110,13 +110,13 @@ It should return something like this:
 (record { num_blocks_synced = 1 : nat64 })
 ```
 
-Depending on how many mint operations you created while setting up your ICP ledger, the number of synced blocks here will be 0 if no initial balances were parsed, or `X` if `X` initial balances were parsed. In the case of this tutorial, the guide on setting up a local ledger was used and there only one initial balance was parsed as an initialization argument. Hence, the number of blocks synched at this stage is 1.
+Depending on how many mint operations you created while setting up your BIG ledger, the number of synced blocks here will be 0 if no initial balances were parsed, or `X` if `X` initial balances were parsed. In the case of this tutorial, the guide on setting up a local ledger was used and there only one initial balance was parsed as an initialization argument. Hence, the number of blocks synched at this stage is 1.
 
 ### Step 8: Create some new blocks to sync.
 
-You can check that the synchronization of the index is working by creating a transaction on the ICP ledger and then checking the status of that transaction.
-If you followed the guide on setting up an ICP ledger locally your default identity should have some ICP to be send.
-Send some ICP to any principal with the command:
+You can check that the synchronization of the index is working by creating a transaction on the BIG ledger and then checking the status of that transaction.
+If you followed the guide on setting up an BIG ledger locally your default identity should have some BIG to be send.
+Send some BIG to any principal with the command:
 
 ```
 dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai icrc1_transfer '(record { to = record { owner = principal "npki3-wdfh4-siaeq-orwh4-bh5of-r7mxr-i35lm-6f2eh-rtmwp-dmzmn-tae";};  amount = 100000:nat;})'
@@ -134,7 +134,7 @@ It should now indicate that an additional block was synced compared to the last 
 
 ### Step 9: Fetch some blocks.
 
-You can use the ICP index canister to fetch blocks like so.
+You can use the BIG index canister to fetch blocks like so.
 You have to specify the block at which you want to start fetching from (i.e. the lowest index you want to fetch). If you want to start from the beginning you have to set `start` to 0. Similarly, the `length` parameter indicates the number of blocks you would like to fetch. Since the last status call indicated that there are two blocks that were synced, you can set this to 2. Note that if you specify more than 2 blocks it will simply return the maximum number of blocks the index contains (the limit of blocks per call is usually set to 2000 blocks).
 
 ```
@@ -219,7 +219,7 @@ The result will include the initial mint operation as well as the transfer that 
   },
 )
 ```
-The ICP ledger uses `AccountIdentifier` which are a hashed version of `Account` (`Principal` and `Subaccount`) for privacy. This also means that the returned transactions will show accounts as the hash in bytes rather than the actual Accounts.
+The BIG ledger uses `AccountIdentifier` which are a hashed version of `Account` (`Principal` and `Subaccount`) for privacy. This also means that the returned transactions will show accounts as the hash in bytes rather than the actual Accounts.
 For example, the default principal `hdq6b-ncywm-yajd5-4inc6-hgpzp-55xnp-py7d5-uqt6o-cv5c6-rrhwa-zqe` with no subaccount set results in the hash `0a6d437581369b546afdef613ca9c081a252ca2c46e7ec29e510bc10b213fa27`.
 You can check a principals `AccountIdentifier` by running:
 

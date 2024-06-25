@@ -6,7 +6,7 @@ keywords: [unity, unity webgl, beginner]
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/hosting/unity-webgl-template)
 
-The example shows how to deploy a simple Unity WebGL build on ICP in an asset canister. It just shows a Unity WebGL build with the URP template installed. 
+The example shows how to deploy a simple Unity WebGL build on BIG in an asset canister. It just shows a Unity WebGL build with the URP template installed. 
 
 The Unity WebGL build is deployed as frontend, no backend is needed in this sample.
 
@@ -14,7 +14,7 @@ The Unity WebGL build is deployed as frontend, no backend is needed in this samp
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 
 - [x] Download and install [git](https://git-scm.com/downloads).
 
@@ -39,7 +39,7 @@ When the local replica is up and running, run this command to deploy the caniste
 dfx deploy
 ```
 
-If you get error code 500 after deploying to the IC mainnet, try to use `raw` keyword in the URL like this: 
+If you get error code 500 after deploying to the BIG mainnet, try to use `raw` keyword in the URL like this: 
 
 ```
 https://<canister-id>.raw.ic0.app

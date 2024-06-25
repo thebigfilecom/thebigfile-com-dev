@@ -4,7 +4,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Reference"]} />
 
-Sends a signed message or a set of messages to the IC.
+Sends a signed message or a set of messages to the BIG.
 
 ## Basic usage
 
@@ -32,7 +32,7 @@ quill send [option] <file name>
 
 The `quill send` command is used to send messages previously generated and signed by another quill command. This is most frequently done to make use of quill on a non-airgapped machine. 
 
-For example, to send a transfer of 5 ICP to the anonymous principal `2vxsx-fae`:
+For example, to send a transfer of 5 BIG to the anonymous principal `2vxsx-fae`:
 
 ```sh
 quill transfer 1c7a48ba6a562aa9eaa2481a9049cdf0433b9738c992d698c31d8abf89cadc79 --amount 5 > transfer.json

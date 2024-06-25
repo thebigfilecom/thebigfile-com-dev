@@ -34,7 +34,7 @@ module {
   /// Returns the balance of the given Bitcoin address.
   ///
   /// Relies on the `bitcoin_get_balance` endpoint.
-  /// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_balance
+  /// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_balance
   public func get_balance(network : Network, address : BitcoinAddress) : async Satoshi {
     ExperimentalCycles.add(GET_BALANCE_COST_CYCLES);
     await management_canister_actor.bitcoin_get_balance({
@@ -47,7 +47,7 @@ module {
   /// Returns the UTXOs of the given Bitcoin address.
   ///
   /// NOTE: Relies on the `bitcoin_get_utxos` endpoint.
-  /// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_utxos
+  /// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_utxos
   public func get_utxos(network : Network, address : BitcoinAddress) : async GetUtxosResponse {
     ExperimentalCycles.add(GET_UTXOS_COST_CYCLES);
     await management_canister_actor.bitcoin_get_utxos({
@@ -61,7 +61,7 @@ module {
   /// Percentiles are computed from the last 10,000 transactions (if available).
   ///
   /// Relies on the `bitcoin_get_current_fee_percentiles` endpoint.
-  /// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_get_current_fee_percentiles
+  /// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_get_current_fee_percentiles
   public func get_current_fee_percentiles(network : Network) : async [MillisatoshiPerVByte] {
     ExperimentalCycles.add(GET_CURRENT_FEE_PERCENTILES_COST_CYCLES);
     await management_canister_actor.bitcoin_get_current_fee_percentiles({
@@ -72,7 +72,7 @@ module {
   /// Sends a (signed) transaction to the Bitcoin network.
   ///
   /// Relies on the `bitcoin_send_transaction` endpoint.
-  /// See https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction
+  /// See https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction
   public func send_transaction(network : Network, transaction : [Nat8]) : async () {
     let transaction_fee =
         SEND_TRANSACTION_BASE_COST_CYCLES + transaction.size() * SEND_TRANSACTION_COST_CYCLES_PER_BYTE;

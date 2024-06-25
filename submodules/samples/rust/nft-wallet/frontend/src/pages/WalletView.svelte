@@ -11,7 +11,7 @@
     {#if !isAuthorized}
     <div id="welcome_message" style="padding-top: 130px; padding-bottom: 130px;">
         <h2>
-            Welcome to the nft wallet for the IC
+            Welcome to the nft wallet for the BIG
         </h2><br/>
         The wallet can hold countless NFTs, all in a single secure wallet. <br/>Once in your wallet, you can view, send, receive NFTs and more!
         <div class="action">

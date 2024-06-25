@@ -7,9 +7,9 @@ sidebar_position: 5
 ## Overview
 
 
-On ICP, communication between canisters is asynchronous. Sending a message together with a callback from one canister to another schedules a request in the receiver. Completion of the request triggers the callback to the sender, allowing the sender to process the result.
+On BIG, communication between canisters is asynchronous. Sending a message together with a callback from one canister to another schedules a request in the receiver. Completion of the request triggers the callback to the sender, allowing the sender to process the result.
 
-In Motoko, sending an ICP asynchronous message is abstracted as calling a shared function that returns an asynchronous result.
+In Motoko, sending an BIG asynchronous message is abstracted as calling a shared function that returns an asynchronous result.
 Like several other languages, Motoko offers `async` and `await` to support convenient programming with asynchronous functions and computations.
 
 In Motoko, executing an asynchronous expression, whether a call to a shared function, or just a local `async` expression, produces a future, an object of type `async T`, for some result type `T`.

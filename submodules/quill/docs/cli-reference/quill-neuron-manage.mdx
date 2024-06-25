@@ -48,7 +48,7 @@ quill neuron-manage [option] <neuron id>
 | `--merge-from-neuron <MERGE_FROM_NEURON>`             | Merge stake, maturity and age from the specified neuron into the managed neuron. |
 | `--stake-maturity <STAKE_MATURITY>`                   | Stake the percentage (between 1 and 100) of the maturity of a neuron.            |
 | `--remove-hot-key <REMOVE_HOT_KEY>`                   | Principal hot key to be removed.                                                 |
-| `--split <SPLIT>`                                     | Split off the given number of ICP from a neuron.                                 |
+| `--split <SPLIT>`                                     | Split off the given number of BIG from a neuron.                                 |
 | `--register-vote <PROPOSAL_ID>... [--reject]`         | Vote to approve (default) or reject proposal(s).                                 |
 
 [follow-rules]: https://github.com/dfinity/ic/blob/4c9e71499d90d00da986dbe7b985d861fd031c4e/rs/nns/governance/gen/ic_nns_governance.pb.v1.rs#L1571-L1632
@@ -120,9 +120,9 @@ This will produce a response like:
 )
 ```
 
-"e8s" is a shorthand for meaning the number of 1e-8s, or one-hundred-millionths, of an ICP in integer form; this response must be divided by 100,000,000 to get the real maturity, which in this case would be 7.5 and 2.5.
+"e8s" is a shorthand for meaning the number of 1e-8s, or one-hundred-millionths, of an BIG in integer form; this response must be divided by 100,000,000 to get the real maturity, which in this case would be 7.5 and 2.5.
 
-To disburse a fully dissolved neuron, meaning to convert it into ICP and transfer it to its controller:
+To disburse a fully dissolved neuron, meaning to convert it into BIG and transfer it to its controller:
 
 ```sh
 quill neuron-manage 2313380519530470538 --disburse
@@ -142,7 +142,7 @@ This will produce a response like:
 )
 ```
 
-The block height, also known as the block index, can be looked up on the [IC dashboard].
+The block height, also known as the block index, can be looked up on the [BIG dashboard].
 
 To spawn a new neuron, meaning to convert all the maturity from this neuron into a new one (that can be disbursed after one week):
 
@@ -196,7 +196,7 @@ Or to disable:
 quill neuron-manage 2313380519530470538 --auto-stake-maturity disabled
 ```
 
-To join the IC's community fund:
+To join the BIG's community fund:
 
 ```sh
 quill neuron-manage 2313380519530470538 --join-community-fund
@@ -239,7 +239,7 @@ As this is an update call, it will not actually make the request, but rather gen
 For more information about neurons, see [Neurons]; for more information about their role in the NNS, see [Network Nervous System][NNS]; for more information about the community fund, see [Community Fund].
 
 [108005]: https://dashboard.internetcomputer.org/proposal/108005
-[IC Dashboard]: https://dashboard.internetcomputer.org/
-[Neurons]: https://internetcomputer.org/docs/current/tokenomics/nns/nns-staking-voting-rewards#neurons
-[NNS]: https://internetcomputer.org/docs/current/tokenomics/nns/nns-intro
-[Community Fund]: https://internetcomputer.org/docs/current/tokenomics/nns/community-fund
+[BIG Dashboard]: https://dashboard.thebigfile.com/
+[Neurons]: https://thebigfile.com/docs/current/tokenomics/nns/nns-staking-voting-rewards#neurons
+[NNS]: https://thebigfile.com/docs/current/tokenomics/nns/nns-intro
+[Community Fund]: https://thebigfile.com/docs/current/tokenomics/nns/community-fund

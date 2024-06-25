@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-The Motoko compiler (`moc`) is the primary tool for compiling Motoko programs into executable WebAssembly (Wasm) modules. The compiler runs in the background when you build projects using the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install). If you invoke the compiler directly on the command-line, you can press CTRL-C to exit.
+The Motoko compiler (`moc`) is the primary tool for compiling Motoko programs into executable WebAssembly (Wasm) modules. The compiler runs in the background when you build projects using the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install). If you invoke the compiler directly on the command-line, you can press CTRL-C to exit.
 
 This section provides compiler command-line reference information.
 
@@ -52,8 +52,8 @@ You can use the following options with the `moc` command.
 | `-o <file>`                               | Specifies the output file.                                                                                                                            |
 | `-p <n>`                                  | Sets the print depth.                                                                                                                                 |
 | `--package <package-name> <package-path>` | Specifies a `<package-name>` `<package-path>` pair, separated by a space.                                                                             |
-| `--public-metadata <name>`                | Emit ICP custom section `<name>` (`candid:args` or `candid:service` or `motoko:stable-types` or `motoko:compiler`) as `public` (default is `private`).|
-| `--omit-metadata <name>`                  | Omit ICP custom section `<name>` (`candid:args` or `candid:service` or `motoko:stable-types` or `motoko:compiler`).                                   |
+| `--public-metadata <name>`                | Emit BIG custom section `<name>` (`candid:args` or `candid:service` or `motoko:stable-types` or `motoko:compiler`) as `public` (default is `private`).|
+| `--omit-metadata <name>`                  | Omit BIG custom section `<name>` (`candid:args` or `candid:service` or `motoko:stable-types` or `motoko:compiler`).                                   |
 | `--print-deps`                            | Prints the dependencies for a given source file.                                                                                                      |
 | `-r`                                      | Interprets programs.                                                                                                                                  |
 | `--release`                               | Ignores debug expressions in the source.                                                                                                              |
@@ -61,7 +61,7 @@ You can use the following options with the `moc` command.
 | `--stable-types`                          | Compile binary and emit signature of stable types to `.most` file.                                                                                    |
 | `--stable-compatible <pre> <post>`        | Test upgrade compatibility between stable-type signatures `<pre>` and `<post>`.                                                                       |
 | `--rts-stack-pages <n>`                   | Set maximum number of pages available for runtime system stack (default 32).
-| `--trap-on-call-error`                    | Trap, don't throw an [`Error`](../base/Error.md), when an IC call fails due to destination queue full or freezing threshold is crossed.
+| `--trap-on-call-error`                    | Trap, don't throw an [`Error`](../base/Error.md), when an BIG call fails due to destination queue full or freezing threshold is crossed.
 |                                           | Emulates behaviour of moc versions < 0.8.0.
 | `-t`                                      | Activates tracing in interpreter.
 | `-v`                                      | Generates verbose output.

@@ -35,13 +35,13 @@ The argument `type` decides which performance counter to return:
     (ignoring WebAssembly instructions executed within any further downstream calls
     of `composite_query_helper`).
 
-In the future, ICP might expose more performance counters.
+In the future, BIG might expose more performance counters.
 
 ## Prerequisites
 
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 ### Step 1: Begin by opening a terminal window and navigating into the project's directory
@@ -167,4 +167,4 @@ Performance counters is a great tool to optimize canister performance, both for 
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.

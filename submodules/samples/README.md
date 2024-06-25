@@ -1,6 +1,6 @@
 ## DFINITY Examples for the Internet Computer
 
-This repository provides access to sample code, applications, and microservices that run on the Internet Computer platform.
+This repository provides access to sample code, applications, and microservices that run on the BigFile platform.
 
 From this repository, you can download, clone, fork, or share sample projects.
 
@@ -16,7 +16,7 @@ To get started:
 1. Download the DFINITY Canister SDK, if needed:
 
     ```
-    sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+    sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
     ```
 
 1. Select a language—for example, `c` or `motoko`—to explore the examples available in the language of your choice.
@@ -41,4 +41,4 @@ To get started:
 
 ## Security Considerations and Best Practices
 
-If you base your application on one of these examples, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. The examples provided here may not implement all the best practices.
+If you base your application on one of these examples, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. The examples provided here may not implement all the best practices.

@@ -4,7 +4,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Reference"]}/>
 
-Use the `dfx deploy` command to register, build, and deploy a dapp on the local canister execution environment, on the IC or on a specified testnet. By default, all canisters defined in the project `dfx.json` configuration file are deployed.
+Use the `dfx deploy` command to register, build, and deploy a dapp on the local canister execution environment, on the BIG or on a specified testnet. By default, all canisters defined in the project `dfx.json` configuration file are deployed.
 
 This command simplifies the developer workflow by enabling you to run one command instead of running the following commands as separate steps:
 
@@ -34,7 +34,7 @@ You can use the following options with the `dfx deploy` command.
 | `--argument <argument>`            | Specifies an argument to pass to the canister during installation.                                                                                                                                                                                          |
 | `--argument-type <argument-type>`  | Specifies the data type for the argument when making the call using an argument [possible values: idl, raw]                                                                                                                                                 |
 | `--argument-file <argument-file>`  | Specifies the file from which to read the argument to pass to the init method.  Stdin may be referred to as `-`.                                                                                                                                            |
-| `--created-at-time <timestamp>`    |  Transaction timestamp, in nanoseconds, for use in controlling transaction deduplication, default is system time. https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-                                  |
+| `--created-at-time <timestamp>`    |  Transaction timestamp, in nanoseconds, for use in controlling transaction deduplication, default is system time. https://thebigfile.com/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-                                  |
 | `--from-subaccount <subaccount>`   | Subaccount of the selected identity to spend cycles from.                                                                                                                                                                                                   |
 | `--with-cycles <number-of-cycles>` | Enables you to specify the initial number of cycles for a canister in a project.                                                                                                                                                                            |
 | `--specified-id <PRINCIPAL>`       | Attempts to create the canister with this Canister ID                                                                                                                                                                                                       |
@@ -58,7 +58,7 @@ You can specify the following arguments for the `dfx deploy` command.
 
 ## Examples
 
-You can use the `dfx deploy` command to deploy all or specific canisters on the local canister execution environment, on the IC or on a specified testnet.
+You can use the `dfx deploy` command to deploy all or specific canisters on the local canister execution environment, on the BIG or on a specified testnet.
 
 For example, to deploy the `hello` project on the hypothetical `ic-pubs` testnet configured in the `dfx.json` configuration file, you can run the following command:
 

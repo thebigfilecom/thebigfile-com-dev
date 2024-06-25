@@ -80,18 +80,8 @@ const projects: {
   body: React.ReactNode;
 }[] = [
   {
-    title: "distrikt",
-    body: "distrikt combines the best of Twitter and Linkedin. It is the world's first web3 microblogging social media platform built entirely on-chain. Own your data and identity, make new connections, and build a community.",
-    imageUrl: "/img/social-media-dapps/Distrikt.webp",
-  },
-  {
-    title: "DSCVR",
-    body: "DSCVR’s mission is to create a decentralized social content aggregation platform where users not only control the content, but also the platform itself. Communities form groups called Portals around topics of interest. Key features include NFT gating, token airdrops, tipping with crypto and more - all of which is impossible on web2.",
-    imageUrl: "/img/social-media-dapps/DSCVR.webp",
-  },
-  {
-    title: "OpenChat",
-    body: "OpenChat is the first instant messaging service running 100% on the blockchain. This web3 dapp is backed by the security of chain-key cryptography. Plus users can easily send crypto to friends via messages, or vote on ICP governance proposals without leaving the dapp.",
+    title: "BIGChat",
+    body: "BIGChat is the first instant messaging service running 100% on the blockchain. This web3 dapp is backed by the security of chain-key cryptography. Plus users can easily send crypto to friends via messages, or vote on BIG governance proposals without leaving the dapp.",
     imageUrl: "/img/social-media-dapps/OpenChat.webp",
   },
 ];
@@ -109,13 +99,13 @@ function SocialMediaDappsPage() {
         <meta
           property="og:image"
           content={
-            "https://internetcomputer.org/img/shareImages/share-social-media.jpg"
+            "https://thebigfile.com/img/shareImages/share-social-media.jpg"
           }
         />
         <meta
           name="twitter:image"
           content={
-            "https://internetcomputer.org/img/shareImages/share-social-media.jpg"
+            "https://thebigfile.com/img/shareImages/share-social-media.jpg"
           }
         />
       </Head>
@@ -257,11 +247,11 @@ function SocialMediaDappsPage() {
             </motion.h2>
             <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
               The BigFile is a true world computer. It hosts the
-              largest collection of Web3 social media services fully on-chain. Services like OpenChat, DSCVR and distrikt are already well on their way to mass adoption, with over 300,000 users combined.
+              largest collection of Web3 social media services fully on-chain. Services like BIGChat, are already well on their way to mass adoption, with over 300,000 users combined.
             </motion.p>
             <MotionLink
               className="link-external"
-              href="/ecosystem?tag=SocialFi"
+              href="/ecosystem?tag=Social"
               variants={transitions.item}
             >
               See dapp collection
@@ -387,7 +377,7 @@ function SocialMediaDappsPage() {
                         alt=""
                         className="mr-4 w-11 h-11"
                       />
-                      <span className="tw-heading-3">$5</span>
+                      <span className="tw-heading-3">$3</span>
                       <span className="tw-heading-6 pl-2 relative top-2">
                         / GB per year
                       </span>

@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ## Overview
 
-Motoko’s shared functions support a simple form of caller identification that allows you to inspect the ICP **principal** associated with the caller of a function. Principals are a value that identifies a unique user or canister.
+Motoko’s shared functions support a simple form of caller identification that allows you to inspect the BIG **principal** associated with the caller of a function. Principals are a value that identifies a unique user or canister.
 
 You can use the principal associated with the caller of a function to implement a basic form of access control in your program.
 

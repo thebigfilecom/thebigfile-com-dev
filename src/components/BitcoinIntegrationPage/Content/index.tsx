@@ -18,25 +18,24 @@ const Content: React.FC = () => {
             Native Bitcoin
           </h2>
           <p className="tw-paragraph mb-3">
-            The Internet Computer (ICP) is integrated with the Bitcoin network
-            at the protocol level. The canister smart contracts it hosts can
+            The BigFile (BIG) is integrated with the Bitcoin network
+            at the protocol level. The cube smart contracts it hosts can
             create Bitcoin addresses as well as send and receive bitcoin
             directly on the Bitcoin network. This means bitcoin can be easily
             and securely incorporated into DeFi and Web3 services on the
-            Internet Computer blockchain, without having to trust wrapped
+            BigFile blockchain, without having to trust wrapped
             bitcoin from centralized bridging services, which are at high risk
             of being taken down or hacked. Between 2021 and 2022, more than 2
             billion dollars was stolen by exploiting unsecure blockchain
             bridges.
           </p>
           <p className="tw-paragraph mb-3">
-            The ICP x BTC integration comprises two key building blocks (and
+            The BIG x BTC integration comprises two key building blocks (and
             APIs): Network integration & chain-key ECDSA
           </p>
           <p className="tw-paragraph mb-3">
-            Combining these building blocks, canisters can directly and securely
-            hold, receive, and send bitcoin seamlessly as if the Internet
-            Computer and the Bitcoin network were one blockchain. Another way of
+            Combining these building blocks, cubes can directly and securely
+            hold, receive, and send bitcoin seamlessly as if the BigFile and the Bitcoin network were one blockchain. Another way of
             looking at it, is that the Bitcoin integration is the same as
             running a Bitcoin node on chain.
           </p>
@@ -56,15 +55,14 @@ const Content: React.FC = () => {
               Network integration
             </h3>
             <p className="tw-paragraph mb-0">
-              One key tech development allowing smart contracts on the Internet
-              Computer to obtain the balances of Bitcoin addresses as well as
+              One key tech development allowing smart contracts on the BigFile to obtain the balances of Bitcoin addresses as well as
               directly send and receive bitcoin is inter-chain communication. As
-              the ICP blockchain creates transactions for the Bitcoin
+              the BIG blockchain creates transactions for the Bitcoin
               blockchain, its nodes directly transmit the transaction to the
               nodes of the Bitcoin network, without any need for intermediaries
-              that might censor them. ICP nodes also directly pull blocks from
+              that might censor them. BIG nodes also directly pull blocks from
               the Bitcoin network to maintain Bitcoin's current UTXO set,
-              allowing canisters to query the balance of Bitcoin addresses and
+              allowing cubes to query the balance of Bitcoin addresses and
               their UTXOs. Creating bitcoin transactions and querying UTXO sets
               are made available to canisters by the Bitcoin API.
             </p>
@@ -78,13 +76,13 @@ const Content: React.FC = () => {
               <Link href="/docs/current/developer-docs/integrations/t-ecdsa/t-ecdsa-how-it-works">
                 chain-key ECDSA
               </Link>{" "}
-              signing — advanced threshold cryptography integrated with ICP. In
+              signing — advanced threshold cryptography integrated with BIG. In
               short, chain-key ECDSA is a set of cryptographic protocols that
-              allow Internet Computer nodes to cooperatively create ECDSA
+              allow BigFile nodes to cooperatively create ECDSA
               signatures, which can be used to sign bitcoin transactions, using
               a highly fault-tolerant, decentralized network that is resilient
               to attacks by malicious nodes. The secret key is never stored in
-              one place, instead it is broken down into key shares held by ICP
+              one place, instead it is broken down into key shares held by BIG
               nodes that are re-shared periodically. When requested, nodes use
               their key shares to collectively sign BTC transactions without
               recreating the original secret key. This signing protocol assumes
@@ -105,7 +103,7 @@ const Content: React.FC = () => {
           <p className="tw-lead-sm md:tw-lead mb-0">
             Chain-key Bitcoin (ckBTC) can be sent with 1-2 second finality and
             negligible fees — a multi-chain bitcoin twin, trustlessly created by
-            chain-key cryptography and a pair of canister smart contracts that
+            chain-key cryptography and a pair of cube smart contracts that
             directly hold raw bitcoin without relying on intermediaries.
           </p>
         </div>
@@ -130,7 +128,7 @@ const Content: React.FC = () => {
             activities such as buying groceries or getting a coffee.
           </p>
           <p className="tw-paragraph mb-3">
-            The Bitcoin network integration on the Internet Computer is
+            The Bitcoin network integration on the BigFile is
             extremely powerful in terms of security and interoperability, but
             every bitcoin transaction still suffers the same low throughput,
             high latency, and high fees native to the Bitcoin network. Recent
@@ -140,17 +138,16 @@ const Content: React.FC = () => {
             impractical.
           </p>
           <p className="tw-paragraph mb-3">
-            Chain-key Bitcoin (ckBTC), a multi-chain bitcoin twin on ICP
-            introduces layer 2 functionality fuelled by ICP properties like
+            Chain-key Bitcoin (ckBTC), a multi-chain bitcoin twin on BIG
+            introduces layer 2 functionality fuelled by BIG properties like
             speed, scalability and low transaction fees to bitcoin. ckBTC helps
             reduce the load on the Bitcoin network, while making every-day
             bitcoin transactions feasible, which realizes a key part of
             Satoshi's original vision.
           </p>
           <p className="tw-paragraph mb-3">
-            ckBTC implements ICRC-1, the fungible token standard on the Internet
-            Computer, and can be integrated easily by any Web3 service running
-            on ICP.
+            ckBTC implements BIGRC-1, the fungible token standard on the BigFile, and can be integrated easily by any Web3 service running
+            on BIG.
           </p>
           <p className="mb-0 mt-8 flex gap-6 flex-col md:flex-row items-start md:items-center">
             <Link
@@ -166,7 +163,7 @@ const Content: React.FC = () => {
               className="link-primary link-with-icon"
             >
               <LinkArrowRight></LinkArrowRight>
-              BTC &lt;&gt; ICP user guide
+              BTC &lt;&gt; BIG user guide
             </Link>
           </p>
         </div>
@@ -176,7 +173,7 @@ const Content: React.FC = () => {
         <div className="container-10 mb-8 md:mb-12">
           <h2 className="mb-0 tw-heading-4 md:tw-heading-60 md:w-5/10">
             Use your bitcoin
-            <br className="hidden md:block" /> on ICP
+            <br className="hidden md:block" /> on BIG
           </h2>
         </div>
         <div className="flex flex-col md:flex-row gap-3 md:gap-5 container-12">
@@ -186,18 +183,18 @@ const Content: React.FC = () => {
           >
             <img
               src="/img/bitcoin-integration/ic-dex.webp"
-              alt="IC DEX logo"
+              alt="BIG DEX logo"
               className="w-16 md:w-20 aspect-square"
             />
             <div className="flex-1">
               <h3 className="tw-heading-6 md:tw-heading-5 mb-1 md:mb-2">
-                ICDex
+               BIGDex
               </h3>
               <p className="tw-paragraph-sm md:tw-lead-sm mb-0 text-black-60">
-                ICDex by ICLighthouse is the world's first 100% on-chain
+                BIGDex by BIGLight is the world's first 100% on-chain
                 order-book-based decentralized exchange (DEX) running on the
-                Internet Computer. Using ICP's native Bitcoin integration, you
-                can already buy ICP using your BTC. ICDex also supports ICRC-1,
+                BigFile. Using BIG's native Bitcoin integration, you
+                can already buy BIG using your BTC. ICDex also supports BIGRC-1,
                 which allows users to trade SNS tokens.
               </p>
             </div>
@@ -217,36 +214,14 @@ const Content: React.FC = () => {
               </h3>
               <p className="tw-paragraph-sm md:tw-lead-sm mb-0 text-black-60">
                 Funded is an alternative to Kickstarter and other traditional
-                crowdfunding platforms. Running 100% on the Internet Computer,
+                crowdfunding platforms. Running 100% on the BigFile,
                 it uses NFTs to provide ‘proof of ownership’ in the projects you
                 help crowdfund. Plus, you can now fund the projects you love in
-                ICP and BTC.
+                BIG and BTC.
               </p>
             </div>
           </Link>
-          <Link
-            href="https://dscvr.one/"
-            className="flex-1 hover:-translate-y-3 hover:no-underline text-black hover:text-black transition-transform border border-solid border-white bg-white-80 p-6 md:p-8 rounded-xl flex flex-row items-start gap-6 md:flex-col md:gap-9"
-          >
-            <img
-              src="/img/showcase/dscvr-logo.png"
-              alt="DSCVR logo"
-              className="w-16 md:w-20 aspect-square"
-            />
-            <div className="flex-1">
-              <h3 className="tw-heading-6 md:tw-heading-5 mb-1 md:mb-2">
-                DSCVR
-              </h3>
-              <p className="tw-paragraph-sm md:tw-lead-sm mb-0 text-black-60">
-                DSCVR is an end-to-end decentralized Web3 social media platform
-                that allows communities to form into groups called Portals.
-                These Portals can be NFT gated, airdrop fungible and
-                non-fungible tokens to their members and much more. DSCVR also
-                allows for tipping posts in a growing number of cryptos,
-                including ckBTC.
-              </p>
-            </div>
-          </Link>
+
           <Link
             href="https://oc.app/"
             className="flex-1 hover:-translate-y-3 hover:no-underline text-black hover:text-black transition-transform border border-solid border-white bg-white-80 p-6 md:p-8 rounded-xl flex flex-row items-start gap-6 md:flex-col md:gap-9"
@@ -258,15 +233,15 @@ const Content: React.FC = () => {
             />
             <div className="flex-1">
               <h3 className="tw-heading-6 md:tw-heading-5 mb-1 md:mb-2">
-                OpenChat
+                BIGChat
               </h3>
               <p className="tw-paragraph-sm md:tw-lead-sm mb-0 text-black-60">
                 What if you could own a piece of WhatsApp and vote on what
-                features get added? OpenChat is a fully decentralized real-time
+                features get added? BIGChat is a fully decentralized real-time
                 messaging service that is indistinguishable from Web2 chat apps,
                 while living 100% on the blockchain. This allows people to send
                 crypto to their friends - including Bitcoin with TX fees at only
-                $0.0029 and OpenChat's own governance token, CHAT.
+                $0.0029 and BIGChat's own governance token, BIG.
               </p>
             </div>
           </Link>

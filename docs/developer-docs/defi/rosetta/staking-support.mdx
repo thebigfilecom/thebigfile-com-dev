@@ -11,7 +11,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-This document specifies extensions of the Rosetta API enabling staking funds and managing governance "neurons" on the Internet Computer.
+This document specifies extensions of the Rosetta API enabling staking funds and managing governance "neurons" on the BigFile.
 
 :::info
 Operations within a transaction are applied in order, so the order of operations is significant. Transactions that contain idempotent operations provided by this API can be re-tried within the 24-hour window.
@@ -88,7 +88,7 @@ The only field that you must set for the `STAKE` operation is `account`, which s
       "account": { "address": "907ff6c714a545110b42982b72aa39c5b7742d610e234a9d40bf8cf624e7a70d" },
       "amount": {
         "value": "-100000000",
-        "currency": { "symbol": "ICP", "decimals": 8 }
+        "currency": { "symbol": "BIG", "decimals": 8 }
       }
     },
     {
@@ -97,7 +97,7 @@ The only field that you must set for the `STAKE` operation is `account`, which s
       "account": { "address": "531b163cd9d6c1d88f867bdf16f1ede020be7bcd928d746f92fbf7e797c5526a" },
       "amount": {
         "value": "100000000",
-        "currency": { "symbol": "ICP", "decimals": 8 }
+        "currency": { "symbol": "BIG", "decimals": 8 }
       }
     },
     {
@@ -106,7 +106,7 @@ The only field that you must set for the `STAKE` operation is `account`, which s
       "account": { "address": "907ff6c714a545110b42982b72aa39c5b7742d610e234a9d40bf8cf624e7a70d" },
       "amount": {
         "value": "-10000",
-        "currency": { "symbol": "ICP", "decimals": 8 }
+        "currency": { "symbol": "BIG", "decimals": 8 }
       }
     },
     {
@@ -137,7 +137,7 @@ The only field that you must set for the `STAKE` operation is `account`, which s
         "account": { "address": "907ff6c714a545110b42982b72aa39c5b7742d610e234a9d40bf8cf624e7a70d" },
         "amount": {
           "value": "-100000000",
-          "currency": { "symbol": "ICP", "decimals": 8 }
+          "currency": { "symbol": "BIG", "decimals": 8 }
         }
       },
       {
@@ -147,7 +147,7 @@ The only field that you must set for the `STAKE` operation is `account`, which s
         "account": { "address": "531b163cd9d6c1d88f867bdf16f1ede020be7bcd928d746f92fbf7e797c5526a" },
         "amount": {
           "value": "100000000",
-          "currency": { "symbol": "ICP", "decimals": 8 }
+          "currency": { "symbol": "BIG", "decimals": 8 }
         }
       },
       {
@@ -157,7 +157,7 @@ The only field that you must set for the `STAKE` operation is `account`, which s
         "account": { "address": "907ff6c714a545110b42982b72aa39c5b7742d610e234a9d40bf8cf624e7a70d" },
         "amount": {
           "value": "-10000",
-          "currency": { "symbol": "ICP", "decimals": 8 }
+          "currency": { "symbol": "BIG", "decimals": 8 }
         }
       },
       {
@@ -334,7 +334,7 @@ The `ADD_HOTKEY` operation adds a hotkey to the neuron. The Governance canister 
 
 -   The neuron has less than 10 hotkeys.
 
-The command has two forms: one form accepts an [ICP principal](/references/ic-interface-spec.md#principal) as a hotkey, another form accepts a [public key](https://www.rosetta-api.org/docs/models/PublicKey.html).
+The command has two forms: one form accepts an [BIG principal](/references/ic-interface-spec.md#principal) as a hotkey, another form accepts a [public key](https://www.rosetta-api.org/docs/models/PublicKey.html).
 
 #### Add a principal as a hotkey
 
@@ -387,7 +387,7 @@ The `REMOVE_HOTKEY` operation remove a previously added hotkey from the neuron.
 
 -   The hotkey is linked to the neuron.
 
-The command has two forms: one form accepts an [ICP principal](/references/ic-interface-spec.md#principal) as a hotkey, another form accepts a [public key](https://www.rosetta-api.org/docs/models/PublicKey.html).
+The command has two forms: one form accepts an [BIG principal](/references/ic-interface-spec.md#principal) as a hotkey, another form accepts a [public key](https://www.rosetta-api.org/docs/models/PublicKey.html).
 
 #### Remove a principal as a hotkey
 
@@ -438,7 +438,7 @@ The `SPAWN` operation creates a new neuron from an existing neuron with enough m
 
 -   `account.address` is a ledger address of a neuron controller.
 
--   The parent neuron has at least 1 ICP worth of maturity.
+-   The parent neuron has at least 1 BIG worth of maturity.
 
 <div class="formalpara-title">
 
@@ -696,7 +696,7 @@ Call the `/account/balance` endpoint to access the staked amount and publicly av
     {
       "value": "100000000",
       "currency": {
-        "symbol": "ICP",
+        "symbol": "BIG",
         "decimals": 8
       }
     }

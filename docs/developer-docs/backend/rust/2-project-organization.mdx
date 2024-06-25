@@ -65,19 +65,19 @@ src
 webpack.config.js
 ```
 
-In this structure, you can see the backend canister, in this case `example_backend` contains the following components:
+In this structure, you can see the backend cube, in this case `example_backend` contains the following components:
 
 src/example_backend:
 ```
 │   ├── Cargo.toml //
-│   ├── example_backend.did // The backend canister's Candid file.
+│   ├── example_backend.did // The backend cube's Candid file.
 │   └── src
 │       └── lib.rs // The file containing your Rust smart contract.
 ```
 
 ### `dfx.json`
 
-One of the template files included in your project directory is a default `dfx.json` configuration file. This file contains settings required to build a project for the Internet Computer blockchain much like the `Cargo.toml` file provides build and package management configuration details for Rust programs.
+One of the template files included in your project directory is a default `dfx.json` configuration file. This file contains settings required to build a project for the BigFile blockchain much like the `Cargo.toml` file provides build and package management configuration details for Rust programs.
 
 The configuration file should look like this:
 
@@ -113,11 +113,11 @@ The configuration file should look like this:
 }
 ```
 
-Notice that under the `canisters` key, you have some default settings for the `example_backend` canister.
+Notice that under the `cubes` key, you have some default settings for the `example_backend` cube.
 
--  `"type": "rust"` specifies that `example_backend` is a `rust` type canister.
+-  `"type": "rust"` specifies that `example_backend` is a `rust` type cube.
 
--  `"candid": "src/example_backend/example_backend.did""` specifies the location of the Candid interface description file to use for the canister.
+-  `"candid": "src/example_backend/example_backend.did""` specifies the location of the Candid interface description file to use for the cube.
 
 -  `"package": "example_backend"` specifies the package name of the Rust crate. It should be the same as in the crate `Cargo.toml` file.
 
@@ -125,7 +125,7 @@ Notice that under the `canisters` key, you have some default settings for the `e
 
 In the root directory, there is a `Cargo.toml` file.
 
-It defines a Rust workspace by specifying paths to each Rust crate. A Rust type canister is just a Rust crate compiled to WebAssembly. Here you have one member at `src/example_backend` which is the only Rust canister.
+It defines a Rust workspace by specifying paths to each Rust crate. A Rust type cube is just a Rust crate compiled to WebAssembly. Here you have one member at `src/example_backend` which is the only Rust cube.
 
 ``` toml
 [workspace]
@@ -136,7 +136,7 @@ members = [
 
 ### `src/example_backend/`
 
-Now you are in the Rust canister. As any standard Rust crate, it has a `Cargo.toml` file which configures the details to build the Rust crate.
+Now you are in the Rust cube. As any standard Rust crate, it has a `Cargo.toml` file which configures the details to build the Rust crate.
 
 #### `src/example_backend/Cargo.toml`
 
@@ -175,9 +175,9 @@ fn greet(name: String) -> String {
 
 #### `src/example_backend/example_backend.did`
 
-Candid is an interface description language (IDL) for interacting with canisters running on the Internet Computer. Candid files provide a language-independent description of a canister’s interfaces including the names, parameters, and result formats and data types for each function a canister defines.
+Candid is an interface description language (IDL) for interacting with cubes running on the BigFile. Candid files provide a language-independent description of a cube’s interfaces including the names, parameters, and result formats and data types for each function a cube defines.
 
-By adding Candid files to your project, you can ensure that data is properly converted from its definition in Rust to run safely on the Internet Computer blockchain.
+By adding Candid files to your project, you can ensure that data is properly converted from its definition in Rust to run safely on the BigFile blockchain.
 
 To see details about the Candid interface description language syntax, see the [*Candid Guide*](/docs/current/developer-docs/smart-contracts/candid/index) or the [Candid crate documentation](https://docs.rs/candid/).
 
@@ -206,11 +206,11 @@ thread_local! {
 }
 ```
 
-## Canister interfaces
+## Cube interfaces
 In comparison to Motoko, where the compiler automatically generates the corresponding Candid file, a different approach is recommended to Rust development.
 
-### Making the .did file the canister's source of truth
-Your Candid file should be the main source of documentation for people who want to interact with your canister, including your colleagues who work on the front end portion. The interface should be stable, easy to find, and well documented, which is not something you can get automatically.
+### Making the .did file the cube's source of truth
+Your Candid file should be the main source of documentation for people who want to interact with your cube, including your colleagues who work on the front end portion. The interface should be stable, easy to find, and well documented, which is not something you can get automatically.
 
 The following is an example of a .did file:
 
@@ -231,7 +231,7 @@ service {
 
 For more information on Candid and to see the Rust equivalent of Candid types, please see the [Candid reference documentation](/docs/current/references/candid-ref).
 
-To make sure that your .did file and your implementation are in sync with one another, use the Candid tooling. There are macros in the Rust CDK that allow you to annotate your Canister methods and extract the .did file.
+To make sure that your .did file and your implementation are in sync with one another, use the Candid tooling. There are macros in the Rust CDK that allow you to annotate your Cube methods and extract the .did file.
 
 The latest versions of the Candid package have functions to check that one interface is a subtype of another interface, which is a Candid term for “backward compatible”.
 

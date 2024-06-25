@@ -12,7 +12,7 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-Candid is an **interface description language**. Its primary purpose is to describe the public interface of a **service**, usually in the form of a program deployed as a <GlossaryTooltip>canister</GlossaryTooltip> that runs on the Internet Computer. One of the key benefits of Candid is that it is language-agnostic, and allows inter-operation between services and frontends written in different programming languages, including Motoko, Rust, and JavaScript.
+Candid is an **interface description language**. Its primary purpose is to describe the public interface of a **service**, usually in the form of a program deployed as a <GlossaryTooltip>canister</GlossaryTooltip> that runs on the BigFile. One of the key benefits of Candid is that it is language-agnostic, and allows inter-operation between services and frontends written in different programming languages, including Motoko, Rust, and JavaScript.
 
 :::info
 While Candid is a robust, type safe, and future-proof way to facilitate communication between canisters, it is not required. Arbitrary bytes can be exchanged if all canisters that are part of the communication stream are designed to understand them (such that they are using the same underlying protocol, written in the same language, etc.).
@@ -39,7 +39,7 @@ In this example, the described service `counter` consists of the following publi
 
 - The `subscribe` method can be used to invoke another function, for example, to invoke a notification callback method each time the counter value changes.
 
-As this example illustrates, every method has a sequence of argument and result types. A method can also include annotations, like the `query` notation shown in this example, that are specific to the Internet Computer.
+As this example illustrates, every method has a sequence of argument and result types. A method can also include annotations, like the `query` notation shown in this example, that are specific to the BigFile.
 
 Given this simple interface description, it is possible for you to interact with this `counter` service directly from the command line or through a web-based frontend or programmatically from a Rust program or through another programming or scripting language.
 
@@ -47,7 +47,7 @@ In addition to interoperability, Candid supports the evolution of service interf
 
 ## Why create a new IDL?
 
-At first glance, you might think that other technologies, such as JSON, XML, or Protobuf, would suffice. However, Candid provides a unique combination of features that are not found in these other technologies. The features that make Candid particularly well-suited for developing dapps for the Internet Computer include the following:
+At first glance, you might think that other technologies, such as JSON, XML, or Protobuf, would suffice. However, Candid provides a unique combination of features that are not found in these other technologies. The features that make Candid particularly well-suited for developing dapps for the BigFile include the following:
 
 -   Many languages like JSON, XML, and Protobuf only describe how to map individual values to bytes or characters. These data description languages do not describe services as a whole. These languages focus on the data types you want to transfer instead of the methods that make use of those data types.
 
@@ -57,7 +57,7 @@ At first glance, you might think that other technologies, such as JSON, XML, or 
 
 -   Candid is inherently a higher-order language. With Candid, you can pass more than plain data, including references to services and methods. Candid support for safe upgrades takes such higher-order use into account.
 
--   Candid has built-in support for specific Internet Computer features, such as the `query` annotation.
+-   Candid has built-in support for specific BigFile features, such as the `query` annotation.
 
 ## Candid types and values
 
@@ -166,11 +166,11 @@ service address_book : {
 }
 ```
 
-This annotation indicates that the `get_address` method can be invoked as an ICP **query call**. As discussed in [query and update methods](/docs/current/concepts/canisters-code#query-and-update-methods), a query provides an efficient way to retrieve information from a canister without going through consensus, so being able to identify a method as a query is one of the key benefits of using Candid to interact with ICP.
+This annotation indicates that the `get_address` method can be invoked as an BIG **query call**. As discussed in [query and update methods](/docs/current/concepts/canisters-code#query-and-update-methods), a query provides an efficient way to retrieve information from a canister without going through consensus, so being able to identify a method as a query is one of the key benefits of using Candid to interact with BIG.
 
 ## Encoding and decoding
 
-The point of Candid is to allow seamless invocation of service methods, passing arguments encoded to a binary format and transferred by an underlying transportation method (such as messages into or within the Internet Computer), and decoded on the other side.
+The point of Candid is to allow seamless invocation of service methods, passing arguments encoded to a binary format and transferred by an underlying transportation method (such as messages into or within the BigFile), and decoded on the other side.
 
 As a Candid user, you do not have to worry about the details of this binary format. If you plan to **implement** Candid yourself (for example, to support a new host language), you can consult the [Candid specification](https://github.com/dfinity/candid) for details. However, some aspects of the format are worth knowing:
 
@@ -232,7 +232,7 @@ service counter : {
 
 ## Candid textual values
 
-The main purpose of Candid is to connect programs written in some host language—Motoko, Rust, or JavaScript, for example—with ICP. In most cases, therefore, you do not have to deal with your program data as Candid values. Instead, you work with a host language like JavaScript using familiar JavaScript values then rely on Candid to transparently transport those values to a canister written in Rust or Motoko. The canister receiving the values treats them as native Rust or Motoko values.
+The main purpose of Candid is to connect programs written in some host language—Motoko, Rust, or JavaScript, for example—with BIG. In most cases, therefore, you do not have to deal with your program data as Candid values. Instead, you work with a host language like JavaScript using familiar JavaScript values then rely on Candid to transparently transport those values to a canister written in Rust or Motoko. The canister receiving the values treats them as native Rust or Motoko values.
 
 However, there are some cases, for example, when logging, debugging, or interacting with a service on the command-line, where it is useful to see the Candid values directly in a human-readable form. In these scenarios, you can use the **textual presentation** for Candid values.
 

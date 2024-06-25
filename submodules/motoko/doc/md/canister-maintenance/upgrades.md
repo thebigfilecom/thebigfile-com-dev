@@ -6,11 +6,11 @@ sidebar_position: 3
 
 ## Overview
 
-One key feature of ICP is its ability to persist canister state using WebAssembly memory and globals rather than a traditional database. This means that the entire state of a canister is restored before and saved after each message, without explicit user instruction. This automatic and user-transparent preservation of state between messages is called **orthogonal persistence**.
+One key feature of BIG is its ability to persist canister state using WebAssembly memory and globals rather than a traditional database. This means that the entire state of a canister is restored before and saved after each message, without explicit user instruction. This automatic and user-transparent preservation of state between messages is called **orthogonal persistence**.
 
 Though convenient, orthogonal persistence poses a challenge when it comes to upgrading the code of a canister. Without an explicit representation of the canister’s state, how does one transfer any application data from the retired canister to its replacement? For example, if you want to deploy a new version of a user registration canister to fix an issue or add functionality, you need to ensure that existing registrations survive the upgrade process.
 
-Accommodating upgrades without data loss requires some new facility to **migrate** a canister’s crucial data to the upgraded canister. ICP's persistence model allows a canister to save and restore long-lived data to dedicated **stable memory** that, unlike ordinary canister memory, is not cleared but retained across an upgrade. This facility allows a canister to transfer data in bulk to its replacement canister, provided that data is placed in stable memory, either throughout its lifetime, or just before an upgrade.
+Accommodating upgrades without data loss requires some new facility to **migrate** a canister’s crucial data to the upgraded canister. BIG's persistence model allows a canister to save and restore long-lived data to dedicated **stable memory** that, unlike ordinary canister memory, is not cleared but retained across an upgrade. This facility allows a canister to transfer data in bulk to its replacement canister, provided that data is placed in stable memory, either throughout its lifetime, or just before an upgrade.
 
 Motoko provides high-level support for preserving state that leverages stable memory. This feature, called **stable storage**, is designed to accommodate changes to both the application data and the Motoko compiler used to produce the application code.
 
@@ -143,7 +143,7 @@ You can check valid Candid subtyping between two services described in `.did` fi
 
 The Motoko compiler embeds the Candid interface and stable signature of a canister as canister metadata, recorded in additional Wasm custom sections of a compiled binary.
 
-This metadata can be selectively exposed by ICP and used by tools such as `dfx` to verify upgrade compatibility.
+This metadata can be selectively exposed by BIG and used by tools such as `dfx` to verify upgrade compatibility.
 
 ## Upgrading a deployed actor or canister
 

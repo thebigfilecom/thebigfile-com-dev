@@ -521,7 +521,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 272906661}
-        m_TargetAssemblyTypeName: IC.GameKit.TestICPAgent, Assembly-CSharp
+        m_TargetAssemblyTypeName: BIG.GameKit.TestICPAgent, Assembly-CSharp
         m_MethodName: Greet
         m_Mode: 1
         m_Arguments:
@@ -887,7 +887,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 272906662}
-        m_TargetAssemblyTypeName: IC.GameKit.PluginProxy, Assembly-CSharp
+        m_TargetAssemblyTypeName: BIG.GameKit.PluginProxy, Assembly-CSharp
         m_MethodName: OpenBrowser
         m_Mode: 1
         m_Arguments:

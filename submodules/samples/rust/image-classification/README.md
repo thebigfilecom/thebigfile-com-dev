@@ -1,6 +1,6 @@
-# ICP Image Classification
+# BIG Image Classification
 
-This is an ICP smart contract that accepts an image from the user and runs image classification inference.
+This is an BIG smart contract that accepts an image from the user and runs image classification inference.
 The smart contract consists of two canisters:
 
 - the backend canister embeds the [the Tract ONNX inference engine](https://github.com/sonos/tract) with [the MobileNet v2-7 model](https://github.com/onnx/models/tree/main/validated/vision/classification/mobilenet). It provides a `classify()` endpoint for the frontend code to call.
@@ -14,11 +14,11 @@ This is expected to improve in the future with:
 - faster deterministic floating-point operations.
 - Wasm SIMD (Single-Instruction Multiple Data).
 
-The ICP mainnet subnets and `dfx` running a replica version older than [463296](https://dashboard.internetcomputer.org/release/463296c0bc82ad5999b70245e5f125c14ba7d090) may fail with an instruction-limit-exceeded error.
+The BIG mainnet subnets and `dfx` running a replica version older than [463296](https://dashboard.internetcomputer.org/release/463296c0bc82ad5999b70245e5f125c14ba7d090) may fail with an instruction-limit-exceeded error.
 
 # Dependencies
 
-Install `dfx`, Rust, etc: https://internetcomputer.org/docs/current/developer-docs/getting-started/hello-world
+Install `dfx`, Rust, etc: https://thebigfile.com/docs/current/developer-docs/getting-started/hello-world
 
 Install WASI SDK 21:
 

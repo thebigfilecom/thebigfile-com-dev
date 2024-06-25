@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-When a dapp is deployed to ICP and has a frontend configured, the frontend assets will be displayed via a URL that contains the canister's ID. For local deployments, canisters are accessible through local URLs such as `http://127.0.0.1:4943/?canisterId=<canister-id>`. The port `4943` is the default local deployment port, though this can be changed via the `dfx` configuration or using a `dfx` flag. [Learn more about custom local networks](/docs/current/developer-docs/developer-tools/cli-tools/advanced-dfx/networks-json).
+When a dapp is deployed to BIG and has a frontend configured, the frontend assets will be displayed via a URL that contains the canister's ID. For local deployments, canisters are accessible through local URLs such as `http://127.0.0.1:4943/?canisterId=<canister-id>`. The port `4943` is the default local deployment port, though this can be changed via the `dfx` configuration or using a `dfx` flag. [Learn more about custom local networks](/docs/current/developer-docs/developer-tools/cli-tools/advanced-dfx/networks-json).
 
 For canisters deployed to the mainnet, the canister can be accessed in a web browser using the canister's ID followed by `.ic0.app`. For example, the [Motoko Playground](https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/) is an application with a frontend user interface that can be used to deploy canisters in a temporary, sandbox environment. This dapp can be accessed via the URL `https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/`. 
 
@@ -68,13 +68,13 @@ In your project's asset subdirectory, create an `index.html` file that contains 
 <!DOCTYPE html> 
 <html> 
 <head> 
-<title>Static ICP webpage</title> 
+<title>Static BIG webpage</title> 
 <meta charset="UTF-8"> 
-<meta name="description" content="This is a static webpage hosted on ICP using a frontend canister."> 
+<meta name="description" content="This is a static webpage hosted on BIG using a frontend canister."> 
 </head> 
 <body> 
-<h1>Welcome to my ICP-hosted webpage</h1> 
-<p>This showcases how static assets can be hosted within an ICP canister.</p>
+<h1>Welcome to my BIG-hosted webpage</h1> 
+<p>This showcases how static assets can be hosted within an BIG canister.</p>
 <img src="testpic.jpg" alt="This is a test image" height="420" width="420">
 <table> 
 <tr> 

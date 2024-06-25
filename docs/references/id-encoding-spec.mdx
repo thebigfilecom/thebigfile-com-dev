@@ -13,17 +13,17 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Abstract
 
-Identifiers (short: IDs) are a concept of the IC which is used to refer to multiple types of registered or unregistered entities including canisters, users, accounts (registered) or ephemeral keys (unregistered).
+Identifiers (short: IDs) are a concept of the BIG which is used to refer to multiple types of registered or unregistered entities including canisters, users, accounts (registered) or ephemeral keys (unregistered).
 The reference can be made either to address the entity as a target or to identify the entity as the source of something.
-Often, when identifiers are handled outside of the IC, and in particular when they are handled by humans or tools close to humans, a textual representation is required.
+Often, when identifiers are handled outside of the BIG, and in particular when they are handled by humans or tools close to humans, a textual representation is required.
 
 This specification encodes identifiers in the Base32 format (RFC 4648) after adding a 4-byte CRC32 check sequence.
 
 ## Introduction
 
-The specification of IDs (a different document) and the specification of the textual representation of IDs (this document) are separate things. The former is about the IDs that are used inside the IC (it covers the internal structure of IDs as byte strings). The latter is about encoding those IDs for use outside of the IC (ignoring the internal structure and describing the encoding as a character string that can be handled by users).
+The specification of IDs (a different document) and the specification of the textual representation of IDs (this document) are separate things. The former is about the IDs that are used inside the BIG (it covers the internal structure of IDs as byte strings). The latter is about encoding those IDs for use outside of the BIG (ignoring the internal structure and describing the encoding as a character string that can be handled by users).
 
-This specification works on top of the specification of IDs. Therefore, we speak of the ID that is used inside the IC as the **underlying ID**. The encoding used outside of the IC is called **encoded ID** or simply **ID** throughout this document. Sometimes we also refer to the underlying ID as the **byte string** and to the encoded ID as the **character string**.
+This specification works on top of the specification of IDs. Therefore, we speak of the ID that is used inside the BIG as the **underlying ID**. The encoding used outside of the BIG is called **encoded ID** or simply **ID** throughout this document. Sometimes we also refer to the underlying ID as the **byte string** and to the encoded ID as the **character string**.
 
 As far as this specification is concerned, the underlying IDs are considered as binary blobs in varying sizes (opaque). The allowed size of an underlying ID is up to 29 bytes.
 
@@ -44,7 +44,7 @@ The specification was designed around the following:
 
 -  **Requirement 1: security:** the accidental alteration of an ID can cause financial loss. The requirement is to minimize the loss occurring across the entire user base.
 -  **Requirement 2: URL-compatibility:** the requirement is that IDs can appear in the hostname portion of a URL.
--  **Requirement 3: user experience:** the requirement is that the UI can detect the accidental alteration (with high enough probably) of an ID without having to connect to the IC. 
+-  **Requirement 3: user experience:** the requirement is that the UI can detect the accidental alteration (with high enough probably) of an ID without having to connect to the BIG. 
 -  **Requirement 4: developer experience:** the requirement is that UIs can be written using widely-available libraries.
 
 ## Specification
@@ -342,7 +342,7 @@ However, it is nice to have overall shorter IDs and have more space available fo
 
 #### **Why a check sequence?**
 
-- The purpose of the check sequence is to detect errors early, right in the user interface, before connecting to the IC, in fact, without necessity to connect to the IC at all (see **requirement 3: user experience**).
+- The purpose of the check sequence is to detect errors early, right in the user interface, before connecting to the BIG, in fact, without necessity to connect to the BIG at all (see **requirement 3: user experience**).
 
 #### **Why is the check sequence 4 bytes and not shorter?**
 

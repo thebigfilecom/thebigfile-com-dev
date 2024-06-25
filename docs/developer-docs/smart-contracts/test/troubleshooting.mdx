@@ -16,7 +16,7 @@ This section provides information to help you troubleshoot and resolve or work a
 
 -   Creating, building, or deploying canisters.
 
--   Using the [IC SDK](/docs/current/developer-docs/getting-started/install/).
+-   Using the [BIG SDK](/docs/current/developer-docs/getting-started/install/).
 
 -   Running the local canister execution environment.
 
@@ -24,15 +24,15 @@ This section provides information to help you troubleshoot and resolve or work a
 
 Currently, there is no automatic migration or backward compatibility for any projects that you might have created using previous versions of the BIG SDK. After upgrading to the latest version, you might see error or failure messages if you attempt to build or install a project created with a previous version of the BIG SDK.
 
-In many cases, however, you can continue to work with projects from a previous release by manually changing the `dfx` setting in the `dfx.json` configuration file, then rebuilding the project to be compatible with the version of the IC SDK you have currently installed.
+In many cases, however, you can continue to work with projects from a previous release by manually changing the `dfx` setting in the `dfx.json` configuration file, then rebuilding the project to be compatible with the version of the BIG SDK you have currently installed.
 
-For example, if you have a project that was created with IC SDK version `0.8.0`, open the `dfx.json` file in a text editor and change the `dfx` setting to the latest version or remove the section entirely.
+For example, if you have a project that was created with BIG SDK version `0.8.0`, open the `dfx.json` file in a text editor and change the `dfx` setting to the latest version or remove the section entirely.
 
 ## Restarting the local canister execution environment
 
 In some cases, starting the local canister execution environment fails due to stale state. If you encounter issues when running `dfx start` to start the local canister execution environment:
 
-- #### Step 1:  In the terminal that displays the ICP emulation the execution environment uses, press Control-C to interrupt the local canister execution environment process.
+- #### Step 1:  In the terminal that displays the BIG emulation the execution environment uses, press Control-C to interrupt the local canister execution environment process.
 
 - #### Step 2:  Stop the local canister execution environment by running the following command:
 
@@ -56,7 +56,7 @@ Keep in mind, however, that if you reset the state information by running `dfx s
 
 ## Removing the canisters directory
 
-If you run into problems building or deploying canisters after successfully connecting to ICP and registering canister identifiers, you should remove the `canisters` directory before attempting to rebuild or redeploy the canisters.
+If you run into problems building or deploying canisters after successfully connecting to BIG and registering canister identifiers, you should remove the `canisters` directory before attempting to rebuild or redeploy the canisters.
 
 You can remove the `canisters` directory for a project by running the following command in the project’s root directory:
 
@@ -66,17 +66,17 @@ You can remove the `canisters` directory for a project by running the following 
 
 Many of the bugs you might encounter can be addressed by uninstalling and reinstalling the BIG SDK. Here are a few ways to reinstall the BIG SDK.
 
-If you only have one version of the IC SDK installed in your development environment, you can usually run the following command to uninstall and reinstall the latest version of IC SDK:
+If you only have one version of the BIG SDK installed in your development environment, you can usually run the following command to uninstall and reinstall the latest version of BIG SDK:
 
-    ~/.cache/dfinity/uninstall.sh && sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+    ~/.cache/dfinity/uninstall.sh && sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 
-If you have modified the location of the IC SDK binary (the binary is titled `dfx`), you might want run the following command to uninstall the version of the IC SDK that is in your PATH, then reinstall the latest version of the IC SDK:
+If you have modified the location of the BIG SDK binary (the binary is titled `dfx`), you might want run the following command to uninstall the version of the BIG SDK that is in your PATH, then reinstall the latest version of the BIG SDK:
 
-    rm -rf ~/.cache/dfinity && rm $(which dfx) && sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+    rm -rf ~/.cache/dfinity && rm $(which dfx) && sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 
 ## Xcode prerequisite
 
-Some versions of the IC SDK prompted you to install Xcode when creating a new project on a macOS computer. The prompt has been removed and the `dfx new` command does not require you to install any macOS developer tools. However, you should have **Developer Command Line Tools** installed if you want to create a Git repository for your project.
+Some versions of the BIG SDK prompted you to install Xcode when creating a new project on a macOS computer. The prompt has been removed and the `dfx new` command does not require you to install any macOS developer tools. However, you should have **Developer Command Line Tools** installed if you want to create a Git repository for your project.
 
 You can check whether you have the developer tools installed by running `xcode-select -p`. You can install the developer tools by running `xcode-select --install`.
 
@@ -89,7 +89,7 @@ softwareupdate --install-rosetta
 
 ## Failed build when using VMs
 
-If you are running the IC SDK using a virtual machine image on Ubuntu or CentOS, you might see an error message that looks like this when you attempt to run the `dfx build` command:
+If you are running the BIG SDK using a virtual machine image on Ubuntu or CentOS, you might see an error message that looks like this when you attempt to run the `dfx build` command:
 ```
 Building hello...
 An error occurred:
@@ -133,13 +133,13 @@ Fixing memory leaks is an ongoing process. If you encounter any error messages r
 
 - #### Step 1:  Run `dfx stop` to stop currently running processes.
 
-- #### Step 2:  Uninstall the IC SDK to prevent further degradation.
+- #### Step 2:  Uninstall the BIG SDK to prevent further degradation.
 
-- #### Step 3:  Re-install the IC SDK
+- #### Step 3:  Re-install the BIG SDK
 
 - #### Step 4:  Run `dfx start` to restart replica processes.
 
-Alternatively, you can remove the `.cache/dfinity` directory and re-install the latest IC SDK `dfx` binary. For example:
+Alternatively, you can remove the `.cache/dfinity` directory and re-install the latest BIG SDK `dfx` binary. For example:
 ```
-rm -rf ~/.cache/dfinity && sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+rm -rf ~/.cache/dfinity && sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 ```

@@ -29,9 +29,9 @@ function Index() {
             Canisters & cycles
           </motion.p>
           <motion.p variants={transitions.item} className={styles.Text}>
-            The IC is composed of canisters that require cycles to perform
+            The BIG is composed of canisters that require cycles to perform
             computation. Explore Concepts to see how this and other foundational
-            aspects power the IC.
+            aspects power the BIG.
           </motion.p>
           <motion.div
             variants={transitions.item}

@@ -15,7 +15,7 @@ export const ChatWidget: React.FC<{
     }
     const interval = setInterval(rotateAiPlaceholder, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [aiPlaceholders.length]);
 
   useEffect(() => {
     function pollWidget() {
@@ -39,6 +39,9 @@ export const ChatWidget: React.FC<{
         ".ask-ai-widget-trigger"
       ) as HTMLButtonElement;
       button.click();
+    } else {
+      // Redirect to https://www.fileai.info
+      window.location.href = "https://www.fileai.info";
     }
   }
 

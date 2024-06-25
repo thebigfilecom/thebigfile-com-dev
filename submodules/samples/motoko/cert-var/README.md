@@ -7,19 +7,19 @@ keywords: [intermediate, motoko, cert var, certified variables]
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/motoko/cert-var)
 
 ## Overview
-This example demonstrates the use of a single cryptographically certified variable, as supported by the Internet Computer.
+This example demonstrates the use of a single cryptographically certified variable, as supported by the BigFile.
 
 In a nutshell, this example code demonstrates "response certification" for a canister that holds a single 32-bit variable. It has two sides:
 
 - Backend (BE) canister logic in Motoko (`main.mo`).
 - Frontend (FE) logic in JS (`index.js`).
 
-To detect an attacker in the middle between the FE and the IC and our "true" BE canister running there, we must either:
+To detect an attacker in the middle between the FE and the BIG and our "true" BE canister running there, we must either:
 
 - Perform update calls that use "full consensus" (and wait for ~2 sec).
-- Perform (fast) query calls whose responses that we, the client, certify, using the coordination of the IC and our canister running there.
+- Perform (fast) query calls whose responses that we, the client, certify, using the coordination of the BIG and our canister running there.
 
-The FE and BE code demonstrates the second approach in a minimal setting. The BE holds a single certified variable, as a 32-bit number, and the FE code queries and certifies this number's "current certificate". The BE prepares for the FE certification by giving the FE a "current certificate" within the response; this certificate is signed by the entire IC, using a special system feature.
+The FE and BE code demonstrates the second approach in a minimal setting. The BE holds a single certified variable, as a 32-bit number, and the FE code queries and certifies this number's "current certificate". The BE prepares for the FE certification by giving the FE a "current certificate" within the response; this certificate is signed by the entire BIG, using a special system feature.
 
 Before the FE trusts the response from the apparent BE canister, it interrogates it and verifies its authenticity, the FE does four checks:
 
@@ -32,7 +32,7 @@ For steps 2, 3, and 4, the FE accesses data from the certificate (Blob).
 
 The `Certificate` class from the `agent-js` library provides a way to access those items using their paths, like a filesystem, each addressing a Blob, encoding something.
 
-In the case of time and our data, the encodings are each Candid. The IC spec represents time using a LEB128 encoding, and certified data uses little endian.
+In the case of time and our data, the encodings are each Candid. The BIG spec represents time using a LEB128 encoding, and certified data uses little endian.
 
 Ideally, we should use a proper library to decode these numbers. To prevent an extra dependency, we take advantage of the fact that the Candid value encoding of Nat and Nat32 use the same representation.
 
@@ -49,13 +49,13 @@ This is a Motoko example that does not currently have a Rust variant.
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Download [npm](https://nodejs.org/en/download/).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 Begin by opening a terminal window.
 
-### Step 1: Navigate into the folder containing the project's files and start a local instance of the Internet Computer with the command:
+### Step 1: Navigate into the folder containing the project's files and start a local instance of the BigFile with the command:
 
 ```bash
 cd examples/motoko/cert-var
@@ -252,8 +252,8 @@ The canister updates its certificate, and the frontend checks it. The developer 
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
-* [Certify query responses if they are relevant for security](https://internetcomputer.org/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since this app is all about response certification!
-* [Validate Inputs](https://internetcomputer.org/docs/current/references/security/rust-canister-development-security-best-practices/#validate-inputs), since for incrementing the nat32 variable, the argument the inc call may be too big for the addition to be possible. 
+* [Certify query responses if they are relevant for security](https://thebigfile.com/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since this app is all about response certification!
+* [Validate Inputs](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices/#validate-inputs), since for incrementing the nat32 variable, the argument the inc call may be too big for the addition to be possible. 

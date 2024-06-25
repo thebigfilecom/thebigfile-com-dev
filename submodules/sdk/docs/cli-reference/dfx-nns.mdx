@@ -113,12 +113,12 @@ $ dfx canister call --network ic nns-governance get_pending_proposals '()'
 
 You can view the API calls that can be made for each NNS canister by looking at the interface definition files installed by `dfx nns import` in `candid/*.did`.  The API methods are in the `service` section, which is usually located at the end of a `.did` file.  It is easiest to start experimenting with methods that take no arguments.
 
-#### Example: Accessing ICP on the command line
-Two accounts in the local ledger is initialized with ICP that can be used for testing.  One uses a secp256k1 key, which is convenient for command line usage, another uses an ed25519 key, which is more convenient in web applications.
+#### Example: Accessing BIG on the command line
+Two accounts in the local ledger is initialized with BIG that can be used for testing.  One uses a secp256k1 key, which is convenient for command line usage, another uses an ed25519 key, which is more convenient in web applications.
 
 
 
-To use ICP on the command line:
+To use BIG on the command line:
 * Start dfx and install the NNS, as described in [`install`](#_dfx_nns_install).
 * Put this secret key into a file called `ident-1.pem`:
 ``` bash
@@ -143,7 +143,7 @@ $ dfx identity import ident-1 ident-1.pem
 $ dfx ledger balance
 ```
 
-To use ICP in an existing web application:
+To use BIG in an existing web application:
 * Install the [@dfinity/agent npm module](https://www.npmjs.com/package/@dfinity/agent).
 * Create an identity with this key pair:
 ```
@@ -164,4 +164,4 @@ To use ICP in an existing web application:
     return Uint8Array.from(window.atob(base64String), (c) => c.charCodeAt(0));
   };
 ```
-* That identity can now make API calls, including sending ICP.
+* That identity can now make API calls, including sending BIG.

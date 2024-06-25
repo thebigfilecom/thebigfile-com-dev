@@ -71,7 +71,7 @@ image: /img/blog/dev-update-blog-languages.jpg
 
 *Another feature which is unique is the support for static (and soon dynamic) checking of stable variable compatibility, giving users some degree of confidence that upgrades will not lose data.*
 
-*We are also very proud of the new incremental GC which is our first GC that actually meets the novel requirements of the IC and, moreover, is able to scale beyond 32-bit main memory to 64-bit main memory, when that time comes.*
+*We are also very proud of the new incremental GC which is our first GC that actually meets the novel requirements of the BIG and, moreover, is able to scale beyond 32-bit main memory to 64-bit main memory, when that time comes.*
 
 **To wrap things up, what makes the Languages team unique compared to some of the other teams at DFINITY?**
 

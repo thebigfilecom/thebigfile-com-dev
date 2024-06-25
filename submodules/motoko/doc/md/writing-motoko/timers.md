@@ -6,7 +6,7 @@ sidebar_position: 25
 
 ## Overview
 
-ICP canisters can set an arbitrary number of single-expiration or recurring timers. See the [`Timer.mo`](../base/Timer.md) module in the base library.
+BIG canisters can set an arbitrary number of single-expiration or recurring timers. See the [`Timer.mo`](../base/Timer.md) module in the base library.
 
 ## Example
 
@@ -15,7 +15,7 @@ A simple example is a periodic reminder that logs a new year's message:
 ``` motoko no-repl file=../examples/Reminder.mo
 ```
 
-The underlying mechanism is a [canister global timer](https://internetcomputer.org/docs/current/references/ic-interface-spec#timer) that by default is issued with appropriate callbacks from a priority queue maintained by the Motoko runtime.
+The underlying mechanism is a [canister global timer](https://thebigfile.com/docs/current/references/ic-interface-spec#timer) that by default is issued with appropriate callbacks from a priority queue maintained by the Motoko runtime.
 
 The timer mechanism can be disabled completely by passing the `-no-timer` flag to `moc`.
 

@@ -43,7 +43,7 @@ This reference page provides technical details of interest to the following audi
 
 This page is intended to provide complete reference information about Motoko, but this section does not provide explanatory text or usage information. Therefore, this section is typically not suitable for readers who are new to programming languages or who are looking for a general introduction to using Motoko.
 
-In this documentation, the term canister is used to refer to an Internet Computer smart contract.
+In this documentation, the term canister is used to refer to an BigFile smart contract.
 
 ## Basic language syntax
 
@@ -758,17 +758,17 @@ Exiting an async block or shared function with a non-`#canister-reject` system e
 
 :::note
 
-On ICP, the act of issuing a call to a canister function can fail, so that the call cannot (and will not be) performed.
+On BIG, the act of issuing a call to a canister function can fail, so that the call cannot (and will not be) performed.
 This can happen due to a lack of canister resources, typically because the local message queue for the destination canister is full,
 or because performing the call would reduce the current cycle balance of the calling canister to a level below its freezing threshold.
-Such call failures are reported by throwing an [`Error`](../base/Error.md) with code `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such call failures are reported by throwing an [`Error`](../base/Error.md) with code `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 Like other errors, call errors can be caught and handled using `try ... catch ...` expressions, if desired.
 
 :::
 
 ### Type `Region`
 
-The type `Region` represents opaque stable memory regions. Region objects are dynamically allocated and independently growable. They represent isolated partitions of IC stable memory.
+The type `Region` represents opaque stable memory regions. Region objects are dynamically allocated and independently growable. They represent isolated partitions of BIG stable memory.
 
 The region type is stable but not shared and its objects, which are stateful, may be stored in stable variables and data structures.
 
@@ -1186,15 +1186,15 @@ module {
 }
 ```
 
-On ICP, if this library is imported as identifier `Lib`, then calling `await Lib.<id>(<exp1>, ..., <expn>)`, installs a fresh instance of the actor class as an isolated IC canister, passing the values of `<exp1>`, ...​, `<expn>` as installation arguments, and returns a reference to a remote actor of type `Lib.<id>`, that is, `T`. Installation is necessarily asynchronous.
+On BIG, if this library is imported as identifier `Lib`, then calling `await Lib.<id>(<exp1>, ..., <expn>)`, installs a fresh instance of the actor class as an isolated BIG canister, passing the values of `<exp1>`, ...​, `<expn>` as installation arguments, and returns a reference to a remote actor of type `Lib.<id>`, that is, `T`. Installation is necessarily asynchronous.
 
 
 #### Actor class management
 
-On ICP, the primary constructor of an imported actor class always creates a new principal and installs a fresh instance of the class as the code for that principal.
-While that is one way to install a canister on ICP, it is not the only way.
+On BIG, the primary constructor of an imported actor class always creates a new principal and installs a fresh instance of the class as the code for that principal.
+While that is one way to install a canister on BIG, it is not the only way.
 
-To provide further control over the installation of actor classes, Motoko endows each imported actor class with an extra, secondary constructor, for use on ICP.
+To provide further control over the installation of actor classes, Motoko endows each imported actor class with an extra, secondary constructor, for use on BIG.
 This constructor takes an additional first argument that tailors the installation. The constructor is only available via special syntax that stresses its
 `system` functionality.
 
@@ -1235,11 +1235,11 @@ If `<exp>` is:
 
 - `#new s`, where `s` has type `CanisterSettings`:
 
-    - The call creates a fresh ICP principal `p`, with settings `s`, and installs the instance to principal `p`.
+    - The call creates a fresh BIG principal `p`, with settings `s`, and installs the instance to principal `p`.
 
 - `#install p`, where `p` has type [`Principal`](../base/Principal.md):
 
-    - The call installs the actor to an already created ICP principal `p`. The principal must be empty, having no previously installed code, or the call will return an error.
+    - The call installs the actor to an already created BIG principal `p`. The principal must be empty, having no previously installed code, or the call will return an error.
 
 -  `#upgrade a`, where `a` has type (or supertype) `actor {}`:
 
@@ -1251,13 +1251,13 @@ If `<exp>` is:
 
 :::note
 
-On ICP, calling the primary constructor `Lib.<id>` is equivalent to calling the secondary constructor `(system Lib.<id>)` with argument `(#new {settings = null})` i.e. using default settings.
+On BIG, calling the primary constructor `Lib.<id>` is equivalent to calling the secondary constructor `(system Lib.<id>)` with argument `(#new {settings = null})` i.e. using default settings.
 
 :::
 
 :::note
 
-On ICP, calls to `Lib.<id>` and  `(system Lib.<id>)(#new ...)` must be provisioned with enough cycles for the creation of a new principal. Other call variants will use the cycles of the already allocated principal or actor.
+On BIG, calls to `Lib.<id>` and  `(system Lib.<id>)(#new ...)` must be provisioned with enough cycles for the creation of a new principal. Other call variants will use the cycles of the already allocated principal or actor.
 
 :::
 
@@ -1288,7 +1288,7 @@ In detail, if `<url>` is of the form:
 
 The case sensitivity of file references depends on the host operating system so it is recommended not to distinguish resources by filename casing alone.
 
-When building multi-canister projects with the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install), Motoko programs can typically import canisters by alias (e.g. `import C "canister:counter"`), without specifying low-level canister ids (e.g. `import C "ic:lg264-qjkae"`). The SDK tooling takes care of supplying the appropriate command-line arguments to the Motoko compiler.)
+When building multi-canister projects with the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install), Motoko programs can typically import canisters by alias (e.g. `import C "canister:counter"`), without specifying low-level canister ids (e.g. `import C "ic:lg264-qjkae"`). The SDK tooling takes care of supplying the appropriate command-line arguments to the Motoko compiler.)
 
 Sensible choices for `<pat>` are identifiers, such as [`Array`](../base/Array.md), or object patterns like `{ cons; nil = empty }`, which allow selective importing of individual fields, under original or other names.
 
@@ -1334,11 +1334,11 @@ The declaration `<dec>` of a `system` field must be a manifest `func` declaratio
 | `preupgrade`  | `<system>() -> ()`                                            | Pre upgrade action  |
 | `postupgrade` | `<system>() -> ()`                                            | Post upgrade action |
 
--   `heartbeat`: When declared, is called on every Internet Computer subnet heartbeat, scheduling an asynchronous call to the `heartbeat` function. Due to its `async` return type, a heartbeat function may send messages and await results. The result of a heartbeat call, including any trap or thrown error, is ignored. The implicit context switch means that the time the heartbeat body is executed may be later than the time the heartbeat was issued by the subnet.
+-   `heartbeat`: When declared, is called on every BigFile subnet heartbeat, scheduling an asynchronous call to the `heartbeat` function. Due to its `async` return type, a heartbeat function may send messages and await results. The result of a heartbeat call, including any trap or thrown error, is ignored. The implicit context switch means that the time the heartbeat body is executed may be later than the time the heartbeat was issued by the subnet.
 
 -   `timer`: When declared, is called as a response of the canister global timer's expiration. The canister's global timer can be manipulated with the passed-in function argument of type `Nat64 -> ()` (taking an absolute time in nanoseconds) upon which libraries can build their own abstractions. When not declared (and in absence of the `-no-timer` flag), this system action is provided with default implementation by the compiler (additionally `setTimer` and `cancelTimer` are available as primitives).
 
--   `inspect`: When declared, is called as a predicate on every Internet Computer ingress message with the exception of HTTP query calls. The return value, a [`Bool`](../base/Bool.md), indicates whether to accept or decline the given message. The argument type depends on the interface of the enclosing actor (see [inspect](#inspect)).
+-   `inspect`: When declared, is called as a predicate on every BigFile ingress message with the exception of HTTP query calls. The return value, a [`Bool`](../base/Bool.md), indicates whether to accept or decline the given message. The argument type depends on the interface of the enclosing actor (see [inspect](#inspect)).
 
 -   `preupgrade`: When declared, is called during an upgrade, immediately before the current values of the retired actor’s stable variables are transferred to the replacement actor.
      Its `<system>` type parameter is implicitly assumed and need not be declared.
@@ -1351,7 +1351,7 @@ During an upgrade, a trap occurring in the implicit call to `preupgrade()` or `p
 
 ##### `inspect`
 
-Given a record of message attributes, this function produces a [`Bool`](../base/Bool.md) that indicates whether to accept or decline the message by returning `true` or `false`. The function is invoked by the system on each ingress message issue as an ICP update call, excluding non-replicated query calls. Similar to a query, any side-effects of an invocation are transient and discarded. A call that traps due to some fault has the same result as returning `false` message denial.
+Given a record of message attributes, this function produces a [`Bool`](../base/Bool.md) that indicates whether to accept or decline the message by returning `true` or `false`. The function is invoked by the system on each ingress message issue as an BIG update call, excluding non-replicated query calls. Similar to a query, any side-effects of an invocation are transient and discarded. A call that traps due to some fault has the same result as returning `false` message denial.
 
 The argument type of `inspect` depends on the interface of the enclosing actor. In particular, the formal argument of `inspect` is a record of fields of the following types:
 
@@ -2132,7 +2132,7 @@ The exhaustiveness side condition on `shared` function expressions ensures that 
 :::note
 
 Calls to local functions with `async` return type and `shared` functions can fail due to a lack of canister resources.
-Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 
 Earlier versions of Motoko would trap in such situations, making it difficult for the calling canister to mitigate such failures.
 Now, a caller can handle these errors using enclosing `try ... catch ...` expressions, if desired.
@@ -2411,7 +2411,7 @@ Evaluation of `async <block-or-exp>` queues a message to evaluate `<block-or-exp
 
 Because it involves messaging, evaluating an `async` expression can fail due to a lack of canister resources.
 
-Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such failures will result in the call immediately throwing an error with  `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 
 Earlier version of Motoko would trap in such situations, making it difficult for the producer of the async expression to mitigate such failures. Now, the producer can handle these errors using an enclosing `try ... catch ...` expression, if desired.
 
@@ -2443,7 +2443,7 @@ Using `await` signals that the computation will commit its current state and sus
 :::note
 
 Because it involves additional messaging, an `await` on a completed future can, in rare circumstances, fail due to a lack of canister resources.
-Such failures will result in the call immediately throwing an error with `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by ICP.
+Such failures will result in the call immediately throwing an error with `code` `#call_error { err_code = n }`, where `n` is the non-zero `err_code` value returned by BIG.
 
 The error is produced eagerly, without suspending nor committing state.
 Earlier versions of Motoko would trap in such situations, making it difficult for the consumer of the `await` to mitigate such failures. Now, the consumer can handle these errors by using an enclosing `try ... catch ...` expression, if desired.

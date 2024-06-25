@@ -29,7 +29,7 @@ async fn transfer(args: TransferArgs) -> Result<BlockIndex, String> {
         fee: Tokens::from_e8s(10_000),
         // The subaccount of the account identifier that will be used to withdraw tokens and send them
         // to another account identifier. If set to None then the default subaccount will be used.
-        // See the [Ledger doc](https://internetcomputer.org/docs/current/developer-docs/integrations/ledger/#accounts).
+        // See the [Ledger doc](https://thebigfile.com/docs/current/developer-docs/integrations/ledger/#accounts).
         from_subaccount: None,
         to: AccountIdentifier::new(&args.to_principal, &to_subaccount),
         created_at_time: None,
@@ -40,5 +40,5 @@ async fn transfer(args: TransferArgs) -> Result<BlockIndex, String> {
         .map_err(|e| format!("ledger transfer error {:?}", e))
 }
 
-// Enable Candid export (see https://internetcomputer.org/docs/current/developer-docs/backend/rust/generating-candid)
+// Enable Candid export (see https://thebigfile.com/docs/current/developer-docs/backend/rust/generating-candid)
 ic_cdk::export_candid!();

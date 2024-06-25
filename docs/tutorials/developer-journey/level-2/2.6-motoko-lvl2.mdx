@@ -8,11 +8,9 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uEx8We28-Sk?si=SQ1xGtZgX7Hiarbq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Overview
 
-As you've seen so far in our developer journey, **actors** are at the core functionality of canisters written in Motoko. In this tutorial, you'll explore actors further by taking a look at actor type definitions, how actors interact with async data, actor classes, and using multiple actors.
+As you've seen so far in our developer journey, **actors** are at the core functionality of cubes written in Motoko. In this tutorial, you'll explore actors further by taking a look at actor type definitions, how actors interact with async data, actor classes, and using multiple actors.
 
 ## Actor types
 
@@ -220,7 +218,7 @@ Want to learn more about actor classes? Take a look at the documentation on [act
 
 ## Using multiple actors
 
-Until this point in our developer journey, you've interacted with one actor defined in our `backend` canister Motoko file. Next, you're going to create a project that uses multiple actors. Remember that only one actor can be defined in a Motoko file, and a single actor is always compiled into a single canister. To create multiple actors, you'll create multiple Motoko files and build multiple canisters. To do this, you'll define two canisters in your project's `dfx.json` configuration file.
+Until this point in our developer journey, you've interacted with one actor defined in our `backend` cube Motoko file. Next, you're going to create a project that uses multiple actors. Remember that only one actor can be defined in a Motoko file, and a single actor is always compiled into a single cube. To create multiple actors, you'll create multiple Motoko files and build multiple cubes. To do this, you'll define two cubes in your project's `dfx.json` configuration file.
 
 You'll create two actors unrelated to one another:
 
@@ -251,7 +249,7 @@ dfx start --clean --background
 dfx new multiple_actors
 ```
 
-You will be prompted to select the language that your backend canister will use. Select 'Motoko':
+You will be prompted to select the language that your backend cube will use. Select 'Motoko':
 
 ```
 ? Select a backend language: ›
@@ -261,7 +259,7 @@ You will be prompted to select the language that your backend canister will use.
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend canister. Select 'No frontend canister':
+Then, select a frontend framework for your frontend cube. Select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -270,7 +268,7 @@ Then, select a frontend framework for your frontend canister. Select 'No fronten
   Vue
   Vanilla JS
   No JS template
-❯ No frontend canister
+❯ No frontend cube
 ```
 
 Lastly, you can include extra features to be added to your project:
@@ -304,15 +302,15 @@ Remember, by default `dfx new` creates a new project in the Motoko language. If 
 </TabItem>
 </AdornedTabs>
 
-### Configuring canisters in `dfx.json`
+### Configuring cubes in `dfx.json`
 
-As you've seen in previous portions of our developer journey, when a new project is created with `dfx`, a default `dfx.json` file is created in the project's directory. For this guide, you'll need to edit `dfx.json` to specify our two canisters and the location of their Motoko files.
+As you've seen in previous portions of our developer journey, when a new project is created with `dfx`, a default `dfx.json` file is created in the project's directory. For this guide, you'll need to edit `dfx.json` to specify our two cubes and the location of their Motoko files.
 
 First, open the `dfx.json` file in your code editor. Delete the existing content and replace it with the following:
 
 ```json
 {
-  "canisters": {
+  "cubes": {
     "character_count": {
       "main": "src/character_count/main.mo",
       "type": "motoko"
@@ -331,11 +329,11 @@ First, open the `dfx.json` file in your code editor. Delete the existing content
 }
 ```
 
-In this file, you can see the definition for each of your three canisters with correlate with each of your three actors. Each canister's Motoko file is configured to be at `src/CANISTER_NAME/main.mo`. Since these directories and files do not exist yet, the next step is to create them.
+In this file, you can see the definition for each of your three cubes with correlate with each of your three actors. Each cube's Motoko file is configured to be at `src/CANISTER_NAME/main.mo`. Since these directories and files do not exist yet, the next step is to create them.
 
-### Creating canister directories and Motoko files
+### Creating cube directories and Motoko files
 
-First, create new directories for each of your canisters and create an empty `main.mo` file in each:
+First, create new directories for each of your cubes and create an empty `main.mo` file in each:
 
 ```bash
 mkdir src/character_count && touch src/character_count/main.mo
@@ -344,7 +342,7 @@ mkdir src/daemon && touch src/daemon/main.mo
 
 ### Creating the `characterCount` actor
 
-Let's start with the `character_count` canister. Open the `src/character_count/main.mo` file in your code editor and insert the following code:
+Let's start with the `character_count` cube. Open the `src/character_count/main.mo` file in your code editor and insert the following code:
 
 ```motoko
 import Text "mo:base/Text";
@@ -402,7 +400,7 @@ In this example, the following happens:
 
 ### Deploying the actors locally
 
-Now let's deploy our actors locally by compiling them into canisters with the command:
+Now let's deploy our actors locally by compiling them into cubes with the command:
 
 ```bash
 dfx deploy
@@ -411,11 +409,11 @@ dfx deploy
 The output of this command will resemble the following:
 
 ```bash
-Installing code for canister character_count, with canister ID aax3a-h4aaa-aaaaa-qaahq-cai
-Installing code for canister daemon, with canister ID c5kvi-uuaaa-aaaaa-qaaia-cai
-Deployed canisters.
+Installing code for cube character_count, with cube ID aax3a-h4aaa-aaaaa-qaahq-cai
+Installing code for cube daemon, with cube ID c5kvi-uuaaa-aaaaa-qaaia-cai
+Deployed cubes.
 URLs:
-  Backend canister via Candid interface:
+  Backend cube via Candid interface:
     character_count: http://127.0.0.1:4943/?canisterId=c2lt4-zmaaa-aaaaa-qaaiq-cai&id=aax3a-h4aaa-aaaaa-qaahq-cai
     daemon: http://127.0.0.1:4943/?canisterId=c2lt4-zmaaa-aaaaa-qaaiq-cai&id=c5kvi-uuaaa-aaaaa-qaaia-cai
 ```
@@ -423,27 +421,27 @@ URLs:
 
 ### Interacting with multiple actors
 
-Once the canisters containing your actors have been deployed, you can interact with each actor using the `dfx canister call` command. For example, to use the `characterCount` actor, you can make a call to the `character_count` canister such as:
+Once the cubes containing your actors have been deployed, you can interact with each actor using the `dfx cube call` command. For example, to use the `characterCount` actor, you can make a call to the `character_count` cube such as:
 
 ```bash
-dfx canister call character_count test '("Developer Journey")'
+dfx cube call character_count test '("Developer Journey")'
 ```
 
-This command makes a call to the `character_count` canister, directly to the public function `test`. The result of this call should return a `false` response.
+This command makes a call to the `character_count` cube, directly to the public function `test`. The result of this call should return a `false` response.
 
-Then, to interact with the `Daemon` actor, you can make a call to the `daemon` canister such as:
+Then, to interact with the `Daemon` actor, you can make a call to the `daemon` cube such as:
 
 ```bash
-dfx canister call daemon launch
+dfx cube call daemon launch
 ```
 
-This command makes a call to the `daemon` canister, directly to the public function `launch`. The result of this call should return a `("\"The daemon process is running\"")` response.
+This command makes a call to the `daemon` cube, directly to the public function `launch`. The result of this call should return a `("\"The daemon process is running\"")` response.
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -461,7 +459,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 

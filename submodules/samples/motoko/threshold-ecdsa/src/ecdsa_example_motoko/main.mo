@@ -7,8 +7,8 @@ import Hex "./utils/Hex";
 import SHA256 "./utils/SHA256";
 
 actor {
-  // Only the ecdsa methods in the IC management canister is required here.
-  type IC = actor {
+  // Only the ecdsa methods in the BIG management canister is required here.
+  type BIG = actor {
     ecdsa_public_key : ({
       canister_id : ?Principal;
       derivation_path : [Blob];
@@ -21,7 +21,7 @@ actor {
     }) -> async ({ signature : Blob });
   };
 
-  let ic : IC = actor("aaaaa-aa");
+  let ic : BIG = actor("aaaaa-aa");
 
   public shared (msg) func public_key() : async { #Ok : { public_key_hex: Text }; #Err : Text } {
     let caller = Principal.toBlob(msg.caller);

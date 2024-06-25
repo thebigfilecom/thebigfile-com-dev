@@ -48,9 +48,9 @@ actor {
 //This method sends a POST request to a URL with a free API we can test.
   public func send_http_post_request() : async Text {
 
-    //1. DECLARE IC MANAGEMENT CANISTER
+    //1. DECLARE BIG MANAGEMENT CANISTER
     //We need this so we can use it to make the HTTP request
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //2. SETUP ARGUMENTS FOR HTTP GET request
 
@@ -98,15 +98,15 @@ actor {
 
     //3. ADD CYCLES TO PAY FOR HTTP REQUEST
 
-    //IC management canister will make the HTTP request so it needs cycles
-    //See: https://internetcomputer.org/docs/current/motoko/main/cycles
+    //BIG management canister will make the HTTP request so it needs cycles
+    //See: https://thebigfile.com/docs/current/motoko/main/cycles
     
     //The way Cycles.add() works is that it adds those cycles to the next asynchronous call
-    //See: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-http_request
+    //See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
     Cycles.add(230_850_258_000);
     
     //4. MAKE HTTPS REQUEST AND WAIT FOR RESPONSE
-    //Since the cycles were added above, we can just call the IC management canister with HTTPS outcalls below
+    //Since the cycles were added above, we can just call the BIG management canister with HTTPS outcalls below
     let http_response : Types.HttpResponsePayload = await ic.http_request(http_request);
     
     //5. DECODE THE RESPONSE

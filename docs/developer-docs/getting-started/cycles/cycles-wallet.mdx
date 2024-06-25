@@ -90,9 +90,9 @@ If you are doing local development, your local cycles wallet is created when you
 
 If you are deploying on the BigFile mainnet, you typically create your cycles wallet by converting BIG tokens to cycles, transferring the cycles to a new cube principal, and updating the cube with the default cycles wallet WebAssembly module (Wasm).
 
-There are dapps that can help you convert ICP to cycles and create a new cycles wallet, e.g., [NNS dapp](/docs/current/developer-docs/daos/nns/nns-app-quickstart#_deploy_a_canister_with_cycles).
+There are dapps that can help you convert BIG to cycles and create a new cycles wallet, e.g., [NNS dapp](/docs/current/developer-docs/daos/nns/nns-app-quickstart#_deploy_a_canister_with_cycles).
 
-- #### Step 1:  Create a new canister with cycles by transferring ICP tokens from your ledger account. You can do so by running a command similar to the following:
+- #### Step 1:  Create a new canister with cycles by transferring BIG tokens from your ledger account. You can do so by running a command similar to the following:
 ```
 dfx ledger --network ic create-canister <principal-identifier> --amount <big-tokens>
 ```
@@ -117,7 +117,7 @@ dfx identity --network ic deploy-wallet gastn-uqaaa-aaaae-aaafq-cai
 ```
 This command displays output similar to the following:
 ```
-Creating a wallet canister on ICP.
+Creating a wallet canister on BIG.
 The wallet canister on the "ic" network for user "default" is "gastn-uqaaa-aaaae-aaafq-cai"
 ```
 ## Listing wallets

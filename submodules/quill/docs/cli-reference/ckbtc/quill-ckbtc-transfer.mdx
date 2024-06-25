@@ -54,7 +54,7 @@ This will produce a response like:
 (variant { Ok = 5_581_035 : nat })
 ```
 
-This refers to the block index, also known as block height, at which the transaction took place; you can look up this transaction on the [IC dashboard]. 
+This refers to the block index, also known as block height, at which the transaction took place; you can look up this transaction on the [BIG dashboard]. 
 
 ## Remarks
 
@@ -62,4 +62,4 @@ Note that the returned index is the index for the ckBTC ledger, *not* an index f
 
 As this is an update call, it will not actually make the request, but rather generate a signed and packaged request that can be sent from anywhere. You can use the `--qr` flag to display it as a QR code, or if you are not working with an air-gapped machine, you can pipe it to `quill send`.
 
-[IC dashboard]: https://dashboard.internetcomputer.org/bitcoin/transactions
+[BIG dashboard]: https://dashboard.internetcomputer.org/bitcoin/transactions

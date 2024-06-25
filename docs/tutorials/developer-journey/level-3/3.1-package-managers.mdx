@@ -8,8 +8,6 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KBMLOor1ink?si=ea3FtVLtkHUKL_y7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Overview
 
 [Mops](https://mops.one) and [Vessel](https://github.com/dfinity/vessel) are package managers for Motoko. In this guide, you'll explore how to download and install Mops and Vessel, then how to import and use different libraries that have been downloaded through a package manager.
@@ -22,7 +20,7 @@ Package managers help simplify things such as update management, since they prov
 
 ## Installing Mops
 
-Mops utilizes a fully on-chain package registry. To install Mops, first be sure to have set up your developer environment and installed the IC SDK and Node.js, as described in the previous module, [0.3: Developer environment setup](/docs/current/tutorials/developer-journey/level-0/dev-env). Mops is supported in `dfx` versions `0.10.0` and higher.
+Mops utilizes a fully on-chain package registry. To install Mops, first be sure to have set up your developer environment and installed the BIG SDK and Node.js, as described in the previous module, [0.3: Developer environment setup](/docs/current/tutorials/developer-journey/level-0/dev-env). Mops is supported in `dfx` versions `0.10.0` and higher.
 
 Then, to install Mops, run the command:
 
@@ -73,7 +71,7 @@ dfx start --clean --background
 dfx new mops_example
 ```
 
-You will be prompted to select the language that your backend canister will use. Select 'Motoko':
+You will be prompted to select the language that your backend cube will use. Select 'Motoko':
 
 ```
 ? Select a backend language: ›
@@ -83,7 +81,7 @@ You will be prompted to select the language that your backend canister will use.
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend canister. Select 'No frontend canister':
+Then, select a frontend framework for your frontend cube. Select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -92,7 +90,7 @@ Then, select a frontend framework for your frontend canister. Select 'No fronten
   Vue
   Vanilla JS
   No JS template
-❯ No frontend canister
+❯ No frontend cube
 ```
 
 Lastly, you can include extra features to be added to your project:
@@ -232,9 +230,9 @@ actor characterCount {
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -252,7 +250,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 

@@ -15,7 +15,7 @@ import Types "Types";
 actor {
 
 //This method sends a GET request to a URL with a free API we can test.
-//This method returns Coinbase data on the exchange rate between USD and ICP 
+//This method returns Coinbase data on the exchange rate between USD and BIG 
 //for a certain day.
 //The API response looks like this:
 //  [
@@ -25,7 +25,7 @@ actor {
 //         5.718, <-- highest price during range
 //         5.714, <-- price at open
 //         5.714, <-- price at close
-//         243.5678 <-- volume of ICP traded
+//         243.5678 <-- volume of BIG traded
 //     ],
 // ]
 
@@ -54,9 +54,9 @@ actor {
   
   public func get_icp_usd_exchange() : async Text {
 
-    //1. DECLARE IC MANAGEMENT CANISTER
+    //1. DECLARE BIG MANAGEMENT CANISTER
     //We need this so we can use it to make the HTTP request
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.BIG = actor ("aaaaa-aa");
 
     //2. SETUP ARGUMENTS FOR HTTP GET request
 
@@ -65,7 +65,7 @@ actor {
     let start_timestamp : Types.Timestamp = 1682978460; //May 1, 2023 22:01:00 GMT
     let end_timestamp : Types.Timestamp = 1682978520;//May 1, 2023 22:02:00 GMT
     let host : Text = "api.pro.coinbase.com";
-    let url = "https://" # host # "/products/ICP-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(start_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
+    let url = "https://" # host # "/products/BIG-USD/candles?start=" # Nat64.toText(start_timestamp) # "&end=" # Nat64.toText(start_timestamp) # "&granularity=" # Nat64.toText(ONE_MINUTE);
 
     // 2.2 prepare headers for the system http_request call
     let request_headers = [
@@ -91,17 +91,17 @@ actor {
 
     //3. ADD CYCLES TO PAY FOR HTTP REQUEST
 
-    //The IC specification spec says, "Cycles to pay for the call must be explicitly transferred with the call"
-    //IC management canister will make the HTTP request so it needs cycles
-    //See: https://internetcomputer.org/docs/current/motoko/main/cycles
+    //The BIG specification spec says, "Cycles to pay for the call must be explicitly transferred with the call"
+    //BIG management canister will make the HTTP request so it needs cycles
+    //See: https://thebigfile.com/docs/current/motoko/main/cycles
     
     //The way Cycles.add() works is that it adds those cycles to the next asynchronous call
     //"Function add(amount) indicates the additional amount of cycles to be transferred in the next remote call"
-    //See: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-http_request
+    //See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
     Cycles.add(230_949_972_000);
     
     //4. MAKE HTTPS REQUEST AND WAIT FOR RESPONSE
-    //Since the cycles were added above, we can just call the IC management canister with HTTPS outcalls below
+    //Since the cycles were added above, we can just call the BIG management canister with HTTPS outcalls below
     let http_response : Types.HttpResponsePayload = await ic.http_request(http_request);
     
     //5. DECODE THE RESPONSE

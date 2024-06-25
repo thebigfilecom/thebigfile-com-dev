@@ -15,7 +15,7 @@ This document contains information regarding security best practices for develop
 
 ## Authentication
 
-### Use a well-audited authentication service and client side ICP libraries
+### Use a well-audited authentication service and client side BIG libraries
 
 #### Security concern
 
@@ -25,7 +25,7 @@ Implementing user authentication and canister calls yourself in your web app is 
 
 -   Consider using e.g. [Internet Identity](https://github.com/thebigfilecom/big-wallet) for authentication, use [agent-js](https://github.com/dfinity/agent-js) for making canister calls, and the [auth-client](https://github.com/dfinity/agent-js/tree/main/packages/auth-client) for interacting with internet identity from your dapp.
 
--   It is of course also an option to consider alternative authentication frameworks on ICP for authentication.
+-   It is of course also an option to consider alternative authentication frameworks on BIG for authentication.
 
 ### Set an appropriate session timeout
 
@@ -49,9 +49,9 @@ The [auth-client](https://github.com/dfinity/agent-js/tree/main/packages/auth-cl
 
 Never use `agent.fetchRootKey()` in production builds, only in test builds. Not calling this method will result in the hard coded root subnet public key of the mainnet being used for signature verification, which is the desired behavior in production.
 
-## Nonspecific to the Internet Computer
+## Nonspecific to the BigFile
 
-The best practices in this section are very general and not specific to the Internet Computer. This list is by no means complete and only lists a few very specific concerns that have led to issues in the past.
+The best practices in this section are very general and not specific to the BigFile. This list is by no means complete and only lists a few very specific concerns that have led to issues in the past.
 
 ### Don’t load JavaScript (and other assets) from untrusted domains
 

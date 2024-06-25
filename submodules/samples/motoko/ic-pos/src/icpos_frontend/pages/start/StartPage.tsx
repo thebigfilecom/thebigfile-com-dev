@@ -27,7 +27,7 @@ export default function StartPage(): ReactNode {
           <div className="flex items-center justify-center w-full p-10">
             <CkBTC />
           </div>
-          <div className="text-4xl font-bold">IC-POS </div>
+          <div className="text-4xl font-bold">BIG-POS </div>
           <div className="text-center">
             Setup a simple store front to accept ckBTC payments on the Internet
             Computer. Sign in with Internet Identity to get started or{" "}

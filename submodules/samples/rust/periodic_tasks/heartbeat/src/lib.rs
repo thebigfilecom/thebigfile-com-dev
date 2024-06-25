@@ -69,7 +69,7 @@ fn heartbeat() {
         if *last_periodic_task_time.borrow() + Duration::from_secs(min_interval_secs) < now {
             // Note, the heartbeat code and the periodic task are executed
             // in the same context. If the periodic task fails, all the
-            // changes will be reverted by the IC, i.e. the `LAST_PERIODIC_TASK_TIME`
+            // changes will be reverted by the BIG, i.e. the `LAST_PERIODIC_TASK_TIME`
             // variable wont be updated.
             //
             // To isolate the execution contexts of the scheduling logic and

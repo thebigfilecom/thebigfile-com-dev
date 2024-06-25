@@ -17,11 +17,11 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 When developing on BigFile, there are two primary tools used: `dfx`, a CLI tool used
 to create, deploy, and manage Smart contract, and
 a **Cube development kit** (CDK) which provides an environment for writing
-canister code in different programming languages while supporting ICP features.
+canister code in different programming languages while supporting BIG features.
 
 Currently supported CDKs include:
 
-- [Motoko](/docs/current/motoko/main/getting-started/motoko-introduction): ICP's native programming language.
+- [Motoko](/docs/current/motoko/main/getting-started/motoko-introduction): BIG's native programming language.
 
 - [Rust CDK](https://github.com/dfinity/cdk-rs).
 
@@ -46,7 +46,7 @@ Links to available Codespaces and Gitpod examples can be found in the
 
 ## Installing `dfx`
 
-`dfx` is part of the [IC SDK](https://github.com/dfinity/sdk).
+`dfx` is part of the [BIG SDK](https://github.com/dfinity/sdk).
 
 `dfx` is natively supported on Linux or macOS 12.\* Monterey or later.
 
@@ -63,10 +63,10 @@ You can download and install the latest version of the
 
 <AdornedTabs>
   <TabItem value="apple" label="Install on Mac/Linux" default={true}>
-    To install the IC SDK, run
+    To install the BIG SDK, run
 
     ```bash
-    sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+    sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
     ```
 
     If you are using a machine running Apple silicon, you will need to have [Rosetta](https://support.apple.com/en-us/HT211861) installed. You can install Rosetta by running `softwareupdate --install-rosetta` in your terminal.
@@ -74,7 +74,7 @@ You can download and install the latest version of the
   </TabItem>
 
   <TabItem value="windows" label="Install on Windows">
-    There is no native support for <code>dfx</code> on Windows. However, you can develop ICP canisters on Windows using a Docker container or by installing the Windows Subsystem for Linux (WSL).
+    There is no native support for <code>dfx</code> on Windows. However, you can develop BIG canisters on Windows using a Docker container or by installing the Windows Subsystem for Linux (WSL).
 
     ## Using Docker
 
@@ -82,7 +82,7 @@ You can download and install the latest version of the
 
     To use Docker, first [install Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-    Open the Docker Desktop application to start the Docker Daemon. Then, open a command line window and pull the DFINITY ICP developer environment Docker image:
+    Open the Docker Desktop application to start the Docker Daemon. Then, open a command line window and pull the DFINITY BIG developer environment Docker image:
 
     ```
     docker pull ghcr.io/dfinity/icp-dev-env:latest
@@ -161,7 +161,7 @@ You can download and install the latest version of the
 
     Once you have WSL installed, you can install <code>dfx</code> by running:
     <CodeBlock language="bash">
-      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
     </CodeBlock>
 
     ## Troubleshooting
@@ -320,7 +320,7 @@ version than you have installed locally), `dfx` will report an error.
 ## Building from source
 
 If you would like to compile `dfx` by yourself, head over to the
-[IC SDK repo](https://github.com/dfinity/sdk). The README contains the
+[BIG SDK repo](https://github.com/dfinity/sdk). The README contains the
 instructions on how you can build it on your own.
 
 ### Uninstalling `dfx`
@@ -340,7 +340,7 @@ If you are uninstalling because you want to immediately reinstall a clean
 version of `dfx`, you can run the following command:
 
 ```bash
-~/.cache/dfinity/uninstall.sh && sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+~/.cache/dfinity/uninstall.sh && sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 ```
 
 ## Installing a CDK
@@ -452,7 +452,7 @@ icpp install-wasi-sdk
 - #### Step 3: Install the latest version of `dfx`:
 
 ```
-sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 ## Next steps

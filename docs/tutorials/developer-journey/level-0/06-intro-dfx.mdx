@@ -9,11 +9,10 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Beginner", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/J5rhdzjuq6k?si=3o1NdIWr0TeNYSkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Overview
 
-`dfx` is a command line utility that is used to interact with the BIG SDK. It is the primary tool that is used for creating, managing, and deploying dapps onto the Internet Computer. 
+`dfx` is a command line utility that is used to interact with the BIG SDK. It is the primary tool that is used for creating, managing, and deploying dapps onto the BigFile. 
 
 The `dfx` parent command has several flags and subcommands that can be used to perform a wide array of operations. First, you'll take a look at basic usage of the command, then you'll get started creating your first project using dfx. 
 
@@ -29,19 +28,19 @@ dfx [subcommand] [flag]
 
 The following is a list of the essential `dfx` subcommands that you'll be using throughout the developer journey series. For the full list of all possible subcommands, check out the [dfx reference documentation](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-parent).
 
-- `build`: Used to build the canister output from the project's source code. 
-- `canister`: Used to manage deployed canisters.
+- `build`: Used to build the cube output from the project's source code. 
+- `canister`: Used to manage deployed cubes.
 - `cycles`: Used to manage the cycles balance for your identity.
-- `deploy`: Deploys one or all canisters from the project's source code. By default, all canisters are deployed.
+- `deploy`: Deploys one or all cubes from the project's source code. By default, all cubes are deployed.
 - `help`: Returns usage information for a specific subcommand.	
 - `identity`: Used to create and manage identities. 
 - `info`: Used to display information, such as version or port values. 
-- `ledger`: Used to interact with accounts within the ledger canister. 
+- `ledger`: Used to interact with accounts within the ledger cube. 
 - `new`: Used to create a new project. By default, creates a Motoko project.
-- `ping`: Used to test network connectivity to the mainnet or the local canister execution environment. 
+- `ping`: Used to test network connectivity to the mainnet or the local cube execution environment. 
 - `quickstart`: Used to perform an initial one-time identity and wallet setup. 
-- `start`: Used to start the local canister execution environment for the current project.
-- `stop`: Used to stop the local canister execution environment.
+- `start`: Used to start the local cube execution environment for the current project.
+- `stop`: Used to stop the local cube execution environment.
 - `upgrade`: Used to upgrade the version of dfx installed.	
 
 ### Flags
@@ -71,12 +70,12 @@ If there is a specific release of `dfx` you'd like to use, you can set the `DFX_
 To set the `DFX_VERSION` variable and install a specific version of `dfx`, run the command:
 
 ```bash
-DFX_VERSION=0.14.1 sh -ci "$(curl -sSL https://internetcomputer.org/install.sh)"
+DFX_VERSION=0.14.1 sh -ci "$(curl -sSL https://thebigfile.com/install.sh)"
 ```
 
 ## Creating a new project with dfx
 
-All dapps on ICP start off as **projects**. Projects are created using the `dfx` command and subcommands. 
+All dapps on BIG start off as **projects**. Projects are created using the `dfx` command and subcommands. 
 
 To get started, you'll use the default sample app to demonstrate how to create a project and explore the default project structure that is generated when a new project is created. 
 
@@ -178,17 +177,17 @@ To review the default configuration file for the project, open the `dfx.json` fi
 
 Let's explore these settings a bit further:
 
-- There are two canisters defined in this file; `hello_world_frontend` and `hello_world_backend`. 
-- The `hello_world_backend` canister has a `main` attribute which specifies the file path of the program's core file, `main.mo`.
-- The `hello_world_backend` canister has a `type` of 'motoko', which specifies the programming language. If the canister was written in Rust, this value would read 'rust'. 
-- The `hello_world_frontend` canister has a dependency of the `hello_world_backend` canister, meaning it relies on the backend canister to be deployed and running for it to be deployed and ran. 
-- The `hello_world_frontend` canister has a frontend endpoint of `src/hello_world_frontend/src/index.html`, which specifies the primary frontend asset. 
-- Additional assets for the `hello_world_frontend` canister are specified in the `source` configuration. 
-- Lastly, the `hello_world_frontend` canister has a `type` of 'assets', configuring it as a frontend asset canister. 
+- There are two cubes defined in this file; `hello_world_frontend` and `hello_world_backend`. 
+- The `hello_world_backend` cube has a `main` attribute which specifies the file path of the program's core file, `main.mo`.
+- The `hello_world_backend` cube has a `type` of 'motoko', which specifies the programming language. If the cube was written in Rust, this value would read 'rust'. 
+- The `hello_world_frontend` cube has a dependency of the `hello_world_backend` cube, meaning it relies on the backend cube to be deployed and running for it to be deployed and ran. 
+- The `hello_world_frontend` cube has a frontend endpoint of `src/hello_world_frontend/src/index.html`, which specifies the primary frontend asset. 
+- Additional assets for the `hello_world_frontend` cube are specified in the `source` configuration. 
+- Lastly, the `hello_world_frontend` cube has a `type` of 'assets', configuring it as a frontend asset cube. 
 
 ## Reviewing the default program code
 
-Now that you've explored the default project structure, let's take a look at the default program code located in the `main.mo` file. This is located in the `src/hello_world_backend` directory. The developer journey will cover frontend development and the default files located in the frontend canister directory in a later tutorial. 
+Now that you've explored the default project structure, let's take a look at the default program code located in the `main.mo` file. This is located in the `src/hello_world_backend` directory. The developer journey will cover frontend development and the default files located in the frontend cube directory in a later tutorial. 
 
 New Motoko projects will always include a default, template `main.mo` file. To take a look at the file's default contents, open the `src/hello_world_backend/main.mo` file in a code or text editor. The code will resemble the following:
 
@@ -211,27 +210,13 @@ You'll explore actor objects, classes, and asynchronous messages in a future tut
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat. 
+- [Developer Discord community](https://discord.gg/ju2F5FeV), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat. 
 
-- [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
-- [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
 
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
-
-- [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
-
-- [Motoko developer working group](https://www.google.com/calendar/event?eid=ZWVnb2luaHU0ZjduMTNpZHI3MWJkcWVwNWdfMjAyMzEwMTJUMTUwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
-
-- [Upcoming events and conferences](https://dfinity.org/events-and-news/).
-
-- [Upcoming hackathons](https://dfinity.org/hackathons/).
-
-- [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
-
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 

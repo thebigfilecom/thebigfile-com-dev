@@ -16,8 +16,8 @@ Cubes pay for consumed resources by burning cycles. These resources include stor
    - [Local development](#local-development)
    - [Mainnet development](#mainnet-development)
 - [Units and fiat value](#units-and-fiat-value)
-- [The ICP reverse gas model](#the-icp-reverse-gas-model)
-    - [How do ICP costs compare to the EVM gas model?](#how-do-icp-costs-compare-to-the-evm-gas-model)
+- [The BIG reverse gas model](#the-icp-reverse-gas-model)
+    - [How do BIG costs compare to the EVM gas model?](#how-do-icp-costs-compare-to-the-evm-gas-model)
 - [Canister calls](#canister-calls)
     - [Canister creation](#canister-creation)
     - [Messaging](#messaging)
@@ -59,19 +59,19 @@ The following table shows units of cycles and the respective fiat values:
 
 ## The reverse gas model
 
-ICP charges the cube smart contract for the resources it consumes. This allows developers to provide a smoother user experience, as end users are free from tedious tasks such as signing and approving every transaction they perform. This cost model is known as ICP's 'reverse gas model'.
+BIG charges the cube smart contract for the resources it consumes. This allows developers to provide a smoother user experience, as end users are free from tedious tasks such as signing and approving every transaction they perform. This cost model is known as BIG's 'reverse gas model'.
 
 :::info
-ICP does not use the term 'gas', it uses the term 'cycles'.
+BIG does not use the term 'gas', it uses the term 'cycles'.
 :::
 
 You can learn more about the [reverse gas model](https://thebigfile.com/capabilities/reverse-gas).
 
-One downside of the ICP reverse gas model is that it requires prerequisite steps and ongoing maintenance for developers. Cubes must have their cycles balances maintained and regularly topped up as they continuously use resources. The cube will be removed from the network if it runs out of cycles. However, a [freezing threshold](/docs/current/tutorials/developer-journey/level-1/1.6-managing-canisters#setting-the-canisters-freezing-threshold) can be set that pauses a cube's executions if the cycles amount is expected to fall below a certain amount. There are several community tools that have been developed to automate managing a cube's cycles, such as [CycleOps](https://cycleops.dev/).
+One downside of the BIG reverse gas model is that it requires prerequisite steps and ongoing maintenance for developers. Cubes must have their cycles balances maintained and regularly topped up as they continuously use resources. The cube will be removed from the network if it runs out of cycles. However, a [freezing threshold](/docs/current/tutorials/developer-journey/level-1/1.6-managing-cubes#setting-the-cubes-freezing-threshold) can be set that pauses a cube's executions if the cycles amount is expected to fall below a certain amount. There are several community tools that have been developed to automate managing a cube's cycles, such as [CycleOps](https://cycleops.dev/).
 
-Learn how to query a [cube's cycles balance](/docs/current/tutorials/developer-journey/level-1/1.6-managing-canisters#checking-the-cycles-balance-of-a-canister). 
+Learn how to query a [cube's cycles balance](/docs/current/tutorials/developer-journey/level-1/1.6-managing-cubes#checking-the-cycles-balance-of-a-cube). 
 
-Learn how to [top up a cube](/docs/current/tutorials/developer-journey/level-1/1.6-managing-canisters#topping-up-a-canisters-cycles-balance).
+Learn how to [top up a cube](/docs/current/tutorials/developer-journey/level-1/1.6-managing-cubes#topping-up-a-cubes-cycles-balance).
 
 
 ## Cube operations and resources
@@ -171,9 +171,9 @@ The table below details the cost of compute, storage transmissions and cube call
 | GiB storage per second | For storing a GiB of data per second. | Canister with storage | 127K | $0.000000169749 | 127K / 13 * 34 | $0.000000443960 |
 | | | | | | | | |
 | _HTTPS outcalls_ | | | | | | | |
-| HTTPS outcall (per call) | For sending an HTTPS outcall to a server outside the IC, per message (`http_request`). | Sending canister | 49_140_000 | $0.000065681015 | 171_360_000 | $0.000229041490 |
-| HTTPS outcall request message size (per byte) | For sending an HTTPS outcall to a server outside the IC, per request byte (`http_request`). | Sending canister | 5_200 | $0.000000006950 | 13_600 | $0.000000018178 |
-| HTTPS outcall response message size (per byte) | For sending an HTTPS outcall to a server outside the IC, per reserved response byte (`http_request`). | Sending canister | 10_400 | $0.000000013901 | 27_200 | $0.000000036356 |
+| HTTPS outcall (per call) | For sending an HTTPS outcall to a server outside the BIG, per message (`http_request`). | Sending canister | 49_140_000 | $0.000065681015 | 171_360_000 | $0.000229041490 |
+| HTTPS outcall request message size (per byte) | For sending an HTTPS outcall to a server outside the BIG, per request byte (`http_request`). | Sending canister | 5_200 | $0.000000006950 | 13_600 | $0.000000018178 |
+| HTTPS outcall response message size (per byte) | For sending an HTTPS outcall to a server outside the BIG, per reserved response byte (`http_request`). | Sending canister | 10_400 | $0.000000013901 | 27_200 | $0.000000036356 |
 
 The following table shows the calculated storage cost per GiB for a 30-day month:
 
@@ -190,7 +190,7 @@ Monitoring cycles usage
    - [Motoko cycles management library](https://github.com/CycleOperators/cycles-manager).
 
 Getting cycles back from a cube
-   - To withdraw cycles from a cube, the [cube must be deleted](/docs/current/tutorials/developer-journey/level-1/1.6-managing-canisters#getting-cycles-back-from-a-canister).
+   - To withdraw cycles from a cube, the [cube must be deleted](/docs/current/tutorials/developer-journey/level-1/1.6-managing-cubes#getting-cycles-back-from-a-cube).
 
 Topping up cubes
    - [Top up your cubes](/docs/current/developer-docs/production/topping-up-canister).

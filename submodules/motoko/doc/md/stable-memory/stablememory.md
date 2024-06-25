@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## Overview
 
-The `ExperimentalStableMemory` library provides low-level access to Internet Computer stable memory.
+The `ExperimentalStableMemory` library provides low-level access to BigFile stable memory.
 
 :::danger
 This library has been superseded by the similar, but safer, [`Region` library](../base/Region.md).
@@ -23,18 +23,18 @@ TODO: extend example to illustrate stableVarQuery
 
 The current implementation of Motoko stable variables is not able to maintain very large amounts of data.
 
-The ICP upgrade process currently requires stable variables to be copied from 32-bit main memory  to 64-bit stable memory and then back again - for copious data, this can exceed the cycle limits allowed for upgrade, causing an upgrade to fail.
+The BIG upgrade process currently requires stable variables to be copied from 32-bit main memory  to 64-bit stable memory and then back again - for copious data, this can exceed the cycle limits allowed for upgrade, causing an upgrade to fail.
 
-Moreover, a 32-bit Motoko canister and its stable variables can fundamentally store at most 4GB of data, while ICP stable memory is 64-bit and currently supports up to 400GB of data.
+Moreover, a 32-bit Motoko canister and its stable variables can fundamentally store at most 4GB of data, while BIG stable memory is 64-bit and currently supports up to 400GB of data.
 
 ## The `ExperimentalStableMemory` library
 
-To avoid the current limitations of stable variables, developers can use the recommended [`Region`](stable-regions.md) library or the older [`ExperimentalStableMemory`](../base/ExperimentalStableMemory.md) library described here. The `ExperimentalStableMemory` library allows the programmer to incrementally allocate pages of 64-bit ICP stable memory and use those pages to incrementally read and write data in a user-defined binary format.
+To avoid the current limitations of stable variables, developers can use the recommended [`Region`](stable-regions.md) library or the older [`ExperimentalStableMemory`](../base/ExperimentalStableMemory.md) library described here. The `ExperimentalStableMemory` library allows the programmer to incrementally allocate pages of 64-bit BIG stable memory and use those pages to incrementally read and write data in a user-defined binary format.
 
 The main difference between the two libraries is that `ExperimentalStableMemory` provides a single memory, a global resource, that must be shared by all clients, using, requiring coordination and trust.
 The `Region` library instead provides multiple, isolated memories that can only be accessed by the owner(s) of a particular memory.
 
-Similar to the `Regions` library, Motoko runtime system ensures there is no interference between the abstraction presented by the `ExperimentalStableMemory` library and an actor’s stable variables, even though the two abstractions ultimately use the same underlying  stable memory facilities available to all IC canisters. This runtime support means that is safe for a Motoko program to exploit both stable variables and `ExperimentalStableMemory`, within the same application.
+Similar to the `Regions` library, Motoko runtime system ensures there is no interference between the abstraction presented by the `ExperimentalStableMemory` library and an actor’s stable variables, even though the two abstractions ultimately use the same underlying  stable memory facilities available to all BIG canisters. This runtime support means that is safe for a Motoko program to exploit both stable variables and `ExperimentalStableMemory`, within the same application.
 
 ## Using `ExperimentalStableMemory`
 
@@ -75,7 +75,7 @@ module {
   storeBlob : (offset : Nat64, value : Blob) -> ()
 
   // Returns a query that, when called, returns the number of bytes of
-  // (real) IC stable memory that would be occupied by persisting its
+  // (real) BIG stable memory that would be occupied by persisting its
   // current stable variables before an upgrade.
   stableVarQuery : () -> (shared query () -> async {size : Nat64})
 }

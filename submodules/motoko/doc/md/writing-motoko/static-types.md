@@ -10,7 +10,7 @@ Like other modern programming languages, Motoko permits each variable to carry t
 
 Motoko uses the formal property of type safety, also known as type soundness. Each variable in a Motoko program carries an associated type, and this type is known statically before the program executes. Each use of every variable is checked by the compiler to prevent runtime type errors, including `null` reference errors, invalid field access, and the like. In this sense, Motoko types provide a form of trustworthy, **compiler-verified** documentation in the program source code.
 
-To execute, Motoko statically compiles to WebAssembly, a portable binary format that abstracts cleanly over modern computer hardware, and thus permits its execution broadly on the Internet and ICP.
+To execute, Motoko statically compiles to WebAssembly, a portable binary format that abstracts cleanly over modern computer hardware, and thus permits its execution broadly on the Internet and BIG.
 
 This is often summarized with the phrase ["well-typed Motoko programs don’t go wrong"](../getting-started/basic-concepts.md#type-soundness), meaning that the only operations that will be performed on data are those permitted by its static type.
 

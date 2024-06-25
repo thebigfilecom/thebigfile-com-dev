@@ -5,15 +5,15 @@ import Changelog from './_attachments/interface-spec-changelog.md';
 
 ## Introduction
 
-Welcome to *the BigFile*! We speak of "the" BigFile, because although under the hood a large number of physical computers are working together in a blockchain protocol, in the end we have the appearance of a single, shared, secure and world-wide accessible computer. Developers who want to build decentralized applications (or *dapps* for short) that run on the Internet Computer blockchain and end-users who want to use those dapps need to know very little, if anything, about the underlying protocol. However, knowing some details about the interfaces that the Internet Computer exposes can allow interested developers and architects to take fuller advantages of the unique features that the Internet Computer provides.
+Welcome to *the BigFile*! We speak of "the" BigFile, because although under the hood a large number of physical computers are working together in a blockchain protocol, in the end we have the appearance of a single, shared, secure and world-wide accessible computer. Developers who want to build decentralized applications (or *dapps* for short) that run on the BigFile blockchain and end-users who want to use those dapps need to know very little, if anything, about the underlying protocol. However, knowing some details about the interfaces that the BigFile exposes can allow interested developers and architects to take fuller advantages of the unique features that the BigFile provides.
 
 ### Target audience
 
-This document describes this *external* view of the Internet Computer, i.e. the low-level interfaces it provides to dapp developers and users, and what will happen when they use these interfaces.
+This document describes this *external* view of the BigFile, i.e. the low-level interfaces it provides to dapp developers and users, and what will happen when they use these interfaces.
 
 :::note
 
-While this document describes the external interface and behavior of the Internet Computer, it is not intended as end-user or end-developer documentation. Most developers will interact with the Internet Computer through additional tooling like the SDK, Canister Development Kits and Motoko. Please see the [developer docs](https://internetcomputer.org/docs/current/home) for suitable documentation.
+While this document describes the external interface and behavior of the BigFile, it is not intended as end-user or end-developer documentation. Most developers will interact with the BigFile through additional tooling like the SDK, Canister Development Kits and Motoko. Please see the [developer docs](https://thebigfile.com/docs/current/home) for suitable documentation.
 
 :::
 
@@ -21,56 +21,56 @@ The target audience of this document are
 
 -   those who use these low-level interfaces (e.g. implement agents, canister developments kits, emulators, other tooling).
 
--   those who implement these low-level interfaces (e.g. developers of the Internet Computer implementation)
+-   those who implement these low-level interfaces (e.g. developers of the BigFile implementation)
 
--   those who want to understand the intricacies of the Internet Computer's behavior in great detail (e.g. to do a security analysis)
+-   those who want to understand the intricacies of the BigFile's behavior in great detail (e.g. to do a security analysis)
 
 :::note
 
-This document is a rigorous, technically dense reference. It is not an introduction to the Internet Computer, and as such most useful to those who understand the high-level concepts. Please see more high-level documentation first.
+This document is a rigorous, technically dense reference. It is not an introduction to the BigFile, and as such most useful to those who understand the high-level concepts. Please see more high-level documentation first.
 
 :::
 
 ### Scope of this document
 
-If you think of the Internet Computer as a distributed engine that executes WebAssembly-based dapps, then this document describes exclusively the aspect of executing those dapps. To the extent possible, this document will *not* talk about consensus protocols, nodes, subnets, orthogonal persistence or governance.
+If you think of the BigFile as a distributed engine that executes WebAssembly-based dapps, then this document describes exclusively the aspect of executing those dapps. To the extent possible, this document will *not* talk about consensus protocols, nodes, subnets, orthogonal persistence or governance.
 
-This document tries to be implementation agnostic: It would apply just as well to a (hypothetical) compatible reimplementation of the Internet Computer. This implies that this document does not cover interfaces towards those running the Internet Computer (e.g. data center operators, protocol developers, governance users), as topics like node update, monitoring, logging are inherently tied to the actual *implementation* and its architecture.
+This document tries to be implementation agnostic: It would apply just as well to a (hypothetical) compatible reimplementation of the BigFile. This implies that this document does not cover interfaces towards those running the BigFile (e.g. data center operators, protocol developers, governance users), as topics like node update, monitoring, logging are inherently tied to the actual *implementation* and its architecture.
 
-### Overview of the Internet Computer
+### Overview of the BigFile
 
-Dapps on the Internet Computer, or *IC* for short, are implemented as *canister smart contracts*, or *canisters* for short. If you want to build on the Internet Computer as a dapp developer, you first create a *canister module* that contains the WebAssembly code and configuration for your dapp, and deploy it using the [HTTPS interface](#http-interface). You can create canister modules using the Motoko language and the SDK, which is more convenient. If you want to use your own tooling, however, then this document describes [what a canister module looks like](#canister-module-format) and how the [WebAssembly code can interact with the IC](#system-api).
+Dapps on the BigFile, or *BIG* for short, are implemented as *canister smart contracts*, or *canisters* for short. If you want to build on the BigFile as a dapp developer, you first create a *canister module* that contains the WebAssembly code and configuration for your dapp, and deploy it using the [HTTPS interface](#http-interface). You can create canister modules using the Motoko language and the SDK, which is more convenient. If you want to use your own tooling, however, then this document describes [what a canister module looks like](#canister-module-format) and how the [WebAssembly code can interact with the BIG](#system-api).
 
-Once your dapp is running on the Internet Computer, it is a canister smart contract, and users can interact with it. They can use the [HTTPS interface](#http-interface) to interact with the canister according to the [System API](#system-api).
+Once your dapp is running on the BigFile, it is a canister smart contract, and users can interact with it. They can use the [HTTPS interface](#http-interface) to interact with the canister according to the [System API](#system-api).
 
 The user can also use the HTTPS interface to issue read-only queries, which are faster, but cannot change the state of a canister.
 
 ```plantuml
     actor Developer
     actor User
-    participant "Internet Computer" as IC
+    participant "Internet Computer" as BIG
     participant "Canister 1" as Can1
-    Developer -> IC : /submit create canister
+    Developer -> BIG : /submit create canister
     create Can1
-    IC -> Can1 : create
-    Developer <-- IC : canister-id=1
-    Developer -> IC : /submit install module
-    IC -> Can1 : initialize
+    BIG -> Can1 : create
+    Developer <-- BIG : canister-id=1
+    Developer -> BIG : /submit install module
+    BIG -> Can1 : initialize
     |||
-    User -> IC : /submit call "hello"
-    IC -> Can1 : hello
+    User -> BIG : /submit call "hello"
+    BIG -> Can1 : hello
     return "Hello world!"
-    User <-- IC : "Hello World!"
+    User <-- BIG : "Hello World!"
 ```
-**A typical use of the Internet Computer. (This is a simplified view; some of the arrows represent multiple interaction steps or polling.)**
+**A typical use of the BigFile. (This is a simplified view; some of the arrows represent multiple interaction steps or polling.)**
 
-Sections "[HTTPS Interface](#http-interface)" and "[Canister interface (System API)](#system-api)" describe these interfaces, together with a brief description of what they do. Afterwards, you will find a [more formal description](#abstract-behavior) of the Internet Computer that describes its abstract behavior with more rigor.
+Sections "[HTTPS Interface](#http-interface)" and "[Canister interface (System API)](#system-api)" describe these interfaces, together with a brief description of what they do. Afterwards, you will find a [more formal description](#abstract-behavior) of the BigFile that describes its abstract behavior with more rigor.
 
 ### Nomenclature
 
 To get some consistency in this document, we try to use the following terms with precision:
 
-We avoid the term "client", as it could be the client of the Internet Computer or the client inside the distributed network that makes up the Internet Computer. Instead, we use the term *user* to denote the external entity interacting with the Internet Computer, even if in most cases it will be some code (sometimes called "agent") acting on behalf of a (human) user.
+We avoid the term "client", as it could be the client of the BigFile or the client inside the distributed network that makes up the BigFile. Instead, we use the term *user* to denote the external entity interacting with the BigFile, even if in most cases it will be some code (sometimes called "agent") acting on behalf of a (human) user.
 
 The public entry points of canisters are called *methods*. Methods can be declared to be either *update methods* (state mutation is preserved, can call update and query methods of arbitrary canisters), *query methods* (state mutation is discarded, no further calls can be made), or *composite query* methods (state mutation is discarded, can call query and composite query methods of canisters on the same subnet).
 
@@ -83,7 +83,7 @@ Internally, a call or a response is transmitted as a *message* from a *sender* t
 
 WebAssembly *functions* are exported by the WebAssembly module or provided by the System API. These are *invoked* and can either *trap* or *return*, possibly with a return value. Functions, too, have parameters and take arguments.
 
-External *users* interact with the Internet Computer by issuing *requests* on the HTTPS interface. Requests have responses which can either be replies or rejects. Some requests cause internal messages to be created.
+External *users* interact with the BigFile by issuing *requests* on the HTTPS interface. Requests have responses which can either be replies or rejects. Some requests cause internal messages to be created.
 
 Canisters and users are identified by a *principal*, sometimes also called an *id*.
 
@@ -93,7 +93,7 @@ Before going into the details of the four public interfaces described in this do
 
 ### Unspecified constants and limits
 
-This specification may refer to certain constants and limits without specifying their concrete value (yet), i.e. they are implementation defined. Many are resource limits which are relevant only to specify the error-handling behavior of the IC (which, as mentioned above, is also not yet precisely described in this document). This list is not complete.
+This specification may refer to certain constants and limits without specifying their concrete value (yet), i.e. they are implementation defined. Many are resource limits which are relevant only to specify the error-handling behavior of the BIG (which, as mentioned above, is also not yet precisely described in this document). This list is not complete.
 
 -   `MAX_CYCLES_PER_MESSAGE`
 
@@ -101,7 +101,7 @@ This specification may refer to certain constants and limits without specifying 
 
 -   `MAX_CYCLES_PER_RESPONSE`
 
-    Amount of cycles that the IC sets aside when a canister performs a call. This is used to pay for processing the response message, and unused cycles after the execution of the response are refunded. See [Message execution](#rule-message-execution).
+    Amount of cycles that the BIG sets aside when a canister performs a call. This is used to pay for processing the response message, and unused cycles after the execution of the response are refunded. See [Message execution](#rule-message-execution).
 
 -   `MAX_CYCLES_PER_QUERY`
 
@@ -117,7 +117,7 @@ This specification may refer to certain constants and limits without specifying 
 
 -   `DEFAULT_PROVISIONAL_CYCLES_BALANCE`
 
-    Amount of cycles allocated to a new canister by default, if not explicitly specified. See [IC method](#ic-provisional_create_canister_with_cycles).
+    Amount of cycles allocated to a new canister by default, if not explicitly specified. See [BIG method](#ic-provisional_create_canister_with_cycles).
 
 -   `MAX_CALL_DEPTH_COMPOSITE_QUERY`
 
@@ -129,7 +129,7 @@ This specification may refer to certain constants and limits without specifying 
 
 ### Principals {#principal}
 
-Principals are generic identifiers for canisters, users and possibly other concepts in the future. As far as most uses of the IC are concerned they are *opaque* binary blobs with a length between 0 and 29 bytes, and there is intentionally no mechanism to tell canister ids and user ids apart.
+Principals are generic identifiers for canisters, users and possibly other concepts in the future. As far as most uses of the BIG are concerned they are *opaque* binary blobs with a length between 0 and 29 bytes, and there is intentionally no mechanism to tell canister ids and user ids apart.
 
 There is, however, some structure to them to encode specific authentication and authorization behavior.
 
@@ -141,11 +141,11 @@ There are several classes of ids:
 
 1.  *Opaque ids*.
 
-    These are always generated by the IC and have no structure of interest outside of it.
+    These are always generated by the BIG and have no structure of interest outside of it.
 
 :::note
 
-Typically, these end with the byte `0x01`, but users of the IC should not need to care about that.
+Typically, these end with the byte `0x01`, but users of the BIG should not need to care about that.
 
 :::
 
@@ -177,7 +177,7 @@ Derived IDs are currently not explicitly used in this document, but they may be 
 
     These ids can be useful for applications that want to re-use the [Textual representation of principals](#textual-ids) but want to indicate explicitly that the blob does not address any canisters or a user.
 
-When the IC creates a *fresh* id, it never creates a self-authenticating id, reserved id, an anonymous id or an id derived from what could be a canister or user.
+When the BIG creates a *fresh* id, it never creates a self-authenticating id, reserved id, an anonymous id or an id derived from what could be a canister or user.
 
 #### Textual representation of principals {#textual-ids}
 
@@ -239,7 +239,7 @@ A canister can be *empty* (e.g. directly after creation) or *non-empty*. A non-e
 
 -   state (memories, globals etc.)
 
--   possibly further data that is specific to the implementation of the IC (e.g. queues)
+-   possibly further data that is specific to the implementation of the BIG (e.g. queues)
 
 Canisters are empty after creation and uninstallation, and become non-empty through [code installation](#ic-install_code).
 
@@ -247,11 +247,11 @@ If an empty canister receives a response, that response is dropped, as if the ca
 
 #### Canister cycles {#canister-cycles}
 
-The IC relies on *cycles*, a utility token, to manage its resources. A canister pays for the resources it uses from its *cycle balances*. A *cycle\_balance* is stored as 128-bit unsigned integers and operations on them are saturating. In particular, if *cycles* are added to a canister that would bring its main cycle balance beyond 2<sup>128</sup>-1, then the balance will be capped at 2<sup>128</sup>-1 and any additional cycles will be lost.
+The BIG relies on *cycles*, a utility token, to manage its resources. A canister pays for the resources it uses from its *cycle balances*. A *cycle\_balance* is stored as 128-bit unsigned integers and operations on them are saturating. In particular, if *cycles* are added to a canister that would bring its main cycle balance beyond 2<sup>128</sup>-1, then the balance will be capped at 2<sup>128</sup>-1 and any additional cycles will be lost.
 
 When both the main and the reserved cycles balances of a canister fall to zero, the canister is *deallocated*. This has the same effect as
 
--   uninstalling the canister (as described in [IC method](#ic-uninstall_code))
+-   uninstalling the canister (as described in [BIG method](#ic-uninstall_code))
 
 -   setting all resource reservations to zero
 
@@ -259,7 +259,7 @@ Afterwards the canister is empty. It can be reinstalled after topping up its mai
 
 :::note
 
-Once the IC frees the resources of a canister, its id, *cycle* balances, *controllers*, canister *version*, and the total number of canister changes are preserved on the IC for a minimum of 10 years. What happens to the canister after this period is currently unspecified.
+Once the BIG frees the resources of a canister, its id, *cycle* balances, *controllers*, canister *version*, and the total number of canister changes are preserved on the BIG for a minimum of 10 years. What happens to the canister after this period is currently unspecified.
 
 :::
 
@@ -269,9 +269,9 @@ The canister status can be used to control whether the canister is processing ca
 
 -   In status `running`, calls to the canister are processed as normal.
 
--   In status `stopping`, calls to the canister are rejected by the IC with reject code `CANISTER_ERROR` (5), but responses to the canister are processed as normal.
+-   In status `stopping`, calls to the canister are rejected by the BIG with reject code `CANISTER_ERROR` (5), but responses to the canister are processed as normal.
 
--   In status `stopped`, calls to the canister are rejected by the IC with reject code `CANISTER_ERROR` (5), and there are no outstanding responses.
+-   In status `stopped`, calls to the canister are rejected by the BIG with reject code `CANISTER_ERROR` (5), and there are no outstanding responses.
 
 In all cases, calls to the [management canister](#ic-management-canister) are processed, regardless of the state of the managed canister.
 
@@ -279,21 +279,21 @@ The controllers of the canister can initiate transitions between these states us
 
 :::note
 
-This status is orthogonal to whether a canister is empty or not: an empty canister can be in status `running`. Calls to such a canister are still rejected by the IC, but because the canister is empty.
+This status is orthogonal to whether a canister is empty or not: an empty canister can be in status `running`. Calls to such a canister are still rejected by the BIG, but because the canister is empty.
 
 :::
 
 :::note
 
-This status is orthogonal to whether a canister is frozen or not: a frozen canister can be in status `running`. Calls to such a canister are still rejected by the IC, but because the canister is frozen, the returned reject code is `SYS_TRANSIENT`.
+This status is orthogonal to whether a canister is frozen or not: a frozen canister can be in status `running`. Calls to such a canister are still rejected by the BIG, but because the canister is frozen, the returned reject code is `SYS_TRANSIENT`.
 
 :::
 
 ### Signatures {#signatures}
 
-Digital signature schemes are used for authenticating messages in various parts of the IC infrastructure. Signatures are domain separated, which means that every message is prefixed with a byte string that is unique to the purpose of the signature.
+Digital signature schemes are used for authenticating messages in various parts of the BIG infrastructure. Signatures are domain separated, which means that every message is prefixed with a byte string that is unique to the purpose of the signature.
 
-The IC supports multiple signature schemes, with details given in the following subsections. For each scheme, we specify the data encoded in the public key (which is always DER-encoded, and indicates the scheme to use) as well as the form of the signatures (which are opaque blobs for the purposes of the rest of this specification).
+The BIG supports multiple signature schemes, with details given in the following subsections. For each scheme, we specify the data encoded in the public key (which is always DER-encoded, and indicates the scheme to use) as well as the form of the signatures (which are opaque blobs for the purposes of the rest of this specification).
 
 In all cases, the signed *payload* is the concatenation of the domain separator and the message. All uses of signatures in this specification indicate a domain separator, to uniquely identify the purpose of the signature. The domain separators are prefix-free by construction, as their first byte indicates their length.
 
@@ -357,7 +357,7 @@ You can also view the wrapping in [an online ASN.1 JavaScript decoder](https://l
 
 #### Canister signatures {#canister-signatures}
 
-The IC also supports a scheme where a canister can sign a payload by declaring a special "certified variable".
+The BIG also supports a scheme where a canister can sign a payload by declaring a special "certified variable".
 
 This section makes forward references to other concepts in this document, in particular the section [Certification](#certification).
 
@@ -419,7 +419,7 @@ The [Concise Data Definition Language (CDDL)](https://datatracker.ietf.org/doc/h
 
 ## The system state tree {#state-tree}
 
-Parts of the IC state are publicly exposed (e.g. via [Request: Read state](#http-read-state) or [Certified data](#system-api-certified-data)) in a verified way (see [Certification](#certification) for the machinery for certifying). This section describes the content of this system state abstractly.
+Parts of the BIG state are publicly exposed (e.g. via [Request: Read state](#http-read-state) or [Certified data](#system-api-certified-data)) in a verified way (see [Certification](#certification) for the machinery for certifying). This section describes the content of this system state abstractly.
 
 Conceptually, the system state is a tree with labeled children, and values in the leaves. Equivalently, the system state is a mapping from paths (sequences of labels) to values, where the domain is prefix-free.
 
@@ -538,7 +538,7 @@ Users have the ability to learn about the hash of the canister's module, its cur
 
 -   `/canister/<canister_id>/module_hash` (blob):
 
-    If the canister is empty, this path does not exist. If the canister is not empty, it exists and contains the SHA256 hash of the currently installed canister module. Cf. [IC method](#ic-canister_status).
+    If the canister is empty, this path does not exist. If the canister is not empty, it exists and contains the SHA256 hash of the currently installed canister module. Cf. [BIG method](#ic-canister_status).
 
 -   `/canister/<canister_id>/controllers` (blob):
 
@@ -578,21 +578,21 @@ Users interact with the Internet Computer by calling canisters. By the very natu
 
 1.  A user submits a call via the [HTTPS Interface](#http-interface). No useful information is returned in the immediate response (as such information cannot be trustworthy anyways).
 
-2.  For a certain amount of time, the IC behaves as if it does not know about the call.
+2.  For a certain amount of time, the BIG behaves as if it does not know about the call.
 
-3.  The IC asks the targeted canister if it is willing to accept this message and be charged for the expense of processing it. This uses the [Ingress message inspection](#system-api-inspect-message) API for normal calls. For calls to the management canister, the rules in [The IC management canister](#ic-management-canister) apply.
+3.  The BIG asks the targeted canister if it is willing to accept this message and be charged for the expense of processing it. This uses the [Ingress message inspection](#system-api-inspect-message) API for normal calls. For calls to the management canister, the rules in [The BIG management canister](#ic-management-canister) apply.
 
-4.  At some point, the IC may accept the call for processing and set its status to `received`. This indicates that the IC as a whole has received the call and plans on processing it (although it may still not get processed if the IC is under high load). Furthermore, the user should also be able to ask any endpoint about the status of the pending call.
+4.  At some point, the BIG may accept the call for processing and set its status to `received`. This indicates that the BIG as a whole has received the call and plans on processing it (although it may still not get processed if the BIG is under high load). Furthermore, the user should also be able to ask any endpoint about the status of the pending call.
 
 5.  Once it is clear that the call will be acted upon (sufficient resources, call not yet expired), the status changes to `processing`. Now the user has the guarantee that the request will have an effect, e.g. it will reach the target canister.
 
-6.  The IC is processing the call. For some calls this may be atomic, for others this involves multiple internal steps.
+6.  The BIG is processing the call. For some calls this may be atomic, for others this involves multiple internal steps.
 
 7.  Eventually, a response will be produced, and can be retrieved for a certain amount of time. The response is either a `reply`, indicating success, or a `reject`, indicating some form of error.
 
-8.  In the case that the call has been retained for long enough, but the request has not expired yet, the IC can forget the response data and only remember the call as `done`, to prevent a replay attack.
+8.  In the case that the call has been retained for long enough, but the request has not expired yet, the BIG can forget the response data and only remember the call as `done`, to prevent a replay attack.
 
-9.  Once the expiry time is past, the IC can prune the call and its response, and completely forget about it.
+9.  Once the expiry time is past, the BIG can prune the call and its response, and completely forget about it.
 
 This yields the following interaction diagram:
 ```plantuml
@@ -617,21 +617,21 @@ This yields the following interaction diagram:
 
     endif
 ```
-State transitions may be instantaneous and not always externally visible. For example, the state of a request may move from `received` via `processing` to `replied` in one go. Similarly, the IC may not implement the `done` state at all, and keep calls in state `replied`/`rejected` until they are pruned.
+State transitions may be instantaneous and not always externally visible. For example, the state of a request may move from `received` via `processing` to `replied` in one go. Similarly, the BIG may not implement the `done` state at all, and keep calls in state `replied`/`rejected` until they are pruned.
 
-All gray states are *not* explicitly represented in the state of the IC, and are indistinguishable from "call does not exist".
+All gray states are *not* explicitly represented in the state of the BIG, and are indistinguishable from "call does not exist".
 
-The characteristic property of the `received` state is that the call has made it past the (potentially malicious) endpoint *into the state of the IC*. It is now pointless (but harmless) to submit the (identical) call again. Before reaching that state, submitting the identical call to further nodes might be a useful safeguard against a malicious or misbehaving node.
+The characteristic property of the `received` state is that the call has made it past the (potentially malicious) endpoint *into the state of the BIG*. It is now pointless (but harmless) to submit the (identical) call again. Before reaching that state, submitting the identical call to further nodes might be a useful safeguard against a malicious or misbehaving node.
 
 The characteristic property of the `processing` state is that *the initial effect of the call has happened or will happen*. This is best explained by an example: Consider a counter canister. It exports a method `inc` that increases the counter. Assume that the canister is bug free, and is not going to be forcibly removed. A user submits a call to call `inc`. If the user sees request status `processing`, the state change is guaranteed to happen. The user can stop monitoring the status and does not have to retry submitting.
 
-A call may be rejected by the IC or the canister. In either case, there is no guarantee about how much processing of the call has happened.
+A call may be rejected by the BIG or the canister. In either case, there is no guarantee about how much processing of the call has happened.
 
 To avoid replay attacks, the transition from `done` or `received` to `pruned` must happen no earlier than the call's `ingress_expiry` field.
 
 Calls must stay in `replied` or `rejected` long enough for polling users to catch the response.
 
-When asking the IC about the state or call of a request, the user uses the request id (see [Request ids](#request-id)) to read the request status (see [Request status](#state-tree-request-status)) from the state tree (see [Request: Read state](#http-read-state)).
+When asking the BIG about the state or call of a request, the user uses the request id (see [Request ids](#request-id)) to read the request status (see [Request status](#state-tree-request-status)) from the state tree (see [Request: Read state](#http-read-state)).
 
 ### Request: Call {#http-call}
 
@@ -649,9 +649,9 @@ In order to call a canister, the user makes a POST request to `/api/v2/canister/
 
 The HTTP response to this request can have the following responses:
 
--   202 HTTP status with empty body. Implying the request was accepted by the IC for further processing. Users should use [`read_state`](#http-read-state) to determine the status of the call.
+-   202 HTTP status with empty body. Implying the request was accepted by the BIG for further processing. Users should use [`read_state`](#http-read-state) to determine the status of the call.
 
--   200 HTTP status with non-empty body. Implying an execution pre-processing error occurred. The body of the response contains more information about the IC specific error encountered. The body is a CBOR map with the following fields:
+-   200 HTTP status with non-empty body. Implying an execution pre-processing error occurred. The body of the response contains more information about the BIG specific error encountered. The body is a CBOR map with the following fields:
 
     -   `reject_code` (`nat`): The reject code (see [Reject codes](#reject-codes)).
 
@@ -667,7 +667,7 @@ This request type can *also* be used to call a query method (but not a composite
 
 :::note
 
-The functionality exposed via the [The IC management canister](#ic-management-canister) can be used this way.
+The functionality exposed via the [The BIG management canister](#ic-management-canister) can be used this way.
 
 :::
 
@@ -677,7 +677,7 @@ The functionality exposed via the [The IC management canister](#ic-management-ca
 
 Requesting paths with the prefix `/subnet` at `/api/v2/canister/<effective_canister_id>/read_state` might be deprecated in the future. Hence, users might want to point their requests for paths with the prefix `/subnet` to `/api/v2/subnet/<subnet_id>/read_state`.
 
-On the IC mainnet, the root subnet ID `tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe` can be used to retrieve the list of all IC mainnet's subnets by requesting the prefix `/subnet` at `/api/v2/subnet/tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe/read_state`.
+On the BIG mainnet, the root subnet ID `tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe` can be used to retrieve the list of all BIG mainnet's subnets by requesting the prefix `/subnet` at `/api/v2/subnet/tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe/read_state`.
 
 :::
 
@@ -813,7 +813,7 @@ if we include more signatures in a future version of the protocol specification.
 
 :::
 
-The response to a query call contains a list with one signature for the returned response produced by the IC node that evaluated the query call. The signature (whose type is denoted as `node-signature`) is a CBOR (see [CBOR](#cbor)) map with the following fields:
+The response to a query call contains a list with one signature for the returned response produced by the BIG node that evaluated the query call. The signature (whose type is denoted as `node-signature`) is a CBOR (see [CBOR](#cbor)) map with the following fields:
 
 -   `timestamp` (`nat`): the timestamp of the signature.
 
@@ -849,7 +849,7 @@ where `RootSubnetId` is the a priori known principal of the root subnet. Moreove
 
 :::note
 
-This specification leaves it up to the client to define expiry times for the timestamps in `R.signatures`, the certificate `Cert`, and its optional delegation. A reasonable expiry time for timestamps in `R.signatures` and the certificate `Cert` is 5 minutes (analogously to the maximum allowed ingress expiry enforced by the IC mainnet). Delegations require expiry times of at least a week since the IC mainnet refreshes the delegations only after replica upgrades which typically happen once a week.
+This specification leaves it up to the client to define expiry times for the timestamps in `R.signatures`, the certificate `Cert`, and its optional delegation. A reasonable expiry time for timestamps in `R.signatures` and the certificate `Cert` is 5 minutes (analogously to the maximum allowed ingress expiry enforced by the BIG mainnet). Delegations require expiry times of at least a week since the BIG mainnet refreshes the delegations only after replica upgrades which typically happen once a week.
 
 :::
 
@@ -884,7 +884,7 @@ All requests coming in via the HTTPS interface need to be either *anonymous* or 
 
 -   `nonce` (`blob`, optional): Arbitrary user-provided data of length at most 32 bytes, typically randomly generated. This can be used to create distinct requests with otherwise identical fields.
 
--   `ingress_expiry` (`nat`, required): An upper limit on the validity of the request, expressed in nanoseconds since 1970-01-01 (like [ic0.time()](#system-api-time)). This avoids replay attacks: The IC will not accept requests, or transition requests from status `received` to status `processing`, if their expiry date is in the past. The IC may refuse to accept requests with an ingress expiry date too far in the future. This applies to synchronous and asynchronous requests alike (and could have been called `request_expiry`).
+-   `ingress_expiry` (`nat`, required): An upper limit on the validity of the request, expressed in nanoseconds since 1970-01-01 (like [ic0.time()](#system-api-time)). This avoids replay attacks: The BIG will not accept requests, or transition requests from status `received` to status `processing`, if their expiry date is in the past. The BIG may refuse to accept requests with an ingress expiry date too far in the future. This applies to synchronous and asynchronous requests alike (and could have been called `request_expiry`).
 
 -   `sender` (`Principal`, required): The user who issued the request.
 
@@ -892,9 +892,9 @@ The envelope, i.e. the overall request, has the following keys:
 
 -   `content` (`record`): the actual request content
 
--   `sender_pubkey` (`blob`, optional): Public key used to authenticate this request. Since a user may in the future have more than one key, this field tells the IC which key is used.
+-   `sender_pubkey` (`blob`, optional): Public key used to authenticate this request. Since a user may in the future have more than one key, this field tells the BIG which key is used.
 
--   `sender_delegation` (`array` of maps, optional): a chain of delegations, starting with the one signed by `sender_pubkey` and ending with the one delegating to the key relating to `sender_sig`. Every public key in the chain of delegations should appear exactly once: cycles (a public key delegates to another public key that already previously appeared in the chain) or self-signed delegations (a public key delegates to itself) are not allowed and such requests will be refused by the IC.
+-   `sender_delegation` (`array` of maps, optional): a chain of delegations, starting with the one signed by `sender_pubkey` and ending with the one delegating to the key relating to `sender_sig`. Every public key in the chain of delegations should appear exactly once: cycles (a public key delegates to another public key that already previously appeared in the chain) or self-signed delegations (a public key delegates to itself) are not allowed and such requests will be refused by the BIG.
 
 -   `sender_sig` (`blob`, optional): Signature to authenticate this request.
 
@@ -916,7 +916,7 @@ Signing transactions can be delegated from one key to another one. If delegation
 
     -   `expiration` (`nat`): Expiration of the delegation, in nanoseconds since 1970-01-01, analogously to the `ingress_expiry` field above.
 
-    -   `targets` (`array` of `CanisterId`, optional): If this field is set, the delegation only applies for requests sent to the canisters in the list. The list must contain no more than 1000 elements; otherwise, the request will not be accepted by the IC.
+    -   `targets` (`array` of `CanisterId`, optional): If this field is set, the delegation only applies for requests sent to the canisters in the list. The list must contain no more than 1000 elements; otherwise, the request will not be accepted by the BIG.
 
 -   `signature` (`blob`): Signature on the 32-byte [representation-independent hash](#hash-of-map) of the map contained in the `delegation` field as described in [Signatures](#signatures), using the 27 bytes `\x1Aic-request-auth-delegation` as the domain separator.
 
@@ -1016,7 +1016,7 @@ Example calculation (where `H` denotes SHA-256 and `·` denotes blob concatenati
 
 ### Reject codes {#reject-codes}
 
-An API request or inter-canister call that is pending in the IC will eventually result in either a *reply* (indicating success, and carrying data) or a *reject* (indicating an error of some sorts). A reject contains a *rejection code* that classifies the error and a hopefully helpful *reject message* string.
+An API request or inter-canister call that is pending in the BIG will eventually result in either a *reply* (indicating success, and carrying data) or a *reject* (indicating an error of some sorts). A reject contains a *rejection code* that classifies the error and a hopefully helpful *reject message* string.
 
 Rejection codes are member of the following enumeration:
 
@@ -1034,11 +1034,11 @@ The symbolic names of this enumeration are used throughout this specification, b
 
 The error message is guaranteed to be a string, i.e. not arbitrary binary data.
 
-When canisters explicitly reject a message (see [Public methods](#system-api-requests)), they can specify the reject message, but *not* the reject code; it is always `CANISTER_REJECT`. In this sense, the reject code is trustworthy: If the IC responds with a `SYS_FATAL` reject, then it really was the IC issuing this reject.
+When canisters explicitly reject a message (see [Public methods](#system-api-requests)), they can specify the reject message, but *not* the reject code; it is always `CANISTER_REJECT`. In this sense, the reject code is trustworthy: If the BIG responds with a `SYS_FATAL` reject, then it really was the BIG issuing this reject.
 
 ### Error codes {#error-codes}
 
-Implementations of the API can provide additional details for rejected messages in the form of a textual label identifying the error condition. API clients can use these labels to handle errors programmatically or suggest recovery paths to the user. The specification reserves error codes matching the regular expression `IC[0-9]+` (e.g., `IC502`) for the DFINITY implementation of the API.
+Implementations of the API can provide additional details for rejected messages in the form of a textual label identifying the error condition. API clients can use these labels to handle errors programmatically or suggest recovery paths to the user. The specification reserves error codes matching the regular expression `BIG[0-9]+` (e.g., `IC502`) for the DFINITY implementation of the API.
 
 ### Status endpoint {#api-status}
 
@@ -1046,7 +1046,7 @@ Additionally, the Internet Computer provides an API endpoint to obtain various s
 
     /api/v2/status
 
-For this endpoint, the user performs a GET request, and receives a CBOR (see [CBOR](#cbor)) value with the following fields. The IC may include additional implementation-specific fields.
+For this endpoint, the user performs a GET request, and receives a CBOR (see [CBOR](#cbor)) value with the following fields. The BIG may include additional implementation-specific fields.
 
 -   `root_key` (blob, optional): The public key (a DER-encoded BLS key) of the root key of this instance of the Internet Computer Protocol. This *must* be present in short-lived development instances, to allow the agent to fetch the public key. For the Internet Computer, agents must have an independent trustworthy source for this data, and must not be tempted to fetch it from this insecure location.
 
@@ -1107,7 +1107,7 @@ This section summarizes the format of the CBOR data passed to and from the entry
 
 ### Ordering guarantees
 
-The order in which the various messages between canisters are delivered and executed is not fully specified. The guarantee provided by the IC is that if a canister sends two messages to a canister and they both start being executed by the receiving canister, then they do so in the order in which the messages were sent.
+The order in which the various messages between canisters are delivered and executed is not fully specified. The guarantee provided by the BIG is that if a canister sends two messages to a canister and they both start being executed by the receiving canister, then they do so in the order in which the messages were sent.
 
 More precisely:
 
@@ -1141,7 +1141,7 @@ A canister module is a [WebAssembly module](https://webassembly.github.io/spec/c
 
 ## Canister interface (System API) {#system-api}
 
-The System API is the interface between the running canister and the Internet Computer. It allows the WebAssembly module of a canister to expose functionality to the users (method entry points) and the IC (e.g. initialization), and exposes functionality of the IC to the canister (e.g. calling other canisters). Because WebAssembly is rather low-level, it also explains how to express higher level concepts (e.g. binary blobs).
+The System API is the interface between the running canister and the Internet Computer. It allows the WebAssembly module of a canister to expose functionality to the users (method entry points) and the BIG (e.g. initialization), and exposes functionality of the BIG to the canister (e.g. calling other canisters). Because WebAssembly is rather low-level, it also explains how to express higher level concepts (e.g. binary blobs).
 
 We want to leverage advanced WebAssembly features, such as WebAssembly host references. But as they are not yet supported by all tools involved, this section describes an initial System API that does not rely on host references. In section [Outlook: Using Host References](#host-references), we outline some of the proposed uses of WebAssembly host references.
 
@@ -1175,7 +1175,7 @@ In order for a WebAssembly module to be usable as the code for the canister, it 
 
 -   It may not have other custom sections the names of which start with the prefix `icp:` besides the \`icp:public \` and \`icp:private \`.
 
--   The IC may reject WebAssembly modules that
+-   The BIG may reject WebAssembly modules that
 
     -   declare more than 50,000 functions, or
 
@@ -1195,7 +1195,7 @@ WebAssembly number types (`i32`, `i64`) do not indicate if the numbers are to be
 
 ### Entry points {#entry-points}
 
-The canister provides entry points which are invoked by the IC under various circumstances:
+The canister provides entry points which are invoked by the BIG under various circumstances:
 
 -   The canister may export a function with name `canister_init` and type `() -> ()`.
 
@@ -1221,19 +1221,19 @@ If the execution of any of these entry points traps for any reason, then all cha
 
 #### Canister initialization {#system-api-init}
 
-If `canister_init` is present, then this is the first exported WebAssembly function invoked by the IC. The argument that was passed along with the canister initialization call (see [IC method](#ic-install_code)) is available to the canister via `ic0.msg_arg_data_size/copy`.
+If `canister_init` is present, then this is the first exported WebAssembly function invoked by the BIG. The argument that was passed along with the canister initialization call (see [BIG method](#ic-install_code)) is available to the canister via `ic0.msg_arg_data_size/copy`.
 
-The IC assumes the canister to be fully instantiated if the `canister_init` method entry point returns. If the `canister_init` method entry point traps, then canister installation has failed, and the canister is reverted to its previous state (i.e. empty with `install`, or whatever it was for a `reinstall`).
+The BIG assumes the canister to be fully instantiated if the `canister_init` method entry point returns. If the `canister_init` method entry point traps, then canister installation has failed, and the canister is reverted to its previous state (i.e. empty with `install`, or whatever it was for a `reinstall`).
 
 #### Canister upgrades {#system-api-upgrades}
 
-When a canister is upgraded to a new WebAssembly module, the IC:
+When a canister is upgraded to a new WebAssembly module, the BIG:
 
 1.  Invokes `canister_pre_upgrade` (if exported by the current canister code and  `skip_pre_upgrade` is not `opt true` ) on the old instance, to give the canister a chance to clean up (e.g. move data to [stable memory](#system-api-stable-memory)).
 
 2.  Instantiates the new module, including the execution of `(start)`, with a fresh WebAssembly state.
 
-3.  Invokes `canister_post_upgrade` (if present) on the new instance, passing the `arg` provided in the `install_code` call ([IC method](#ic-install_code)).
+3.  Invokes `canister_post_upgrade` (if present) on the new instance, passing the `arg` provided in the `install_code` call ([BIG method](#ic-install_code)).
 
 The stable memory is preserved throughout the process; any other WebAssembly state is discarded.
 
@@ -1267,7 +1267,7 @@ Eventually, a method will want to send a response, using `ic0.reply` or `ic0.rej
 
 For periodic or time-based execution, the WebAssembly module can export a function with name `canister_heartbeat`. The heartbeats scheduling algorithm is implementation-defined.
 
-`canister_heartbeat` is triggered by the IC, and therefore has no arguments and cannot reply or reject. Still, the function `canister_heartbeat` can initiate new calls.
+`canister_heartbeat` is triggered by the BIG, and therefore has no arguments and cannot reply or reject. Still, the function `canister_heartbeat` can initiate new calls.
 
 :::note
 
@@ -1281,7 +1281,7 @@ For time-based execution, the WebAssembly module can export a function with name
 
 Once the function `canister_global_timer` is scheduled, the canister's global timer is deactivated. The global timer is also deactivated upon changes to the canister's Wasm module (calling `install_code`, `install_chunked_code`, `uninstall_code` methods of the management canister or if the canister runs out of cycles). In particular, the function `canister_global_timer` won't be scheduled again unless the canister sets the global timer again (using the System API function `ic0.global_timer_set`). The global timer scheduling algorithm is implementation-defined.
 
-`canister_global_timer` is triggered by the IC, and therefore has no arguments and cannot reply or reject. Still, the function `canister_global_timer` can initiate new calls.
+`canister_global_timer` is triggered by the BIG, and therefore has no arguments and cannot reply or reject. Still, the function `canister_global_timer` can initiate new calls.
 
 :::note
 
@@ -1452,7 +1452,7 @@ Eventually, the canister will want to respond to the original call, either by re
 
 -   `ic0.msg_reply_data_append : (src : i32, size : i32) → ()`
 
-    Appends data it to the (initially empty) data reply. Traps if the total appended data exceeds the [maximum response size](https://internetcomputer.org/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
+    Appends data it to the (initially empty) data reply. Traps if the total appended data exceeds the [maximum response size](https://thebigfile.com/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
 
     This traps if the current call already has been or does not need to be responded to.
 
@@ -1486,7 +1486,7 @@ This can be invoked multiple times within the same message execution to build up
 
 ### Ingress message inspection {#system-api-inspect-message}
 
-A canister can inspect ingress messages before executing them. When the IC receives an update call from a user, the IC will use the canister method `canister_inspect_message` to determine whether the message shall be accepted. If the canister is empty (i.e. does not have a Wasm module), then the ingress message will be rejected. If the canister is not empty and does not implement `canister_inspect_message`, then the ingress message will be accepted.
+A canister can inspect ingress messages before executing them. When the BIG receives an update call from a user, the BIG will use the canister method `canister_inspect_message` to determine whether the message shall be accepted. If the canister is empty (i.e. does not have a Wasm module), then the ingress message will be rejected. If the canister is not empty and does not implement `canister_inspect_message`, then the ingress message will be accepted.
 
 In `canister_inspect_message`, the canister can accept the message by invoking `ic0.accept_message : () → ()`. This function traps if invoked twice. If the canister traps in `canister_inspect_message` or does not call `ic0.accept_message`, then the access is denied.
 
@@ -1515,7 +1515,7 @@ A canister can learn about its own identity:
 
 ### Canister status {#system-api-canister-status}
 
-This function allows a canister to find out if it is running, stopping or stopped (see [IC method](#ic-canister_status) and [IC method](#ic-stop_canister) for context).
+This function allows a canister to find out if it is running, stopping or stopped (see [BIG method](#ic-canister_status) and [BIG method](#ic-stop_canister) for context).
 
 -   `ic0.canister_status : () → i32`
 
@@ -1552,7 +1552,7 @@ When handling an update call (or a callback), a canister can do further calls to
 
 Begins assembling a call to the canister specified by `callee_src/_size` at method `name_src/_size`.
 
-The IC records two mandatory callback functions, represented by a table entry index `*_fun` and some additional value `*_env`. When the response comes back, the table is read at the corresponding index, expected to be a function of type `(env : i32) -> ()`, and passed the corresponding `*_env` value.
+The BIG records two mandatory callback functions, represented by a table entry index `*_fun` and some additional value `*_env`. When the response comes back, the table is read at the corresponding index, expected to be a function of type `(env : i32) -> ()`, and passed the corresponding `*_env` value.
 
 The reply callback is executed upon successful completion of the method call, which can query the reply using `ic0.msg_arg_data_*`.
 
@@ -1574,7 +1574,7 @@ There must be at most one call to `ic0.call_on_cleanup` between `ic0.call_new` a
 
 -   `ic0.call_data_append : (src : i32, size : i32) -> ()`
 
-    Appends the specified bytes to the argument of the call. Initially, the argument is empty. Traps if the total appended data exceeds the [maximum inter-canister call payload](https://internetcomputer.org/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
+    Appends the specified bytes to the argument of the call. Initially, the argument is empty. Traps if the total appended data exceeds the [maximum inter-canister call payload](https://thebigfile.com/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits).
 
     This may be called multiple times between `ic0.call_new` and `ic0.call_perform`.
 
@@ -1594,9 +1594,9 @@ There must be at most one call to `ic0.call_on_cleanup` between `ic0.call_new` a
 
     This concludes assembling the call. It queues the call message to the given destination, but does not actually act on it until the current WebAssembly function returns without trapping.
 
-    If the function returns `0` as the `err_code`, the IC was able to enqueue the call. In this case, the call will either be delivered, returned because the destination canister does not exist or returned because of an out of cycles condition. This also means that exactly one of the reply or reject callbacks will be executed.
+    If the function returns `0` as the `err_code`, the BIG was able to enqueue the call. In this case, the call will either be delivered, returned because the destination canister does not exist or returned because of an out of cycles condition. This also means that exactly one of the reply or reject callbacks will be executed.
 
-    If the function returns a non-zero value, the call cannot (and will not be) performed. This can happen due to a lack of resources within the IC, but also if it would reduce the current cycle balance to a level below where the canister would be frozen.
+    If the function returns a non-zero value, the call cannot (and will not be) performed. This can happen due to a lack of resources within the BIG, but also if it would reduce the current cycle balance to a level below where the canister would be frozen.
 
     After `ic0.call_perform` and before the next call to `ic0.call_new`, all other `ic0.call_*` function calls trap.
 
@@ -1612,7 +1612,7 @@ This specification currently does not go into details about which actions cost h
 
 -   `ic0.canister_cycle_balance : () → i64`
 
-    Indicates the current cycle balance of the canister. It is the canister balance before the execution of the current message, minus a reserve to pay for the execution of the current message, minus any cycles queued up to be sent via `ic0.call_cycles_add`. After execution of the message, the IC may add unused cycles from the reserve back to the balance.
+    Indicates the current cycle balance of the canister. It is the canister balance before the execution of the current message, minus a reserve to pay for the execution of the current message, minus any cycles queued up to be sent via `ic0.call_cycles_add`. After execution of the message, the BIG may add unused cycles from the reserve back to the balance.
 
 :::note
 
@@ -1622,7 +1622,7 @@ This call traps if the current balance does not fit into a 64-bit value. Caniste
 
 -   `ic0.canister_cycle_balance128 : (dst : i32) → ()`
 
-    Indicates the current cycle balance of the canister by copying the value at the location `dst` in the canister memory. It is the canister balance before the execution of the current message, minus a reserve to pay for the execution of the current message, minus any cycles queued up to be sent via `ic0.call_cycles_add128`. After execution of the message, the IC may add unused cycles from the reserve back to the balance.
+    Indicates the current cycle balance of the canister by copying the value at the location `dst` in the canister memory. It is the canister balance before the execution of the current message, minus a reserve to pay for the execution of the current message, minus any cycles queued up to be sent via `ic0.call_cycles_add128`. After execution of the message, the BIG may add unused cycles from the reserve back to the balance.
 
 -   `ic0.msg_cycles_available : () → i64`
 
@@ -1730,7 +1730,7 @@ This call traps if the amount of cycles refunded does not fit into a 64-bit valu
 
 Canisters have the ability to store and retrieve data from a secondary memory. The purpose of this *stable memory* is to provide space to store data beyond upgrades. The interface mirrors roughly the memory-related instructions of WebAssembly, and tries to be forward compatible with exposing this feature as an additional memory.
 
-The stable memory is initially empty and can be grown up to the [Wasm stable memory limit](https://internetcomputer.org/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits) (provided the subnet has capacity).
+The stable memory is initially empty and can be grown up to the [Wasm stable memory limit](https://thebigfile.com/docs/current/developer-docs/backend/resource-limits#resource-constraints-and-limits) (provided the subnet has capacity).
 
 -   `ic0.stable_size : () → (page_count : i32)`
 
@@ -1788,11 +1788,11 @@ The stable memory is initially empty and can be grown up to the [Wasm stable mem
 
 ### System time {#system-api-time}
 
-The canister can query the IC for the current time.
+The canister can query the BIG for the current time.
 
 `ic0.time : () -> i64`
 
-The time is given as nanoseconds since 1970-01-01. The IC guarantees that
+The time is given as nanoseconds since 1970-01-01. The BIG guarantees that
 
 -   the time, as observed by the canister, is monotonically increasing, even across canister upgrades.
 
@@ -1832,7 +1832,7 @@ The argument `type` decides which performance counter to return:
 
     - For non-replicated message execution, it is the number of WebAssembly instructions the canister has executed within the corresponding `composite_query_helper` in [Query call](#query-call). The counter monotonically increases across the executions of the composite query method and the composite query callbacks until the corresponding `composite_query_helper` returns (ignoring WebAssembly instructions executed within any further downstream calls of `composite_query_helper`).
 
-In the future, the IC might expose more performance counters.
+In the future, the BIG might expose more performance counters.
 
 ### Replicated execution check {#system-api-replicated-execution-check}
 
@@ -1854,7 +1854,7 @@ This system call traps if `src+size` exceeds the size of the WebAssembly memory 
 
 ### Certified data {#system-api-certified-data}
 
-For each canister, the IC keeps track of "certified data", a canister-defined blob. For fresh canisters (upon install or reinstall), this blob is the empty blob (`""`).
+For each canister, the BIG keeps track of "certified data", a canister-defined blob. For fresh canisters (upon install or reinstall), this blob is the empty blob (`""`).
 
 -   `ic0.certified_data_set : (src: i32, size : i32) -> ()`
 
@@ -1908,19 +1908,19 @@ The Internet Computer aims to make the most of the WebAssembly platform, and emb
 
 3.  Making the builder interface to create calls build calls identified by a reference, rather than having an implicit partial call in the background.
 
-A canister may only use the old *or* the new interface; the IC detects which interface the canister intends to use based on the names and types of its function imports and exports.
+A canister may only use the old *or* the new interface; the BIG detects which interface the canister intends to use based on the names and types of its function imports and exports.
 
-## The IC management canister {#ic-management-canister}
+## The BIG management canister {#ic-management-canister}
 
-The interfaces above provide the fundamental ability for external users and canisters to contact other canisters. But the Internet Computer provides additional functionality, such as canister and user management. This functionality is exposed to external users and canisters via the *IC management canister*.
+The interfaces above provide the fundamental ability for external users and canisters to contact other canisters. But the Internet Computer provides additional functionality, such as canister and user management. This functionality is exposed to external users and canisters via the *BIG management canister*.
 
 :::note
 
-The *IC management canister* is just a facade; it does not actually exist as a canister (with isolated state, Wasm code, etc.).
+The *BIG management canister* is just a facade; it does not actually exist as a canister (with isolated state, Wasm code, etc.).
 
 :::
 
-The IC management canister address is `aaaaa-aa` (i.e. the empty blob).
+The BIG management canister address is `aaaaa-aa` (i.e. the empty blob).
 
 It is possible to use the management canister via external requests (a.k.a. ingress messages). The cost of processing that request is charged to the canister that is being managed. Most methods only permit the controllers to call them. Calls to `raw_rand` and `deposit_cycles` are never accepted as ingress messages.
 
@@ -1932,9 +1932,9 @@ The [interface description](_attachments/ic.did) below, in [Candid syntax](https
 
 The binary encoding of arguments and results are as per Candid specification.
 
-### IC method `create_canister` {#ic-create_canister}
+### BIG method `create_canister` {#ic-create_canister}
 
-Before deploying a canister, the administrator of the canister first has to register it with the IC, to get a canister id (with an empty canister behind it), and then separately install the code.
+Before deploying a canister, the administrator of the canister first has to register it with the BIG, to get a canister id (with an empty canister behind it), and then separately install the code.
 
 The optional `settings` parameter can be used to set the following settings:
 
@@ -1948,13 +1948,13 @@ The optional `settings` parameter can be used to set the following settings:
 
 -   `compute_allocation` (`nat`)
 
-    Must be a number between 0 and 100, inclusively. It indicates how much compute power should be guaranteed to this canister, expressed as a percentage of the maximum compute power that a single canister can allocate. If the IC cannot provide the requested allocation, for example because it is oversubscribed, the call will be rejected.
+    Must be a number between 0 and 100, inclusively. It indicates how much compute power should be guaranteed to this canister, expressed as a percentage of the maximum compute power that a single canister can allocate. If the BIG cannot provide the requested allocation, for example because it is oversubscribed, the call will be rejected.
 
     Default value: 0
 
 -   `memory_allocation` (`nat`)
 
-    Must be a number between 0 and 2<sup>48</sup> (i.e 256TB), inclusively. It indicates how much memory the canister is allowed to use in total. Any attempt to grow memory usage beyond this allocation will fail. If the IC cannot provide the requested allocation, for example because it is oversubscribed, the call will be rejected. If set to 0, then memory growth of the canister will be best-effort and subject to the available memory on the IC.
+    Must be a number between 0 and 2<sup>48</sup> (i.e 256TB), inclusively. It indicates how much memory the canister is allowed to use in total. Any attempt to grow memory usage beyond this allocation will fail. If the BIG cannot provide the requested allocation, for example because it is oversubscribed, the call will be rejected. If set to 0, then memory growth of the canister will be best-effort and subject to the available memory on the BIG.
 
     Default value: 0
 
@@ -1962,7 +1962,7 @@ The optional `settings` parameter can be used to set the following settings:
 
     Must be a number between 0 and 2<sup>64</sup>-1, inclusively, and indicates a length of time in seconds.
 
-    A canister is considered frozen whenever the IC estimates that the canister would be depleted of cycles before `freezing_threshold` seconds pass, given the canister's current size and the IC's current cost for storage.
+    A canister is considered frozen whenever the BIG estimates that the canister would be depleted of cycles before `freezing_threshold` seconds pass, given the canister's current size and the BIG's current cost for storage.
 
     Calls to a frozen canister will be rejected with `SYS_TRANSIENT` reject code. Additionally, a canister cannot perform calls if that would, due the cost of the call and transferred cycles, would push the balance into frozen territory; these calls fail with `ic0.call_perform` returning a non-zero error code.
 
@@ -1980,27 +1980,27 @@ The optional `sender_canister_version` parameter can contain the caller's canist
 
 Until code is installed, the canister is `Empty` and behaves like a canister that has no public methods.
 
-### IC method `update_settings` {#ic-update_settings}
+### BIG method `update_settings` {#ic-update_settings}
 
-Only *controllers* of the canister can update settings. See [IC method](#ic-create_canister) for a description of settings.
+Only *controllers* of the canister can update settings. See [BIG method](#ic-create_canister) for a description of settings.
 
 Not including a setting in the `settings` record means not changing that field. The defaults described above are only relevant during canister creation.
 
 The optional `sender_canister_version` parameter can contain the caller's canister version. If provided, its value must be equal to `ic0.canister_version`.
 
-### IC method `upload_chunk` {#ic-upload_chunk}
+### BIG method `upload_chunk` {#ic-upload_chunk}
 
 Canisters have associated some storage space (hence forth chunk storage) where they can hold chunks of Wasm modules that are too lage to fit in a single message. This method allows the controllers of a canister (and the canister itself) to upload such chunks. The method returns the hash of the chunk that was stored. The size of each chunk must be at most 1MiB. The maximum number of chunks in the chunk store is `CHUNK_STORE_SIZE` chunks. The storage cost of each chunk is fixed and corresponds to storing 1MiB of data.
  
-### IC method `clear_chunk_store` {#ic-clear_chunk_store}
+### BIG method `clear_chunk_store` {#ic-clear_chunk_store}
 
 Canister controllers (and the canister itself) can clear the entire chunk storage of a canister. 
 
-### IC method `stored_chunks` {#ic-stored_chunks}
+### BIG method `stored_chunks` {#ic-stored_chunks}
 
 Canister controllers (and the canister itself) can list the hashes of chunks in the chunk storage of a canister.
 
-### IC method `install_code` {#ic-install_code}
+### BIG method `install_code` {#ic-install_code}
 
 This method installs code into a canister.
 
@@ -2034,7 +2034,7 @@ The optional `sender_canister_version` parameter can contain the caller's canist
 
 This method traps if the canister's cycle balance decreases below the canister's freezing limit after executing the method.
 
-### IC method `install_chunked_code` {#ic-install_chunked_code}
+### BIG method `install_chunked_code` {#ic-install_chunked_code}
 
 This method installs code that had previously been uploaded in chunks.
 
@@ -2047,7 +2047,7 @@ For the call to succeed, the caller must be a controller of the `storage_caniste
 
 The `chunk_hashes_list` specifies a list of hash values `[h1,...,hk]` with `k <= MAX_CHUNKS_IN_LARGE_WASM`. The system looks up in the chunk store of `storage_canister` (or that of the target canister if `storage_canister` is not specified) blobs corresponding to `h1,...,hk` and concatenates them to obtain a blob of bytes referred to as `wasm_module` in `install_code`. It then checks that the SHA-256 hash of `wasm_module` is equal to the `wasm_module_hash` parameter and calls `install_code` with parameters `(record {mode; target_canister; wasm_module; arg; sender_canister_version})`.
 
-### IC method `uninstall_code` {#ic-uninstall_code}
+### BIG method `uninstall_code` {#ic-uninstall_code}
 
 This method removes a canister's code and state, making the canister *empty* again.
 
@@ -2113,13 +2113,13 @@ The returned response contains the following fields:
 
 -   `controllers`: the current set of canister controllers. The order of returned controllers may vary depending on the implementation.
 
-### IC method `stop_canister` {#ic-stop_canister}
+### BIG method `stop_canister` {#ic-stop_canister}
 
 The controllers of a canister may stop a canister (e.g., to prepare for a canister upgrade).
 
-Stopping a canister is not an atomic action. The immediate effect is that the status of the canister is changed to `stopping` (unless the canister is already stopped). The IC will reject all calls to a stopping canister, indicating that the canister is stopping. Responses to a stopping canister are processed as usual. When all outstanding responses have been processed (so there are no open call contexts), the canister status is changed to `stopped` and the management canister responds to the caller of the `stop_canister` request.
+Stopping a canister is not an atomic action. The immediate effect is that the status of the canister is changed to `stopping` (unless the canister is already stopped). The BIG will reject all calls to a stopping canister, indicating that the canister is stopping. Responses to a stopping canister are processed as usual. When all outstanding responses have been processed (so there are no open call contexts), the canister status is changed to `stopped` and the management canister responds to the caller of the `stop_canister` request.
 
-### IC method `start_canister` {#ic-start_canister}
+### BIG method `start_canister` {#ic-start_canister}
 
 A canister may be started by its controllers.
 
@@ -2127,23 +2127,23 @@ If the canister status was `stopped` or `stopping` then the canister status is s
 
 If the canister was already `running` then the status stays unchanged.
 
-### IC method `delete_canister` {#ic-delete_canister}
+### BIG method `delete_canister` {#ic-delete_canister}
 
-This method deletes a canister from the IC.
+This method deletes a canister from the BIG.
 
 Only controllers of the canister can delete it and the canister must already be stopped. Deleting a canister cannot be undone, any state stored on the canister is permanently deleted and its cycles are discarded. Once a canister is deleted, its ID cannot be reused.
 
-### IC method `deposit_cycles` {#ic-deposit_cycles}
+### BIG method `deposit_cycles` {#ic-deposit_cycles}
 
 This method deposits the cycles included in this call into the specified canister.
 
 There is no restriction on who can invoke this method.
 
-### IC method `raw_rand` {#ic-raw_rand}
+### BIG method `raw_rand` {#ic-raw_rand}
 
-This method takes no input and returns 32 pseudo-random bytes to the caller. The return value is unknown to any part of the IC at time of the submission of this call. A new return value is generated for each call to this method.
+This method takes no input and returns 32 pseudo-random bytes to the caller. The return value is unknown to any part of the BIG at time of the submission of this call. A new return value is generated for each call to this method.
 
-### IC method `ecdsa_public_key` {#ic-ecdsa_public_key}
+### BIG method `ecdsa_public_key` {#ic-ecdsa_public_key}
 
 This method returns a [SEC1](https://www.secg.org/sec1-v2.pdf) encoded ECDSA public key for the given canister using the given derivation path. If the `canister_id` is unspecified, it will default to the canister id of the caller. The `derivation_path` is a vector of variable length byte strings. Each byte string may be of arbitrary length, including empty. The total number of byte strings in the `derivation_path` must be at most 255. The `key_id` is a struct specifying both a curve and a name. The availability of a particular `key_id` depends on implementation.
 
@@ -2151,7 +2151,7 @@ For curve `secp256k1`, the public key is derived using a generalization of BIP32
 
 The return result is an extended public key consisting of an ECDSA `public_key`, encoded in [SEC1](https://www.secg.org/sec1-v2.pdf) compressed form, and a `chain_code`, which can be used to deterministically derive child keys of the `public_key`.
 
-### IC method `sign_with_ecdsa` {#ic-sign_with_ecdsa}
+### BIG method `sign_with_ecdsa` {#ic-sign_with_ecdsa}
 
 This method returns a new [ECDSA](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) signature of the given `message_hash` that can be separately verified against a derived ECDSA public key. This public key can be obtained by calling `ecdsa_public_key` with the caller's `canister_id`, and the same `derivation_path` and `key_id` used here.
 
@@ -2159,7 +2159,7 @@ The signatures are encoded as the concatenation of the [SEC1](https://www.secg.o
 
 This call requires that the ECDSA feature is enabled, the caller is a canister, and `message_hash` is 32 bytes long. Otherwise it will be rejected.
 
-### IC method `http_request` {#ic-http_request}
+### BIG method `http_request` {#ic-http_request}
 
 This method makes an HTTP request to a given URL and returns the HTTP response, possibly after a transformation.
 
@@ -2167,7 +2167,7 @@ The canister should aim to issue *idempotent* requests, meaning that it must not
 
 The responses for all identical requests must match too. However, a web service could return slightly different responses for identical idempotent requests. For example, it may include some unique identification or a timestamp that would vary across responses.
 
-For this reason, the calling canister can supply a transformation function, which the IC uses to let the canister sanitize the responses from such unique values. The transformation function is executed separately on the corresponding response received for a request. The final response will only be available to the calling canister.
+For this reason, the calling canister can supply a transformation function, which the BIG uses to let the canister sanitize the responses from such unique values. The transformation function is executed separately on the corresponding response received for a request. The final response will only be available to the calling canister.
 
 Currently, the `GET`, `HEAD`, and `POST` methods are supported for HTTP requests.
 
@@ -2177,7 +2177,7 @@ It is important to note the following for the usage of the `POST` method:
 
 - There are no confidentiality guarantees on the request content. There is no guarantee that all sent requests are as specified by the canister. If the canister receives a response, then at least one request that was sent matched the canister's request, and the response was to that request.
 
-For security reasons, only HTTPS connections are allowed (URLs must start with `https://`). The IC uses industry-standard root CA lists to validate certificates of remote web servers.
+For security reasons, only HTTPS connections are allowed (URLs must start with `https://`). The BIG uses industry-standard root CA lists to validate certificates of remote web servers.
 
 The **size** of an HTTP request from the canister or an HTTP response from the remote HTTP server is the total number of bytes representing the names and values of HTTP headers and the HTTP body. The maximal size for the request from the canister is `2MB` (`2,000,000B`). Each request can specify a maximal size for the response from the remote HTTP server. The upper limit on the maximal size for the response is `2MB` (`2,000,000B`) and this value also applies if no maximal size value is specified. An error will be returned when the request or response is larger than the maximal size.
 
@@ -2218,7 +2218,7 @@ The following additional limits apply to HTTP requests and HTTP responses from t
 -   the total number of bytes representing the header names and values must not exceed `48KiB`.
 
 If the request headers provided by the canister do not contain a `user-agent` header (case-insensitive),
-then the IC sends a `user-agent` header (case-insensitive) with the value `ic/1.0`
+then the BIG sends a `user-agent` header (case-insensitive) with the value `ic/1.0`
 in addition to the headers provided by the canister. Such an additional header does not contribute
 to the above limits on HTTP request headers.
 
@@ -2234,7 +2234,7 @@ If you do not specify the `max_response_bytes` parameter, the maximum of a `2MB`
 
 :::
 
-### IC method `node_metrics_history` {#ic-node-metrics-history}
+### BIG method `node_metrics_history` {#ic-node-metrics-history}
 
 :::note
 
@@ -2254,7 +2254,7 @@ A single metric entry is a record with the following fields:
 
 - `num_block_failures_total` (`nat64`): the number of failed block proposals by this node.
 
-### IC method `provisional_create_canister_with_cycles` {#ic-provisional_create_canister_with_cycles}
+### BIG method `provisional_create_canister_with_cycles` {#ic-provisional_create_canister_with_cycles}
 
 As a provisional method on development instances, the `provisional_create_canister_with_cycles` method is provided. It behaves as `create_canister`, but initializes the canister's balance with `amount` fresh cycles (using `DEFAULT_PROVISIONAL_CYCLES_BALANCE` if `amount = null`). If `specified_id` is provided, the canister is created under this id. Note that canister creation using `create_canister` or `provisional_create_canister_with_cycles` with `specified_id = null` can fail after calling `provisional_create_canister_with_cycles` with provided `specified_id`. In that case, canister creation should be retried.
 
@@ -2264,7 +2264,7 @@ Cycles added to this call via `ic0.call_cycles_add128` are returned to the calle
 
 This method is only available in local development instances.
 
-### IC method `provisional_top_up_canister` {#ic-provisional_top_up_canister}
+### BIG method `provisional_top_up_canister` {#ic-provisional_top_up_canister}
 
 As a provisional method on development instances, the `provisional_top_up_canister` method is provided. It adds `amount` cycles to the balance of canister identified by `amount`.
 
@@ -2274,11 +2274,11 @@ Any user can top-up any canister this way.
 
 This method is only available in local development instances.
 
-## The IC Bitcoin API {#ic-bitcoin-api}
+## The BIG Bitcoin API {#ic-bitcoin-api}
 
-The Bitcoin functionality is exposed via the management canister. Information about Bitcoin can be found in the [Bitcoin developer guides](https://developer.bitcoin.org/devguide/). Invoking the functions of the Bitcoin API will cost cycles. We refer the reader to the [Bitcoin documentation](https://internetcomputer.org/docs/current/developer-docs/integrations/bitcoin/bitcoin-how-it-works) for further relevant information and the [IC pricing page](https://internetcomputer.org/docs/current/developer-docs/gas-cost) for information on pricing for the Bitcoin mainnet and testnet.
+The Bitcoin functionality is exposed via the management canister. Information about Bitcoin can be found in the [Bitcoin developer guides](https://developer.bitcoin.org/devguide/). Invoking the functions of the Bitcoin API will cost cycles. We refer the reader to the [Bitcoin documentation](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/bitcoin-how-it-works) for further relevant information and the [BIG pricing page](https://thebigfile.com/docs/current/developer-docs/gas-cost) for information on pricing for the Bitcoin mainnet and testnet.
 
-### IC method `bitcoin_get_utxos` {#ic-bitcoin_get_utxos}
+### BIG method `bitcoin_get_utxos` {#ic-bitcoin_get_utxos}
 
 Given a `get_utxos_request`, which must specify a Bitcoin address and a Bitcoin network (`mainnet` or `testnet`), the function returns all unspent transaction outputs (UTXOs) associated with the provided address in the specified Bitcoin network based on the current view of the Bitcoin blockchain available to the Bitcoin component. The UTXOs are returned sorted by block height in descending order.
 
@@ -2310,7 +2310,7 @@ A `get_utxos_request` without the optional `filter` results in a request that co
 
 The recommended workflow is to issue a request with the desired number of confirmations. If the `next_page` field in the response is not empty, there are more UTXOs than in the returned vector. In that case, the `page` field should be set to the `next_page` bytes in the subsequent request to obtain the next batch of UTXOs.
 
-### IC method `bitcoin_get_utxos_query` {#ic-bitcoin_get_utxos_query}
+### BIG method `bitcoin_get_utxos_query` {#ic-bitcoin_get_utxos_query}
 
 This method is identical to [`bitcoin_get_utxos`](#ic-bitcoin_get_utxos), but exposed as a query.
 
@@ -2326,7 +2326,7 @@ The response of a query comes from a single replica, and is therefore not approp
 
 :::
 
-### IC method `bitcoin_get_balance` {#ic-bitcoin_get_balance}
+### BIG method `bitcoin_get_balance` {#ic-bitcoin_get_balance}
 
 Given a `get_balance_request`, which must specify a Bitcoin address and a Bitcoin network (`mainnet` or `testnet`), the function returns the current balance of this address in `Satoshi` (10^8 Satoshi = 1 Bitcoin) in the specified Bitcoin network. The same address formats as for [`bitcoin_get_utxos`](#ic-bitcoin_get_utxos) are supported.
 
@@ -2336,7 +2336,7 @@ The optional `min_confirmations` parameter can be used to limit the set of consi
 
 Given an address and the optional `min_confirmations` parameter, `bitcoin_get_balance` iterates over all UTXOs, i.e., the same balance is returned as when calling [`bitcoin_get_utxos`](#ic-bitcoin_get_utxos) for the same address and the same number of confirmations and, if necessary, using pagination to get all UTXOs for the same tip hash.
 
-### IC method `bitcoin_get_balance_query` {#ic-bitcoin_get_balance_query}
+### BIG method `bitcoin_get_balance_query` {#ic-bitcoin_get_balance_query}
 
 This method is identical to [`bitcoin_get_balance`](#ic-bitcoin_get_balance), but exposed as a query.
 
@@ -2352,7 +2352,7 @@ The response of a query comes from a single replica, and is therefore not approp
 
 :::
 
-### IC method `bitcoin_send_transaction` {#ic-bitcoin_send_transaction}
+### BIG method `bitcoin_send_transaction` {#ic-bitcoin_send_transaction}
 
 Given a `send_transaction_request`, which must specify a `blob` of a Bitcoin transaction and a Bitcoin network (`mainnet` or `testnet`), several checks are performed:
 
@@ -2366,7 +2366,7 @@ If at least one of these checks fails, the call is rejected.
 
 If the transaction passes these tests, the transaction is forwarded to the specified Bitcoin network. Note that the function does not provide any guarantees that the transaction will make it into the mempool or that the transaction will ever appear in a block.
 
-### IC method `bitcoin_get_current_fee_percentiles` {#ic-bitcoin_get_current_fee_percentiles}
+### BIG method `bitcoin_get_current_fee_percentiles` {#ic-bitcoin_get_current_fee_percentiles}
 
 The transaction fees in the Bitcoin network change dynamically based on the number of pending transactions. It must be possible for a canister to determine an adequate fee when creating a Bitcoin transaction.
 
@@ -2376,7 +2376,7 @@ The [standard nearest-rank estimation method](https://en.wikipedia.org/wiki/Perc
 
 ## Certification {#certification}
 
-Some parts of the IC state are exposed to users in a tamperproof way via certification: the IC can reveal a *partial state tree* which includes just the data of interest, together with a signature on the root hash of the state tree. This means that a user can be sure that the response is correct, even if the user happens to be communicating with a malicious node, or has received the certificate via some other untrusted way.
+Some parts of the BIG state are exposed to users in a tamperproof way via certification: the BIG can reveal a *partial state tree* which includes just the data of interest, together with a signature on the root hash of the state tree. This means that a user can be sure that the response is correct, even if the user happens to be communicating with a malicious node, or has received the certificate via some other untrusted way.
 
 To validate a value using a certificate, the user conceptually
 
@@ -2400,7 +2400,7 @@ A certificate consists of
 
 -   an optional *delegation* that links that public key to *root public key*.
 
-The IC will certify states by issuing certificates where the tree is a partial state tree. The state tree can be pruned by replacing subtrees with their root hashes (yielding a new and potentially smaller but still valid certificate) to only include paths pertaining to relevant data but still preserving enough information to recover the *tree root hash*.
+The BIG will certify states by issuing certificates where the tree is a partial state tree. The state tree can be pruned by replacing subtrees with their root hashes (yielding a new and potentially smaller but still valid certificate) to only include paths pertaining to relevant data but still preserving enough information to recover the *tree root hash*.
 
 More formally, a certificate is described by the following data structure:
 
@@ -2489,7 +2489,7 @@ find_label(l, _)                                                 = Unknown
 
 ```
 
-The IC will only produce well-formed state trees, and the above algorithm assumes well-formed trees. These have the property that labeled subtrees appear in strictly increasing order of labels, and are not mixed with leaves. More formally:
+The BIG will only produce well-formed state trees, and the above algorithm assumes well-formed trees. These have the property that labeled subtrees appear in strictly increasing order of labels, and are not mixed with leaves. More formally:
 
     well_formed(tree) =
       (tree = Leaf _) ∨ (well_formed_forest(flatten_forks(tree)))
@@ -2645,7 +2645,7 @@ For example, the condition `S.messages = Older_messages · M · Younger_messages
 
 ### Abstract state
 
-In this specification, we describe the Internet Computer as a state machine. In particular, there is a single piece of data that describes the complete state of the IC, called `S`.
+In this specification, we describe the Internet Computer as a state machine. In particular, there is a single piece of data that describes the complete state of the BIG, called `S`.
 
 Of course, this is a huge simplification: The real Internet Computer is distributed and has a multi-component architecture, and the state is spread over many different components, some physically separated. But this simplification allows us to have a concise description of the behavior, and to easily make global decisions (such as, "is there any pending message"), without having to specify the bookkeeping that allows such global decisions.
 
@@ -2808,7 +2808,7 @@ The concrete mapping of this abstract `CanisterModule` to actual WebAssembly con
 
 The Internet Computer provides certain messaging guarantees: If a user or a canister calls another canister, it will eventually get a single response (a reply or a rejection), even if some canister code along the way fails.
 
-To ensure that only one response is generated, and also to detect when no response can be generated any more, the IC maintains a *call context*. The `needs_to_respond` field is set to `false` once the call has received a response. Further attempts to respond will now fail.
+To ensure that only one response is generated, and also to detect when no response can be generated any more, the BIG maintains a *call context*. The `needs_to_respond` field is set to `false` once the call has received a response. Further attempts to respond will now fail.
 
     Request = {
         nonce : Blob;
@@ -2838,7 +2838,7 @@ To ensure that only one response is generated, and also to detect when no respon
 
 #### Calls and Messages
 
-Calls into and within the IC are implemented as messages passed between canisters. During their lifetime, messages change shape: they begin as a call to a public method, which is resolved to a WebAssembly function that is then executed, potentially generating a response which is then delivered.
+Calls into and within the BIG are implemented as messages passed between canisters. During their lifetime, messages change shape: they begin as a call to a public method, which is resolved to a WebAssembly function that is then executed, potentially generating a response which is then delivered.
 
 Therefore, a message can have different shapes:
 
@@ -2877,7 +2877,7 @@ A reference implementation would likely maintain a separate list of `messages` f
 
 #### API requests
 
-We distinguish between the *asynchronous* API requests (type `Request`) passed to `/api/v2/…/call`, which may be present in the IC state, and the *synchronous* API requests passed to `/api/v2/…/read_state` and `/api/v2/…/query`, which are only ephemeral.
+We distinguish between the *asynchronous* API requests (type `Request`) passed to `/api/v2/…/call`, which may be present in the BIG state, and the *synchronous* API requests passed to `/api/v2/…/read_state` and `/api/v2/…/query`, which are only ephemeral.
 
 These are the synchronous read messages:
 
@@ -2938,7 +2938,7 @@ A `Path` may refer to a request by way of a *request id*, as specified in [Reque
 
 #### The system state
 
-Finally, we can describe the state of the IC as a record having the following fields:
+Finally, we can describe the state of the BIG as a record having the following fields:
 
     CanState
      = EmptyCanister | {
@@ -3052,11 +3052,11 @@ The amount of cycles that is available for spending in calls and execution is co
 
 The reasoning behind this is that resource payments first drain the reserved balance and only when the reserved balance gets to zero, they start draining the main balance.
 
-The amount of cycles that need to be reserved after operations that allocate resources is modeled with an unspecified function `cycles_to_reserve(S, CanisterId, compute_allocation, memory_allocation, CanState)` that depends on the old IC state, the id of the canister, the new allocations of the canister, and the new state of the canister.
+The amount of cycles that need to be reserved after operations that allocate resources is modeled with an unspecified function `cycles_to_reserve(S, CanisterId, compute_allocation, memory_allocation, CanState)` that depends on the old BIG state, the id of the canister, the new allocations of the canister, and the new state of the canister.
 
 #### Initial state
 
-The initial state of the IC is
+The initial state of the BIG is
 
     {
       requests = ();
@@ -3118,17 +3118,17 @@ The following is an incomplete list of invariants that should hold for the abstr
 
 ### State transitions
 
-Based on this abstract notion of the state, we can describe the behavior of the IC. There are three classes of behaviors:
+Based on this abstract notion of the state, we can describe the behavior of the BIG. There are three classes of behaviors:
 
 -   Asynchronous API requests that are submitted via `/api/v2/…/call`. These transitions describe checks that the request must pass to be considered received.
 
--   Spontaneous transitions that model the internal behavior of the IC, by describing conditions on the state that allow the transition to happen, and the state after.
+-   Spontaneous transitions that model the internal behavior of the BIG, by describing conditions on the state that allow the transition to happen, and the state after.
 
--   Responses to reads (i.e. `/api/v2/…/read_state` and `/api/v2/…/query`). By definition, these do *not* change the state of the IC, and merely describe the response based on the read request (or query, respectively) and the current state.
+-   Responses to reads (i.e. `/api/v2/…/read_state` and `/api/v2/…/query`). By definition, these do *not* change the state of the BIG, and merely describe the response based on the read request (or query, respectively) and the current state.
 
 The state transitions are not complete with regard to error handling. For example, the behavior of sending a request to a non-existent canister is not specified here. For now, we trust implementors to make sensible decisions there.
 
-We model the [The IC management canister](#ic-management-canister) with one state transition per method. There, we assume a function
+We model the [The BIG management canister](#ic-management-canister) with one state transition per method. There, we assume a function
 
     candid : Value -> Blob
 
@@ -3166,7 +3166,7 @@ A `Request` has an effective canister id according to the rules in [Effective ca
 
 #### API Request submission
 
-After a node accepts a request via `/api/v2/canister/<ECID>/call`, the request gets added to the IC state as `Received`.
+After a node accepts a request via `/api/v2/canister/<ECID>/call`, the request gets added to the BIG state as `Received`.
 
 This may only happen if the signature is valid and is created with a correct key. Due to this check, the envelope is discarded after this point.
 
@@ -3247,13 +3247,13 @@ S with
 
 :::note
 
-This is not instantaneous (the IC takes some time to agree it accepts the request) nor guaranteed (a node could just drop the request, or maybe it did not pass validation). But once the request has entered the IC state like this, it will be acted upon.
+This is not instantaneous (the BIG takes some time to agree it accepts the request) nor guaranteed (a node could just drop the request, or maybe it did not pass validation). But once the request has entered the BIG state like this, it will be acted upon.
 
 :::
 
 #### Request rejection
 
-The IC may reject a received message for internal reasons (high load, low resources) or expiry. The precise conditions are not specified here, but the reject code must indicate this to be a system error.
+The BIG may reject a received message for internal reasons (high load, low resources) or expiry. The precise conditions are not specified here, but the reject code must indicate this to be a system error.
 
 Conditions  
 
@@ -3279,7 +3279,7 @@ A first step in processing a canister update call is to create a `CallMessage` i
 
 The `request` field of the `FromUser` origin establishes the connection to the API message. One could use the corresponding `hash_of_map` for this purpose, but this formulation is more abstract.
 
-The IC does not make any guarantees about the order of incoming messages.
+The BIG does not make any guarantees about the order of incoming messages.
 
 Conditions  
 
@@ -3378,7 +3378,7 @@ messages = Older_messages · Younger_messages  ·
 
 #### Call context creation {#call-context-creation}
 
-Before invoking a heartbeat, a global timer, or a message to a public entry point, a call context is created for bookkeeping purposes. For these invocations the canister must be running (so not stopped or stopping). Additionally, these invocations only happen for "real" canisters, not the IC management canister.
+Before invoking a heartbeat, a global timer, or a message to a public entry point, a call context is created for bookkeeping purposes. For these invocations the canister must be running (so not stopped or stopping). Additionally, these invocations only happen for "real" canisters, not the BIG management canister.
 
 This "bookkeeping transition" must be immediately followed by the corresponding ["Message execution" transition](#rule-message-execution).
 
@@ -3439,7 +3439,7 @@ S with
 
 *Call context creation: Heartbeat*
 
-If canister `C` exports a method with name `canister_heartbeat`, the IC will create the corresponding call context.
+If canister `C` exports a method with name `canister_heartbeat`, the BIG will create the corresponding call context.
 
 Conditions  
 
@@ -3490,7 +3490,7 @@ S with
 
 *Call context creation: Global timer*
 
-If canister `C` exports a method with name `canister_global_timer`, the global timer of canister `C` is set, and the current time for canister `C` has passed the value of the global timer, the IC will create the corresponding call context and deactivate the global timer.
+If canister `C` exports a method with name `canister_global_timer`, the global timer of canister `C` is set, and the current time for canister `C` has passed the value of the global timer, the BIG will create the corresponding call context and deactivate the global timer.
 
 Conditions  
 
@@ -3542,7 +3542,7 @@ S with
 
 ```
 
-The IC can execute any message that is at the head of its queue, i.e. there is no older message with the same abstract `queue` field. The actual message execution, if successful, may enqueue further messages and --- if the function returns a response --- record this response. The new call and response messages are enqueued at the end.
+The BIG can execute any message that is at the head of its queue, i.e. there is no older message with the same abstract `queue` field. The actual message execution, if successful, may enqueue further messages and --- if the function returns a response --- record this response. The new call and response messages are enqueued at the end.
 
 Note that new messages are executed only if the canister is Running and is not frozen.
 
@@ -3713,7 +3713,7 @@ If message execution [*traps* (in the sense of a Wasm function)](#define-wasm-fn
 
 If message execution [*returns* (in the sense of a Wasm function)](#define-wasm-fn), the state is updated and possible outbound calls and responses are enqueued.
 
-Note that returning does *not* imply that the call associated with this message now *succeeds* in the sense defined in [section responding](#responding); that would require a (unique) call to `ic0.reply`. Note also that the state changes are persisted even when the IC is set to synthesize a [CANISTER\_ERROR](#CANISTER_ERROR) reject immediately afterward (which happens when this returns without calling `ic0.reply` or `ic0.reject`, the corresponding call has not been responded to and there are no outstanding callbacks, see [Call context starvation](#rule-starvation)).
+Note that returning does *not* imply that the call associated with this message now *succeeds* in the sense defined in [section responding](#responding); that would require a (unique) call to `ic0.reply`. Note also that the state changes are persisted even when the BIG is set to synthesize a [CANISTER\_ERROR](#CANISTER_ERROR) reject immediately afterward (which happens when this returns without calling `ic0.reply` or `ic0.reject`, the corresponding call has not been responded to and there are no outstanding callbacks, see [Call context starvation](#rule-starvation)).
 
 The function `validate_sender_canister_version` checks that `sender_canister_version` matches the actual canister version of the sender in all calls to the methods of the management canister that take `sender_canister_version`:
 
@@ -3752,7 +3752,7 @@ Note that by construction, a query function will either trap or return with a re
 
 #### Call context starvation {#rule-starvation}
 
-If the call context needs to respond (in particular, if the call context is not for a system task) and there is no call, downstream call context, or response that references a call context, then a reject is synthesized. The error message below is *not* indicative. In particular, if the IC has an idea about *why* this starved, it can put that in there (e.g. the initial message handler trapped with an out-of-memory access).
+If the call context needs to respond (in particular, if the call context is not for a system task) and there is no call, downstream call context, or response that references a call context, then a reject is synthesized. The error message below is *not* indicative. In particular, if the BIG has an idea about *why* this starved, it can put that in there (e.g. the initial message handler trapped with an out-of-memory access).
 
 Conditions  
 
@@ -3808,9 +3808,9 @@ S with
 
 ```
 
-#### IC Management Canister: Canister creation
+#### BIG Management Canister: Canister creation
 
-The IC chooses an appropriate canister id (referred to as `CanisterId`) and subnet id (referred to as `SubnetId`, `SubnetId ∈ Subnets`, where `Subnets` is the under-specified set of subnet ids on the IC) and instantiates a new (empty) canister identified by `CanisterId` on the subnet identified by `SubnetId` with subnet size denoted by `SubnetSize`. The *controllers* are set such that the sender of this request is the only controller, unless the `settings` say otherwise. All cycles on this call are now the canister's initial cycles.
+The BIG chooses an appropriate canister id (referred to as `CanisterId`) and subnet id (referred to as `SubnetId`, `SubnetId ∈ Subnets`, where `Subnets` is the under-specified set of subnet ids on the BIG) and instantiates a new (empty) canister identified by `CanisterId` on the subnet identified by `SubnetId` with subnet size denoted by `SubnetSize`. The *controllers* are set such that the sender of this request is the only controller, unless the `settings` say otherwise. All cycles on this call are now the canister's initial cycles.
 
 This is also when the System Time of the new canister starts ticking.
 
@@ -3932,7 +3932,7 @@ To avoid clashes with potential user ids or is derived from users or canisters, 
 
 -   `is_system_assigned ic_principal = false`.
 
-#### IC Management Canister: Changing settings
+#### BIG Management Canister: Changing settings
 
 Only the controllers of the given canister can update the canister settings.
 
@@ -4033,7 +4033,7 @@ S with
 
 ```
 
-#### IC Management Canister: Canister status
+#### BIG Management Canister: Canister status
 
 The controllers of a canister can obtain detailed information about the canister.
 
@@ -4093,7 +4093,7 @@ S with
 
 ```
 
-#### IC Management Canister: Canister information
+#### BIG Management Canister: Canister information
 
 Every canister can retrieve the canister history, current module hash, and current controllers of every other canister (including itself).
 
@@ -4134,7 +4134,7 @@ S with
 
 ```
 
-#### IC Management Canister: Upload Chunk
+#### BIG Management Canister: Upload Chunk
 
 A controller of a canister, or the canister itself can upload chunks to the chunk store of that canister.
 
@@ -4166,7 +4166,7 @@ S with
 
 ```
 
-#### IC Management Canister: Clear chunk store
+#### BIG Management Canister: Clear chunk store
 
 The controller of a canister, or the canister itself can clear the chunk store of that canister. 
 
@@ -4193,7 +4193,7 @@ S with
 
 ```
 
-#### IC Management Canister: List stored chunks
+#### BIG Management Canister: List stored chunks
 
 The controller of a canister, or the canister itself can list the hashes of the chunks stored in the chunk store.
 
@@ -4223,7 +4223,7 @@ S with
 
 
 
-#### IC Management Canister: Code installation
+#### BIG Management Canister: Code installation
 
 Only the controllers of the given canister can install code. This transition installs new code over a canister. This involves invoking the `canister_init` method (see [Canister initialization](#system-api-init)), which must succeed.
 
@@ -4351,7 +4351,7 @@ S with
 
 ```
 
-#### IC Management Canister: Code upgrade
+#### BIG Management Canister: Code upgrade
 
 Only the controllers of the given canister can install new code. This changes the code of an *existing* canister, preserving the state in the stable memory. This involves invoking the `canister_pre_upgrade` method, if the `skip_pre_upgrade` flag is not set to `opt true`, on the old and `canister_post_upgrade` method on the new canister, which must succeed and must not invoke other methods.
 
@@ -4503,7 +4503,7 @@ S with
 
 ```
 
-#### IC Management Canister: Install chunked code
+#### BIG Management Canister: Install chunked code
 
 Conditions
 
@@ -4539,7 +4539,7 @@ S with
 
 ```
 
-#### IC Management Canister: Code uninstallation {#rule-uninstall}
+#### BIG Management Canister: Code uninstallation {#rule-uninstall}
 
 Upon uninstallation, the canister is reverted to an empty canister, and all outstanding call contexts are rejected and marked as deleted.
 
@@ -4604,13 +4604,13 @@ S with
 
 ```
 
-#### IC Management Canister: Stopping a canister
+#### BIG Management Canister: Stopping a canister
 
 The controllers of a canister can stop a canister. Stopping a canister goes through two steps. First, the status of the canister is set to `Stopping`; as explained above, a stopping canister rejects all incoming requests and continues processing outstanding responses. When a stopping canister has no more open call contexts, its status is changed to `Stopped` and a response is generated. Note that when processing responses, a stopping canister can make calls to other canisters and thus create new call contexts. In addition, a canister which is stopped or stopping will accept (and respond) to further `stop_canister` requests.
 
 We encode this behavior via three (types of) transitions:
 
-1.  First, any `stop_canister` call sets the state of the canister to `Stopping`; we record in the IC state the origin (and cycles) of all `stop_canister` calls which arrive at the canister while it is stopping (or stopped). Note that every such `stop_canister` call can be rejected by the system at any time (the canister stays stopping in this case), e.g., if the `stop_canister` call could not be responded to for a long time.
+1.  First, any `stop_canister` call sets the state of the canister to `Stopping`; we record in the BIG state the origin (and cycles) of all `stop_canister` calls which arrive at the canister while it is stopping (or stopped). Note that every such `stop_canister` call can be rejected by the system at any time (the canister stays stopping in this case), e.g., if the `stop_canister` call could not be responded to for a long time.
 
 2.  Next, when the canister has no open call contexts (so, in particular, all outstanding responses to the canister have been processed), the status of the canister is set to `Stopped`.
 
@@ -4751,7 +4751,7 @@ S with
 
 ```
 
-#### IC Management Canister: Starting a canister
+#### BIG Management Canister: Starting a canister
 
 The controllers of a canister can start a `stopped` canister. If the canister is already running, the command has no effect on the canister (except for incrementing its canister version).
 
@@ -4824,7 +4824,7 @@ S with
 
 ```
 
-#### IC Management Canister: Canister deletion
+#### BIG Management Canister: Canister deletion
 
 Conditions  
 
@@ -4869,7 +4869,7 @@ S with
 
 ```
 
-#### IC Management Canister: Depositing cycles
+#### BIG Management Canister: Depositing cycles
 
 Conditions  
 
@@ -4900,7 +4900,7 @@ S with
 
 ```
 
-#### IC Management Canister: Random numbers
+#### BIG Management Canister: Random numbers
 
 The management canister can produce pseudo-random bytes. It always returns a 32-byte `blob`:
 
@@ -4933,7 +4933,7 @@ S with
 
 ```
 
-#### IC Management Canister: Node Metrics
+#### BIG Management Canister: Node Metrics
 
 :::note
 
@@ -4971,7 +4971,7 @@ S with
 
 ```
 
-#### IC Management Canister: Canister creation with cycles
+#### BIG Management Canister: Canister creation with cycles
 
 This is a variant of `create_canister`, which sets the initial cycle balance based on the `amount` argument.
 
@@ -5080,7 +5080,7 @@ S with
 
 ```
 
-#### IC Management Canister: Top up canister
+#### BIG Management Canister: Top up canister
 
 Conditions  
 
@@ -5200,7 +5200,7 @@ NB: The refunded cycles, `RM.refunded_cycles` are, by construction, empty.
 
 #### Request clean up
 
-The IC will keep the data for a completed or rejected request around for a certain, implementation defined amount of time, to allow users to poll for the data. After that time, the data of the request will be dropped:
+The BIG will keep the data for a completed or rejected request around for a certain, implementation defined amount of time, to allow users to poll for the data. After that time, the data of the request will be dropped:
 
 Conditions  
 
@@ -5219,7 +5219,7 @@ S with
 
 ```
 
-At the same or some later point, the request will be removed from the state of the IC. This must happen no earlier than the ingress expiry time set in the request.
+At the same or some later point, the request will be removed from the state of the BIG. This must happen no earlier than the ingress expiry time set in the request.
 
 Conditions  
 
@@ -5241,7 +5241,7 @@ S with
 
 #### Canister out of cycles
 
-Once a canister runs out of cycles, its code is uninstalled (cf. [IC Management Canister: Code uninstallation](#rule-uninstall)), the canister changes in the canister history are dropped (their total number is preserved), and the allocations are set to zero (NB: allocations are currently not modeled in the formal model):
+Once a canister runs out of cycles, its code is uninstalled (cf. [BIG Management Canister: Code uninstallation](#rule-uninstall)), the canister changes in the canister history are dropped (their total number is preserved), and the allocations are set to zero (NB: allocations are currently not modeled in the formal model):
 
 Conditions  
 
@@ -5570,7 +5570,7 @@ verify_response(Q, R, Cert') ∧ lookup(["time"], Cert') = Found S.system_time /
 
 Requesting paths with the prefix `/subnet` at `/api/v2/canister/<effective_canister_id>/read_state` might be deprecated in the future. Hence, users might want to point their requests for paths with the prefix `/subnet` to `/api/v2/subnet/<subnet_id>/read_state`.
 
-On the IC mainnet, the root subnet ID `tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe` can be used to retrieve the list of all IC mainnet's subnets by requesting the prefix `/subnet` at `/api/v2/subnet/tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe/read_state`.
+On the BIG mainnet, the root subnet ID `tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe` can be used to retrieve the list of all BIG mainnet's subnets by requesting the prefix `/subnet` at `/api/v2/subnet/tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe/read_state`.
 
 :::
 
@@ -5665,7 +5665,7 @@ The response is a certificate `cert`, as specified in [Certification](#certifica
 
     lookup_in_tree(path, cert.tree) = lookup_in_tree(path, state_tree(S))
 
-where `state_tree` constructs a labeled tree from the IC state `S` and the (so far underspecified) set of subnets `subnets`, as per [The system state tree](#state-tree)
+where `state_tree` constructs a labeled tree from the BIG state `S` and the (so far underspecified) set of subnets `subnets`, as per [The system state tree](#state-tree)
 
     state_tree(S) = {
       "time": S.system_time;
@@ -5698,7 +5698,7 @@ In Section [Abstract canisters](#abstract-canisters) we introduced an abstractio
 
 #### The concrete `WasmState`
 
-The abstract `WasmState` above models the WebAssembly *store* `S`, which encompasses the functions, tables, memories and globals of the WebAssembly program, plus additional data maintained by the IC, such as the stable memory:
+The abstract `WasmState` above models the WebAssembly *store* `S`, which encompasses the functions, tables, memories and globals of the WebAssembly program, plus additional data maintained by the BIG, such as the stable memory:
 
     WasmState = {
       store : S; // a store as per WebAssembly spec

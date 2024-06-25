@@ -24,7 +24,7 @@ function Index() {
           className="tw-heading-5 md:tw-heading-3 text-gradient mb-0"
         >
           Build DEXs offering BTC or BRC20 trading pairs, lending markets using
-          Ordinals as collateral, or Web3 SocialFi services allowing satoshis to
+          Ordinals as collateral, or Web3 Social services allowing satoshis to
           be sent via chat messages.
         </motion.h2>
       </div>

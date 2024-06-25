@@ -21,7 +21,7 @@ The application provides an interface that exposes the following methods:
 ### Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 Begin by opening a terminal window.
@@ -66,10 +66,10 @@ The following output should be returned:
 ### Resources
 To learn more about these features of Motoko, see:
 
-- [Orthogonal persistence](https://internetcomputer.org/docs/current/motoko/main/motoko#orthogonal-persistence).
-- [Declaring stable values](https://internetcomputer.org/docs/current/motoko/main/upgrades#declaring-stable-variables).
+- [Orthogonal persistence](https://thebigfile.com/docs/current/motoko/main/motoko#orthogonal-persistence).
+- [Declaring stable values](https://thebigfile.com/docs/current/motoko/main/upgrades#declaring-stable-variables).
 
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.

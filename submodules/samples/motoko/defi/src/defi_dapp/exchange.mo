@@ -22,7 +22,7 @@ module {
     // internal types
     public type TradingPair = (T.Token,T.Token);
 
-    // An exchange between ICP and DIP20 tokens.
+    // An exchange between BIG and DIP20 tokens.
     public class Exchange(trading_pair: TradingPair, book: Book.Book) {
 
         // The map of all orders (not differentiated by pairs).

@@ -2,7 +2,7 @@
 
 ## Overview
 
-HTTP certification is a sub-protocol of the [ICP](https://thebigfile.com/) [HTTP gateway protocol](https://thebigfile.com/docs/current/references/http-gateway-protocol-spec). It is used to verify HTTP responses received by an HTTP gateway from a [cube](https://thebigfile.com/how-it-works/cube-lifecycle/), with respect to the corresponding HTTP request. This allows HTTP gateways to verify that the responses they receive from canisters are authentic and have not been tampered with.
+HTTP certification is a sub-protocol of the [BIG](https://thebigfile.com/) [HTTP gateway protocol](https://thebigfile.com/docs/current/references/http-gateway-protocol-spec). It is used to verify HTTP responses received by an HTTP gateway from a [cube](https://thebigfile.com/how-it-works/cube-lifecycle/), with respect to the corresponding HTTP request. This allows HTTP gateways to verify that the responses they receive from canisters are authentic and have not been tampered with.
 
 The `ic-http-certification` crate provides a foundation for implementing the HTTP certification protocol in Rust canisters. Certification is implemented in a number of steps:
 
@@ -14,7 +14,7 @@ The `ic-http-certification` crate provides a foundation for implementing the HTT
 
 [CEL](https://github.com/google/cel-spec) (Common Expression Language) is a portable expression language that can be used for different applications to easily interoperate. It can be seen as the computation or expression counterpart to [protocol buffers](https://github.com/protocolbuffers/protobuf).
 
-CEL expressions are the core of ICP's HTTP certification system. They are used to define the conditions under which a request and response pair should be certified. They also define what should be included from the corresponding request and response objects in the certification.
+CEL expressions are the core of BIG's HTTP certification system. They are used to define the conditions under which a request and response pair should be certified. They also define what should be included from the corresponding request and response objects in the certification.
 
 CEL expressions can be created in two ways:
 
@@ -172,7 +172,7 @@ let cel_expr = DefaultCelBuilder::skip_certification();
 
 Skipping certification may seem counter-intuitive at first, but it is not always possible to certify a request and response pair. For example, a canister method that will return different data for every user cannot be easily certified.
 
-Typically, these requests have been routed through `raw` ICP URLs in the past, but this is dangerous because `raw` URLs allow any responding replica to decide whether or not certification is required. In contrast, by skipping certification using the above method with a non-`raw` URL, a replica will no longer be able to decide whether or not certification is required and instead this decision will be made by the canister itself and the result will go through consensus.
+Typically, these requests have been routed through `raw` BIG URLs in the past, but this is dangerous because `raw` URLs allow any responding replica to decide whether or not certification is required. In contrast, by skipping certification using the above method with a non-`raw` URL, a replica will no longer be able to decide whether or not certification is required and instead this decision will be made by the canister itself and the result will go through consensus.
 
 ## Creating certifications
 
@@ -216,7 +216,7 @@ let response = HttpResponse {
     headers: vec![
         ("Cache-Control".to_string(), "no-cache".to_string()),
         ("ETag".to_string(), "123456789".to_string()),
-        ("IC-CertificateExpression".to_string(), cel_expr.to_string()),
+        ("BIG-CertificateExpression".to_string(), cel_expr.to_string()),
     ],
     body: vec![1, 2, 3, 4, 5, 6],
     upgrade: None,
@@ -246,7 +246,7 @@ let response = HttpResponse {
     headers: vec![
         ("Cache-Control".to_string(), "no-cache".to_string()),
         ("ETag".to_string(), "123456789".to_string()),
-        ("IC-CertificateExpression".to_string(), cel_expr.to_string()),
+        ("BIG-CertificateExpression".to_string(), cel_expr.to_string()),
     ],
     body: vec![1, 2, 3, 4, 5, 6],
     upgrade: None,
@@ -327,7 +327,7 @@ let response = HttpResponse {
     headers: vec![
         ("Cache-Control".to_string(), "no-cache".to_string()),
         ("ETag".to_string(), "123456789".to_string()),
-        ("IC-CertificateExpression".to_string(), cel_expr.to_string()),
+        ("BIG-CertificateExpression".to_string(), cel_expr.to_string()),
     ],
     body: vec![1, 2, 3, 4, 5, 6],
     upgrade: None,
@@ -353,7 +353,7 @@ http_certification_tree.delete(&entry);
 
 ## Directly creating a CEL expression
 
-To define a CEL expression, start with the `CelExpression` enum. This enum provides a set of variants that can be used to define different types of CEL expressions supported by ICP HTTP gateways. Currently only one variant is supported, known as the "default" certification expression, but more may be added in the future as the HTTP certification protocol evolves over time.
+To define a CEL expression, start with the `CelExpression` enum. This enum provides a set of variants that can be used to define different types of CEL expressions supported by BIG HTTP gateways. Currently only one variant is supported, known as the "default" certification expression, but more may be added in the future as the HTTP certification protocol evolves over time.
 
 When certifying requests:
 

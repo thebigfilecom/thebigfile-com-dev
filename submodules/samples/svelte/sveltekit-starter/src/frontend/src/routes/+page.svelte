@@ -15,10 +15,10 @@
 			// We pass the host instead of using a proxy to support NodeJS >= v17 (ViteJS issue: https://github.com/vitejs/vite/issues/4794)
 			const host = import.meta.env.VITE_HOST;
 
-			// Create an actor to interact with the IC for a particular canister ID
+			// Create an actor to interact with the BIG for a particular canister ID
 			const actor = createActor(canisterId, { agentOptions: { host } });
 
-			// Call the IC
+			// Call the BIG
 			greeting = await actor.greet(input);
 		} catch (err: unknown) {
 			console.error(err);

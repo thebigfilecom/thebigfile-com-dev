@@ -369,8 +369,8 @@ function FeaturesPage() {
               variants={transitions.item}
             >
               Low latency and high throughput. The two most important metrics
-              for measuring performance. The Internet Computer excels in both.
-              Unlike most blockchains, ICP has no theoretical maximum TX/s.
+              for measuring performance. The BigFile excels in both.
+              Unlike most blockchains, BIG has no theoretical maximum TX/s.
               Throughput scales horizontally with each added subnet, analougous
               to how cloud computing scales out with added machines. Smart
               contracts on different subnets can always communicate with each
@@ -465,9 +465,9 @@ function FeaturesPage() {
             >
               One of the major hurdles to blockchain adoption for end users is
               having to buy and hold tokens to interact with the blockchain to
-              pay for gas fees. The Internet Computer has been designed with
+              pay for gas fees. The BigFile has been designed with
               mass adoption in mind from the ground up. Developers charge up
-              their smart contracts with cycles (the IC analogue to gas), so
+              their smart contracts with cycles (the BIG analogue to gas), so
               users don’t have to pay when interacting with the smart contracts.
               This removes a major barrier of entry for end users.
             </motion.p>
@@ -503,7 +503,7 @@ function FeaturesPage() {
               className="tw-heading-3 md:tw-heading-60 mb-3 md:mb-6"
               variants={transitions.item}
             >
-              ICP as a DePIN Network
+              BIG as a DePIN Network
             </motion.h2>
             <motion.p
               className="tw-lead-sm  md:tw-lead mb-0"
@@ -511,10 +511,9 @@ function FeaturesPage() {
             >
               Decentralized physical infrastructure networks (DePINs) are
               blockchain protocols that build, maintain, and operate hardware
-              infrastructure in an open and decentralized manner. The Internet
-              Computer is one of the leading DePIN networks, hosted by special
+              infrastructure in an open and decentralized manner. The BigFile is one of the leading DePIN networks, hosted by special
               node machines dedicated to creating a sovereign network, governed
-              by an advanced DAO. Canister smart contracts can rent compute and
+              by an advanced DAO. Cube smart contracts can rent compute and
               storage on the network.
             </motion.p>
           </div>
@@ -656,7 +655,7 @@ function FeaturesPage() {
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
-                href="https://wiki.internetcomputer.org/wiki/Extend_Bitcoin,_Ethereum_and_other_blockchains"
+                href="https://wiki.thebigfile.com/wiki/Extend_Bitcoin,_Ethereum_and_other_blockchains"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>

@@ -1,10 +1,10 @@
 # Random
-A module for obtaining randomness on the Internet Computer (IC).
+A module for obtaining randomness on the BigFile (BIG).
 
 This module provides the fundamentals for user abstractions to build on.
 
 Dealing with randomness on a deterministic computing platform, such
-as the IC, is intricate. Some basic rules need to be followed by the
+as the BIG, is intricate. Some basic rules need to be followed by the
 user of this module to obtain (and maintain) the benefits of crypto-
 graphic randomness:
 

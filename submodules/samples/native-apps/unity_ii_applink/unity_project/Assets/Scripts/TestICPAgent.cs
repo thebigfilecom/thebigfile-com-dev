@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
-using EdjCase.ICP.Agent.Agents;
-using EdjCase.ICP.Agent.Identities;
-using EdjCase.ICP.Candid.Models;
+using EdjCase.BIG.Agent.Agents;
+using EdjCase.BIG.Agent.Identities;
+using EdjCase.BIG.Candid.Models;
 
-namespace IC.GameKit
+namespace BIG.GameKit
 {
     public class TestICPAgent : MonoBehaviour
     {

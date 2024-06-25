@@ -12,16 +12,16 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-Candid is an interface description language that is used to describe the public interface of a service. A **service** is usually in the form of an application deployed as a canister on ICP. Public interfaces of canisters are used to interact with the canister. Candid supports interactions through the IC SDK via the terminal, through a web browser, or through the use of agents. It also provides a way to specify input argument values and display return values from different canister **methods**, regardless of the manner used to interact with the canister. Recall that a method is a piece of code specifying a task which declares a sequence of arguments and their associated result types.
+Candid is an interface description language that is used to describe the public interface of a service. A **service** is usually in the form of an application deployed as a cube on BIG. Public interfaces of cubes are used to interact with the cube. Candid supports interactions through the BIG SDK via the terminal, through a web browser, or through the use of agents. It also provides a way to specify input argument values and display return values from different cube **methods**, regardless of the manner used to interact with the cube. Recall that a method is a piece of code specifying a task which declares a sequence of arguments and their associated result types.
 
-Candid is language-agnostic, which is a key benefit since it allows for the inter-operation between canisters written in different languages, such as Motoko, Rust, and JavasScript, and client applications.
+Candid is language-agnostic, which is a key benefit since it allows for the inter-operation between cubes written in different languages, such as Motoko, Rust, and JavasScript, and client applications.
 
-Candid is unique since it provides functionality and features not available in other technologies, such as JSON or XML. Some of these features include the evolution of service interfaces, direct value mapping for Candid values to the types and values of the canister's language, and the ability to pass complex data such as references to services and methods. Candid also has built-in support for ICP-specific features like query annotation.
+Candid is unique since it provides functionality and features not available in other technologies, such as JSON or XML. Some of these features include the evolution of service interfaces, direct value mapping for Candid values to the types and values of the cube's language, and the ability to pass complex data such as references to services and methods. Candid also has built-in support for BIG-specific features like query annotation.
 
-Up until now in this developer journey, you've utilized the Candid UI a few times through the web browser. If you recall, in several tutorials you've interacted with the backend canisters in the web browser with the URL from an output such as:
+Up until now in this developer journey, you've utilized the Candid UI a few times through the web browser. If you recall, in several tutorials you've interacted with the backend cubes in the web browser with the URL from an output such as:
 
 ```
-  Backend canister via Candid interface:
+  Backend cube via Candid interface:
     dependencies_backend: http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
 ```
 
@@ -29,7 +29,7 @@ These URLs take you to the Candid user interface (UI). Now it's time to take a c
 
 ## Candid types and values
 
-Candid supports the following set of types in order to provide a natural mapping of data types based on reasonable choices suited for each canister language:
+Candid supports the following set of types in order to provide a natural mapping of data types based on reasonable choices suited for each cube language:
 
 - Unbounded integral number types (`Nat`, `Int`).
 
@@ -54,7 +54,7 @@ Each of these types is described in detail in the [Candid reference documentatio
 
 ### Candid textual values
 
-Typically, as a developer you may not work with your program data as Candid values; instead, you may work with a host language such as Javascript and utilize Candid to transparently transport your dapp's data to your canister written in Motoko or Rust. The receiving canister treats this data as native Motoko or Rust values.
+Typically, as a developer you may not work with your program data as Candid values; instead, you may work with a host language such as Javascript and utilize Candid to transparently transport your dapp's data to your cube written in Motoko or Rust. The receiving cube treats this data as native Motoko or Rust values.
 
 In some scenarios, like debugging, logging, or interacting with a service via the terminal command-line, it may be useful to see the Candid values in a human-readable format. In these situations, the textual presentation of Candid values can be used.
 
@@ -90,7 +90,7 @@ Now that you've learned about Candid types, you can learn how to use them to des
 
 To define Candid types and describe a service, a Candid service description file can be used. This file has the extension `.did`, and can be generated from a service implementation or written manually.
 
-The Candid files you have used thus far in the developer journey have been generated automatically. This is because a Motoko canister's Candid files are automatically generated by the Motoko compiler when the canister is compiled, then stored in the project's `/declarations` directory. When Candid files are auto-generated, it is not recommended to edit them manually, and any changes made to the file will be overwritten by `dfx` the next time the project is built and deployed. For canisters written in other languages, the Candid file must be written manually or generated using an external tool.
+The Candid files you have used thus far in the developer journey have been generated automatically. This is because a Motoko cube's Candid files are automatically generated by the Motoko compiler when the cube is compiled, then stored in the project's `/declarations` directory. When Candid files are auto-generated, it is not recommended to edit them manually, and any changes made to the file will be overwritten by `dfx` the next time the project is built and deployed. For cubes written in other languages, the Candid file must be written manually or generated using an external tool.
 
 ### Example Candid service descriptions
 
@@ -117,10 +117,10 @@ In this `ping` method, there are no arguments passed to the method and there are
 Now that you've taken a look at the basic structure of a Candid service description, let's take a look at how to generate the service description from your code.
 
 :::info
-Generating Candid files is supported for canisters written in Motoko. Canisters written in other languages will need to have their Candid files written manually. Check out the [Candid interface description](/docs/current/references/candid-ref) for more information on manually writing the service description.
+Generating Candid files is supported for cubes written in Motoko. Cubes written in other languages will need to have their Candid files written manually. Check out the [Candid interface description](/docs/current/references/candid-ref) for more information on manually writing the service description.
 :::
 
-The following is an example Motoko canister that defines simple `add`, `subtract`, and `get` functions:
+The following is an example Motoko cube that defines simple `add`, `subtract`, and `get` functions:
 
 ```motoko
 actor {
@@ -146,11 +146,11 @@ This example describes a service called `counter` that consist of the following 
 - The `add` and `subtract` methods, which change the value of the counter.
 - The `get` method, which reads the current value of the counter.
 
-This example Candid interface description helps to illustrate that every method has a sequence of argument and result types. Methods can also include annotations, like the query notation shown in this example (`() -> (int) query;`), which is a feature specific to ICP.
+This example Candid interface description helps to illustrate that every method has a sequence of argument and result types. Methods can also include annotations, like the query notation shown in this example (`() -> (int) query;`), which is a feature specific to BIG.
 
-For canisters written in other languages such as Rust, you can develop your service using the language's native types. [View Rust examples of how to write Candid service descriptions](https://internetcomputer.org/docs/current/developer-docs/backend/rust/candid/).
+For cubes written in other languages such as Rust, you can develop your service using the language's native types. [View Rust examples of how to write Candid service descriptions](https://thebigfile.com/docs/current/developer-docs/backend/rust/candid/).
 
-To generate Candid files from Rust code, the Rust CDK `v0.11.0` and higher support auto-generation using the [`candid-extractor` tool](https://internetcomputer.org/docs/current/backend/candid/generating-candid).
+To generate Candid files from Rust code, the Rust CDK `v0.11.0` and higher support auto-generation using the [`candid-extractor` tool](https://thebigfile.com/docs/current/backend/candid/generating-candid).
 
 
 ## Service upgrades
@@ -224,7 +224,7 @@ dfx start --clean --background
 dfx new candid_example
 ```
 
-You will be prompted to select the language that your backend canister will use. Select 'Motoko':
+You will be prompted to select the language that your backend cube will use. Select 'Motoko':
 
 ```
 ? Select a backend language: ›
@@ -234,7 +234,7 @@ You will be prompted to select the language that your backend canister will use.
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend canister. Select 'No frontend canister':
+Then, select a frontend framework for your frontend cube. Select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -243,7 +243,7 @@ Then, select a frontend framework for your frontend canister. Select 'No fronten
   Vue
   Vanilla JS
   No JS template
-❯ No frontend canister
+❯ No frontend cube
 ```
 
 Lastly, you can include extra features to be added to your project:
@@ -276,7 +276,7 @@ Remember, by default `dfx new` creates a new project in the Motoko language. If 
 </TabItem>
 </AdornedTabs>
 
-You'll be using the sample Motoko canister that you looked at in the [generating service descriptions](#generating-service-descriptions) section earlier. Open the `src/candid_example_backend/main.mo` file in your code editor and replace the existing code with the following:
+You'll be using the sample Motoko cube that you looked at in the [generating service descriptions](#generating-service-descriptions) section earlier. Open the `src/candid_example_backend/main.mo` file in your code editor and replace the existing code with the following:
 
 ```motoko
 actor {
@@ -305,53 +305,53 @@ service : {
 
 ### Interacting with a service using the command-line terminal
 
-Now that your canister is deployed, let's use `dfx` to interact with the methods defined by your Candid file. This section of tutorial will look familiar, since in previous tutorials you've interacted with canisters in the same manner - you just hadn't known you were directly interacting with the Candid defined services since the Candid files had been automatically generated for you in the background.
+Now that your cube is deployed, let's use `dfx` to interact with the methods defined by your Candid file. This section of tutorial will look familiar, since in previous tutorials you've interacted with cubes in the same manner - you just hadn't known you were directly interacting with the Candid defined services since the Candid files had been automatically generated for you in the background.
 
 For example, let's call the `add` method to add a number to our counter with the command:
 
 ```bash
-dfx canister call candid_example_backend add 12
+dfx cube call candid_example_backend add 12
 ```
 
 Then, you can call the `get` method to return the value you just added:
 
 ```bash
-dfx canister call candid_example_backend get
+dfx cube call candid_example_backend get
 (12 : int)
 ```
 
 You can then subtract from this value with the command:
 
 ```bash
-dfx canister call candid_example_backend subtract 4
+dfx cube call candid_example_backend subtract 4
 ```
 
 Then call the `get` method again:
 
 ```bash
-dfx canister call candid_example_backend get
+dfx cube call candid_example_backend get
 (8 : int)
 ```
 
 Reset the counter's value by subtracting the remaining value:
 
 ```bash
-dfx canister call candid_example_backend subtract 8
+dfx cube call candid_example_backend subtract 8
 ```
 
 
 ### Interacting with a service using a web browser
 
-Based on the types of services offered by a canister, Candid can provide a web interface, known as the Candid UI, that allows the developer to call canister functions for debugging and testing from within a web browser. This functionality does not require the development of any frontend code and does not require a frontend canister be created or deployed.
+Based on the types of services offered by a cube, Candid can provide a web interface, known as the Candid UI, that allows the developer to call cube functions for debugging and testing from within a web browser. This functionality does not require the development of any frontend code and does not require a frontend cube be created or deployed.
 
-To interact with the Candid UI from a web browser, recall that when a canister is deployed, the following output is returned:
+To interact with the Candid UI from a web browser, recall that when a cube is deployed, the following output is returned:
 
 ```bash
-  Backend canister via Candid interface:
+  Backend cube via Candid interface:
     candid_example_backend: http://127.0.0.1:4943/?canisterId=avqkn-guaaa-aaaaa-qaaea-cai&id=b77ix-eeaaa-aaaaa-qaada-cai
 ```
 
-In this output, you can see the URL for the Candid interface under 'Backend canister via Candid interface'. Opening this URL in a web browser will display the following UI:
+In this output, you can see the URL for the Candid interface under 'Backend cube via Candid interface'. Opening this URL in a web browser will display the following UI:
 
 ![Candid UI 1](../_attachments/candid_ui-1.png)
 
@@ -373,9 +373,9 @@ Lastly, call the 'get' method again to return our final counter value:
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
 - [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
@@ -393,10 +393,10 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
 
 ## Next steps
 
-Next, let's explore how to test and debug projects and canisters.
+Next, let's explore how to test and debug projects and cubes.
 
 - [2.5 Unit, integration, and end2end testing](/docs/current/tutorials/developer-journey/level-2/2.5-unit-testing).

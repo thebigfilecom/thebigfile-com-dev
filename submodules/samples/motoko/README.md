@@ -2,11 +2,11 @@
 
 ## Core Motoko
 
-These examples show the Motoko language as a backend language for the IC, operating directly with clients, without a front end component.
+These examples show the Motoko language as a backend language for the BIG, operating directly with clients, without a front end component.
 
 ### Basic
 
-- [`actor_reference`](https://github.com/dfinity/examples/tree/master/motoko/actor_reference) -- IC management canister as an actor (reference).
+- [`actor_reference`](https://github.com/dfinity/examples/tree/master/motoko/actor_reference) -- BIG management canister as an actor (reference).
 - [`counter`](https://github.com/dfinity/examples/tree/master/motoko/counter) -- basic (stable) variable demo.
 - [`echo`](https://github.com/dfinity/examples/tree/master/motoko/echo) -- basic query function demo.
 - [`factorial`](https://github.com/dfinity/examples/tree/master/motoko/factorial) -- basic factorial demo.
@@ -28,7 +28,7 @@ These examples show the Motoko language as a backend language for the IC, operat
 
 These examples use a minimal front end component.
 
-- [`random_maze`](https://github.com/dfinity/examples/tree/master/motoko/random_maze) -- random maze generation, with IC-based randomness.
+- [`random_maze`](https://github.com/dfinity/examples/tree/master/motoko/random_maze) -- random maze generation, with BIG-based randomness.
 - [`cert_var`](https://github.com/dfinity/examples/tree/master/motoko/cert-var) -- simple certified variable (a single 32-bit number), with client-side certificate validation.
 - [`minimal-counter-dapp`](https://github.com/dfinity/examples/tree/master/motoko/minimal-counter-dapp) -- counter dapp with minimal front end.
 
@@ -43,4 +43,4 @@ These examples use a "conventional" front end component (via `React.Component`).
 
 ## Security Considerations and Security Best Practices
 
-If you base your application on one of these examples, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. The examples provided here may not implement all the best practices.
+If you base your application on one of these examples, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. The examples provided here may not implement all the best practices.

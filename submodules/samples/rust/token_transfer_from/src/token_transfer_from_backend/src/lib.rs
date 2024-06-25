@@ -31,7 +31,7 @@ async fn transfer(args: TransferArgs) -> Result<BlockIndex, String> {
         fee: None,
         // the account we want to transfer tokens to
         to: args.to_account,
-        // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current ICP time
+        // a timestamp indicating when the transaction was created by the caller; if it is not specified by the caller then this is set to the current BIG time
         created_at_time: None,
     };
 
@@ -57,5 +57,5 @@ async fn transfer(args: TransferArgs) -> Result<BlockIndex, String> {
     .map_err(|e| format!("ledger transfer error {:?}", e))
 }
 
-// Enable Candid export (see https://internetcomputer.org/docs/current/developer-docs/backend/rust/generating-candid)
+// Enable Candid export (see https://thebigfile.com/docs/current/developer-docs/backend/rust/generating-candid)
 ic_cdk::export_candid!();

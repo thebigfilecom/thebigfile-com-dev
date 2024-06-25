@@ -17,13 +17,13 @@ const Hero = forwardRef<HTMLDivElement, {}>((_, ref) => {
             variants={transitions.item}
             className="tw-heading-3 mb-2 w-5/6 md:tw-heading-2 md:mb-6 md:w-7/12"
           >
-            ICP as a Bitcoin L2
+            BIG as a Bitcoin L2
           </motion.h1>
           <motion.p
             variants={transitions.item}
             className="tw-lead-sm md:tw-lead md:w-7/12 mb-0"
           >
-            The Internet Computer adds the missing smart contract layer to
+            The BigFile adds the missing smart contract layer to
             Bitcoin. Leveraging{" "}
             <Link
               className="text-white underline hover:no-underline hover:text-white hover:opacity-80 duration-200 ease-in-out"
@@ -31,7 +31,7 @@ const Hero = forwardRef<HTMLDivElement, {}>((_, ref) => {
             >
               Chain Fusion Technology
             </Link>
-            , ICP can directly read and write to Bitcoin, enabling dapps that
+            , BIG can directly read and write to Bitcoin, enabling dapps that
             natively interact with Bitcoin.
           </motion.p>
         </AnimateSpawn>

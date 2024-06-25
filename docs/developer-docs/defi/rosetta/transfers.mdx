@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-This document details how to transfer ICP using the Rosetta construction API. See [construction API overview](https://www.rosetta-api.org/docs/construction_api_introduction.html) for a high-level overview of the transaction flow.
+This document details how to transfer BIG using the Rosetta construction API. See [construction API overview](https://www.rosetta-api.org/docs/construction_api_introduction.html) for a high-level overview of the transaction flow.
 
 ## Transfer operations
 
@@ -28,7 +28,7 @@ Multiple transfers within a single transaction are not allowed. The outcome of s
 
 ## Prerequisites
 
--   [x] Address `A` holds at least `T` + `suggested_fee` ICP.
+-   [x] Address `A` holds at least `T` + `suggested_fee` BIG.
 
 -   [x] Address `A` is a subaccount of the principal derived from the public key that you use to sign the transaction.
 
@@ -44,7 +44,7 @@ Rosetta node recognizes the following optional metadata fields in [ConstructionP
 
 ### Example
 
-Below is an example of a transaction that transfers 1 ICP from address `bdc4ee05d42cd0669786899f256c8fd7217fa71177bd1fa7b9534f568680a938` to address `b64ec6f964d8597afa06d4209dbce2b2df9fe722e86aeda2351bd95500cf15f8`.
+Below is an example of a transaction that transfers 1 BIG from address `bdc4ee05d42cd0669786899f256c8fd7217fa71177bd1fa7b9534f568680a938` to address `b64ec6f964d8597afa06d4209dbce2b2df9fe722e86aeda2351bd95500cf15f8`.
 
 ``` json
 {
@@ -64,7 +64,7 @@ Below is an example of a transaction that transfers 1 ICP from address `bdc4ee05
       "amount": {
         "value": "-100000000",
         "currency": {
-          "symbol": "ICP",
+          "symbol": "BIG",
           "decimals": 8
         }
       }
@@ -80,7 +80,7 @@ Below is an example of a transaction that transfers 1 ICP from address `bdc4ee05
       "amount": {
         "value": "100000000",
         "currency": {
-          "symbol": "ICP",
+          "symbol": "BIG",
           "decimals": 8
         }
       }
@@ -96,7 +96,7 @@ Below is an example of a transaction that transfers 1 ICP from address `bdc4ee05
       "amount": {
         "value": "-10000",
         "currency": {
-          "symbol": "ICP",
+          "symbol": "BIG",
           "decimals": 8
         }
       }

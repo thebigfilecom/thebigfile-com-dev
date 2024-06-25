@@ -1,10 +1,10 @@
 {
   "name": "auth_client_demo_assets",
   "version": "0.1.0",
-  "description": "Internet Computer starter application",
+  "description": "BigFile starter application",
   "private": "true",
   "keywords": [
-    "Internet Computer",
+    "BigFile",
     "Motoko",
     "JavaScript",
     "Canister"

@@ -8,27 +8,26 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Beginner", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eynEk3Bz7QY?si=EBRlMgOyjHQKkPy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Overview
 
-If you recall from the previous module, [Internet Computer terminology](/docs/current/tutorials/developer-journey/level-0/ic-terms), cycles are used to measure the resources, such as memory, storage, and compute power, that are used by a canister. When a canister is deployed on the mainnet, cycles are 'charged' for every action that a canister performs.
+If you recall from the previous module, [BigFile terminology](/docs/current/tutorials/developer-journey/level-0/big-terms), cycles are used to measure the resources, such as memory, storage, and compute power, that are used by a cube. When a cube is deployed on the mainnet, cycles are 'charged' for every action that a cube performs.
 
-To obtain cycles, the Internet Computer Protocol's utility token, ICP, can be converted into cycles and transferred into a canister to be used to pay for that canister's consumed resources. Cycles have a fixed price in [XDR](https://internetcomputer.org/docs/current/references/glossary#xdr) in order to make canister costs predictable and independent of the price of ICP. One trillion cycles always correspond to one XDR.
+To obtain cycles, the BigFile utility token, BIG, can be converted into cycles and transferred into a cube to be used to pay for that cube's consumed resources. Cycles have a fixed price in [XDR](https://thebigfile.com/docs/current/references/glossary#xdr) in order to make cube costs predictable and independent of the price of BIG. One trillion cycles always correspond to one XDR.
 
-Since cycles are not a currency and are only used to pay for a canister's consumed resources, developers manage the distribution of cycles through a system canister called the **cycles ledger**. The cycles ledger provides functionality for developers to convert ICP into cycles, accept incoming cycles, send cycles to other canister, and create canisters with cycles.
+Since cycles are not a currency and are only used to pay for a cube's consumed resources, developers manage the distribution of cycles through a system cube called the **cycles ledger**. The cycles ledger provides functionality for developers to convert BIG into cycles, accept incoming cycles, send cycles to other cube, and create cubes with cycles.
 
 A developer's cycles balance is associated with the principal identity.
 
 :::info
-Recall that a principal is an entity that can be authenticated by ICP.
+Recall that a principal is an entity that can be authenticated by BIG.
 :::
 
-Canisters each have their own cycles balance, and don't use cycles associated with your identity. When you need to call a method that requires cycles, if the canister doesn't have enough cycles in it's balance or if you're creating a new canister, you will need to proxy the call through the cycles ledger in order to attach the required cycles. To assure canisters have a cycles balance, you need to deposit cycles into the canister's cycles balance, known as 'topping up' the canister.
+Cubes each have their own cycles balance, and don't use cycles associated with your identity. When you need to call a method that requires cycles, if the cube doesn't have enough cycles in it's balance or if you're creating a new cube, you will need to proxy the call through the cycles ledger in order to attach the required cycles. To assure cubes have a cycles balance, you need to deposit cycles into the cube's cycles balance, known as 'topping up' the cube.
 
-For local canister execution, operations performed using cycles are done in the background. In a production environment with canisters deployed on the mainnet, canisters will need to have cycles explicitly registered and transferred into them. Production canisters will also require principals to be configured to act as **custodians**, which are principals that have permission to send and receive cycles for the canister.
+For local cube execution, operations performed using cycles are done in the background. In a production environment with cubes deployed on the mainnet, cubes will need to have cycles explicitly registered and transferred into them. Production cubes will also require principals to be configured to act as **custodians**, which are principals that have permission to send and receive cycles for the cube.
 
-In this tutorial, you'll learn how to obtain cycles. Then, in the next tutorial you'll deploy a canister to the mainnet using those cycles.
+In this tutorial, you'll learn how to obtain cycles. Then, in the next tutorial you'll deploy a cube to the mainnet using those cycles.
 
 ## Prerequisites
 
@@ -43,9 +42,9 @@ However, your developer identity principal is not the same as your account ident
 :::info
 Your developer identity is a private/public key pair, while your principal identity is derived from the public key.
 
-Each principal can control multiple accounts in the ICP (and other) ledgers.
+Each principal can control multiple accounts in the BIG (and other) ledgers.
 
-You can learn more in the IC [specification](https://internetcomputer.org/docs/current/references/ic-interface-spec#principal).
+You can learn more in the BIG [specification](https://thebigfile.com/docs/current/references/ic-interface-spec#principal).
 :::
 
 In this tutorial, you'll create a new identity principal with `dfx`, which you'll use to obtain and manage cycles.
@@ -87,16 +86,16 @@ tsqwz-udeik-5migd-ehrev-pvoqv-szx2g-akh5s-fkyqc-zy6q7-snav6-uqe
 
 ## Acquiring cycles using a cycles coupon
 
-Cycles can be obtained by converting ICP tokens into cycles. There are a few ways to obtain ICP tokens, such as:
+Cycles can be obtained by converting BIG tokens into cycles. There are a few ways to obtain BIG tokens, such as:
 
-- Purchasing ICP tokens directly through a crypto exchange.
-- Receiving ICP tokens as a reward for participating in the NNS governance.
-- Receiving a grant of ICP tokens through the DFINITY Foundation.
-- Receiving ICP tokens in return for providing resources as a node provider.
+- Purchasing BIG tokens directly through a crypto exchange.
+- Receiving BIG tokens as a reward for participating in the NNS governance.
+- Receiving a grant of BIG tokens through the BigFile.
+- Receiving BIG tokens in return for providing resources as a node provider.
 
 For new developers, a free cycles coupon can be obtained and redeemed for 10T free cycles that can be used to get started with dapp deployment. For this developer journey, you'll be obtaining and using that free cycles coupon.
 
-This coupon is good for new developers since it doesn't require that you transfer ICP tokens into cycles, and doesn't require a purchase of tokens to get started.
+This coupon is good for new developers since it doesn't require that you transfer BIG tokens into cycles, and doesn't require a purchase of tokens to get started.
 
 First, navigate to the website [https://faucet.dfinity.org](https://faucet.dfinity.org).
 
@@ -116,7 +115,7 @@ In this channel, execute the following slash command:
 /request
 ```
 
-This command will make a call to the IC Cycles Faucet Bot. This bot will prompt you to fill out a survey in the channel.
+This command will make a call to the BIG Cycles Faucet Bot. This bot will prompt you to fill out a survey in the channel.
 
 Once the survey has been completed, our team will review your submission. If accepted, the faucet bot will send you a private message with a coupon code.
 
@@ -165,25 +164,25 @@ dfx cycles --network ic balance
 
 This should return an output showing 10T cycles associated with your identity.
 
-## Converting ICP tokens to cycles
+## Converting BIG tokens to cycles
 
-If you've already redeemed a cycles coupon in the past, or if you've already used the cycles from your coupon, you can convert ICP tokens into cycles.
+If you've already redeemed a cycles coupon in the past, or if you've already used the cycles from your coupon, you can convert BIG tokens into cycles.
 
-Before you can convert ICP tokens into cycles, first you need to obtain ICP tokens. ICP tokens can be purchased through a crypto exchange, or they can be received through other activities such as participating in the NNS governance and receiving grants from the DFINITY foundation.
+Before you can convert BIG tokens into cycles, first you need to obtain BIG tokens. BIG tokens can be purchased through a crypto exchange, or they can be received through other activities such as participating in the NNS governance and receiving grants from the BigFile.
 
-To get your account ID so you know where to send your ICP tokens, run the command:
+To get your account ID so you know where to send your BIG tokens, run the command:
 
 ```bash
 dfx ledger account-id
 ```
 
-This will display your account number on the ICP ledger, which will resemble the following:
+This will display your account number on the BIG ledger, which will resemble the following:
 
 ```bash
 e213184a548871a47fb526f3cba24e2ee2fbbc8129c4ab497ef2ce535130a0a4
 ```
 
-Once you have sent some ICP to this account ID, you can verify that they were received by checking the balance with the command:
+Once you have sent some BIG to this account ID, you can verify that they were received by checking the balance with the command:
 
 ```bash
 dfx ledger --network ic balance
@@ -192,10 +191,10 @@ dfx ledger --network ic balance
 This will output something like this:
 
 ```bash
-12.49840000 ICP
+12.49840000 BIG
 ```
 
-Once you have your ICP tokens ready, you will need to convert them into cycles. To convert ICP into cycles using the cycles ledger, use the command:
+Once you have your BIG tokens ready, you will need to convert them into cycles. To convert BIG into cycles using the cycles ledger, use the command:
 
 ```
 dfx cycles convert AMOUNT --network ic
@@ -207,9 +206,9 @@ This workflow utilizes the **cycles ledger** feature. If you'd like to use the *
 Please note that the cycles wallet will be removed from dfx in a future release.
 :::
 
-Replace the **AMOUNT** with the number of ICP to convert into cycles.
+Replace the **AMOUNT** with the number of BIG to convert into cycles.
 
-To verify that your ICP was converted into cycles properly, query the balance of the wallet with the command:
+To verify that your BIG was converted into cycles properly, query the balance of the wallet with the command:
 
 ```bash
 dfx cycles balance --network ic
@@ -223,36 +222,20 @@ This should return your balance in cycles:
 
 ## Resources
 To further explore cycle management please see the following articles:
-- **[Getting free cycles from DFINITY cycles faucet](/docs/current/developer-docs/getting-started/cycles/cycles-faucet)**.
-- **[Converting ICP tokens into cycles](/docs/current/developer-docs/getting-started/cycles/converting_big_tokens_into_cycles)**.
+- **[Getting free cycles from BigFile cycles faucet](/docs/current/developer-docs/getting-started/cycles/cycles-faucet)**.
+- **[Converting BIG tokens into cycles](/docs/current/developer-docs/getting-started/cycles/converting_big_tokens_into_cycles)**.
 
 ## Need help?
 
-Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The ICP community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
+Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for ICP developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.gg/ju2F5FeV), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
-- [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
-
-- [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
-
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
-
-- [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
-
-- [Motoko developer working group](https://www.google.com/calendar/event?eid=ZWVnb2luaHU0ZjduMTNpZHI3MWJkcWVwNWdfMjAyMzEwMTJUMTUwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
-
-- [Upcoming events and conferences](https://dfinity.org/events-and-news/).
-
-- [Upcoming hackathons](https://dfinity.org/hackathons/).
-
-- [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
-
-- Submit your feedback to the [ICP Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 
 In this tutorial, you set up our identity and acquired free cycles from the cycles faucet. Now that you have cycles, you can deploy your first dapp on the mainnet.
 
-- [1.5 Deploying canisters](/docs/current/tutorials/developer-journey/level-1/1.5-deploying-canisters).
+- [1.5 Deploying cubes](/docs/current/tutorials/developer-journey/level-1/1.5-deploying-cubes).
 

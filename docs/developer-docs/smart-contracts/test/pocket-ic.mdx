@@ -20,7 +20,7 @@ While there are other options for testing canisters, they may come with pitfalls
 
 - Installing and testing canisters on the mainnet provides the 'real' workflow experience, but will cost developers real cycles.
 
-- Testing using the local <GlossaryTooltip>replica</GlossaryTooltip> provided by `dfx` allows for testing on a single IC node, but there is no cross-net or multi-subnet functionality. Testing with the local replica is not deterministic, and it is rather heavyweight. Additionally, testing with `dfx` can be complex, slow, and require additional boilerplate code to get working.
+- Testing using the local <GlossaryTooltip>replica</GlossaryTooltip> provided by `dfx` allows for testing on a single BIG node, but there is no cross-net or multi-subnet functionality. Testing with the local replica is not deterministic, and it is rather heavyweight. Additionally, testing with `dfx` can be complex, slow, and require additional boilerplate code to get working.
 
 PocketIC is designed to remedy these pitfalls, resulting in a testing environment that provides the following benefits:
 
@@ -28,7 +28,7 @@ PocketIC is designed to remedy these pitfalls, resulting in a testing environmen
 
 - Lightweight: Only provides the necessary components, and strips away the consensus and networking layers.
 
-- Concurrent and independent IC instances: Enabling tests to run in parallel
+- Concurrent and independent BIG instances: Enabling tests to run in parallel
 
 - Multi-language support: Currently supports Rust, Python and JavaScript/TypeScript, but supports integration with any language that is written against the PocketIC REST-API.
 
@@ -115,7 +115,7 @@ fn call_counter_canister(pic: &PocketIc, canister_id: CanisterId, method: &str) 
 
 ### Example: Multi-subnet testing
 
-Versions of PocketIC `v2.0.0` and newer support multi-subnet testing. Multi-subnet testing allows for simulating multiple, different types of subnets locally. For example, to create an IC instance with an NNS subnet and two application subnets, use the code:
+Versions of PocketIC `v2.0.0` and newer support multi-subnet testing. Multi-subnet testing allows for simulating multiple, different types of subnets locally. For example, to create an BIG instance with an NNS subnet and two application subnets, use the code:
 
 ```rust
 let pic = PocketIcBuilder::new()

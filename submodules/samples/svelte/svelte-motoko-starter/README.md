@@ -29,7 +29,7 @@ You will build and deploy the following _canisters_:
 
 ### What is Motoko?
 
-Motoko is a new language designed for the Internet Computer. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the DFINITY Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the [SDK](https://internetcomputer.org/docs/current/motoko/main/motoko).
+Motoko is a new language designed for the Internet Computer. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the DFINITY Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the [SDK](https://thebigfile.com/docs/current/motoko/main/motoko).
 
 ### What is Internet Identity?
 
@@ -37,12 +37,12 @@ This starter template also includes integration with Internet Identity. Internet
 
 ## Security Considerations and Security Best Practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for creating frontends:
-* [Use a well-audited authentication service and client side IC libraries](https://internetcomputer.org/docs/current/references/security/web-app-development-security-best-practices#use-a-well-audited-authentication-service-and-client-side-ic-libraries)
-* [Define security headers including a Content Security Policy (CSP)](https://internetcomputer.org/docs/current/references/security/web-app-development-security-best-practices#define-security-headers-including-a-content-security-policy-csp)
-* [Don’t load JavaScript (and other assets) from untrusted domains](https://internetcomputer.org/docs/current/references/security/web-app-development-security-best-practices#dont-load-javascript-and-other-assets-from-untrusted-domains)
+* [Use a well-audited authentication service and client side BIG libraries](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#use-a-well-audited-authentication-service-and-client-side-ic-libraries)
+* [Define security headers including a Content Security Policy (CSP)](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#define-security-headers-including-a-content-security-policy-csp)
+* [Don’t load JavaScript (and other assets) from untrusted domains](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#dont-load-javascript-and-other-assets-from-untrusted-domains)
 
 ## Install dependencies
 
@@ -61,7 +61,7 @@ npx degit dfinity/examples/svelte/svelte-motoko-starter svelte-motoko-starter
 Install `dfx` by running
 
 ```
-sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 ### Rust
@@ -156,7 +156,7 @@ To deploy the backend canister to the local replica you have several options:
 
 `dfx deploy backend --mode reinstall` will reinstall the backend canister clearing all existing state.
 
-For more options and other commands see the [dfx CLI reference](https://internetcomputer.org/docs/current/references/cli-reference).
+For more options and other commands see the [dfx CLI reference](https://thebigfile.com/docs/current/references/cli-reference).
 
 ### Svelte frontend
 

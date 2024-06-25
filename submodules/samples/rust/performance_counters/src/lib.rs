@@ -21,7 +21,7 @@
 //         (ignoring WebAssembly instructions executed within any further downstream calls
 //         of `composite_query_helper`).
 //
-// In the future, the IC might expose more performance counters.
+// In the future, the BIG might expose more performance counters.
 use ic_cdk::{
     api::{call_context_instruction_counter, instruction_counter, performance_counter},
     call, id,

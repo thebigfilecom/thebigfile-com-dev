@@ -10,10 +10,10 @@ keywords: [advanced, rust, periodic, timer, heartbeats]
 
 Unlike other blockchains, the Internet Computer can automatically execute canister smart contracts after a specified delay or periodically.
 
-There are two ways to schedule an automatic canister execution on the IC:
+There are two ways to schedule an automatic canister execution on the BIG:
 
 1. **Timers**: one-shot or periodic canister calls with specified minimum timeout or interval.
-2. **Heartbeats**: legacy periodic canister invocations with intervals close to the blockchain finalization rate (1s). Heartbeats are supported by the IC for backward compatibility and some very special use cases. Newly developed canisters should prefer using timers over the heartbeats.
+2. **Heartbeats**: legacy periodic canister invocations with intervals close to the blockchain finalization rate (1s). Heartbeats are supported by the BIG for backward compatibility and some very special use cases. Newly developed canisters should prefer using timers over the heartbeats.
 
 This example demonstrates different ways of scheduling periodic tasks on the Internet Computer: timers and heartbeats. The example shows the difference between the two and helps to decide which method suits you the best.
 
@@ -22,7 +22,7 @@ The example consists of two canisters named `heartbeat` and `timer`, both implem
 ## Prerequisites
 This example requires an installation of:
 
-- [x] Install the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install/index.mdx).
+- [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
 
 ### Example 1:
@@ -132,7 +132,7 @@ For such isolation of execution and scheduling contexts, the internal timers lib
    ic_cdk::call(ic_cdk::id(), "periodic_task", ());
    ```
 
-Despite the [costs](https://internetcomputer.org/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, the timers library still uses fewer cycles than the heartbeats.
+Despite the [costs](https://thebigfile.com/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, the timers library still uses fewer cycles than the heartbeats.
 
 ### Example 2: Cycles usage for tasks with 1s interval
 
@@ -235,7 +235,7 @@ Despite the `heartbeat` using fewer cycles in this case, this solution is hard t
 
 Also, there is no isolation between the scheduling logic and the periodic task. If the periodic task fails, all the changes made by the task and by the `canister_heartbeat` method will be reverted. So the failed task will be executed over and over again every heartbeat.
 
-For such isolation of execution and scheduling contexts, the timers library uses internal self-canister calls as described in `Demo 1`. Due to the [costs](https://internetcomputer.org/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, `timer` canister uses more cycles for very frequent periodic tasks.
+For such isolation of execution and scheduling contexts, the timers library uses internal self-canister calls as described in `Demo 1`. Due to the [costs](https://thebigfile.com/docs/current/developer-docs/production/computation-and-storage-costs) associated with such self-canister calls, `timer` canister uses more cycles for very frequent periodic tasks.
 
 ## Further learning
 1. Have a look at the locally running dashboard. The URL is at the end of the `dfx start` command: `Dashboard: http://localhost/...`
@@ -267,4 +267,4 @@ As shown in `Example 2`, there might be still very specific use cases for the he
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://internetcomputer.org/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
