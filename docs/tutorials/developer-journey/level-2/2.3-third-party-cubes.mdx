@@ -1,26 +1,24 @@
 ---
-keywords: [intermediate, tutorial, developer journey, dfx deps, pullable canisters, third-party canisters]
+keywords: [intermediate, tutorial, developer journey, dfx deps, pullable cubes, third-party cubes]
 ---
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
-# 2.3 Using third-party canisters
+# 2.3 Using third-party cubes
 
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vuu3DUsdBZY?si=Mc1QxFBKEMPztCFm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Overview
 
-Third-party canisters are canisters that provide a public service at a static canister ID. Some examples are the DFINITY NNS and Internet Identity canisters, but third-party canisters can also be made by community developers. Using third-party canisters can be a good way to add additional functionalities to your dapp. For example, by integrating the Internet Identity canister into your dapp, you can enable identity and authentication for the users of your application.
+Third-party cubes are cubes that provide a public service at a static cube ID. Some examples are the DFINITY NNS and Internet Identity cubes, but third-party cubes can also be made by community developers. Using third-party cubes can be a good way to add additional functionalities to your dapp. For example, by integrating the Internet Identity cube into your dapp, you can enable identity and authentication for the users of your application.
 
-`dfx` enables a **dependency** workflow, where a canister can be configured to pull third-party canisters that it depends on into the local environment. This can be useful for developers who are looking to test the accuracy of their integration with the third-party canister and perform tests without paying cycles or using production environments. It also drastically simplifies the local deployment of canisters like the II canister, since you don't need to obtain the Wasm and Candid files for the canisters yourself - `dfx` takes care of it in the background for you.
+`dfx` enables a **dependency** workflow, where a cube can be configured to pull third-party cubes that it depends on into the local environment. This can be useful for developers who are looking to test the accuracy of their integration with the third-party cube and perform tests without paying cycles or using production environments. It also drastically simplifies the local deployment of cubes like the II cube, since you don't need to obtain the Wasm and Candid files for the cubes yourself - `dfx` takes care of it in the background for you.
 
-In this tutorial, you'll be focusing on pulling third-party canisters. If you're interested in developing third-party canisters that can be pulled by other developers, check out the [documentation on `dfx deps`](/docs/current/developer-docs/smart-contracts/maintain/import).
+In this tutorial, you'll be focusing on pulling third-party cubes. If you're interested in developing third-party cubes that can be pulled by other developers, check out the [documentation on `dfx deps`](/docs/current/developer-docs/smart-contracts/maintain/import).
 
-## Pulling third-party canister dependencies
+## Pulling third-party cube dependencies
 
-Let's take a look at a basic example of pulling a third-party canister as a dependency. To do this, you'll use the `dfx deps` command, which is the `dfx` subcommand responsible for pulling canisters that are listed as dependencies of another canister in the project's `dfx.json` file.
+Let's take a look at a basic example of pulling a third-party cube as a dependency. To do this, you'll use the `dfx deps` command, which is the `dfx` subcommand responsible for pulling cubes that are listed as dependencies of another cube in the project's `dfx.json` file.
 
 ### Prerequisites
 
@@ -46,7 +44,7 @@ dfx start --clean --background
 dfx new dependencies
 ```
 
-You will be prompted to select the language that your backend canister will use. Select 'Motoko':
+You will be prompted to select the language that your backend cube will use. Select 'Motoko':
 
 ```
 ? Select a backend language: ›
@@ -56,7 +54,7 @@ You will be prompted to select the language that your backend canister will use.
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend canister. Select 'No frontend canister':
+Then, select a frontend framework for your frontend cube. Select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -65,7 +63,7 @@ Then, select a frontend framework for your frontend canister. Select 'No fronten
   Vue
   Vanilla JS
   No JS template
-❯ No frontend canister
+❯ No frontend cube
 ```
 
 Lastly, you can include extra features to be added to your project:
@@ -100,13 +98,13 @@ Remember, by default `dfx new` creates a new project in the Motoko language. If 
 </AdornedTabs>
 
 
-You'll use the default 'Hello world' project in this example, then you'll pull the Internet Identity canister as a dependency of our `dependencies_backend` canister.
+You'll use the default 'Hello world' project in this example, then you'll pull the Internet Identity cube as a dependency of our `dependencies_backend` cube.
 
-First, open the `dfx.json` file in your project's directory. You need to configure your `dependencies_backend` canister to have the dependencies of `internet_identity`, with canister ID `rdmx6-jaaaa-aaaaa-aaadq-cai` on the mainnet. This is the canister ID of the DFINITY canister used to interact with BIG's identity and authentication product called Internet Identity. The developer journey will dive deeper into II in a later tutorial; for now, you'll just use it to demonstrate how third-party canisters can be used. You can do so by editing our `dfx.json` file to reflect the following configuration:
+First, open the `dfx.json` file in your project's directory. You need to configure your `dependencies_backend` cube to have the dependencies of `internet_identity`, with cube ID `rdmx6-jaaaa-aaaaa-aaadq-cai` on the mainnet. This is the cube ID of the DFINITY cube used to interact with BIG's identity and authentication product called Internet Identity. The developer journey will dive deeper into II in a later tutorial; for now, you'll just use it to demonstrate how third-party cubes can be used. You can do so by editing our `dfx.json` file to reflect the following configuration:
 
 ```json
 {
-    "canisters": {
+    "cubes": {
         "dependencies_backend": {
             "type": "motoko",
             "main": "src/dependencies_backend/main.mo",
@@ -138,9 +136,9 @@ dfx deps pull
 
 By running this command, the following steps are executed:
 
-- First, the dependency canister is fetched and the Wasm for it is downloaded.
+- First, the dependency cube is fetched and the Wasm for it is downloaded.
 
-- Then, the hash of the downloaded Wasm is verified against the hash of the deployed canister on the mainnet.
+- Then, the hash of the downloaded Wasm is verified against the hash of the deployed cube on the mainnet.
 
 - Next, a series of information is extracted from the downloaded Wasm file, such as the `dfx` metadata and Candid information.
 
@@ -148,7 +146,7 @@ The `deps/` folder is also created in your project's root folder. The `deps/pull
 
 ```json
 {
-  "canisters": {
+  "cubes": {
     "rdmx6-jaaaa-aaaaa-aaadq-cai": {
       "name": "internet_identity",
       "wasm_hash": "07869792e0841765e24014a2cb23e4a53d3147be6051bfc4966565017cd5fb2c",
@@ -163,34 +161,34 @@ The `deps/` folder is also created in your project's root folder. The `deps/pull
 
 ### Using `dfx deps`
 
-Next, you'll set the `init` arguments for the dependency canisters using the `dfx deps init` command. An `init` argument is an argument that will be passed to the canister when it is deployed. This command will iterate over all listed dependencies in the `pulled.json` file and set an empty argument for any that do not require an `init` argument. For those that require an `init` argument, they will be returned so that they can be set manually. Run the command:
+Next, you'll set the `init` arguments for the dependency cubes using the `dfx deps init` command. An `init` argument is an argument that will be passed to the cube when it is deployed. This command will iterate over all listed dependencies in the `pulled.json` file and set an empty argument for any that do not require an `init` argument. For those that require an `init` argument, they will be returned so that they can be set manually. Run the command:
 
 ```bash
 dfx deps init
 ```
 
-This will show that our II canister requires an `init` argument:
+This will show that our II cube requires an `init` argument:
 
 ```bash
-WARN: The following canister(s) require an init argument. Please run `dfx deps init <NAME/PRINCIPAL>` to set them individually:
+WARN: The following cube(s) require an init argument. Please run `dfx deps init <NAME/PRINCIPAL>` to set them individually:
 rdmx6-jaaaa-aaaaa-aaadq-cai (internet_identity)
 ```
 
-This output shows you that the Internet Identity canister requires an `init` argument, but it doesn't give you any additional information. For more information, run the command `dfx deps init rdmx6-jaaaa-aaaaa-aaadq-cai`, which will provide an error message that shows you more details:
+This output shows you that the Internet Identity cube requires an `init` argument, but it doesn't give you any additional information. For more information, run the command `dfx deps init rdmx6-jaaaa-aaaaa-aaadq-cai`, which will provide an error message that shows you more details:
 
 ```bash
-Error: Canister rdmx6-jaaaa-aaaaa-aaadq-cai (internet_identity) requires an init argument. The following info might be helpful:
+Error: Cube rdmx6-jaaaa-aaaaa-aaadq-cai (internet_identity) requires an init argument. The following info might be helpful:
 init => Use '(null)' for sensible defaults. See the candid interface for more details.
 candid:args => (opt InternetIdentityInit)
 ```
 
-In this error, you can see that to use the canister's defaults, you can use a `null` value as the `init` argument. To pass this value as an `init` argument, run the command:
+In this error, you can see that to use the cube's defaults, you can use a `null` value as the `init` argument. To pass this value as an `init` argument, run the command:
 
 ```bash
 dfx deps init rdmx6-jaaaa-aaaaa-aaadq-cai --argument null
 ```
 
-Now it's time to deploy our pulled dependency canister. Run the command:
+Now it's time to deploy our pulled dependency cube. Run the command:
 
 ```bash
 dfx deps deploy
@@ -202,18 +200,18 @@ Lastly, let's deploy our project all together with the `dfx deploy` command:
 dfx deploy
 ```
 
-The output will include a local Candid UI URL for both the `dependencies_backend` canister, which has the default 'Hello world' code, and the local Candid UI URL for the Internet Identity canister.
+The output will include a local Candid UI URL for both the `dependencies_backend` cube, which has the default 'Hello world' code, and the local Candid UI URL for the Internet Identity cube.
 
 ```bash
-Installing code for canister dependencies_backend, with canister ID bkyz2-fmaaa-aaaaa-qaaaq-cai
-Deployed canisters.
+Installing code for cube dependencies_backend, with cube ID bkyz2-fmaaa-aaaaa-qaaaq-cai
+Deployed cubes.
 URLs:
-  Backend canister via Candid interface:
+  Backend cube via Candid interface:
     dependencies_backend: http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
     internet_identity: http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=rdmx6-jaaaa-aaaaa-aaadq-cai
 ```
 
-Now, you can interact with the II canister locally using the CLI or the Candid UI. In a future tutorial you'll integrate your backend canister with the II canister. For now, that'll wrap up this module.
+Now, you can interact with the II cube locally using the CLI or the Candid UI. In a future tutorial you'll integrate your backend cube with the II cube. For now, that'll wrap up this module.
 
 ## Need help?
 

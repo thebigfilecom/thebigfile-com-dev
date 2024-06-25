@@ -5,17 +5,16 @@ keywords: [beginner, tutorial, developer journey, deploying, canisters, deploy]
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
-# 1.5 Deploying canisters
+# 1.5 Deploying cubes
 
 <MarkdownChipRow labels={["Beginner", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OKbxWiA0QR8?si=hPUzZWR0PJ2XRCru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Overview
 
-Now that you have some cycles to pay for your canister's resources, you can deploy your dapp on the mainnet. When a canister is deployed to the mainnet, it's code will be hosted on the nodes that make up one of the mainnet's subnets. The canister will be hosted on these nodes until it is manually uninstalled by the developer, or until it runs out of cycles and is uninstalled automatically.
+Now that you have some cycles to pay for your cube's resources, you can deploy your dapp on the mainnet. When a cube is deployed to the mainnet, it's code will be hosted on the nodes that make up one of the mainnet's subnets. The cube will be hosted on these nodes until it is manually uninstalled by the developer, or until it runs out of cycles and is uninstalled automatically.
 
-Once a dapp is deployed on the mainnet, it can be accessed from the canister's public URL by end-users and can communicate with other canisters that are deployed on the mainnet.
+Once a dapp is deployed on the mainnet, it can be accessed from the cube's public URL by end-users and can communicate with other cubes that are deployed on the mainnet.
 
 ## Prerequisites
 
@@ -58,13 +57,13 @@ In this command, the `--network` flag specifies which network the dapp should be
 
 Using the flag `--network ic` is required to deploy your dapp on the mainnet. If this flag is not included, your dapp will only be deployed locally by default.
 
-This command doesn't include a canister name, meaning it will automatically deploy **all** canisters that are specified in the `dfx.json` file. You can specify a single canister to be deployed by including the canister's name in the command, such as:
+This command doesn't include a cube name, meaning it will automatically deploy **all** cubes that are specified in the `dfx.json` file. You can specify a single cube to be deployed by including the cube's name in the command, such as:
 
 ```bash
 dfx deploy poll_backend --network ic
 ```
 
-You want to deploy both the `poll_backend` and `poll_frontend` canisters since they work together to create your poll dapp, so the `dfx deploy --network ic` command should be used for this tutorial.
+You want to deploy both the `poll_backend` and `poll_frontend` cubes since they work together to create your poll dapp, so the `dfx deploy --network ic` command should be used for this tutorial.
 
 The output of this command will include information about what actions are happening. For example, the output should resemble the following:
 
@@ -108,13 +107,13 @@ This command converts an additional 1.005 BIG tokens to cycles.
 
 If you used the free cycles coupon, this step is not applicable.
 
-Now, let's use your dapp! To access the dapp's frontend, first you need to get the canister's URL. To get this, run the command:
+Now, let's use your dapp! To access the dapp's frontend, first you need to get the cube's URL. To get this, run the command:
 
 ```bash
 dfx canister id poll_frontend --network ic
 ```
 
-This command will return the canister's URL, which should look like this:
+This command will return the cube's URL, which should look like this:
 
 ```bash
 https://5h5yf-eiaaa-aaaaa-qaada-cai.icp0.io
@@ -126,27 +125,14 @@ If you open this URL in your web browser, you will see the same poll dapp fronte
 
 Did you get stuck somewhere in this tutorial, or feel like you need additional help understanding some of the concepts? The BIG community has several resources available for developers, like working groups and bootcamps, along with our Discord community, forum, and events such as hackathons. Here are a few to check out:
 
-- [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
+- [Developer Discord community](https://discord.gg/ju2F5FeV), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
-- [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
-- [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
-
-- [Motoko bootcamp](https://github.com/motoko-bootcamp/bootcamp-2022), a week-long crash course to learning all things Motoko.
-
-- [Motoko developer working group](https://www.google.com/calendar/event?eid=ZWVnb2luaHU0ZjduMTNpZHI3MWJkcWVwNWdfMjAyMzEwMTJUMTUwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
-
-- [Upcoming events and conferences](https://dfinity.org/events-and-news/).
-
-- [Upcoming hackathons](https://dfinity.org/hackathons/).
-
-- [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
-
-- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 
-Now that you have canisters running on the mainnet, the next steps are to learn how you can manage these canisters, such as how to upgrade them or delete them.
+Now that you have cubes running on the mainnet, the next steps are to learn how you can manage these cubes, such as how to upgrade them or delete them.
 
-- [1.6 Managing canisters](/docs/current/tutorials/developer-journey/level-1/1.6-managing-canisters)
+- [1.6 Managing cubes](/docs/current/tutorials/developer-journey/level-1/1.6-managing-cubes)
 

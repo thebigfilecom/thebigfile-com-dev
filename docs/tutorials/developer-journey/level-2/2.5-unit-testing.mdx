@@ -8,7 +8,6 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ndUqdwdtBhQ?si=hB8Thi_tMVJC0CIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Overview
 
@@ -61,12 +60,12 @@ This unit test does the following:
 
 - Lastly, the suite is run with the line `Suite.run(suite)`.
 
-### Canister unit testing
-In addition to the `Suite`, `Testable` and `Matchers` packages, Motoko Matchers also contains a `Canister` package. The `Canister` package can be used to execute unit tests for canisters. Below is an example that uses this `Canister` package:
+### Cube unit testing
+In addition to the `Suite`, `Testable` and `Matchers` packages, Motoko Matchers also contains a `Cube` package. The `Cube` package can be used to execute unit tests for cubes. Below is an example that uses this `Cube` package:
 
 ```motoko
-import Canister "canister:CanisterName";
-import C "mo:matchers/Canister";
+import Cube "cube:CanisterName";
+import C "mo:matchers/Cube";
 import M "mo:matchers/Matchers";
 import T "mo:matchers/Testable";
 
@@ -75,12 +74,12 @@ actor {
     public shared func test() : async Text {
 
         it.should("greet me", func () : async C.TestResult = async {
-          let greeting = await Canister.greet("Bob");
+          let greeting = await Cube.greet("Bob");
           M.attempt(greeting, M.equals(T.text("Hello, Bob!")))
         });
 
         it.shouldFailTo("greet my friend", func () : async () = async {
-          let greeting = await Canister.greet("George");
+          let greeting = await Cube.greet("George");
           ignore greeting
         });
 
@@ -92,21 +91,21 @@ actor {
 
 This unit test does the following:
 
-- First, it imports a canister called `CanisterName`. This allows the result of functions within the canister to be tested.
+- First, it imports a cube called `CanisterName`. This allows the result of functions within the cube to be tested.
 
-- Then, it imports the `Canister`, `Testable` and `Matchers` packages from the Motoko Matchers project.
+- Then, it imports the `Cube`, `Testable` and `Matchers` packages from the Motoko Matchers project.
 
 - A `batchSize` is defined; this determines how many times the test will be run.
 
-- Two tests are defined. Both test the result of the canister's `greet` function:
+- Two tests are defined. Both test the result of the cube's `greet` function:
 
-    - The first tests if the canister's greeting function is passed the text 'Bob', does the result text equal 'Hello, Bob!'?
+    - The first tests if the cube's greeting function is passed the text 'Bob', does the result text equal 'Hello, Bob!'?
 
     - The second tests if the greeting doesn't greet 'Bob' and instead greets 'George', the greeting should be ignored.
 
 - Then, it runs all tests in the batch, indicated by the `runAll()` call.
 
-Want to look at a more complex, running example? You can take a look at the unit tests that are used in the [invoice canister example](https://github.com/dfinity/invoice-canister/tree/main/test).
+Want to look at a more complex, running example? You can take a look at the unit tests that are used in the [invoice cube example](https://github.com/dfinity/invoice-cube/tree/main/test).
 
 Want to learn more about running large, long-running batches of tests? Take a look at the [Motoko BigTest library.](https://github.com/matthewhammer/motoko-bigtest)
 
@@ -114,13 +113,13 @@ Want to learn more about running large, long-running batches of tests? Take a lo
 
 In this developer journey series, you'll continue to focus on exploring and using Motoko. However, it's important to make note of the resources available for Rust testing.
 
-[Learn more about Rust unit testing](https://mmapped.blog/posts/01-effective-rust-canisters.html).
+[Learn more about Rust unit testing](https://mmapped.blog/posts/01-effective-rust-cubes.html).
 
 You may also consider the [DFINITY Rust guidelines on testing](https://docs.dfinity.systems/dfinity/spec/meta/rust.html#_tests).
 
 ## Tests using PocketIC
 
-PocketIC is a community-developed project that provides local canister testing using a Python library. Using PocketIC, developers can write tests for their canister in Python, then deploy the scripts to interact with their local BIG replica. An example test with PocketIC might look like:
+PocketIC is a community-developed project that provides local cube testing using a Python library. Using PocketIC, developers can write tests for their cube in Python, then deploy the scripts to interact with their local BIG replica. An example test with PocketIC might look like:
 
 ```python
 from pocket_ic import PocketIC
@@ -128,7 +127,7 @@ from pocket_ic import PocketIC
 pic = PocketIC()
 canister_id = pic.create_canister()
 
-# use PocketIC to interact with your canisters
+# use PocketIC to interact with your cubes
 pic.add_cycles(canister_id, 1_000_000)
 response = pic.update_call(canister_id, method="greeting", ...)
 assert(response == 'Hello, PocketIC!')
@@ -138,7 +137,7 @@ assert(response == 'Hello, PocketIC!')
 
 ### Tests using Light Replica
 
-Light Replica is a community-developed project designed to provide a local testing and development environment similar to Ethereum's Truffle or Hardhat tools. Light Replica creates a local node designed to replicate the behavior of a real BIG node that includes additional logging and functions to assist with testing. Using this local node, any Wasm file can be tested and interacted with as if it were deployed on a live production node. The Light Replica's codebase includes tests primarily written in Rust and Typescript, and can be beneficial as a tool for Rust development testing, but can be used with any canister that has been compiled into a Wasm file.
+Light Replica is a community-developed project designed to provide a local testing and development environment similar to Ethereum's Truffle or Hardhat tools. Light Replica creates a local node designed to replicate the behavior of a real BIG node that includes additional logging and functions to assist with testing. Using this local node, any Wasm file can be tested and interacted with as if it were deployed on a live production node. The Light Replica's codebase includes tests primarily written in Rust and Typescript, and can be beneficial as a tool for Rust development testing, but can be used with any cube that has been compiled into a Wasm file.
 
 [Learn more about Light Replica](https://github.com/icopen/lightic/tree/main).
 
@@ -169,7 +168,7 @@ dfx start --clean --background
 dfx new e2e_tests
 ```
 
-You will be prompted to select the language that your backend canister will use. Select 'Motoko':
+You will be prompted to select the language that your backend cube will use. Select 'Motoko':
 
 ```
 ? Select a backend language: ›
@@ -179,7 +178,7 @@ You will be prompted to select the language that your backend canister will use.
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend canister. Select 'No frontend canister':
+Then, select a frontend framework for your frontend cube. Select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -188,7 +187,7 @@ Then, select a frontend framework for your frontend canister. Select 'No fronten
   Vue
   Vanilla JS
   No JS template
-❯ No frontend canister
+❯ No frontend cube
 ```
 
 Lastly, you can include extra features to be added to your project:
@@ -246,7 +245,7 @@ Then, open your `package.json` file and insert `"test": "vitest"` in the `script
 ```
 
 :::info
-Need the full `package.json` file? [Check out the repo containing the full project for this tutorial](https://github.com/krpeacock/sample-canister-e2e).
+Need the full `package.json` file? [Check out the repo containing the full project for this tutorial](https://github.com/krpeacock/sample-cube-e2e).
 :::
 
 
@@ -261,7 +260,7 @@ mkdir src/tests/
 Now, you'll create a mixture of JavaScript and TypeScript files to create a utility that'll be used to create an **agent** using generated declarations. This file will be called `actor.js`.
 
 :::caution
-You'll be diving a bit into using an **agent** in this portion of the tutorial. Note that the developer journey has briefly mentioned agents thus far, but hasn't fully explored agents yet. The developer journey will cover agents in a future tutorial, but for this tutorial it is important to know that an agent a library used to make calls to the Internet Computer public interface. You'll be using it to communicate the canister's public methods, defined in the `declarations/e2e_tests_backend/e2e_tests_backend.did.js`, to the file containing our the code for our tests.
+You'll be diving a bit into using an **agent** in this portion of the tutorial. Note that the developer journey has briefly mentioned agents thus far, but hasn't fully explored agents yet. The developer journey will cover agents in a future tutorial, but for this tutorial it is important to know that an agent a library used to make calls to the Internet Computer public interface. You'll be using it to communicate the cube's public methods, defined in the `declarations/e2e_tests_backend/e2e_tests_backend.did.js`, to the file containing our the code for our tests.
 :::
 
 Create a new file in `src/tests/` called `actor.js`, then insert the following content:
@@ -293,7 +292,7 @@ export const e2e_tests_backend = await createActor(e2e_tests_backendCanister, {
 
 This agent file does the following:
 
-- Sets up file handlers by reading the canister IDs from their associated JSON file.
+- Sets up file handlers by reading the cube IDs from their associated JSON file.
 
 - Fetches the root key since you are testing locally.
 
@@ -335,7 +334,7 @@ In this test file, the following things happen:
 
 ### Running a basic test
 
-Next let's deploy the canister and run our test with the commands:
+Next let's deploy the cube and run our test with the commands:
 
 ```bash
 dfx deploy
@@ -361,7 +360,7 @@ The test should be successful and return output such as:
 
 ### Running a complex test
 
-Now let's create a more complex test that checks the canister's metadata using the `CanisterStatus` API. Insert the following code at the end of the `src/tests/e2e_tests_backend.test.ts` file:
+Now let's create a more complex test that checks the cube's metadata using the `CanisterStatus` API. Insert the following code at the end of the `src/tests/e2e_tests_backend.test.ts` file:
 
 ```ts
 test("Should contain a candid interface", async () => {
@@ -386,10 +385,10 @@ test("Should contain a candid interface", async () => {
 ```
 
 :::info
-Need the full `src/tests/e2e_tests_backend.test.ts` file? [Check out the repo containing the full project for this tutorial](https://github.com/krpeacock/sample-canister-e2e).
+Need the full `src/tests/e2e_tests_backend.test.ts` file? [Check out the repo containing the full project for this tutorial](https://github.com/krpeacock/sample-cube-e2e).
 :::
 
-This test simply checks that our canister's metadata contains a Candid interface.
+This test simply checks that our cube's metadata contains a Candid interface.
 
 Then, run the test again with the `npm test` command. This time, the output should reflect 2 successful tests:
 
@@ -419,7 +418,7 @@ Before you upload your code to Github, first edit the `package.json` file. In th
 "preci": "dfx stop; dfx start --clean --background; dfx deploy; dfx generate"
 ```
 
-This tells the code to automatically start dfx and deploy the project's canister.
+This tells the code to automatically start dfx and deploy the project's cube.
 
 Then, add a Github workflow configuration. To do this, create a `.github` folder, with a `workflows` subfolder in your project with the command:
 

@@ -9,13 +9,13 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Beginner", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nUB7_KjE-uU?si=TRqLKWJqJ-apPVxo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ## Overview
 
-At this point in your developer journey, you've covered the fundamentals of canister development and deployed the default 'Hello, world' project template on the Motoko playground. It's time to get into writing code and developing your own first dapp!
+At this point in your developer journey, you've covered the fundamentals of cube development and deployed the default 'Hello, world' project template on the Motoko playground. It's time to get into writing code and developing your own first dapp!
 
-For this tutorial, you'll be creating a poll dapp that includes both a backend canister and a frontend canister. To recap, backend canisters are used to host the dapp's smart contract code, while frontend canisters are used to host user interface assets, such as HTML and CSS.
+For this tutorial, you'll be creating a poll dapp that includes both a backend cube and a frontend cube. To recap, backend cubes are used to host the dapp's smart contract code, while frontend cubes are used to host user interface assets, such as HTML and CSS.
 
 The poll dapp will ask the end user a question, then have them vote on which answer they'd like to select.
 
@@ -51,19 +51,19 @@ poll                   # The root of the project
 └── webpack.config.js  # Web dapp bundler configuration.
 ```
 
-You will notice that the file structure above has two sub-directories within `src`. That is because when you created the project `poll` via `dfx new poll`, the project by default created **two** canisters that talk to each other:
+You will notice that the file structure above has two sub-directories within `src`. That is because when you created the project `poll` via `dfx new poll`, the project by default created **two** cubes that talk to each other:
 - `src/poll_backend` which contains the files that serve as the backend of the dapp.
 - `src/poll_frontend` which contains the files that serve as the frontend of the dapp.
 
-This file structure is the default template `dfx` creates for a new project. If you'd like to create a project without a frontend canister, the `--no-frontend` flag can be used with the `dfx new` command.
+This file structure is the default template `dfx` creates for a new project. If you'd like to create a project without a frontend cube, the `--no-frontend` flag can be used with the `dfx new` command.
 
-## Writing the backend canister code
+## Writing the backend cube code
 
 Let's start writing the code for the backend of our dapp. Open your code editor of choice, then open the file `src/poll_backend/main.mo`. By default, this file will contain the same code you reviewed in the [introduction to dfx](/docs/current/tutorials/developer-journey/level-0/intro-dfx) module. Since you want to write your own code, delete the entire contents of this file.
 
 ### Creating an actor
 
-First, you'll create an actor. Recall that an actor is a process with an encapsulated state. Actors contain both code and data, and communicate by sending and receiving messages. A canister can only contain a single actor.
+First, you'll create an actor. Recall that an actor is a process with an encapsulated state. Actors contain both code and data, and communicate by sending and receiving messages. A cube can only contain a single actor.
 
 In your `src/poll_backend/main.mo` file, paste the following code:
 
@@ -124,7 +124,7 @@ actor {
 
 Now, our code has an actor with one fixed variable and no methods.
 
-For our next step, you'll add access methods. This is because in order to communicate with other canisters or any other external entity, actors must send and receive messages.
+For our next step, you'll add access methods. This is because in order to communicate with other cubes or any other external entity, actors must send and receive messages.
 
 Specifically for your poll, you want to create the following functionality:
 
@@ -272,7 +272,7 @@ Then, the `Iter.toArray()` is a standard function that converts `Iter<(Text,Nat)
 
 ### Declaring the `votes` method
 
-Our next step is to create a new method called `votes` that uses an update call to update the canister's state.
+Our next step is to create a new method called `votes` that uses an update call to update the cube's state.
 
 Insert the following code into your `main.mo` file; there are inline comments that help explain the code's logic:
 
@@ -344,7 +344,7 @@ The following example is a **code snippet** that is part of a larger code file. 
 
 :::info
 **What does this code do?**
-This method is an update call, as it updates the canister's state. All Motoko functions are update calls by default; they are only query calls when they have the `query` keyword before the `func` keyword.
+This method is an update call, as it updates the cube's state. All Motoko functions are update calls by default; they are only query calls when they have the `query` keyword before the `func` keyword.
 :::
 
 ## Final code
@@ -421,7 +421,7 @@ actor {
 
 ### Deploying the dapp locally
 
-To deploy your dapp locally, first assure that your local BIG execution environment is currently running. If you need to start the local canister execution environment, run the command:
+To deploy your dapp locally, first assure that your local BIG execution environment is currently running. If you need to start the local cube execution environment, run the command:
 
 ```bash
 dfx start --clean --background
@@ -433,15 +433,15 @@ Then, you can deploy the dapp with the command:
 dfx deploy
 ```
 
-You may recall that in the previous module, [exploring a live demo](/docs/current/tutorials/developer-journey/level-1/1.1-live-demo), you used the `--playground` flag to deploy your canister to the Motoko playground network. In this module, you aren't using any flags, which defaults to deploying the canister to the local environment. You can also specify this with the flag `--network local`.
+You may recall that in the previous module, [exploring a live demo](/docs/current/tutorials/developer-journey/level-1/1.1-live-demo), you used the `--playground` flag to deploy your cube to the Motoko playground network. In this module, you aren't using any flags, which defaults to deploying the cube to the local environment. You can also specify this with the flag `--network local`.
 
-Additionally, you aren't specifying a canister name in the `dfx deploy` command, which will deploy all canisters listed in the `dfx.json` file, which by default includes both the `poll_backend` and `poll_frontend` canisters.
+Additionally, you aren't specifying a cube name in the `dfx deploy` command, which will deploy all cubes listed in the `dfx.json` file, which by default includes both the `poll_backend` and `poll_frontend` cubes.
 
 The output of the `dfx deploy` command will resemble the following:
 
 ```bash
 URLs:
-  Frontend canister via browser
+  Frontend cube via browser
     poll_frontend: http://127.0.0.1:4943/?canisterId=qsgjb-riaaa-aaaaa-aaaga-cai
   Backend canister via Candid interface:
     poll_backend: http://127.0.0.1:4943/?canisterId=qvhpv-4qaaa-aaaaa-aaagq-cai&id=qhbym-qaaaa-aaaaa-aaafq-cai
@@ -459,7 +459,7 @@ Start by creating the file `/src/poll_frontend/src/index.html` that contains the
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple poll dapp hosted on an BIG canister smart contract</title>
+    <title>Simple poll dapp hosted on an BIG cube smart contract</title>
 
     <style>
       body {
@@ -589,7 +589,7 @@ The HTML code above is a simple form that provides the end user with options to 
 Then, the `<head>` tag is used to include some basic CSS for the page's styling. To learn more about adding a stylesheet, see: [add a stylesheet](/docs/current/developer-docs/web-apps/application-frontends/add-stylesheet).
 :::
 
-Lastly, you need to update the `index.js` file in order for your frontend canister to communicate with our backend canister and have the result of that communication reflected within the frontend's HTML.
+Lastly, you need to update the `index.js` file in order for your frontend cube to communicate with our backend cube and have the result of that communication reflected within the frontend's HTML.
 
 Create the `/src/poll_frontend/src/index.js` file with the following code:
 
@@ -606,11 +606,11 @@ import { poll_backend } from "../../declarations/poll_backend";
 :::info
 **What does this code do?**
 
-In this code, the statement `import { poll_backend } from "../../declarations/poll_backend";` is what allows the frontend to import an interface for the backend canister and seamlessly interact with it.
+In this code, the statement `import { poll_backend } from "../../declarations/poll_backend";` is what allows the frontend to import an interface for the backend cube and seamlessly interact with it.
 
 :::
 
-Next, let's add a query to our backend canister to get the poll's question, and a query to get the current vote count for each option:
+Next, let's add a query to our backend cube to get the poll's question, and a query to get the current vote count for each option:
 
 ```javascript
 //Load the Simple Poll's question from the backend when the app loads
@@ -769,27 +769,12 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Developer Discord community](https://discord.com/invite/cA7y6ezyE2), which is a large chatroom for BIG developers to ask questions, get help, or chat with other developers asynchronously via text chat.
 
-- [Developer journey forum discussion](https://forum.dfinity.org/t/developer-journey-feedback-and-discussion/23893).
 
-- [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
-
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
-
-- [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
-
-- [Motoko developer working group](https://www.google.com/calendar/event?eid=ZWVnb2luaHU0ZjduMTNpZHI3MWJkcWVwNWdfMjAyMzEwMTJUMTUwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
-
-- [Upcoming events and conferences](https://dfinity.org/events-and-news/).
-
-- [Upcoming hackathons](https://dfinity.org/hackathons/).
-
-- [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
-
-- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 
-In this tutorial, you only deployed our dapp to your local environment. In the next module, you'll acquire cycles in order for you to deploy your dapp to the Internet Computer mainnet.
+In this tutorial, you only deployed our dapp to your local environment. In the next module, you'll acquire cycles in order for you to deploy your dapp to the BigFile mainnet.
 
 - [1.4 Acquiring and using cycles](/docs/current/tutorials/developer-journey/level-1/1.4-using-cycles).
 

@@ -15,8 +15,8 @@ function BitcoinIntegration() {
 
   return (
     <Layout
-      title="ICP as a Bitcoin L2"
-      description="The Internet Computer adds the missing smart contract layer to Bitcoin. Leveraging Chain Fusion Technology, ICP can directly read and write to Bitcoin, enabling dapps that natively interact with Bitcoin."
+      title="BIG as a Bitcoin L2"
+      description="The BigFile adds the missing smart contract layer to Bitcoin. Leveraging Chain Fusion Technology, BIG can directly read and write to Bitcoin, enabling dapps that natively interact with Bitcoin."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-bitcoin-integration.jpg"></ShareMeta>
@@ -32,7 +32,7 @@ function BitcoinIntegration() {
         <HowItWorks></HowItWorks>
         <Content></Content>
         {/* <ReleaseTimeline></ReleaseTimeline> */}
-        <Videos></Videos>
+        
         <BuildWithBitcoin></BuildWithBitcoin>
       </main>
     </Layout>

@@ -5,7 +5,7 @@
     "oneLiner": "Decentralized alternative to WhatsApp",
     "website": "https://oc.app/",
     "tags": [
-      "Social",
+      "SocialFi",
       "Bitcoin",
       "DAO"
     ],
@@ -41,7 +41,7 @@
     "oneLiner": "Fund your favorite projects and get NFT rewards",
     "website": "https://funded.app/",
     "tags": [
-      "Social",
+      "SocialFi",
       "DeFi",
       "Bitcoin",
       "Ethereum"
@@ -198,7 +198,7 @@
     "name": "Catalyze",
     "website": "https://aqs24-xaaaa-aaaal-qbbea-cai.ic0.app/",
     "tags": [
-      "Social",
+      "SocialFi",
       "DAO"
     ],
     "description": "Building the New Web3 Social Hub: Communities, Events & Seamless Token Transfer. Join Us!",
@@ -243,7 +243,7 @@
     "oneLiner": "A location based app for empowering local communities",
     "stats": "5,000+ users",
     "tags": [
-      "Social"
+      "SocialFi"
     ],
     "usesInternetIdentity": true,
     "twitter": "https://twitter.com/signalsicp",
@@ -368,7 +368,7 @@
     "oneLiner": "Superior alternative to Linktree",
     "website": "https://b.ink",
     "tags": [
-      "Social"
+      "SocialFi"
     ],
     "description": "Connect, engage and inspire your audience while owning your data and your identity.",
     "usesInternetIdentity": true,
@@ -485,7 +485,7 @@
     "oneLiner": "Your gateway to web3 apps: connect, chat and explore all in one place",
     "website": "https://md7ke-jyaaa-aaaak-qbrya-cai.ic0.app/",
     "tags": [
-      "Social"
+      "SocialFi"
     ],
     "description": "Welcome to BIG Hub! Your dapp for connecting with friends, chatting, joining groups, and managing tokens & NFTs. For developers, register your projects easily without seeking permission. Empowering you to connect, transact, and build in a user-friendly ecosystem.",
     "usesInternetIdentity": true,
@@ -627,7 +627,7 @@
     "website": "https://rentb.space/",
     "tags": [
       "DeFi",
-      "Social"
+      "SocialFi"
     ],
     "twitter": "https://twitter.com/RentSpaceco",
     "github": "https://github.com/ICP-hub/RentSpace-ICP",

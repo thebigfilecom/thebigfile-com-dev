@@ -8,8 +8,6 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KBMLOor1ink?si=ea3FtVLtkHUKL_y7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Overview
 
 [Mops](https://mops.one) and [Vessel](https://github.com/dfinity/vessel) are package managers for Motoko. In this guide, you'll explore how to download and install Mops and Vessel, then how to import and use different libraries that have been downloaded through a package manager.
@@ -73,7 +71,7 @@ dfx start --clean --background
 dfx new mops_example
 ```
 
-You will be prompted to select the language that your backend canister will use. Select 'Motoko':
+You will be prompted to select the language that your backend cube will use. Select 'Motoko':
 
 ```
 ? Select a backend language: ›
@@ -83,7 +81,7 @@ You will be prompted to select the language that your backend canister will use.
   Python (Kybra)
 ```
 
-Then, select a frontend framework for your frontend canister. Select 'No frontend canister':
+Then, select a frontend framework for your frontend cube. Select 'No frontend cube':
 
 ```
   ? Select a frontend framework: ›
@@ -92,7 +90,7 @@ Then, select a frontend framework for your frontend canister. Select 'No fronten
   Vue
   Vanilla JS
   No JS template
-❯ No frontend canister
+❯ No frontend cube
 ```
 
 Lastly, you can include extra features to be added to your project:
