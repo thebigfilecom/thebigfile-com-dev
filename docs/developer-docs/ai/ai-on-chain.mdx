@@ -16,13 +16,13 @@ BigFile unique ability to run compute at scale allows AI and neural networks to 
 To showcase this capability, this demo example displays how an AI that identifies an image can be deployed as a smart contract with a frontend and backend, both running on-chain.
 
 
-You can find the source code for this demo [on GitHub](https://github.com/dfinity/examples/tree/master/rust/image-classification).
+You can find the source code for this demo [on GitHub](https://github.com/thebigfilecom/examples/tree/main/rust/image-classification).
 
 ## How this example works
 
-In this example, the BIG smart contract accepts an image as input from the user and runs an image classification inference. The smart contract has two canisters:
+In this example, the BIG smart contract accepts an image as input from the user and runs an image classification inference. The smart contract has two cubes:
 
-- The frontend canister that contains HTML, JS, and CSS assets that are served in the web browser.
+- The frontend cube that contains HTML, JS, and CSS assets that are served in the web browser.
 
 - The backend canister that embeds the [Tract ONNX inference engine](https://github.com/sonos/tract) with the [MobileNet v2-7 model](https://github.com/onnx/models/tree/main/validated/vision/classification/mobilenet). This canister provides a `classify()` endpoint that the frontend canister calls.
 

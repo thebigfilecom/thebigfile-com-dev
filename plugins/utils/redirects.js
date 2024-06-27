@@ -353,11 +353,11 @@ const redirects = `
   /docs/current/developer-docs/integrations/ledger/interact-with-ledger  /docs/current/developer-docs/defi/big-tokens/using-the-ledger
   /docs/current/developer-docs/integrations/ledger/icp-index-local-setup /docs/current/developer-docs/defi/big-tokens/icp-index-local-setup
   /docs/current/developer-docs/integrations/ledger/collecting-dust /docs/current/developer-docs/defi/big-tokens/account-trimming
-  /docs/current/developer-docs/integrations/icrc-1/index /docs/current/references/icrc1-standard
-  /docs/current/developer-docs/integrations/icrc-1/ /docs/current/references/icrc1-standard
-  /docs/current/developer-docs/integrations/icrc-1/icrc1-ledger-setup /docs/current/developer-docs/defi/icrc-1/icrc1-ledger-setup
-  /docs/current/developer-docs/integrations/icrc-1/interact-with-ICRC-1-ledger /docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger
-  /docs/current/developer-docs/integrations/icrc-1/icrc1-index-setup /docs/current/developer-docs/defi/icrc-1/icrc1-index-setup
+  /docs/current/developer-docs/integrations/icrc-1/index /docs/current/references/bigrc1-standard
+  /docs/current/developer-docs/integrations/bigrc-1/ /docs/current/references/bigrc1-standard
+  /docs/current/developer-docs/integrations/bigrc-1/bigrc1-ledger-setup /docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup
+  /docs/current/developer-docs/integrations/bigrc-1/interact-with-ICRC-1-ledger /docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger
+  /docs/current/developer-docs/integrations/bigrc-1/bigrc1-index-setup /docs/current/developer-docs/defi/bigrc-1/bigrc1-index-setup
   /docs/current/developer-docs/integrations/exchange-rate/exchange-rate-canister /docs/current/developer-docs/defi/exchange-rate-canister
   /docs/current/developer-docs/integrations/rosetta/index  /docs/current/developer-docs/defi/rosetta/overview
   /docs/current/developer-docs/integrations/rosetta/  /docs/current/developer-docs/defi/rosetta/overview

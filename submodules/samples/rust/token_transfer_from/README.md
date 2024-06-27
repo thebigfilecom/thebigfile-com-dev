@@ -36,7 +36,7 @@ cd token_transfer_from
 ### Step 2: Determine ICRC-1 ledger file locations
 
 > [!NOTE]
-> You can read more about how to setup the ICRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/icrc-1/icrc1-ledger-setup).
+> You can read more about how to setup the BIGRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
 
 Go to the [releases overview](https://dashboard.internetcomputer.org/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
@@ -45,7 +45,7 @@ The URL for the ledger Wasm module is `https://download.dfinity.systems/ic/<REVI
 The URL for the ledger .did file is `https://raw.githubusercontent.com/dfinity/ic/<REVISION>/rs/rosetta-api/icrc1/ledger/ledger.did`, so with the above revision it would be `https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icrc1/ledger/ledger.did`.
 
 **OPTIONAL:**
-If you want to make sure, you have the latest ICRC-1 ledger files you can run the following script.
+If you want to make sure, you have the latest BIGRC-1 ledger files you can run the following script.
 
 ```sh
 curl -o download_latest_icrc1_ledger.sh "https://raw.githubusercontent.com/dfinity/ic/326df23607fc8280a047daba2d8462f1dfc57466/rs/rosetta-api/scripts/download_latest_icrc1_ledger.sh"
@@ -153,7 +153,7 @@ URLs:
 ### Step 6: Verify that the ledger canister is healthy and working as expected by using the command:
 
 > [!NOTE]
-> You can find more information on how to interact with the ICRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger#icrc-1-and-icrc-1-extension-endpoints)
+> You can find more information on how to interact with the ICRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger#bigrc-1-and-bigrc-1-extension-endpoints)
 
 ````bash
 dfx canister call icrc1_ledger_canister icrc1_balance_of "(record {

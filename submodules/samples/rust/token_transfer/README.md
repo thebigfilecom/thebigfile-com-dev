@@ -36,7 +36,7 @@ cd token_transfer
 ### Step 2: Determine ICRC-1 ledger file locations
 
 > [!NOTE]
-> You can read more about how to setup the ICRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/icrc-1/icrc1-ledger-setup).
+> You can read more about how to setup the ICRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
 
 Go to the [releases overview](https://dashboard.internetcomputer.org/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
@@ -156,7 +156,7 @@ URLs:
 ### Step 8: Verify that the ledger canister is healthy and working as expected by using the command:
 
 > [!NOTE]
-> You can find more information on how to interact with the ICRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger#icrc-1-and-icrc-1-extension-endpoints)
+> You can find more information on how to interact with the ICRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger#bigrc-1-and-bigrc-1-extension-endpoints)
 
 ````bash
 dfx canister call icrc1_ledger_canister icrc1_balance_of "(record {
