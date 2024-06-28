@@ -78,7 +78,7 @@ fn should_get_valid_id_alias() -> Result<(), CallError> {
         CanisterSigPublicKey::try_from(prepared_id_alias.canister_sig_pk_der.as_ref())
             .expect("failed parsing canister sig pk");
     let root_pk_raw =
-        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding IC root key.");
+        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding BIG root key.");
     verify_id_alias_credential_via_env(
         &env,
         prepared_id_alias.canister_sig_pk_der.clone(),
@@ -197,7 +197,7 @@ fn should_get_different_id_alias_for_different_users() -> Result<(), CallError> 
     );
 
     let root_pk_raw =
-        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding IC root key.");
+        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding BIG root key.");
     verify_credential_jws_with_canister_id(
         &id_alias_credentials_1.rp_id_alias_credential.credential_jws,
         &canister_sig_pk_1.canister_id,
@@ -323,7 +323,7 @@ fn should_get_different_id_alias_for_different_relying_parties() -> Result<(), C
     );
 
     let root_pk_raw =
-        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding IC root key.");
+        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding BIG root key.");
     verify_credential_jws_with_canister_id(
         &id_alias_credentials_1.rp_id_alias_credential.credential_jws,
         &canister_sig_pk_1.canister_id,
@@ -450,7 +450,7 @@ fn should_get_different_id_alias_for_different_issuers() -> Result<(), CallError
     );
 
     let root_pk_raw =
-        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding IC root key.");
+        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding BIG root key.");
     verify_credential_jws_with_canister_id(
         &id_alias_credentials_1.rp_id_alias_credential.credential_jws,
         &canister_sig_pk_1.canister_id,
@@ -567,7 +567,7 @@ fn should_get_different_id_alias_for_different_flows() -> Result<(), CallError> 
     );
 
     let root_pk_raw =
-        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding IC root key.");
+        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding BIG root key.");
     verify_credential_jws_with_canister_id(
         &id_alias_credentials_1.rp_id_alias_credential.credential_jws,
         &canister_sig_pk_1.canister_id,

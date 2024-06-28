@@ -34,7 +34,7 @@ Hello everyone and welcome back to this week's issue of the BigFile developer we
 
 You can read the full release notes with additional details [here](https://github.com/dfinity/sdk/releases/tag/0.15.0).
 
-## IC Rust CDK `v0.11.0`
+## BIG Rust CDK `v0.11.0`
 
 In the latest version of the Rust CDK, the Candid export workflow has changed. In this update, there is no need to compile for WASI separately.
 Instead, canisters should still use the `ic_cdk::export_candid!()` function to export the canister's Candid file, then the [candid_extractor](https://github.com/dfinity/cdk-rs/tree/main/src/candid-extractor) can be used to extract the Candid from the canister's Wasm. The candid_extractor is a CLI tool that can be used to extract the Candid definition from the canister's Wasm. 

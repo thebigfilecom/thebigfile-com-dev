@@ -2,8 +2,8 @@ use super::Hash;
 use crate::{cel::DefaultResponseCertificationType, DefaultResponseCertification, HttpResponse};
 use ic_representation_independent_hash::{hash, representation_independent_hash, Value};
 
-const CERTIFICATE_HEADER_NAME: &str = "IC-Certificate";
-const CERTIFICATE_EXPRESSION_HEADER_NAME: &str = "IC-CertificateExpression";
+const CERTIFICATE_HEADER_NAME: &str = "BIG-Certificate";
+const CERTIFICATE_EXPRESSION_HEADER_NAME: &str = "BIG-CertificateExpression";
 const RESPONSE_STATUS_PSEUDO_HEADER_NAME: &str = ":ic-cert-status";
 
 /// Representation of response headers filtered by [filter_response_headers].
@@ -11,9 +11,9 @@ const RESPONSE_STATUS_PSEUDO_HEADER_NAME: &str = ":ic-cert-status";
 pub struct ResponseHeaders {
     /// Filtered headers
     pub headers: Vec<(String, String)>,
-    /// IC-Certificate header
+    /// BIG-Certificate header
     pub certificate: Option<String>,
-    /// IC-CertificateExpression header
+    /// BIG-CertificateExpression header
     pub certificate_expression: Option<String>,
 }
 
@@ -227,7 +227,7 @@ mod tests {
             status_code: 200,
             headers: vec![
                 (
-                    "IC-CertificateExpression".into(),
+                    "BIG-CertificateExpression".into(),
                     remove_whitespace(CERTIFIED_HEADERS_CEL_EXPRESSION),
                 ),
                 ("Accept-Encoding".into(), "gzip".into()),
@@ -274,7 +274,7 @@ mod tests {
             status_code: 200,
             headers: vec![
                 (
-                    "IC-CertificateExpression".into(),
+                    "BIG-CertificateExpression".into(),
                     remove_whitespace(HEADER_EXCLUSIONS_CEL_EXPRESSION),
                 ),
                 ("Accept-Encoding".into(), "gzip".into()),
@@ -321,9 +321,9 @@ mod tests {
         let response_without_excluded_headers = HttpResponse {
             status_code: 200,
             headers: vec![
-                ("IC-Certificate".into(), CERTIFICATE.into()),
+                ("BIG-Certificate".into(), CERTIFICATE.into()),
                 (
-                    "IC-CertificateExpression".into(),
+                    "BIG-CertificateExpression".into(),
                     remove_whitespace(CERTIFIED_HEADERS_CEL_EXPRESSION),
                 ),
                 ("Accept-Encoding".into(), "gzip".into()),
@@ -372,9 +372,9 @@ mod tests {
         let response_without_excluded_headers = HttpResponse {
             status_code: 200,
             headers: vec![
-                ("IC-Certificate".into(), CERTIFICATE.into()),
+                ("BIG-Certificate".into(), CERTIFICATE.into()),
                 (
-                    "IC-CertificateExpression".into(),
+                    "BIG-CertificateExpression".into(),
                     remove_whitespace(HEADER_EXCLUSIONS_CEL_EXPRESSION),
                 ),
                 ("Accept-Encoding".into(), "gzip".into()),
@@ -424,9 +424,9 @@ mod tests {
         HttpResponse {
             status_code: 200,
             headers: vec![
-                ("IC-Certificate".into(), CERTIFICATE.into()),
+                ("BIG-Certificate".into(), CERTIFICATE.into()),
                 (
-                    "IC-CertificateExpression".into(),
+                    "BIG-CertificateExpression".into(),
                     remove_whitespace(cel_expression),
                 ),
                 ("Accept-Encoding".into(), "gzip".into()),

@@ -59,13 +59,13 @@ export type SampleContentType =
 export const sampleItems: SampleItem[] = [
   {
     index: 0,
-    title: "IC ETH Starter",
+    title: "BIG ETH Starter",
     image: "/img/samples/ic-eth-starter.png",
     domains: ["Multi-chain"],
     languages: ["motoko", "rust"],
     level: "advanced",
     contentType: ["code samples", "documentation"],
-    body: "IC-ETH verifies ETH NFTs, supports main/test nets.",
+    body: "BIG-ETH verifies ETH NFTs, supports main/test nets.",
     links: {
       github: "https://github.com/dfinity/ic-eth-starter",
       docs: "/docs/current/tutorials/developer-journey/level-5/5.2-BIG-ETH-tutorial",
@@ -75,7 +75,7 @@ export const sampleItems: SampleItem[] = [
 
   {
     index: 1,
-    title: "Add ERC-20 to IC ETH Starter",
+    title: "Add ERC-20 to BIG ETH Starter",
     image: "/img/samples/ic-eth-starter-addition.png",
     domains: ["Multi-chain"],
     languages: ["motoko", "rust"],
@@ -95,7 +95,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["rust"],
     level: "advanced",
     contentType: ["community repo"],
-    body: "Oisy Wallet: Multichain, ICP-based, manages ETH/ERC20, extendable to BTC/IC.",
+    body: "Oisy Wallet: Multichain, ICP-based, manages ETH/ERC20, extendable to BTC/BIG.",
     links: {
       github: "https://github.com/dfinity/oisy-wallet",
     },
@@ -289,7 +289,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko", "rust", "javascript"],
     level: "beginner",
     contentType: ["documentation", "videos", "tutorial"],
-    body: "Quickly set up a static website structure, add content and basic styling, and deploy on the IC.",
+    body: "Quickly set up a static website structure, add content and basic styling, and deploy on the BIG.",
     links: {
       youtube: "https://www.youtube.com/watch?v=JAQ1dkFvfPI",
     },
@@ -308,7 +308,7 @@ export const sampleItems: SampleItem[] = [
       "live demos",
       "tutorial",
     ],
-    body: "Build dapp to enable DeFi applications on the IC.",
+    body: "Build dapp to enable DeFi applications on the BIG.",
     links: {
       action: {
         text: "Get Code",
@@ -396,7 +396,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko"],
     level: "advanced",
     contentType: ["code samples", "documentation"],
-    body: "Learn how the IC management canister functions as an actor (reference).",
+    body: "Learn how the BIG management canister functions as an actor (reference).",
     links: {
       motoko:
         "https://github.com/dfinity/examples/tree/master/motoko/actor_reference",
@@ -410,7 +410,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko", "rust", "javascript"],
     level: "beginner",
     contentType: ["documentation"],
-    body: "Demonstrates how to deploy a web game on the IC.",
+    body: "Demonstrates how to deploy a web game on the BIG.",
     links: {
       docs: "/docs/current/samples/host-a-webgame",
     },

@@ -10,8 +10,8 @@ use crate::instrumentation::ic_calls::{FunctionCost, InjectionKind};
 
 mod ic_calls;
 
-// Adopted from IC code with slight adjustments.
-// This implements the IC's new instruction cost function:
+// Adopted from BIG code with slight adjustments.
+// This implements the BIG's new instruction cost function:
 // https://github.com/dfinity/ic/blob/d49f4daea38ca25fe61012214e049ecc0866292d/rs/embedders/src/wasm_utils/instrumentation.rs#L174
 pub fn instruction_to_cost_new(i: &Instruction) -> u64 {
     // This aims to be a complete list of all instructions that can be executed, with certain exceptions.
@@ -759,7 +759,7 @@ fn injections_new(code: &[Instruction], ic_call_costs: &FunctionCost) -> Vec<Inj
                     InjectionKind::Dynamic,
                 ));
             }
-            // Count additional IC call costs if applicable.
+            // Count additional BIG call costs if applicable.
             // Source: https://github.com/dfinity/ic-wasm/blob/61692f44cf85b93d43311492283246bb443449d3/src/instrumentation.rs#L200
             // With slight adjustments.
             Call(function_id) => match ic_call_costs.get_cost(*function_id) {

@@ -2,11 +2,11 @@
 
 ## Overview
 
-The interoperability of canisters on the BigFile (IC) is an important feature. 
+The interoperability of canisters on the BigFile (BIG) is an important feature. 
 
 `dfx` provides a consistent developer workflow for integrating third-party canisters.
 
-A service provider prepares the canister to be `pullable` and deploys it on the IC mainnet.
+A service provider prepares the canister to be `pullable` and deploys it on the BIG mainnet.
 
 A service consumer then can pull dependencies directly from mainnet and easily deploy them on a local replica.
 
@@ -212,7 +212,7 @@ There are three dependencies:
     the canister provider serves a customized wasm at `wasm_url` to be deployed locally.
     But the corresponding `wasm_hash` or `wasm_hash_url` is not provided (or the content is wrong).
     `dfx deps` is designed to accept the mismatch hash and will proceed in the following `dfx deps init/deploy`.
--  `dfx deps pull` connects to the IC mainnet by default (`--network ic`).
+-  `dfx deps pull` connects to the BIG mainnet by default (`--network ic`).
 You can choose other network as usual, e.g. `--network local`.
 
 ### 3. Set init arguments using `dfx deps init`

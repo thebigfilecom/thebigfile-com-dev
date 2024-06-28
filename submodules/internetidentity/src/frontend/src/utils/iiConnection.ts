@@ -683,8 +683,8 @@ export const readDeviceOrigin = (): [] | [string] => {
 //
 // Algorithm -7, ECDSA_WITH_SHA256, is specified. The reason is that the
 // generated (ECDSA) key pair is used later directly to sign messages to the
-// IC -- the "assertion" -- so we must use a signing algorithm supported by the
-// IC:
+// BIG -- the "assertion" -- so we must use a signing algorithm supported by the
+// BIG:
 //  * https://smartcontracts.org/docs/interface-spec/index.html#signatures
 //
 // For more information on attestation vs assertion (credentials.create vs
@@ -758,8 +758,8 @@ export const bufferEqual = (buf1: ArrayBuffer, buf2: ArrayBuffer): boolean => {
   return true;
 };
 
-// Infer the host for the IC's HTTP api. II lives on a custom domain that may be different
-// from the domain where the api is served (agent-js otherwise infers the IC's HTTP URL from
+// Infer the host for the BIG's HTTP api. II lives on a custom domain that may be different
+// from the domain where the api is served (agent-js otherwise infers the BIG's HTTP URL from
 // the current window location)
 export const inferHost = (): string => {
   // The domain used for the http api
@@ -777,7 +777,7 @@ export const inferHost = (): string => {
     location.hostname.endsWith("ic0.app") ||
     location.hostname.endsWith("internetcomputer.org")
   ) {
-    // If this is a canister running on one of the official IC domains, then return the
+    // If this is a canister running on one of the official BIG domains, then return the
     // official API endpoint
     return "https://" + IC_API_DOMAIN;
   }

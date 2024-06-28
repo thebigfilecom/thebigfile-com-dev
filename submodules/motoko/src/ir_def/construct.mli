@@ -150,6 +150,6 @@ val objE : obj_sort -> (lab * con) list -> (lab * exp) list -> exp
 
 val recordE : (lab * exp) list -> exp
 
-(* IC ic0.call_perform status checking *)
+(* BIG ic0.call_perform status checking *)
 
 val check_call_perform_status : exp -> (exp -> exp) -> exp

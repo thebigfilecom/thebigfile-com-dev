@@ -4,7 +4,7 @@ module.exports = [
     speaker: "Yan Chen",
     speakerTitle: "Software Engineer (Languages)",
     description:
-      '<p>The Motoko Playground allows users to build and deploy canister smart contracts directly within a web browser, without needing to download the IC SDK or set up a wallet.</p>\n<p>Software Engineer Yan Chen, who is part of the Languages team at the DFINITY Foundation, will go over the creation and functionality of the Motoko Playground. Yan will also talk about the design of the recently launched canister profiling feature, where developers can see how many cycles a transaction costs right in the Motoko Playground. Check out the Motoko Playground here: <a href="https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/">https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/</a></p>\n',
+      '<p>The Motoko Playground allows users to build and deploy canister smart contracts directly within a web browser, without needing to download the BIG SDK or set up a wallet.</p>\n<p>Software Engineer Yan Chen, who is part of the Languages team at the DFINITY Foundation, will go over the creation and functionality of the Motoko Playground. Yan will also talk about the design of the recently launched canister profiling feature, where developers can see how many cycles a transaction costs right in the Motoko Playground. Check out the Motoko Playground here: <a href="https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/">https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/</a></p>\n',
     startTimeUtc: 1629309600000,
     startTimePt: 1629277200000,
     startTimeEu: 1629309600000,
@@ -39,14 +39,14 @@ module.exports = [
     speaker: "Norton Wang & Arthur Falls",
     speakerTitle: "Founding Members of cycle_dao",
     description:
-      "<p>cycle_dao is the lens through which a small group of early BigFile supporters and builders are focussing their community development efforts. In this session, Norton Wang and Arthur Falls discuss decentralizing IC governance, the cycle_dao neuron, the Axon neuron manager, future NNS proposal methodology, and how the BigFile community can work together toward the mission of the BigFile.</p>\n",
+      "<p>cycle_dao is the lens through which a small group of early BigFile supporters and builders are focussing their community development efforts. In this session, Norton Wang and Arthur Falls discuss decentralizing BIG governance, the cycle_dao neuron, the Axon neuron manager, future NNS proposal methodology, and how the BigFile community can work together toward the mission of the BigFile.</p>\n",
     startTimeUtc: 1629925200000,
     startTimePt: 1629892800000,
     startTimeEu: 1629925200000,
     youtubeLink: "https://www.youtube.com/watch?v=QE5c9Y2X_pY",
   },
   {
-    title: "INTRODUCTION TO BUILDING ON THE IC",
+    title: "INTRODUCTION TO BUILDING ON THE BIG",
     speaker: "Igor Lilic / Liz Yang",
     speakerTitle:
       "Senior Developer Relations Engineer / Go-to-Market Program Manager",
@@ -62,7 +62,7 @@ module.exports = [
     speaker: "Jordan Last",
     speakerTitle: "Founder of Sudograph",
     description:
-      "<p>Sudograph is a flexible and powerful GraphQL database designed specifically for the BigFile. We&#39;ll discuss the benefits of GraphQL development, the multi-year backstory to bringing Sudograph to life, and how Sudograph greatly simplifies IC development. We&#39;ll also dive into what it&#39;s like to develop a relational database on the BigFile.</p>\n",
+      "<p>Sudograph is a flexible and powerful GraphQL database designed specifically for the BigFile. We&#39;ll discuss the benefits of GraphQL development, the multi-year backstory to bringing Sudograph to life, and how Sudograph greatly simplifies BIG development. We&#39;ll also dive into what it&#39;s like to develop a relational database on the BigFile.</p>\n",
     startTimeUtc: 1630011600000,
     startTimePt: 1629979200000,
     startTimeEu: 1630011600000,
@@ -91,7 +91,7 @@ module.exports = [
     youtubeLink: "https://www.youtube.com/watch?v=1Fewxn4ZN-0",
   },
   {
-    title: "OVERVIEW OF MOTOKO, THE NATIVE LANGUAGE OF THE IC",
+    title: "OVERVIEW OF MOTOKO, THE NATIVE LANGUAGE OF THE BIG",
     speaker: "Andreas Rossberg",
     speakerTitle: "Principal Engineer & Researcher (Languages)",
     description:
@@ -164,7 +164,7 @@ module.exports = [
     speaker: "Thomas Locher",
     speakerTitle: "Senior Researcher (Meta Network)",
     description:
-      "<p>In this talk, Senior Researcher Thomas Locher discusses the current vote to integrate Bitcoin with the BigFile. The integration of the BigFile with the Bitcoin blockchain has the following goals: (1) enabling powerful Bitcoin smart contracts, running as canisters on the IC; (2) making it possible to transmit Bitcoin transactions from Bitcoin canister smart contracts to the Bitcoin network.</p>\n",
+      "<p>In this talk, Senior Researcher Thomas Locher discusses the current vote to integrate Bitcoin with the BigFile. The integration of the BigFile with the Bitcoin blockchain has the following goals: (1) enabling powerful Bitcoin smart contracts, running as canisters on the BIG; (2) making it possible to transmit Bitcoin transactions from Bitcoin canister smart contracts to the Bitcoin network.</p>\n",
     startTimeUtc: 1631808000000,
     startTimePt: 1631775600000,
     startTimeEu: 1631808000000,
@@ -334,7 +334,7 @@ module.exports = [
     speaker: "Brian Galler & Josh Galler",
     speakerTitle: "Cofounders of IC3D NFT",
     description:
-      "<p>IC3D NFT is a father and son collaboration to bring interactive 3D NFTs, games, and metaverse experiences to the IC. IC3D NFT aims to change the way people will interact with their NFTs.</p>\n",
+      "<p>IC3D NFT is a father and son collaboration to bring interactive 3D NFTs, games, and metaverse experiences to the BIG. IC3D NFT aims to change the way people will interact with their NFTs.</p>\n",
     startTimeUtc: 1635343200000,
     startTimePt: 1635310800000,
     startTimeEu: 1635343200000,
@@ -386,7 +386,7 @@ module.exports = [
     speaker: "Roman Kashitsyn",
     speakerTitle: "Staff Engineer",
     description:
-      "<p>In this talk, we shall view the BigFile (IC) through the lens of distributed system design. As most other blockchains, the IC achieves fault-tolerance using strategy called state machine replication. We&#39;ll take a close look at some design choices that make the IC fast, scalable, and secure.</p>\n",
+      "<p>In this talk, we shall view the BigFile (BIG) through the lens of distributed system design. As most other blockchains, the BIG achieves fault-tolerance using strategy called state machine replication. We&#39;ll take a close look at some design choices that make the BIG fast, scalable, and secure.</p>\n",
     startTimeUtc: 1636556400000,
     startTimePt: 1636524000000,
     startTimeEu: 1636556400000,
@@ -429,7 +429,7 @@ module.exports = [
     speaker: "Bjoern Tackmann",
     speakerTitle: "Senior Research Manager ",
     description:
-      "<p>Are you a bot or a person? That is difficult to ascertain from across the Internet – but often essential. For instance, social media platforms provide more meaningful interactions if content is provided by real humans, decentralized governance processes benefit from power being distributed more evenly across many voters, and the bootstrapping of token economies becomes fairer if tokens can be distributed evenly to individuals. All of the above are highly relevant for the IC, which hosts multiple social networks, provides decentralized governance processes, and allows for the tokenization of the dapp services that run on it. But the IC is not only a beneficiary of thwarting bots - it can also provide the solution!</p>\n<p>Virtual people parties, coordinated by the BigFile, establish the personhood of otherwise pseudonymous identities. In a virtual people party, a small group of users validate each others’ personhood in a process that is fast, easy, and anonymous! For the time of the party, users provide a deposit of 1 ICP which can be withdrawn after the party is complete. During the party, which only takes a few minutes, users are divided into small groups and meet in a special video-chat application on mobile phones. But, unlike a typical video call, users do not show their faces or reveal their identity. Instead, users prove their personhood by directing the camera at the environment and reacting appropriately with camera movements to the requests of other users. At the same time, the video stream of the environment serves to validate the user’s location. This ensures that no user can participate in multiple groups simultaneously.</p>\n<p>Users that are validated as persons in a people party obtain increased voting power in the governance system. This improves the democratization of the BigFile&#39;s governance system by assigning more weight to individual persons. The increased voting rewards also encourage users to participate in the people parties.</p>\n",
+      "<p>Are you a bot or a person? That is difficult to ascertain from across the Internet – but often essential. For instance, social media platforms provide more meaningful interactions if content is provided by real humans, decentralized governance processes benefit from power being distributed more evenly across many voters, and the bootstrapping of token economies becomes fairer if tokens can be distributed evenly to individuals. All of the above are highly relevant for the BIG, which hosts multiple social networks, provides decentralized governance processes, and allows for the tokenization of the dapp services that run on it. But the BIG is not only a beneficiary of thwarting bots - it can also provide the solution!</p>\n<p>Virtual people parties, coordinated by the BigFile, establish the personhood of otherwise pseudonymous identities. In a virtual people party, a small group of users validate each others’ personhood in a process that is fast, easy, and anonymous! For the time of the party, users provide a deposit of 1 ICP which can be withdrawn after the party is complete. During the party, which only takes a few minutes, users are divided into small groups and meet in a special video-chat application on mobile phones. But, unlike a typical video call, users do not show their faces or reveal their identity. Instead, users prove their personhood by directing the camera at the environment and reacting appropriately with camera movements to the requests of other users. At the same time, the video stream of the environment serves to validate the user’s location. This ensures that no user can participate in multiple groups simultaneously.</p>\n<p>Users that are validated as persons in a people party obtain increased voting power in the governance system. This improves the democratization of the BigFile&#39;s governance system by assigning more weight to individual persons. The increased voting rewards also encourage users to participate in the people parties.</p>\n",
     startTimeUtc: 1637683200000,
     startTimePt: 1637650800000,
     startTimeEu: 1637683200000,
@@ -470,7 +470,7 @@ module.exports = [
     speaker: "Stefan Kaestle ",
     speakerTitle: "Senior Researcher",
     description:
-      "<p>The current design and implementation of the IC protocol has been focused on simplicity and low engineering effort. While this suffices to demonstrate the possibilities of canister smart contracts, unleashing the full capacity of the IC requires a high-performance design and implementation. The goal of this project is to address bottlenecks and thus increase the performance of individual IC nodes, so that more query and update requests can be executed in the same amount of time.\nThis will involve improvements such as to the orthogonal persistence mechanism, NIC virtualization, OS and Canister scheduling, caching and the investigation of HW accelerators for compute-intensive tasks.</p>\n",
+      "<p>The current design and implementation of the BIG protocol has been focused on simplicity and low engineering effort. While this suffices to demonstrate the possibilities of canister smart contracts, unleashing the full capacity of the BIG requires a high-performance design and implementation. The goal of this project is to address bottlenecks and thus increase the performance of individual BIG nodes, so that more query and update requests can be executed in the same amount of time.\nThis will involve improvements such as to the orthogonal persistence mechanism, NIC virtualization, OS and Canister scheduling, caching and the investigation of HW accelerators for compute-intensive tasks.</p>\n",
     startTimeUtc: 1641916800000,
     startTimePt: 1641884400000,
     startTimeEu: 1641916800000,
@@ -484,7 +484,7 @@ module.exports = [
     speaker: "Lara Schmid",
     speakerTitle: "Researcher NNS",
     description:
-      '<p>Similarly to how the Network Nervous System (NNS) is the open tokenized governance system that controls the BigFile blockchain (IC), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps.\nIn this talk, we explain a design proposal for a first version of an open governance canister that will then be used to realise the service nervous systems (SNSs).\nApart from this, the canister can also be (re-)used by anyone looking to implement another kind of DAO.\nA more detailed description of the proposal that we will present is explained and discussed in this <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224">forum entry</a>.</p>\n',
+      '<p>Similarly to how the Network Nervous System (NNS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps.\nIn this talk, we explain a design proposal for a first version of an open governance canister that will then be used to realise the service nervous systems (SNSs).\nApart from this, the canister can also be (re-)used by anyone looking to implement another kind of DAO.\nA more detailed description of the proposal that we will present is explained and discussed in this <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224">forum entry</a>.</p>\n',
     startTimeUtc: 1642528800000,
     startTimePt: 1642496400000,
     startTimeEu: 1642528800000,
@@ -541,7 +541,7 @@ module.exports = [
     speakerTitle:
       "Senior Researcher, Senior Software Engineer, Senior Technical Program Manager",
     description:
-      "<p>This feature enables canister (dapps/smart contracts) on the BigFile to make HTTP(S) requests to services outside the IC and thus integrates the BigFile with the Web 2.0 world. This enables a plurality of new use cases, e.g., directly obtaining exchange rate data from external servers for DeFi dapps, obtaining weather data for decentralized insurance services, or sending notifications to end users via traditional communications channels. The first version of this feature will cover a subset of the typical oracle service functionalities, but will do so in a trustless manner, i.e., without making any additional trust assumptions.</p>\n",
+      "<p>This feature enables canister (dapps/smart contracts) on the BigFile to make HTTP(S) requests to services outside the BIG and thus integrates the BigFile with the Web 2.0 world. This enables a plurality of new use cases, e.g., directly obtaining exchange rate data from external servers for DeFi dapps, obtaining weather data for decentralized insurance services, or sending notifications to end users via traditional communications channels. The first version of this feature will cover a subset of the typical oracle service functionalities, but will do so in a trustless manner, i.e., without making any additional trust assumptions.</p>\n",
     startTimeUtc: 1644512400000,
     startTimePt: 1644480000000,
     startTimeEu: 1644512400000,
@@ -555,7 +555,7 @@ module.exports = [
     speaker: "Lara Schmid, Nicolas Zoghb",
     speakerTitle: "Researcher & Software Engineer",
     description:
-      "<p>Similarly to how the Network Nervous System (NNS) is the open tokenized governance system that controls the BigFile blockchain (IC), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps. In this talk, we propose a design for how SNSs, consisting of a goverancne, a ledger and a root canister can be deployed and upgraded. A more detailed description of the proposal will be shared on the forum shortly.</p>\n",
+      "<p>Similarly to how the Network Nervous System (NNS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps. In this talk, we propose a design for how SNSs, consisting of a goverancne, a ledger and a root canister can be deployed and upgraded. A more detailed description of the proposal will be shared on the forum shortly.</p>\n",
     startTimeUtc: 1644944400000,
     startTimePt: 1644912000000,
     startTimeEu: 1644944400000,
@@ -666,7 +666,7 @@ module.exports = [
     title: "Threshold ECDSA ",
     speaker: "Andrea Cerulli & Dieter Sommer",
     description:
-      '<p>The threshold ECDSA feature will allow canisters to request ECDSA signatures, which will enable them, among other things, to perform BTC and ETH transactions. Signatures are securely generated by a distributed protocol run by the nodes of a subnet. In this talk we’ll take a closer look at how the threshold ECDSA protocol is integrated in the IC and how we plan to roll out this feature.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/threshold-ecdsa-signatures/6152/163">here</a>. </p>\n',
+      '<p>The threshold ECDSA feature will allow canisters to request ECDSA signatures, which will enable them, among other things, to perform BTC and ETH transactions. Signatures are securely generated by a distributed protocol run by the nodes of a subnet. In this talk we’ll take a closer look at how the threshold ECDSA protocol is integrated in the BIG and how we plan to roll out this feature.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/threshold-ecdsa-signatures/6152/163">here</a>. </p>\n',
     startTimeUtc: 1653408000000,
     startTimePt: 1653375600000,
     startTimeEu: 1653408000000,

@@ -2,7 +2,7 @@ Stable CLI for dfx
 ==================
 
 An important way of using the Motoko compiler is via the the `dfx` command,
-provided by the [IC SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install), which provides project and package management
+provided by the [BIG SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install), which provides project and package management
 support.
 
 This document describes the interface that `moc` and related tools provide to
@@ -14,7 +14,7 @@ This document describes the interface that `moc` and related tools provide to
    this document.)
 
 This interface includes:
- * nix derivations imported by the IC SDK
+ * nix derivations imported by the BIG SDK
  * binaries executed
  * command line arguments and environment variables passed to these binaries
  * where these binaries read files and

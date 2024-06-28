@@ -68,11 +68,11 @@ pub fn ic_mem_fn(attr: TokenStream, input: TokenStream) -> TokenStream {
     let fun_sig = &fun.sig;
 
     // Some sanity checks
-    assert!(fun_sig.asyncness.is_none(), "IC functions cannot be async");
+    assert!(fun_sig.asyncness.is_none(), "BIG functions cannot be async");
     assert_eq!(
         fun_sig.generics.params.len(),
         1,
-        "IC memory functions should have one generic argument for the memory implementation"
+        "BIG memory functions should have one generic argument for the memory implementation"
     );
     assert!(
         fun_sig.abi.is_none(),
@@ -80,7 +80,7 @@ pub fn ic_mem_fn(attr: TokenStream, input: TokenStream) -> TokenStream {
     );
     assert!(
         fun_sig.variadic.is_none(),
-        "IC functions cannot have variadic arguments"
+        "BIG functions cannot have variadic arguments"
     );
 
     let fn_ident = &fun_sig.ident;
@@ -93,7 +93,7 @@ pub fn ic_mem_fn(attr: TokenStream, input: TokenStream) -> TokenStream {
         .enumerate()
         .filter_map(|(i, arg)| match arg {
             syn::FnArg::Receiver(_) => {
-                panic!("IC functions can't have receivers (`&self`, `&mut self`, etc.)")
+                panic!("BIG functions can't have receivers (`&self`, `&mut self`, etc.)")
             }
             syn::FnArg::Typed(pat) => {
                 if i == 0 {

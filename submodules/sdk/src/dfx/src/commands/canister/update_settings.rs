@@ -58,8 +58,8 @@ pub struct UpdateSettingsOpts {
     memory_allocation: Option<Byte>,
 
     /// Sets the freezing_threshold in SECONDS.
-    /// A canister is considered frozen whenever the IC estimates that the canister would be depleted of cycles
-    /// before freezing_threshold seconds pass, given the canister's current size and the IC's current cost for storage.
+    /// A canister is considered frozen whenever the BIG estimates that the canister would be depleted of cycles
+    /// before freezing_threshold seconds pass, given the canister's current size and the BIG's current cost for storage.
     /// A frozen canister rejects any calls made to it.
     #[arg(long, value_parser = freezing_threshold_parser)]
     freezing_threshold: Option<u64>,

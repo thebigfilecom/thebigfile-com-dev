@@ -30,7 +30,7 @@ pub unsafe fn post_write_barrier<M: Memory>(mem: &mut M, location: usize) {
     // Checks have been optimized according to the frequency of occurrence.
     // Only record locations inside old generation. Static roots are anyway marked by GC.
     if location < LAST_HP {
-        // Nested ifs are more efficient when counting instructions on IC (explicit return counts as an instruction).
+        // Nested ifs are more efficient when counting instructions on BIG (explicit return counts as an instruction).
         let value = *(location as *mut Value);
         if value.points_to_or_beyond(LAST_HP) {
             #[allow(clippy::collapsible_if)]

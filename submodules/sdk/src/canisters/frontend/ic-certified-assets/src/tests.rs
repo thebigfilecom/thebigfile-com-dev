@@ -39,7 +39,7 @@ pub fn verify_response(
     let canister_id = create_canister_id("rdmx6-jaaaa-aaaaa-aaadq-cai");
     let min_requested_verification_version = request.get_certificate_version();
 
-    // inject certificate into IC-Certificate header with 'certificate=::'
+    // inject certificate into BIG-Certificate header with 'certificate=::'
     let data = CertificateBuilder::new(
         &canister_id.to_string(),
         Digest(state.root_hash()).as_bytes(),
@@ -50,8 +50,8 @@ pub fn verify_response(
     let (_, header_value) = response
         .headers
         .iter_mut()
-        .find(|(header, _)| header == "IC-Certificate")
-        .expect("HttpResponse is missing 'IC-Certificate' header");
+        .find(|(header, _)| header == "BIG-Certificate")
+        .expect("HttpResponse is missing 'BIG-Certificate' header");
     *header_value = header_value.replace(
         "certificate=::",
         &format!("certificate=:{replacement_cert_value}:"),
@@ -405,7 +405,7 @@ fn serve_correct_encoding_v1() {
     );
     assert_eq!(identity_response.status_code, 200);
     assert_eq!(identity_response.body.as_ref(), IDENTITY_BODY);
-    assert!(lookup_header(&identity_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&identity_response, "BIG-Certificate").is_some());
 
     // If only uncertified encoding is accepted, return it without any certificate
     let gzip_response = state.http_request(
@@ -417,7 +417,7 @@ fn serve_correct_encoding_v1() {
     );
     assert_eq!(gzip_response.status_code, 200);
     assert_eq!(gzip_response.body.as_ref(), GZIP_BODY);
-    assert!(lookup_header(&gzip_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&gzip_response, "BIG-Certificate").is_some());
 
     // If no encoding matches, return most important encoding with certificate
     let unknown_encoding_response = certified_http_request(
@@ -428,7 +428,7 @@ fn serve_correct_encoding_v1() {
     );
     assert_eq!(unknown_encoding_response.status_code, 200);
     assert_eq!(unknown_encoding_response.body.as_ref(), IDENTITY_BODY);
-    assert!(lookup_header(&unknown_encoding_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&unknown_encoding_response, "BIG-Certificate").is_some());
 
     let unknown_encoding_response_2 = certified_http_request(
         &state,
@@ -438,7 +438,7 @@ fn serve_correct_encoding_v1() {
     );
     assert_eq!(unknown_encoding_response_2.status_code, 200);
     assert_eq!(unknown_encoding_response_2.body.as_ref(), IDENTITY_BODY);
-    assert!(lookup_header(&unknown_encoding_response_2, "IC-Certificate").is_some());
+    assert!(lookup_header(&unknown_encoding_response_2, "BIG-Certificate").is_some());
 
     // Serve 404 if the requested asset has no encoding uploaded at all
     // certification v1 cannot certify 404
@@ -481,7 +481,7 @@ fn serve_correct_encoding_v2() {
     );
     assert_eq!(identity_response.status_code, 200);
     assert_eq!(identity_response.body.as_ref(), IDENTITY_BODY);
-    assert!(lookup_header(&identity_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&identity_response, "BIG-Certificate").is_some());
 
     let gzip_response = certified_http_request(
         &state,
@@ -492,7 +492,7 @@ fn serve_correct_encoding_v2() {
     );
     assert_eq!(gzip_response.status_code, 200);
     assert_eq!(gzip_response.body.as_ref(), GZIP_BODY);
-    assert!(lookup_header(&gzip_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&gzip_response, "BIG-Certificate").is_some());
 
     let no_encoding_response = certified_http_request(
         &state,
@@ -503,7 +503,7 @@ fn serve_correct_encoding_v2() {
     );
     assert_eq!(no_encoding_response.status_code, 404);
     assert_eq!(no_encoding_response.body.as_ref(), "not found".as_bytes());
-    assert!(lookup_header(&no_encoding_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&no_encoding_response, "BIG-Certificate").is_some());
 }
 
 #[test]
@@ -538,7 +538,7 @@ fn serve_fallback_v2() {
             .with_certificate_version(2)
             .build(),
     );
-    let certificate_header = lookup_header(&identity_response, "IC-Certificate").unwrap();
+    let certificate_header = lookup_header(&identity_response, "BIG-Certificate").unwrap();
     println!("certificate_header: {}", certificate_header);
 
     assert_eq!(identity_response.status_code, 200);
@@ -552,7 +552,7 @@ fn serve_fallback_v2() {
             .with_certificate_version(2)
             .build(),
     );
-    let certificate_header = lookup_header(&fallback_response, "IC-Certificate").unwrap();
+    let certificate_header = lookup_header(&fallback_response, "BIG-Certificate").unwrap();
     assert_eq!(fallback_response.status_code, 200);
     assert_eq!(fallback_response.body.as_ref(), INDEX_BODY);
     assert!(certificate_header.contains("expr_path=:2dn3gmlodHRwX2V4cHJjPCo+:"));
@@ -600,7 +600,7 @@ fn serve_fallback_v1() {
     );
     assert_eq!(identity_response.status_code, 200);
     assert_eq!(identity_response.body.as_ref(), INDEX_BODY);
-    assert!(lookup_header(&identity_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&identity_response, "BIG-Certificate").is_some());
 
     let fallback_response = certified_http_request(
         &state,
@@ -610,7 +610,7 @@ fn serve_fallback_v1() {
     );
     assert_eq!(fallback_response.status_code, 200);
     assert_eq!(fallback_response.body.as_ref(), INDEX_BODY);
-    assert!(lookup_header(&fallback_response, "IC-Certificate").is_some());
+    assert!(lookup_header(&fallback_response, "BIG-Certificate").is_some());
 }
 
 #[test]

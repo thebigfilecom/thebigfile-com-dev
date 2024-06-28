@@ -12,7 +12,7 @@ on:
 
 jobs:
   deploy-ic:
-    name: "Deploy to IC"
+    name: "Deploy to BIG"
     runs-on: ubuntu-latest
     concurrency:
       group: "website update"

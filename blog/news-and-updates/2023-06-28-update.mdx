@@ -46,7 +46,7 @@ This quarter also saw a new release of dfx - 0.14.1. In this release, the primar
 In addition to these new features, an array of various fixes have shipped with this release as well:
 
 - Fix: If `dfx canister delete` is running on a canister that has not been stopped, dfx will confirm the removal of the canister instead of returning an error as it had in the past.
-- Fix: The documentation of IC SDK has been cleaned up.
+- Fix: The documentation of BIG SDK has been cleaned up.
 - Fix: To account for a more expensive v2 certification calculation, commit batches are now done incrementally to allow larger changes without exceeding the per-message instruction limit.
 - Fix: `dfx deploy`’s behavior previously allowed the same argument to be provided to all canisters; this behavior has been removed and now results in an error.
 - Fix: `dfx canister install`’s behavior previously allowed an empty argument to call all canisters regardless of any specifications; this behavior has been removed and now results in an error.

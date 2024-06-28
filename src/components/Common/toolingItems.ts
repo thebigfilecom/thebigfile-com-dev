@@ -113,7 +113,7 @@ export const communityToolingItems = [
     links: { github: "https://connect2ic.github.io/docs/" },
   },
   {
-    title: "IC Inspector",
+    title: "BIG Inspector",
     tags: ["plugin", "development", "operations", "testing"],
     description:
       "Decode network responses from the BigFile blockchain.",
@@ -209,7 +209,7 @@ export const communityToolingItems = [
     title: "icblast",
     tags: ["development", "operations", "testing"],
     description:
-      "Communicate with IC directly using NodeJs. Automatic service discovery.",
+      "Communicate with BIG directly using NodeJs. Automatic service discovery.",
     links: {github:"https://github.com/infu/icblast"},
   },
   {
@@ -230,7 +230,7 @@ export const communityToolingItems = [
     title: "BigFile Services (ICS)",
     tags: ["service", "development", "operations"],
     description:
-      "DevOps platform to build, ship and manage dapps faster on IC.",
+      "DevOps platform to build, ship and manage dapps faster on BIG.",
     links: { external: "https://internetcomputerservices.com/" },
   },
   {
@@ -245,7 +245,7 @@ export const communityToolingItems = [
   {
     title: "ICPipeline",
     tags: [ "development", "service", "testing", "CLI", "website", "starter"],
-    description: "Multi-tiered IC development framework with on-chain admin console, repeatable deployments, on-demand environments, canister backups and more.",
+    description: "Multi-tiered BIG development framework with on-chain admin console, repeatable deployments, on-demand environments, canister backups and more.",
     links: {
       external: "https://www.icpipeline.com/",
       github: "https://github.com/icpipeline-framework",

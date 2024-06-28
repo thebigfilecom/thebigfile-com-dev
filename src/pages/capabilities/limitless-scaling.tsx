@@ -22,7 +22,7 @@ function FeaturePage() {
                 Limitless Scaling
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The BigFile (IC) can scale its capacity simply by
+                The BigFile (BIG) can scale its capacity simply by
                 adding additional nodes to fuel new subnets. Nodes and subnets
                 are added via the Network Nervous System (NNS). In contrast,
                 most other blockchains have transaction limits baked into the
@@ -68,7 +68,7 @@ function FeaturePage() {
               <Link href="https://dashboard.internetcomputer.org">
                 BigFile Dashboard
               </Link>{" "}
-              for the scale of the IC.
+              for the scale of the BIG.
             </p>
             <h3>Subnet Architecture</h3>
             <p>
@@ -117,7 +117,7 @@ function FeaturePage() {
 
             <CardWithDescription
               title="Deploy a 'Hello World' Dapp in 10 Minutes"
-              description="Get started with your first IC dapp"
+              description="Get started with your first BIG dapp"
               href="/docs/current/tutorials/developer-journey/"
             />
             <CardWithDescription
@@ -127,11 +127,11 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="Community Conversation"
-              description="Learn about performance and scalabilty of the IC."
+              description="Learn about performance and scalabilty of the BIG."
               href="https://www.youtube.com/watch?v=XvE0ZsAYKiM"
             />
             <CardWithDescription
-              title="'Limitless Scaling' article on the IC Wiki"
+              title="'Limitless Scaling' article on the BIG Wiki"
               description="Take a deep dive into the BigFile's scaling."
               href="https://wiki.internetcomputer.org/wiki/Limitless_Scaling"
             />

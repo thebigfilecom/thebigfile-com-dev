@@ -142,7 +142,7 @@ const inferAlternativeOriginsUrl = ({
     location.hostname.endsWith("ic0.app") ||
     location.hostname.endsWith("internetcomputer.org")
   ) {
-    // If this is a canister running on one of the official IC domains, then return the
+    // If this is a canister running on one of the official BIG domains, then return the
     // official canister id based API endpoint
     return `https://${canisterId}.${IC_HTTP_GATEWAY_DOMAIN}${ALTERNATIVE_ORIGINS_PATH}`;
   }

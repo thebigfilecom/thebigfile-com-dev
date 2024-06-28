@@ -9,7 +9,7 @@ import "./main.css";
 
 /** Reads the canister ID from the <script> tag.
  *
- * The canister injects the canister ID as a `data-canister-id` attribute on the script tag, which we then read to figure out where to make the IC calls.
+ * The canister injects the canister ID as a `data-canister-id` attribute on the script tag, which we then read to figure out where to make the BIG calls.
  */
 const readCanisterId = (): string => {
   // The backend uses a known element ID so that we can pick up the value from here

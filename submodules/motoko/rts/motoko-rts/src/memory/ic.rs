@@ -1,4 +1,4 @@
-// This module is only enabled when compiling the RTS for IC or WASI.
+// This module is only enabled when compiling the RTS for BIG or WASI.
 
 #[non_incremental_gc]
 pub mod linear_memory;
@@ -32,7 +32,7 @@ unsafe extern "C" fn get_max_live_size() -> Bytes<u32> {
     MAX_LIVE
 }
 
-/// Provides a `Memory` implementation, to be used in functions compiled for IC or WASI. The
+/// Provides a `Memory` implementation, to be used in functions compiled for BIG or WASI. The
 /// `Memory` implementation allocates in Wasm heap with Wasm `memory.grow` instruction.
 pub struct IcMemory;
 

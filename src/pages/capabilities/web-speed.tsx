@@ -20,7 +20,7 @@ function FeaturePage() {
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Web speed</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                Users can interact with dapps on the BigFile (IC) with
+                Users can interact with dapps on the BigFile (BIG) with
                 speeds comparable to traditional web applications. Developers
                 can therefore build a much broader range of fully on-chain dapps
                 without relying on cloud services and risking single points of
@@ -96,11 +96,11 @@ function FeaturePage() {
               <br />
               In most blockchain protocols, this is the large source of
               inefficiency as verifying many individual signatures can be slow.
-              One of the key innovations of the IC is the introduction of{" "}
+              One of the key innovations of the BIG is the introduction of{" "}
               <Link href="https://medium.com/dfinity/chain-key-technology-one-public-key-for-the-internet-computer-6a3644901e28">
                 Chain Key (CK) Cryptography
               </Link>{" "}
-              which allows IC signatures to be verified with a single public
+              which allows BIG signatures to be verified with a single public
               key, hence reducing friction for all types of devices (node
               machines, laptops, mobile phones) that want to efficiently
               interact with a blockchain with similar speed and security of
@@ -131,7 +131,7 @@ function FeaturePage() {
 
             <CardWithDescription
               title="Deploy a 'Hello World' Dapp in 10 Minutes"
-              description="Get started with your first IC dapp"
+              description="Get started with your first BIG dapp"
               href="/docs/current/tutorials/developer-journey/"
             />
             <CardWithDescription
@@ -145,8 +145,8 @@ function FeaturePage() {
               href="https://www.youtube.com/watch?v=XvE0ZsAYKiM"
             />
             <CardWithDescription
-              title="IC Wiki"
-              description="Take a deep dive into the IC's performance"
+              title="BIG Wiki"
+              description="Take a deep dive into the BIG's performance"
               href="https://wiki.internetcomputer.org/wiki/Internet_Computer_performance_%26_power_consumption"
             />
           </div>

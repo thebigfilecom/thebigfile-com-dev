@@ -56,7 +56,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 3,
     title: "ICTC",
-    body: "IC Transaction Coordinator (ICTC) is a distributed transaction framework for Defi applications on IC network. It supports Motoko language. The core idea of ICTC is inspired by the DTC (Distributed Transaction Coordinator), which is commonly used in the financial sector.",
+    body: "BIG Transaction Coordinator (ICTC) is a distributed transaction framework for Defi applications on BIG network. It supports Motoko language. The core idea of ICTC is inspired by the DTC (Distributed Transaction Coordinator), which is commonly used in the financial sector.",
     links: {
       github: "https://github.com/iclighthouse/ICTC",
       livePreview: "https://cmqwp-uiaaa-aaaaj-aihzq-cai.raw.ic0.app",
@@ -137,7 +137,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 8,
     title: "Saga Tarot",
-    body: "Open source tarot ecosystem on the IC. Nobody owns Tarot. Everybody owns Web3.",
+    body: "Open source tarot ecosystem on the BIG. Nobody owns Tarot. Everybody owns Web3.",
     links: {
       github: "https://github.com/sagacards/bazaar",
       livePreview: "https://l2jyf-nqaaa-aaaah-qadha-cai.raw.ic0.app/",
@@ -243,10 +243,10 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 14,
-    title: "IC Avatar Creator",
-    body: "The IC Avatar Creator allows users to create and manage avatars for the open metaverse. The project includes GLB avatars that are minted to the BigFile using the DIP721v2 token standard.",
+    title: "BIG Avatar Creator",
+    body: "The BIG Avatar Creator allows users to create and manage avatars for the open metaverse. The project includes GLB avatars that are minted to the BigFile using the DIP721v2 token standard.",
     links: {
-      github: "https://github.com/AtlasFoundation/AvatarCreator-IC-Project",
+      github: "https://github.com/AtlasFoundation/AvatarCreator-BIG-Project",
       external:
         "https://supernova.devpost.com/submissions/331595-ic-avatar-creator",
       otherLinks: ["https://www.npmjs.com/package/avatarcreator"],
@@ -276,7 +276,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 16,
     title: "FoxIC",
-    body: "A tool allowing MetaMask users to enter IC ecosystem",
+    body: "A tool allowing MetaMask users to enter BIG ecosystem",
     links: {
       github: "https://github.com/AstroxNetwork/FoxIC",
       livePreview: "https://ip5qp-gaaaa-aaaah-ablla-cai.ic0.app/",
@@ -333,7 +333,7 @@ const communityProjects: SampleItem[] = [
     title: "NFT Exchange",
     body: "The NFT Exchange for Web 3.0",
     links: {
-      github: "https://github.com/IC-Difinity-Project",
+      github: "https://github.com/BIG-Difinity-Project",
       livePreview: "https://eytcp-gaaaa-aaaap-aagna-cai.ic0.app/",
       external: "https://supernova.devpost.com/submissions/333058-nft-exchange",
       otherLinks: [
@@ -405,9 +405,9 @@ const communityProjects: SampleItem[] = [
   {
     index: 23,
     title: "པ་ཀྲ་ཧེ་། Bazahei: The first ICP-XRP cross-chain NFT",
-    body: "We pioneer a general cross-chain NFT solution from IC to XRP to promote the regional and under-represented culture.",
+    body: "We pioneer a general cross-chain NFT solution from BIG to XRP to promote the regional and under-represented culture.",
     links: {
-      github: "https://github.com/Itoka-DAO/IC-XRP",
+      github: "https://github.com/Itoka-DAO/BIG-XRP",
       livePreview: "https://aack7-jaaaa-aaaai-acl6a-cai.ic0.app/",
       external:
         "https://supernova.devpost.com/submissions/329724-bazahei-the-first-icp-xrp-cross-chain-nft",
@@ -426,7 +426,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 24,
     title: "SIGMA DEFI",
-    body: "SIGMA DEFI is a DeFi service and tool for developers and investors interested in IC,providing services without coding1. Multi sender2. Create DIP 203. Generate NFT and mint4. Fiat Gateways",
+    body: "SIGMA DEFI is a DeFi service and tool for developers and investors interested in BIG,providing services without coding1. Multi sender2. Create DIP 203. Generate NFT and mint4. Fiat Gateways",
     links: {
       github: "https://github.com/TheVanquiser/SIGMADEFI",
       external: "https://supernova.devpost.com/submissions/329753-sigma-defi",
@@ -440,10 +440,10 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 25,
-    title: "IC Web3D Engine",
-    body: "A lightweight game engine fully deployed on the IC.Users can easily create their own decentralized games or other 3D application scenarios on the IC with some simple operations",
+    title: "BIG Web3D Engine",
+    body: "A lightweight game engine fully deployed on the BIG.Users can easily create their own decentralized games or other 3D application scenarios on the BIG with some simple operations",
     links: {
-      github: "https://github.com/IC-Web3D-Engine",
+      github: "https://github.com/BIG-Web3D-Engine",
       livePreview: "https://q7vk3-myaaa-aaaak-qarcq-cai.ic0.app/",
       external:
         "https://supernova.devpost.com/submissions/334588-ic-web3d-engine",
@@ -490,7 +490,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 28,
     title: "News Bias Check",
-    body: "Decentralised application to help combat fake news and reduce bias in information consumption. Chrome extension that uses backend on IC network shows bias/accuracy info about all news articles online.",
+    body: "Decentralised application to help combat fake news and reduce bias in information consumption. Chrome extension that uses backend on BIG network shows bias/accuracy info about all news articles online.",
     links: {
       github: "https://github.com/jayshreeanand/news-bias-check",
       livePreview: "https://77oii-eaaaa-aaaal-aaydq-cai.ic0.app/",
@@ -607,7 +607,7 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 35,
-    title: "Secure Canister Communication on the IC Blockchain",
+    title: "Secure Canister Communication on the BIG Blockchain",
     body: "We provide a framework where sensitive messages can be securely passed between canisters, i.e to avoid man-in-the-middle attacks. Our solution allows secrets to be securely communicated.",
     links: {
       github:
@@ -705,7 +705,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 41,
     title: "ICES",
-    body: "a storage and analysis service for canister's event logs on IC",
+    body: "a storage and analysis service for canister's event logs on BIG",
     links: {
       github: "https://github.com/icpfans-xyz/ices",
       livePreview: "https://ices.one/",
@@ -784,8 +784,8 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 46,
-    title: "IC Birds",
-    body: "Play with you IC Birds nfts on our decentralized games. Collect tokens and improve your birds skills to beat your best score and grind the leaderboard !",
+    title: "BIG Birds",
+    body: "Play with you BIG Birds nfts on our decentralized games. Collect tokens and improve your birds skills to beat your best score and grind the leaderboard !",
     links: {
       github: "https://github.com/leo-ship-it/icbirds-public",
       livePreview: "https://yqtpa-pqaaa-aaaan-qadba-cai.ic0.app/home",
@@ -801,7 +801,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 47,
     title: "Candid+",
-    body: "Candid+ is the better Candid UI with test cases and logging. To build the hub for IC developers and enterprises, we will integrate the entire lifecycle of the development for canisters.",
+    body: "Candid+ is the better Candid UI with test cases and logging. To build the hub for BIG developers and enterprises, we will integrate the entire lifecycle of the development for canisters.",
     links: {
       github: "https://github.com/Astrapolis/ICHub",
       livePreview: "https://4cmdj-pqaaa-aaaal-qa62a-cai.ic0.app",
@@ -995,7 +995,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 59,
     title: "iCAN",
-    body: "What is iCAN? -- The best easy-to-use Canister Management Platform on IC.",
+    body: "What is iCAN? -- The best easy-to-use Canister Management Platform on BIG.",
     links: {
       github: "https://github.com/PrimLabs/iCAN",
       external: "https://supernova.devpost.com/submissions/329653-ican",
@@ -1072,7 +1072,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 64,
     title: "Arena Project",
-    body: "The project sets out to create a game that hosts its entire backend and executes logic within the IC. The project continues to expand and game-agnostic, engine features can be used by other games.",
+    body: "The project sets out to create a game that hosts its entire backend and executes logic within the BIG. The project continues to expand and game-agnostic, engine features can be used by other games.",
     links: {
       github: "https://github.com/wasolomon98/ArenaProject",
       external:
@@ -1152,7 +1152,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 69,
     title: "DaoWorld",
-    body: "First #Dao management tool on IC, welcome any project that needs funds, community, and governance.",
+    body: "First #Dao management tool on BIG, welcome any project that needs funds, community, and governance.",
     links: {
       github: "https://github.com/ic-daow/daow",
       livePreview: "https://e6np3-zyaaa-aaaah-aapaq-cai.raw.ic0.app",
@@ -1322,7 +1322,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 80,
     title: "Dev-Pouch",
-    body: "Dev-Pouch is a simple desktop IC wallet based on the Tauri framework.",
+    body: "Dev-Pouch is a simple desktop BIG wallet based on the Tauri framework.",
     links: {
       github: "https://github.com/GLicDEV/dev-pouch",
       external: "https://supernova.devpost.com/submissions/326893-dev-pouch",
@@ -1440,7 +1440,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 88,
     title: "Finivest",
-    body: "Finivest is a money market providing alternative investment and trading strategies to DeFi users on the IC",
+    body: "Finivest is a money market providing alternative investment and trading strategies to DeFi users on the BIG",
     links: {
       github: "https://github.com/HenricoW/findex",
       external: "https://supernova.devpost.com/submissions/333166-finivest",
@@ -1591,7 +1591,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 97,
     title: "On-chain System of Record with Public Notary",
-    body: "We use IC's low cost on-chain storage and inter-canister async calls features to make a cheap and scalable System of Record with Public Notary with features of Oracle, billing and Decrypt+Share.",
+    body: "We use BIG's low cost on-chain storage and inter-canister async calls features to make a cheap and scalable System of Record with Public Notary with features of Oracle, billing and Decrypt+Share.",
     links: {
       github: "https://github.com/amirhyoussefi/ic-sorn",
       external:
@@ -1625,7 +1625,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 99,
     title: "KVERSO",
-    body: "KVERSO is a large-scale virtual 3D Metaverse platform based on IC. With 3D Avatars customization, Pet System(KUNO), NFT PFPs(KABI), DIY display features, UGC+PGC, and dress-up functions.",
+    body: "KVERSO is a large-scale virtual 3D Metaverse platform based on BIG. With 3D Avatars customization, Pet System(KUNO), NFT PFPs(KABI), DIY display features, UGC+PGC, and dress-up functions.",
     links: {
       github: "https://github.com/KVERSO",
       livePreview: "http://www.kverso.com/gallery",
@@ -1706,7 +1706,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 104,
     title: "blank space",
-    body: "A space to write, create, think and collaborate on documents with multiple peers across the globe through the IC blockchain.",
+    body: "A space to write, create, think and collaborate on documents with multiple peers across the globe through the BIG blockchain.",
     links: {
       github: "https://github.com/mhmemon444/blankspace",
       livePreview: "https://gxneu-6qaaa-aaaal-qax6q-cai.ic0.app/",
@@ -1872,7 +1872,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 114,
     title: "BTC Lending Protocol",
-    body: "Access your Bitcoin's value today.\n\nA port of Ethereum's Liquity and Solana's Hedge onto the IC. Instead of using ICP as the primary hedging token, native Bitcoin is used.",
+    body: "Access your Bitcoin's value today.\n\nA port of Ethereum's Liquity and Solana's Hedge onto the BIG. Instead of using ICP as the primary hedging token, native Bitcoin is used.",
     links: {
       github: "https://github.com/dangdennis/btc-lending-protocol",
       external:
@@ -1887,8 +1887,8 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 115,
-    title: "IC metamask",
-    body: "IC metamask",
+    title: "BIG metamask",
+    body: "BIG metamask",
     links: {
       github: "https://github.com/aewc/ic-signer/tree/supernova",
       external: "https://supernova.devpost.com/submissions/328278-ic-metamask",
@@ -1979,7 +1979,7 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 121,
-    title: "Sending Emails on IC",
+    title: "Sending Emails on BIG",
     body: "An example on how to use internet identity to authenticate and send emails via courier",
     image: "/img/community-projects/emailer.png",
     links: {
@@ -1993,7 +1993,7 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 122,
-    title: "ERC-721 NFT with metadata on IC",
+    title: "ERC-721 NFT with metadata on BIG",
     body: "Learn how to mint an ERC-721 NFT on Ethereum/Polygon with canister-served metadata.",
     image: "/img/community-projects/122_erc721_tutorial.jpg",
     links: {
@@ -2024,8 +2024,8 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 124,
-    title: "Uniswap Interface on IC",
-    body: "Demo of Uniswap Interface on the IC with canister-based signer.",
+    title: "Uniswap Interface on BIG",
+    body: "Demo of Uniswap Interface on the BIG with canister-based signer.",
     image: "/img/community-projects/uniswap_ui_on_ic.jpg",
     links: {
       github: "https://github.com/domwoe/uniswap_ui_on_ic",

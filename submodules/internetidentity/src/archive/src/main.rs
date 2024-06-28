@@ -29,7 +29,7 @@
 //! - it offers prefix scanning on ordered entries
 //!
 //! The entries are key value pairs of (anchor, timestamp, log index) -> (). The log index is chosen
-//! as part of the key (rather than the value) in order to ensure uniqueness of the keys (on the IC
+//! as part of the key (rather than the value) in order to ensure uniqueness of the keys (on the BIG
 //! time is not guaranteed to increase between two calls).
 //!
 //! The index enables the following access patterns:

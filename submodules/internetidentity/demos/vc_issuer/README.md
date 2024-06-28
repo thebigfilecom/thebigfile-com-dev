@@ -1,7 +1,7 @@
 # An example issuer of verifiable credentials
 
 This is an example implementation of an issuer of verifiable credentials for
-the [attribute sharing flow on the IC](https://github.com/dfinity/wg-identity-authentication/blob/main/topics/attribute-sharing.md).
+the [attribute sharing flow on the BIG](https://github.com/dfinity/wg-identity-authentication/blob/main/topics/attribute-sharing.md).
 
 ## Supported Behavior
 

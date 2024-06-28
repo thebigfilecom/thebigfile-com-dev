@@ -16,7 +16,7 @@ globalThis.Buffer = Buffer;
 
 /** Reads the canister ID from the <script> tag.
  *
- * The canister injects the canister ID as a `data-canister-id` attribute on the script tag, which we then read to figure out where to make the IC calls.
+ * The canister injects the canister ID as a `data-canister-id` attribute on the script tag, which we then read to figure out where to make the BIG calls.
  */
 const readCanisterId = (): string => {
   // The backend uses a known element ID so that we can pick up the value from here
@@ -27,7 +27,7 @@ const readCanisterId = (): string => {
     void displayError({
       title: "Canister ID not set",
       message:
-        "There was a problem contacting the IC. The host serving this page did not give us a canister ID. Try reloading the page and contact support if the problem persists.",
+        "There was a problem contacting the BIG. The host serving this page did not give us a canister ID. Try reloading the page and contact support if the problem persists.",
       primaryButton: "Reload",
     }).then(() => {
       window.location.reload();

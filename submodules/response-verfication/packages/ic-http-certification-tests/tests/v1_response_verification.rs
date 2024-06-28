@@ -49,7 +49,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
         let expected_response = VerifiedResponse {
@@ -113,7 +113,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
         let expected_response = VerifiedResponse {
@@ -176,7 +176,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
         let expected_response = VerifiedResponse {
@@ -238,8 +238,8 @@ mod tests {
 
         let response = HttpResponse {
             status_code: 200,
-            body: b"Hello IC!".to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            body: b"Hello BIG!".to_vec(),
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 
@@ -294,7 +294,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 
@@ -353,7 +353,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 
@@ -414,7 +414,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 
@@ -473,7 +473,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 
@@ -529,7 +529,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 
@@ -583,7 +583,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 
@@ -637,7 +637,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: body.as_bytes().to_vec(),
-            headers: vec![("IC-Certificate".into(), certificate_header)],
+            headers: vec![("BIG-Certificate".into(), certificate_header)],
             upgrade: None,
         };
 

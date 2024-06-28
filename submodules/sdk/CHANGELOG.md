@@ -799,7 +799,7 @@ Install a specific version of an extension, bypassing version checks.
 
 ### feat: Updated handling of missing values in state tree certificates
 
-The `Unknown` lookup of a path in a certificate results in an `AgentError` (the IC returns `Absent` for non-existing paths).
+The `Unknown` lookup of a path in a certificate results in an `AgentError` (the BIG returns `Absent` for non-existing paths).
 
 ### fix: dfx deploy urls printed for asset canisters
 
@@ -2696,7 +2696,7 @@ This defaults to the following value in dfx.json:
 
 ### fix: specifying ic provider with a trailing slash is recognised correctly
 
-Specifying the network provider as `https://ic0.app/` instead of `https://ic0.app` is now recognised as the real IC network.
+Specifying the network provider as `https://ic0.app/` instead of `https://ic0.app` is now recognised as the real BIG network.
 
 ### Binary cache
 
@@ -2841,7 +2841,7 @@ If you want to get your identity out of dfx, you can use `dfx identity export id
 
 If you want to script identity creation and don't care about overwriting existing identities, you now can use the `--force` flag for the commands `dfx identity new` and `dfx identity import`.
 
-### fix: Do not automatically create a wallet on IC
+### fix: Do not automatically create a wallet on BIG
 
 When running `dfx deploy --network ic`, `dfx canister --network ic create`, or `dfx identity --network ic get-wallet` dfx no longer automatically creates a cycles wallet for the user if none is configured. Instead, it will simply report that no wallet was found for that user.
 
@@ -3193,7 +3193,7 @@ You will need to upgrade your wallet and each of your existing canisters to work
 dfx wallet upgrade
 dfx canister --wallet "$(dfx identity get-wallet)" update-settings --all --add-controller "$(dfx identity get-principal)"
 ```
-To upgrade projects that you have deployed to the IC mainnet, execute the following:
+To upgrade projects that you have deployed to the BIG mainnet, execute the following:
 ``` bash
 dfx wallet --network ic upgrade
 dfx canister --network ic --wallet "$(dfx identity --network ic get-wallet)" update-settings --all --add-controller "$(dfx identity get-principal)"
@@ -3491,12 +3491,12 @@ The 0.8.0 release includes updates and fixes that are primarily internal to impr
 
 ### fix: dfx identity set-wallet no longer requires --force when used with --network ic
 
-This was intended to skip verification of the wallet canister on the IC network,
+This was intended to skip verification of the wallet canister on the BIG network,
 but ended up only writing to the wallets.json file if --force was passed.
 
 ### chore: updating dependencies
 
-* Support for the latest version of the \{IC\} specification and replica.
+* Support for the latest version of the \{BIG\} specification and replica.
 
 * Updating to latest versions of Motoko, Candid, and agent-rs
 
@@ -3609,7 +3609,7 @@ the canister in the canister_ids.json file.
 
 ### feat: point built-in `ic` network provider at mainnet
 
-`--network ic` now points to the mainnet IC (as Sodium has been deprecated.)
+`--network ic` now points to the mainnet BIG (as Sodium has been deprecated.)
 
 ### feat: add candid UI canister
 

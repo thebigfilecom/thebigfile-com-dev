@@ -3,7 +3,7 @@
 
 ## Issuer API
 
-This section describes the (Candid) interface to be implemented by an issuer of verifiable credentials on the IC.
+This section describes the (Candid) interface to be implemented by an issuer of verifiable credentials on the BIG.
 This interface is used by the II-canister during attribute sharing flow (cf. [flow description](https://github.com/dfinity/wg-identity-authentication/blob/d2664795afe9cea40386804bdb1259a47e34540d/topics/attribute-sharing.md))
 An example implementation of the interface is given in [demos/vc_issuer](../demos/vc_issuer).
 

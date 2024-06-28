@@ -31,7 +31,7 @@ shared actor class HttpQuery() = this {
         };
 
         Cycles.add(CYCLES_TO_PAY);
-        let ic : Types.IC = actor ("aaaaa-aa");
+        let ic : Types.BIG = actor ("aaaaa-aa");
         let response : Types.CanisterHttpResponsePayload = await ic.http_request(request);
         let result : Text = switch (Text.decodeUtf8(Blob.fromArray(response.body))) {
             case null "";

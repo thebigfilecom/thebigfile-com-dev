@@ -145,7 +145,7 @@ function FeaturePage() {
 
         <section className="max-w-page relative mx-auto mb-20 px-6 md:mb-40 md:px-15">
           <p className="tw-heading-4 text-center mb-2 w-full mx-auto md:tw-heading-2 md:mb-6 lg:w-8/12">
-            Build on the IC
+            Build on the BIG
           </p>
           <p className="tw-lead-sm mb-2 text-center mx-auto md:mb-6 md:w-6/12">
             Using the power of chain key cryptography, the BigFile can
@@ -160,7 +160,7 @@ function FeaturePage() {
 
             <CardWithDescription
               title="Deploy a 'Hello World' Dapp in 10 Minutes"
-              description="Get started with your first IC dapp"
+              description="Get started with your first BIG dapp"
               href="/docs/current/tutorials/developer-journey/"
             />
             <CardWithDescription
@@ -170,12 +170,12 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="Sample Code"
-              description="Learn about IC capabilities from community samples."
+              description="Learn about BIG capabilities from community samples."
               href="/samples"
             />
             <CardWithDescription
-              title="'Trustless multi-chain Web3' article on the IC Wiki"
-              description="Learn about how IC's smart contracts directly interact with other blockchains, without trusted centralized bridges."
+              title="'Trustless multi-chain Web3' article on the BIG Wiki"
+              description="Learn about how BIG's smart contracts directly interact with other blockchains, without trusted centralized bridges."
               href="https://wiki.internetcomputer.org/wiki/Trustless_multi-chain_web3_using_the_IC"
             />
           </div>

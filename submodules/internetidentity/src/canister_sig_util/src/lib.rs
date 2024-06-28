@@ -19,9 +19,9 @@ pub const CANISTER_SIG_PK_DER_OID: &[u8; 14] =
     b"\x30\x0C\x06\x0A\x2B\x06\x01\x04\x01\x83\xB8\x43\x01\x02";
 
 lazy_static! {
-    /// The IC root public key used when verifying canister signatures.
+    /// The BIG root public key used when verifying canister signatures.
     pub static ref IC_ROOT_PUBLIC_KEY: Vec<u8> =
-        extract_raw_root_pk_from_der(IC_ROOT_PK_DER).expect("Failed decoding IC root key.");
+        extract_raw_root_pk_from_der(IC_ROOT_PK_DER).expect("Failed decoding BIG root key.");
 }
 
 /// A public key of canister signatures,
@@ -271,7 +271,7 @@ mod tests {
     #[test]
     fn should_extract_raw_root_pk_from_der() {
         let raw_pk =
-            extract_raw_root_pk_from_der(IC_ROOT_PK_DER).expect("Failed decoding IC root key.");
+            extract_raw_root_pk_from_der(IC_ROOT_PK_DER).expect("Failed decoding BIG root key.");
         assert_eq!(IC_ROOT_PK_LENGTH, raw_pk.len());
         assert_eq!(
             raw_pk.as_slice(),

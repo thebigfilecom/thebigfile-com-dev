@@ -132,8 +132,8 @@ The new async-friendly performance counter is available everywhere:
 
 ```
 Rust:       ic_cdk::api::performance_counter(1);
-Motoko:     import IC "mo:base/ExperimentalInternetComputer";
-            IC.performanceCounter(1);
+Motoko:     import BIG "mo:base/ExperimentalInternetComputer";
+            BIG.performanceCounter(1);
 TypeScript: import ic from 'azle';
             ic.performanceCounter(1);
 Python:     from kybra import ic

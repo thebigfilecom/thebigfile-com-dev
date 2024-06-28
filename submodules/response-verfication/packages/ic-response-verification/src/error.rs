@@ -57,46 +57,46 @@ pub enum ResponseVerificationError {
     #[error("Invalid expression path")]
     InvalidExpressionPath,
 
-    /// The expression path provided by the "IC-Certificate" response header
+    /// The expression path provided by the "BIG-Certificate" response header
     /// has an unexpected suffix and should end with "<$>" or "<*>"
-    #[error(r#"The expression path provided by the "IC-Certificate" response header ({provided_expr_path:?}) has an unexpected prefix and should start with "http_expr"#)]
+    #[error(r#"The expression path provided by the "BIG-Certificate" response header ({provided_expr_path:?}) has an unexpected prefix and should start with "http_expr"#)]
     UnexpectedExpressionPathPrefix {
         /// The invalid expression path
         provided_expr_path: Vec<String>,
     },
 
-    /// The expression path provided by the "IC-Certificate" response header
+    /// The expression path provided by the "BIG-Certificate" response header
     /// has an unexpected suffix and should end with "<$>" or "<*>"
-    #[error(r#"The expression path provided by the "IC-Certificate" response header ({provided_expr_path:?}) has an unexpected suffix and should end with "<$>" or "<*>"#)]
+    #[error(r#"The expression path provided by the "BIG-Certificate" response header ({provided_expr_path:?}) has an unexpected suffix and should end with "<$>" or "<*>"#)]
     UnexpectedExpressionPathSuffix {
         /// The invalid expression path
         provided_expr_path: Vec<String>,
     },
 
-    /// The exact expression path provided by the "IC-Certificate" response header
+    /// The exact expression path provided by the "BIG-Certificate" response header
     /// was not found in the tree
-    #[error(r#"The exact expression path provided by the "IC-Certificate" response header ({provided_expr_path:?}) was not found in the tree"#)]
+    #[error(r#"The exact expression path provided by the "BIG-Certificate" response header ({provided_expr_path:?}) was not found in the tree"#)]
     ExactExpressionPathNotFoundInTree {
         /// The missing expression path
         provided_expr_path: Vec<String>,
     },
 
-    /// The exact expression path provided by the "IC-Certificate" response header
+    /// The exact expression path provided by the "BIG-Certificate" response header
     /// is not valid for the request path
-    #[error(r#"The exact expression path provided by the "IC-Certificate" response header ({provided_expr_path:?}) is not valid for the request path ({request_path:?})"#)]
+    #[error(r#"The exact expression path provided by the "BIG-Certificate" response header ({provided_expr_path:?}) is not valid for the request path ({request_path:?})"#)]
     ExactExpressionPathMismatch {
-        /// The expression path provided by the "IC-Certificate" response header
+        /// The expression path provided by the "BIG-Certificate" response header
         provided_expr_path: Vec<String>,
         /// The request path
         request_path: String,
     },
 
-    /// A wildcard expression path was provided by the "IC-Certificate" response header
+    /// A wildcard expression path was provided by the "BIG-Certificate" response header
     /// but a potential exact expression path is valid for the request path and might
     /// exist in the tree
-    #[error(r#"A wildcard expression path was provided by the "IC-Certificate" response header ({provided_expr_path:?}), but a potential exact expression path ({potential_expr_path:?}) is valid for the request path ({request_path:?}) and might exist in the tree"#)]
+    #[error(r#"A wildcard expression path was provided by the "BIG-Certificate" response header ({provided_expr_path:?}), but a potential exact expression path ({potential_expr_path:?}) is valid for the request path ({request_path:?}) and might exist in the tree"#)]
     ExactExpressionPathMightExistInTree {
-        /// The expression path provided by the "IC-Certificate" response header
+        /// The expression path provided by the "BIG-Certificate" response header
         provided_expr_path: Vec<String>,
         /// The expected expression path
         potential_expr_path: Vec<String>,
@@ -104,32 +104,32 @@ pub enum ResponseVerificationError {
         request_path: String,
     },
 
-    /// The wildcard expression path provided by the "IC-Certificate" response
+    /// The wildcard expression path provided by the "BIG-Certificate" response
     /// was not found in the tree
-    #[error(r#"The wildcard expression path provided by the "IC-Certificate" response header ({provided_expr_path:?}) is valid for the request path ({request_path:?}), but was not found in the tree"#)]
+    #[error(r#"The wildcard expression path provided by the "BIG-Certificate" response header ({provided_expr_path:?}) is valid for the request path ({request_path:?}), but was not found in the tree"#)]
     WildcardExpressionPathNotFoundInTree {
-        /// The expression path provided by the "IC-Certificate" response header
+        /// The expression path provided by the "BIG-Certificate" response header
         provided_expr_path: Vec<String>,
         /// The request path
         request_path: String,
     },
 
-    /// The wildcard expression path provided by the "IC-Certificate" response
+    /// The wildcard expression path provided by the "BIG-Certificate" response
     /// header is not valid for the request path
-    #[error(r#"The wildcard expression path provided by the "IC-Certificate" response header ({provided_expr_path:?}) is not valid for the request path ({request_path:?})"#)]
+    #[error(r#"The wildcard expression path provided by the "BIG-Certificate" response header ({provided_expr_path:?}) is not valid for the request path ({request_path:?})"#)]
     WildcardExpressionPathMismatch {
-        /// The expression path provided by the "IC-Certificate" response header
+        /// The expression path provided by the "BIG-Certificate" response header
         provided_expr_path: Vec<String>,
         /// The request path
         request_path: String,
     },
 
     /// A more specific wildcard expression path than the one provided by the
-    /// "IC-Certificate" response header that is valid for the request path might
+    /// "BIG-Certificate" response header that is valid for the request path might
     /// exist in the tree
-    #[error(r#"A more specific wildcard expression path ({more_specific_expr_path:?}) than the one provided by the "IC-Certificate" response header ({provided_expr_path:?}) that is valid for the request path ({request_path:?}) might exist in the tree"#)]
+    #[error(r#"A more specific wildcard expression path ({more_specific_expr_path:?}) than the one provided by the "BIG-Certificate" response header ({provided_expr_path:?}) that is valid for the request path ({request_path:?}) might exist in the tree"#)]
     MoreSpecificWildcardExpressionMightExistInTree {
-        /// The expression path provided by the "IC-Certificate" response header
+        /// The expression path provided by the "BIG-Certificate" response header
         provided_expr_path: Vec<String>,
         /// The more specific expression path that might exist in the tree
         more_specific_expr_path: Vec<String>,
@@ -199,30 +199,30 @@ pub enum ResponseVerificationJsErrorCode {
     InvalidTree,
     /// The CEL expression path is invalid
     InvalidExpressionPath,
-    /// The expression path provided by the "IC-Certificate" response header
+    /// The expression path provided by the "BIG-Certificate" response header
     /// has an unexpected suffix and should end with "<$>" or "<*>"
     UnexpectedExpressionPathPrefix,
-    /// The expression path provided by the "IC-Certificate" response header
+    /// The expression path provided by the "BIG-Certificate" response header
     /// has an unexpected suffix and should end with "<$>" or "<*>"
     UnexpectedExpressionPathSuffix,
-    /// The exact expression path provided by the "IC-Certificate" response header
+    /// The exact expression path provided by the "BIG-Certificate" response header
     /// was not found in the tree
     ExactExpressionPathNotFoundInTree,
-    /// The exact expression path provided by the "IC-Certificate" response header
+    /// The exact expression path provided by the "BIG-Certificate" response header
     /// is not valid for the request path
     ExactExpressionPathMismatch,
-    /// A wildcard expression path was provided by the "IC-Certificate" response header
+    /// A wildcard expression path was provided by the "BIG-Certificate" response header
     /// but a potential exact expression path is valid for the request path and might
     /// exist in the tree
     ExactExpressionPathMightExistInTree,
-    /// The wildcard expression path provided by the "IC-Certificate" response
+    /// The wildcard expression path provided by the "BIG-Certificate" response
     /// was not found in the tree
     WildcardExpressionPathNotFoundInTree,
-    /// The wildcard expression path provided by the "IC-Certificate" response
+    /// The wildcard expression path provided by the "BIG-Certificate" response
     /// header is not valid for the request path
     WildcardExpressionPathMismatch,
     /// A more specific wildcard expression path than the one provided by the
-    /// "IC-Certificate" response header that is valid for the request path might
+    /// "BIG-Certificate" response header that is valid for the request path might
     /// exist in the tree
     MoreSpecificWildcardExpressionMightExistInTree,
     /// The response body was a mismatch from the expected values in the tree
@@ -544,7 +544,7 @@ mod tests {
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::UnexpectedExpressionPathPrefix,
                 message: format!(
-                    r#"The expression path provided by the "IC-Certificate" response header (["http_expr"]) has an unexpected prefix and should start with "http_expr"#
+                    r#"The expression path provided by the "BIG-Certificate" response header (["http_expr"]) has an unexpected prefix and should start with "http_expr"#
                 ),
             }
         )
@@ -562,7 +562,7 @@ mod tests {
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::UnexpectedExpressionPathSuffix,
                 message: format!(
-                    r#"The expression path provided by the "IC-Certificate" response header (["http_expr"]) has an unexpected suffix and should end with "<$>" or "<*>"#
+                    r#"The expression path provided by the "BIG-Certificate" response header (["http_expr"]) has an unexpected suffix and should end with "<$>" or "<*>"#
                 ),
             }
         )
@@ -580,7 +580,7 @@ mod tests {
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::ExactExpressionPathNotFoundInTree,
                 message: format!(
-                    r#"The exact expression path provided by the "IC-Certificate" response header (["http_expr"]) was not found in the tree"#
+                    r#"The exact expression path provided by the "BIG-Certificate" response header (["http_expr"]) was not found in the tree"#
                 ),
             }
         )
@@ -599,7 +599,7 @@ mod tests {
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::ExactExpressionPathMismatch,
                 message: format!(
-                    r#"The exact expression path provided by the "IC-Certificate" response header (["http_expr"]) is not valid for the request path ("/path")"#
+                    r#"The exact expression path provided by the "BIG-Certificate" response header (["http_expr"]) is not valid for the request path ("/path")"#
                 ),
             }
         )
@@ -619,7 +619,7 @@ mod tests {
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::ExactExpressionPathMightExistInTree,
                 message: format!(
-                    r#"A wildcard expression path was provided by the "IC-Certificate" response header (["http_expr"]), but a potential exact expression path (["http_expr"]) is valid for the request path ("/path") and might exist in the tree"#
+                    r#"A wildcard expression path was provided by the "BIG-Certificate" response header (["http_expr"]), but a potential exact expression path (["http_expr"]) is valid for the request path ("/path") and might exist in the tree"#
                 ),
             }
         )
@@ -638,7 +638,7 @@ mod tests {
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::WildcardExpressionPathNotFoundInTree,
                 message: format!(
-                    r#"The wildcard expression path provided by the "IC-Certificate" response header (["http_expr"]) is valid for the request path ("/path"), but was not found in the tree"#
+                    r#"The wildcard expression path provided by the "BIG-Certificate" response header (["http_expr"]) is valid for the request path ("/path"), but was not found in the tree"#
                 ),
             }
         )
@@ -657,7 +657,7 @@ mod tests {
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::WildcardExpressionPathMismatch,
                 message: format!(
-                    r#"The wildcard expression path provided by the "IC-Certificate" response header (["http_expr"]) is not valid for the request path ("/path")"#
+                    r#"The wildcard expression path provided by the "BIG-Certificate" response header (["http_expr"]) is not valid for the request path ("/path")"#
                 ),
             }
         )
@@ -678,7 +678,7 @@ mod tests {
                 code:
                     ResponseVerificationJsErrorCode::MoreSpecificWildcardExpressionMightExistInTree,
                 message: format!(
-                    r#"A more specific wildcard expression path (["http_expr"]) than the one provided by the "IC-Certificate" response header (["http_expr"]) that is valid for the request path ("/path") might exist in the tree"#
+                    r#"A more specific wildcard expression path (["http_expr"]) than the one provided by the "BIG-Certificate" response header (["http_expr"]) that is valid for the request path ("/path") might exist in the tree"#
                 ),
             }
         )

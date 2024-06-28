@@ -997,8 +997,8 @@ pub enum MultiGetLogsResult {
                   </p>
                   <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
                     {[
-                      "IC ETH Starter",
-                      "Add ERC-20 to IC ETH Starter",
+                      "BIG ETH Starter",
+                      "Add ERC-20 to BIG ETH Starter",
                       "OISY",
                       "PoS app for ckBTC",
                       "ICRC2 Swap Demo",

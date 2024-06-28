@@ -2502,7 +2502,7 @@ and infer_block env decs at check_unused : T.typ * Scope.scope =
   let initial_usage = enter_scope env in
   let scope = infer_block_decs env decs at in
   let env' = adjoin env scope in
-  (* HACK: when compiling to IC, mark class constructors as unavailable *)
+  (* HACK: when compiling to BIG, mark class constructors as unavailable *)
   let ve = match !Flags.compile_mode with
     | Flags.(ICMode | RefMode) ->
       List.fold_left (fun ve' dec ->

@@ -62,7 +62,7 @@ impl<'a> HttpCertificationPath<'a> {
         &self.0
     }
 
-    /// Converts this path into a format suitable for use in the `expr_path` field of the `IC-Certificate` header.
+    /// Converts this path into a format suitable for use in the `expr_path` field of the `BIG-Certificate` header.
     pub fn to_expr_path(&self) -> Vec<String> {
         match &self.0 {
             HttpCertificationPathType::Exact(path) => {

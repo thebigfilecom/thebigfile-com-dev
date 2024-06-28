@@ -112,7 +112,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: vec![],
-            headers: vec![("IC-CertificateExpression".to_string(), cel_expr.to_string())],
+            headers: vec![("BIG-CertificateExpression".to_string(), cel_expr.to_string())],
             upgrade: None,
         };
         let expected_response_hash = response_hash(&response, &cel_expr.response, None);
@@ -159,7 +159,7 @@ mod tests {
         let response = HttpResponse {
             status_code: 200,
             body: vec![],
-            headers: vec![("IC-CertificateExpression".to_string(), cel_expr.to_string())],
+            headers: vec![("BIG-CertificateExpression".to_string(), cel_expr.to_string())],
             upgrade: None,
         };
         let expected_response_hash = response_hash(&response, &cel_expr.response, None);

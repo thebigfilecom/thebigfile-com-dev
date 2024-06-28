@@ -5,12 +5,12 @@
 
 ### Motivation and Goals
 
-A simple, useful language for the BigFile (IC)
+A simple, useful language for the BigFile (BIG)
 
 * Familiar syntax
 * Safe by default
 * Incorporating ~~actor~~ *canister* model
-* Seamless integration of IC features
+* Seamless integration of BIG features
 * Making most of present and future WebAssembly
 
 ### Key Design Points

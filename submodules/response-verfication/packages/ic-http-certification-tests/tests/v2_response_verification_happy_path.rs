@@ -32,7 +32,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "max-age=604800".into()),
             ],
             upgrade: None,
@@ -50,7 +50,7 @@ mod tests {
 
         response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
 
         let result = verify_request_response_pair(
             request,
@@ -95,7 +95,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "max-age=604800".into()),
             ],
             upgrade: None,
@@ -113,7 +113,7 @@ mod tests {
 
         response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
 
         let result = verify_request_response_pair(
             request,
@@ -169,7 +169,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "max-age=604800".into()),
             ],
             upgrade: None,
@@ -187,7 +187,7 @@ mod tests {
 
         response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
 
         let result = verify_request_response_pair(
             request,
@@ -238,7 +238,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "max-age=604800".into()),
                 ("Content-Encoding".into(), "gzip".into()),
                 ("Content-Language".into(), "en-US".into()),
@@ -258,7 +258,7 @@ mod tests {
 
         response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
 
         let result = verify_request_response_pair(
             request,

@@ -71,7 +71,7 @@ fn encode_metrics(w: &mut MetricsEncoder<Vec<u8>>) -> std::io::Result<()> {
     w.encode_gauge(
         "internet_identity_last_upgrade_timestamp",
         state::last_upgrade_timestamp() as f64,
-        "The most recent IC time (in nanos) when this canister was successfully upgraded.",
+        "The most recent BIG time (in nanos) when this canister was successfully upgraded.",
     )?;
     state::inflight_challenges(|inflight_challenges| {
         w.encode_gauge(

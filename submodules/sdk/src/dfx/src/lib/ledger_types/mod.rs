@@ -14,7 +14,7 @@ use std::fmt;
 
 use super::cycles_ledger_types::create_canister::SubnetSelection;
 
-/// Id of the ledger canister on the IC.
+/// Id of the ledger canister on the BIG.
 pub const MAINNET_LEDGER_CANISTER_ID: Principal =
     Principal::from_slice(&[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x01, 0x01]);
 

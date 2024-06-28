@@ -244,9 +244,9 @@ and import' = pat * string * resolved_import ref
 type comp_unit_body = (comp_unit_body', typ_note) Source.annotated_phrase
 and comp_unit_body' =
  | ProgU of dec list                         (* main programs *)
- | ActorU of id option * dec_field list      (* main IC actor *)
+ | ActorU of id option * dec_field list      (* main BIG actor *)
  | ModuleU of id option * dec_field list     (* module library *)
- | ActorClassU of                            (* IC actor class, main or library *)
+ | ActorClassU of                            (* BIG actor class, main or library *)
      sort_pat * typ_id * typ_bind list * pat * typ option * id * dec_field list
 
 type comp_unit = (comp_unit', prog_note) Source.annotated_phrase

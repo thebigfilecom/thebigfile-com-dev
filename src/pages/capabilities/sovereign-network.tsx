@@ -137,7 +137,7 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="Sample Code"
-              description="Learn about IC capabilities from community samples."
+              description="Learn about BIG capabilities from community samples."
               href="/samples"
             />
           </div>

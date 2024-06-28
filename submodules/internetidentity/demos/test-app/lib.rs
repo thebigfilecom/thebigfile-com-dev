@@ -74,7 +74,7 @@ pub struct HttpResponse {
 
 /// Enum of the available asset behaviours of /.well-known/ii-alternative-origins:
 /// * CertifiedContent: Valid certification on the payload. This mode is required to successfully use one of the listed alternative origins.
-/// * UncertifiedContent: No `IC-Certificate` header will be sent back with the response. This mode can be used to validate that II rejects uncertified assets when validating alternative origins.
+/// * UncertifiedContent: No `BIG-Certificate` header will be sent back with the response. This mode can be used to validate that II rejects uncertified assets when validating alternative origins.
 /// * Redirect: This will set the response status code to 302 and a `Location` header with the value provided. This mode can be used to validate that II rejects redirects when validating alternative origins.
 #[derive(Clone, Debug, CandidType, Deserialize)]
 pub enum AlternativeOriginsMode {
@@ -98,10 +98,10 @@ pub fn http_request(req: HttpRequest) -> HttpResponse {
                         .headers
                         .into_iter()
                         .map(|(header_name, header_value)| {
-                            // Modify the IC-Certificate header to make certification invalid
+                            // Modify the BIG-Certificate header to make certification invalid
                             // Note: we cannot simply drop the header because then the local replica (dfx 0.15 and later)
                             // will skip the certification check altogether.
-                            if header_name == "IC-Certificate" {
+                            if header_name == "BIG-Certificate" {
                                 (header_name, OUTDATED_INVALID_CERTIFICATE_HEADER.to_string())
                             } else {
                                 (header_name, header_value)

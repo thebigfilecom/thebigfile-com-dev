@@ -13,14 +13,14 @@ import Result "mo:base/Result";
 import Principal "mo:base/Principal";
 import Debug "mo:base/Debug";
 import Types "./Types";
-import ICType "./IC";
+import ICType "./BIG";
 import PoW "./PoW";
 import Logs "./Logs";
 import Metrics "./Metrics";
 import Wasm "canister:wasm-utils";
 
 shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
-    let IC : ICType.Self = actor "aaaaa-aa";
+    let BIG : ICType.Self = actor "aaaaa-aa";
     let params = Option.get(opt_params, Types.defaultParams);
     var pool = Types.CanisterPool(params.max_num_canisters, params.canister_time_to_live, params.max_family_tree_size);
     let nonceCache = PoW.NonceCache(params.nonce_time_to_live);
@@ -80,7 +80,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
         switch (pool.getExpiredCanisterId()) {
             case (#newId) {
                 Cycles.add(params.cycles_per_canister);
-                let cid = await IC.create_canister { settings = null };
+                let cid = await BIG.create_canister { settings = null };
                 let now = Time.now();
                 let info = { id = cid.canister_id; timestamp = now };
                 pool.add info;
@@ -90,20 +90,20 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
             };
             case (#reuse info) {
                 let cid = { canister_id = info.id };
-                let status = await IC.canister_status cid;
+                let status = await BIG.canister_status cid;
                 let topUpCycles : Nat = if (status.cycles < params.cycles_per_canister) {
                     params.cycles_per_canister - status.cycles;
                 } else { 0 };
                 if (topUpCycles > 0) {
                     Cycles.add topUpCycles;
-                    await IC.deposit_cycles cid;
+                    await BIG.deposit_cycles cid;
                 };
                 if (Option.isSome(status.module_hash)) {
-                    await IC.uninstall_code cid;
+                    await BIG.uninstall_code cid;
                 };
                 switch (status.status) {
                     case (#stopped or #stopping) {
-                        await IC.start_canister cid;
+                        await BIG.start_canister cid;
                     };
                     case _ {};
                 };
@@ -180,7 +180,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
                 mode = args.mode;
                 canister_id = args.canister_id;
             };
-            await IC.install_code newArgs;
+            await BIG.install_code newArgs;
             stats := Logs.updateStats(stats, #install);
 
             // Build tags from install arguments
@@ -229,7 +229,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
 
     public func removeCode(info : Types.CanisterInfo) : async () {
         if (pool.find info) {
-            await IC.uninstall_code { canister_id = info.id };
+            await BIG.uninstall_code { canister_id = info.id };
             ignore pool.retire info;
         } else {
             stats := Logs.updateStats(stats, #mismatch);
@@ -238,7 +238,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
 
     public func GCCanisters() {
         for (id in pool.gcList().vals()) {
-            await IC.uninstall_code { canister_id = id };
+            await BIG.uninstall_code { canister_id = id };
         };
     };
 
@@ -380,7 +380,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
         canister_id : ICType.canister_id;
     }) : async () {
         switch (sanitizeInputs(caller, canister_id)) {
-            case (#ok _) await IC.uninstall_code { canister_id };
+            case (#ok _) await BIG.uninstall_code { canister_id };
             case (#err makeMsg) throw Error.reject(makeMsg "uninstall_code");
         };
     };
@@ -395,10 +395,10 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
         module_hash : ?Blob;
     } {
         switch (sanitizeInputs(caller, canister_id)) {
-            case (#ok _) await IC.canister_status { canister_id };
+            case (#ok _) await BIG.canister_status { canister_id };
             case (#err makeMsg) {
                 if (caller == canister_id) {
-                    await IC.canister_status { canister_id };
+                    await BIG.canister_status { canister_id };
                 } else { throw Error.reject(makeMsg "canister_status") };
             };
         };
@@ -408,7 +408,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
         canister_id : ICType.canister_id;
     }) : async () {
         switch (sanitizeInputs(caller, canister_id)) {
-            case (#ok _) await IC.stop_canister { canister_id };
+            case (#ok _) await BIG.stop_canister { canister_id };
             case (#err makeMsg) throw Error.reject(makeMsg "stop_canister");
         };
     };
@@ -417,7 +417,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
         canister_id : ICType.canister_id;
     }) : async () {
         switch (sanitizeInputs(caller, canister_id)) {
-            case (#ok _) await IC.start_canister { canister_id };
+            case (#ok _) await BIG.start_canister { canister_id };
             case (#err makeMsg) throw Error.reject(makeMsg "start_canister");
         };
     };

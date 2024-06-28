@@ -185,7 +185,7 @@
     "tags": [
       "Tools / Infrastructure"
     ],
-    "description": "Azle is a TypeScript Canister Development Kit (CDK) for the BigFile. In other words, it's a TypeScript/JavaScript runtime for building applications on the IC.",
+    "description": "Azle is a TypeScript Canister Development Kit (CDK) for the BigFile. In other words, it's a TypeScript/JavaScript runtime for building applications on the BIG.",
     "usesInternetIdentity": false,
     "logo": "/img/showcase/azle_logo.svg",
     "github": "https://github.com/demergent-labs/azle",
@@ -378,7 +378,7 @@
   {
     "id": "icpulse",
     "name": "ICPulse",
-    "oneLiner": "Visual metrics for IC's software activity data",
+    "oneLiner": "Visual metrics for BIG's software activity data",
     "website": "https://icpulse.io/",
     "tags": [
       "Tools / Infrastructure"

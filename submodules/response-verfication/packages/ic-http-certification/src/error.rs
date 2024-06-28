@@ -25,27 +25,27 @@ pub enum HttpCertificationError {
         request_path: String,
     },
 
-    /// The `IC-CertificateExpression` header in a response did not match the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
-    #[error(r#"The IC-CertificateExpression header in the response did not match the Cel expression used to certify the response. Expected: "{expected}", Actual: "{actual}""#)]
+    /// The `BIG-CertificateExpression` header in a response did not match the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
+    #[error(r#"The BIG-CertificateExpression header in the response did not match the Cel expression used to certify the response. Expected: "{expected}", Actual: "{actual}""#)]
     CertificateExpressionHeaderMismatch {
-        /// The expected value of the `IC-CertificateExpression` header. This is the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
+        /// The expected value of the `BIG-CertificateExpression` header. This is the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
         expected: String,
 
-        /// The actual value of the `IC-CertificateExpression` header.
+        /// The actual value of the `BIG-CertificateExpression` header.
         actual: String,
     },
 
-    /// The `IC-CertificateExpression header` was missing from the [HttpResponse](crate::HttpResponse).
-    #[error(r#"The IC-CertificateExpression header was missing from the response. Expected: "{expected}""#)]
+    /// The `BIG-CertificateExpression header` was missing from the [HttpResponse](crate::HttpResponse).
+    #[error(r#"The BIG-CertificateExpression header was missing from the response. Expected: "{expected}""#)]
     CertificateExpressionHeaderMissing {
-        /// The expected value of the `IC-CertificateExpression` header. This is the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
+        /// The expected value of the `BIG-CertificateExpression` header. This is the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
         expected: String,
     },
 
-    /// The `IC-CertificateExpression` header in a response contained multiple values.
-    #[error(r#"The IC-CertificateExpression header in the response contained multiple values. Expected only one: "{expected}""#)]
+    /// The `BIG-CertificateExpression` header in a response contained multiple values.
+    #[error(r#"The BIG-CertificateExpression header in the response contained multiple values. Expected only one: "{expected}""#)]
     MultipleCertificateExpressionHeaders {
-        /// The expected value of the `IC-CertificateExpression` header. This is the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
+        /// The expected value of the `BIG-CertificateExpression` header. This is the Cel expression used to certify the [HttpResponse](crate::HttpResponse).
         expected: String,
     },
 }

@@ -145,7 +145,7 @@
   },
   {
     "name": "Canistergeek",
-    "oneLiner": "IC canister management tool",
+    "oneLiner": "BIG canister management tool",
     "website": "https://canistergeek.app/",
     "logo": "canistergeek_logo.webp"
   },
@@ -189,7 +189,7 @@
     "logo": "kontribute_logo.webp"
   },
   {
-    "name": "IC Drive",
+    "name": "BIG Drive",
     "website": "https://rglue-kyaaa-aaaah-qakca-cai.ic0.app/",
     "logo": "icdrive_logo.webp"
   },
@@ -200,7 +200,7 @@
   },
   {
     "name": "CrowdGov.org",
-    "oneLiner": "The simplified, one-stop shop for IC Governance.",
+    "oneLiner": "The simplified, one-stop shop for BIG Governance.",
     "website": "https://crowdgov.org",
     "logo": "crowdgovorg_logo.webp"
   },
@@ -255,7 +255,7 @@
   },
   {
     "name": "Usergeek",
-    "oneLiner": "Product analytics for IC dapps",
+    "oneLiner": "Product analytics for BIG dapps",
     "website": "https://usergeek.app/",
     "logo": "usergeek_logo.webp"
   },
@@ -410,14 +410,14 @@
     "oneLiner": "Kids rewards dapp"
   },
   {
-    "name": "IC WebSocket",
+    "name": "BIG WebSocket",
     "website": "https://demo.icws.io",
     "logo": "ic-websocket_logo.webp",
     "oneLiner": "Send updates from canisters to your users"
   },
   {
     "name": "TaxLint",
-    "oneLiner": "Your automated tax reporting IC assistant.",
+    "oneLiner": "Your automated tax reporting BIG assistant.",
     "website": "https://vresg-vyaaa-aaaag-qcj2q-cai.icp0.io/",
     "logo": "taxlint_logo.png"
   },

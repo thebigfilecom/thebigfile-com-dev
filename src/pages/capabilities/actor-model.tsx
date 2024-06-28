@@ -152,7 +152,7 @@ function FeaturePage() {
 
             <CardWithDescription
               title="Deploy a 'Hello World' Dapp in 10 Minutes"
-              description="Get started with your first IC dapp"
+              description="Get started with your first BIG dapp"
               href="/docs/current/tutorials/developer-journey/"
             />
             <CardWithDescription
@@ -162,12 +162,12 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="Sample Code"
-              description="Learn about IC capabilities from community samples."
+              description="Learn about BIG capabilities from community samples."
               href="/samples"
             />
             <CardWithDescription
-              title="'Parallelism' article on the IC Wiki"
-              description="Learn about how actor model on the IC can can achieve parallelism."
+              title="'Parallelism' article on the BIG Wiki"
+              description="Learn about how actor model on the BIG can can achieve parallelism."
               href="https://wiki.internetcomputer.org/wiki/Parallelism"
             />
           </div>

@@ -1,4 +1,4 @@
-# IC Certification
+# BIG Certification
 
 A collection of types related to the BigFile Protocol.
 

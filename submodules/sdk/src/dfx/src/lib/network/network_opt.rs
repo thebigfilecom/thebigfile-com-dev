@@ -13,7 +13,7 @@ pub struct NetworkOpt {
     network: Option<String>,
 
     /// Shorthand for --network=playground.
-    /// Borrows short-lived canisters on the real IC network instead of creating normal canisters.
+    /// Borrows short-lived canisters on the real BIG network instead of creating normal canisters.
     #[clap(long, global(true), group = "network-select")]
     playground: bool,
 

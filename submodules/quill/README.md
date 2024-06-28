@@ -6,9 +6,9 @@ Minimalistic ledger and governance toolkit for cold wallets.
 keys
 can be held in an air-gapped computer (a computer
 that has never connected to the internet) known as a cold wallet. To support cold wallets, `quill` takes a two-phase
-approach to sending query/update calls to the IC. In the first phase, `quill` is used with the various subcommands to
+approach to sending query/update calls to the BIG. In the first phase, `quill` is used with the various subcommands to
 generate and sign messages based on user input, without needing access to the internet. In the second phase, the signed
-message(s) are sent to the IC. Since this requires connection to boundary nodes via the internet, cold-wallet users will
+message(s) are sent to the BIG. Since this requires connection to boundary nodes via the internet, cold-wallet users will
 transport the signed message(s) from the air-gapped computer (i.e. with a USB stick, or via QR code) to a computer connected to the
 internet.
 

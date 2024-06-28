@@ -14,8 +14,8 @@ use sha2::Digest;
 use std::collections::HashMap;
 use std::path::{Path, PathBuf};
 
-pub const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
-pub const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "IC-CertificateExpression";
+pub const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
+pub const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "BIG-CertificateExpression";
 pub const LABEL_ASSETS_V1: &str = "http_assets";
 pub const LABEL_ASSETS_V2: &str = "http_expr";
 pub const STATUS_CODE_PSEUDO_HEADER: &str = ":ic-cert-status";

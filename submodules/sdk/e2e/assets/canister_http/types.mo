@@ -52,7 +52,7 @@ module Types {
         body : [Nat8];
     };
 
-    public type IC = actor {
+    public type BIG = actor {
         http_request : Types.CanisterHttpRequestArgs -> async Types.CanisterHttpResponsePayload;
     };
 };

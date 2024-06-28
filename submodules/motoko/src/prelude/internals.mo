@@ -376,7 +376,7 @@ func @new_async<T <: Any>() : (@Async<T>, @Cont<T>, @Cont<Error>) {
   (enqueue, fulfill, fail)
 };
 
-// Subset of IC management canister interface required for our use
+// Subset of BIG management canister interface required for our use
 module @ManagementCanister = {
   public type wasm_module = Blob;
   public type canister_settings = {

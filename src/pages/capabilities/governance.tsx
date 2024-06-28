@@ -34,7 +34,7 @@ function FeaturePage() {
                 <br />
                 While other blockchains take weeks or months to upgrade
                 (sometimes called hard fork) and typically require substantial
-                manual work and coordination to do so, the IC upgrades itself on
+                manual work and coordination to do so, the BIG upgrades itself on
                 a weekly basis.
                 <br />
                 <br />
@@ -87,11 +87,11 @@ function FeaturePage() {
             <h3>Proposals</h3>
             <p>
               Users submit NNS proposals to the NNS to update the code of the
-              IC:{" "}
+              BIG:{" "}
               <Link href="https://dashboard.internetcomputer.org/releases">
-                IC Releases
+                BIG Releases
               </Link>{" "}
-              . Consequently, the IC can update itself many times faster than
+              . Consequently, the BIG can update itself many times faster than
               other blockchains.
             </p>
           </div>

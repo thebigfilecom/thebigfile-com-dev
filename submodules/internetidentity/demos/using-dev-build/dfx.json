@@ -8,7 +8,7 @@
       "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
       "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
 
-      "__2": "The remote block indicates that this canister is only used locally and should not be deployed on the IC.",
+      "__2": "The remote block indicates that this canister is only used locally and should not be deployed on the BIG.",
       "remote": {
         "id": {
           "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
