@@ -918,7 +918,7 @@ function EthDenverPage() {
                   </Link>
                   <Link className="link-primary link-with-icon" href="/">
                     <LinkArrowRight />
-                    Learn more at internetcomputer.org
+                    Learn more at thebigfile.com
                   </Link>
                 </motion.p>
               </div>

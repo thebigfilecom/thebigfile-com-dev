@@ -1,5 +1,5 @@
 //! Types as defined by the HTTP gateway spec.
-//! See https://internetcomputer.org/docs/current/references/ic-interface-spec/#http-gateway-interface
+//! See https://thebigfile.com/docs/current/references/ic-interface-spec/#http-gateway-interface
 
 use candid::{define_function, CandidType, Deserialize};
 use serde_bytes::ByteBuf;

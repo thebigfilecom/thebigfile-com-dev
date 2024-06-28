@@ -79,7 +79,7 @@ function FeaturePage() {
               As of May 24, 2022, The BigFile can handle more than 1
               million queries per second and more than 20 thousand update calls
               per second. This is shown in{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Internet_Computer_performance_%26_power_consumption">
+              <Link href="https://wiki.thebigfile.com/wiki/Internet_Computer_performance_%26_power_consumption">
                 performance tests
               </Link>{" "}
             </p>
@@ -109,7 +109,7 @@ function FeaturePage() {
 
             <p className="mb-3 mt-6">
               <Link
-                href="https://internetcomputer.org/showcase/"
+                href="https://thebigfile.com/showcase/"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
@@ -147,7 +147,7 @@ function FeaturePage() {
             <CardWithDescription
               title="BIG Wiki"
               description="Take a deep dive into the BIG's performance"
-              href="https://wiki.internetcomputer.org/wiki/Internet_Computer_performance_%26_power_consumption"
+              href="https://wiki.thebigfile.com/wiki/Internet_Computer_performance_%26_power_consumption"
             />
           </div>
         </section>

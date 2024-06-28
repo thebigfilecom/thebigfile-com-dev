@@ -55,7 +55,7 @@ After conversion, a separate `StableState` object is used to store data during t
 
 ### Certified data
 To serve assets via HTTP over `<canister-id>.icp0.io` instead of `<canister-id>.raw.icp0.io`, responses have to
-[contain a certificate](https://wiki.internetcomputer.org/wiki/HTTP_asset_certification) to validate their content.
+[contain a certificate](https://wiki.thebigfile.com/wiki/HTTP_asset_certification) to validate their content.
 Obtaining such a certificate can not happen during a query call since it has to go through consensus, so it has to be created during an update call.
 
 A certificate is very limited in its content. At the time of writing, canisters can submit no more than 32 bytes of data to be certified.

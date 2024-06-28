@@ -65,7 +65,7 @@ function FeaturePage() {
             <h2>How It Works</h2>
             <p>
               See{" "}
-              <Link href="https://dashboard.internetcomputer.org">
+              <Link href="https://dashboard.thebigfile.com">
                 BigFile Dashboard
               </Link>{" "}
               for the scale of the BIG.
@@ -133,7 +133,7 @@ function FeaturePage() {
             <CardWithDescription
               title="'Limitless Scaling' article on the BIG Wiki"
               description="Take a deep dive into the BigFile's scaling."
-              href="https://wiki.internetcomputer.org/wiki/Limitless_Scaling"
+              href="https://wiki.thebigfile.com/wiki/Limitless_Scaling"
             />
           </div>
         </section>

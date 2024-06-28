@@ -147,12 +147,12 @@ const PreHero: React.FC<{
                 <div className="md:mx-1/10 flex flex-col justify-center gap-8 items-start">
                   <Link
                     className="button-outline-white text-center sm:text-left"
-                    href="https://dashboard.internetcomputer.org"
+                    href="https://dashboard.thebigfile.com"
                   >
                     INTERNET COMPUTER DASHBOARD
                   </Link>
                   <Link
-                    href="https://wiki.internetcomputer.org/wiki/L1_comparison"
+                    href="https://wiki.thebigfile.com/wiki/L1_comparison"
                     className="link-primary-light link-with-icon"
                   >
                     Comparison of Layer-1 blockchains

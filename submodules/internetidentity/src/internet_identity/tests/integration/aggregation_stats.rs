@@ -23,7 +23,7 @@ const PRUNE_EVENT_COUNT: &str = "prune_event_count";
 fn should_report_expected_aggregations() -> Result<(), CallError> {
     let env = env();
     let canister_id = install_ii_canister(&env, II_WASM.clone());
-    for ii_origin in ["internetcomputer.org", "ic0.app", "other"] {
+    for ii_origin in ["thebigfile.com", "ic0.app", "other"] {
         let identity_nr = create_identity(&env, canister_id, ii_origin);
 
         delegation_for_origin(&env, canister_id, identity_nr, "https://some-dapp.com")?;

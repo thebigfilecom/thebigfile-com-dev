@@ -282,7 +282,7 @@ function ReverseGasModelPage(): JSX.Element {
             <CardWithDescription
               title="Cycles Documentation"
               description=""
-              href="https://internetcomputer.org/docs/current/developer-docs/gas-cost"
+              href="https://thebigfile.com/docs/current/developer-docs/gas-cost"
               className="min-h-[180px]"
             ></CardWithDescription>
           </div>

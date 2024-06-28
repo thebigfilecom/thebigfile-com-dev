@@ -130,7 +130,7 @@ function FeaturePage() {
 
             <p className="mb-3 mt-6">
               <Link
-                href="https://internetcomputer.org/showcase/"
+                href="https://thebigfile.com/showcase/"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
@@ -168,7 +168,7 @@ function FeaturePage() {
             <CardWithDescription
               title="'Parallelism' article on the BIG Wiki"
               description="Learn about how actor model on the BIG can can achieve parallelism."
-              href="https://wiki.internetcomputer.org/wiki/Parallelism"
+              href="https://wiki.thebigfile.com/wiki/Parallelism"
             />
           </div>
         </section>

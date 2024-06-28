@@ -662,7 +662,7 @@ export class AuthenticatedConnection extends Connection {
 
 // Reads the "origin" used to infer what domain a FIDO device is available on.
 // The canister only allow for 50 characters, so for long domains we don't attach an origin
-// (those long domains are most likely a testnet with URL like <canister id>.large03.testnet.dfinity.network, and we basically only care about identity.ic0.app & identity.internetcomputer.org).
+// (those long domains are most likely a testnet with URL like <canister id>.large03.testnet.dfinity.network, and we basically only care about identity.ic0.app & identity.thebigfile.com).
 //
 // The return type is odd but that's what our didc version expects.
 export const readDeviceOrigin = (): [] | [string] => {
@@ -775,7 +775,7 @@ export const inferHost = (): string => {
   if (
     location.hostname.endsWith("icp0.io") ||
     location.hostname.endsWith("ic0.app") ||
-    location.hostname.endsWith("internetcomputer.org")
+    location.hostname.endsWith("thebigfile.com")
   ) {
     // If this is a canister running on one of the official BIG domains, then return the
     // official API endpoint

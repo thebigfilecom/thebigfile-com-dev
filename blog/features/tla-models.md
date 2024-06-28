@@ -39,7 +39,7 @@ Get the open-source code for TLA+ models [here](https://github.com/dfinity/tla-m
 
 Check out the technical tutorial [here](https://mynosefroze.com/blog/2023-08-09-tla_for_canisters).
 
-Learn more about the BigFile: internetcomputer.org
+Learn more about the BigFile: thebigfile.com
 Follow the tech on Twitter: @DFINITYDev
 
 Start building on the BigFile: [Developer Docs](/docs/current/home).

@@ -180,7 +180,7 @@ pub fn sample_authn_methods() -> Vec<AuthnMethodData> {
         metadata: HashMap::from([
             (
                 "origin".to_string(),
-                MetadataEntryV2::String("https://identity.internetcomputer.org".to_string()),
+                MetadataEntryV2::String("https://identity.thebigfile.com".to_string()),
             ),
             (
                 "alias".to_string(),

@@ -7,7 +7,7 @@ keywords: [advanced, motoko, bitcoin, bitcoin integration, btc]
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/motoko/basic_bitcoin)
 
 ## Overview 
-This tutorial will walk you through how to deploy a sample [canister smart contract](https://wiki.internetcomputer.org/wiki/Canister_smart_contract) **that can send and receive Bitcoin** on the BigFile.
+This tutorial will walk you through how to deploy a sample [canister smart contract](https://wiki.thebigfile.com/wiki/Canister_smart_contract) **that can send and receive Bitcoin** on the BigFile.
 
 ## Architecture
 

@@ -77,14 +77,14 @@ Updated cycles wallet to a gzipped version of `20240410` release:
 Updated replica to elected commit 5e285dcaf77db014ac85d6f96ff392fe461945f5.
 This incorporates the following executed proposals:
 
-- [129494](https://dashboard.internetcomputer.org/proposal/129494)
-- [129493](https://dashboard.internetcomputer.org/proposal/129493)
-- [129428](https://dashboard.internetcomputer.org/proposal/129428)
-- [129427](https://dashboard.internetcomputer.org/proposal/129427)
-- [129423](https://dashboard.internetcomputer.org/proposal/129423)
-- [129408](https://dashboard.internetcomputer.org/proposal/129408)
-- [129379](https://dashboard.internetcomputer.org/proposal/129379)
-- [129378](https://dashboard.internetcomputer.org/proposal/129378)
+- [129494](https://dashboard.thebigfile.com/proposal/129494)
+- [129493](https://dashboard.thebigfile.com/proposal/129493)
+- [129428](https://dashboard.thebigfile.com/proposal/129428)
+- [129427](https://dashboard.thebigfile.com/proposal/129427)
+- [129423](https://dashboard.thebigfile.com/proposal/129423)
+- [129408](https://dashboard.thebigfile.com/proposal/129408)
+- [129379](https://dashboard.thebigfile.com/proposal/129379)
+- [129378](https://dashboard.thebigfile.com/proposal/129378)
 
 # 0.20.0
 
@@ -143,14 +143,14 @@ echo garbage >dfx.json && dfx identity get-principal
 Updated replica to elected commit 02dcaf3ccdfe46bd959d683d43c5513d37a1420d.
 This incorporates the following executed proposals:
 
-- [129084](https://dashboard.internetcomputer.org/proposal/129084)
-- [129081](https://dashboard.internetcomputer.org/proposal/129081)
-- [129035](https://dashboard.internetcomputer.org/proposal/129035)
-- [128876](https://dashboard.internetcomputer.org/proposal/128876)
-- [128904](https://dashboard.internetcomputer.org/proposal/128904)
-- [128864](https://dashboard.internetcomputer.org/proposal/128864)
-- [128816](https://dashboard.internetcomputer.org/proposal/128816)
-- [128846](https://dashboard.internetcomputer.org/proposal/128846)
+- [129084](https://dashboard.thebigfile.com/proposal/129084)
+- [129081](https://dashboard.thebigfile.com/proposal/129081)
+- [129035](https://dashboard.thebigfile.com/proposal/129035)
+- [128876](https://dashboard.thebigfile.com/proposal/128876)
+- [128904](https://dashboard.thebigfile.com/proposal/128904)
+- [128864](https://dashboard.thebigfile.com/proposal/128864)
+- [128816](https://dashboard.thebigfile.com/proposal/128816)
+- [128846](https://dashboard.thebigfile.com/proposal/128846)
 
 # 0.19.0
 
@@ -255,11 +255,11 @@ It caused the following `init/deploy` commands to fail.
 Updated replica to elected commit 425a0012aeb40008e2e72d913318bc9dbdf3b4f4.
 This incorporates the following executed proposals:
 
-- [128806](https://dashboard.internetcomputer.org/proposal/128806)
-- [128805](https://dashboard.internetcomputer.org/proposal/128805)
-- [128296](https://dashboard.internetcomputer.org/proposal/128296)
-- [128295](https://dashboard.internetcomputer.org/proposal/128295)
-- [128171](https://dashboard.internetcomputer.org/proposal/128171)
+- [128806](https://dashboard.thebigfile.com/proposal/128806)
+- [128805](https://dashboard.thebigfile.com/proposal/128805)
+- [128296](https://dashboard.thebigfile.com/proposal/128296)
+- [128295](https://dashboard.thebigfile.com/proposal/128295)
+- [128171](https://dashboard.thebigfile.com/proposal/128171)
 
 ### Bitcoin canister
 
@@ -347,7 +347,7 @@ For detailed explanations on how these fields work please refer to the [ICRC-2 s
 
 ### feat: cut over to dfxvm
 
-The script at https://internetcomputer.org/install.sh now installs
+The script at https://thebigfile.com/install.sh now installs
 the [dfxvm version manager](https://github.com/dfinity/dfxvm) instead of the dfx binary.
 
 ### fix(deps): init/deploy still requires hash check
@@ -379,12 +379,12 @@ Fix the Typescript binding for init args.
 Updated replica to elected commit d966b2737ca75f1bfaa84f21e7f3f7c54b5d7f33.
 This incorporates the following executed proposals:
 
-- [128155](https://dashboard.internetcomputer.org/proposal/128155)
-- [128154](https://dashboard.internetcomputer.org/proposal/128154)
-- [128099](https://dashboard.internetcomputer.org/proposal/128099)
-- [128088](https://dashboard.internetcomputer.org/proposal/128088)
-- [127707](https://dashboard.internetcomputer.org/proposal/127707)
-- [127706](https://dashboard.internetcomputer.org/proposal/127706)
+- [128155](https://dashboard.thebigfile.com/proposal/128155)
+- [128154](https://dashboard.thebigfile.com/proposal/128154)
+- [128099](https://dashboard.thebigfile.com/proposal/128099)
+- [128088](https://dashboard.thebigfile.com/proposal/128088)
+- [127707](https://dashboard.thebigfile.com/proposal/127707)
+- [127706](https://dashboard.thebigfile.com/proposal/127706)
 
 ### Motoko
 
@@ -433,7 +433,7 @@ If it is set in both places, the specified ID from the command line takes preced
 ### feat: create canister on same subnet as other canisters
 
 `dfx deploy`, `dfx canister create`, and `dfx ledger create-canister` now support the option `--next-to <canister principal>` to create canisters on the same subnet as other canisters.
-The [registry canister](https://dashboard.internetcomputer.org/canister/rwlgt-iiaaa-aaaaa-aaaaa-cai#get_subnet_for_canister) is used as the source of truth to figure out the subnet id.
+The [registry canister](https://dashboard.thebigfile.com/canister/rwlgt-iiaaa-aaaaa-aaaaa-cai#get_subnet_for_canister) is used as the source of truth to figure out the subnet id.
 
 ### feat: init_arg in dfx.json
 
@@ -531,9 +531,9 @@ The following commands now work outside of a project:
 Updated replica to elected commit 044cfd5147fc97d7e5a214966941b6580c325d72.
 This incorporates the following executed proposals:
 
-- [127463](https://dashboard.internetcomputer.org/proposal/127463)
-- [127461](https://dashboard.internetcomputer.org/proposal/127461)
-- [127104](https://dashboard.internetcomputer.org/proposal/127104)
+- [127463](https://dashboard.thebigfile.com/proposal/127463)
+- [127461](https://dashboard.thebigfile.com/proposal/127461)
+- [127104](https://dashboard.thebigfile.com/proposal/127104)
 
 ### Candid UI
 
@@ -607,18 +607,18 @@ Fix that Candid UI cannot be opened using localhost URL.
 Updated replica to elected commit 324eb99eb7531369a5ef75560f1a1a652d123714.
 This incorporates the following executed proposals:
 
-- [127096](https://dashboard.internetcomputer.org/proposal/127096)
-- [127094](https://dashboard.internetcomputer.org/proposal/127094)
-- [127034](https://dashboard.internetcomputer.org/proposal/127034)
-- [127031](https://dashboard.internetcomputer.org/proposal/127031)
-- [126879](https://dashboard.internetcomputer.org/proposal/126879)
-- [126878](https://dashboard.internetcomputer.org/proposal/126878)
-- [126730](https://dashboard.internetcomputer.org/proposal/126730)
-- [126729](https://dashboard.internetcomputer.org/proposal/126729)
-- [126727](https://dashboard.internetcomputer.org/proposal/126727)
-- [126366](https://dashboard.internetcomputer.org/proposal/126366)
-- [126365](https://dashboard.internetcomputer.org/proposal/126365)
-- [126293](https://dashboard.internetcomputer.org/proposal/126293)
+- [127096](https://dashboard.thebigfile.com/proposal/127096)
+- [127094](https://dashboard.thebigfile.com/proposal/127094)
+- [127034](https://dashboard.thebigfile.com/proposal/127034)
+- [127031](https://dashboard.thebigfile.com/proposal/127031)
+- [126879](https://dashboard.thebigfile.com/proposal/126879)
+- [126878](https://dashboard.thebigfile.com/proposal/126878)
+- [126730](https://dashboard.thebigfile.com/proposal/126730)
+- [126729](https://dashboard.thebigfile.com/proposal/126729)
+- [126727](https://dashboard.thebigfile.com/proposal/126727)
+- [126366](https://dashboard.thebigfile.com/proposal/126366)
+- [126365](https://dashboard.thebigfile.com/proposal/126365)
+- [126293](https://dashboard.thebigfile.com/proposal/126293)
 
 # 0.15.3
 
@@ -752,20 +752,20 @@ Add the option to (re)set all permissions using upgrade arguments. This is espec
 Updated replica to elected commit 69e1408347723dbaa7a6cd2faa9b65c42abbe861.
 This incorporates the following executed proposals:
 
-- [126095](https://dashboard.internetcomputer.org/proposal/126095)
-- [126000](https://dashboard.internetcomputer.org/proposal/126000)
-- [125592](https://dashboard.internetcomputer.org/proposal/125592)
-- [125591](https://dashboard.internetcomputer.org/proposal/125591)
-- [125504](https://dashboard.internetcomputer.org/proposal/125504)
-- [125503](https://dashboard.internetcomputer.org/proposal/125503)
-- [125343](https://dashboard.internetcomputer.org/proposal/125343)
-- [125342](https://dashboard.internetcomputer.org/proposal/125342)
-- [125321](https://dashboard.internetcomputer.org/proposal/125321)
-- [125320](https://dashboard.internetcomputer.org/proposal/125320)
-- [125002](https://dashboard.internetcomputer.org/proposal/125002)
-- [125001](https://dashboard.internetcomputer.org/proposal/125001)
-- [124858](https://dashboard.internetcomputer.org/proposal/124858)
-- [124857](https://dashboard.internetcomputer.org/proposal/124857)
+- [126095](https://dashboard.thebigfile.com/proposal/126095)
+- [126000](https://dashboard.thebigfile.com/proposal/126000)
+- [125592](https://dashboard.thebigfile.com/proposal/125592)
+- [125591](https://dashboard.thebigfile.com/proposal/125591)
+- [125504](https://dashboard.thebigfile.com/proposal/125504)
+- [125503](https://dashboard.thebigfile.com/proposal/125503)
+- [125343](https://dashboard.thebigfile.com/proposal/125343)
+- [125342](https://dashboard.thebigfile.com/proposal/125342)
+- [125321](https://dashboard.thebigfile.com/proposal/125321)
+- [125320](https://dashboard.thebigfile.com/proposal/125320)
+- [125002](https://dashboard.thebigfile.com/proposal/125002)
+- [125001](https://dashboard.thebigfile.com/proposal/125001)
+- [124858](https://dashboard.thebigfile.com/proposal/124858)
+- [124857](https://dashboard.thebigfile.com/proposal/124857)
 
 ### Bitcoin canister
 
@@ -894,12 +894,12 @@ The verifying side can then unzip the response and will have a valid certificate
 Updated replica to elected commit 91bf38ff3cb927cb94027d9da513cd15f91a5b04.
 This incorporates the following executed proposals:
 
-- [124795](https://dashboard.internetcomputer.org/proposal/124795)
-- [124790](https://dashboard.internetcomputer.org/proposal/124790)
-- [124538](https://dashboard.internetcomputer.org/proposal/124538)
-- [124537](https://dashboard.internetcomputer.org/proposal/124537)
-- [124488](https://dashboard.internetcomputer.org/proposal/124488)
-- [124487](https://dashboard.internetcomputer.org/proposal/124487)
+- [124795](https://dashboard.thebigfile.com/proposal/124795)
+- [124790](https://dashboard.thebigfile.com/proposal/124790)
+- [124538](https://dashboard.thebigfile.com/proposal/124538)
+- [124537](https://dashboard.thebigfile.com/proposal/124537)
+- [124488](https://dashboard.thebigfile.com/proposal/124488)
+- [124487](https://dashboard.thebigfile.com/proposal/124487)
   
 # 0.15.0
 
@@ -1023,19 +1023,19 @@ Updated Motoko to [0.9.7](https://github.com/dfinity/motoko/releases/tag/0.9.7)
 Updated replica to elected commit cabe2ae3ca115b1a3f24d75814d4f8e317b2964d.
 This incorporates the following executed proposals:
 
-- [124331](https://dashboard.internetcomputer.org/proposal/124331)
-- [124330](https://dashboard.internetcomputer.org/proposal/124330)
-- [124272](https://dashboard.internetcomputer.org/proposal/124272)
-- [124021](https://dashboard.internetcomputer.org/proposal/124021)
-- [123977](https://dashboard.internetcomputer.org/proposal/123977)
-- [123976](https://dashboard.internetcomputer.org/proposal/123976)
-- [123922](https://dashboard.internetcomputer.org/proposal/123922)
-- [123784](https://dashboard.internetcomputer.org/proposal/123784)
-- [123730](https://dashboard.internetcomputer.org/proposal/123730)
-- [123711](https://dashboard.internetcomputer.org/proposal/123711)
-- [123474](https://dashboard.internetcomputer.org/proposal/123474)
-- [123410](https://dashboard.internetcomputer.org/proposal/123410)
-- [123311](https://dashboard.internetcomputer.org/proposal/123311)
+- [124331](https://dashboard.thebigfile.com/proposal/124331)
+- [124330](https://dashboard.thebigfile.com/proposal/124330)
+- [124272](https://dashboard.thebigfile.com/proposal/124272)
+- [124021](https://dashboard.thebigfile.com/proposal/124021)
+- [123977](https://dashboard.thebigfile.com/proposal/123977)
+- [123976](https://dashboard.thebigfile.com/proposal/123976)
+- [123922](https://dashboard.thebigfile.com/proposal/123922)
+- [123784](https://dashboard.thebigfile.com/proposal/123784)
+- [123730](https://dashboard.thebigfile.com/proposal/123730)
+- [123711](https://dashboard.thebigfile.com/proposal/123711)
+- [123474](https://dashboard.thebigfile.com/proposal/123474)
+- [123410](https://dashboard.thebigfile.com/proposal/123410)
+- [123311](https://dashboard.thebigfile.com/proposal/123311)
 
 # 0.14.2
 
@@ -1153,17 +1153,17 @@ Updated Motoko to 0.9.3
 
 Updated replica to elected commit ef8ca68771baa20a14af650ab89c9b31b1dc9a5e.
 This incorporates the following executed proposals:
-- [123248](https://dashboard.internetcomputer.org/proposal/123248)
-- [123021](https://dashboard.internetcomputer.org/proposal/123021)
-- [123007](https://dashboard.internetcomputer.org/proposal/123007)
-- [122923](https://dashboard.internetcomputer.org/proposal/122923)
-- [122924](https://dashboard.internetcomputer.org/proposal/122924)
-- [122910](https://dashboard.internetcomputer.org/proposal/122910)
-- [122911](https://dashboard.internetcomputer.org/proposal/122911)
-- [122746](https://dashboard.internetcomputer.org/proposal/122746)
-- [122748](https://dashboard.internetcomputer.org/proposal/122748)
-- [122617](https://dashboard.internetcomputer.org/proposal/122617)
-- [122615](https://dashboard.internetcomputer.org/proposal/122615)
+- [123248](https://dashboard.thebigfile.com/proposal/123248)
+- [123021](https://dashboard.thebigfile.com/proposal/123021)
+- [123007](https://dashboard.thebigfile.com/proposal/123007)
+- [122923](https://dashboard.thebigfile.com/proposal/122923)
+- [122924](https://dashboard.thebigfile.com/proposal/122924)
+- [122910](https://dashboard.thebigfile.com/proposal/122910)
+- [122911](https://dashboard.thebigfile.com/proposal/122911)
+- [122746](https://dashboard.thebigfile.com/proposal/122746)
+- [122748](https://dashboard.thebigfile.com/proposal/122748)
+- [122617](https://dashboard.thebigfile.com/proposal/122617)
+- [122615](https://dashboard.thebigfile.com/proposal/122615)
 
 # 0.14.1
 
@@ -1293,30 +1293,30 @@ Updated Motoko to 0.8.8
 
 Updated replica to elected commit b3b00ba59c366384e3e0cd53a69457e9053ec987.
 This incorporates the following executed proposals:
-- [122529](https://dashboard.internetcomputer.org/proposal/122529)
-- [122284](https://dashboard.internetcomputer.org/proposal/122284)
-- [122198](https://dashboard.internetcomputer.org/proposal/122198)
-- [120591](https://dashboard.internetcomputer.org/proposal/120591)
-- [119318](https://dashboard.internetcomputer.org/proposal/119318)
-- [118023](https://dashboard.internetcomputer.org/proposal/118023)
-- [116294](https://dashboard.internetcomputer.org/proposal/116294)
-- [116135](https://dashboard.internetcomputer.org/proposal/116135)
-- [114479](https://dashboard.internetcomputer.org/proposal/114479)
-- [113136](https://dashboard.internetcomputer.org/proposal/113136)
-- [111932](https://dashboard.internetcomputer.org/proposal/111932)
-- [111724](https://dashboard.internetcomputer.org/proposal/111724)
-- [110724](https://dashboard.internetcomputer.org/proposal/110724)
-- [109500](https://dashboard.internetcomputer.org/proposal/109500)
-- [108153](https://dashboard.internetcomputer.org/proposal/108153)
-- [107668](https://dashboard.internetcomputer.org/proposal/107668)
-- [107667](https://dashboard.internetcomputer.org/proposal/107667)
-- [106868](https://dashboard.internetcomputer.org/proposal/106868)
-- [106817](https://dashboard.internetcomputer.org/proposal/106817)
-- [105666](https://dashboard.internetcomputer.org/proposal/105666)
-- [104470](https://dashboard.internetcomputer.org/proposal/104470)
-- [103281](https://dashboard.internetcomputer.org/proposal/103281)
-- [103231](https://dashboard.internetcomputer.org/proposal/103231)
-- [101987](https://dashboard.internetcomputer.org/proposal/101987)
+- [122529](https://dashboard.thebigfile.com/proposal/122529)
+- [122284](https://dashboard.thebigfile.com/proposal/122284)
+- [122198](https://dashboard.thebigfile.com/proposal/122198)
+- [120591](https://dashboard.thebigfile.com/proposal/120591)
+- [119318](https://dashboard.thebigfile.com/proposal/119318)
+- [118023](https://dashboard.thebigfile.com/proposal/118023)
+- [116294](https://dashboard.thebigfile.com/proposal/116294)
+- [116135](https://dashboard.thebigfile.com/proposal/116135)
+- [114479](https://dashboard.thebigfile.com/proposal/114479)
+- [113136](https://dashboard.thebigfile.com/proposal/113136)
+- [111932](https://dashboard.thebigfile.com/proposal/111932)
+- [111724](https://dashboard.thebigfile.com/proposal/111724)
+- [110724](https://dashboard.thebigfile.com/proposal/110724)
+- [109500](https://dashboard.thebigfile.com/proposal/109500)
+- [108153](https://dashboard.thebigfile.com/proposal/108153)
+- [107668](https://dashboard.thebigfile.com/proposal/107668)
+- [107667](https://dashboard.thebigfile.com/proposal/107667)
+- [106868](https://dashboard.thebigfile.com/proposal/106868)
+- [106817](https://dashboard.thebigfile.com/proposal/106817)
+- [105666](https://dashboard.thebigfile.com/proposal/105666)
+- [104470](https://dashboard.thebigfile.com/proposal/104470)
+- [103281](https://dashboard.thebigfile.com/proposal/103281)
+- [103231](https://dashboard.thebigfile.com/proposal/103231)
+- [101987](https://dashboard.thebigfile.com/proposal/101987)
 
 # 0.14.0
 
@@ -1668,17 +1668,17 @@ Updated Motoko to 0.7.6
 Updated replica to elected commit b5a1a8c0e005216f2d945f538fc27163bafc3bf7.
 This incorporates the following executed proposals:
 
-- [100821](https://dashboard.internetcomputer.org/proposal/100821)
-- [97472](https://dashboard.internetcomputer.org/proposal/97472)
-- [96114](https://dashboard.internetcomputer.org/proposal/96114)
-- [94953](https://dashboard.internetcomputer.org/proposal/94953)
-- [94852](https://dashboard.internetcomputer.org/proposal/94852)
-- [93761](https://dashboard.internetcomputer.org/proposal/93761)
-- [93507](https://dashboard.internetcomputer.org/proposal/93507)
-- [92573](https://dashboard.internetcomputer.org/proposal/92573)
-- [92338](https://dashboard.internetcomputer.org/proposal/92338)
-- [91732](https://dashboard.internetcomputer.org/proposal/91732)
-- [91257](https://dashboard.internetcomputer.org/proposal/91257)
+- [100821](https://dashboard.thebigfile.com/proposal/100821)
+- [97472](https://dashboard.thebigfile.com/proposal/97472)
+- [96114](https://dashboard.thebigfile.com/proposal/96114)
+- [94953](https://dashboard.thebigfile.com/proposal/94953)
+- [94852](https://dashboard.thebigfile.com/proposal/94852)
+- [93761](https://dashboard.thebigfile.com/proposal/93761)
+- [93507](https://dashboard.thebigfile.com/proposal/93507)
+- [92573](https://dashboard.thebigfile.com/proposal/92573)
+- [92338](https://dashboard.thebigfile.com/proposal/92338)
+- [91732](https://dashboard.thebigfile.com/proposal/91732)
+- [91257](https://dashboard.thebigfile.com/proposal/91257)
 
 # 0.12.1
 
@@ -1693,8 +1693,8 @@ This incorporates the following executed proposals:
 Updated replica to elected commit dcbf401f27d9b48354e68389c6d8293c4233b055.
 This incorporates the following executed proposals:
 
-- [90485](https://dashboard.internetcomputer.org/proposal/90485)
-- [90008](https://dashboard.internetcomputer.org/proposal/90008)
+- [90485](https://dashboard.thebigfile.com/proposal/90485)
+- [90008](https://dashboard.thebigfile.com/proposal/90008)
 
 ### Frontend canister
 
@@ -2222,30 +2222,30 @@ Updated replica to release candidate 93dcf2a2026c34330c76149dd713d89e37daa533.
 
 This also incorporates the following executed proposals:
 
-- [88831](https://dashboard.internetcomputer.org/proposal/88831)
-- [88629](https://dashboard.internetcomputer.org/proposal/88629)
-- [88109](https://dashboard.internetcomputer.org/proposal/88109)
-- [87631](https://dashboard.internetcomputer.org/proposal/87631)
-- [86738](https://dashboard.internetcomputer.org/proposal/86738)
-- [86279](https://dashboard.internetcomputer.org/proposal/86279)
-* [85007](https://dashboard.internetcomputer.org/proposal/85007)
-* [84391](https://dashboard.internetcomputer.org/proposal/84391)
-* [83786](https://dashboard.internetcomputer.org/proposal/83786)
-* [82425](https://dashboard.internetcomputer.org/proposal/82425)
-* [81788](https://dashboard.internetcomputer.org/proposal/81788)
-* [81571](https://dashboard.internetcomputer.org/proposal/81571)
-* [80992](https://dashboard.internetcomputer.org/proposal/80992)
-* [79816](https://dashboard.internetcomputer.org/proposal/79816)
-* [78693](https://dashboard.internetcomputer.org/proposal/78693)
-* [77589](https://dashboard.internetcomputer.org/proposal/77589)
-* [76228](https://dashboard.internetcomputer.org/proposal/76228)
-* [75700](https://dashboard.internetcomputer.org/proposal/75700)
-* [75109](https://dashboard.internetcomputer.org/proposal/75109)
-* [74395](https://dashboard.internetcomputer.org/proposal/74395)
-* [73959](https://dashboard.internetcomputer.org/proposal/73959)
-* [73714](https://dashboard.internetcomputer.org/proposal/73714)
-* [73368](https://dashboard.internetcomputer.org/proposal/73368)
-* [72764](https://dashboard.internetcomputer.org/proposal/72764)
+- [88831](https://dashboard.thebigfile.com/proposal/88831)
+- [88629](https://dashboard.thebigfile.com/proposal/88629)
+- [88109](https://dashboard.thebigfile.com/proposal/88109)
+- [87631](https://dashboard.thebigfile.com/proposal/87631)
+- [86738](https://dashboard.thebigfile.com/proposal/86738)
+- [86279](https://dashboard.thebigfile.com/proposal/86279)
+* [85007](https://dashboard.thebigfile.com/proposal/85007)
+* [84391](https://dashboard.thebigfile.com/proposal/84391)
+* [83786](https://dashboard.thebigfile.com/proposal/83786)
+* [82425](https://dashboard.thebigfile.com/proposal/82425)
+* [81788](https://dashboard.thebigfile.com/proposal/81788)
+* [81571](https://dashboard.thebigfile.com/proposal/81571)
+* [80992](https://dashboard.thebigfile.com/proposal/80992)
+* [79816](https://dashboard.thebigfile.com/proposal/79816)
+* [78693](https://dashboard.thebigfile.com/proposal/78693)
+* [77589](https://dashboard.thebigfile.com/proposal/77589)
+* [76228](https://dashboard.thebigfile.com/proposal/76228)
+* [75700](https://dashboard.thebigfile.com/proposal/75700)
+* [75109](https://dashboard.thebigfile.com/proposal/75109)
+* [74395](https://dashboard.thebigfile.com/proposal/74395)
+* [73959](https://dashboard.thebigfile.com/proposal/73959)
+* [73714](https://dashboard.thebigfile.com/proposal/73714)
+* [73368](https://dashboard.thebigfile.com/proposal/73368)
+* [72764](https://dashboard.thebigfile.com/proposal/72764)
 
 ### ic-ref
 
@@ -2368,11 +2368,11 @@ A test key id "Secp256k1:dfx_test_key" is ready to be used by locally created ca
 Updated replica to elected commit 6e86169e98904047833ba6133e5413d2758d90eb.
 This incorporates the following executed proposals:
 
-* [72225](https://dashboard.internetcomputer.org/proposal/72225)
-* [71669](https://dashboard.internetcomputer.org/proposal/71669)
-* [71164](https://dashboard.internetcomputer.org/proposal/71164)
-* [70375](https://dashboard.internetcomputer.org/proposal/70375)
-* [70002](https://dashboard.internetcomputer.org/proposal/70002)
+* [72225](https://dashboard.thebigfile.com/proposal/72225)
+* [71669](https://dashboard.thebigfile.com/proposal/71669)
+* [71164](https://dashboard.thebigfile.com/proposal/71164)
+* [70375](https://dashboard.thebigfile.com/proposal/70375)
+* [70002](https://dashboard.thebigfile.com/proposal/70002)
 
 # 0.11.0
 
@@ -2598,17 +2598,17 @@ Updated Motoko from 0.6.28 to 0.6.29.
 Updated replica to elected commit 8993849de5fab76e796d67750facee55a0bf6649.
 This incorporates the following executed proposals:
 
-* [69804](https://dashboard.internetcomputer.org/proposal/69804)
-* [67990](https://dashboard.internetcomputer.org/proposal/67990)
-* [67483](https://dashboard.internetcomputer.org/proposal/67483)
-* [66895](https://dashboard.internetcomputer.org/proposal/66895)
-* [66888](https://dashboard.internetcomputer.org/proposal/66888)
-* [65530](https://dashboard.internetcomputer.org/proposal/65530)
-* [65327](https://dashboard.internetcomputer.org/proposal/65327)
-* [65043](https://dashboard.internetcomputer.org/proposal/65043)
-* [64355](https://dashboard.internetcomputer.org/proposal/64355)
-* [63228](https://dashboard.internetcomputer.org/proposal/63228)
-* [62143](https://dashboard.internetcomputer.org/proposal/62143)
+* [69804](https://dashboard.thebigfile.com/proposal/69804)
+* [67990](https://dashboard.thebigfile.com/proposal/67990)
+* [67483](https://dashboard.thebigfile.com/proposal/67483)
+* [66895](https://dashboard.thebigfile.com/proposal/66895)
+* [66888](https://dashboard.thebigfile.com/proposal/66888)
+* [65530](https://dashboard.thebigfile.com/proposal/65530)
+* [65327](https://dashboard.thebigfile.com/proposal/65327)
+* [65043](https://dashboard.thebigfile.com/proposal/65043)
+* [64355](https://dashboard.thebigfile.com/proposal/64355)
+* [63228](https://dashboard.thebigfile.com/proposal/63228)
+* [62143](https://dashboard.thebigfile.com/proposal/62143)
 
 ### ic-ref
 
@@ -2715,13 +2715,13 @@ Updated Motoko from 0.6.26 to 0.6.28.
 Updated replica to elected commit b90edb9897718730f65e92eb4ff6057b1b25f766.
 This incorporates the following executed proposals:
 
-* [61004](https://dashboard.internetcomputer.org/proposal/61004)
-* [60222](https://dashboard.internetcomputer.org/proposal/60222)
-* [59187](https://dashboard.internetcomputer.org/proposal/59187)
-* [58479](https://dashboard.internetcomputer.org/proposal/58479)
-* [58376](https://dashboard.internetcomputer.org/proposal/58376)
-* [57843](https://dashboard.internetcomputer.org/proposal/57843)
-* [57395](https://dashboard.internetcomputer.org/proposal/57395)
+* [61004](https://dashboard.thebigfile.com/proposal/61004)
+* [60222](https://dashboard.thebigfile.com/proposal/60222)
+* [59187](https://dashboard.thebigfile.com/proposal/59187)
+* [58479](https://dashboard.thebigfile.com/proposal/58479)
+* [58376](https://dashboard.thebigfile.com/proposal/58376)
+* [57843](https://dashboard.thebigfile.com/proposal/57843)
+* [57395](https://dashboard.thebigfile.com/proposal/57395)
 
 ## icx-proxy
 
@@ -2896,14 +2896,14 @@ Updated to version 0.14.0 of agent-rs
 Updated replica to elected commit b3788091fbdb8bed7e527d2df4cc5e50312f476c.
 This incorporates the following executed proposals:
 
-* [57150](https://dashboard.internetcomputer.org/proposal/57150)
-* [54964](https://dashboard.internetcomputer.org/proposal/54964)
-* [53702](https://dashboard.internetcomputer.org/proposal/53702)
-* [53231](https://dashboard.internetcomputer.org/proposal/53231)
-* [53134](https://dashboard.internetcomputer.org/proposal/53134)
-* [52627](https://dashboard.internetcomputer.org/proposal/52627)
-* [52144](https://dashboard.internetcomputer.org/proposal/52144)
-* [50282](https://dashboard.internetcomputer.org/proposal/50282)
+* [57150](https://dashboard.thebigfile.com/proposal/57150)
+* [54964](https://dashboard.thebigfile.com/proposal/54964)
+* [53702](https://dashboard.thebigfile.com/proposal/53702)
+* [53231](https://dashboard.thebigfile.com/proposal/53231)
+* [53134](https://dashboard.thebigfile.com/proposal/53134)
+* [52627](https://dashboard.thebigfile.com/proposal/52627)
+* [52144](https://dashboard.thebigfile.com/proposal/52144)
+* [50282](https://dashboard.thebigfile.com/proposal/50282)
 
 Added the ic-btc-adapter binary to the cache.
 
@@ -2945,14 +2945,14 @@ Updated icx-proxy to commit 594b6c81cde6da4e08faee8aa8e5a2e6ae815602, now static
 Updated replica to blessed commit d004accc3904e24dddb13a11d93451523e1a8a5f.
 This incorporates the following executed proposals:
 
-* [49653](https://dashboard.internetcomputer.org/proposal/49653)
-* [49011](https://dashboard.internetcomputer.org/proposal/49011)
-* [48427](https://dashboard.internetcomputer.org/proposal/48427)
-* [47611](https://dashboard.internetcomputer.org/proposal/47611)
-* [47512](https://dashboard.internetcomputer.org/proposal/47512)
-* [47472](https://dashboard.internetcomputer.org/proposal/47472)
-* [45984](https://dashboard.internetcomputer.org/proposal/45984)
-* [45982](https://dashboard.internetcomputer.org/proposal/45982)
+* [49653](https://dashboard.thebigfile.com/proposal/49653)
+* [49011](https://dashboard.thebigfile.com/proposal/49011)
+* [48427](https://dashboard.thebigfile.com/proposal/48427)
+* [47611](https://dashboard.thebigfile.com/proposal/47611)
+* [47512](https://dashboard.thebigfile.com/proposal/47512)
+* [47472](https://dashboard.thebigfile.com/proposal/47472)
+* [45984](https://dashboard.thebigfile.com/proposal/45984)
+* [45982](https://dashboard.thebigfile.com/proposal/45982)
 
 ## Motoko
 
@@ -2970,7 +2970,7 @@ Newly deployed Motoko canisters now embed the Candid interface and Motoko stable
 	1) the backward compatible of Candid interface in both upgrade and reinstall mode;
 	2) the type safety of Motoko stable variable type in upgrade mode to avoid accidentally lossing data;
 
-See [Upgrade compatibility](https://internetcomputer.org/docs/language-guide/compatibility) for more details.
+See [Upgrade compatibility](https://thebigfile.com/docs/language-guide/compatibility) for more details.
 
 ### feat: Unified environment variables across build commands
 
@@ -3163,16 +3163,16 @@ Upgraded from a432156f24faa16d387c9d36815f7ddc5d50e09f to ab8e3f5a04f0f061b8157c
 Updated replica to blessed commit 04fe8b0a1262f07c0cec1fdfa838a37607370a61.
 This incorporates the following executed proposals:
 
-* [45091](https://dashboard.internetcomputer.org/proposal/45091)
-* [43635](https://dashboard.internetcomputer.org/proposal/43635)
-* [43633](https://dashboard.internetcomputer.org/proposal/43633)
-* [42783](https://dashboard.internetcomputer.org/proposal/42783)
-* [42410](https://dashboard.internetcomputer.org/proposal/42410)
-* [40908](https://dashboard.internetcomputer.org/proposal/40908)
-* [40647](https://dashboard.internetcomputer.org/proposal/40647)
-* [40328](https://dashboard.internetcomputer.org/proposal/40328)
-* [39791](https://dashboard.internetcomputer.org/proposal/39791)
-* [38541](https://dashboard.internetcomputer.org/proposal/38541)
+* [45091](https://dashboard.thebigfile.com/proposal/45091)
+* [43635](https://dashboard.thebigfile.com/proposal/43635)
+* [43633](https://dashboard.thebigfile.com/proposal/43633)
+* [42783](https://dashboard.thebigfile.com/proposal/42783)
+* [42410](https://dashboard.thebigfile.com/proposal/42410)
+* [40908](https://dashboard.thebigfile.com/proposal/40908)
+* [40647](https://dashboard.thebigfile.com/proposal/40647)
+* [40328](https://dashboard.thebigfile.com/proposal/40328)
+* [39791](https://dashboard.thebigfile.com/proposal/39791)
+* [38541](https://dashboard.thebigfile.com/proposal/38541)
 
 ## Motoko
 
@@ -3241,17 +3241,17 @@ Updated Motoko from 0.6.11 to 0.6.20.
 Updated replica to blessed commit 75138bbf11e201aac47266f07bee289dc18a082b.
 This incorporates the following executed proposals:
 
-* [33828](https://dashboard.internetcomputer.org/proposal/33828)
-* [31275](https://dashboard.internetcomputer.org/proposal/31275)
-* [31165](https://dashboard.internetcomputer.org/proposal/31165)
-* [30392](https://dashboard.internetcomputer.org/proposal/30392)
-* [30078](https://dashboard.internetcomputer.org/proposal/30078)
-* [29235](https://dashboard.internetcomputer.org/proposal/29235)
-* [28784](https://dashboard.internetcomputer.org/proposal/28784)
-* [27975](https://dashboard.internetcomputer.org/proposal/27975)
-* [26833](https://dashboard.internetcomputer.org/proposal/26833)
-* [25343](https://dashboard.internetcomputer.org/proposal/25343)
-* [23633](https://dashboard.internetcomputer.org/proposal/23633)
+* [33828](https://dashboard.thebigfile.com/proposal/33828)
+* [31275](https://dashboard.thebigfile.com/proposal/31275)
+* [31165](https://dashboard.thebigfile.com/proposal/31165)
+* [30392](https://dashboard.thebigfile.com/proposal/30392)
+* [30078](https://dashboard.thebigfile.com/proposal/30078)
+* [29235](https://dashboard.thebigfile.com/proposal/29235)
+* [28784](https://dashboard.thebigfile.com/proposal/28784)
+* [27975](https://dashboard.thebigfile.com/proposal/27975)
+* [26833](https://dashboard.thebigfile.com/proposal/26833)
+* [25343](https://dashboard.thebigfile.com/proposal/25343)
+* [23633](https://dashboard.thebigfile.com/proposal/23633)
 
 # 0.8.4
 

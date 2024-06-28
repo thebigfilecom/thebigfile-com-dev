@@ -245,7 +245,7 @@ function NodeProvidersPage() {
             </p>
             <p className="mb-0">
               <Link
-                href="https://dashboard.internetcomputer.org/node/45huy-6h3k3-m7uao-7w4bu-dtcgx-4yxpc-s36gr-pq7k5-xesnw-vnjut-oae"
+                href="https://dashboard.thebigfile.com/node/45huy-6h3k3-m7uao-7w4bu-dtcgx-4yxpc-s36gr-pq7k5-xesnw-vnjut-oae"
                 className="link-primary link-with-icon"
                 target="_blank"
                 rel="noopener noreferrer"

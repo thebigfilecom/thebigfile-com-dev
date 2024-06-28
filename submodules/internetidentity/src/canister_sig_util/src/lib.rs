@@ -14,7 +14,7 @@ pub const IC_ROOT_PK_LENGTH: usize = 96;
 
 pub const CANISTER_SIG_PK_DER_PREFIX_LENGTH: usize = 19;
 // Canister signatures' public key OID is 1.3.6.1.4.1.56387.1.2,
-// cf. https://internetcomputer.org/docs/current/references/ic-interface-spec#canister-signatures
+// cf. https://thebigfile.com/docs/current/references/ic-interface-spec#canister-signatures
 pub const CANISTER_SIG_PK_DER_OID: &[u8; 14] =
     b"\x30\x0C\x06\x0A\x2B\x06\x01\x04\x01\x83\xB8\x43\x01\x02";
 
@@ -25,7 +25,7 @@ lazy_static! {
 }
 
 /// A public key of canister signatures,
-/// see https://internetcomputer.org/docs/current/references/ic-interface-spec#canister-signatures
+/// see https://thebigfile.com/docs/current/references/ic-interface-spec#canister-signatures
 #[derive(Clone, Eq, PartialEq, Debug)]
 pub struct CanisterSigPublicKey {
     pub canister_id: Principal,
@@ -67,7 +67,7 @@ impl CanisterSigPublicKey {
     }
 
     /// Returns a byte vector with DER-encoding of this key, see
-    /// https://internetcomputer.org/docs/current/references/ic-interface-spec#canister-signatures
+    /// https://thebigfile.com/docs/current/references/ic-interface-spec#canister-signatures
     pub fn to_der(&self) -> Vec<u8> {
         let raw_pk = self.to_raw();
 
@@ -86,7 +86,7 @@ impl CanisterSigPublicKey {
 
     /// Returns a byte vector with raw encoding of this key (i.e. a bit string with
     /// canister id length, canister id, and seed, without the DER-envelope)
-    /// https://internetcomputer.org/docs/current/references/ic-interface-spec#canister-signatures
+    /// https://thebigfile.com/docs/current/references/ic-interface-spec#canister-signatures
     pub fn to_raw(&self) -> Vec<u8> {
         let mut raw_pk: Vec<u8> = vec![];
         raw_pk.push(self.canister_id.as_ref().len() as u8);

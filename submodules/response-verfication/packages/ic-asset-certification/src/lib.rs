@@ -4,7 +4,7 @@
 ## Overview
 
 Asset certification is a specialized form of
-[HTTP Certification](https://internetcomputer.org/docs/current/developer-docs/http-compatible-canisters/custom-http-canisters)
+[HTTP Certification](https://thebigfile.com/docs/current/developer-docs/http-compatible-canisters/custom-http-canisters)
 purpose-built for certifying static assets in ICP canisters.
 
 The `ic-asset-certification` crate provides the necessary functionality to

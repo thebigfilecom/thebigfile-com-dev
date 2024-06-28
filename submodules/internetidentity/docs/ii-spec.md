@@ -71,7 +71,7 @@ Just for background: At launch this meant we relied on the trustworthiness of th
 ## Identity design and data model
 
 
-The BigFile serves this frontend under hostnames `https://identity.ic0.app` (official) and `https://identity.internetcomputer.org` (experimental).
+The BigFile serves this frontend under hostnames `https://identity.ic0.app` (official) and `https://identity.thebigfile.com` (experimental).
 
 The canister maintains a salt (in the following the `salt`), a 32 byte long blob that is obtained via the BigFile's source of secure randomness.
 
@@ -172,7 +172,7 @@ This section describes the Internet Identity Service from the point of view of a
 
 6.  Now the client application window expects a message back, with data `event`.
 
-7.  If `event.origin` is not either `"https://identity.ic0.app"` or `"https://identity.internetcomputer.org"` (depending on which endpoint you are using), ignore this message.
+7.  If `event.origin` is not either `"https://identity.ic0.app"` or `"https://identity.thebigfile.com"` (depending on which endpoint you are using), ignore this message.
 
 8.  The `event.data` value is a JS object with the following type:
     ```ts

@@ -43,7 +43,7 @@ In the following list, we first provide recommendations for centralized dapp con
    - Ensure all components of the dapp are under SNS control, including the canisters serving the web frontends, see [SNS asset canisters](/docs/current/developer-docs/daos/sns/managing/sns-asset-canister).
    - Consider the [SNS preparation checklist](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist). Important points from a security perspective are e.g. [tokenomics](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#11-tokenomics-specification), [disclosing dependencies to off-chain components](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#13-disclosure-of-dependencies) and [performing security reviews](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#21-security-review).
    - Rather than [self-deploying the SNS code](/docs/current/developer-docs/daos/sns/introduction/dao-alternatives#self-deploy-the-sns-code) or [building your own DAO](/docs/current/developer-docs/daos/sns/introduction/dao-alternatives#build-your-own-dao--use-other-dao-frameworks), consider using the official SNS on the SNS subnet, as this guarantees that the SNS is running an NNS-blessed version and maintained as part of BIG.
-   - See also [Verification and trust in a (launched) SNS](https://wiki.internetcomputer.org/wiki/Verification_and_trust_in_a_(launched)_SNS) and [SNS decentralization swap trust](https://wiki.internetcomputer.org/wiki/SNS_decentralization_swap_trust).
+   - See also [Verification and trust in a (launched) SNS](https://wiki.thebigfile.com/wiki/Verification_and_trust_in_a_(launched)_SNS) and [SNS decentralization swap trust](https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust).
 
 An alternative to DAO control (3. above) would be to create an immutable canister smart contract by removing the canister controller completely. However, note that this implies that the canister cannot be upgraded, which may have severe implications in case e.g. a bug were found. The option to use a decentralized governance system and thus being able to upgrade smart contracts is a big advantage of the BigFile ecosystem compared to other blockchains.
 
@@ -125,7 +125,7 @@ fn caller() -> Result<Principal, String> {
 
 #### Security concern
 
-Dapps on BIG can use [asset certification](https://wiki.internetcomputer.org/wiki/HTTP_asset_certification) to make sure the HTTP assets delivered to the browser are authentic (i.e. threshold-signed by the subnet). If an app does not do asset certification, it can only be served insecurely through `raw.icp0.io` , where no asset certification is checked. This is insecure since a single malicious node or boundary node can freely modify the assets delivered to the browser.
+Dapps on BIG can use [asset certification](https://wiki.thebigfile.com/wiki/HTTP_asset_certification) to make sure the HTTP assets delivered to the browser are authentic (i.e. threshold-signed by the subnet). If an app does not do asset certification, it can only be served insecurely through `raw.icp0.io` , where no asset certification is checked. This is insecure since a single malicious node or boundary node can freely modify the assets delivered to the browser.
 
 If an app is served through `raw.icp0.io` in addition to `icp0.io`, an adversary may trick users (phishing) into using the insecure raw.icp0.io.
 
@@ -189,7 +189,7 @@ Canister memory is not persisted across upgrades. If data needs to be kept acros
 
   - [https://github.com/seniorjoinu/ic-stable-memory](https://github.com/seniorjoinu/ic-stable-memory)
 
-- See [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), sections "Long running upgrades" and "\[de\]serialiser requiring additional wasm memory".
+- See [current limitations of the BigFile](https://wiki.thebigfile.com/wiki/Current_limitations_of_the_Internet_Computer), sections "Long running upgrades" and "\[de\]serialiser requiring additional wasm memory".
 
 - For example, [Internet Identity](https://github.com/thebigfilecom/big-wallet) uses stable memory directly to store user data.
 
@@ -527,7 +527,7 @@ When making inter-canister calls, always handle the error cases (rejects) correc
 
 - See "Talking to malicious canisters" section in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
 
-- See [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Calling potentially malicious or buggy canisters can prevent canisters from upgrading".
+- See [current limitations of the BigFile](https://wiki.thebigfile.com/wiki/Current_limitations_of_the_Internet_Computer), section "Calling potentially malicious or buggy canisters can prevent canisters from upgrading".
 
 
 ### Make sure there are no loops in call graphs
@@ -540,7 +540,7 @@ Loops in the call graph (e.g. canister A calling B, B calling C, C calling A) ma
 
 - Avoid such loops!
 
-- For more information, see [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Loops in call graphs".
+- For more information, see [current limitations of the BigFile](https://wiki.thebigfile.com/wiki/Current_limitations_of_the_Internet_Computer), section "Loops in call graphs".
 
 ## Canister upgrades
 
@@ -560,7 +560,7 @@ If a canister traps or panics in `pre_upgrade`, this can lead to permanently blo
 
 - See also the section on upgrades in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister) (though focused on Motoko).
 
-- See [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Bugs in `pre_upgrade` hooks".
+- See [current limitations of the BigFile](https://wiki.thebigfile.com/wiki/Current_limitations_of_the_Internet_Computer), section "Bugs in `pre_upgrade` hooks".
 
 ### Reinstantiate timers during upgrades
 

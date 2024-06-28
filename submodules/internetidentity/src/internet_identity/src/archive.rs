@@ -209,7 +209,7 @@ async fn create_archive(config: ArchiveConfig) -> Result<Principal, String> {
 
 /// Register a new canister and get its canister id.
 ///
-/// See [BIG method `create_canister`](https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-create_canister).
+/// See [BIG method `create_canister`](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-create_canister).
 ///
 /// Note: Copied from [ic-cdk::create_canister] but modified to allow a configurable amount of cycles
 /// to be sent (canister creation is free on system subnets where II is running). We still make the

@@ -33,7 +33,7 @@ const HostWeb = () => {
               just like regular websites.
             </p>
             <Link
-              href="https://internetcomputer.org/how-it-works#Web-access"
+              href="https://thebigfile.com/how-it-works#Web-access"
               className="link-primary link-with-icon mt-8"
             >
               How it works

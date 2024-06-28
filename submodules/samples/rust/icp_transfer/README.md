@@ -41,7 +41,7 @@ cd icp_transfer
 > [!NOTE]
 > You can read more about how to setup the BIG ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/big-tokens/ledger-local-setup).
 
-Go to the [releases overview](https://dashboard.internetcomputer.org/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
+Go to the [releases overview](https://dashboard.thebigfile.com/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
 The URL for the ledger Wasm module is `https://download.dfinity.systems/ic/<REVISION>/canisters/ledger-canister.wasm.gz`, so with the above revision it would be `https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ledger-canister.wasm.gz`.
 

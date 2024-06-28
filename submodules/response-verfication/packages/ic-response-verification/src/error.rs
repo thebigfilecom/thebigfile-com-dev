@@ -357,7 +357,7 @@ mod tests {
     #[wasm_bindgen_test]
     fn error_into_http_certification_error() {
         let error = ResponseVerificationError::HttpCertificationError(
-            HttpCertificationError::MalformedUrl("https://internetcomputer.org".into()),
+            HttpCertificationError::MalformedUrl("https://thebigfile.com".into()),
         );
         let result = ResponseVerificationJsError::from(error);
 
@@ -365,7 +365,7 @@ mod tests {
             result,
             ResponseVerificationJsError {
                 code: ResponseVerificationJsErrorCode::HttpCertificationError,
-                message: r#"HTTP Certification error: "Failed to parse url: "https://internetcomputer.org"""#.into(),
+                message: r#"HTTP Certification error: "Failed to parse url: "https://thebigfile.com"""#.into(),
             }
         )
     }

@@ -45,7 +45,7 @@ const TrueScaling = () => {
           unbounded number of dapps and allows storage of unlimited data.
         </p>
         <Link
-          href="https://wiki.internetcomputer.org/wiki/Node_Provider_Documentation"
+          href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
           className="link-primary link-with-icon"
         >
           <LinkArrowRight />

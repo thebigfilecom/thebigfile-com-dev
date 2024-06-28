@@ -1,5 +1,5 @@
 # Continuous Deployment job to deploy the portal to the BigFile as an asset canister
-# as well as to the Netlify internetcomputer.org
+# as well as to the Netlify thebigfile.com
 
 name: CD
 
@@ -50,7 +50,7 @@ jobs:
           echo "Canister balance: $balance_formatted"
           if [ "5000000000000" -gt "$balance" ]; then
             canister_id=$(cat "$GITHUB_WORKSPACE/canister_ids.json" | jq -r '.portal.ic')
-            template="{ \"channel\": \"C04EGHHU9U2\", \"blocks\": [ { \"type\": \"section\", \"text\": { \"type\": \"mrkdwn\", \"text\": \"@channel internetcomputer.org canister \`$canister_id\` balance is \`$balance_formatted\`.\n\nTop it up by\n- running \`dfx ledger --network ic top-up $canister_id --amount 5.0\`\n- or by adding the canister on the NNS and sending cycles to it.\" } } ]}"
+            template="{ \"channel\": \"C04EGHHU9U2\", \"blocks\": [ { \"type\": \"section\", \"text\": { \"type\": \"mrkdwn\", \"text\": \"@channel thebigfile.com canister \`$canister_id\` balance is \`$balance_formatted\`.\n\nTop it up by\n- running \`dfx ledger --network ic top-up $canister_id --amount 5.0\`\n- or by adding the canister on the NNS and sending cycles to it.\" } } ]}"
             curl --data "$template" -H "Content-type: application/json"  -H "Authorization: Bearer $SLACK_TOKEN" -X POST https://slack.com/api/chat.postMessage -o /dev/null
           fi
         env:

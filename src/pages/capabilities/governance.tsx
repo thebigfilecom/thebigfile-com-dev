@@ -88,7 +88,7 @@ function FeaturePage() {
             <p>
               Users submit NNS proposals to the NNS to update the code of the
               BIG:{" "}
-              <Link href="https://dashboard.internetcomputer.org/releases">
+              <Link href="https://dashboard.thebigfile.com/releases">
                 BIG Releases
               </Link>{" "}
               . Consequently, the BIG can update itself many times faster than
@@ -113,7 +113,7 @@ function FeaturePage() {
             <CardWithDescription
               title="Diver deeper into the NNS"
               description="Take a deep dive into the BigFile's NNS and upgrading."
-              href="https://wiki.internetcomputer.org/wiki/NNS_Canisters"
+              href="https://wiki.thebigfile.com/wiki/NNS_Canisters"
             />
           </div>
         </section>

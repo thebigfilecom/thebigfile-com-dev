@@ -168,7 +168,7 @@ function SnsFaqPage() {
               handed control over to an SNS DAO in Q1 of 2023. Since then, many
               ecosystem projects have followed. Currently, there are 11 SNS DAOs
               on the BigFile. Follow their progress on the{" "}
-              <Link href="https://dashboard.internetcomputer.org/sns">
+              <Link href="https://dashboard.thebigfile.com/sns">
                 SNS dashboard
               </Link>
               .
@@ -353,7 +353,7 @@ function SnsFaqPage() {
                 holders.
               </p>
               More about the{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Neurons_Fund">
+              <Link href="https://wiki.thebigfile.com/wiki/Neurons_Fund">
                 Neurons' fund
               </Link>
               .
@@ -434,7 +434,7 @@ function SnsFaqPage() {
               <p>
                 If the decentralization swap is successful, you will receive a
                 basket of{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/Neurons_101">
+                <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                   neurons
                 </Link>{" "}
                 that hold your SNS tokens. Depending on the SNS configuration,
@@ -487,7 +487,7 @@ function SnsFaqPage() {
               </ul>
               <p>
                 Visis the ICP Wiki for a more detailed overvire of{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/How-To:_SNS_tokenomics_configuration">
+                <Link href="https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration">
                   SNS tokenomics
                 </Link>
               </p>
@@ -607,7 +607,7 @@ function SnsFaqPage() {
                 decentralizing the dapp. In any case, it is crucial that you
                 trust the developers will not change the dapp during the SNS
                 launch. Learn what you could verify and what to look out for on{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/SNS_decentralization_swap_trust">
+                <Link href="https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust">
                   the ICP Wiki.
                 </Link>
               </p>
@@ -642,7 +642,7 @@ function SnsFaqPage() {
                   as the one you're interacting with.
                 </li>
                 See Wiki for more info on{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/How-to:_Verify_SNS_decentralization_swap_proposal">
+                <Link href="https://wiki.thebigfile.com/wiki/How-to:_Verify_SNS_decentralization_swap_proposal">
                   verification
                 </Link>
               </ul>
@@ -771,12 +771,12 @@ function SnsFaqPage() {
             <Faq title="What is voting power and how do I get it?">
               SNS DAOs have a stake-based governance system. This means the more
               tokens participants stake in their{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Neurons_101">
+              <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                 neurons
               </Link>
               , the more voting power their neurons have. In addition to the
               stake, a neuron's voting power is dependent on the{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Neurons_101">
+              <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                 dissolve delay
               </Link>{" "}
               bonus and age bonus. Each SNS DAO decides these bonuses in its
@@ -873,7 +873,7 @@ function SnsFaqPage() {
               </ul>
               <p className="not-prose">
                 <Link
-                  href="https://wiki.internetcomputer.org/wiki/How-To:_SNS_tokenomics_configuration"
+                  href="https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration"
                   className="link-primary link-with-icon"
                 >
                   <LinkArrowRight></LinkArrowRight>
@@ -930,7 +930,7 @@ function SnsFaqPage() {
             title="Technical overview of ICP"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="https://wiki.internetcomputer.org/wiki/Service_Nervous_System_(SNS)"
+            href="https://wiki.thebigfile.com/wiki/Service_Nervous_System_(SNS)"
             title="SNS Wiki"
           ></SmallCardWithDescription>
           <SmallCardWithDescription

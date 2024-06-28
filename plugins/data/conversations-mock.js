@@ -569,7 +569,7 @@ module.exports = [
     speaker: "Jeffrey Anderson",
     speakerTitle: "Engineering Manager",
     description:
-      '<p>In this conversation Jeff will explain the BigFile Dashboard: <a href="https://dashboard.internetcomputer.org/">https://dashboard.internetcomputer.org/</a></p>\n',
+      '<p>In this conversation Jeff will explain the BigFile Dashboard: <a href="https://dashboard.thebigfile.com/">https://dashboard.thebigfile.com/</a></p>\n',
     startTimeUtc: 1646762400000,
     startTimePt: 1646730000000,
     startTimeEu: 1646762400000,

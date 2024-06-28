@@ -1,4 +1,4 @@
 <p>
-  Visit the <a href="https://internetcomputer.org">BigFile SDK</a> to learn
+  Visit the <a href="https://thebigfile.com">BigFile SDK</a> to learn
   how to build canister smart contracts.
 </p>

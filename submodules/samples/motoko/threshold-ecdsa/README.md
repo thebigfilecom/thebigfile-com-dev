@@ -16,7 +16,7 @@ More specifically:
 
 - The sample canister receives a request that provides a message.
 - The sample canister hashes the message and uses the key derivation string for the derivation path. 
-- The sample canister uses the above to request a signature from the threshold ECDSA [subnet](https://wiki.internetcomputer.org/wiki/Subnet_blockchain) (the threshold ECDSA is a subnet specializing in generating threshold ECDSA signatures).
+- The sample canister uses the above to request a signature from the threshold ECDSA [subnet](https://wiki.thebigfile.com/wiki/Subnet_blockchain) (the threshold ECDSA is a subnet specializing in generating threshold ECDSA signatures).
 
 This tutorial gives a complete overview of the development, starting with downloading the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md), up to the deployment and trying out the code on the BIG mainnet.
 

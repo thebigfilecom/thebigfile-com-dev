@@ -31,7 +31,7 @@ Over the past six months, DFINITY has adopted full-stack live reloading in our i
 
 This was made possible using the [Motoko Dev Server](https://github.com/dfinity/motoko-dev-server) (or `mo-dev` for short), a command-line tool which facilitates a live-reload workflow for Motoko dapps and smart contracts.
 
-`mo-dev` is already used in a wide range of projects such as the [Motoko Playground](https://play.motoko.org/), [Developer Experience Feedback Board](https://dx.internetcomputer.org/), and even the language’s own [base library](https://github.com/dfinity/motoko-base).
+`mo-dev` is already used in a wide range of projects such as the [Motoko Playground](https://play.motoko.org/), [Developer Experience Feedback Board](https://dx.thebigfile.com/), and even the language’s own [base library](https://github.com/dfinity/motoko-base).
 
 Each use case requires different live-reload capabilities, so we decided to create a Swiss Army knife ([if you will](https://dfinity.org/foundation/)) of features which you can select depending on your project:
 
@@ -170,6 +170,6 @@ Here are a few miscellaneous tips which might come in handy while working with `
 
 Feedback is welcome! If you find a bug or want to see a new feature, please feel free to [reach out on GitHub](https://github.com/dfinity/motoko-dev-server/issues) (or give us a ⭐ to support the project) at [github.com/dfinity/motoko-dev-server](https://github.com/dfinity/motoko-dev-server).
 
-Otherwise, consider submitting a request on our [Developer Experience Feedback Board](https://dx.internetcomputer.org/), which itself was built with `mo-dev`! If you're curious, you can find the source code at [github.com/dfinity/feedback](https://github.com/dfinity/feedback).
+Otherwise, consider submitting a request on our [Developer Experience Feedback Board](https://dx.thebigfile.com/), which itself was built with `mo-dev`! If you're curious, you can find the source code at [github.com/dfinity/feedback](https://github.com/dfinity/feedback).
 
 Thanks for reading. Cheers!

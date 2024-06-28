@@ -114,7 +114,7 @@ export const validateDerivationOrigin = async ({
 /**
  * Infer the URL to fetch the alternative origins file from based on the canister id
  * and the current location.
- * Deployments on mainnet, (including production II hosted on ic0.app or internetcomputer.org) will always only use the
+ * Deployments on mainnet, (including production II hosted on ic0.app or thebigfile.com) will always only use the
  * official icp0.io HTTP gateway.
  * Dev deployments hosted on localhost or custom domains will use the same domain as the current location.
  *
@@ -140,7 +140,7 @@ const inferAlternativeOriginsUrl = ({
   if (
     location.hostname.endsWith("icp0.io") ||
     location.hostname.endsWith("ic0.app") ||
-    location.hostname.endsWith("internetcomputer.org")
+    location.hostname.endsWith("thebigfile.com")
   ) {
     // If this is a canister running on one of the official BIG domains, then return the
     // official canister id based API endpoint

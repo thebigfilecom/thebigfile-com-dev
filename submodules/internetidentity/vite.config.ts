@@ -90,7 +90,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
                   {
                     hosts: [
                       "identity.ic0.app",
-                      "identity.internetcomputer.org",
+                      "identity.thebigfile.com",
                     ],
                     canisterName: "internet_identity",
                   },

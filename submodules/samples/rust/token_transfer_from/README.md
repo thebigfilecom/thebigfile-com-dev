@@ -38,7 +38,7 @@ cd token_transfer_from
 > [!NOTE]
 > You can read more about how to setup the BIGRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
 
-Go to the [releases overview](https://dashboard.internetcomputer.org/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
+Go to the [releases overview](https://dashboard.thebigfile.com/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
 The URL for the ledger Wasm module is `https://download.dfinity.systems/ic/<REVISION>/canisters/ic-icrc1-ledger.wasm.gz`, so with the above revision it would be `https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ic-icrc1-ledger.wasm.gz`.
 

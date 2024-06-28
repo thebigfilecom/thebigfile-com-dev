@@ -101,7 +101,7 @@ Upon successful response idenity provider displays the consent message from `Icr
 ### 2: Derivation Origin
 
 The issuer must implement also `derivation_origin`-API, which allows for taking the advantage
-of the [Alternative Derivation Origins](https://internetcomputer.org/docs/current/references/ii-spec#alternative-frontend-origins)-feature.
+of the [Alternative Derivation Origins](https://thebigfile.com/docs/current/references/ii-spec#alternative-frontend-origins)-feature.
 `derivation_origin` is called by the identity provider to obtain an URL to be used as the derivation origin
 for user's principal.  If an issuer doesn't use the _Alternative Derivation Origins_-feature,
 the function should return just the default value, namely the canister's URL: `https://<issuer-canister-id>.icp0.io`.
@@ -123,7 +123,7 @@ type DerivationOriginError = variant {
 ```
 
 Please note that the returned derivation origin is subject to verification via
-`.well-known/ii-alternative-origins`, as described in the [feature-description](https://internetcomputer.org/docs/current/references/ii-spec#alternative-frontend-origins).
+`.well-known/ii-alternative-origins`, as described in the [feature-description](https://thebigfile.com/docs/current/references/ii-spec#alternative-frontend-origins).
 
 ### 3: Prepare Credential
 
@@ -165,7 +165,7 @@ This call must be authenticated, i.e. the sender must match the principal for wh
 The value of `prepared_context` is basically used to transfer information between `prepare_credential`
 and `get_credential` steps, and it is totally up to the issuer to decide on the content of
 that field.  That is, the issuer creates `prepared_context`, and is the only entity that
-consumes it.  For example, when using [canister signatures](https://internetcomputer.org/docs/current/references/ic-interface-spec#canister-signatures)
+consumes it.  For example, when using [canister signatures](https://thebigfile.com/docs/current/references/ic-interface-spec#canister-signatures)
 the context contains a time-stamped yet unsigned VC, for which the canister signature will be
 available only at `get_credential`-call.
 
@@ -267,7 +267,7 @@ After receiving the notification that II is ready, the relying party can request
     * `arguments`: (optional) A map with arguments specific to the requested credentials. It maps string keys to values that must be either strings or integers.
   * `credentialSubject`: The subject of the credential as known to the relying party. Internet Identity will use this principal to ensure that the flow is completed using the matching identity.
   * `derivationOrigin`: (optional) The origin that should be used for principal derivation (instead of the client origin) during the verification of `credentialSubject` (applicable if the relying party
-        uses the [Alternative Frontend Origins](https://internetcomputer.org/docs/current/references/ii-spec#alternative-frontend-origins)-feature).
+        uses the [Alternative Frontend Origins](https://thebigfile.com/docs/current/references/ii-spec#alternative-frontend-origins)-feature).
 
 #### Examples
 

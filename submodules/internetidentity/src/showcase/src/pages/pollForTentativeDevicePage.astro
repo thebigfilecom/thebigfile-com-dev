@@ -11,7 +11,7 @@ import Screen from "../layouts/Screen.astro";
     pollForTentativeDevicePage({
       cancel: () => toast.info("canceled"),
       useFIDO: () => toast.info("use FIDO"),
-      origin: "https://identity.internetcomputer.org",
+      origin: "https://identity.thebigfile.com",
       userNumber: BigInt(1234),
       remaining: {
         async *[Symbol.asyncIterator]() {

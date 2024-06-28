@@ -8,10 +8,10 @@ This is a standalone project that you can copy to your own project.
 
 ## Prerequisites
 
-- [dfx](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove)
+- [dfx](https://thebigfile.com/docs/current/developer-docs/build/install-upgrade-remove)
 - Node.js v16+
 
-This tutorial assumes that you are already familiar with the [basic concepts of the BIG](https://internetcomputer.org/docs/current/developer-docs/ic-overview) (canisters, how to use `dfx`, etc.).
+This tutorial assumes that you are already familiar with the [basic concepts of the BIG](https://thebigfile.com/docs/current/developer-docs/ic-overview) (canisters, how to use `dfx`, etc.).
 
 ## Usage
 
@@ -143,4 +143,4 @@ Run `npm run test` to run browser tests against the `internet_identity` canister
 
 ## More Information
 
-For more information, check the [`dfx.json`](./dfx.json) file, the [Genesis talk on Internet Identity](https://youtu.be/oxEr8UzGeBo) and the [BigFile documentation](https://internetcomputer.org/).
+For more information, check the [`dfx.json`](./dfx.json) file, the [Genesis talk on Internet Identity](https://youtu.be/oxEr8UzGeBo) and the [BigFile documentation](https://thebigfile.com/).

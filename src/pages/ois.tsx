@@ -259,7 +259,7 @@ function OpenChatPage() {
             </p>
             <p className="mb-0">
               <Link
-                href="https://dashboard.internetcomputer.org/sns/3e3x2-xyaaa-aaaaq-aaalq-cai "
+                href="https://dashboard.thebigfile.com/sns/3e3x2-xyaaa-aaaaq-aaalq-cai "
                 className="link-primary link-with-icon"
               >
                 View OpenChat dashboard <LinkArrowUpRight />

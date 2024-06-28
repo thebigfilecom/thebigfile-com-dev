@@ -36,7 +36,7 @@ pub struct TransferOpts {
     to_subaccount: Option<Subaccount>,
 
     /// Transaction timestamp, in nanoseconds, for use in controlling transaction-deduplication, default is system-time.
-    /// https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-
+    /// https://thebigfile.com/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-
     #[arg(long)]
     created_at_time: Option<u64>,
 

@@ -43,7 +43,7 @@ test("should fetch alternative origins file from expected URL", async () => {
       fetchUrl: `https://${TEST_CANISTER_ID}.icp0.io/.well-known/ii-alternative-origins`,
     },
     {
-      iiUrl: "https://identity.internetcomputer.org",
+      iiUrl: "https://identity.thebigfile.com",
       fetchUrl: `https://${TEST_CANISTER_ID}.icp0.io/.well-known/ii-alternative-origins`,
     },
     {

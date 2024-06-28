@@ -35,7 +35,7 @@ image: /img/blog/dev-update-blog-languages.jpg
 
 **What is something important about Motoko that new developers should know when they start learning the language?**
 
-*We value your feedback! If you have a bug report or feature request, please feel free to [open a GitHub issue](https://github.com/thebigfilecom/motoko/issues/new) or contact us on the [BigFile developer forum](https://forum.thebigfile.com/). You can also ask for help on the [BigFile developer Discord](https://discord.gg/nyTAmMntqp) or even use the AI chatbot on [internetcomputer.org](https://thebigfile.com/) to speed up the learning process.*
+*We value your feedback! If you have a bug report or feature request, please feel free to [open a GitHub issue](https://github.com/thebigfilecom/motoko/issues/new) or contact us on the [BigFile developer forum](https://forum.thebigfile.com/). You can also ask for help on the [BigFile developer Discord](https://discord.gg/nyTAmMntqp) or even use the AI chatbot on [thebigfile.com](https://thebigfile.com/) to speed up the learning process.*
 
 **Since the team is known as the Languages team, other than Motoko, what else does the team work on or contribute to?**
 

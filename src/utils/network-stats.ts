@@ -1,6 +1,6 @@
 export function getBytesStored(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/ic-memory-usage"
+    "https://ic-api.thebigfile.com/api/v3/metrics/ic-memory-usage"
   )
     .then(
       (res) =>
@@ -12,7 +12,7 @@ export function getBytesStored(): Promise<number> {
 }
 export function getNodeProvidersCount(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/node-providers-count"
+    "https://ic-api.thebigfile.com/api/v3/node-providers-count"
   )
     .then(
       (res) =>
@@ -25,7 +25,7 @@ export function getNodeProvidersCount(): Promise<number> {
 
 export function getTransactionRate(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/message-execution-rate"
+    "https://ic-api.thebigfile.com/api/v3/metrics/message-execution-rate"
   )
     .then(
       (res) =>
@@ -41,7 +41,7 @@ export function getTransactionRateV3(
   step: number = 7200
 ): Promise<number> {
   return fetch(
-    `https://ic-api.internetcomputer.org/api/v3/metrics/message-execution-rate?step=${step}&message_type=${messageType}`
+    `https://ic-api.thebigfile.com/api/v3/metrics/message-execution-rate?step=${step}&message_type=${messageType}`
   )
     .then(
       (res) =>
@@ -54,7 +54,7 @@ export function getTransactionRateV3(
 
 export function getEthEquivTxRateMultiplier(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/icp-txn-vs-eth-txn"
+    "https://ic-api.thebigfile.com/api/v3/metrics/icp-txn-vs-eth-txn"
   )
     .then(
       (res) =>
@@ -67,7 +67,7 @@ export function getEthEquivTxRateMultiplier(): Promise<number> {
 
 export function getCyclesBurnRate(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/cycle-burn-rate"
+    "https://ic-api.thebigfile.com/api/v3/metrics/cycle-burn-rate"
   )
     .then(
       (res) =>
@@ -79,7 +79,7 @@ export function getCyclesBurnRate(): Promise<number> {
 }
 
 export function getBlockCount(): Promise<number> {
-  return fetch("https://ic-api.internetcomputer.org/api/v3/block-heights")
+  return fetch("https://ic-api.thebigfile.com/api/v3/block-heights")
     .then(
       (res) =>
         res.json() as Promise<{
@@ -91,7 +91,7 @@ export function getBlockCount(): Promise<number> {
 
 export function getCanisterCount(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/registered-canisters-count"
+    "https://ic-api.thebigfile.com/api/v3/metrics/registered-canisters-count"
   )
     .then(
       (res) =>
@@ -104,7 +104,7 @@ export function getCanisterCount(): Promise<number> {
 }
 
 export function getBlockRate(): Promise<number> {
-  return fetch("https://ic-api.internetcomputer.org/api/v3/metrics/block-rate")
+  return fetch("https://ic-api.thebigfile.com/api/v3/metrics/block-rate")
     .then(
       (res) =>
         res.json() as Promise<{
@@ -116,7 +116,7 @@ export function getBlockRate(): Promise<number> {
 
 export function getFinalizationRate(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/metrics/finalization-rate"
+    "https://ic-api.thebigfile.com/api/metrics/finalization-rate"
   )
     .then(
       (res) =>
@@ -136,7 +136,7 @@ export function getNodeCount(): Promise<{
   up_nodes: number;
 }> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/ic-nodes-count"
+    "https://ic-api.thebigfile.com/api/v3/metrics/ic-nodes-count"
   )
     .then(
       (res) =>
@@ -153,7 +153,7 @@ export function getNodeCount(): Promise<{
 
 export function getSubnetCount(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/ic-subnet-total"
+    "https://ic-api.thebigfile.com/api/v3/metrics/ic-subnet-total"
   )
     .then(
       (res) =>
@@ -166,7 +166,7 @@ export function getSubnetCount(): Promise<number> {
 
 export function getCpuCoreCount(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/ic-cpu-cores"
+    "https://ic-api.thebigfile.com/api/v3/metrics/ic-cpu-cores"
   )
     .then(
       (res) =>
@@ -189,13 +189,13 @@ export type StakingMetrics = { metrics: StakingMetric[] };
 
 export function getStakingMetrics() {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/staking-metrics"
+    "https://ic-api.thebigfile.com/api/v3/staking-metrics"
   ).then((res) => res.json() as Promise<StakingMetrics>);
 }
 
 export function getBoundaryNodeLocations() {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/boundary-node-locations"
+    "https://ic-api.thebigfile.com/api/v3/boundary-node-locations"
   ).then(
     (res) =>
       res.json() as Promise<{
@@ -211,7 +211,7 @@ export function getBoundaryNodeLocations() {
 }
 
 export function getDataCenters() {
-  return fetch("https://ic-api.internetcomputer.org/api/v3/data-centers").then(
+  return fetch("https://ic-api.thebigfile.com/api/v3/data-centers").then(
     (res) =>
       res.json() as Promise<{
         data_centers: {
@@ -239,7 +239,7 @@ export type NodeProviderLocation = {
 
 export function getNodeProviders() {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/node-providers"
+    "https://ic-api.thebigfile.com/api/v3/node-providers"
   ).then(
     (res) =>
       res.json() as Promise<{
@@ -262,7 +262,7 @@ export function getNodeProviders() {
 
 export function getTotalRewardableNodeCount(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/total-rewardable-nodes-count"
+    "https://ic-api.thebigfile.com/api/v3/metrics/total-rewardable-nodes-count"
   )
     .then(
       (res) =>
@@ -275,7 +275,7 @@ export function getTotalRewardableNodeCount(): Promise<number> {
 
 export function getLastEnergyConsumptionRateKwh(): Promise<number> {
   return fetch(
-    "https://ic-api.internetcomputer.org/api/v3/metrics/total-ic-energy-consumption-rate-kwh?step=7200"
+    "https://ic-api.thebigfile.com/api/v3/metrics/total-ic-energy-consumption-rate-kwh?step=7200"
   )
     .then((res) => res.json())
     .then((res) => +res.energy_consumption_rate[0][1]);
@@ -283,7 +283,7 @@ export function getLastEnergyConsumptionRateKwh(): Promise<number> {
 
 export function getMaxTransactionsPerSecOver90Days(): Promise<number> {
   return fetch(
-    `https://ic-api.internetcomputer.org/api/v3/metrics/max-transactions-per-sec-over-90-days`
+    `https://ic-api.thebigfile.com/api/v3/metrics/max-transactions-per-sec-over-90-days`
   )
     .then(
       (res) =>

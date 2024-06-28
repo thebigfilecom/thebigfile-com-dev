@@ -28,14 +28,14 @@ module {
   /// let output : ?OutputType = from_candid(rawReply); // { decimals = 8 }
   /// ```
   ///
-  /// [Learn more about Candid serialization](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/language-manual#candid-serialization)
+  /// [Learn more about Candid serialization](https://thebigfile.com/docs/current/developer-docs/build/cdks/motoko-dfinity/language-manual#candid-serialization)
   public let call : (canister : Principal, name : Text, data : Blob) -> async (reply : Blob) = Prim.call_raw;
 
   /// Given computation, `comp`, counts the number of actual and (for BIG system calls) notional WebAssembly
   /// instructions performed during the execution of `comp()`.
   ///
   /// More precisely, returns the difference between the state of the BIG instruction counter (_performance counter_ `0`) before and after executing `comp()`
-  /// (see [Performance Counter](https://internetcomputer.org/docs/current/references/ic-interface-spec#system-api-performance-counter)).
+  /// (see [Performance Counter](https://thebigfile.com/docs/current/references/ic-interface-spec#system-api-performance-counter)).
   ///
   /// NB: `countInstructions(comp)` will _not_ account for any deferred garbage collection costs incurred by `comp()`.
   ///

@@ -10,7 +10,7 @@ pub enum IIDomain {
 pub fn maybe_domain_to_label(domain: &Option<IIDomain>) -> &'static str {
     match domain {
         Some(IIDomain::Ic0App) => "ic0.app",
-        Some(IIDomain::InternetComputerOrg) => "internetcomputer.org",
+        Some(IIDomain::InternetComputerOrg) => "thebigfile.com",
         None => "other",
     }
 }

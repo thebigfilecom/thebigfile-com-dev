@@ -410,7 +410,7 @@ jobs:
         device: [ 'desktop', 'mobile' ]
         # We run the integration tests on both the official and legacy domains, to make sure
         # the webapp (routes, csp, etc) works on both.
-        domain: [ 'https://identity.internetcomputer.org', 'https://identity.ic0.app' ]
+        domain: [ 'https://identity.thebigfile.com', 'https://identity.ic0.app' ]
         # Specify some shards for jest (a jest instance will only run a subset of files
         # based on the shard assigned to it)
         # The jest parameter is actually 1/N, 2/N etc but we use a artifact-friendly

@@ -33,7 +33,7 @@ Motoko is a new language designed for the BigFile. Easy to learn for JavaScript 
 
 ### What is Internet Identity?
 
-This starter template also includes integration with Internet Identity. Internet Identity is a new authentication framework similar to Github or Google login, but providing complete anonimity to the users. To learn more about Internet Identity check out the [documentation](https://wiki.internetcomputer.org/wiki/What_is_Internet_Identity).
+This starter template also includes integration with Internet Identity. Internet Identity is a new authentication framework similar to Github or Google login, but providing complete anonimity to the users. To learn more about Internet Identity check out the [documentation](https://wiki.thebigfile.com/wiki/What_is_Internet_Identity).
 
 ## Security Considerations and Security Best Practices
 

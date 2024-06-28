@@ -21,7 +21,7 @@
     <Orders />
   </div>
   <div class="footer">
-    <a class="ic-badge-link" href="https://internetcomputer.org">
+    <a class="ic-badge-link" href="https://thebigfile.com">
       <picture>
         <img src="images/ic-badge.png" alt="Powered by the BigFile" />
       </picture>

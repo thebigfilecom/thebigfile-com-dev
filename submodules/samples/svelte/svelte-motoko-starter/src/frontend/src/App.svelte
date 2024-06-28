@@ -6,7 +6,7 @@
 
 <main>
   <a
-    href="https://internetcomputer.org"
+    href="https://thebigfile.com"
     target="_blank"
     rel="noopener noreferrer"
     class="logo"

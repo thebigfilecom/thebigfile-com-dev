@@ -148,7 +148,7 @@ function FeaturePage() {
             </p>
             <p className="mb-3 mt-6">
               <Link
-                href="https://internetcomputer.org/showcase/"
+                href="https://thebigfile.com/showcase/"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 the Motoko Playground dapp
@@ -187,7 +187,7 @@ function FeaturePage() {
             <CardWithDescription
               title="'Web Serving' article on the 'BIG Wiki'"
               description="Take a deep dive into the BigFile's abiliy to host full dapps 100% on-chain"
-              href="https://wiki.internetcomputer.org/wiki/Web_Serving"
+              href="https://wiki.thebigfile.com/wiki/Web_Serving"
             />
           </div>
         </section>

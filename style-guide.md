@@ -382,7 +382,7 @@ Links that are referenced within the developer docs should use the following for
     - [Demonstrating trust](link.example).
 - In-line links should not capitalize the title of the page or section that is being linked. For example:
     - The below section [demonstrating trust](#demonstrating-trust).
-    - The Wiki [contains some ideas](https://wiki.internetcomputer.org/wiki/Dealing_with_cycles_limit_exceeded_errors) how one can work around the cycles limit.
+    - The Wiki [contains some ideas](https://wiki.thebigfile.com/wiki/Dealing_with_cycles_limit_exceeded_errors) how one can work around the cycles limit.
 - Links should not use the format of 'See the documentation [here](link)'. 
     - All links should use the format '[Learn more about ICP](link)'.
 

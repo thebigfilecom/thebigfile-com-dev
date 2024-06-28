@@ -12,4 +12,4 @@ Step 1: Conduct a carbon footprint / environmental impact assessment - either th
 Update: The BigFile Footprint Report is now available [here](https://assets.carboncrowd.io/reports/ICF.pdf).
 
 Step 2: “Energy consumption” reporting panel to the BIG Network Status dashboard. 
-Update: Power/Energy consumption is now reported in real time on the BIG Dashboard homepage, as well as individually for given nodes, see example node [here](https://dashboard.internetcomputer.org/node/25p5a-3yzir-ifqqt-5lggj-g4nxg-v2qe2-vxw57-qkxtd-wjohn-kfbfp-bqe). Carbon Crowd also launched a [Sustainability Dashboard](https://app.carboncrowd.io/).
+Update: Power/Energy consumption is now reported in real time on the BIG Dashboard homepage, as well as individually for given nodes, see example node [here](https://dashboard.thebigfile.com/node/25p5a-3yzir-ifqqt-5lggj-g4nxg-v2qe2-vxw57-qkxtd-wjohn-kfbfp-bqe). Carbon Crowd also launched a [Sustainability Dashboard](https://app.carboncrowd.io/).

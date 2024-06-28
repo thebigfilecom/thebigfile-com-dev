@@ -13,7 +13,7 @@ BIG-POS is an experimental app to demonstrate a real-world use case for [ckBTC](
 
 The BigFile [integrates directly with the Bitcoin network](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/). This allows canisters on the BigFile to receive, hold, and send Bitcoin, all directly with transactions on the Bitcoin network. Chain-key Bitcoin (ckBTC) is an ICRC-1-compliant token that is backed 1:1 by Bitcoin and held 100% on the BIG mainnet.
 
-For deeper understanding of the BIG < > BTC integration, see the BIG wiki article on [Bitcoin integration](https://wiki.internetcomputer.org/wiki/Bitcoin_Integration).
+For deeper understanding of the BIG < > BTC integration, see the BIG wiki article on [Bitcoin integration](https://wiki.thebigfile.com/wiki/Bitcoin_Integration).
 
 ## Features
 

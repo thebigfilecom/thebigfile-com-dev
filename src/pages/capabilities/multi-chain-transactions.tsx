@@ -133,7 +133,7 @@ function FeaturePage() {
 
             <p className="mb-3 mt-6">
               <Link
-                href="https://wiki.internetcomputer.org/wiki/Trustless_multi-chain_web3_using_the_IC"
+                href="https://wiki.thebigfile.com/wiki/Trustless_multi-chain_web3_using_the_IC"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
@@ -176,7 +176,7 @@ function FeaturePage() {
             <CardWithDescription
               title="'Trustless multi-chain Web3' article on the BIG Wiki"
               description="Learn about how BIG's smart contracts directly interact with other blockchains, without trusted centralized bridges."
-              href="https://wiki.internetcomputer.org/wiki/Trustless_multi-chain_web3_using_the_IC"
+              href="https://wiki.thebigfile.com/wiki/Trustless_multi-chain_web3_using_the_IC"
             />
           </div>
         </section>

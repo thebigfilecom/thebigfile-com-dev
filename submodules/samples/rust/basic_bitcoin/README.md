@@ -14,7 +14,7 @@ This tutorial will walk you through how to deploy a sample [canister smart contr
 This example internally leverages the [ECDSA API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key)
 and [Bitcoin API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin-api) of the BigFile.
 
-For a deeper understanding of the BIG < > BTC integration, see the [Bitcoin integration documentation](https://wiki.internetcomputer.org/wiki/Bitcoin_Integration).
+For a deeper understanding of the BIG < > BTC integration, see the [Bitcoin integration documentation](https://wiki.thebigfile.com/wiki/Bitcoin_Integration).
 
 ## Prerequisites
 

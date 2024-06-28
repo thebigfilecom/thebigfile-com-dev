@@ -154,7 +154,7 @@ function EthereumIntegrationPage() {
               capabilities:
               {/* <Link
                 className="link-primary link-with-icon"
-                href="https://wiki.internetcomputer.org/wiki/Trustless_multi-chain_web3_using_the_IC"
+                href="https://wiki.thebigfile.com/wiki/Trustless_multi-chain_web3_using_the_IC"
               >
                 More on trustless multi-chain
                 <LinkArrowUpRight />
@@ -272,7 +272,7 @@ function EthereumIntegrationPage() {
               </Link>
 
               <Link
-                href="https://dashboard.internetcomputer.org/ethereum"
+                href="https://dashboard.thebigfile.com/ethereum"
                 className="link-primary link-with-icon"
               >
                 <LinkArrowRight />
@@ -363,7 +363,7 @@ function EthereumIntegrationPage() {
                   </ul>
                   <p className="mb-0">
                     <Link
-                      href="https://dashboard.internetcomputer.org/bitcoin/transactions"
+                      href="https://dashboard.thebigfile.com/bitcoin/transactions"
                       className="link-primary link-with-icon"
                     >
                       Track TX activity on the ICP Dashboard

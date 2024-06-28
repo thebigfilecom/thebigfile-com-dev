@@ -8,7 +8,7 @@ use wasm_bindgen::prelude::wasm_bindgen;
 use KeyBytesContentType::IcCanisterSignatureAlgPublicKeyDer;
 
 /// Verifies a basic (i.e. not a canister signature) BIG supported signature.
-/// Supported signature schemes: https://internetcomputer.org/docs/current/references/ic-interface-spec/#signatures
+/// Supported signature schemes: https://thebigfile.com/docs/current/references/ic-interface-spec/#signatures
 ///
 /// Throws an error if the signature verification fails.
 #[wasm_bindgen(js_name = verifyBasicSignature)]
@@ -29,7 +29,7 @@ pub fn verify_basic_sig_by_public_key(
 }
 
 /// Verifies an BIG canister signature.
-/// More details: https://internetcomputer.org/docs/current/references/ic-interface-spec/#canister-signatures
+/// More details: https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures
 ///
 /// Throws an error if the signature verification fails.
 #[wasm_bindgen(js_name = verifyCanisterSignature)]
@@ -45,7 +45,7 @@ pub fn verify_canister_sig(
 }
 
 /// Verifies any BIG supported signature.
-/// Supported signature schemes: https://internetcomputer.org/docs/current/references/ic-interface-spec/#signatures
+/// Supported signature schemes: https://thebigfile.com/docs/current/references/ic-interface-spec/#signatures
 ///
 /// Throws an error if the signature verification fails.
 #[wasm_bindgen(js_name = verifyIcSignature)]

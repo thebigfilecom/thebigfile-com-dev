@@ -14,7 +14,7 @@ which allow establishing a long-lived, full-duplex connection between the fronte
 and backend of an application. This allows for both sides to send data, for example,
 the latest exchange rates, in real-time.
 
-WebSockets can be seen as the next step after [HTTPS outcalls](https://internetcomputer.org/https-outcalls).
+WebSockets can be seen as the next step after [HTTPS outcalls](https://thebigfile.com/https-outcalls).
 While HTTPS outcalls enable canisters to access publicly-available, off-chain data,
 WebSockets provide long-lived, bi-directional connections with any client.
 

@@ -114,7 +114,7 @@ Cubes pay for storage consumed by their [Wasm memory](/docs/current/developer-do
 
 Cubes can reserve storage on a subnet through the `memory_allocation` setting. However, the cube will be charged as if the entire amount of allocated storage is being used.
 
-In order to encourage long-term usage and discourage spiky usage patterns, the BigFile uses a *resource reservation mechanism* that was adopted by the community in [NNS proposal 12604](https://dashboard.internetcomputer.org/proposal/126094).
+In order to encourage long-term usage and discourage spiky usage patterns, the BigFile uses a *resource reservation mechanism* that was adopted by the community in [NNS proposal 12604](https://dashboard.thebigfile.com/proposal/126094).
 
 When a cube allocates new storage bytes, the system sets aside some number of cycles from the main balance of the cube that are used to cover future payments for the newly allocated bytes. The reserved cycles are not transferable, and the number of reserved cycles depends on how full the subnet is. It may cover days, months, or even years of payments.
 

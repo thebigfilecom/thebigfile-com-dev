@@ -8,11 +8,11 @@ JS/TS Wrapper for verifying various signatures.
 Supported functionality:
 
 - `verify_basic_sig_by_public_key(message, signature, public_key)`: Verifies a basic (i.e. not a canister signature)
-  [BIG supported signature](https://internetcomputer.org/docs/current/references/ic-interface-spec/#signatures).
+  [BIG supported signature](https://thebigfile.com/docs/current/references/ic-interface-spec/#signatures).
 - `verify_canister_sig(message, signature, public_key, ic_root_public_key)`: Verifies an
-  [BIG canister signature](https://internetcomputer.org/docs/current/references/ic-interface-spec/#canister-signatures).
+  [BIG canister signature](https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures).
 - `verify_ic_signature(message, signature, public_key, ic_root_public_key)`: Verifies any
-  [BIG supported signature](https://internetcomputer.org/docs/current/references/ic-interface-spec/#signatures).
+  [BIG supported signature](https://thebigfile.com/docs/current/references/ic-interface-spec/#signatures).
 - `validate_delegation_and_get_principal(challenge, signed_delegation_chain_json,
 current_time_ns, ii_canister_id, ic_root_public_key_raw)`:
   Verifies the validity of the given signed delegation chain

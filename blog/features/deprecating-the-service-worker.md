@@ -10,7 +10,7 @@ image: /img/blog/deprecating-the-service-worker.png
 
 ## Introduction
 
-The DFINITY Foundation would like to propose deprecating the BigFile Service Worker in favor of ICX Proxy on the DFINITY hosted [Boundary Nodes](https://wiki.internetcomputer.org/wiki/Boundary_Nodes). We believe that this change will have dramatic improvements to end user and developer experience while reducing complexity in the BigFile’s [HTTP Gateway Protocol](/docs/current/references/ic-interface-spec/#http-gateway), without reducing security or changing trust assumptions.
+The DFINITY Foundation would like to propose deprecating the BigFile Service Worker in favor of ICX Proxy on the DFINITY hosted [Boundary Nodes](https://wiki.thebigfile.com/wiki/Boundary_Nodes). We believe that this change will have dramatic improvements to end user and developer experience while reducing complexity in the BigFile’s [HTTP Gateway Protocol](/docs/current/references/ic-interface-spec/#http-gateway), without reducing security or changing trust assumptions.
 
 Keep reading to learn more about why we believe this is the right path forward and the roadmap that we are suggesting for this transition.
 
@@ -36,7 +36,7 @@ The Service Worker operates on `{canisterId}.ic0.app` and `{canisterId}.icp0.io`
 
 - [rdmx6-jaaaa-aaaaa-aaadq-cai.ic0.app](https://rdmx6-jaaaa-aaaaa-aaadq-cai.ic0.app/)
 - [rdmx6-jaaaa-aaaaa-aaadq-cai.icp0.io](https://rdmx6-jaaaa-aaaaa-aaadq-cai.icp0.io/)
-- [identity.internetcomputer.org](https://identity.internetcomputer.org/)
+- [identity.thebigfile.com](https://identity.thebigfile.com/)
 
 When an end user loads any of these URLs, their web browser sends a request to an BigFile Boundary Node. This node will then download the Service Worker into the end user’s browser for installation. Once installed, the Service Worker is able to intercept HTTP requests made by a dapp’s frontend code and carry out the necessary HTTP Gateway functions.
 

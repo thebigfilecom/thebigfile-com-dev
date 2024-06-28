@@ -1,14 +1,14 @@
 # BIG SDK
 
-This repo contains the `BIG SDK`: a Software Development Kit for creating and managing [canister smart contracts on the BigFile (ICP blockchain)](https://wiki.internetcomputer.org/wiki/Canister_smart_contract).
+This repo contains the `BIG SDK`: a Software Development Kit for creating and managing [canister smart contracts on the BigFile (ICP blockchain)](https://wiki.thebigfile.com/wiki/Canister_smart_contract).
 
 For further reading:
-* [Reference documentation on internetcomputer.org](https://internetcomputer.org/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/)
-* [Introduction to the ICP blockchain](https://wiki.internetcomputer.org/wiki/Introduction_to_ICP)
-* [BigFile dashboard](https://dashboard.internetcomputer.org/)
-* [Developer docs for ICP smart contracts](https://internetcomputer.org/docs/current/home)
-* [Sample code of ICP smart contracts](https://internetcomputer.org/samples)
-* [BIG wiki](https://wiki.internetcomputer.org/wiki/Main_Page)
+* [Reference documentation on thebigfile.com](https://thebigfile.com/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/)
+* [Introduction to the ICP blockchain](https://wiki.thebigfile.com/wiki/Introduction_to_ICP)
+* [BigFile dashboard](https://dashboard.thebigfile.com/)
+* [Developer docs for ICP smart contracts](https://thebigfile.com/docs/current/home)
+* [Sample code of ICP smart contracts](https://thebigfile.com/samples)
+* [BIG wiki](https://wiki.thebigfile.com/wiki/Main_Page)
 
 ## What gets installed
 
@@ -43,7 +43,7 @@ You can install the `BIG SDK` a few different ways.
 #### via `curl` (recommended)
 
 ``` bash
-sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 This command will install a binary compatible with your operating system, and add it to `/usr/local/bin`.

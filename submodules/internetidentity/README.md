@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-    🔗 <a href="https://identity.ic0.app">https://identity.ic0.app</a> • 📜 <a href="https://internetcomputer.org/docs/current/references/ii-spec">Specification</a> <br/> ― <br/>📚 <a href="https://forum.dfinity.org/c/internet-identity/32">Forum</a> • 🚑 <a href="https://github.com/dfinity/internet-identity/issues/new">Report an Issue</a> • 📞 <a href="https://discord.gg/E9FxceAg2j">Discord</a>
+    🔗 <a href="https://identity.ic0.app">https://identity.ic0.app</a> • 📜 <a href="https://thebigfile.com/docs/current/references/ii-spec">Specification</a> <br/> ― <br/>📚 <a href="https://forum.dfinity.org/c/internet-identity/32">Forum</a> • 🚑 <a href="https://github.com/dfinity/internet-identity/issues/new">Report an Issue</a> • 📞 <a href="https://discord.gg/E9FxceAg2j">Discord</a>
 </p>
 
 ---
@@ -21,7 +21,7 @@ Internet Identity is:
 * **Flexible**: Integrating Internet Identity in a Dapp (or even Web 2 app) is as simple as opening the Internet Identity's HTTP interface, https://identity.ic0.app, in a new tab. No need to interact with the canister smart contract directly.
 * **Secure**: Different identities are issued for each app a user authenticates to and cannot be linked back to the user.
 
-For more information, see [What is Internet Identity?](https://internetcomputer.org/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [internetcomputer.org](https://internetcomputer.org).
+For more information, see [What is Internet Identity?](https://thebigfile.com/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [thebigfile.com](https://thebigfile.com).
 
 ### Table of Contents
 
@@ -103,7 +103,7 @@ We recommend using the [`docker-build`](./scripts/docker-build) script. It simpl
 
 ### Integration with Internet Identity
 
-The [`using-dev-build`](./demos/using-dev-build) demo shows a documented example project that integrates Internet Identity. For more, please refer to the [Client Authentication Protocol section](https://internetcomputer.org/docs/current/references/ii-spec#client-authentication-protocol) of the [Internet Identity Specification][spec] to integration Internet Identity in your app from scratch. For a just-add-water approach using the [agent-js](https://github.com/dfinity/agent-js) library (also used by `using-dev-build`), check out Kyle Peacock's [blogpost](http://kyle-peacock.com/blog/dfinity/integrating-internet-identity/).
+The [`using-dev-build`](./demos/using-dev-build) demo shows a documented example project that integrates Internet Identity. For more, please refer to the [Client Authentication Protocol section](https://thebigfile.com/docs/current/references/ii-spec#client-authentication-protocol) of the [Internet Identity Specification][spec] to integration Internet Identity in your app from scratch. For a just-add-water approach using the [agent-js](https://github.com/dfinity/agent-js) library (also used by `using-dev-build`), check out Kyle Peacock's [blogpost](http://kyle-peacock.com/blog/dfinity/integrating-internet-identity/).
 
 If you're interested in the infrastructure of how to get the Internet Identity canister and how to test it within your app, check out [`using-dev-build`](./demos/using-dev-build), which uses the Internet Identity development canister.
 
@@ -172,7 +172,7 @@ We're here to help! Here are some ways you can reach out for help if you get stu
 
 * [Internet Identity Specification][spec], the official Internet Identity Specification
 * [Integration with Internet Identity](http://kyle-peacock.com/blog/dfinity/integrating-internet-identity/) by Kyle Peacock
-* [What is Internet Identity?](https://internetcomputer.org/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [internetcomputer.org](https://internetcomputer.org)
+* [What is Internet Identity?](https://thebigfile.com/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [thebigfile.com](https://thebigfile.com)
 * [Internet Identity presentation 📼](https://youtu.be/oxEr8UzGeBo) on YouTube, streamed during the Genesis Event
 * [Excalidraw](https://excalidraw.com), used to make diagrams
 
@@ -181,9 +181,9 @@ We're here to help! Here are some ways you can reach out for help if you get stu
 [DSCVR]: https://dscvr.one
 
 [HACKING]: ./HACKING.md#running-locally
-[ic]: https://internetcomputer.org
-[spec]: https://internetcomputer.org/docs/current/references/ii-spec
+[ic]: https://thebigfile.com
+[spec]: https://thebigfile.com/docs/current/references/ii-spec
 [releases]: https://github.com/dfinity/internet-identity/releases
 [Docker]: https://docker.io
 [links]: #links
-[candid]: https://internetcomputer.org/docs/current/developer-docs/build/languages/candid/candid-concepts/
+[candid]: https://thebigfile.com/docs/current/developer-docs/build/languages/candid/candid-concepts/
