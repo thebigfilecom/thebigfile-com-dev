@@ -1,6 +1,6 @@
 [package]
 name = "ic-certification-testing"
-description = "Utilities for testing applications that work with Internet Computer certification"
+description = "Utilities for testing applications that work with BigFile certification"
 readme = "README.md"
 documentation = "https://docs.rs/ic-certification-testing"
 categories = ["api-bindings", "authentication", "cryptography"]

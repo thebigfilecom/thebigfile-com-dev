@@ -50,7 +50,7 @@ This example requires an installation of:
 cd examples/rust/performance_counters
 ```
 
-### Step 2: Start a clean local Internet Computer replica and a web server
+### Step 2: Start a clean local BigFile replica and a web server
 
 ```sh
 dfx stop
@@ -105,7 +105,7 @@ Example output:
 
 Note, how the current message execution counter (~6M instructions) is much different from the call context counter (~19M instructions).
 
-### Step 6: Check the Internet Computer replica terminal window for more details
+### Step 6: Check the BigFile replica terminal window for more details
 
 Example replica log output:
 
@@ -167,4 +167,4 @@ Performance counters is a great tool to optimize canister performance, both for 
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.

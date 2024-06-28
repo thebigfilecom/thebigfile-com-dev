@@ -20,7 +20,7 @@ function FeaturePage() {
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Web speed</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                Users can interact with dapps on the Internet Computer (IC) with
+                Users can interact with dapps on the BigFile (IC) with
                 speeds comparable to traditional web applications. Developers
                 can therefore build a much broader range of fully on-chain dapps
                 without relying on cloud services and risking single points of
@@ -72,11 +72,11 @@ function FeaturePage() {
               substantially help to increase the efficiency of a program. As a
               blockchain partly acts as a distributed database, it is useful to
               consider this separation of tasks in this case too. Following this
-              line of thinking, the Internet Computer facilitates two type of
+              line of thinking, the BigFile facilitates two type of
               transactions, query calls (read-only) and update (write) calls.
               <br />
               <br />
-              As of May 24, 2022, The Internet Computer can handle more than 1
+              As of May 24, 2022, The BigFile can handle more than 1
               million queries per second and more than 20 thousand update calls
               per second. This is shown in{" "}
               <Link href="https://wiki.internetcomputer.org/wiki/Internet_Computer_performance_%26_power_consumption">

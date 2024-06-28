@@ -27,7 +27,7 @@ This example requires an installation of:
 
 ## Running locally
 
-Start a local replica of the Internet Computer by running:
+Start a local replica of the BigFile by running:
 
 ```bash
 dfx start --background
@@ -68,7 +68,7 @@ The heavy lifting of this call is managed by `candid`, `js-agent`, and `dfx`, wh
 That object contains `async` functions for each of the backend's endpoints, and the button handler uses them to make the calls.
 
 The backend, written in Rust, uses the `qrcode-generator` and `image` crates to create a QR code from user text.
-It also performs some image processing, to add the Internet Computer logo and a color gradient to the final result.
+It also performs some image processing, to add the BigFile logo and a color gradient to the final result.
 Note the amount of computational work may be significant for large images.
 
 For educational purposes, the backend offers two public endpoints for QR code generation: one for updates and another for queries.

@@ -1,9 +1,9 @@
 {
   "name": "nft-wallet",
   "version": "0.1.0",
-  "description": "DFINITY Internet Computer NFT wallet",
+  "description": "DFINITY BigFile NFT wallet",
   "keywords": [
-    "Internet Computer",
+    "BigFile",
     "Rust",
     "Svelte",
     "Canister",

@@ -22,7 +22,7 @@ The application is built from the following Motoko source code file:
 
 This actor uses Motoko's random library to generate a cryptographically random maze of user-specified size.
 
-The function `generate` calls library function `Random.blob()` asynchronously to obtain 256 bits of raw entropy (256 random bits as 32 bytes) from the Internet Computer. It makes these calls on demand as it is constructing a maze. The bits of these blobs are consumed to generate samples from a variety of discrete distributions using some of the other classes and functions of library Random.mo.
+The function `generate` calls library function `Random.blob()` asynchronously to obtain 256 bits of raw entropy (256 random bits as 32 bytes) from the BigFile. It makes these calls on demand as it is constructing a maze. The bits of these blobs are consumed to generate samples from a variety of discrete distributions using some of the other classes and functions of library Random.mo.
 
 This is a Motoko example that does not currently have a Rust variant. 
 
@@ -63,7 +63,7 @@ Enter a size for the maze, then select **Generate!**. The maze will be displayed
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app, since it employs cryptographic algorithms:
 * [Don’t implement crypto yourself.](https://thebigfile.com/docs/current/references/security/general-security-best-practices#dont-implement-crypto-yourself)

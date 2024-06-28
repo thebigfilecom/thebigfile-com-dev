@@ -22,7 +22,7 @@ function FeaturePage() {
                 Multi-chain transactions
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                On the Internet Computer, you can create smart contracts that
+                On the BigFile, you can create smart contracts that
                 directly interact with other blockchains, without trusted
                 centralized bridges that can get hacked and do rug pulls. This
                 has been made possible using Chain Key Cryptography.
@@ -73,7 +73,7 @@ function FeaturePage() {
               philosophy is service composability, in which different blockchain
               services are composed to create new services and functionality.
               Tokenized assets and liquidity must also be able to move between
-              services, whichever blockchain they are on. The Internet Computer
+              services, whichever blockchain they are on. The BigFile
               provides a means to fully support this paradigm in a multi-chain
               environment without need for trusted bridges run by central
               controllers such as companies.
@@ -88,7 +88,7 @@ function FeaturePage() {
               services to legal liabilities (since regulators can argue that the
               service built using Ethereum is not running in the mode of a
               decentralized protocol). Therefore, it would be better if the user
-              experience could be created on the Internet Computer using
+              experience could be created on the BigFile using
               canister smart contracts, which are controlled by a DAO. A means
               has been provided to do this (please check developers docs to see
               what is in production at any one time).
@@ -101,7 +101,7 @@ function FeaturePage() {
               corresponding signatures, without need to store a private key on
               the blockchain in a way that would allow it to be stolen.
               Crucially, ECDSA is the signature scheme used to sign TX on other
-              blockchains, and allows smart contracts on the Internet Computer
+              blockchains, and allows smart contracts on the BigFile
               to create TX that other blockchains directly execute.
             </p>
 
@@ -112,7 +112,7 @@ function FeaturePage() {
               create bitcoin addresses, and send and receive bitcoin directly on
               the Bitcoin ledger, without any need for insecure trusted
               intermediaries such as bridges. Essentially, smart contracts on
-              the Internet Computer can process bitcoin almost as though they
+              the BigFile can process bitcoin almost as though they
               are hosted by the Bitcoin network themselves.
             </p>
 
@@ -120,7 +120,7 @@ function FeaturePage() {
             <p>
               Another application is the signing of TX designed to invoke smart
               contracts on other blockchains, such as Ethereum. For example, to
-              interact with Ethereum, an Internet Computer canister smart
+              interact with Ethereum, an BigFile canister smart
               contract would first create an ECDSA public key that functions as
               an Ethereum Account (before use this should be charged with some
               ETH to pay for gas). Thereafter, the smart contract can invoke
@@ -148,7 +148,7 @@ function FeaturePage() {
             Build on the IC
           </p>
           <p className="tw-lead-sm mb-2 text-center mx-auto md:mb-6 md:w-6/12">
-            Using the power of chain key cryptography, the Internet Computer can
+            Using the power of chain key cryptography, the BigFile can
             thus be used as an orchestration blockchain, or meta blockchain,
             upon which new services can be built that combine functionality and
             assets provided by other blockchains in the Web3 universe - all

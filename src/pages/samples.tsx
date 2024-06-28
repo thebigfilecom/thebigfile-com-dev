@@ -189,7 +189,7 @@ function Samples(): React.ReactNode {
     <Layout
       title={"Sample Code"}
       description={
-        "Learn how projects are built on the Internet Computer to be secure and efficient. Dive into official examples or into open source community projects to figure out how things work under the hood."
+        "Learn how projects are built on the BigFile to be secure and efficient. Dive into official examples or into open source community projects to figure out how things work under the hood."
       }
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
@@ -280,7 +280,7 @@ function Samples(): React.ReactNode {
                   Community samples
                 </p>
                 <p className="md:w-6/10 tw-paragraph">
-                  The Internet Computer is home to many dapps built by the
+                  The BigFile is home to many dapps built by the
                   community. Check out the repos and get building!
                 </p>
                 {/*<p className="inline-flex tw-title-navigation-on-page border-black-60 border-2 border-solid py-2 px-3 rounded-xl hover:text-white hover:bg-infinite transition-colors">

@@ -7,12 +7,12 @@ keywords: [advanced, rust, bitcoin, btc, integration, bitcoin integration]
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/rust/basic_bitcoin)
 
 ## Overview 
-This tutorial will walk you through how to deploy a sample [canister smart contract](/docs/current/developer-docs/multi-chain/bitcoin/overview) **that can send and receive Bitcoin** on the Internet Computer.
+This tutorial will walk you through how to deploy a sample [canister smart contract](/docs/current/developer-docs/multi-chain/bitcoin/overview) **that can send and receive Bitcoin** on the BigFile.
 
 ## Architecture
 
 This example internally leverages the [ECDSA API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key)
-and [Bitcoin API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin-api) of the Internet Computer.
+and [Bitcoin API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin-api) of the BigFile.
 
 For a deeper understanding of the BIG < > BTC integration, see the [Bitcoin integration documentation](https://wiki.internetcomputer.org/wiki/Bitcoin_Integration).
 
@@ -40,9 +40,9 @@ git submodule update --init --recursive
 
 ### Acquire cycles to deploy
 
-Deploying to the Internet Computer requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles) (the equivalent of "gas" in other blockchains). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
+Deploying to the BigFile requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles) (the equivalent of "gas" in other blockchains). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
 
-### Deploy the smart contract to the Internet Computer
+### Deploy the smart contract to the BigFile
 
 ```bash
 dfx deploy --network=ic basic_bitcoin --argument '(variant { testnet })'
@@ -165,7 +165,7 @@ This example is extensively documented in the following tutorials:
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
 * [Certify query responses if they are relevant for security](https://thebigfile.com/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since the app e.g. offers a method to read balances.

@@ -24,7 +24,7 @@ function ReverseGasModelPage(): JSX.Element {
     <Layout
       title="Reverse Gas Model"
       description="A browser is all you need to interact with smart contracts on
-      the Internet Computer. Developers pay for gas. End users access and
+      the BigFile. Developers pay for gas. End users access and
       use dapps without tokens."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
@@ -49,7 +49,7 @@ function ReverseGasModelPage(): JSX.Element {
                 variants={transitions.item}
               >
                 A browser is all you need to interact with smart contracts on
-                the Internet Computer. Developers pay for gas. End users access
+                the BigFile. Developers pay for gas. End users access
                  and use dapps without tokens.
               </motion.p>
             </div>
@@ -92,7 +92,7 @@ function ReverseGasModelPage(): JSX.Element {
                 on-chain interaction, even interactions as simple as liking a
                 post. Most blockchains get around this by hosting their data and
                 frontends on centralized cloud. Without compromising
-                decentralization, the Internet Computer removes this expensive
+                decentralization, the BigFile removes this expensive
                 barrier to entry by allowing end users to seamlessly interact
                 with dapps on the blockchain gas-free. This “Gas Reverse Model”
                 also gives developers the flexibility to implement their own
@@ -184,7 +184,7 @@ function ReverseGasModelPage(): JSX.Element {
               How to get cycles
             </h2>
             <p className="text-black tw-lead-sm mb-6">
-              The Internet Computer protocol allows developers to burn ICP and
+              The BigFile protocol allows developers to burn ICP and
               receive cycles. Cycles are priced in SDR, an international reserve
               asset that is pegged to a bucket of fiat currencies. The protocol
               guarantees a set conversion rate of 1T cycles for 1 SDR’s worth of
@@ -193,7 +193,7 @@ function ReverseGasModelPage(): JSX.Element {
               storage costs into their budgets.
             </p>
             <p className="text-black tw-lead-sm mb-6">
-              Several DEXs on the Internet Computer have liquidity pools that
+              Several DEXs on the BigFile have liquidity pools that
               offer cycles. Swapping ICP for cycles is currently cheaper than 1
               SDR.
             </p>
@@ -249,7 +249,7 @@ function ReverseGasModelPage(): JSX.Element {
                 Gas-free Web3
               </h3>
               <p className="tw-lead-sm mb-6 text-black/60">
-                The Internet Computer is home to a growing ecosystem of dapps,
+                The BigFile is home to a growing ecosystem of dapps,
                 all of which have smooth onboarding and don’t require a wallet
                 or tokens to access. Use your tokens instead for trading,
                 collecting NFTs or tipping friends.

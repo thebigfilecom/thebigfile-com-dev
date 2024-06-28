@@ -1,11 +1,11 @@
 # IC SDK
 
-This repo contains the `IC SDK`: a Software Development Kit for creating and managing [canister smart contracts on the Internet Computer (ICP blockchain)](https://wiki.internetcomputer.org/wiki/Canister_smart_contract).
+This repo contains the `IC SDK`: a Software Development Kit for creating and managing [canister smart contracts on the BigFile (ICP blockchain)](https://wiki.internetcomputer.org/wiki/Canister_smart_contract).
 
 For further reading:
 * [Reference documentation on internetcomputer.org](https://internetcomputer.org/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/)
 * [Introduction to the ICP blockchain](https://wiki.internetcomputer.org/wiki/Introduction_to_ICP)
-* [Internet Computer dashboard](https://dashboard.internetcomputer.org/)
+* [BigFile dashboard](https://dashboard.internetcomputer.org/)
 * [Developer docs for ICP smart contracts](https://internetcomputer.org/docs/current/home)
 * [Sample code of ICP smart contracts](https://internetcomputer.org/samples)
 * [IC wiki](https://wiki.internetcomputer.org/wiki/Main_Page)
@@ -18,7 +18,7 @@ The `IC SDK` installation script installs several components in default location
 |--------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | dfx          | Command-line interface (CLI)                                                     | `/usr/local/bin/dfx`                          |
 | moc          | Motoko runtime compiler                                                                            | `~/.cache/dfinity/versions/<VERSION>/moc`     |
-| replica      | Internet Computer local network binary                                                             | `~/.cache/dfinity/versions/<VERSION>/replica` |
+| replica      | BigFile local network binary                                                             | `~/.cache/dfinity/versions/<VERSION>/replica` |
 | uninstall.sh | Script to remove the SDK and all of its components                                    | `~/.cache/dfinity/uninstall.sh`               |
 | versions     | Cache directory that contains a subdirectory for each version of the SDK you install. | `~/.cache/dfinity/versions`                   |
 

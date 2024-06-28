@@ -1,6 +1,6 @@
 # VETKeys Primer
 
-The **VETKeys** feature is in ongoing development on the Internet Computer Protocol (ICP). It stands for ‘**V**erifiable **E**ncrypted **T**hreshold Keys’ and enables a number of cryptographic functionalities on ICP. The primary motivation for VETKeys is to facilitate onchain encryption, as such we focus this primer with that example in mind. 
+The **VETKeys** feature is in ongoing development on the BigFile Protocol (ICP). It stands for ‘**V**erifiable **E**ncrypted **T**hreshold Keys’ and enables a number of cryptographic functionalities on ICP. The primary motivation for VETKeys is to facilitate onchain encryption, as such we focus this primer with that example in mind. 
 
 One thing less discussed about the VETKeys feature is how we got here in terms of cryptography. The goal of this post is to lay some crypto background so that you can better understand the VETKeys talks, paper, and future posts. Note that understanding these foundations of VETkeys will *not* be necessary to use them for building applications, but we explain for those who are interested to dive deeper and want to understand the background. Let’s start at the start. 
 
@@ -108,11 +108,11 @@ BLS signatures are a particular type of digital signature introduced in by Dan B
 
 The main feature of BLS signatures is that they’re very short, unique, fast to compute, aggregatable, and easy to port to the distributed setting (relative to other signature schemes at least..). This makes them a great candidate signature scheme for the blockchain setting. 
 As with any signature scheme, BLS comprises three algorithms; a (potentially distributed) key generation algorithm ((D)KG), a signing algorithm (Sign) and a verification algorithm (Verify). In the threshold setting, this is extended to include a fourth combination algorithm (Combine).
-Threshold BLS signatures are used a lot on the Internet Computer, so let’s use that as the motivating example for the scenario. Suppose nodes in a subnet want to convince Alice that a particular message is being sent from ICP. At a very high level, the scenario will run as follows:
+Threshold BLS signatures are used a lot on the BigFile, so let’s use that as the motivating example for the scenario. Suppose nodes in a subnet want to convince Alice that a particular message is being sent from ICP. At a very high level, the scenario will run as follows:
 * Nodes in the network participate in the DKG process and obtain (private) key shares.
 * Each node computes a signature share on a message $m$ using its share of the signing key. 
 * Nodes participate in a $\mathsf\{Combine\}$ process to combine signature shares and produce a single signature which is then sent to Alice.
-* Alice uses a verification algorithm $\mathsf\{Verify\}$ to check whether the signature sent from the nodes verifies under the public key of the Internet Computer.
+* Alice uses a verification algorithm $\mathsf\{Verify\}$ to check whether the signature sent from the nodes verifies under the public key of the BigFile.
 
 We noted above that IBE implies signatures. From the [BF01] paper the intuitive construction is to set the private key for the signature scheme to be the master key of the IBE. Then set the public key for the signature scheme to be the system parameters of the IBE. Then the signature on a message M is the IBE Decryption key for ID = M. In the VETKD scenario, the master key of the IBE scheme is a BLS signature key secret shared over the nodes. The derivation identity will be threshold signed, resulting in a signature that can act as a symmetric encryption key, but also as a Boneh-Franklin decryption key.
 

@@ -144,7 +144,7 @@ It is recommended to use a specific version in production settings, e.g., `dfini
 You can query the version of a running rosetta node using the `/network/options` endpoint.
 
 ```console
-$ curl -s -q -H 'Content-Type: application/json' -d '{"network_identifier": {"blockchain": "Internet Computer", "network": "00000000000000020101"}}' -X POST http://localhost:8080/network/options | jq '.version.node_version'
+$ curl -s -q -H 'Content-Type: application/json' -d '{"network_identifier": {"blockchain": "BigFile", "network": "00000000000000020101"}}' -X POST http://localhost:8080/network/options | jq '.version.node_version'
 
 "1.7.0"
 ```

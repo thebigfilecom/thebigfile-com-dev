@@ -22,7 +22,7 @@ function FeaturePage() {
                 Serve Web Content
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The Internet Computer (IC) is the only blockchain that can host
+                The BigFile (IC) is the only blockchain that can host
                 a full dapp; frontend, backend, and data included. This is a
                 distinguishing IC feature allowing dapps to run 100% on-chain
                 while inheriting the security and decentralization of
@@ -84,7 +84,7 @@ function FeaturePage() {
             <YoutubeVideoEmbed
               videoId="jYrXk_hM4cA"
               className="mt-10 md:mt-10"
-              altText="Community Conversations | Overview of Building a Front End on the Internet Computer"
+              altText="Community Conversations | Overview of Building a Front End on the BigFile"
             ></YoutubeVideoEmbed>
 
             <h2>Cheap Storage</h2>
@@ -103,7 +103,7 @@ function FeaturePage() {
             <YoutubeVideoEmbed
               videoId="JAQ1dkFvfPI"
               className="mt-10 md:mt-10"
-              altText="Community Conversations | How to Host a Website on the Internet Computer"
+              altText="Community Conversations | How to Host a Website on the BigFile"
             ></YoutubeVideoEmbed>
 
             <h2>Smart contracts that can process HTTP requests</h2>
@@ -119,7 +119,7 @@ function FeaturePage() {
 
             <h3>SEO</h3>
             <p>
-              The dapps running on the Internet Computer seamlessly integrate
+              The dapps running on the BigFile seamlessly integrate
               into the Web 2.0 world as crawlers are able to access them
               directly on-chain. This allows dapps to be indexed by search
               engines and for their metadata to be read in order to generate
@@ -186,7 +186,7 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="'Web Serving' article on the 'IC Wiki'"
-              description="Take a deep dive into the Internet Computer's abiliy to host full dapps 100% on-chain"
+              description="Take a deep dive into the BigFile's abiliy to host full dapps 100% on-chain"
               href="https://wiki.internetcomputer.org/wiki/Web_Serving"
             />
           </div>

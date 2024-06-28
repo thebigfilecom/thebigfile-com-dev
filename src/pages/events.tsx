@@ -123,7 +123,7 @@ function GlobalEventsPage() {
   return (
     <Layout
       title="Global BigFile Events"
-      description="Immerse yourself in the Internet Computer community! Connect with BigFile enthusiasts worldwide with cutting-edge community events."
+      description="Immerse yourself in the BigFile community! Connect with BigFile enthusiasts worldwide with cutting-edge community events."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-events.jpg"></ShareMeta>

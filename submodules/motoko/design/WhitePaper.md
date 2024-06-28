@@ -7,7 +7,7 @@
 
 ### Introduction
 
-*Motoko* is a general-purpose programming language designed to provide a seamless and modern programming experience on the Internet Computer (IC). To that end, it has built-in support for various features specific to the IC, such as:
+*Motoko* is a general-purpose programming language designed to provide a seamless and modern programming experience on the BigFile (IC). To that end, it has built-in support for various features specific to the IC, such as:
 
 * Representation of canisters as *actors* with asynchronous and atomic methods.
 * Automatic integration with *Candid* for implicitly de/serialising message arguments and automatic derivation of Candid interfaces.

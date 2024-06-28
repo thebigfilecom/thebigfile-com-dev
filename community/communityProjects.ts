@@ -191,7 +191,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 11,
     title: "CanDB",
-    body: "Meet CanDB, the first flexible and truly horizontally scalable NoSQL database built for the Internet Computer.\n\nhttps://www.canscale.dev",
+    body: "Meet CanDB, the first flexible and truly horizontally scalable NoSQL database built for the BigFile.\n\nhttps://www.canscale.dev",
     links: {
       github: "https://github.com/canscale/supernova-candb-demo",
       livePreview: "https://pliqr-fqaaa-aaaan-qalpq-cai.ic0.app/",
@@ -244,7 +244,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 14,
     title: "IC Avatar Creator",
-    body: "The IC Avatar Creator allows users to create and manage avatars for the open metaverse. The project includes GLB avatars that are minted to the Internet Computer using the DIP721v2 token standard.",
+    body: "The IC Avatar Creator allows users to create and manage avatars for the open metaverse. The project includes GLB avatars that are minted to the BigFile using the DIP721v2 token standard.",
     links: {
       github: "https://github.com/AtlasFoundation/AvatarCreator-IC-Project",
       external:
@@ -738,7 +738,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 43,
     title: "Dear Diary",
-    body: "Dear Diary is the first decentralized market place that will allow users to sell their diaries as NFTs. It is developed on Web3 on the Internet Computer, Motoko backend and React.js frontend.",
+    body: "Dear Diary is the first decentralized market place that will allow users to sell their diaries as NFTs. It is developed on Web3 on the BigFile, Motoko backend and React.js frontend.",
     links: {
       github: "https://github.com/nahrinoda/dear-diary",
       external: "https://supernova.devpost.com/submissions/327321-dear-diary",
@@ -850,7 +850,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 50,
     title: "icApps",
-    body: "Internet Computer projects community portal 🌀",
+    body: "BigFile projects community portal 🌀",
     links: {
       github: "https://github.com/tomkoom/icApps",
       livePreview: "https://n7ib3-4qaaa-aaaai-qagnq-cai.raw.ic0.app/#/",
@@ -964,7 +964,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 57,
     title: "Bonsai ICP",
-    body: "A GameFi in Internet Computer platform",
+    body: "A GameFi in BigFile platform",
     links: {
       github: "https://github.com/conglt10/bonsai-icp",
       external: "https://supernova.devpost.com/submissions/333311-bonsai-icp",
@@ -1088,7 +1088,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 65,
     title: "PRESTO: Escrow, Title, & Trust dApp",
-    body: "Presto is an Internet Computer dApp for creating and managing escrows & trusts and for registering ownership of any type of property on-chain.",
+    body: "Presto is an BigFile dApp for creating and managing escrows & trusts and for registering ownership of any type of property on-chain.",
     links: {
       github: "https://github.com/hafezrouzati/presto",
       livePreview: "https://3us5k-qyaaa-aaaak-qap3a-cai.ic0.app/",
@@ -1188,7 +1188,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 71,
     title: "Doap",
-    body: "Bringing POAP (proof of participation) to the Internet Computer",
+    body: "Bringing POAP (proof of participation) to the BigFile",
     links: {
       github: "https://github.com/picsoung/doap-dfinity",
       external: "https://supernova.devpost.com/submissions/334336-doap",
@@ -1337,7 +1337,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 81,
     title: "Ant Kingdoms, Free play-and-earn NFT Game",
-    body: "Ant Kingdoms Free play-and-earn NFT Game is a decentralized game built and runs on Internet Computer.",
+    body: "Ant Kingdoms Free play-and-earn NFT Game is a decentralized game built and runs on BigFile.",
     links: {
       github: "https://github.com/NFPTU/dfinity-fu",
       livePreview: "https://fpi33-7qaaa-aaaai-acatq-cai.ic0.app/",
@@ -1355,7 +1355,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 82,
     title: "Flippy (NFT Barter)",
-    body: 'Wouldn\'t it be cool if we could trade NFTs as we did with trading cards when we were kids? "Flippy" is the first platform in the Internet Computer ecosystem that enables the direct exchanges of NFTs.',
+    body: 'Wouldn\'t it be cool if we could trade NFTs as we did with trading cards when we were kids? "Flippy" is the first platform in the BigFile ecosystem that enables the direct exchanges of NFTs.',
     links: {
       github: "https://github.com/Japan-DfinityInfoHub/nft-barter",
       livePreview: "https://a2tci-laaaa-aaaap-qamkq-cai.ic0.app/",
@@ -1455,7 +1455,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 89,
     title: "ic-py",
-    body: "ic-py: Python Agent Library for the Internet Computer",
+    body: "ic-py: Python Agent Library for the BigFile",
     links: {
       github: "https://github.com/rocklabs-io/ic-py",
       external: "https://supernova.devpost.com/submissions/333069-ic-py",
@@ -1788,7 +1788,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 109,
     title: "WEB3 Empowered Marketing Advisor",
-    body: "Get a Marketing Advise from over 200 Marketing Expert, based on your situation, product and target group with an exact guideline how to do your marketing. Fully on Web3 build on the Internet Computer.",
+    body: "Get a Marketing Advise from over 200 Marketing Expert, based on your situation, product and target group with an exact guideline how to do your marketing. Fully on Web3 build on the BigFile.",
     links: {
       github: "https://github.com/MCikus/supernova-submission",
       livePreview: "http://ufostart-supernova.icp.xyz/landing",
@@ -1936,7 +1936,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 118,
     title: "LaunchTrail",
-    body: "Bring 100% verifiability to Internet Computer projects and make them more secure and dependable.",
+    body: "Bring 100% verifiability to BigFile projects and make them more secure and dependable.",
     links: {
       github: "https://github.com/spinner-cash/launchtrail",
       external: "https://supernova.devpost.com/submissions/327084-launchtrail",
@@ -1951,7 +1951,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 119,
     title: "React Website with Contentful CMS",
-    body: "This is a boilerplate for you to easily setup and deploy a React website with Contentful CMS onto the Internet Computer blockchain.",
+    body: "This is a boilerplate for you to easily setup and deploy a React website with Contentful CMS onto the BigFile blockchain.",
     image: "/img/community-projects/react-website-with-contentful-cms.png",
     links: {
       github: "https://github.com/therealbryanho/dfinity-websitewithcms",
@@ -1965,7 +1965,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 120,
     title: "Simple Blogsite",
-    body: "Learn how to make your own blog supporting CRUD operations in Motoko on the Internet Computer.",
+    body: "Learn how to make your own blog supporting CRUD operations in Motoko on the BigFile.",
     image: "/img/community-projects/simpleblog.png",
     links: {
       github: "https://github.com/lukasvozda/icblog",
@@ -2008,7 +2008,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 123,
     title: "No Key Wallet",
-    body: "Sign transactions for EVM-compatible blockchains on the Internet Computer.",
+    body: "Sign transactions for EVM-compatible blockchains on the BigFile.",
     image: "/img/community-projects/no_key_wallet.png",
     links: {
       github: "https://github.com/nikolas-con/ic-evm-sign-starter",
@@ -2040,7 +2040,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 125,
     title: "Bitshop",
-    body: "A proof of concept project that demonstrates capabilities of the Internet Computer blockchain to serve as a Bitcoin e-shop.",
+    body: "A proof of concept project that demonstrates capabilities of the BigFile blockchain to serve as a Bitcoin e-shop.",
     image: "/img/community-projects/bitshop.png",
     links: {
       github: "https://github.com/lukasvozda/bitshop",

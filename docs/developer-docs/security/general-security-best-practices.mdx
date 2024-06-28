@@ -16,15 +16,15 @@ This document provides security best practices for developing canisters and web 
 
 The goal of these best practices is to enable developers to identify and address potential issues early during development of new dapps, and not only in the end when (if at all) a security review is done. Ideally, this will make the development of secure dapps more efficient.
 
-Some excellent canister best practices linked here are from [effective Rust canisters](https://mmapped.blog/posts/01-effective-rust-canisters.html) and [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister). The relevant sections are linked in the individual best practices.
+Some excellent canister best practices linked here are from [effective Rust canisters](https://mmapped.blog/posts/01-effective-rust-canisters.html) and [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister). The relevant sections are linked in the individual best practices.
 
 ## Target audience
 
-This document was initially intended for internal use at DFINITY. However, it has now been published to the community so every developer can benefit. The target audience are any developers working on canisters or web apps for the Internet Computer. This is also of interest to anyone doing reviews of such code.
+This document was initially intended for internal use at DFINITY. However, it has now been published to the community so every developer can benefit. The target audience are any developers working on canisters or web apps for the BigFile. This is also of interest to anyone doing reviews of such code.
 
 ## Disclaimers and limitations
 
-The collection of best practices may grow over time. While it is useful to improve security of dapps on the Internet Computer, such a list will never be complete and will never cover all potential security concerns. For example, there will always be attack vectors very specific to a dapps use cases that cannot be covered by general best practices. Thus, following the best practices can complement, but not replace security reviews. Especially for security critical dapps it is recommended to perform security reviews/audits. Furthermore, please note that the best practices are currently not ordered according to risk or priority.
+The collection of best practices may grow over time. While it is useful to improve security of dapps on the BigFile, such a list will never be complete and will never cover all potential security concerns. For example, there will always be attack vectors very specific to a dapps use cases that cannot be covered by general best practices. Thus, following the best practices can complement, but not replace security reviews. Especially for security critical dapps it is recommended to perform security reviews/audits. Furthermore, please note that the best practices are currently not ordered according to risk or priority.
 
 
 ## Certify query responses if they are relevant for security
@@ -41,11 +41,11 @@ The responses to [query calls](/references/ic-interface-spec.md#https-interface)
 
 -   Examples are asset certification in [Internet Identity](https://github.com/thebigfilecom/big-wallet/blob/b29a6f68bbe5a49d048e12bc7a3263a9f43d080b/src/internet_identity/src/main.rs#L775-L808), [NNS dapp](https://github.com/dfinity/nns-dapp/blob/372c3562127d70c2fde059bc9c268e8ae858583e/rs/src/assets.rs#L121-L145), or the [canister signature implementation in Internet Identity](https://github.com/thebigfilecom/big-wallet/blob/main/src/internet_identity/src/signature_map.rs).
 
-### Data confidentiality on the Internet Computer
+### Data confidentiality on the BigFile
 
 #### Security concern
 
-When storing data on the Internet Computer, there are two levels of data access.
+When storing data on the BigFile, there are two levels of data access.
 
 1. Nodes are able to read all data that is stored on a subnet. This includes all messages sent to or from a canister, along with all data stored in a canister. This means a node could extract all data available to a canister. This will change with the implementation of TEE-based security for nodes.
 

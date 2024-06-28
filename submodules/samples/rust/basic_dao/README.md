@@ -6,7 +6,7 @@ keywords: [advanced, rust, dao, decentralized organization, decentralized org]
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/rust/basic_dao)
 
-This sample project demonstrates a basic [decentralized autonomous organization](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization) (DAO) that can be deployed to the [Internet Computer](https://github.com/dfinity/ic). The basic DAO sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/basic_dao) and [Rust](https://github.com/dfinity/examples/tree/master/rust/basic_dao). You can see a quick introduction on [YouTube](https://youtu.be/3IcYlieA-EE).
+This sample project demonstrates a basic [decentralized autonomous organization](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization) (DAO) that can be deployed to the [BigFile](https://github.com/dfinity/ic). The basic DAO sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/basic_dao) and [Rust](https://github.com/dfinity/examples/tree/master/rust/basic_dao). You can see a quick introduction on [YouTube](https://youtu.be/3IcYlieA-EE).
 
 ## Overview
 
@@ -34,7 +34,7 @@ Begin by opening a terminal window.
 make clean; make
 ```
 
-### Step 2: Navigate into the folder containing the project's files and start a local instance of the Internet Computer with the command:
+### Step 2: Navigate into the folder containing the project's files and start a local instance of the BigFile with the command:
 
 ```bash
 cd basic_dao
@@ -260,7 +260,7 @@ Output:
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
 * [Use a decentralized governance system like SNS to make a canister have a decentralized controller](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#use-a-decentralized-governance-system-like-sns-to-make-a-canister-have-a-decentralized-controller), since this is a DAO's use case.

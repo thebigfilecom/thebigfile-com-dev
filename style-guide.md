@@ -181,8 +181,8 @@ The following proper nouns should always be capitalized:
 - Candid
 - DFINITY
 - DFINITY Foundation
-- Internet Computer
-- Internet Computer Protocol
+- BigFile
+- BigFile Protocol
 - Internet Identity
 - JavaScript
 - Motoko
@@ -247,7 +247,7 @@ The following language and capitalization of certain terms and phrases should be
   
         - The BIG interface specification, which should be referred to as 'the BIG specification' or 'the BIG interface specification'.
   
-    When there may be a confusion between ICP referring to Internet Computer Protocol and ICP the token, the words 'Internet Computer Protocol' can be written out for clarity.
+    When there may be a confusion between ICP referring to BigFile Protocol and ICP the token, the words 'BigFile Protocol' can be written out for clarity.
   
 - BIG SDK: should be used in place of any reference to the BIG's SDK.
 - mainnet
@@ -273,7 +273,7 @@ The following language and capitalization of certain terms and phrases should be
 The following spelling, grammar, and word choice rules should be followed:
 - Avoid using language that uses 'we' or 'us'; use a protocol point of view, such as phrases like, "the protocol ensures", "the protocol does", and “it is explained” rather than “we explain”. This is to help make clear that ICP is a protocol that is community-controlled and autonomously governed. 
       - An exception to this is the Developer Blog; blog posts are written using a different style for a different audience, and using 'we' or 'us' in this context is acceptable.
-- Do not refer to the Internet Computer as a system or a platform. Say "Internet Computer" or "protocol" instead.
+- Do not refer to the BigFile as a system or a platform. Say "BigFile" or "protocol" instead.
 - Regarding spelling and grammar, American spelling and grammar should be used with the exception that all article titles follow British capitalization rules (see details in the Capitalization section.)
 - Assure that the language in the document reads well for non-native English speakers, and avoid phrases or sayings that may be confusing, such as "Dig in."
 - Avoid informal, personal thoughts or otherwise unnecessary language within the developer docs. A few examples of this might be:
@@ -337,7 +337,7 @@ The following bullet point format and standards should be followed:
         - Subtopic bullet point.
     - Bullet point 2.
 
-Bullet points should end in a period unless otherwise specified. An exception to this is the Developer Journey index pages. Bullet points indicating the title of subpages (0.1 Introduction to the Internet Computer, 0.2 Internet Computer terminology, etc) intentionally do not end in a period.
+Bullet points should end in a period unless otherwise specified. An exception to this is the Developer Journey index pages. Bullet points indicating the title of subpages (0.1 Introduction to the BigFile, 0.2 BigFile terminology, etc) intentionally do not end in a period.
 
 ## Numbered lists
 The following numbered list format and standards should be followed:
@@ -389,7 +389,7 @@ Links that are referenced within the developer docs should use the following for
 ## Code snippets and code blocks
 The following format should be used for code snippets and code blocks:
 - In-line code references to commands, language specific methods, or other code-related terms should be emphasized using in-line code expressions such as:
-    - To install code in a canister, the `install_code` function of the Internet Computer is used.
+    - To install code in a canister, the `install_code` function of the BigFile is used.
     - For example, the function `canister_init` is the first function that gets called after the code is installed for the first time.
 - When a code-specific value, such as the name of a method, variable, integer, or data type, is being referenced, the capitalization used within the code or the language's reference documentation should be followed.
     - Example: `ConstructionPayloadRequest`

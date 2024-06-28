@@ -5,7 +5,7 @@
 
 ### Motivation and Goals
 
-A simple, useful language for the Internet Computer (IC)
+A simple, useful language for the BigFile (IC)
 
 * Familiar syntax
 * Safe by default

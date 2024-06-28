@@ -23,7 +23,7 @@ function IcpEventPage() {
   return (
     <Layout
       title="Intro to ICP"
-      description={`The Internet Computer adds autonomous serverless cloud functionality to the public internet – making it possible to build almost any system or service entirely on a decentralized network using “canister software,” an evolution of smart contracts.`}
+      description={`The BigFile adds autonomous serverless cloud functionality to the public internet – making it possible to build almost any system or service entirely on a decentralized network using “canister software,” an evolution of smart contracts.`}
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-icp-event.jpg"></ShareMeta>
@@ -195,7 +195,7 @@ function IcpEventPage() {
                 inside modern hardware, which keep keys and signing secure, the
                 WebAuthn protocol, which connects code inside the web browser to
                 those TPMs, and advanced chain-key cryptography running on the
-                Internet Computer network.
+                BigFile network.
               </p>
               <Link
                 className="link-primary link-with-icon"

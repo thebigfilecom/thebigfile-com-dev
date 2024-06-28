@@ -168,7 +168,7 @@ function OpenChatPage() {
                 An "open internet service" is an internet service with a
                 difference: it runs entirely on World Computer blockchain,
                 without centralization. OpenChat is built from canister smart
-                contracts installed on the Internet Computer |{" "}
+                contracts installed on the BigFile |{" "}
                 <a
                   className="link-subtle"
                   href="https://twitter.com/search?q=%23ICP"

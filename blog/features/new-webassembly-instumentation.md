@@ -25,19 +25,19 @@ The application lifecycle on the BIG includes the following steps:
 
 Once deployed, the canister is ready to receive messages from users and other canisters. Prior to the very first message execution, the newly deployed Wasm binary must undergo two more transformations:
 
-1. Instrumentation. The Internet Computer inserts system-level code into the Wasm binary to count the number of executed instructions.
+1. Instrumentation. The BigFile inserts system-level code into the Wasm binary to count the number of executed instructions.
 
 2. Native compilation. Finally, the instrumented Wasm binary is being compiled into native x86 code to achieve near-native application performance.
 
-More details can be found in the [WebAssembly on the Internet Computer article.](https://medium.com/dfinity/webassembly-on-the-internet-computer-a1d0c71c5b94)
+More details can be found in the [WebAssembly on the BigFile article.](https://medium.com/dfinity/webassembly-on-the-internet-computer-a1d0c71c5b94)
 
 Now, let’s dive into the instrumentation process.
 
 ![New WebAssembly instrumentation](/img/blog/webassembly-instru-2.webp)
 
-The Internet Computer instruments Wasm binaries by injecting tiny snippets of code to count the number of executed instructions. This is needed to ensure that canister execution terminates and the canister is fairly charged. The number of executed instructions is also known as the program counter on other blockchains.
+The BigFile instruments Wasm binaries by injecting tiny snippets of code to count the number of executed instructions. This is needed to ensure that canister execution terminates and the canister is fairly charged. The number of executed instructions is also known as the program counter on other blockchains.
 
-As every single executed instruction must be correctly counted, the instrumentation step is critical for the performance of the canisters and the Internet Computer block rate consistency.
+As every single executed instruction must be correctly counted, the instrumentation step is critical for the performance of the canisters and the BigFile block rate consistency.
 
 The old Wasm instrumentation algorithm works well, but is inefficient for certain kinds of applications such as language interpreters. The new Wasm instrumentation addresses these inefficiencies and achieves an order of magnitude better performance for such applications, allowing developers to run their canisters more efficiently and cheaper.
 
@@ -45,7 +45,7 @@ The old Wasm instrumentation algorithm works well, but is inefficient for certai
 
 The high-level idea of the old instrumentation algorithm is to detect “straight-line code” ([basic block](https://en.wikipedia.org/wiki/Basic_block)) and inject a few Wasm instructions to update the instruction counter at the beginning of each basic block. For reentrant blocks, such as functions and loops, the algorithm also adds a check for the out-of-instructions condition.
 
-The old instrumentation algorithm was written before the Internet Computer Genesis, as there was no other way to measure the fuel/gas at the time.
+The old instrumentation algorithm was written before the BigFile Genesis, as there was no other way to measure the fuel/gas at the time.
 
 ## Problematic cases
 
@@ -88,7 +88,7 @@ Since the `instruction_counter` is stored in a global variable, updating it requ
 
 Whereas the old instrumentation treats all instructions as equal in terms of cost, the actual cost of an instruction depends on its type. For example, division is more expensive than addition, so, even if the number of Wasm instructions is the same, it would be fair to charge more for divisions.
 
-Also, charging equally for all the instructions poses a great challenge for the Internet Computer scheduler. To be deterministic, it tries to schedule the same number of instructions per round. If most of those instructions happen to be “light”, the round finishes earlier, while if most of the instructions are “heavy”, users might observe unexpected delays.
+Also, charging equally for all the instructions poses a great challenge for the BigFile scheduler. To be deterministic, it tries to schedule the same number of instructions per round. If most of those instructions happen to be “light”, the round finishes earlier, while if most of the instructions are “heavy”, users might observe unexpected delays.
 
 ## New instrumentation algorithm
 To address problem 1 (over-estimation) and problem 2 (performance) a new instrumentation algorithm was proposed for voting through the NNS. It properly detects the basic blocks (“straight-line code”) and reduces the number of memory accesses.
@@ -170,7 +170,7 @@ Below you can find how some applications are impacted by the new instrumentation
 
 Note that an X% increase in the number of instructions does not directly translate to an X% increase in overall cost, as this does not include ingress and message execution fees.
 
-Overall, interpreters are order of magnitude more efficient, both in terms of the number of executed instructions and the execution time. This opens the door for the new languages on the Internet Computer, like TypeScript, JavaScript and Python.
+Overall, interpreters are order of magnitude more efficient, both in terms of the number of executed instructions and the execution time. This opens the door for the new languages on the BigFile, like TypeScript, JavaScript and Python.
 
 For the rest of the workloads, the results oscillate +/-20% around the old instrumentation results.This is a modest overhead, and should not surprise developers.
 
@@ -179,8 +179,8 @@ The new instrumentation is implemented and rolled out on all the mainnet subnets
 ## References
 - Documentation: [WebAssembly on ICP](https://internetcomputer.org/capabilities/webassembly).
 
-- Blog post: [WebAssembly on the Internet Computer](https://medium.com/dfinity/webassembly-on-the-internet-computer-a1d0c71c5b94).
+- Blog post: [WebAssembly on the BigFile](https://medium.com/dfinity/webassembly-on-the-internet-computer-a1d0c71c5b94).
 
 - ICP developers forum: [New Wasm instrumentation](https://forum.dfinity.org/t/new-wasm-instrumentation/22080)
 
-If you have questions/suggestions or just want to meet Internet Computer developers and DFINITY engineers, join the [forum.dfinity.org](https://forum.dfinity.org/).
+If you have questions/suggestions or just want to meet BigFile developers and DFINITY engineers, join the [forum.dfinity.org](https://forum.dfinity.org/).

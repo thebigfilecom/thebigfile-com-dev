@@ -1,9 +1,9 @@
 {
   "name": "icp_detect",
   "version": "0.2.0",
-  "description": "Internet Computer starter application",
+  "description": "BigFile starter application",
   "keywords": [
-    "Internet Computer",
+    "BigFile",
     "Motoko",
     "JavaScript",
     "Canister"

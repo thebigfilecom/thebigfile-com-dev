@@ -16,7 +16,7 @@ function SnsFaqPage() {
   return (
     <Layout
       title="SNS DAO FAQ"
-      description="All you need to know about DAOs on the Internet Computer and how to participate in them."
+      description="All you need to know about DAOs on the BigFile and how to participate in them."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-sns.jpg"></ShareMeta>
@@ -90,7 +90,7 @@ function SnsFaqPage() {
               <p>
                 SNS stands for Service Nervous System. An SNS is a powerful form
                 of DAO that allows communities to govern smart contracts and
-                decentralized apps (dapps) running on the Internet Computer
+                decentralized apps (dapps) running on the BigFile
                 (ICP) completely on chain. Main things to note about SNS:
               </p>
               <ul>
@@ -167,7 +167,7 @@ function SnsFaqPage() {
               the launch of the SNS technology. OpenChat was the first dapp that
               handed control over to an SNS DAO in Q1 of 2023. Since then, many
               ecosystem projects have followed. Currently, there are 11 SNS DAOs
-              on the Internet Computer. Follow their progress on the{" "}
+              on the BigFile. Follow their progress on the{" "}
               <Link href="https://dashboard.internetcomputer.org/sns">
                 SNS dashboard
               </Link>
@@ -403,7 +403,7 @@ function SnsFaqPage() {
                 swap, from its initiation to execution, is completely
                 decentralized and not controlled by any centralized entity. Even
                 the decision to create the SNS and its token is made by the NNS
-                (the DAO that controls the Internet Computer) and not the developer
+                (the DAO that controls the BigFile) and not the developer
                 in order to ensure complete decentralizion of the app.
               </p>
               <p>
@@ -685,7 +685,7 @@ function SnsFaqPage() {
                 <li>
                   Typically, after an SNS has launched it has an SNS token treasury and an ICP
                   treasury (from the decentralization swap). An SNS can, however, also own other
-                  tokens on the Internet Computer.
+                  tokens on the BigFile.
                 </li>
                 <li>
                   The treasury funds could, for example, be used to open liquidity pools on
@@ -815,7 +815,7 @@ function SnsFaqPage() {
             <Faq title="Is it possible to transfer SNS tokens to another person?">
               <p>
                 Yes. SNS tokens are ICRC-1 tokens and can be transferred between
-                any Internet Computer-based wallets that support ICRC-1,
+                any BigFile-based wallets that support ICRC-1,
                 including your NNS wallet. Note that each SNS has its own
                 ICRC-1-compliant ledger for keeping track of its tokens.
               </p>

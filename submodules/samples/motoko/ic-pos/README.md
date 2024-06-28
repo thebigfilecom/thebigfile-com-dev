@@ -25,7 +25,7 @@ For deeper understanding of the BIG < > BTC integration, see the BIG wiki articl
 
 ## Try it!
 
-BIG-POS is deployed on the Internet Computer. You can try it out here:
+BIG-POS is deployed on the BigFile. You can try it out here:
 
 https://hngac-6aaaa-aaaal-qb6tq-cai.icp0.io/
 

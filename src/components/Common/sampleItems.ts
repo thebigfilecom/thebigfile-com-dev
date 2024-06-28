@@ -109,7 +109,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko"],
     level: "advanced",
     contentType: ["code samples", "documentation"],
-    body: "Experimental app showcasing ckBTC use on Internet Computer for POS payments.",
+    body: "Experimental app showcasing ckBTC use on BigFile for POS payments.",
 
     links: {
       motoko: "https://github.com/dfinity/examples/tree/master/motoko/ic-pos",
@@ -124,7 +124,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko"],
     level: "advanced",
     contentType: ["code samples", "documentation"],
-    body: "ICRC-2 Swap demo: Manages ICRC-2 tokens, unique in async Internet Computer design.",
+    body: "ICRC-2 Swap demo: Manages ICRC-2 tokens, unique in async BigFile design.",
     links: {
       motoko:
         "https://github.com/dfinity/examples/tree/master/motoko/icrc2-swap",
@@ -210,7 +210,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko", "rust"],
     level: "advanced",
     contentType: ["code samples", "documentation", "live demos", "tutorial"],
-    body: "Deploy a canister on the Internet Computer that can send and receive Bitcoin.",
+    body: "Deploy a canister on the BigFile that can send and receive Bitcoin.",
     links: {
       action: {
         text: "Get code",

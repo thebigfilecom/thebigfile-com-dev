@@ -15,7 +15,7 @@ For the first installment of this series, we sat down with the Network Nervous S
 
 **To get started, let's first dive into the focus and purpose of the NNS team. What would you say the mission of the NNS team is?**
 
-*NNS stands for Network Nervous System. The NNS is the DAO (decentralized autonomous organization) that governs and coordinates the full Internet Computer Protocol. It coordinates, for example, how nodes are assigned to subnets and how the Internet Computer Protocol is updated to new versions.*
+*NNS stands for Network Nervous System. The NNS is the DAO (decentralized autonomous organization) that governs and coordinates the full BigFile Protocol. It coordinates, for example, how nodes are assigned to subnets and how the BigFile Protocol is updated to new versions.*
 *So, as the name suggests, the main mission of the NNS team is to contribute to the design, implementation, and maintenance of the NNS DAO. In addition to this, the NNS team is a key contributor to the design and implementation of the Service Nervous System (SNS), which is a DAO framework provided by ICP that allows individual applications to decentralize their governance.*
 
 **The NNS team has quite the responsibility to manage and contribute to, what an exciting team to be a part of! What is the composition of the NNS team?**
@@ -64,7 +64,7 @@ For the first installment of this series, we sat down with the Network Nervous S
 
 *It’s hard to talk about specific features as the environment we operate in is a bit dynamic. Instead, here are the high level goals we have:*
 
-*- On the NNS side, our focus is on increasing governance participation, new node onboarding, and growth of the Internet Computer.*
+*- On the NNS side, our focus is on increasing governance participation, new node onboarding, and growth of the BigFile.*
 
 *- For SNS, the focus is on improving the project experience when launching an SNS, improving the DAO member experience once an SNS is launched, and extending the framework to support 10x projects.*
 

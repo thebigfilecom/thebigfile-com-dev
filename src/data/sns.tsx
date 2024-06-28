@@ -40,7 +40,7 @@ export const extraMetadata: Record<string, Partial<DaoCardProps>> = {
     twitter: "https://twitter.com/sonic_ooo",
     description: (
       <>
-        The open DeFi suite on the Internet Computer blockchain governed by the
+        The open DeFi suite on the BigFile blockchain governed by the
         people for the people. Sonic unleashes the potential of crypto trading
         through innovative DeFi products.
       </>

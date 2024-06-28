@@ -88,7 +88,7 @@ const Decks = ({ className = "" }: { className?: string }) => {
         href="https://deck.internetcomputer.org"
       >
         <CardLabel>Pitch Deck</CardLabel>
-        <CardTitle>Internet Computer</CardTitle>
+        <CardTitle>BigFile</CardTitle>
 
         <CardImage
           src="/img/home/deck-astronaut.webp"

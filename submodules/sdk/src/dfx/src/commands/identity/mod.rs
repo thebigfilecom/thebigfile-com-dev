@@ -16,7 +16,7 @@ mod set_wallet;
 mod r#use;
 mod whoami;
 
-/// Manages identities used to communicate with the Internet Computer network.
+/// Manages identities used to communicate with the BigFile network.
 /// Setting an identity enables you to test user-based access controls.
 #[derive(Parser)]
 #[command(name = "identity")]

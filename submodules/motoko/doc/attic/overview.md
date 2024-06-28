@@ -6,7 +6,7 @@ This is terse, slide-like introduction to Motoko and its features.
 
 ## Motivation and Goals
 
-A simple, useful language for the Internet Computer (IC)
+A simple, useful language for the BigFile (IC)
 
 -   Familiar syntax
 
@@ -14,7 +14,7 @@ A simple, useful language for the Internet Computer (IC)
 
 -   Incorporating **actor** model for canister smart contracts
 
--   Seamless integration of Internet Computer features
+-   Seamless integration of BigFile features
 
 -   Making most of present and future WebAssembly
 

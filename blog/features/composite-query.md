@@ -1,13 +1,13 @@
 ---
-title: Building a partitioned key-value store with composite queries on the Internet Computer
-description: "Today, we’ll dive into composite queries and walk through the process of building a sample app: a partitioned key-value store. Each partition is represented by a single canister. We'll leverage the power of the Internet Computer’s composite queries to efficiently retrieve data from those partition canisters."
+title: Building a partitioned key-value store with composite queries on the BigFile
+description: "Today, we’ll dive into composite queries and walk through the process of building a sample app: a partitioned key-value store. Each partition is represented by a single canister. We'll leverage the power of the BigFile’s composite queries to efficiently retrieve data from those partition canisters."
 tags: [New features]
 image: /img/blog/dev-update-blog-composite-query.png
 ---
 
-# Building a partitioned key-value store with composite queries on the Internet Computer
+# Building a partitioned key-value store with composite queries on the BigFile
 
-Welcome to another developer blog post! Today, we’ll dive into composite queries and walk through the process of building a sample dapp: a partitioned key-value store. Each partition is represented by a single canister. We'll leverage the power of the Internet Computer’s composite queries to efficiently retrieve data from those partition canisters.
+Welcome to another developer blog post! Today, we’ll dive into composite queries and walk through the process of building a sample dapp: a partitioned key-value store. Each partition is represented by a single canister. We'll leverage the power of the BigFile’s composite queries to efficiently retrieve data from those partition canisters.
 
 In essence, the partitioned key-value store is structured as a single frontend with multiple backends. Each backend represents one partition of the key-value store.
 
@@ -139,7 +139,7 @@ $ dfx canister call dmalx-m4aaa-aaaaa-qaanq-cai get '(1: nat)' --query
 
 In summary, by using composite queries, we achieve low latency while keeping the client side simple. This is especially useful for dapps that are scaling vertically by partitioning data across multiple canisters.
 
-Congratulations! You have successfully built a key-value store using Rust and leveraged the powerful composite query feature of the Internet Computer. This allows for efficient retrieval of data from your canisters.
+Congratulations! You have successfully built a key-value store using Rust and leveraged the powerful composite query feature of the BigFile. This allows for efficient retrieval of data from your canisters.
 
 We hope you found this blog post helpful. Happy coding with the composite query feature!
 Many thanks to the DFINITY for contributing to the composite query feature: Adam Spofford, Claudio Russo, Martin Raszyk, Robin Künzler, Roel Storms, Stefan Kaestle, Ulan Degenbaev, Yan Chen

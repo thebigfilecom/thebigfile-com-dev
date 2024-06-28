@@ -48,7 +48,7 @@ The user can also use the HTTPS interface to issue read-only queries, which are 
 ```plantuml
     actor Developer
     actor User
-    participant "Internet Computer" as BIG
+    participant "BigFile" as BIG
     participant "Canister 1" as Can1
     Developer -> BIG : /submit create canister
     create Can1
@@ -393,7 +393,7 @@ This section makes forward references to other concepts in this document, in par
 
 #### CBOR {#cbor}
 
-[Concise Binary Object Representation (CBOR)](https://www.rfc-editor.org/rfc/rfc8949) is a data format with a small code footprint, small message size and an extensible interface. CBOR is used extensively throughout the Internet Computer as the primary format for data exchange between components within the system.
+[Concise Binary Object Representation (CBOR)](https://www.rfc-editor.org/rfc/rfc8949) is a data format with a small code footprint, small message size and an extensible interface. CBOR is used extensively throughout the BigFile as the primary format for data exchange between components within the system.
 
 [cbor.io](https://cbor.io) and [wikipedia.org](https://en.wikipedia.org/wiki/CBOR) contain a lot of helpful background information and relevant tools. [cbor.me](https://cbor.me) in particular, is very helpful for converting between CBOR hex and diagnostic information.
 
@@ -455,7 +455,7 @@ The state tree contains information about all API boundary nodes (the source of 
 
 ### Subnet information {#state-tree-subnet}
 
-The state tree contains information about the topology of the Internet Computer.
+The state tree contains information about the topology of the BigFile.
 
 -   `/subnet/<subnet_id>/public_key` (blob)
 
@@ -492,7 +492,7 @@ Because this uses the lexicographic ordering of princpials, and the byte disting
 
 ### Request status {#state-tree-request-status}
 
-For each asynchronous request known to the Internet Computer, its status is in a subtree at `/request_status/<request_id>`. Please see [Overview of canister calling](#http-call-overview) for more details on how asynchronous requests work.
+For each asynchronous request known to the BigFile, its status is in a subtree at `/request_status/<request_id>`. Please see [Overview of canister calling](#http-call-overview) for more details on how asynchronous requests work.
 
 -   `/request_status/<request_id>/status` (text)
 
@@ -516,13 +516,13 @@ For each asynchronous request known to the Internet Computer, its status is in a
 
 :::note
 
-Immediately after submitting a request, the request may not show up yet as the Internet Computer is still working on accepting the request as pending.
+Immediately after submitting a request, the request may not show up yet as the BigFile is still working on accepting the request as pending.
 
 :::
 
 :::note
 
-Request statuses will not actually be kept around indefinitely, and eventually the Internet Computer forgets about the request. This will happen no sooner than the request's expiry time, so that replay attacks are prevented.
+Request statuses will not actually be kept around indefinitely, and eventually the BigFile forgets about the request. This will happen no sooner than the request's expiry time, so that replay attacks are prevented.
 
 :::
 
@@ -552,15 +552,15 @@ Users have the ability to learn about the hash of the canister's module, its cur
 
 ## HTTPS Interface {#http-interface}
 
-The concrete mechanism that users use to send requests to the Internet Computer is via an HTTPS API, which exposes three endpoints to handle interactions, plus one for diagnostics:
+The concrete mechanism that users use to send requests to the BigFile is via an HTTPS API, which exposes three endpoints to handle interactions, plus one for diagnostics:
 
 -   At `/api/v2/canister/<effective_canister_id>/call` the user can submit (asynchronous, potentially state-changing) calls.
 
--   At `/api/v2/canister/<effective_canister_id>/read_state` or `/api/v2/subnet/<subnet_id>/read_state` the user can read various information about the state of the Internet Computer. In particular, they can poll for the status of a call here.
+-   At `/api/v2/canister/<effective_canister_id>/read_state` or `/api/v2/subnet/<subnet_id>/read_state` the user can read various information about the state of the BigFile. In particular, they can poll for the status of a call here.
 
 -   At `/api/v2/canister/<effective_canister_id>/query` the user can perform (synchronous, non-state-changing) query calls.
 
--   At `/api/v2/status` the user can retrieve status information about the Internet Computer.
+-   At `/api/v2/status` the user can retrieve status information about the BigFile.
 
 In these paths, the `<effective_canister_id>` is the [textual representation](#textual-ids) of the [*effective* canister id](#http-effective-canister-id).
 
@@ -568,13 +568,13 @@ Requests to `/api/v2/canister/<effective_canister_id>/call`, `/api/v2/canister/<
 
 :::note
 
-This document does not yet explain how to find the location and port of the Internet Computer.
+This document does not yet explain how to find the location and port of the BigFile.
 
 :::
 
 ### Overview of canister calling {#http-call-overview}
 
-Users interact with the Internet Computer by calling canisters. By the very nature of a blockchain protocol, they cannot be acted upon immediately, but only with a delay. Moreover, the actual node that the user talks to may not be honest or, for other reasons, may fail to get the request on the way. This implies the following high-level workflow:
+Users interact with the BigFile by calling canisters. By the very nature of a blockchain protocol, they cannot be acted upon immediately, but only with a delay. Moreover, the actual node that the user talks to may not be honest or, for other reasons, may fail to get the request on the way. This implies the following high-level workflow:
 
 1.  A user submits a call via the [HTTPS Interface](#http-interface). No useful information is returned in the immediate response (as such information cannot be trustworthy anyways).
 
@@ -872,9 +872,9 @@ It must be contained in the canister ranges of a subnet, otherwise the correspon
 
 The expectation is that user-side agent code shields users and developers from the notion of effective canister id, in analogy to how the System API interface shields canister developers from worrying about routing.
 
-The Internet Computer blockchain mainnet does not support `provisional_create_canister_with_cycles` and thus all calls to this method are rejected independently of the effective canister id.
+The BigFile blockchain mainnet does not support `provisional_create_canister_with_cycles` and thus all calls to this method are rejected independently of the effective canister id.
 
-In development instances of the Internet Computer Protocol (e.g. testnets), the effective canister id of a request submitted to a node must be a canister id from the canister ranges of the subnet to which the node belongs.
+In development instances of the BigFile Protocol (e.g. testnets), the effective canister id of a request submitted to a node must be a canister id from the canister ranges of the subnet to which the node belongs.
 
 :::
 
@@ -1042,13 +1042,13 @@ Implementations of the API can provide additional details for rejected messages 
 
 ### Status endpoint {#api-status}
 
-Additionally, the Internet Computer provides an API endpoint to obtain various status fields at
+Additionally, the BigFile provides an API endpoint to obtain various status fields at
 
     /api/v2/status
 
 For this endpoint, the user performs a GET request, and receives a CBOR (see [CBOR](#cbor)) value with the following fields. The BIG may include additional implementation-specific fields.
 
--   `root_key` (blob, optional): The public key (a DER-encoded BLS key) of the root key of this instance of the Internet Computer Protocol. This *must* be present in short-lived development instances, to allow the agent to fetch the public key. For the Internet Computer, agents must have an independent trustworthy source for this data, and must not be tempted to fetch it from this insecure location.
+-   `root_key` (blob, optional): The public key (a DER-encoded BLS key) of the root key of this instance of the BigFile Protocol. This *must* be present in short-lived development instances, to allow the agent to fetch the public key. For the BigFile, agents must have an independent trustworthy source for this data, and must not be tempted to fetch it from this insecure location.
 
 See [CBOR encoding of requests and responses](#api-cbor) for details on the precise CBOR encoding of this object.
 
@@ -1121,7 +1121,7 @@ More precisely:
 
 ### Synchronicity across nodes
 
-This document describes the Internet Computer as having a single global state that can be modified and queried. In reality, it consists of many nodes, which may not be perfectly in sync.
+This document describes the BigFile as having a single global state that can be modified and queried. In reality, it consists of many nodes, which may not be perfectly in sync.
 
 As long as you talk to one (honest) node only, the observed behavior is nicely sequential. If you issue an update (i.e. state-mutating) call to a canister (e.g. bump a counter), and node A indicates that the call has been executed, and you then issue a query call to node A, then A's response is guaranteed to include the effect of the update call (and you will receive the updated counter value).
 
@@ -1141,7 +1141,7 @@ A canister module is a [WebAssembly module](https://webassembly.github.io/spec/c
 
 ## Canister interface (System API) {#system-api}
 
-The System API is the interface between the running canister and the Internet Computer. It allows the WebAssembly module of a canister to expose functionality to the users (method entry points) and the BIG (e.g. initialization), and exposes functionality of the BIG to the canister (e.g. calling other canisters). Because WebAssembly is rather low-level, it also explains how to express higher level concepts (e.g. binary blobs).
+The System API is the interface between the running canister and the BigFile. It allows the WebAssembly module of a canister to expose functionality to the users (method entry points) and the BIG (e.g. initialization), and exposes functionality of the BIG to the canister (e.g. calling other canisters). Because WebAssembly is rather low-level, it also explains how to express higher level concepts (e.g. binary blobs).
 
 We want to leverage advanced WebAssembly features, such as WebAssembly host references. But as they are not yet supported by all tools involved, this section describes an initial System API that does not rely on host references. In section [Outlook: Using Host References](#host-references), we outline some of the proposed uses of WebAssembly host references.
 
@@ -1900,7 +1900,7 @@ Similarly, the System API allows the canister to effectively trap, but give some
 
 ### Outlook: Using Host References {#host-references}
 
-The Internet Computer aims to make the most of the WebAssembly platform, and embraces WebAssembly features. With WebAssembly host references, we can make the platform more secure, the interfaces more abstract and more compositional. The above `ic0` System API does not yet use WebAssembly host references. Once they become available on our platform, a new version of the System API using host references will be available via the `ic` module. The changes will be, at least
+The BigFile aims to make the most of the WebAssembly platform, and embraces WebAssembly features. With WebAssembly host references, we can make the platform more secure, the interfaces more abstract and more compositional. The above `ic0` System API does not yet use WebAssembly host references. Once they become available on our platform, a new version of the System API using host references will be available via the `ic` module. The changes will be, at least
 
 1.  The introduction of a `api_nonce` reference, which models the capability to use the System API. It is passed as an argument to `canister_init`, `canister_update <name>` etc., and expected as an argument by almost all System API function calls. (The debugging aids remain unconstrained.)
 
@@ -1912,7 +1912,7 @@ A canister may only use the old *or* the new interface; the BIG detects which in
 
 ## The BIG management canister {#ic-management-canister}
 
-The interfaces above provide the fundamental ability for external users and canisters to contact other canisters. But the Internet Computer provides additional functionality, such as canister and user management. This functionality is exposed to external users and canisters via the *BIG management canister*.
+The interfaces above provide the fundamental ability for external users and canisters to contact other canisters. But the BigFile provides additional functionality, such as canister and user management. This functionality is exposed to external users and canisters via the *BIG management canister*.
 
 :::note
 
@@ -2224,7 +2224,7 @@ to the above limits on HTTP request headers.
 
 :::note
 
-Currently, the Internet Computer mainnet only supports URLs that resolve to IPv6 destinations (i.e., the domain has a `AAAA` DNS record) in HTTP requests.
+Currently, the BigFile mainnet only supports URLs that resolve to IPv6 destinations (i.e., the domain has a `AAAA` DNS record) in HTTP requests.
 
 :::
 
@@ -2615,15 +2615,15 @@ The HTTP Gateway Protocol has been moved into its own [specification](./http-gat
 
 ## Abstract behavior {#abstract-behavior}
 
-The previous sections describe the interfaces, i.e. outer edges of the Internet Computer, but give only intuitive and vague information in prose about what these interfaces actually do.
+The previous sections describe the interfaces, i.e. outer edges of the BigFile, but give only intuitive and vague information in prose about what these interfaces actually do.
 
-The present section aims to address that question with great precision, by describing the *abstract state* of the whole Internet Computer, and how this state can change in response to API function calls, or spontaneously (modeling asynchronous, distributed or non-deterministic execution).
+The present section aims to address that question with great precision, by describing the *abstract state* of the whole BigFile, and how this state can change in response to API function calls, or spontaneously (modeling asynchronous, distributed or non-deterministic execution).
 
 The design of this abstract specification (e.g. how and where pending messages are stored) are *not* to be understood to in any way prescribe a concrete implementation or software architecture. The goals here are formal precision and clarity, but not implementability, so this can lead to different ways of phrasing.
 
 ### Notation
 
-We specify the behavior of the Internet Computer using ad-hoc pseudocode.
+We specify the behavior of the BigFile using ad-hoc pseudocode.
 
 The manipulated values are primitive values (numbers, text, binary blobs), aggregate values (lists, unordered lists a.k.a. bags, partial maps, records with fixed fields, named constructors) and functions.
 
@@ -2645,9 +2645,9 @@ For example, the condition `S.messages = Older_messages · M · Younger_messages
 
 ### Abstract state
 
-In this specification, we describe the Internet Computer as a state machine. In particular, there is a single piece of data that describes the complete state of the BIG, called `S`.
+In this specification, we describe the BigFile as a state machine. In particular, there is a single piece of data that describes the complete state of the BIG, called `S`.
 
-Of course, this is a huge simplification: The real Internet Computer is distributed and has a multi-component architecture, and the state is spread over many different components, some physically separated. But this simplification allows us to have a concise description of the behavior, and to easily make global decisions (such as, "is there any pending message"), without having to specify the bookkeeping that allows such global decisions.
+Of course, this is a huge simplification: The real BigFile is distributed and has a multi-component architecture, and the state is spread over many different components, some physically separated. But this simplification allows us to have a concise description of the behavior, and to easily make global decisions (such as, "is there any pending message"), without having to specify the bookkeeping that allows such global decisions.
 
 #### Identifiers
 
@@ -2806,7 +2806,7 @@ The concrete mapping of this abstract `CanisterModule` to actual WebAssembly con
 
 #### Call contexts
 
-The Internet Computer provides certain messaging guarantees: If a user or a canister calls another canister, it will eventually get a single response (a reply or a rejection), even if some canister code along the way fails.
+The BigFile provides certain messaging guarantees: If a user or a canister calls another canister, it will eventually get a single response (a reply or a rejection), even if some canister code along the way fails.
 
 To ensure that only one response is generated, and also to detect when no response can be generated any more, the BIG maintains a *call context*. The `needs_to_respond` field is set to `false` once the call has received a response. Further attempts to respond will now fail.
 
@@ -5694,7 +5694,7 @@ and where `lookup_in_tree` is a function that returns `Found v` for a value `v`,
 
 ### Abstract Canisters to System API {#concrete-canisters}
 
-In Section [Abstract canisters](#abstract-canisters) we introduced an abstraction over the interface to a canister, to avoid cluttering the abstract specification of the Internet Computer from WebAssembly details. In this section, we will fill the gap and explain how the abstract canister interface maps to the [concrete System API](#system-api) and the WebAssembly concepts as defined in the [WebAssembly specification](https://webassembly.github.io/spec/core/index.html).
+In Section [Abstract canisters](#abstract-canisters) we introduced an abstraction over the interface to a canister, to avoid cluttering the abstract specification of the BigFile from WebAssembly details. In this section, we will fill the gap and explain how the abstract canister interface maps to the [concrete System API](#system-api) and the WebAssembly concepts as defined in the [WebAssembly specification](https://webassembly.github.io/spec/core/index.html).
 
 #### The concrete `WasmState`
 

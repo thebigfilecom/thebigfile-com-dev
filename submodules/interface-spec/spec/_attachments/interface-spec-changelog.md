@@ -158,7 +158,7 @@
 
 ### 0.15.2 (2021-02-09) {#0_15_2}
 
-* The document is renamed to “Internet Computer Interface Spec”
+* The document is renamed to “BigFile Interface Spec”
 
 
 ### 0.15.0 (2020-12-17) {#0_15_0}

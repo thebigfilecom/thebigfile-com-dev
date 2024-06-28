@@ -24,7 +24,7 @@ $ npm ci
 $ dfx deploy --no-wallet
 ```
 
-At this point, the replica (for all practical matters, a local version of the Internet Computer) is running and three canisters have been deployed:
+At this point, the replica (for all practical matters, a local version of the BigFile) is running and three canisters have been deployed:
 
 - `internet_identity`: The development version of Internet Identity (downloaded from the [latest release](https://github.com/dfinity/internet-identity/releases/latest), see [`dfx.json`](./dfx.json)).
 - `webapp`: A tiny webapp that calls out to the `internet_identity` canister for authentication, and that then calls the `whoami` canister (see below) to show that the identity is valid. You'll find the source of the webapp in [`index.html`](./webapp/index.html) and [`index.ts`](./webapp/index.ts).
@@ -143,4 +143,4 @@ Run `npm run test` to run browser tests against the `internet_identity` canister
 
 ## More Information
 
-For more information, check the [`dfx.json`](./dfx.json) file, the [Genesis talk on Internet Identity](https://youtu.be/oxEr8UzGeBo) and the [Internet Computer documentation](https://internetcomputer.org/).
+For more information, check the [`dfx.json`](./dfx.json) file, the [Genesis talk on Internet Identity](https://youtu.be/oxEr8UzGeBo) and the [BigFile documentation](https://internetcomputer.org/).

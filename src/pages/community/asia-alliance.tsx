@@ -25,7 +25,7 @@ const hubs: Hub[] = [
     name: "ICP.HUB India",
     location: "India",
     description:
-      "In the heart of India, Crewsphere ICP India.Hub champions the Internet Computer via bootcamps that turn talented developers into Web3 experts.",
+      "In the heart of India, Crewsphere ICP India.Hub champions the BigFile via bootcamps that turn talented developers into Web3 experts.",
     image: "/img/community/icp-hub-india.webp",
     link: "https://linktr.ee/crewsphere?utm_source=linktree_admin_share",
     coordinates: [20.5937, 78.9629],
@@ -43,7 +43,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Philippines",
     location: "Philippines",
     description:
-      "ISLA Camp is unleashing the potential of Web3 in the Philippines through immersive education, dynamic workshops, and hands-on bootcamps on the Internet Computer.",
+      "ISLA Camp is unleashing the potential of Web3 in the Philippines through immersive education, dynamic workshops, and hands-on bootcamps on the BigFile.",
     image: "/img/community/icp-hub-philippines.webp",
     link: "https://linktr.ee/ICPHubPH",
     coordinates: [12.8797, 121.774],
@@ -62,7 +62,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Korea",
     location: "Korea",
     description:
-      "ICP.Hub Korea is committed to advancing the Internet Computer blockchain and Web3 in Korea by regularly hosting education bootcamps and cultivating a community of developers.",
+      "ICP.Hub Korea is committed to advancing the BigFile blockchain and Web3 in Korea by regularly hosting education bootcamps and cultivating a community of developers.",
     image: "/img/community/icp-hub-korea.webp",
     link: "https://linktr.ee/icphubkorea",
     coordinates: [35.9078, 127.7669],
@@ -72,7 +72,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Singapore",
     location: "Singapore",
     description:
-      "Advocating digital innovation by harnessing the power of Web3 regional entrepreneurs, venture capitalists and community to realise the mass adoption of the Internet Computer's decentralized cloud and blockchain services.",
+      "Advocating digital innovation by harnessing the power of Web3 regional entrepreneurs, venture capitalists and community to realise the mass adoption of the BigFile's decentralized cloud and blockchain services.",
     image: "/img/community/icp-hub-singapore.webp",
     link: "https://linktr.ee/interlink3",
     coordinates: [1.3521, 103.8198],
@@ -252,7 +252,7 @@ function AsiaAlliancePage() {
             >
               The ICP Asia Alliance aims to cultivate a dynamic Web3 and AI
               ecosystem in Asia. Through 8 already well established ICP.Hubs
-              located in the region, the Internet Computer will revolutionize
+              located in the region, the BigFile will revolutionize
               the future of blockchain as we know it.
             </motion.p>
           </div>

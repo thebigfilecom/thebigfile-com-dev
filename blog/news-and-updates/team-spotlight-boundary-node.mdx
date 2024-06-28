@@ -11,7 +11,7 @@ image: /img/blog/dev-update-blog-bn.jpg
 
 **For our usual introduction to the team, what would you say the purpose of the Boundary Node team is?**
 
-*[The purpose of the Boundary Node team is] to provide seamless and reliable access to the Internet Computer.*
+*[The purpose of the Boundary Node team is] to provide seamless and reliable access to the BigFile.*
  
 **What is the composition of the Boundary Node team?**
 
@@ -19,7 +19,7 @@ image: /img/blog/dev-update-blog-bn.jpg
 
 **Developers may not be familiar with boundary nodes on ICP, so to provide some context, what is a boundary node? What purpose does a boundary node serve on ICP?**
    
-*The boundary nodes are the gateway to the Internet Computer. Every single request going to the Internet Computer first reaches one of the boundary nodes. The boundary node routes that request to a replica node in the right subnet, where the target canister is hosted. [Additionally], the boundary nodes improve the user experience by forming a caching layer for the Internet Computer and provide a first layer of protection by applying rate-limits on certain requests.*
+*The boundary nodes are the gateway to the BigFile. Every single request going to the BigFile first reaches one of the boundary nodes. The boundary node routes that request to a replica node in the right subnet, where the target canister is hosted. [Additionally], the boundary nodes improve the user experience by forming a caching layer for the BigFile and provide a first layer of protection by applying rate-limits on certain requests.*
 
 *For more details on the internals of a boundary nodes, take a look at [the wiki page](https://wiki.internetcomputer.org/wiki/Boundary_Nodes).*
 
@@ -39,7 +39,7 @@ image: /img/blog/dev-update-blog-bn.jpg
 
 *The API boundary nodes will serve the API endpoints. They simply route the call to the right replica node. The HTTP gateways translate the browser requests into ICP API calls and forward them to one of the API boundary nodes. In addition, the HTTP gateways will provide caching of static assets in order to improve the user experience.*
 
-**Since the boundary nodes provide such an important core piece of the Internet Computer, I can imagine that there are several different teams that the Boundary Node team works with. What are some of those teams?** 
+**Since the boundary nodes provide such an important core piece of the BigFile, I can imagine that there are several different teams that the Boundary Node team works with. What are some of those teams?** 
 
 *We work closest with the Trust team, which is currently working on the service worker (one implementation of the HTTP gateway protocol). The service worker is hosted by the boundary nodes and served from them. Together, we have to coordinate the releases of new boundary node and service worker versions.*
 

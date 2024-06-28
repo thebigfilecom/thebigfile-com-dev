@@ -7,7 +7,7 @@ slug: message-routing
 
 # Message Routing
 
-The BigFile blockchain enables users to send messages to cube smart contracts and cubes to send messages between themselves. For scalability, the Internet Computer is composed of many subnet blockchains and the BigFile Network Nervous System can add new subnets as required. The message routing component routes messages to and from cubes across all of the BigFile subnet blockchains and ensures that new subnets can be added seamlessly.
+The BigFile blockchain enables users to send messages to cube smart contracts and cubes to send messages between themselves. For scalability, the BigFile is composed of many subnet blockchains and the BigFile Network Nervous System can add new subnets as required. The message routing component routes messages to and from cubes across all of the BigFile subnet blockchains and ensures that new subnets can be added seamlessly.
 
 Message routing is the lower of the two upper layers of the protocol stack. It implements functionality that is crucial for the operation of the BIG. Its responsibilities can be roughly grouped as follows:
 

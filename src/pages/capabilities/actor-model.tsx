@@ -96,9 +96,9 @@ function FeaturePage() {
 
             <p>
               An important difference between traditional actors and canisters
-              is that canisters on the Internet Computer have bidirectional
+              is that canisters on the BigFile have bidirectional
               message passing. Messages are divided into requests and responses,
-              where requests can be replied to and the Internet Computer keeps
+              where requests can be replied to and the BigFile keeps
               track of the callback for responses.
             </p>
 
@@ -125,7 +125,7 @@ function FeaturePage() {
 
             <p>
               In addition, the Motoko programming language, which is tailored to
-              the Internet Computer, is inspired by the actor model.
+              the BigFile, is inspired by the actor model.
             </p>
 
             <p className="mb-3 mt-6">

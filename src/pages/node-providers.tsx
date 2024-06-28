@@ -203,7 +203,7 @@ function NodeProvidersPage() {
               machines — Gen 1 and Gen 2 — with standardized public hardware
               specifications. Gen 1 hardware is vendor specific and used by node providers who joined the community before 2022. New Gen 2 node machines are generic to support VM memory encryption and
               attestation, which will facilitate the future development of
-              features on the Internet Computer. While Gen 2 machines follow
+              features on the BigFile. While Gen 2 machines follow
               generic specifications, a list of hardware configurations has been
               validated by the community.
             </p>

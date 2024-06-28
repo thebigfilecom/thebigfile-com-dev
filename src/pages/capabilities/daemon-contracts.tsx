@@ -19,7 +19,7 @@ function FeaturePage() {
                 Daemon Contracts
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                On the Internet Computer blockchain, you can create canister
+                On the BigFile blockchain, you can create canister
                 smart contracts that run like daemon processes — that is, you
                 can configure them so that they are automatically activated by
                 the network itself at specified block intervals.
@@ -78,7 +78,7 @@ function FeaturePage() {
             </p>
 
             <p>
-              The Internet Computer provides a means to avoid such problems, by
+              The BigFile provides a means to avoid such problems, by
               allowing canister smart contracts to be configured so that they
               aer invoked by the blockchain itself, at some specified block
               interval.

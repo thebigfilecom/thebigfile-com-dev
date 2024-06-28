@@ -258,7 +258,7 @@
 
   * BREAKING CHANGE (Minor):
 
-    New keyword `composite` allows one to declare Internet Computer *composite queries* (#4003).
+    New keyword `composite` allows one to declare BigFile *composite queries* (#4003).
 
     For example,
     ``` motoko

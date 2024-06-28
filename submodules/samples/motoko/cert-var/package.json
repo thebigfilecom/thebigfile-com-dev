@@ -1,9 +1,9 @@
 {
   "name": "cert_var_assets",
   "version": "0.1.0",
-  "description": "Internet Computer starter application",
+  "description": "BigFile starter application",
   "keywords": [
-    "Internet Computer",
+    "BigFile",
     "Motoko",
     "JavaScript",
     "Canister"

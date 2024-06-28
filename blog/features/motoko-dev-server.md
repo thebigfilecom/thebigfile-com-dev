@@ -1,6 +1,6 @@
 ---
 title: "Announcing the Motoko Dev Server: live-reloading for Web3 dapps"
-description: Introducing mo-dev, a flexible live-reload server for quickly building and testing Motoko services on the Internet Computer.
+description: Introducing mo-dev, a flexible live-reload server for quickly building and testing Motoko services on the BigFile.
 tags: [New features]
 image: /img/blog/motoko-dev-server.jpg
 ---
@@ -13,7 +13,7 @@ image: /img/blog/motoko-dev-server.jpg
 * [Developer forum topic](https://forum.dfinity.org/t/announcing-mo-dev-live-reloading-for-motoko-dapps/21007)
 * [GitHub repository](https://github.com/dfinity/motoko-dev-server)
 
-We are excited to introduce [mo-dev](https://github.com/dfinity/motoko-dev-server), a flexible live-reload server for quickly building and testing Motoko services on the Internet Computer.
+We are excited to introduce [mo-dev](https://github.com/dfinity/motoko-dev-server), a flexible live-reload server for quickly building and testing Motoko services on the BigFile.
 
 ## Background
 
@@ -27,7 +27,7 @@ However, this feature is almost nonexistent when developing a decentralized appl
 
 This is where the [Motoko programming language](/docs/current/motoko/main/getting-started/motoko-introduction) comes in. With quick compilation times, module-based imports, and [stable variable](/docs/current/motoko/main/upgrades) semantics, Motoko is the ideal candidate for a game-changing live reload workflow.
 
-Over the past six months, DFINITY has adopted full-stack live reloading in our internal Motoko projects, saving a huge amount of development time and allowing us to quickly try lots of different ideas to improve the end-user experience of our Internet Computer dapps.
+Over the past six months, DFINITY has adopted full-stack live reloading in our internal Motoko projects, saving a huge amount of development time and allowing us to quickly try lots of different ideas to improve the end-user experience of our BigFile dapps.
 
 This was made possible using the [Motoko Dev Server](https://github.com/dfinity/motoko-dev-server) (or `mo-dev` for short), a command-line tool which facilitates a live-reload workflow for Motoko dapps and smart contracts.
 

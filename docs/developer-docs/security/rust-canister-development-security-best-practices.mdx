@@ -38,14 +38,14 @@ In the following list, we first provide recommendations for centralized dapp con
     - Require approval by several individuals or parties to perform any canister controller operations.
     - Also require approval by several individuals or parties for any security sensitive changes at the application level that are restricted to privileged principals, such as admin operations including  e.g. permissions management, minting new tokens, removing NFTs for digital rights violations, etc.
     - A helpful tool to achieve either of the above two points is the [threshold canister](https://github.com/dfinity/threshold). Individuals should manage their key material using hardware security modules, such as e.g. [YubyHSM](https://www.yubico.com/ch/store/yubihsm-2-series/) and physically protect these e.g. using safes at different geographical locations. Some of HSMs support threshold signature schemes, which can help to further secure the setup. To increase transparency about the changes made to a dapp, consider using a tool like [LaunchTrail](https://github.com/spinner-cash/launchtrail).
-3. **Full decentralization using a DAO**: The dapp is controlled by a decentralized governance system such as the Internet Computer's [Service Nervous System (SNS)](/docs/current/developer-docs/daos/sns), so that any security sensitive changes to the canisters are only executed if the SNS community approves them collectively through a proposal voting mechanism. If an SNS is used:
+3. **Full decentralization using a DAO**: The dapp is controlled by a decentralized governance system such as the BigFile's [Service Nervous System (SNS)](/docs/current/developer-docs/daos/sns), so that any security sensitive changes to the canisters are only executed if the SNS community approves them collectively through a proposal voting mechanism. If an SNS is used:
    - Make sure voting power is distributed over many, independent entities such that there is not one single or a few entities that can decide by themselves how the DAO evolves, see [here](/docs/current/developer-docs/daos/sns/tokenomics/tokenomics-intro#voting-power-and-decentralization).
    - Ensure all components of the dapp are under SNS control, including the canisters serving the web frontends, see [SNS asset canisters](/docs/current/developer-docs/daos/sns/managing/sns-asset-canister).
    - Consider the [SNS preparation checklist](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist). Important points from a security perspective are e.g. [tokenomics](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#11-tokenomics-specification), [disclosing dependencies to off-chain components](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#13-disclosure-of-dependencies) and [performing security reviews](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#21-security-review).
    - Rather than [self-deploying the SNS code](/docs/current/developer-docs/daos/sns/introduction/dao-alternatives#self-deploy-the-sns-code) or [building your own DAO](/docs/current/developer-docs/daos/sns/introduction/dao-alternatives#build-your-own-dao--use-other-dao-frameworks), consider using the official SNS on the SNS subnet, as this guarantees that the SNS is running an NNS-blessed version and maintained as part of BIG.
    - See also [Verification and trust in a (launched) SNS](https://wiki.internetcomputer.org/wiki/Verification_and_trust_in_a_(launched)_SNS) and [SNS decentralization swap trust](https://wiki.internetcomputer.org/wiki/SNS_decentralization_swap_trust).
 
-An alternative to DAO control (3. above) would be to create an immutable canister smart contract by removing the canister controller completely. However, note that this implies that the canister cannot be upgraded, which may have severe implications in case e.g. a bug were found. The option to use a decentralized governance system and thus being able to upgrade smart contracts is a big advantage of the Internet Computer ecosystem compared to other blockchains.
+An alternative to DAO control (3. above) would be to create an immutable canister smart contract by removing the canister controller completely. However, note that this implies that the canister cannot be upgraded, which may have severe implications in case e.g. a bug were found. The option to use a decentralized governance system and thus being able to upgrade smart contracts is a big advantage of the BigFile ecosystem compared to other blockchains.
 
 :::info
 Note that, contrary to some other blockchains, also immutable smart contracts need cycles to run, and they can receive cycles.
@@ -177,7 +177,7 @@ Canister memory is not persisted across upgrades. If data needs to be kept acros
 
 - [Test the upgrade hooks](https://mmapped.blog/posts/01-effective-rust-canisters.html#test-upgrades) (from [effective Rust canisters](https://mmapped.blog/posts/01-effective-rust-canisters.html)).
 
-- See also the section on upgrades in [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister) (though focused on Motoko).
+- See also the section on upgrades in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister) (though focused on Motoko).
 
 - Write tests for stable memory to avoid bugs.
 
@@ -189,7 +189,7 @@ Canister memory is not persisted across upgrades. If data needs to be kept acros
 
   - [https://github.com/seniorjoinu/ic-stable-memory](https://github.com/seniorjoinu/ic-stable-memory)
 
-- See [current limitations of the Internet Computer](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), sections "Long running upgrades" and "\[de\]serialiser requiring additional wasm memory".
+- See [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), sections "Long running upgrades" and "\[de\]serialiser requiring additional wasm memory".
 
 - For example, [Internet Identity](https://github.com/thebigfilecom/big-wallet) uses stable memory directly to store user data.
 
@@ -221,7 +221,7 @@ A canister could be rendered unusable so it could never be upgraded again e.g. d
 
 - It may be useful to have a disaster recovery strategy that makes it possible to reinstall the canister.
 
-- See the "Backup and recovery" section in [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister)
+- See the "Backup and recovery" section in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister)
 
 ## Inter-canister calls and rollbacks
 
@@ -267,7 +267,7 @@ For example, if a trap in the second message (blue box) of the above example occ
 
 - **Property 6**: inter-canister calls are not guaranteed to make it to the destination canister, and if a call does reach the destination canister, the destination canister can trap or return a reject response while processing the call.
 
-Every inter-canister call is guaranteed to receive a response, either from the canister, or synthetically produced by the protocol. However, the response does not have to be successful, but can also be a reject response. The reject may come from the called canister, but it may also be generated by the Internet Computer. Such protocol-generated rejects can occur at any time before the call reaches the callee-canister, as well as once the call does reach the callee-canister if the callee-canister traps while processing the call. If the call reaches the callee-canister, the callee-canister can produce a reply or reject response and the protocol guarantees that the callee-canister's generated reply or reject response gets back to the caller-canister. Thus, it's important that the calling canister handles reject responses as well. A reject response means that the message hasn't been successfully processed by the receiver but doesn't guarantee that the receivers state wasn't changed.
+Every inter-canister call is guaranteed to receive a response, either from the canister, or synthetically produced by the protocol. However, the response does not have to be successful, but can also be a reject response. The reject may come from the called canister, but it may also be generated by the BigFile. Such protocol-generated rejects can occur at any time before the call reaches the callee-canister, as well as once the call does reach the callee-canister if the callee-canister traps while processing the call. If the call reaches the callee-canister, the callee-canister can produce a reply or reject response and the protocol guarantees that the callee-canister's generated reply or reject response gets back to the caller-canister. Thus, it's important that the calling canister handles reject responses as well. A reject response means that the message hasn't been successfully processed by the receiver but doesn't guarantee that the receivers state wasn't changed.
 
 For more details, refer to the Interface Specification [section on ordering guarantees](/references/ic-interface-spec.md#ordering_guarantees) and the section on [abstract behavior](/references/ic-interface-spec.md#abstract-behavior) which defines message execution in more detail.
 
@@ -390,7 +390,7 @@ GoldDAO's GLDT-swap has an implementation of journaling. In their case the journ
 
 #### Security concern
 
-As described in the [message execution basics](#message-execution-basics) above, messages (but not entire calls) are processed atomically. In particular, as described in Property 4 above, messages from interleaving calls do not have a reliable execution ordering. Thus, the state of the canister (and other canisters) may change between the time an inter-canister call is started and the time when it returns, which may lead to issues if not handled correctly. These issues are generally called 'Reentrancy bugs' (see e.g. the [Ethereum best practices on reentrancy](https://consensys.github.io/smart-contract-best-practices/attacks/reentrancy/)). Note however that the messaging guarantees (and thus the bugs) on the Internet Computer are different from Ethereum.
+As described in the [message execution basics](#message-execution-basics) above, messages (but not entire calls) are processed atomically. In particular, as described in Property 4 above, messages from interleaving calls do not have a reliable execution ordering. Thus, the state of the canister (and other canisters) may change between the time an inter-canister call is started and the time when it returns, which may lead to issues if not handled correctly. These issues are generally called 'Reentrancy bugs' (see e.g. the [Ethereum best practices on reentrancy](https://consensys.github.io/smart-contract-best-practices/attacks/reentrancy/)). Note however that the messaging guarantees (and thus the bugs) on the BigFile are different from Ethereum.
 
 Here are two concrete and somewhat similar types of bugs to illustrate potential reentrancy security issues:
 
@@ -402,7 +402,7 @@ Here are two concrete and somewhat similar types of bugs to illustrate potential
 
 It is highly recommended to carefully review any canister code that makes async inter-canister calls (`await`). If two messages access (read or write) the same state, review if there is a possible scheduling of these messages that leads to illegal transactions or inconsistent state.
 
-See also: "Inter-canister calls" section in [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
+See also: "Inter-canister calls" section in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
 
 To address issues around message ordering that can lead to bugs, one usually employs locking mechanisms to ensure that e.g. a caller (or anyone) can only execute an entire call (which involves several messages) once at a time. A simple example is also given in the [community conversation](https://www.youtube.com/watch?v=PneRzDmf_Xw&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng&index=2&t=4s) mentioned above.
 
@@ -525,9 +525,9 @@ When making inter-canister calls, always handle the error cases (rejects) correc
 
 - Sanitize data returned from inter-canister calls.
 
-- See "Talking to malicious canisters" section in [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
+- See "Talking to malicious canisters" section in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
 
-- See [current limitations of the Internet Computer](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Calling potentially malicious or buggy canisters can prevent canisters from upgrading".
+- See [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Calling potentially malicious or buggy canisters can prevent canisters from upgrading".
 
 
 ### Make sure there are no loops in call graphs
@@ -540,7 +540,7 @@ Loops in the call graph (e.g. canister A calling B, B calling C, C calling A) ma
 
 - Avoid such loops!
 
-- For more information, see [current limitations of the Internet Computer](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Loops in call graphs".
+- For more information, see [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Loops in call graphs".
 
 ## Canister upgrades
 
@@ -558,9 +558,9 @@ If a canister traps or panics in `pre_upgrade`, this can lead to permanently blo
 
 - [Test the upgrade hooks](https://mmapped.blog/posts/01-effective-rust-canisters.html#test-upgrades) (from [effective Rust canisters](https://mmapped.blog/posts/01-effective-rust-canisters.html)).
 
-- See also the section on upgrades in [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister) (though focused on Motoko).
+- See also the section on upgrades in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister) (though focused on Motoko).
 
-- See [current limitations of the Internet Computer](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Bugs in `pre_upgrade` hooks".
+- See [current limitations of the BigFile](https://wiki.internetcomputer.org/wiki/Current_limitations_of_the_Internet_Computer), section "Bugs in `pre_upgrade` hooks".
 
 ### Reinstantiate timers during upgrades
 
@@ -791,7 +791,7 @@ The time read from the System API is monotonic, but not strictly monotonic. Thus
 
 #### Recommendation
 
-See the "Time is not strictly monotonic" section in [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
+See the "Time is not strictly monotonic" section in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
 
 ### Protect against draining the cycles balance
 
@@ -801,7 +801,7 @@ Canisters pay for their cycles which makes them inherently vulnerable to attacks
 
 #### Recommendation
 
-* Consider monitoring, early authentication, rate limiting on canister level to mitigate this. Also, be aware that an attacker will aim for the call consuming most cycles. See the "Cycle balance drain attacks section" in [how to audit an Internet Computer canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
+* Consider monitoring, early authentication, rate limiting on canister level to mitigate this. Also, be aware that an attacker will aim for the call consuming most cycles. See the "Cycle balance drain attacks section" in [how to audit an BigFile canister](https://www.joachim-breitner.de/blog/788-How_to_audit_an_Internet_Computer_canister).
 
 * For query calls that cause significant computation and don't modify the state, it is advisable to not execute the expensive computation if the method is called as update. However, keep in mind that query calls [don't provide authenticity guarantees](general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), so this is a trade-off. Unfortunately, the execution mode of the query (whether it was called as query or update) is currently not directly exposed to the user code. However, one can e.g. call  `ic0.data_certificate_present()` which returns `1` when called as query, and `0` for update methods. See the Interface Specification [section on certified data](/references/ic-interface-spec.md#system-api-certified-data).
 
@@ -831,9 +831,9 @@ Publicly revealing the canister's cycles balance allows an attacker to measure t
 
 Your canisters should not publicly expose their cycles balance (available through the system API), i.e., they should only expose their cycles balance to their controllers or other trusted principals.
 
-## Nonspecific to the Internet Computer
+## Nonspecific to the BigFile
 
-The best practices in this section are very general and not specific to the Internet Computer. This list is by no means complete and only lists a few very specific concerns that have led to issues in the past.
+The best practices in this section are very general and not specific to the BigFile. This list is by no means complete and only lists a few very specific concerns that have led to issues in the past.
 
 ### Rust: Avoid floating point arithmetic for financial information
 

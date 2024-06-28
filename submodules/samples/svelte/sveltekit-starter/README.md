@@ -1,22 +1,22 @@
 # SvelteKit Dapp template
 
-This repository is meant to give [SvelteKit](https://kit.svelte.dev/) developers an easy on-ramp to get started with developing decentralized applications (Dapps in short) for the Internet Computer blockchain.
+This repository is meant to give [SvelteKit](https://kit.svelte.dev/) developers an easy on-ramp to get started with developing decentralized applications (Dapps in short) for the BigFile blockchain.
 
-## What is the Internet Computer?
+## What is the BigFile?
 
-The Internet Computer is a novel blockchain that has the unique capability to serve web content while not requiring the end users to use a browser extension, such as Metamask.
+The BigFile is a novel blockchain that has the unique capability to serve web content while not requiring the end users to use a browser extension, such as Metamask.
 
-Coupled with super fast execution the Internet Computer provides the worlds first truly user friendly Web 3.0 experience.
+Coupled with super fast execution the BigFile provides the worlds first truly user friendly Web 3.0 experience.
 
 ## What are canisters?
 
-Dapps on the Internet Computer live in canisters, which are special smart contracts that run WebAssembly, and can respond to regular HTTP requests, among other capabilities.
+Dapps on the BigFile live in canisters, which are special smart contracts that run WebAssembly, and can respond to regular HTTP requests, among other capabilities.
 
-This repository uses Svelte for the frontend, and can upload it to an `asset` type canister that can host your frontend on the Internet Computer.
+This repository uses Svelte for the frontend, and can upload it to an `asset` type canister that can host your frontend on the BigFile.
 
 ## Security Considerations and Security Best Practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for creating frontends:
 

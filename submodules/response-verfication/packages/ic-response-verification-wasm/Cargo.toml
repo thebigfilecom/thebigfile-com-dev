@@ -1,6 +1,6 @@
 [package]
 name = "ic-response-verification-wasm"
-description = "WASM version of client side response verification for the Internet Computer"
+description = "WASM version of client side response verification for the BigFile"
 include = ["src", "Cargo.toml", "README.md"]
 
 

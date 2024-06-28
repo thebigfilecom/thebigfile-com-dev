@@ -1,6 +1,6 @@
 ---
 title: Async-friendly performance counter
-description: Introducing a new performance counter on the Internet Computer to easily optimize async canister code.
+description: Introducing a new performance counter on the BigFile to easily optimize async cube code.
 tags: [Technology]
 author: Andriy Berestovskyy
 image: /img/blog/async-performance-counter.webp
@@ -10,23 +10,22 @@ image: /img/blog/async-performance-counter.webp
 
 ![Async-friendly performance counter](/img/blog/async-performance-counter.webp)
 
-*This article was originally published on the DFINITY Medium blog [here](https://medium.com/dfinity/async-friendly-performance-counter-dcf928226c2b) by Andriy Berestovskyy.*
 
 ## Background
 
-The Internet Computer can host a full dapp — frontend, backend and data. Users can deploy their dapp as a canister (smart contract) on the Internet Computer. Each canister can store up to 400 GB of data and execute up to 20 Billion WebAssembly instructions per transaction.
+The BigFile can host a full dapp — frontend, backend and data. Users can deploy their dapp as a cube (smart contract) on the BigFile. Each cube can store up to 400 GB of data and execute up to 20 Billion WebAssembly instructions per transaction.
 
-Unlike other blockchains, the Internet Computer offers developers [enormous amounts of resources](/docs/current/developer-docs/production/resource-limits). This poses a real challenge for canister developers: writing efficient canister code. The more efficient a canister is, the less cycles it pays.
+Unlike other blockchains, the BigFile offers developers [enormous amounts of resources](/docs/current/developer-docs/production/resource-limits). This poses a real challenge for canister developers: writing efficient canister code. The more efficient a canister is, the less cycles it pays.
 
 Performance counter is the way for a canister (smart contract) to track the amount of work done. This information could be used as the main metric to optimize the code.
 
-The Internet Computer provides this System API call:
+The BigFile provides this System API call:
 
 ```
 ic0.performance_counter : (counter_type : i32) -> i64
 ```
 
-The type argument specifies which performance counter to return. For a long time only `type 0` counter was supported on the Internet Computer — the number of WebAssembly instructions the canister has executed since the beginning of the current message execution.
+The type argument specifies which performance counter to return. For a long time only `type 0` counter was supported on the BigFile — the number of WebAssembly instructions the canister has executed since the beginning of the current message execution.
 
 This `type 0` counter works well, and many developers use it daily. But the counter is valid only for the current message, and it resets after each await point.
 
@@ -66,7 +65,7 @@ From the developer’s point of view, it’s just one function. From the user’
 
 3. At the end, yet another reply triggers the final part, which replies to the original call with two performance counters.
 
-There is a call context to track the original call. The Internet Computer creates it for each call and keeps it around until the call is either replied or rejected.
+There is a call context to track the original call. The BigFile creates it for each call and keeps it around until the call is either replied or rejected.
 
 The performance counter `type 0` just follows those three message executions. It starts from `0` and goes up to some value `i`. After the first await, it resets and goes up to `j`, and then up to `k`.
 
@@ -113,7 +112,7 @@ But in this case there is no need to instrument every single await point in the 
 
 ## Using performance counters
 
-To quickly run the performance counters example (assuming the Internet Computer SDK is [already installed](/docs/current/developer-docs/getting-started/install/)):
+To quickly run the performance counters example (assuming the BigFile SDK is [already installed](/docs/current/developer-docs/getting-started/install/)):
 
 ```
 $ git clone git@github.com:dfinity/examples.git

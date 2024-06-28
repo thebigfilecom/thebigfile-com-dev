@@ -1,6 +1,6 @@
 [package]
 name = "ic-http-certification"
-description = "Certification for HTTP responses for the Internet Computer"
+description = "Certification for HTTP responses for the BigFile"
 readme = "README.md"
 documentation = "https://docs.rs/ic-http-certification"
 categories = ["api-bindings", "data-structures", "no-std"]

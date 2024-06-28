@@ -154,7 +154,7 @@ Quill can be reproducibly built or cross-compiled in a Docker container using [`
 
 ## Testnets
 
-If you have access to an Internet Computer testnet (for example, a version the
+If you have access to an BigFile testnet (for example, a version the
 replica binary and NNS running locally), you can target quill at this test
 network by setting the `IC_URL` environment variable to the full URL. In addition
 to that, it is required to use the `--insecure-local-dev-mode` flag. For

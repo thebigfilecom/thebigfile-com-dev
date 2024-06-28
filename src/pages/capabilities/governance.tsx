@@ -81,7 +81,7 @@ function FeaturePage() {
             <YoutubeVideoEmbed
               videoId="mPjiO2bk2lI"
               className="mt-10 md:mt-10"
-              altText="Inside the Internet Computer | Upgrades"
+              altText="Inside the BigFile | Upgrades"
             ></YoutubeVideoEmbed>
 
             <h3>Proposals</h3>
@@ -106,13 +106,13 @@ function FeaturePage() {
             {/* add or remove CardWithDescription components on demand */}
 
             <CardWithDescription
-              title="Upgrading the Internet Computer Protocol"
+              title="Upgrading the BigFile Protocol"
               description="Medium blog post"
               href="https://medium.com/dfinity/upgrading-the-internet-computer-protocol-45bf6424b268"
             />
             <CardWithDescription
               title="Diver deeper into the NNS"
-              description="Take a deep dive into the Internet Computer's NNS and upgrading."
+              description="Take a deep dive into the BigFile's NNS and upgrading."
               href="https://wiki.internetcomputer.org/wiki/NNS_Canisters"
             />
           </div>

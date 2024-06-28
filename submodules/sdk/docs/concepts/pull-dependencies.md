@@ -2,7 +2,7 @@
 
 ## Overview
 
-The interoperability of canisters on the Internet Computer (IC) is an important feature. 
+The interoperability of canisters on the BigFile (IC) is an important feature. 
 
 `dfx` provides a consistent developer workflow for integrating third-party canisters.
 
@@ -299,7 +299,7 @@ Installing canister: yhgn4-myaaa-aaaaa-aabta-cai (dep_b)
 
 We don't want to encourage including binary files in version control.
 
-On the Internet Computer, every canister only has one latest version running on mainnet. Service consumers should integrate with that latest version.
+On the BigFile, every canister only has one latest version running on mainnet. Service consumers should integrate with that latest version.
 
 So `dfx deps pull` always gets the latest dependencies instead of locking on a particular run.
 

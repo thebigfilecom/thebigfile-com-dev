@@ -41,7 +41,7 @@ const TrueScaling = () => {
       <motion.div variants={transitions.item} className={styles.content}>
         <h3 className="tw-heading-5 md:tw-heading-3 m-0">True scaling</h3>
         <p className="tw-paragraph md:tw-lead m-0">
-          By adding new subnets regularly, the Internet Computer scales to an
+          By adding new subnets regularly, the BigFile scales to an
           unbounded number of dapps and allows storage of unlimited data.
         </p>
         <Link

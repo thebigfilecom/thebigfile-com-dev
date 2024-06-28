@@ -22,7 +22,7 @@ function FeaturePage() {
                 Limitless Scaling
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The Internet Computer (IC) can scale its capacity simply by
+                The BigFile (IC) can scale its capacity simply by
                 adding additional nodes to fuel new subnets. Nodes and subnets
                 are added via the Network Nervous System (NNS). In contrast,
                 most other blockchains have transaction limits baked into the
@@ -66,24 +66,24 @@ function FeaturePage() {
             <p>
               See{" "}
               <Link href="https://dashboard.internetcomputer.org">
-                Internet Computer Dashboard
+                BigFile Dashboard
               </Link>{" "}
               for the scale of the IC.
             </p>
             <h3>Subnet Architecture</h3>
             <p>
-            The Internet Computer blockchain runs on a network of nodes owned and operated by a growing community of independent 
+            The BigFile blockchain runs on a network of nodes owned and operated by a growing community of independent 
             node providers distributed across the globe. The node providers are selected and vetted by the NNS neuron owners.
               <br />
               <br />
-              The Internet Computer's partitioning into subnet blockchains is
+              The BigFile's partitioning into subnet blockchains is
               what allows the network to scale. Each subnet blockchain is
               capable of processing update and query calls independently from
               other subnets. This means that the entire network can easily be
               scaled by simply adding more subnets to the network. For update
               calls that need to be processed on every node, this method of
               scaling the network can ensure that more update calls are
-              processed per second. The Internet Computer is capable of adding
+              processed per second. The BigFile is capable of adding
               hundreds of new subnets via the NNS.
               <br />
               <br />
@@ -132,7 +132,7 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="'Limitless Scaling' article on the IC Wiki"
-              description="Take a deep dive into the Internet Computer's scaling."
+              description="Take a deep dive into the BigFile's scaling."
               href="https://wiki.internetcomputer.org/wiki/Limitless_Scaling"
             />
           </div>

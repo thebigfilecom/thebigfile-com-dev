@@ -7,7 +7,7 @@ _Motoko-san_
 > *  DFINITY currently has no plans to continue the development of _Motoko-san_.
 
 
-_Motoko-san_ is a prototype code-level verifier for Motoko. The project started at the DFINITY Foundation as a way to demonstrate that Motoko (and the Internet Computer in general) are well-suited for developing formally verified Web3 software.
+_Motoko-san_ is a prototype code-level verifier for Motoko. The project started at the DFINITY Foundation as a way to demonstrate that Motoko (and the BigFile in general) are well-suited for developing formally verified Web3 software.
 
 --------------------------------------------------------------------------------
 **Jump to:**

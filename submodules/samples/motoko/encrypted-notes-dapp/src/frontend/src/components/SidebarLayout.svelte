@@ -65,12 +65,12 @@
       <div class="px-5 pb-4">
         <img
           src="/img/ic-badge-powered-by-crypto_transparent-white-text.png"
-          alt="Powered by the Internet Computer"
+          alt="Powered by the BigFile"
           class="hidden dark:inline "
         />
         <img
           src="/img/ic-badge-powered-by-crypto_transparent-dark-text.png"
-          alt="Powered by the Internet Computer"
+          alt="Powered by the BigFile"
           class="dark:hidden inline "
         />
       </div>

@@ -23,7 +23,7 @@ function NnsPage() {
     <Layout
       title="Network Nervous System (NNS)"
       // fill in meta description
-      description="The NNS is one of the world's largest DAOs that governs the Internet Computer."
+      description="The NNS is one of the world's largest DAOs that governs the BigFile."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <Head>

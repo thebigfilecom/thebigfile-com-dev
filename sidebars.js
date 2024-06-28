@@ -1039,7 +1039,7 @@ const sidebars = {
             },
             {
               type: "category",
-              label: "Level 5: Internet Computer astronaut",
+              label: "Level 5: BigFile astronaut",
               link: {
                 type: "doc",
                 id: "tutorials/developer-journey/level-5/index",
@@ -1096,7 +1096,7 @@ const sidebars = {
       items: [
         {
           type: "category",
-          label: "Internet Computer specification",
+          label: "BigFile specification",
           items: [
             "references/http-gateway-protocol-spec",
             "references/ic-interface-spec",
@@ -1229,7 +1229,7 @@ const sidebars = {
         },
         {
           type: "link",
-          label: "3. Internet Computer programming concepts",
+          label: "3. BigFile programming concepts",
           href: "https://motoko-book.dev/internet-computer-programming-concepts.html",
         },
         {

@@ -146,7 +146,7 @@ Click the button **Run**, then click the button **Pause** when bored. Open **Det
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspect is particularly relevant for this app:
 * [Consider using stable memory, version it, test it](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#consider-using-stable-memory-version-it-test-it), since this example is about using stable memory. The best practice focuses on Rust, but are partly also applicable to Motoko. 

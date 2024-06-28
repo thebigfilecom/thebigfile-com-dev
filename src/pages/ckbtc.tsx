@@ -54,7 +54,7 @@ function CkbtcPage(): JSX.Element {
     <QueryClientProvider client={queryClient}>
       <Layout
         title="ckBTC is bitcoin on Web3"
-        description="ckBTC can be sent with 1-2 second finality and negligible fees — a multi-chain bitcoin twin, trustlessly created by chain-key cryptography and Internet Computer smart contracts that directly hold raw bitcoin."
+        description="ckBTC can be sent with 1-2 second finality and negligible fees — a multi-chain bitcoin twin, trustlessly created by chain-key cryptography and BigFile smart contracts that directly hold raw bitcoin."
         editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
       >
         <main className="overflow-hidden">
@@ -79,7 +79,7 @@ function CkbtcPage(): JSX.Element {
                   variants={transitions.item}
                 >
                   ckBTC — a multi-chain bitcoin twin, trustlessly created by
-                  chain-key cryptography and Internet Computer smart contracts
+                  chain-key cryptography and BigFile smart contracts
                   that directly hold raw bitcoin. Send and receive ckBTC with
                   1-2 second finality and negligible fees. Only possible because
                   ICP smart contracts can call into the Bitcoin network.
@@ -128,7 +128,7 @@ function CkbtcPage(): JSX.Element {
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
                 As part of a multi-chain, multi-wallet upgrade, ckBTC has been
                 integrated into the MyLugano crypto payment app developed by
-                NOKU. This is a major step towards the Internet Computer
+                NOKU. This is a major step towards the BigFile
                 infrastructure integrating with the city of Lugano to eventually
                 enable a plethora of municipal services using bitcoin.
               </p>
@@ -480,7 +480,7 @@ function CkbtcPage(): JSX.Element {
                     </Link>{" "}
                     — advanced threshold cryptography integrated with ICP. In
                     short, chain-key ECDSA is a set of cryptographic protocols
-                    that allow Internet Computer nodes to cooperatively create
+                    that allow BigFile nodes to cooperatively create
                     ECDSA signatures, which can be used to sign bitcoin
                     transactions, using a highly fault-tolerant, decentralized
                     network that is resilient to attacks by malicious nodes. The
@@ -553,7 +553,7 @@ function CkbtcPage(): JSX.Element {
 
                   <p className="tw-paragraph mb-3">
                     Several security assessments are taken on critical
-                    components of the Internet Computer such as ckBTC to ensure
+                    components of the BigFile such as ckBTC to ensure
                     robust security. These include{" "}
                     <Link href="https://medium.com/dfinity/eliminating-smart-contract-bugs-with-tla-e986aeb6da24/">
                       TLA+ models

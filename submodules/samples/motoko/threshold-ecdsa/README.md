@@ -68,7 +68,7 @@ To deploy this canister to the mainnet, one needs to do two things:
 
 #### Acquire cycles to deploy
 
-Deploying to the Internet Computer requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
+Deploying to the BigFile requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
 
 #### Update source code with the right key ID
 

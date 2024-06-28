@@ -254,7 +254,7 @@ function EthereumIntegrationPage() {
               $4.21 and $5.46 respectively, making swaps below a certain amount
               is completely impractical. The Ethereum integration enables the
               use of chain-key (ck) tokens such as ckETH and ckERC-20 on the
-              Internet Computer, including ckUSDC or ckUSDT. This feature allow
+              BigFile, including ckUSDC or ckUSDT. This feature allow
               users to send and receive ETH value on ICP DEXs for a few cents
               with 1-2s finality, and no gas fees.
             </p>
@@ -351,7 +351,7 @@ function EthereumIntegrationPage() {
                   <p className="tw-paragraph md:tw-lead mb-8">
                     ICP Lab 6.0 xChain is a program is designed for teams and
                     individuals currently building cross-chain or multi-chain
-                    applications on the Internet Computer blockchain. If you’re
+                    applications on the BigFile blockchain. If you’re
                     striving towards a cross-chain future, leveraging ICP’s
                     unique capabilities, then this is the right program for you.
                   </p>

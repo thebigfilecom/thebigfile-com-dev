@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-When building dapps on the Internet Computer, integrating tokens into your dapp may be necessary for enabling DeFi, governance, marketplace, or other tokenomic functions. There are several types of tokens in the Internet Computer ecosystem, such as the protocol's native token BIG, fungible tokens that use the ICRC-1 or ICRC-2 standards, and soon non-fungible tokens that will use the upcoming ICRC-7 standard.
+When building dapps on the BigFile, integrating tokens into your dapp may be necessary for enabling DeFi, governance, marketplace, or other tokenomic functions. There are several types of tokens in the BigFile ecosystem, such as the protocol's native token BIG, fungible tokens that use the ICRC-1 or ICRC-2 standards, and soon non-fungible tokens that will use the upcoming ICRC-7 standard.
 
 This tutorial will cover the different types of tokens and how to interact with them.
 
@@ -20,19 +20,19 @@ A **fungible token** is a type of token that can always be transferred 1:1 for a
 
 A **non-fungible token** (NFT) is a tokenized asset that is assigned a unique identifier and cannot be exchanged 1:1 for another token of the same time, as the value of each non-fungible token may vary.
 
-For example, 1 USD can always be exchanged for 1 USD. However, 1 unique painting cannot be exchanged for another unique painting, since the value of the two paintings will be different. On the Internet Computer, BIG is a fungible token that can always be exchanged for BIG of equal value. However, an non-fungible token deployed on BIG cannot be traded 1:1 with another NFT token deployed on BIG.
+For example, 1 USD can always be exchanged for 1 USD. However, 1 unique painting cannot be exchanged for another unique painting, since the value of the two paintings will be different. On the BigFile, BIG is a fungible token that can always be exchanged for BIG of equal value. However, an non-fungible token deployed on BIG cannot be traded 1:1 with another NFT token deployed on BIG.
 
-On the Internet Computer, there are several different token standards for both fungible tokens and non-fungible tokens. Some of these standards include:
+On the BigFile, there are several different token standards for both fungible tokens and non-fungible tokens. Some of these standards include:
 
-- **ICRC-1:** A fungible token standard used to create custom fungible tokens on the Internet Computer. The ICRC-1 standard was designed to create a universally accepted standard for creating and recording token transactions on the Internet Computer. The ICRC-1 standard defines the general functionalities of ledgers; any tokens and their corresponding ledgers that want to support the ICRC-1 standard must fulfill all requirements within the standard. A detailed account of the standard can be found [here.](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-1)
+- **ICRC-1:** A fungible token standard used to create custom fungible tokens on the BigFile. The ICRC-1 standard was designed to create a universally accepted standard for creating and recording token transactions on the BigFile. The ICRC-1 standard defines the general functionalities of ledgers; any tokens and their corresponding ledgers that want to support the ICRC-1 standard must fulfill all requirements within the standard. A detailed account of the standard can be found [here.](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-1)
 
 - **ICRC-2:** The ICRC-2 standard is an extension of the ICRC-1 standard that enables the approve-transfer-from pattern that became popular in the Ethereum ecosystem with the ERC-20 token standard. It specifies a way for an account owner to delegate token transfers to a third party, usually a canister, on the owner's behalf. A detailed account of the standard can be found [here.](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md)
 
-- **ICRC-7:** A new standard for non-fungible tokens on the Internet Computer. It is designed to be a minimal standard for allowing an NFT collection to be deployed on BIG. In an NFT collection, each NFT may have unique metadata information. This metadata may include a unique image, traits or tags, or a description describing the NFT. A detailed account of the standard can be found [here.](https://github.com/dfinity/ICRC/blob/icrc7-wg-draft/ICRCs/ICRC-7/ICRC-7.md)
+- **ICRC-7:** A new standard for non-fungible tokens on the BigFile. It is designed to be a minimal standard for allowing an NFT collection to be deployed on BIG. In an NFT collection, each NFT may have unique metadata information. This metadata may include a unique image, traits or tags, or a description describing the NFT. A detailed account of the standard can be found [here.](https://github.com/dfinity/ICRC/blob/icrc7-wg-draft/ICRCs/ICRC-7/ICRC-7.md)
 
 ## BIG
 
-BIG is the native token of the Internet Computer Protocol. BIG tokens have three key functionalities on the protocol:
+BIG is the native token of the BigFile Protocol. BIG tokens have three key functionalities on the protocol:
 
 - Facilitating the network's governance through neuron staking.
 
@@ -142,7 +142,7 @@ To learn how to deploy your own token using one of the ICRC standards, you can c
 
 ## Making payments with ICRC-2
 
-The ICRC-2 standard provides functionality for the **approve-transfer-from** pattern that is a popular function of the ERC-20 standard in the Ethereum ecosystem. This pattern specifies a way for an account owner to delegate token transfers to a third party (on the Internet Computer this is usually a canister) on the owner's behalf.
+The ICRC-2 standard provides functionality for the **approve-transfer-from** pattern that is a popular function of the ERC-20 standard in the Ethereum ecosystem. This pattern specifies a way for an account owner to delegate token transfers to a third party (on the BigFile this is usually a canister) on the owner's behalf.
 
 To interact with ICRC-2 locally, you will need to deploy the ICRC-1 ledger canister locally. You can learn how to do that [here](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens#deploying-a-icrc-1-ledger-locally).
 

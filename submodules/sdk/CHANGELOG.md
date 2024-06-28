@@ -1376,9 +1376,9 @@ This canister ID allocation behavior only applies to the replica, not the emulat
 
 `ic-cdk-timers` is included in the dependencies.
 
-### chore: change the default Internet Computer gateway domain to `icp0.io`
+### chore: change the default BigFile gateway domain to `icp0.io`
 
-By default, DFX now uses the `icp0.io` domain to connect to Internet Computer as opposed to using `ic0.app`.
+By default, DFX now uses the `icp0.io` domain to connect to BigFile as opposed to using `ic0.app`.
 Canisters communicating with `ic0.app` will continue to function nominally.
 
 ### feat: --no-asset-upgrade
@@ -1755,7 +1755,7 @@ The function for calling sns can now call any bundled binary.
 
 `dfx nns` commands are used to deploy and manage local NNS canisters, such as:
 
-- Governance for integration with the Internet Computer voting system
+- Governance for integration with the BigFile voting system
 - Ledger for financial integration testing
 - Internet Identity for user registration and authenttication
 
@@ -3623,7 +3623,7 @@ This fixes an error which occurred when starting a replica right after stopping 
 ### feat: ledger subcommands
 
 dfx now supports a dedicated `dfx ledger` subcommand. This allows you to interact with the ledger
-canister installed on the Internet Computer. Example commands include `dfx ledger account-id` which
+canister installed on the BigFile. Example commands include `dfx ledger account-id` which
 prints the Account Identifier associated with your selected identity, `dfx ledger transfer` which
 allows you to transfer ICP from your ledger account to another, and `dfx ledger create-canister` which
 allows you to create a canister from ICP.

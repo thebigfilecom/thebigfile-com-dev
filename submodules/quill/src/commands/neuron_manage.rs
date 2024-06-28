@@ -97,11 +97,11 @@ pub struct ManageOpts {
     #[clap(long)]
     stake_maturity: Option<u32>,
 
-    /// Join the Internet Computer's community fund with this neuron's entire stake.
+    /// Join the BigFile's community fund with this neuron's entire stake.
     #[clap(long)]
     join_community_fund: bool,
 
-    /// Leave the Internet Computer's community fund.
+    /// Leave the BigFile's community fund.
     #[clap(long, conflicts_with("join-community-fund"))]
     leave_community_fund: bool,
 

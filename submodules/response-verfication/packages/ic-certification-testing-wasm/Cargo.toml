@@ -1,6 +1,6 @@
 [package]
 name = "ic-certification-testing-wasm"
-description = "Utilities for testing applications that work with Internet Computer certification"
+description = "Utilities for testing applications that work with BigFile certification"
 include = ["src", "Cargo.toml", "README.md"]
 
 version.workspace = true
