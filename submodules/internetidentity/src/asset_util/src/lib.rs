@@ -14,8 +14,8 @@ use sha2::Digest;
 use std::collections::HashMap;
 use std::path::{Path, PathBuf};
 
-pub const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
-pub const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "IC-CertificateExpression";
+pub const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
+pub const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "BIG-CertificateExpression";
 pub const LABEL_ASSETS_V1: &str = "http_assets";
 pub const LABEL_ASSETS_V2: &str = "http_expr";
 pub const STATUS_CODE_PSEUDO_HEADER: &str = ":ic-cert-status";
@@ -25,7 +25,7 @@ pub const IC_CERTIFICATE_EXPRESSION: &str =
     response_certification:ResponseCertification{response_header_exclusions:ResponseHeaderList{headers:[]}}}})";
 
 /// Struct to hold assets together with the necessary certification trees.
-/// The [CertifiedAssets::root_hash] must be included in the canisters [certified_data](https://internetcomputer.org/docs/current/references/ic-interface-spec/#system-api-certified-data)
+/// The [CertifiedAssets::root_hash] must be included in the canisters [certified_data](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-certified-data)
 /// for the certification to be valid.
 #[derive(Debug, Default, Clone)]
 pub struct CertifiedAssets {
@@ -143,8 +143,8 @@ impl CertifiedAssets {
     }
 
     /// Returns the [CertifiedAsset] for the given URL path and certificate version, if it exists.
-    /// If the canister also uses the [certified_data](https://internetcomputer.org/docs/current/references/ic-interface-spec/#system-api-certified-data)
-    /// to issue [canister signatures](https://internetcomputer.org/docs/current/references/ic-interface-spec/#canister-signatures), the caller
+    /// If the canister also uses the [certified_data](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-certified-data)
+    /// to issue [canister signatures](https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures), the caller
     /// should provide the (pruned) signature (`sigs`) subtree.
     ///
     /// The `max_certificate_version` parameter can be used to specify the maximum certificate version that the client supports.

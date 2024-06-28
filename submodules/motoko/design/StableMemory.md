@@ -12,16 +12,16 @@ binary encoding or a mixture of candid and raw binary.
 
 To provide more fine-grained access to stable memory we propose
 extending the existing stable variable implementation with an orthogonal,
-library providing (almost) direct access to the IC Stable Memory API.
+library providing (almost) direct access to the BIG Stable Memory API.
 
 Since the implementation of stable variables itself makes temporary use of
 stable memory, some coordination between these two alternative, co-existing
-interfaces to IC stable memory is required.
+interfaces to BIG stable memory is required.
 
 
-# The IC's Stable Memory API
+# The BIG's Stable Memory API
 
-The IC provides a very small set of functions for operating on stable memory:
+The BIG provides a very small set of functions for operating on stable memory:
 
 ```
 ic0.stable_size : () -> (page_count : i32);                                 // *
@@ -82,7 +82,7 @@ interesting higher-level APIs for pickling user-defined data.
 
 REMARK:
 
-Actually implementing the sketched assignments using the existing IC
+Actually implementing the sketched assignments using the existing BIG
 API involves writing the contents to memory and then copying stable
 memory - even for individual words - this could be optimized by an
 improved system API offering direct load and stores from/to the stack:
@@ -145,7 +145,7 @@ from pre-StableMemory canisters to post-StableMemory
 canisters, as follows.
 
 During execution, abstract stable memory (StableMemory) is aligned
-with IC stable memory, at address 0, for reasonable efficiency (apart
+with BIG stable memory, at address 0, for reasonable efficiency (apart
 from bound checks against logical `size()`).
 
 During upgrade, if StableMemory has zero pages, we use the existing format, writing

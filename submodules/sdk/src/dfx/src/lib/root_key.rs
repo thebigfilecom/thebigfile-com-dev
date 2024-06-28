@@ -10,7 +10,7 @@ pub async fn fetch_root_key_if_needed(env: &dyn Environment) -> DfxResult {
 }
 
 /// Fetches the root key of the local network.
-/// Returns an error if attempted to run on the real IC.
+/// Returns an error if attempted to run on the real BIG.
 pub async fn fetch_root_key_or_anyhow(env: &dyn Environment) -> DfxResult {
     let agent = env.get_agent();
     let network = env.get_network_descriptor();

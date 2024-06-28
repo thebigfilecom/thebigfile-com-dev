@@ -49,7 +49,7 @@ pub fn exec(env: &dyn Environment, opts: SetWalletOpts, network: NetworkOpt) -> 
     };
     let force = opts.force;
 
-    // Try to check the canister_id for a `wallet_balance()` if the network is not the IC and available.
+    // Try to check the canister_id for a `wallet_balance()` if the network is not the BIG and available.
     // Otherwise we just trust the user.
     if force {
         info!(

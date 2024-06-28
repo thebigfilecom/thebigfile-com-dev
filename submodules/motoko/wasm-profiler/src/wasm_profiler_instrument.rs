@@ -5,7 +5,7 @@ use wasm_profiler::instrumentation::instrument;
 
 arg_enum! {
     #[derive(Debug)]
-    enum SystemAPI { WASI, IC }
+    enum SystemAPI { WASI, BIG }
 }
 
 #[derive(StructOpt)]

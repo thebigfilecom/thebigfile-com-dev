@@ -3,8 +3,8 @@
 ## Overview
 
 Asset certification is a specialized form of
-[HTTP Certification](https://internetcomputer.org/docs/current/developer-docs/http-compatible-canisters/custom-http-canisters)
-purpose-built for certifying static assets in [ICP](https://internetcomputer.org/) canisters.
+[HTTP Certification](https://thebigfile.com/docs/current/developer-docs/http-compatible-canisters/custom-http-canisters)
+purpose-built for certifying static assets in [ICP](https://thebigfile.com/) canisters.
 
 The `ic-asset-certification` crate provides the necessary functionality to
 certify and serve static assets from Rust canisters.
@@ -403,7 +403,7 @@ Some additional steps are then required to prepare the response for sending:
 - Add the certificate header to the response
 
 ```rust
-const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
+const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
 fn add_certificate_header(response: &mut HttpResponse, witness: &HashTree, expr_path: &[String]) {
     let certified_data = data_certificate().expect("No data certificate available");
     let witness = cbor_encode(witness);

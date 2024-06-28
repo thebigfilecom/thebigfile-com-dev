@@ -1,4 +1,4 @@
-//! Tests for the HTTP interactions according to the HTTP gateway spec: https://internetcomputer.org/docs/current/references/ic-interface-spec/#http-gateway
+//! Tests for the HTTP interactions according to the HTTP gateway spec: https://thebigfile.com/docs/current/references/ic-interface-spec/#http-gateway
 //! Includes tests for the HTTP endpoint (including asset certification) and the metrics endpoint.
 
 use crate::v2_api::authn_method_test_helpers::{
@@ -565,7 +565,7 @@ fn should_list_aggregated_session_seconds_and_event_data_counters() -> Result<()
     let authn_method_internetcomputer = AuthnMethodData {
         metadata: HashMap::from([(
             "origin".to_string(),
-            MetadataEntryV2::String("https://identity.internetcomputer.org".to_string()),
+            MetadataEntryV2::String("https://identity.thebigfile.com".to_string()),
         )]),
         ..sample_pubkey_authn_method(2)
     };
@@ -656,12 +656,12 @@ fn should_list_aggregated_session_seconds_and_event_data_counters() -> Result<()
     );
     assert_metric(
         &metrics,
-        "internet_identity_prepare_delegation_session_seconds{dapp=\"https://some-dapp-3.com\",window=\"24h\",ii_origin=\"internetcomputer.org\"}",
+        "internet_identity_prepare_delegation_session_seconds{dapp=\"https://some-dapp-3.com\",window=\"24h\",ii_origin=\"thebigfile.com\"}",
         1800f64,
     );
     assert_metric(
         &metrics,
-        "internet_identity_prepare_delegation_session_seconds{dapp=\"https://some-dapp-3.com\",window=\"30d\",ii_origin=\"internetcomputer.org\"}",
+        "internet_identity_prepare_delegation_session_seconds{dapp=\"https://some-dapp-3.com\",window=\"30d\",ii_origin=\"thebigfile.com\"}",
         1800f64,
     );
     assert_metric(
@@ -704,7 +704,7 @@ fn should_list_aggregated_session_seconds_and_event_data_counters() -> Result<()
     );
     assert_metric(
         &metrics,
-        "internet_identity_prepare_delegation_session_seconds{dapp=\"https://some-dapp-3.com\",window=\"30d\",ii_origin=\"internetcomputer.org\"}",
+        "internet_identity_prepare_delegation_session_seconds{dapp=\"https://some-dapp-3.com\",window=\"30d\",ii_origin=\"thebigfile.com\"}",
         1800f64,
     );
     assert_metric(

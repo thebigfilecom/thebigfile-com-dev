@@ -20,7 +20,7 @@ const ENCRYPTED_KEY_CYCLE_COSTS: u64 = 0;
 /// of a [proposed](https://github.com/dfinity/interface-spec/pull/158) vetKD
 /// system API for demonstration purposes. Because of this, in the following
 /// we hard-code a randomly generated master secret key. In case vetKD will be
-/// integrated into the Internet Computer protocol, then such a key would be
+/// integrated into the BigFile protocol, then such a key would be
 /// created in a secure manner with distributed key generation so that the key
 /// never exists in combined form anywyere and nodes can use it only collectively.
 const MASTER_SK_HEX: &str = "718c36cd1dcf3501fd04bbe24c3bb9eedfd066d2420e794dd9342cf71d04176f";

@@ -241,7 +241,7 @@ fn certify_asset_with_encoding(
     };
 }
 
-const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "IC-CertificateExpression";
+const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "BIG-CertificateExpression";
 fn certify_asset_response(
     body: &'static [u8],
     additional_headers: Vec<HeaderField>,
@@ -357,7 +357,7 @@ fn asset_handler(req: &HttpRequest) -> HttpResponse {
     })
 }
 
-const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
+const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
 fn add_certificate_header(
     response: &mut HttpResponse,
     entry: &HttpCertificationTreeEntry,

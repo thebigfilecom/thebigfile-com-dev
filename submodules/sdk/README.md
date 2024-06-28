@@ -1,24 +1,24 @@
-# IC SDK
+# BIG SDK
 
-This repo contains the `IC SDK`: a Software Development Kit for creating and managing [canister smart contracts on the Internet Computer (ICP blockchain)](https://wiki.internetcomputer.org/wiki/Canister_smart_contract).
+This repo contains the `BIG SDK`: a Software Development Kit for creating and managing [canister smart contracts on the BigFile (ICP blockchain)](https://wiki.thebigfile.com/wiki/Canister_smart_contract).
 
 For further reading:
-* [Reference documentation on internetcomputer.org](https://internetcomputer.org/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/)
-* [Introduction to the ICP blockchain](https://wiki.internetcomputer.org/wiki/Introduction_to_ICP)
-* [Internet Computer dashboard](https://dashboard.internetcomputer.org/)
-* [Developer docs for ICP smart contracts](https://internetcomputer.org/docs/current/home)
-* [Sample code of ICP smart contracts](https://internetcomputer.org/samples)
-* [IC wiki](https://wiki.internetcomputer.org/wiki/Main_Page)
+* [Reference documentation on thebigfile.com](https://thebigfile.com/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/)
+* [Introduction to the ICP blockchain](https://wiki.thebigfile.com/wiki/Introduction_to_ICP)
+* [BigFile dashboard](https://dashboard.thebigfile.com/)
+* [Developer docs for ICP smart contracts](https://thebigfile.com/docs/current/home)
+* [Sample code of ICP smart contracts](https://thebigfile.com/samples)
+* [BIG wiki](https://wiki.thebigfile.com/wiki/Main_Page)
 
 ## What gets installed
 
-The `IC SDK` installation script installs several components in default locations on your local computer. The following table describes the development environment components that the installation script installs:
+The `BIG SDK` installation script installs several components in default locations on your local computer. The following table describes the development environment components that the installation script installs:
 
 | Component    | Description                                                                                        | Default location                              |
 |--------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | dfx          | Command-line interface (CLI)                                                     | `/usr/local/bin/dfx`                          |
 | moc          | Motoko runtime compiler                                                                            | `~/.cache/dfinity/versions/<VERSION>/moc`     |
-| replica      | Internet Computer local network binary                                                             | `~/.cache/dfinity/versions/<VERSION>/replica` |
+| replica      | BigFile local network binary                                                             | `~/.cache/dfinity/versions/<VERSION>/replica` |
 | uninstall.sh | Script to remove the SDK and all of its components                                    | `~/.cache/dfinity/uninstall.sh`               |
 | versions     | Cache directory that contains a subdirectory for each version of the SDK you install. | `~/.cache/dfinity/versions`                   |
 
@@ -26,24 +26,24 @@ The `IC SDK` installation script installs several components in default location
 
 There are a few components above worth expanding on:
 
-1. **dfx** - `dfx` is the command-line interface for the `IC SDK`. This is why many commands for the IC SDK start with the command "`dfx ..`" such as `dfx new` or `dfx stop`.
+1. **dfx** - `dfx` is the command-line interface for the `BIG SDK`. This is why many commands for the BIG SDK start with the command "`dfx ..`" such as `dfx new` or `dfx stop`.
 
-2. **Canister Development Kit (CDK)** - A CDK is an adapter used by the IC SDK so a programming language has the features needed to create and manage canisters. 
-The IC SDK comes with a few CDKs already installed for you so you can use them in the language of yoru choice. That is why there is a [Rust CDK](https://github.com/dfinity/cdk-rs), [Python CDK](https://demergent-labs.github.io/kybra/), 
-[TypeScript CDK](https://demergent-labs.github.io/azle/), etc... Since CDKs are components used the SDK, some developer choose to use the CDK directly (without the `IC SDK`), 
-but typically are used as part of the whole `IC SDK`.
+2. **Canister Development Kit (CDK)** - A CDK is an adapter used by the BIG SDK so a programming language has the features needed to create and manage canisters. 
+The BIG SDK comes with a few CDKs already installed for you so you can use them in the language of yoru choice. That is why there is a [Rust CDK](https://github.com/dfinity/cdk-rs), [Python CDK](https://demergent-labs.github.io/kybra/), 
+[TypeScript CDK](https://demergent-labs.github.io/azle/), etc... Since CDKs are components used the SDK, some developer choose to use the CDK directly (without the `BIG SDK`), 
+but typically are used as part of the whole `BIG SDK`.
 
 
 ## Getting Started
 
 ### Installing
 
-You can install the `IC SDK` a few different ways.
+You can install the `BIG SDK` a few different ways.
 
 #### via `curl` (recommended)
 
 ``` bash
-sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"
 ```
 
 This command will install a binary compatible with your operating system, and add it to `/usr/local/bin`.
@@ -62,7 +62,7 @@ Find a release for your architecture [here](https://github.com/dfinity/sdk/relea
 
 ### Getting Help
 
-Once the `IC SDK` is installed, get acquainted with its capabilities by entering.
+Once the `BIG SDK` is installed, get acquainted with its capabilities by entering.
 
 ``` bash
 dfx help
@@ -72,9 +72,9 @@ dfx help
 
 See our contributing guidelines [here](./CONTRIBUTING.md).
 
-### Building the IC SDK
+### Building the BIG SDK
 
-Building the `IC SDK` is very simple:
+Building the `BIG SDK` is very simple:
 
 ``` bash
 cargo build
@@ -82,14 +82,14 @@ cargo build
 
 ## Release Process
 
-`IC SDK` is released in two steps:
+`BIG SDK` is released in two steps:
 
-1. Publishing a new `IC SDK` release.
+1. Publishing a new `BIG SDK` release.
 
 2. Publishing a new `manifest.json` and `install.sh` to instruct the installer
-   to actually download and install the new `IC SDK` release.
+   to actually download and install the new `BIG SDK` release.
 
-### Publishing the IC SDK
+### Publishing the BIG SDK
 
 1. The release manager makes sure the `dfx` `stable` branch points to the revision
    that should be released and that the revision is tagged with a version (like
@@ -118,16 +118,16 @@ cargo build
 
 ### Publishing `manifest.json` and `install.sh`
 
-After the `IC SDK` has been released it's available for download but the install
+After the `BIG SDK` has been released it's available for download but the install
 script at https://sdk.dfinity.org/install.sh won't immediately install it. To
-make sure the installer actually downloads and installs the new `IC SDK` release the
+make sure the installer actually downloads and installs the new `BIG SDK` release the
 `manifest.json` file at https://sdk.dfinity.org/manifest.json has to set its
 `tags.latest` field to the new version. The following explains how to do that.
 
-1. Edit the `public/manifest.json` file such that it points to the new `IC SDK`
+1. Edit the `public/manifest.json` file such that it points to the new `BIG SDK`
    version and make sure this is merged in `master`.
 
-2. Similarly to releasing the `IC SDK` there's a
+2. Similarly to releasing the `BIG SDK` there's a
    [`install-sh`](https://github.com/dfinity-lab/sdk/blob/stable/publish.nix) job
    that builds a CD script for publishing the `manifest.json` and `install.sh`
    to our CDN.
@@ -144,7 +144,7 @@ make sure the installer actually downloads and installs the new `IC SDK` release
 
 
 ## Troubleshooting
-This section provides solutions to problems you might encounter when using the `IC SDK` via `dfx` command line
+This section provides solutions to problems you might encounter when using the `BIG SDK` via `dfx` command line
 
 ### Project Reset
 

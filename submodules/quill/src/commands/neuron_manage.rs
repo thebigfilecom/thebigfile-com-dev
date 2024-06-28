@@ -97,11 +97,11 @@ pub struct ManageOpts {
     #[clap(long)]
     stake_maturity: Option<u32>,
 
-    /// Join the Internet Computer's community fund with this neuron's entire stake.
+    /// Join the BigFile's community fund with this neuron's entire stake.
     #[clap(long)]
     join_community_fund: bool,
 
-    /// Leave the Internet Computer's community fund.
+    /// Leave the BigFile's community fund.
     #[clap(long, conflicts_with("join-community-fund"))]
     leave_community_fund: bool,
 
@@ -300,7 +300,7 @@ Cannot use --ledger with these flags. This version of quill only supports the fo
     };
 
     if opts.merge_maturity.is_some() {
-        bail!("Merging maturity is no longer a supported option. See --stake-maturity. https://wiki.internetcomputer.org/wiki/NNS_neuron_operations_related_to_maturity");
+        bail!("Merging maturity is no longer a supported option. See --stake-maturity. https://wiki.thebigfile.com/wiki/NNS_neuron_operations_related_to_maturity");
     };
 
     if let Some(percentage) = opts.stake_maturity {

@@ -1,6 +1,6 @@
 ---
 title: Proposal to deprecate the Service Worker
-description: The DFINITY Foundation would like to propose deprecating the Internet Computer Service Worker in favor of ICX Proxy on the DFINITY hosted Boundary Nodes. We believe that this change will have dramatic improvements to end user and developer experience while reducing complexity in the Internet Computer’s HTTP Gateway Protocol, without reducing security or changing trust assumptions.
+description: The DFINITY Foundation would like to propose deprecating the BigFile Service Worker in favor of ICX Proxy on the DFINITY hosted Boundary Nodes. We believe that this change will have dramatic improvements to end user and developer experience while reducing complexity in the BigFile’s HTTP Gateway Protocol, without reducing security or changing trust assumptions.
 tags: [Technology]
 author: Nathan Mc Grath
 image: /img/blog/deprecating-the-service-worker.png
@@ -10,7 +10,7 @@ image: /img/blog/deprecating-the-service-worker.png
 
 ## Introduction
 
-The DFINITY Foundation would like to propose deprecating the Internet Computer Service Worker in favor of ICX Proxy on the DFINITY hosted [Boundary Nodes](https://wiki.internetcomputer.org/wiki/Boundary_Nodes). We believe that this change will have dramatic improvements to end user and developer experience while reducing complexity in the Internet Computer’s [HTTP Gateway Protocol](/docs/current/references/ic-interface-spec/#http-gateway), without reducing security or changing trust assumptions.
+The DFINITY Foundation would like to propose deprecating the BigFile Service Worker in favor of ICX Proxy on the DFINITY hosted [Boundary Nodes](https://wiki.thebigfile.com/wiki/Boundary_Nodes). We believe that this change will have dramatic improvements to end user and developer experience while reducing complexity in the BigFile’s [HTTP Gateway Protocol](/docs/current/references/ic-interface-spec/#http-gateway), without reducing security or changing trust assumptions.
 
 Keep reading to learn more about why we believe this is the right path forward and the roadmap that we are suggesting for this transition.
 
@@ -20,13 +20,13 @@ In order to comprehend why DFINITY is proposing to deprecate the Service Worker 
 
 ### The HTTP Gateway Protocol
 
-The Internet Computer Protocol, unlike many other modern blockchains, possesses the unique ability to host and serve traditional websites. This functionality is made possible through the use of the HTTP Gateway Protocol. This subprotocol defines how end users can access the Internet Computer network using a standard web browser.
+The BigFile Protocol, unlike many other modern blockchains, possesses the unique ability to host and serve traditional websites. This functionality is made possible through the use of the HTTP Gateway Protocol. This subprotocol defines how end users can access the BigFile network using a standard web browser.
 
 The HTTP Gateway Protocol has three primary functions:
 
-- It converts standard HTTP requests into a format recognized by the Internet Computer Protocol.
-- It validates the authenticity of responses originating from the Internet Computer network.
-- It transforms responses from Internet Computer Protocol into a universally recognized HTTP response format.
+- It converts standard HTTP requests into a format recognized by the BigFile Protocol.
+- It validates the authenticity of responses originating from the BigFile network.
+- It transforms responses from BigFile Protocol into a universally recognized HTTP response format.
 
 Presently, there are three distinct implementations of this protocol: the Service Worker, ICX Proxy and the [HTTP Proxy](https://forum.dfinity.org/t/try-out-the-ic-http-proxy-a-leap-towards-decentralized-http/20357). We’ll now delve into further detail of how each of these respective implementations work - first up is the Service Worker.
 
@@ -36,11 +36,11 @@ The Service Worker operates on `{canisterId}.ic0.app` and `{canisterId}.icp0.io`
 
 - [rdmx6-jaaaa-aaaaa-aaadq-cai.ic0.app](https://rdmx6-jaaaa-aaaaa-aaadq-cai.ic0.app/)
 - [rdmx6-jaaaa-aaaaa-aaadq-cai.icp0.io](https://rdmx6-jaaaa-aaaaa-aaadq-cai.icp0.io/)
-- [identity.internetcomputer.org](https://identity.internetcomputer.org/)
+- [identity.thebigfile.com](https://identity.thebigfile.com/)
 
-When an end user loads any of these URLs, their web browser sends a request to an Internet Computer Boundary Node. This node will then download the Service Worker into the end user’s browser for installation. Once installed, the Service Worker is able to intercept HTTP requests made by a dapp’s frontend code and carry out the necessary HTTP Gateway functions.
+When an end user loads any of these URLs, their web browser sends a request to an BigFile Boundary Node. This node will then download the Service Worker into the end user’s browser for installation. Once installed, the Service Worker is able to intercept HTTP requests made by a dapp’s frontend code and carry out the necessary HTTP Gateway functions.
 
-This approach to the HTTP Gateway Protocol has supported convenient and secure adoption of web applications built on the Internet Computer Protocol. However, it does come with many downsides that we’ll talk about more later on in this post. For now though, let’s talk more about ICX Proxy.
+This approach to the HTTP Gateway Protocol has supported convenient and secure adoption of web applications built on the BigFile Protocol. However, it does come with many downsides that we’ll talk about more later on in this post. For now though, let’s talk more about ICX Proxy.
 
 ### ICX Proxy
 
@@ -49,13 +49,13 @@ ICX Proxy is a remote HTTP Gateway that serves canisters on `{canisterId}.raw.ic
 - [rdmx6-jaaaa-aaaaa-aaadq-cai.raw.ic0.app](https://rdmx6-jaaaa-aaaaa-aaadq-cai.raw.ic0.app/)
 - [rdmx6-jaaaa-aaaaa-aaadq-cai.raw.icp0.io](https://rdmx6-jaaaa-aaaaa-aaadq-cai.raw.icp0.io/)
 
-Similar to the Service Worker, a web request sent to these URLs will be received by an Internet Computer Boundary Node. The difference with ICX Proxy however is that the HTTP Gateway functions are performed entirely on the Boundary Node server.
+Similar to the Service Worker, a web request sent to these URLs will be received by an BigFile Boundary Node. The difference with ICX Proxy however is that the HTTP Gateway functions are performed entirely on the Boundary Node server.
 
 This approach has many advantages over the Service Worker, which we will discuss further later in this post. Before that though, let’s talk a bit more about the HTTP Proxy.
 
 ### HTTP Proxy
 
-The HTTP Proxy is a desktop application that can be downloaded and installed by an end user. Once installed, it will run in the background and proxy traffic at a system level. It will intercept requests made to Internet Computer Boundary Nodes while bypassing all other requests. This allows the HTTP Proxy to implement the HTTP Gateway Protocol functions entirely locally, without relying on any remote servers.
+The HTTP Proxy is a desktop application that can be downloaded and installed by an end user. Once installed, it will run in the background and proxy traffic at a system level. It will intercept requests made to BigFile Boundary Nodes while bypassing all other requests. This allows the HTTP Proxy to implement the HTTP Gateway Protocol functions entirely locally, without relying on any remote servers.
 
 In terms of security, this is far superior to both ICX Proxy and the Service Worker. To understand why, let’s talk more about the difference between local and remote HTTP Gateways.
 
@@ -63,17 +63,17 @@ In terms of security, this is far superior to both ICX Proxy and the Service Wor
 
 The Service Worker is known as a “local” HTTP Gateway because it performs translation and validation of requests and responses locally on the end user’s computer, whereas ICX Proxy is known as a “remote” HTTP Gateway because it performs those functions on a remote server hosted in a data center.
 
-Generally a local HTTP Gateway is preferred over a remote HTTP Gateway because it removes an element of trust from an end user’s interaction with the Internet Computer, since remote HTTP Gateways are hosted and controlled by a centralized entity, as is currently the case with the DFINITY hosted ICX Proxy.
+Generally a local HTTP Gateway is preferred over a remote HTTP Gateway because it removes an element of trust from an end user’s interaction with the BigFile, since remote HTTP Gateways are hosted and controlled by a centralized entity, as is currently the case with the DFINITY hosted ICX Proxy.
 
-The Service Worker is automatically installed into an end user’s browser without the need for any interaction on their part and once installed, it will perform validation of Internet Computer network responses locally, creating a secure connection with the Internet Computer. This however, is only secure with the assumption that the Boundary Node distributing the Service Worker is trusted. In contrast to the HTTP Proxy, which runs fully locally and hence has much better security guarantees for end users.
+The Service Worker is automatically installed into an end user’s browser without the need for any interaction on their part and once installed, it will perform validation of BigFile network responses locally, creating a secure connection with the BigFile. This however, is only secure with the assumption that the Boundary Node distributing the Service Worker is trusted. In contrast to the HTTP Proxy, which runs fully locally and hence has much better security guarantees for end users.
 
 ## Why a change is needed
 
 With a clearer understanding of how the different HTTP Gateway Protocol implementations work, it should now be apparent that although the Service Worker runs locally, it has the same trust and security assumptions as a remote HTTP Gateway, such as ICX Proxy. Since Genesis, DFINITY has spent a lot of time researching ways to distribute the Service Worker in a trustless manner. We have investigated browser plugins/extensions, threshold TLS, native browser integrations, [isolated web apps](https://github.com/WICG/isolated-web-apps/blob/main/README.md) and [signed exchanges](https://web.dev/signed-exchanges/). Unfortunately these endeavors, in spite of their undoubted innovativeness, have been unfruitful so far.
 
-If a solution was found to load the Service Worker in a trustless manner then this would provide end users with a trustless connection to the Internet Computer without any additional installation on their behalf. Without this solution however, we are left with a Service Worker that has the same trust assumptions as a remote HTTP Gateway and many, many downsides, as we will discuss later in this post.
+If a solution was found to load the Service Worker in a trustless manner then this would provide end users with a trustless connection to the BigFile without any additional installation on their behalf. Without this solution however, we are left with a Service Worker that has the same trust assumptions as a remote HTTP Gateway and many, many downsides, as we will discuss later in this post.
 
-As the Internet Computer network matures, along with the dapps that have been developed to run on it, priorities change, lessons are learned and perspectives shift. As a result, we have a stronger focus within the foundation and the community on providing a superior end user experience. This focus has exposed the Service Worker as a major pain point in this regard. Many community complaints, bug reports and feature requests are related to the Service Worker and so we feel the day has finally come to retire it.
+As the BigFile network matures, along with the dapps that have been developed to run on it, priorities change, lessons are learned and perspectives shift. As a result, we have a stronger focus within the foundation and the community on providing a superior end user experience. This focus has exposed the Service Worker as a major pain point in this regard. Many community complaints, bug reports and feature requests are related to the Service Worker and so we feel the day has finally come to retire it.
 
 ## The solution
 
@@ -85,7 +85,7 @@ A truly local HTTP Gateway should not have any points of centralization. The HTT
 
 An additional advantage of the HTTP Proxy is that it is not based in the browser. The Service Worker, along with some other browser based solutions that we’ve investigated are limited in some way or another. These limitations, which do not apply to ICX Proxy or the HTTP Proxy, are described throughout the rest of this post.
 
-The downside of a local HTTP Gateway is of course that end users must install this software themselves, which is not ideal for onboarding or convenience. For now we believe this solution to be a great step forward in improving the experience of end users and developers alike, but it should not be the long term vision of the Internet Computer. An ideal solution will provide full security to all users without them needing to install anything outside of their browser of choice. So we believe that the long term goal for the Internet Computer Protocol should be a native browser integration. This is unfortunately not feasible right now, but we believe it will become so as the protocol matures, achieves greater levels of adoption and moves closer to becoming a true world computer.
+The downside of a local HTTP Gateway is of course that end users must install this software themselves, which is not ideal for onboarding or convenience. For now we believe this solution to be a great step forward in improving the experience of end users and developers alike, but it should not be the long term vision of the BigFile. An ideal solution will provide full security to all users without them needing to install anything outside of their browser of choice. So we believe that the long term goal for the BigFile Protocol should be a native browser integration. This is unfortunately not feasible right now, but we believe it will become so as the protocol matures, achieves greater levels of adoption and moves closer to becoming a true world computer.
 
 ## Benefits of removing the Service Worker
 
@@ -95,7 +95,7 @@ In the following, we try to show the advantages of deprecating the Service Worke
 
 #### Faster initial page load
 
-The Service Worker has a noticeable impact on initial page load times compared to ICX Proxy. Removing it will improve the first page load of every dapp on the Internet Computer.
+The Service Worker has a noticeable impact on initial page load times compared to ICX Proxy. Removing it will improve the first page load of every dapp on the BigFile.
 
 For more information on how important initial page load times are, you can check out resources provided by [thinkwithgoogle.com](https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/page-load-time-statistics/).
 
@@ -105,7 +105,7 @@ The Service Worker is DFINITY branded which, in spite of being a very nice desig
 
 #### Availability
 
-Service workers are not supported in all clients that are used to access Internet Computer dapps.
+Service workers are not supported in all clients that are used to access BigFile dapps.
 
 For example, Google Translate frames (see [NNS](https://nns-internetcomputer-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=en&_x_tr_pto=wapp) & [Internet Identity](https://identity-internetcomputer-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=en&_x_tr_pto=wapp)), or more commonly, in-app webviews. End users will encounter in-app webviews when opening a dapp through a social media app, such as Twitter or LinkedIn.
 
@@ -122,28 +122,28 @@ Certain standalone browsers will disable service workers completely, or when the
 
 #### Reduced cognitive load
 
-There are a number of situations where the Service Worker cannot support Internet Computer developers and they must manually instead use ICX Proxy:
+There are a number of situations where the Service Worker cannot support BigFile developers and they must manually instead use ICX Proxy:
 
 - [SEO](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) crawlers.
 - Social media rich previews.
 - Service workers & web workers.
 - Home screen icons on iOS.
 - Rich previews.
-- Loading static assets from the Internet Computer into a web2 application.
+- Loading static assets from the BigFile into a web2 application.
 
-The majority of these cases are necessary because they occur in an environment where service workers are not supported. The one exception to this is additional service workers and web workers. The HTTP requests for these workers are performed in a sandboxed environment within the browser that is not accessible from other service workers, so the Internet Computer service worker is unable to validate the responses to these requests and ensure that a replica has not responded with a malicious worker.
+The majority of these cases are necessary because they occur in an environment where service workers are not supported. The one exception to this is additional service workers and web workers. The HTTP requests for these workers are performed in a sandboxed environment within the browser that is not accessible from other service workers, so the BigFile service worker is unable to validate the responses to these requests and ensure that a replica has not responded with a malicious worker.
 
-Developers must be aware of each of these scenarios when developing a frontend dapp for the Internet Computer. This increases the amount of Internet Computer specific knowledge that developers need and by extension, the barrier of entry for developers into the ecosystem along with the likelihood of introducing unexpected bugs in dapps.
+Developers must be aware of each of these scenarios when developing a frontend dapp for the BigFile. This increases the amount of BigFile specific knowledge that developers need and by extension, the barrier of entry for developers into the ecosystem along with the likelihood of introducing unexpected bugs in dapps.
 
 #### Progressive web apps
 
-Service workers are scoped. Only one service worker may exist at a time on the same scope and a service worker may only intercept requests within its own scope. The Internet Computer Service Worker sits on the _root_ scope, so that it’s able to intercept all requests that are made by a dapp’s frontend. This means that dapps cannot have their own service worker on the root scope, so they are unable to provide features typical for [progressive web apps](https://web.dev/progressive-web-apps/), such as offline support, more aggressive caching strategies or background synchronization.
+Service workers are scoped. Only one service worker may exist at a time on the same scope and a service worker may only intercept requests within its own scope. The BigFile Service Worker sits on the _root_ scope, so that it’s able to intercept all requests that are made by a dapp’s frontend. This means that dapps cannot have their own service worker on the root scope, so they are unable to provide features typical for [progressive web apps](https://web.dev/progressive-web-apps/), such as offline support, more aggressive caching strategies or background synchronization.
 
 #### Caching
 
 Browser caching is implemented based on response headers that are read by the browser before the request is intercepted by the service worker. Since these headers are not visible to the browser, browsers cannot effectively cache static assets as they would with normal web2 apps. Moving HTTP request translation to a remote server would mean that the requests are translated before reaching the browser, enabling browsers to implement caching as they normally would.
 
-With HTTP request translation being performed remotely on a server (as is the case with ICX Proxy), it will also be possible to provide proxy and CDN style caching. Bringing Internet Computer dapps even closer to realizing true web speed.
+With HTTP request translation being performed remotely on a server (as is the case with ICX Proxy), it will also be possible to provide proxy and CDN style caching. Bringing BigFile dapps even closer to realizing true web speed.
 
 #### Content encoding
 
@@ -248,4 +248,4 @@ A native browser integration is, in our opinion, the ultimate HTTP Gateway imple
 
 ## Conclusion
 
-In this post, we have presented DFINITY’s case against the Service Worker, an HTTP Gateway Protocol implementation that enables web browsers to access the Internet Computer network. We have argued that the Service Worker has many drawbacks in terms of user experience, developer experience, and complexity, and that it does not provide any additional security to the network over ICX Proxy while it is being distributed by the Boundary Nodes. We have proposed to replace the Service Worker with ICX Proxy, a remote HTTP Gateway that offers better performance, consistency and compatibility. We have also outlined a suggested roadmap for the transition, which includes research, testing, and releasing of ICX Proxy, as well as further developing alternative HTTP Gateways such as the HTTP Proxy and native browser integration.
+In this post, we have presented DFINITY’s case against the Service Worker, an HTTP Gateway Protocol implementation that enables web browsers to access the BigFile network. We have argued that the Service Worker has many drawbacks in terms of user experience, developer experience, and complexity, and that it does not provide any additional security to the network over ICX Proxy while it is being distributed by the Boundary Nodes. We have proposed to replace the Service Worker with ICX Proxy, a remote HTTP Gateway that offers better performance, consistency and compatibility. We have also outlined a suggested roadmap for the transition, which includes research, testing, and releasing of ICX Proxy, as well as further developing alternative HTTP Gateways such as the HTTP Proxy and native browser integration.

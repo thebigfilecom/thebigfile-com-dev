@@ -53,8 +53,8 @@ const DAY_NS: u64 = 24 * HOUR_NS;
 // Note: concatenating const &str is a hassle in rust. It seemed easiest to just repeat.
 const IC0_APP_DOMAIN: &str = "identity.ic0.app";
 const IC0_APP_ORIGIN: &str = "https://identity.ic0.app";
-const INTERNETCOMPUTER_ORG_DOMAIN: &str = "identity.internetcomputer.org";
-const INTERNETCOMPUTER_ORG_ORIGIN: &str = "https://identity.internetcomputer.org";
+const INTERNETCOMPUTER_ORG_DOMAIN: &str = "identity.thebigfile.com";
+const INTERNETCOMPUTER_ORG_ORIGIN: &str = "https://identity.thebigfile.com";
 
 #[update]
 #[candid_method]

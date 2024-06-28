@@ -12,7 +12,7 @@ use slog::warn;
 use std::time::Duration;
 use tokio::runtime::Runtime;
 
-/// Pings an Internet Computer network and returns its status.
+/// Pings an BigFile network and returns its status.
 #[derive(Parser)]
 pub struct PingOpts {
     /// The provider to use.

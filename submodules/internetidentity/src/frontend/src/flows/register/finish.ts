@@ -87,7 +87,7 @@ export const displayUserNumberTemplate = ({
       ${marketingIntroSlot}
       <aside class="l-stack">
         <h3 class="t-title">This number is your Internet Identity</h3>
-        <p class="t-paragraph">With your Internet Identity and your passkey, you will be able to create and securely connect to Internet Computer dapps</p>
+        <p class="t-paragraph">With your Internet Identity and your passkey, you will be able to create and securely connect to BigFile dapps</p>
       </aside>
 
       <aside class="l-stack">

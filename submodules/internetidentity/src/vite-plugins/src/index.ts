@@ -75,7 +75,7 @@ export const replicaForwardPlugin = ({
           `Denying access to raw URL ${req.method} https://${req.headers.host}${req.url}`
         );
         res.statusCode = 400;
-        res.end("Raw IC URLs are not supported");
+        res.end("Raw BIG URLs are not supported");
         return;
       }
 

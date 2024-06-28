@@ -80,7 +80,7 @@ const categories = [
     title: (
       <>
         Build the next <span style={{ color: "#3B00B9" }}>Metaverse</span> on
-        the Internet Computer
+        the BigFile
       </>
     ),
     image: "/img/basics/export-metaverse.webp",

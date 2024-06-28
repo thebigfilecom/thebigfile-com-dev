@@ -267,7 +267,7 @@ pub fn device_data_1() -> DeviceData {
         pubkey: ByteBuf::from(PUBKEY_1),
         alias: "My Device".to_string(),
         credential_id: Some(ByteBuf::from("credential id 1")),
-        origin: Some("https://identity.internetcomputer.org".to_string()),
+        origin: Some("https://identity.thebigfile.com".to_string()),
         ..DeviceData::auth_test_device()
     }
 }
@@ -533,7 +533,7 @@ pub fn verify_delegation(
     // The signed message is a signature domain separator
     // followed by the representation independent hash of a map with entries
     // pubkey, expiration and targets (if any), using the respective values from the delegation.
-    // See https://internetcomputer.org/docs/current/references/ic-interface-spec#authentication for details
+    // See https://thebigfile.com/docs/current/references/ic-interface-spec#authentication for details
     let key_value_pairs = vec![
         (
             "pubkey".to_string(),

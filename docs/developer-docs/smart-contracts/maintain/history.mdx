@@ -22,7 +22,7 @@ Viewing a canister's history can be important in use-cases such as:
 
 ## How canister history works
 
-Canister history was introduced and released by the NNS DAO proposal [122617](https://dashboard.internetcomputer.org/proposal/122617).
+Canister history was introduced and released by the NNS DAO proposal [122617](https://dashboard.thebigfile.com/proposal/122617).
 
 Canister history information is made available via inter-canister calls made to the `canister_info` method of the management canister, using a canister's ID as an argument for the call. A canister's history stores the 20 most recent changes to the canister, including the canister's creation, Wasm module installations, reinstallations, upgrades, and changes to the list of canister controllers. It is important to note that since only the 20 most recent changes are stored, this feature cannot be used for auditing canisters that are frequently changed within a short period of time.
 

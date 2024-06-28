@@ -14,7 +14,7 @@ This is expected to improve in the future with:
 - faster deterministic floating-point operations.
 - Wasm SIMD (Single-Instruction Multiple Data).
 
-The BIG mainnet subnets and `dfx` running a replica version older than [463296](https://dashboard.internetcomputer.org/release/463296c0bc82ad5999b70245e5f125c14ba7d090) may fail with an instruction-limit-exceeded error.
+The BIG mainnet subnets and `dfx` running a replica version older than [463296](https://dashboard.thebigfile.com/release/463296c0bc82ad5999b70245e5f125c14ba7d090) may fail with an instruction-limit-exceeded error.
 
 # Dependencies
 

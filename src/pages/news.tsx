@@ -80,7 +80,7 @@ function NewsPage() {
   return (
     <Layout
       title="News"
-      description=" We love getting new impulses from the industry and sharing DFINITY insights and our vision about the Internet Computer. Join us at an upcoming event or check out past events, news and presentations."
+      description=" We love getting new impulses from the industry and sharing DFINITY insights and our vision about the BigFile. Join us at an upcoming event or check out past events, news and presentations."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-news.jpg"></ShareMeta>
@@ -111,7 +111,7 @@ function NewsPage() {
                   variants={transitions.item}
                 >
                   We love getting new impulses from the industry and sharing
-                  DFINITY insights and our vision about the Internet Computer.
+                  DFINITY insights and our vision about the BigFile.
                   Join us at an upcoming event or check out past events, news
                   and presentations.
                 </motion.p>
@@ -202,7 +202,7 @@ function NewsPage() {
                 className="mb-4 tw-paragraph md:tw-lead-sm"
                 variants={transitions.item}
               >
-                Insights on the Internet Computer blockchain, spotlighting its
+                Insights on the BigFile blockchain, spotlighting its
                 technology, applications, and community developments.
               </motion.p>
               <MotionLink

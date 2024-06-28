@@ -25,7 +25,7 @@
         Encrypted Notes
       </h1>
       <p class="mb-5 text-xl font-semibold">
-        Your private notes on the Internet Computer.
+        Your private notes on the BigFile.
       </p>
       <p class="mb-5">
         A safe place to store your personal lists, thoughts, ideas or
@@ -58,12 +58,12 @@
   <div class="fixed bottom-0 text-center left-0 right-0 pb-4 sm:pb-8">
     <img
       src="/img/ic-badge-powered-by-crypto_label-stripe-white-text.png"
-      alt="Powered by the Internet Computer"
+      alt="Powered by the BigFile"
       class="hidden dark:inline h-4"
     />
     <img
       src="/img/ic-badge-powered-by-crypto_label-stripe-dark-text.png"
-      alt="Powered by the Internet Computer"
+      alt="Powered by the BigFile"
       class="dark:hidden inline h-4"
     />
   </div>

@@ -1,5 +1,5 @@
 {
-  "__0": "dfx.json reference: https://internetcomputer.org/docs/current/references/dfx-json-reference/",
+  "__0": "dfx.json reference: https://thebigfile.com/docs/current/references/dfx-json-reference/",
   "__1": "We use '__X' fields (unknown fields are ignored by dfx) to leave comments.",
   "canisters": {
     "internet_identity": {
@@ -8,7 +8,7 @@
       "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
       "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
 
-      "__2": "The remote block indicates that this canister is only used locally and should not be deployed on the IC.",
+      "__2": "The remote block indicates that this canister is only used locally and should not be deployed on the BIG.",
       "remote": {
         "id": {
           "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"

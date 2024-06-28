@@ -35,8 +35,8 @@ The BigFile Blockchain Project is a project initiated with the vision of 'A Worl
 'Digital Bureaucracy' => 'BigFile'
  DBC Token => BIG
 
-The BigFile Project will be developed based on the [Internet Computer(IC)](https://github.com/dfinity/ic) Blockchain network.
+The BigFile Project will be developed based on the [BigFile(BIG)](https://github.com/dfinity/ic) Blockchain network.
 
-The IC Network has been renamed to BIG Network.
+The BIG Network has been renamed to BIG Network.
 Canister Smart Contract has been renamed to Cube Smart Contract.
 Internet Identidy has been renamed to BIG Wallet.

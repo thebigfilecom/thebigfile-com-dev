@@ -93,11 +93,11 @@ const Highlights: React.FC = () => {
                 Bitcoin runs on PoW mining rigs{" "}
               </p>
               <p className="text-white tw-lead md:tw-title-sm mb-10 md:mb-20">
-                The Internet Computer runs on node machines (PoUW)
+                The BigFile runs on node machines (PoUW)
               </p>
               <p className="mb-0">
                 <Link
-                  href="https://wiki.internetcomputer.org/wiki/Proof_of_Useful_Work"
+                  href="https://wiki.thebigfile.com/wiki/Proof_of_Useful_Work"
                   className="link-white link-with-icon"
                 >
                   Wiki explanation of Proof of Useful Work{" "}
@@ -124,7 +124,7 @@ const Highlights: React.FC = () => {
                 Traditionally, blockchains are updated using protocol forks
               </p>
               <p className="text-white tw-lead md:tw-title-sm mb-10 md:mb-20">
-                The Internet Computer is updated by a fully automated DAO
+                The BigFile is updated by a fully automated DAO
               </p>
               <p className="mb-0">
                 <Link href="/nns" className="link-white link-with-icon">
@@ -186,7 +186,7 @@ const Highlights: React.FC = () => {
                 Ethereum hosts unstoppable smart contract code
               </p>
               <p className="text-white tw-lead md:tw-title-sm mb-10 md:mb-20">
-                The Internet Computer can execute code on any blockchain and process any asset
+                The BigFile can execute code on any blockchain and process any asset
               </p>
               <p className="mb-0">
                 <Link

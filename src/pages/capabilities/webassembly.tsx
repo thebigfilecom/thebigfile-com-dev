@@ -18,7 +18,7 @@ function WebAssemblyPage() {
   return (
     <Layout
       title="WebAssembly on ICP"
-      description="An advantage of the Internet Computer blockchain is its use of WebAssembly for executing smart contracts and decentralized applications — written in a wide variety of languages that compile to WebAssembly."
+      description="An advantage of the BigFile blockchain is its use of WebAssembly for executing smart contracts and decentralized applications — written in a wide variety of languages that compile to WebAssembly."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-webassembly.jpg"></ShareMeta>
@@ -52,7 +52,7 @@ function WebAssemblyPage() {
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                A advantage of the Internet Computer blockchain is its
+                A advantage of the BigFile blockchain is its
                 use of WebAssembly for executing smart contracts and
                 decentralized applications — written in a wide variety of
                 languages that compile to WebAssembly.
@@ -85,13 +85,13 @@ function WebAssemblyPage() {
               variants={transitions.item}
             >
               WebAssembly was designed from the ground up to be secure, safe,
-              and fast. Such characteristics enable the Internet Computer to run
+              and fast. Such characteristics enable the BigFile to run
               scalable decentralized applications for clients and enterprises.
             </motion.h2>
 
             <motion.p className="mb-0" variants={transitions.item}>
               <Link href="https://medium.com/dfinity/webassembly-on-the-internet-computer-a1d0c71c5b94" className="link-primary link-with-icon">
-                Read how Internet Computer uses WebAssembly
+                Read how BigFile uses WebAssembly
                 <LinkArrowUpRight />
               </Link>
             </motion.p>
@@ -108,14 +108,14 @@ function WebAssemblyPage() {
                 Why WebAssembly
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                The Internet Computer executes the code of an application on
+                The BigFile executes the code of an application on
                 multiple decentralized nodes, which are operated by node providers who are selected and vetted by the NNS token holders. This replicated
                 execution works even in the presence of untrusted and
                 malicious nodes. A critical property for replicated execution is
                 its determinism, which refers to executing identical code with
                 the same inputs, invariably yielding the same result. This
                 deterministic execution is a fundamental feature upon which the
-                Internet Computer depends, and it's a guarantee provided by
+                BigFile depends, and it's a guarantee provided by
                 WebAssembly.
                 <br />
                 <br />
@@ -123,7 +123,7 @@ function WebAssemblyPage() {
                 computation, with benefits for both the server side of systems
                 and the client browser side. Its ecosystem is continuously
                 growing thanks to contributions from industry, academia, and
-                open source enthusiasts. The Internet Computer is a secure
+                open source enthusiasts. The BigFile is a secure
                 platform to run server WebAssembly components and code in a more
                 distributed and secure execution environment where developers
                 and enterprises can leverage all this work to build powerful
@@ -135,7 +135,7 @@ function WebAssemblyPage() {
                 WebAssembly and Cloud
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                The Internet Computer aims to bring decentralization and
+                The BigFile aims to bring decentralization and
                 statefulness to cloud computing. Conversely, it can be also
                 viewed as bringing cloud features such as fast, scalable,
                 general-purpose computation into the domain of blockchain.
@@ -164,7 +164,7 @@ function WebAssemblyPage() {
                 WebAssembly and EVM are similar in the sense that they both are
                 virtual machines for blockchains. The main difference is that
                 WebAssembly is general-purpose and supports many programming
-                languages. WebAssembly on the Internet Computer provides several
+                languages. WebAssembly on the BigFile provides several
                 orders of magnitudes higher compute and storage capacity to its
                 applications.
                 <br />
@@ -340,17 +340,17 @@ function WebAssemblyPage() {
 
             <CardWithDescription
               title="Motoko"
-              description="The Internet Computer’s native language, designed to support all features ICP has to offer, and has a less steep learning curve compared to Rust. Supported, and maintained by DFINITY."
+              description="The BigFile’s native language, designed to support all features ICP has to offer, and has a less steep learning curve compared to Rust. Supported, and maintained by DFINITY."
               href="/docs/current/motoko/main/getting-started/motoko-introduction"
             />
             <CardWithDescription
               title="TypeScript"
-              description="Developed by Demergent Labs, Azle is a TypeScript CDK for the Internet Computer enabling developers to write canisters using JavaScript."
+              description="Developed by Demergent Labs, Azle is a TypeScript CDK for the BigFile enabling developers to write canisters using JavaScript."
               href="https://github.com/demergent-labs/azle"
             />
             <CardWithDescription
               title="Python"
-              description="Developed by Demergent Labs, Kybra is a Python CDK for the Internet Computer. In other words, it's a Python runtime for building canisters on ICP."
+              description="Developed by Demergent Labs, Kybra is a Python CDK for the BigFile. In other words, it's a Python runtime for building canisters on ICP."
               href="https://github.com/demergent-labs/kybra"
             />
           </AnimateSpawn>

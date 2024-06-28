@@ -19,7 +19,7 @@ internet_identity_interface.workspace = true
 vc_util.workspace = true
 identity_jose = { git = "https://github.com/frederikrothenberger/identity.rs.git", branch = "frederik/wasm-test", default-features = false, features = ["iccs"]}
 
-# All IC deps
+# All BIG deps
 candid.workspace = true
 ic-cdk.workspace = true
 ic-representation-independent-hash.workspace = true

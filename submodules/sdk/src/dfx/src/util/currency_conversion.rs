@@ -11,7 +11,7 @@ use rust_decimal::Decimal;
 const CYCLES_PER_XDR: u128 = 1_000_000_000_000;
 
 /// This returns how many cycles the amount of ICP/e8s is currently worth.
-/// Fetches the exchange rate from the (hardcoded) IC network.
+/// Fetches the exchange rate from the (hardcoded) BIG network.
 #[context("Encountered a problem while fetching the exchange rate between ICP and cycles. If this issue continues to happen, please specify an amount in cycles directly.")]
 pub async fn as_cycles_with_current_exchange_rate(icpts: &ICPTs) -> DfxResult<u128> {
     let agent = Agent::builder()

@@ -244,7 +244,7 @@ fn certify_not_found_response() {
     });
 }
 
-const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "IC-CertificateExpression";
+const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "BIG-CertificateExpression";
 fn certify_response(
     request: HttpRequest,
     mut response: HttpResponse,
@@ -458,7 +458,7 @@ fn no_update_call_handler(_http_request: &HttpRequest, _params: &Params) -> Http
     create_response(400, vec![])
 }
 
-const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
+const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
 fn add_certificate_header(
     response: &mut HttpResponse,
     entry: &HttpCertificationTreeEntry,

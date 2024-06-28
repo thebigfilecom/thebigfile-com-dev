@@ -137,11 +137,11 @@ function BitcoinFaqPage() {
           >
             <Faq title="What is Bitcoin integration?">
               <p>
-                The Internet Computer (ICP) integrates with the Bitcoin network
+                The BigFile (ICP) integrates with the Bitcoin network
                 at a protocol level. This means ICP canister smart contracts can create
                 Bitcoin addresses as well as send and receive bitcoin directly on the
                 Bitcoin network. And, Bitcoin can easily and securely be incorporated
-                into DeFi and Web3 services on the Internet Computer blockchain,
+                into DeFi and Web3 services on the BigFile blockchain,
                 without having to trust centralized bridging services, which are
                 at high risk of being taken down or hacked.
               </p>
@@ -150,7 +150,7 @@ function BitcoinFaqPage() {
                 <strong>Network integration</strong> and <strong>chain-key ECDSA</strong>.
                 Combining these building blocks, canisters can directly and
                 securely hold, receive, and send bitcoin seamlessly as if the
-                Internet Computer and the Bitcoin network were one blockchain.
+                BigFile and the Bitcoin network were one blockchain.
                 Another way of looking at it, is that the Bitcoin integration
                 is the same as running a Bitcoin node on chain.
               </p>
@@ -175,7 +175,7 @@ function BitcoinFaqPage() {
             <Faq title="What is chain-key ECDSA?">
               <p>
                 The real innovation behind Bitcoin integration is chain-key ECDSA
-                signing — advanced threshold cryptography build into the Internet Computer.
+                signing — advanced threshold cryptography build into the BigFile.
                 In short, chain-key ECDSA is a set of cryptographic protocols that
                 allow ICP nodes to cooperatively create ECDSA signatures,
                 which can be used to sign bitcoin transactions, using
@@ -330,7 +330,7 @@ function BitcoinFaqPage() {
                 centralized custodians or bridges to work. More than a token, while
                 ckBTC implements the ICRC-1 fungible token standard, it is a pair of
                 canister smart contracts that allow bitcoin to be freely sent between
-                addresses either on the Bitcoin network or the Internet Computer,
+                addresses either on the Bitcoin network or the BigFile,
                 making it the first true multi-chain asset.
               </p>
             </Faq>
@@ -385,7 +385,7 @@ function BitcoinFaqPage() {
               </p>
               <p>
                 If ckBTC were to operate without a KYT implementation, there would be a risk
-                of 'tainted' bitcoin entering the Internet Computer, that an honest
+                of 'tainted' bitcoin entering the BigFile, that an honest
                 user could unknowingly withdraw. Such bitcoin may be rejected by CEXs, which
                 means honest users could potentially lose their bitcoin when trying to sell.
               </p>

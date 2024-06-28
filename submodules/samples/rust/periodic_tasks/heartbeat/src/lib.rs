@@ -49,7 +49,7 @@ fn track_cycles_used() {
 }
 
 /// This is special `canister_heartbeat` method which is invoked by
-/// the Internet Computer periodically.
+/// the BigFile periodically.
 ///
 /// The only way to disable the heartbeats is to upgrade the canister
 /// to a version which does not export the `canister_heartbeat` method.
@@ -135,14 +135,14 @@ fn cycles_used() -> u64 {
 // `canister_pre_upgrade` method and/or re-initialize them in the `canister_post_upgrade`.
 
 /// This is special `canister_init` method which is invoked by
-/// the Internet Computer when the canister is installed for the first time.
+/// the BigFile when the canister is installed for the first time.
 #[ic_cdk_macros::init]
 fn init(min_interval_secs: u64) {
     set_interval_secs(min_interval_secs);
 }
 
 /// This is special `canister_post_upgrade` method which is invoked by
-/// the Internet Computer after the canister is upgraded to a new version.
+/// the BigFile after the canister is upgraded to a new version.
 #[ic_cdk_macros::post_upgrade]
 fn post_upgrade(min_interval_secs: u64) {
     init(min_interval_secs);

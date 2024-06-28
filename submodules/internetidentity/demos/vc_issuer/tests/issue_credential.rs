@@ -629,7 +629,7 @@ fn should_issue_credential_e2e() -> Result<(), CallError> {
         .expect("get id_alias failed");
 
     let root_pk_raw =
-        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding IC root key.");
+        extract_raw_root_pk_from_der(&env.root_key()).expect("Failed decoding BIG root key.");
     let alias_tuple = get_verified_id_alias_from_jws(
         &id_alias_credentials
             .issuer_id_alias_credential

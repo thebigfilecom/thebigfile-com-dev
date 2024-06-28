@@ -118,7 +118,7 @@ test("Should fail validateDelegationAndGetPrincipal with wrong II canister id", 
   );
 });
 
-test("Should fail validateDelegationAndGetPrincipal with wrong IC root public key", () => {
+test("Should fail validateDelegationAndGetPrincipal with wrong BIG root public key", () => {
   const BAD_ROOT_PK = Uint8Array.from(ROOT_PUBLIC_KEY_RAW);
   BAD_ROOT_PK[42] += 1; // corrupt the public key
   const call = () =>

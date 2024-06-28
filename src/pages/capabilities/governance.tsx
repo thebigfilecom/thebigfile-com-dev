@@ -34,7 +34,7 @@ function FeaturePage() {
                 <br />
                 While other blockchains take weeks or months to upgrade
                 (sometimes called hard fork) and typically require substantial
-                manual work and coordination to do so, the IC upgrades itself on
+                manual work and coordination to do so, the BIG upgrades itself on
                 a weekly basis.
                 <br />
                 <br />
@@ -81,17 +81,17 @@ function FeaturePage() {
             <YoutubeVideoEmbed
               videoId="mPjiO2bk2lI"
               className="mt-10 md:mt-10"
-              altText="Inside the Internet Computer | Upgrades"
+              altText="Inside the BigFile | Upgrades"
             ></YoutubeVideoEmbed>
 
             <h3>Proposals</h3>
             <p>
               Users submit NNS proposals to the NNS to update the code of the
-              IC:{" "}
-              <Link href="https://dashboard.internetcomputer.org/releases">
-                IC Releases
+              BIG:{" "}
+              <Link href="https://dashboard.thebigfile.com/releases">
+                BIG Releases
               </Link>{" "}
-              . Consequently, the IC can update itself many times faster than
+              . Consequently, the BIG can update itself many times faster than
               other blockchains.
             </p>
           </div>
@@ -106,14 +106,14 @@ function FeaturePage() {
             {/* add or remove CardWithDescription components on demand */}
 
             <CardWithDescription
-              title="Upgrading the Internet Computer Protocol"
+              title="Upgrading the BigFile Protocol"
               description="Medium blog post"
               href="https://medium.com/dfinity/upgrading-the-internet-computer-protocol-45bf6424b268"
             />
             <CardWithDescription
               title="Diver deeper into the NNS"
-              description="Take a deep dive into the Internet Computer's NNS and upgrading."
-              href="https://wiki.internetcomputer.org/wiki/NNS_Canisters"
+              description="Take a deep dive into the BigFile's NNS and upgrading."
+              href="https://wiki.thebigfile.com/wiki/NNS_Canisters"
             />
           </div>
         </section>

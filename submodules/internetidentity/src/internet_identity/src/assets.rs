@@ -50,11 +50,11 @@ static ASSET_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/../../dist");
 pub fn get_static_assets() -> Vec<Asset> {
     let mut assets = collect_assets(&ASSET_DIR, Some(fixup_html));
 
-    // Required to make II available on the identity.internetcomputer.org domain.
-    // See https://internetcomputer.org/docs/current/developer-docs/production/custom-domain/#custom-domains-on-the-boundary-nodes
+    // Required to make II available on the identity.thebigfile.com domain.
+    // See https://thebigfile.com/docs/current/developer-docs/production/custom-domain/#custom-domains-on-the-boundary-nodes
     assets.push(Asset {
         url_path: "/.well-known/ic-domains".to_string(),
-        content: b"identity.internetcomputer.org".to_vec(),
+        content: b"identity.thebigfile.com".to_vec(),
         encoding: ContentEncoding::Identity,
         content_type: ContentType::OCTETSTREAM,
     });

@@ -74,11 +74,11 @@ pub async fn xdr_permyriad_per_icp(agent: &Agent) -> DfxResult<u64> {
             b"certified_data",
         ],
     )
-    .context("The IC's certificate for the XDR <> ICP exchange rate could not be verified")?;
+    .context("The BIG's certificate for the XDR <> ICP exchange rate could not be verified")?;
     let tree = serde_cbor::from_slice::<HashTree<Vec<u8>>>(&certified_rate.hash_tree)?;
     ensure!(
         tree.digest() == witness,
-        "The CMC's certificate for the XDR <> ICP exchange rate did not match the IC's certificate"
+        "The CMC's certificate for the XDR <> ICP exchange rate did not match the BIG's certificate"
     );
     // we can trust the hash tree
     let lookup = tree.lookup_path([b"ICP_XDR_CONVERSION_RATE"]);

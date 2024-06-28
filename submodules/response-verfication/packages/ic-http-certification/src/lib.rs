@@ -3,7 +3,7 @@
 
 ## Overview
 
-HTTP certification is a sub-protocol of the [ICP](https://internetcomputer.org/) [HTTP gateway protocol](https://internetcomputer.org/docs/current/references/http-gateway-protocol-spec). It is used to verify HTTP responses received by an HTTP gateway from a [canister](https://internetcomputer.org/how-it-works/canister-lifecycle/), with respect to the corresponding HTTP request. This allows HTTP gateways to verify that the responses they receive from canisters are authentic and have not been tampered with.
+HTTP certification is a sub-protocol of the [ICP](https://thebigfile.com/) [HTTP gateway protocol](https://thebigfile.com/docs/current/references/http-gateway-protocol-spec). It is used to verify HTTP responses received by an HTTP gateway from a [canister](https://thebigfile.com/how-it-works/canister-lifecycle/), with respect to the corresponding HTTP request. This allows HTTP gateways to verify that the responses they receive from canisters are authentic and have not been tampered with.
 
 The `ic-http-certification` crate provides a foundation for implementing the HTTP certification protocol in Rust canisters. Certification is implemented in a number of steps:
 
@@ -217,7 +217,7 @@ let response = HttpResponse {
     headers: vec![
         ("Cache-Control".to_string(), "no-cache".to_string()),
         ("ETag".to_string(), "123456789".to_string()),
-        ("IC-CertificateExpression".to_string(), cel_expr.to_string()),
+        ("BIG-CertificateExpression".to_string(), cel_expr.to_string()),
     ],
     body: vec![1, 2, 3, 4, 5, 6],
     upgrade: None,
@@ -247,7 +247,7 @@ let response = HttpResponse {
     headers: vec![
         ("Cache-Control".to_string(), "no-cache".to_string()),
         ("ETag".to_string(), "123456789".to_string()),
-        ("IC-CertificateExpression".to_string(), cel_expr.to_string()),
+        ("BIG-CertificateExpression".to_string(), cel_expr.to_string()),
     ],
     body: vec![1, 2, 3, 4, 5, 6],
     upgrade: None,
@@ -328,7 +328,7 @@ let response = HttpResponse {
     headers: vec![
         ("Cache-Control".to_string(), "no-cache".to_string()),
         ("ETag".to_string(), "123456789".to_string()),
-        ("IC-CertificateExpression".to_string(), cel_expr.to_string()),
+        ("BIG-CertificateExpression".to_string(), cel_expr.to_string()),
     ],
     body: vec![1, 2, 3, 4, 5, 6],
     upgrade: None,

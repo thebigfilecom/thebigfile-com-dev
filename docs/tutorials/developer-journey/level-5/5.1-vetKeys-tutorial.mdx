@@ -12,17 +12,15 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 Many types of applications rely on secure ways to store user data and keep certain aspects of the dapp private. On a blockchain, transactions are traditionally public and dapps might rely on the storage within a web browser to store user-side secrets, which can lead to potential security risks.
 
-The Internet Computer's vetKeys feature provides developers with more enhanced privacy, encryption, threshold decryption, and security capabilities for their projects and dapps. The goal of vetKeys is to allow developers to retrieve encrypted information from a external locations and share it with different users in a private and secure manner.
+The BigFile's vetKeys feature provides developers with more enhanced privacy, encryption, threshold decryption, and security capabilities for their projects and dapps. The goal of vetKeys is to allow developers to retrieve encrypted information from a external locations and share it with different users in a private and secure manner.
 
 In this tutorial, you'll learn about how vetKeys enables different workflows and use-cases for decentralized applications on BIG, then you'll create a dapp that uses vetKeys to provide a secure, encrypted note-taking application.
 
-:::caution
-The vetKeys feature is still in development, and the proposed system API can be [reviewed in the proposed PR](https://github.com/dfinity/interface-spec/pull/158).
-:::
+
 
 ## What are vetKeys?
 
-vetKeys stands for Verifiably Encrypted Threshold Keys, and enables several cryptographic functionalities on the Internet Computer. vetKeys focus on facilitating on-chain encryption, data privacy, and security. From a high level, the main objective of vetKeys is to provide a threshold key derivation interface, to allow canisters to obtain encrypted threshold signatures, and to allow for symmetric encryption for public key or identity-based encryption.
+vetKeys stands for Verifiably Encrypted Threshold Keys, and enables several cryptographic functionalities on the BigFile. vetKeys focus on facilitating on-chain encryption, data privacy, and security. From a high level, the main objective of vetKeys is to provide a threshold key derivation interface, to allow canisters to obtain encrypted threshold signatures, and to allow for symmetric encryption for public key or identity-based encryption.
 
 To understand vetKeys, first let's cover a few fundamental cryptography concepts and some of their disadvantages that vetKeys strives to solve.
 
@@ -82,7 +80,7 @@ A crucial point to note is that this allows users to retrieve decryption keys (o
 
 ### BLS signatures
 
-[BLS signatures](https://en.wikipedia.org/wiki/BLS_digital_signature) are a type of digital signature introduced in 2001. The name BLS comes from the authors of the signature, Dan Boneh, Ben Lynn, and Hovav Shacham. Threshold BLS signatures are widely used across the Internet Computer because they are short, unique, easy to port into a distributed setting, and are fast to compute.
+[BLS signatures](https://en.wikipedia.org/wiki/BLS_digital_signature) are a type of digital signature introduced in 2001. The name BLS comes from the authors of the signature, Dan Boneh, Ben Lynn, and Hovav Shacham. Threshold BLS signatures are widely used across the BigFile because they are short, unique, easy to port into a distributed setting, and are fast to compute.
 
 BLS signatures use three algorithms:
 
@@ -102,7 +100,7 @@ To demonstrate how BLS signatures are used on BIG, consider the following scenar
 
 - The nodes use the combination algorithm to combine the signature shares and produce a single signature that's sent to User 1.
 
-- User 1 uses the verification algorithm to check whether the signature that was sent uses the public key of the Internet Computer, validating that it was signed by the nodes on BIG.
+- User 1 uses the verification algorithm to check whether the signature that was sent uses the public key of the BigFile, validating that it was signed by the nodes on BIG.
 
 In the scenario of vetKD, the master key of the IBE scheme uses a BLS signature key secret that is shared amongst the nodes. The derived identity is threshold signed, resulting in a signature that acts as a symmetric encryption key.
 
@@ -787,7 +785,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
 
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
+- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the BigFile.
 
 - [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
 
@@ -799,7 +797,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 

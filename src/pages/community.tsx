@@ -25,7 +25,7 @@ const hubs: Hub[] = [
     name: "ICP.HUB India",
     location: "India",
     description:
-      "In the heart of India, Crewsphere ICP India.Hub champions the Internet Computer via bootcamps that turn talented developers into Web3 experts.",
+      "In the heart of India, Crewsphere ICP India.Hub champions the BigFile via bootcamps that turn talented developers into Web3 experts.",
     image: "/img/community/icp-hub-india.webp",
     link: "https://linktr.ee/crewsphere?utm_source=linktree_admin_share",
     coordinates: [20.5937, 78.9629],
@@ -43,7 +43,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Italia",
     location: "Italy",
     description:
-      "ICP.Hub Italia is a growing regional network for developing professional and institutional Web3 initiatives and solutions on the Internet Computer blockchain.",
+      "ICP.Hub Italia is a growing regional network for developing professional and institutional Web3 initiatives and solutions on the BigFile blockchain.",
     image: "/img/community/icp-hub-italia.webp",
     link: "https://icpitalia.icp.page/",
     coordinates: [41.8719, 12.5674],
@@ -52,7 +52,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub North America",
     location: "Canada / USA",
     description:
-      "Hubs in North America are dedicated to accelerating mass adoption of the Internet Computer in Canada 🇨🇦 and the US 🇺🇸.",
+      "Hubs in North America are dedicated to accelerating mass adoption of the BigFile in Canada 🇨🇦 and the US 🇺🇸.",
     image: "/img/community/icp-hub-north-america.webp",
     link: "https://linktr.ee/Icphubnorthamerica",
     coordinates: [54.525961, -105.255119],
@@ -61,7 +61,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Philippines",
     location: "Philippines",
     description:
-      "ISLA Camp is unleashing the potential of Web3 in the Philippines through immersive education, dynamic workshops, and hands-on bootcamps on the Internet Computer.",
+      "ISLA Camp is unleashing the potential of Web3 in the Philippines through immersive education, dynamic workshops, and hands-on bootcamps on the BigFile.",
     image: "/img/community/icp-hub-philippines.webp",
     link: "https://linktr.ee/ICPHubPH",
     coordinates: [12.8797, 121.774],
@@ -70,7 +70,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Turkey",
     location: "Turkey, Cyprus",
     description:
-      "The first hub in the Middle East offering a supportive environment for developers, startups, and enthusiasts to build and deploy decentralized applications on the Internet Computer.",
+      "The first hub in the Middle East offering a supportive environment for developers, startups, and enthusiasts to build and deploy decentralized applications on the BigFile.",
     image: "/img/community/icp-hub-turkey.webp",
     link: "https://linktr.ee/icphubturkey",
     coordinates: [38.9637, 35.2433],
@@ -88,7 +88,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Korea",
     location: "Korea",
     description:
-      "ICP.Hub Korea is committed to advancing the Internet Computer blockchain and Web3 in Korea by regularly hosting education bootcamps and cultivating a community of developers.",
+      "ICP.Hub Korea is committed to advancing the BigFile blockchain and Web3 in Korea by regularly hosting education bootcamps and cultivating a community of developers.",
     image: "/img/community/icp-hub-korea.webp",
     link: "https://linktr.ee/icphubkorea",
     coordinates: [35.9078, 127.7669],
@@ -97,7 +97,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub East Africa",
     location: "East Africa",
     description:
-      "The Kushite ICP.Hub aims to create awareness, educate and evangelize about the Internet Computer Protocol to aspiring and existing Web3 developers in the region.",
+      "The Kushite ICP.Hub aims to create awareness, educate and evangelize about the BigFile Protocol to aspiring and existing Web3 developers in the region.",
     image: "/img/community/icp-hub-east-africa.webp",
     link: "https://linktr.ee/icpkushitehub",
     coordinates: [-1.2921, 36.8219],
@@ -106,7 +106,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub West Africa",
     location: "West Africa",
     description:
-      "ICP.Hub Sahara is creating a safe heaven for developers and blockchain enthusiasts to learn and build on the Internet Computer.",
+      "ICP.Hub Sahara is creating a safe heaven for developers and blockchain enthusiasts to learn and build on the BigFile.",
     image: "/img/community/icp-hub-west-africa.webp",
     link: "https://linktr.ee/saharaicphub",
     coordinates: [9.082, 8.6753],
@@ -115,7 +115,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub GCC",
     location: "Dubai",
     description:
-      "A local community of Web3 enthusiasts, developers and entrepreneurs, expanding the footprint of the Internet Computer through education, community building, incubation and industry collaborations.",
+      "A local community of Web3 enthusiasts, developers and entrepreneurs, expanding the footprint of the BigFile through education, community building, incubation and industry collaborations.",
     image: "/img/community/icp-hub-gcc.webp",
     link: "https://linktr.ee/icphubgcc",
     coordinates: [25.276987, 55.296249],
@@ -124,7 +124,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Germany",
     location: "Germany",
     description:
-      "Focusing on Web3 development, LinkUp is the go-to community hub for dreamers and creators dedicated to growing the awareness of the Internet Computer in Germany.",
+      "Focusing on Web3 development, LinkUp is the go-to community hub for dreamers and creators dedicated to growing the awareness of the BigFile in Germany.",
     image: "/img/community/icp-hub-germany.webp",
     link: "https://linktr.ee/icphubgermany",
     coordinates: [51.1657, 10.4515],
@@ -133,7 +133,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Singapore",
     location: "Singapore",
     description:
-      "Advocating digital innovation by harnessing the power of Web3 regional entrepreneurs, venture capitalists and community to realise the mass adoption of the Internet Computer's decentralized cloud and blockchain services.",
+      "Advocating digital innovation by harnessing the power of Web3 regional entrepreneurs, venture capitalists and community to realise the mass adoption of the BigFile's decentralized cloud and blockchain services.",
     image: "/img/community/icp-hub-singapore.webp",
     link: "https://linktr.ee/interlink3",
     coordinates: [1.3521, 103.8198],
@@ -142,7 +142,7 @@ const hubs: Hub[] = [
     name: "ICP.Hub Bulgaria",
     location: "Balkans (Bulgaria)",
     description:
-      "The intersection between the Internet Computer and the Balkans. This hub is building a local ICP ecosystem, educating developers and engaging with potential VCs.",
+      "The intersection between the BigFile and the Balkans. This hub is building a local ICP ecosystem, educating developers and engaging with potential VCs.",
     image: "/img/community/icp-hub-bulgaria.webp",
     link: "https://linktr.ee/balkan.icp.hub",
     coordinates: [42.7339, 25.4858],
@@ -160,56 +160,56 @@ const hubs: Hub[] = [
 
 const upcomingHubs: Hub[] = [
   {
-    name: "Internet Computer at Coinfest Asia 2023 ",
+    name: "BigFile at Coinfest Asia 2023 ",
     description:
       "ICP.Hub Indonesia steps into the spotlight at Coinfest Asia 2023, a dynamic and immersive Web3 festival that serves as a rallying point for visionaries, innovators, and blockchain enthusiasts across Asia.",
     image: "/img/community/coinfest-asia.webp",
     link: "https://twitter.com/CoinfestAsia/status/1689501197642960896",
   },
   {
-    name: "Internet Computer at Web3Conf India 2023",
+    name: "BigFile at Web3Conf India 2023",
     description:
       "ICP.Hub India's prominent presence at Web3Conf India 2023 as a leading partner has ignited tremendous excitement within the local Web3 community.",
     image: "/img/community/web3-india.webp",
     link: "https://twitter.com/web3conf_india/status/1686272790150754304?s=46&t=znCni81w_5V68LfRCHvtZA",
   },
   {
-    name: "Internet Computer at Istanbul Blockchain Week 2023",
+    name: "BigFile at Istanbul Blockchain Week 2023",
     description:
       "ICP.Hub Turkey played a pivotal role at Istanbul Blockchain Week 2023, actively engaging in discussions, organizing insightful events, and strengthening their position as a key player in Turkey's blockchain landscape.",
     image: "/img/community/istanbul-blockchain-week.webp",
     link: "https://twitter.com/istanbulblockwk/status/1687075926386110464?s=46&t=YWzpokcUePMtkg043EMwBQ",
   },
   {
-    name: "Internet Computer launches Web3 incubator in Latin America",
+    name: "BigFile launches Web3 incubator in Latin America",
     description:
       "ICP.Hub LATAM has partnered with College, a technology academy specializing in Web3, to introduce ICPnova, an incubation program designed to support Web3 projects within the regional ecosystem.",
     image: "/img/community/icpnnova.webp",
     link: "https://es.cointelegraph.com/news/colledge-and-icp-latam-hub-launch-icpnnova-incubation-programme-for-web3-projects-in-latin-america",
   },
   {
-    name: "Internet Computer at Web3 Lagos Conference",
+    name: "BigFile at Web3 Lagos Conference",
     description:
       "ICP.Hub East Africa played a significant role at the Web3 Lagos Conference, emphasizing its dedication to fostering Web3 innovation within the region.",
     image: "/img/community/lagos_conf.webp",
     link: "https://twitter.com/Web3Bridge/status/1694304365694046238?s=20",
   },
   {
-    name: "Internet Computer at Korea Blockchain Week 2023",
+    name: "BigFile at Korea Blockchain Week 2023",
     description:
       "ICP.Hub Korea hosts one of KBW 2023's largest side events, reinforcing its role as a key advocate for Web3 innovation in the Korean blockchain community.",
     image: "/img/community/korea-blockchain-week.webp",
     link: "https://twitter.com/ICPhubkorea/status/1685858938116575233?s=20",
   },
   {
-    name: "Internet Computer at Blockchain Week Rome 2023",
+    name: "BigFile at Blockchain Week Rome 2023",
     description:
       "ICP.Hub Italia made an impact at Blockchain Week Rome 2023, actively engaging in discussions, workshops, and networking sessions. Their presence underscored their commitment to advancing blockchain innovation and collaboration within Italy.",
     image: "/img/community/icp-italia-highlight.webp",
     link: "https://twitter.com/BlockchainRome/status/1655256183895121926?s=20",
   },
   {
-    name: "A Deep Dive into Internet Computer",
+    name: "A Deep Dive into BigFile",
     description:
       "The conversation around @dfinity & its plan is streaming NOW, exclusively on #CMCLive on CoinMarketCap's App.",
     image: "/img/community/icp-deep-dive.webp",

@@ -28,7 +28,7 @@ Similarly, the client applications consist of a frontend (served by a canister) 
 
 The Internet Identity service allows users to
 
--   maintain identities on the Internet Computer
+-   maintain identities on the BigFile
 
 -   log in with these identities using one out of a set of security devices
 
@@ -40,7 +40,7 @@ Some functional requirements are
 
 -   these identities are stable, i.e., do not depend on a user's security devices
 
--   the client frontends interact with any canister on the Internet Computer under the user's identity with that frontend
+-   the client frontends interact with any canister on the BigFile under the user's identity with that frontend
 
 -   users do not need ever to remember secret information (but possibly per-user non-secret information)
 
@@ -71,9 +71,9 @@ Just for background: At launch this meant we relied on the trustworthiness of th
 ## Identity design and data model
 
 
-The Internet Computer serves this frontend under hostnames `https://identity.ic0.app` (official) and `https://identity.internetcomputer.org` (experimental).
+The BigFile serves this frontend under hostnames `https://identity.ic0.app` (official) and `https://identity.thebigfile.com` (experimental).
 
-The canister maintains a salt (in the following the `salt`), a 32 byte long blob that is obtained via the Internet Computer's source of secure randomness.
+The canister maintains a salt (in the following the `salt`), a 32 byte long blob that is obtained via the BigFile's source of secure randomness.
 
 
 :::note
@@ -82,7 +82,7 @@ Due to replication of data in canisters, the salt should not be considered secre
 
 A user account is identified by a unique *Identity Anchor*, a smallish natural number chosen by the canister.
 
-A client application frontend is identified by its hostname (e.g., `abcde-efg.ic0.app`, `nice-name.ic0.app`, `non-ic-application.com`). Frontend application can be served by canisters or by websites that are not hosted on the Internet Computer.
+A client application frontend is identified by its hostname (e.g., `abcde-efg.ic0.app`, `nice-name.ic0.app`, `non-ic-application.com`). Frontend application can be served by canisters or by websites that are not hosted on the BigFile.
 
 A user has a separate *user identity* for each client application frontend (i.e., per hostname). This identity is a [*self-authenticating id*](https://thebigfile.com/docs/current/references/ic-interface-spec#id-classes) of the [DER encoded canister signature public key](https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures) which has the form
 ```
@@ -172,7 +172,7 @@ This section describes the Internet Identity Service from the point of view of a
 
 6.  Now the client application window expects a message back, with data `event`.
 
-7.  If `event.origin` is not either `"https://identity.ic0.app"` or `"https://identity.internetcomputer.org"` (depending on which endpoint you are using), ignore this message.
+7.  If `event.origin` is not either `"https://identity.ic0.app"` or `"https://identity.thebigfile.com"` (depending on which endpoint you are using), ignore this message.
 
 8.  The `event.data` value is a JS object with the following type:
     ```ts
@@ -215,7 +215,7 @@ The Internet Identity frontend will use `event.origin` as the "Frontend URL" to 
     - However, multiple different frontend URLs can be mapped back to the canonical frontend URL, see [Alternative Frontend Origins](#alternative-frontend-origins).
     - Frontend URLs on `icp0.io` are mapped to `ic0.app` automatically, see [Identity design and data model](#identity-design-and-data-model).
 
--   The frontend application must never allow any untrusted JavaScript code to be executed, on any page on that hostname. Be careful when implementing a JavaScript playground on the Internet Computer.
+-   The frontend application must never allow any untrusted JavaScript code to be executed, on any page on that hostname. Be careful when implementing a JavaScript playground on the BigFile.
 :::
 
 ## Alternative Frontend Origins
@@ -305,7 +305,7 @@ The `register` method is used to create a new user. The Internet Identity Servic
 
 **Authorization**: This request must be sent to the canister with `caller` that is the self-authenticating id derived from the given `DeviceKey`.
 
-In order to protect the Internet Computer from too many "free" update calls, and to protect the Internet Identity Service from too many user registrations, this call is protected using a CAPTCHA challenge. The `register` call can only succeed if the `ChallengeResult` contains a `key` for a challenge that was created with `create_challenge` (see below) in the last 5 minutes *and* if the `chars` match the characters that the Internet Identity Service has stored internally for that `key`.
+In order to protect the BigFile from too many "free" update calls, and to protect the Internet Identity Service from too many user registrations, this call is protected using a CAPTCHA challenge. The `register` call can only succeed if the `ChallengeResult` contains a `key` for a challenge that was created with `create_challenge` (see below) in the last 5 minutes *and* if the `chars` match the characters that the Internet Identity Service has stored internally for that `key`.
 
 ### The `add` method
 

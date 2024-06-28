@@ -112,11 +112,11 @@ The command line value will be used.",
         (None, None) => None,
     };
 
-    // If the network is IC mainnet, the specified ID will be overwritten by None.
+    // If the network is BIG mainnet, the specified ID will be overwritten by None.
     if env.get_network_descriptor().is_ic && specified_id.is_some() {
         warn!(
             env.get_logger(),
-            "Specified ID is ignored on the IC mainnet."
+            "Specified ID is ignored on the BIG mainnet."
         );
         specified_id = None;
     }

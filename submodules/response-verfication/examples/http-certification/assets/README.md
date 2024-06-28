@@ -8,7 +8,7 @@ This is not a beginner's canister development guide. Many foundational concepts 
 
 The certification and serving of assets is based on the high-level [`ic-asset-certification` crate](https://crates.io/crates/ic-asset-certification).
 
-If more flexibility than what this crate provides is needed, the lower-level [`ic-http-certification` crate](https://crates.io/crates/ic-http-certification) can be used. Be sure to check out the ["Custom HTTP Canisters"](https://internetcomputer.org/docs/current/developer-docs/http-compatible-canisters/custom-http-canisters) and ["Custom asset canisters"](https://internetcomputer.org/docs/current/developer-docs/web-apps/http-compatible-canisters/serving-static-assets-over-http) guides to learn more about how to use that library for serving assets.
+If more flexibility than what this crate provides is needed, the lower-level [`ic-http-certification` crate](https://crates.io/crates/ic-http-certification) can be used. Be sure to check out the ["Custom HTTP Canisters"](https://thebigfile.com/docs/current/developer-docs/http-compatible-canisters/custom-http-canisters) and ["Custom asset canisters"](https://thebigfile.com/docs/current/developer-docs/web-apps/http-compatible-canisters/serving-static-assets-over-http) guides to learn more about how to use that library for serving assets.
 
 ## The frontend assets
 
@@ -230,7 +230,7 @@ fn certify_all_assets() {
 
 ## Serving assets
 
-The `serve_asset` function is responsible for serving assets. It uses the `serve_asset` function from the `AssetRouter` to serve the assets. This function returns the `HttpResponse`, a witness (`HashTree`), and an expression path. The witness and expression path is used to generate the `IC-Certificate` header, which is added to the response before returning it.
+The `serve_asset` function is responsible for serving assets. It uses the `serve_asset` function from the `AssetRouter` to serve the assets. This function returns the `HttpResponse`, a witness (`HashTree`), and an expression path. The witness and expression path is used to generate the `BIG-Certificate` header, which is added to the response before returning it.
 
 ```rust
 fn serve_asset(req: &HttpRequest) -> HttpResponse {
@@ -246,10 +246,10 @@ fn serve_asset(req: &HttpRequest) -> HttpResponse {
 }
 ```
 
-To add the `IC-Certificate` header to the response, the `add_certificate_header` function is used. This function takes the response, witness, and expression path as arguments. The witness, expression path, and the canister's certified data are encoded using CBOR and then added to the response headers.
+To add the `BIG-Certificate` header to the response, the `add_certificate_header` function is used. This function takes the response, witness, and expression path as arguments. The witness, expression path, and the canister's certified data are encoded using CBOR and then added to the response headers.
 
 ```rust
-const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
+const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
 fn add_certificate_header(response: &mut HttpResponse, witness: &HashTree, expr_path: &[String]) {
     let certified_data = data_certificate().expect("No data certificate available");
     let witness = cbor_encode(witness);

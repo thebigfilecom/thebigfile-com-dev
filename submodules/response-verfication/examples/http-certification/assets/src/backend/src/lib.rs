@@ -148,7 +148,7 @@ fn get_asset_headers(additional_headers: Vec<HeaderField>) -> Vec<HeaderField> {
     headers
 }
 
-const IC_CERTIFICATE_HEADER: &str = "IC-Certificate";
+const IC_CERTIFICATE_HEADER: &str = "BIG-Certificate";
 fn add_certificate_header(response: &mut HttpResponse, witness: &HashTree, expr_path: &[String]) {
     let certified_data = data_certificate().expect("No data certificate available");
     let witness = cbor_encode(witness);

@@ -2,9 +2,9 @@
 	"name": "sveltekit-starter",
 	"version": "0.1.0",
 	"private": true,
-	"description": "Internet Computer SvelteKit starter application",
+	"description": "BigFile SvelteKit starter application",
 	"keywords": [
-		"Internet Computer",
+		"BigFile",
 		"Motoko",
 		"JavaScript",
 		"Canister",

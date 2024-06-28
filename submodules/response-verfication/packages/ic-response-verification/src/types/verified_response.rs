@@ -11,7 +11,7 @@ interface VerifiedResponse {
 }
 "#;
 
-/// Represents a certified Response from the [Internet Computer](https://internetcomputer.org).
+/// Represents a certified Response from the [BigFile](https://thebigfile.com).
 #[derive(Debug, PartialEq, Eq)]
 pub struct VerifiedResponse {
     /// The HTTP status code of the response, i.e. 200.

@@ -95,5 +95,5 @@ teardown() {
   PORT=$(get_webserver_port)
 
   assert_command curl -vv http://localhost:"$PORT"/index.html?canisterId="$ID"
-  assert_match "IC Hello Starter"
+  assert_match "BIG Hello Starter"
 }

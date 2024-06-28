@@ -67,7 +67,7 @@ dfx start --clean
 If you see an error `Failed to set socket of tcp builder to 0.0.0.0:8000`, make sure that the port `8000` is not occupied, e.g., by the previously run Docker command (you might want to stop the Docker daemon whatsoever for this step).
 :::
 
-### Step 7: Install a local [Internet Identity (II)](https://wiki.internetcomputer.org/wiki/What_is_Internet_Identity) canister:
+### Step 7: Install a local [Internet Identity (II)](https://wiki.thebigfile.com/wiki/What_is_Internet_Identity) canister:
 
 :::info 
 If you have multiple `dfx` identities set up, ensure you are using the identity you intend to use with the `--identity` flag.

@@ -142,7 +142,7 @@ mod tests {
         let not_found_response = HttpResponse {
             status_code: 400,
             body: br#"404 Not Found"#.to_vec(),
-            headers: vec![("IC-CertificateExpression".into(), cel_expr.to_string())],
+            headers: vec![("BIG-CertificateExpression".into(), cel_expr.to_string())],
             upgrade: None,
         };
 
@@ -155,7 +155,7 @@ mod tests {
         let hello_world_response = HttpResponse {
             status_code: 200,
             body: br#"console.log("Hello, World!")"#.to_vec(),
-            headers: vec![("IC-CertificateExpression".into(), cel_expr.to_string())],
+            headers: vec![("BIG-CertificateExpression".into(), cel_expr.to_string())],
             upgrade: None,
         };
 
@@ -231,7 +231,7 @@ mod tests {
         let not_found_response = HttpResponse {
             status_code: 400,
             body: br#"404 Not Found"#.to_vec(),
-            headers: vec![("IC-CertificateExpression".into(), cel_expr.to_string())],
+            headers: vec![("BIG-CertificateExpression".into(), cel_expr.to_string())],
             upgrade: None,
         };
 
@@ -271,7 +271,7 @@ mod tests {
         let index_html_response = HttpResponse {
             status_code: 400,
             body: index_html_body,
-            headers: vec![("IC-CertificateExpression".into(), cel_expr.to_string())],
+            headers: vec![("BIG-CertificateExpression".into(), cel_expr.to_string())],
             upgrade: None,
         };
 

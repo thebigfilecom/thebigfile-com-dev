@@ -116,7 +116,7 @@ impl SignatureMap {
 
     /// Retrieves from this map and returns canister signature for the specified `seed` and `message_hash`.
     /// If the canister uses
-    /// [certified_data](https://internetcomputer.org/docs/current/references/ic-interface-spec/#system-api-certified-data)
+    /// [certified_data](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-certified-data)
     /// to manage certified assets, the caller should provide also the root hash of the assets subtree
     /// (cf. `asset_util`-crate).
     /// The returned value (if found) is a CBOR-serialised `CanisterSig`.

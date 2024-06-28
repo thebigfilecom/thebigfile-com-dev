@@ -1,5 +1,5 @@
-# A GitHub Actions workflow that regularly creates a pull request to update the IC artefacts
-name: IC Artefacts Update
+# A GitHub Actions workflow that regularly creates a pull request to update the BIG artefacts
+name: BIG Artefacts Update
 
 on:
   schedule:
@@ -75,12 +75,12 @@ jobs:
           token: ${{ secrets.GIX_BOT_PAT }}
           base: main
           add-paths: ./.ic-commit
-          commit-message: Update commit of IC artefacts
+          commit-message: Update commit of BIG artefacts
           committer: GitHub <noreply@github.com>
           author: gix-bot <gix-bot@users.noreply.github.com>
           branch: bot-ic-update
           delete-branch: true
-          title: 'Update commit of IC artefacts'
+          title: 'Update commit of BIG artefacts'
 
             # Since the this is a scheduled job, a failure won't be shown on any
             # PR status. To notify the team, we send a message to our Slack channel on failure.
@@ -89,4 +89,4 @@ jobs:
         if: ${{ failure() }}
         with:
           WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          MESSAGE: "IC artefacts update failed"
+          MESSAGE: "BIG artefacts update failed"

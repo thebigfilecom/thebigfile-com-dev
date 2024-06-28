@@ -75,7 +75,7 @@ export const authnTemplateManage = ({
   return {
     firstTime: {
       slot: wrap({
-        title: "Securely connect to dapps on the Internet Computer",
+        title: "Securely connect to dapps on the BigFile",
         showDapps: true,
       }),
       useExistingText: "Use existing",

@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-When you have a canister running, either locally or on the mainnet, you have two primary ways for interacting with the canister: using the API through an agent, or using the canister's HTTP interface. On the Internet Computer, an **agent** is a library used to make calls to BIG's public interface.
+When you have a canister running, either locally or on the mainnet, you have two primary ways for interacting with the canister: using the API through an agent, or using the canister's HTTP interface. On the BigFile, an **agent** is a library used to make calls to BIG's public interface.
 
 ## What does an agent do?
 
@@ -35,7 +35,7 @@ Once a response has been returned from the mainnet, the agent takes the certific
 
 ### Managing authentication
 
-Each call to the Internet Computer mainnet needs to have a cryptographic identity attached to the call. This identity can be anonymous or authenticated using a cryptographic signature. Canisters use a call's attached identity to determine how to respond to the call, which enables smart contracts to use identities for other purposes as well.
+Each call to the BigFile mainnet needs to have a cryptographic identity attached to the call. This identity can be anonymous or authenticated using a cryptographic signature. Canisters use a call's attached identity to determine how to respond to the call, which enables smart contracts to use identities for other purposes as well.
 
 #### Accepted identities
 
@@ -152,7 +152,7 @@ export const idlFactory = ({ IDL }) => {
 export const init = ({ IDL }) => { return []; };
 ```
 
-In this file, the `idlFactory` function is defined. This handles the structuring of the network calls according to the Internet Computer API and the application's Candid declaration. Unlike the declarations in the `src/declarations/random_maze/random_maze.did.d.ts` file, the `idlFactory` must be available during the application's runtime. To accomplish this, the `idlFactory` gets loaded by an actor.
+In this file, the `idlFactory` function is defined. This handles the structuring of the network calls according to the BigFile API and the application's Candid declaration. Unlike the declarations in the `src/declarations/random_maze/random_maze.did.d.ts` file, the `idlFactory` must be available during the application's runtime. To accomplish this, the `idlFactory` gets loaded by an actor.
 
 In this example, the `idlFactory` represents a service with a `generate` method using the same two arguments you defined before (type `Nat` and type `Text`), though it includes a third argument of an empty array, which represents additional annotations that the function may be tagged with, such as 'query'.
 
@@ -254,7 +254,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
 
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
+- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the BigFile.
 
 - [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
 
@@ -266,7 +266,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 

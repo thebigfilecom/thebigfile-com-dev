@@ -1,6 +1,6 @@
 [package]
 name = "vc_util"
-description = "Utils for verifiable credentials on the IC"
+description = "Utils for verifiable credentials on the BIG"
 version = "0.1.0"
 edition = "2021"
 

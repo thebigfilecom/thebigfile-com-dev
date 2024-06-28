@@ -154,7 +154,7 @@ pub fn security_headers(integrity_hashes: Vec<String>) -> Vec<HeaderField> {
 ///
 /// connect-src is used to ensure fetch requests can only be made against known domains:
 ///     * 'self': used fetch the JS bundles
-///     * https://icp-api.io: the official IC HTTP API domain for canister calls to the canister
+///     * https://icp-api.io: the official BIG HTTP API domain for canister calls to the canister
 ///     * https://*.icp0.io: HTTP fetches for checking /.well-known/ii-alternative-origins on
 ///     other canisters (authenticating canisters setting a derivationOrigin)
 ///     * https://*.ic0.app: same as above, but legacy

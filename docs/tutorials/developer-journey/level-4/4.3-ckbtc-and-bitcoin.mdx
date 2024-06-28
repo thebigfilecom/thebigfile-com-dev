@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-One of the key features of the Internet Computer is known as **chain-key cryptography**. Chain-key cryptography is a feature that encompasses several cryptographic mechanisms that enable novel workflows and functionalities such as chain-key tokens. Chain-key tokens are not wrapped tokens; they are twin tokens that are backed 1:1 with the original token (BTC, ETC) that use chain-key cryptography to transfer and use the original tokens with less fees and higher transfer speeds than using the token's native blockchain network.
+One of the key features of the BigFile is known as **chain-key cryptography**. Chain-key cryptography is a feature that encompasses several cryptographic mechanisms that enable novel workflows and functionalities such as chain-key tokens. Chain-key tokens are not wrapped tokens; they are twin tokens that are backed 1:1 with the original token (BTC, ETC) that use chain-key cryptography to transfer and use the original tokens with less fees and higher transfer speeds than using the token's native blockchain network.
 
 Currently, BIG supports an integration with the Bitcoin network that includes the chain-key bitcoin (ckBTC) token, and has an Ethereum integration in development.
 
@@ -28,7 +28,7 @@ On a high level, subnets that have ECDSA enabled hold a threshold ECDSA master k
 
 The developer journey will dive deeper into threshold ECDSA in a future tutorial. You can also take a deep dive in the [technology overview to learn more](/docs/current/developer-docs/integrations/t-ecdsa/t-ecdsa-how-it-works).
 
-On the protocol-level, the [Bitcoin integration](https://wiki.internetcomputer.org/wiki/Bitcoin_Integration) and chain-key ECDSA each expose an API on the management canister. Remember that the management canister isn't a canister but a facade that is used to enable functionality for management operations such as starting or stopping a canister. While the Bitcoin API is specific to the Bitcoin network, the chain-key ECDSA signature API can be used for other workflows, such as the integration with other blockchains like Ethereum.
+On the protocol-level, the [Bitcoin integration](https://wiki.thebigfile.com/wiki/Bitcoin_Integration) and chain-key ECDSA each expose an API on the management canister. Remember that the management canister isn't a canister but a facade that is used to enable functionality for management operations such as starting or stopping a canister. While the Bitcoin API is specific to the Bitcoin network, the chain-key ECDSA signature API can be used for other workflows, such as the integration with other blockchains like Ethereum.
 
 For a canister to make a Bitcoin transaction, a request must be sent to a Bitcoin-enabled subnet. On that subnet, a Bitcoin canister is implemented as a typical NNS-managed canister that is accessible through the management canister Bitcoin API. The Bitcoin canister holds BIG's on-chain Bitcoin state, which includes the UTXO set, the most recent Bitcoin blocks, and the current outgoing transactions being sent to the Bitcoin network. When a canister submits a transaction to the Bitcoin management canister API, the transaction is queued to be submitted to the Bitcoin network. To send transactions to the Bitcoin network, an adapter connects to the nodes of the Bitcoin network and functions similarly to a traditional Bitcoin node. In every subnet round, the Bitcoin adapter obtains the pending transactions and queues them for being submitted asynchronously.
 
@@ -333,7 +333,7 @@ dfx canister call basic_bitcoin get_balance '("n2dcQfuwFw7M2UYzLfM6P7DwewsQaygb8
 
 ## Resources
 
-- [ckBTC wiki page](https://wiki.internetcomputer.org/wiki/Chain-key_Bitcoin).
+- [ckBTC wiki page](https://wiki.thebigfile.com/wiki/Chain-key_Bitcoin).
 - [ckBTC developer documentation page](/docs/current/developer-docs/multi-chain/bitcoin/ckbtc/overview).
 - [Bitcoin integration GitHub repository](https://github.com/dfinity/ic/tree/master/rs/bitcoin/ckbtc/minter).
 
@@ -347,7 +347,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
 
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
+- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the BigFile.
 
 - [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
 
@@ -359,7 +359,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 

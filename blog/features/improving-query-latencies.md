@@ -1,6 +1,6 @@
 ---
 title: Improving query execution latencies
-description: The improved in-replica caching reduces query execution latencies on the Internet Computer.
+description: The improved in-replica caching reduces query execution latencies on the BigFile.
 tags: [Technology]
 author: Andriy Berestovskyy
 image: /img/blog/query-latency.webp
@@ -13,16 +13,16 @@ image: /img/blog/query-latency.webp
 *This article was originally published on the DFINITY Medium blog [here](https://medium.com/dfinity/improving-query-latencies-f5bb2bc019dd) by Andriy Berestovskyy.*
 
 ## Background
-The Internet Computer can host a full dapp — frontend, backend, and data. Users can deploy their dapp as a canister (smart contract).
+The BigFile can host a full dapp — frontend, backend, and data. Users can deploy their dapp as a canister (smart contract).
 
-Just like HTTP `POST` and `GET` methods, the Internet Computer Protocol supports two types of messages: updates and queries. An update message is executed on all subnet nodes and persists canister state changes. A query message discards state changes and typically runs on a single node.
+Just like HTTP `POST` and `GET` methods, the BigFile Protocol supports two types of messages: updates and queries. An update message is executed on all subnet nodes and persists canister state changes. A query message discards state changes and typically runs on a single node.
 
 Web caching is a well-known technique to accelerate requests and reduces peak server load. However, the common caching challenge is data consistency, and the decentralized Web3 world raises the bar even higher.
 
-Keep on reading to find out how the Internet Computer implements in-replica query caching.
+Keep on reading to find out how the BigFile implements in-replica query caching.
 
 ## Query cache properties
-The Internet Computer implements an in-replica query cache with the following features:
+The BigFile implements an in-replica query cache with the following features:
 
 1. **Transparency:** the cache is completely transparent, there is no need to worry about cache validity, max age etc.
 2. **LRU cache replacement policy:** the query cache discards least recently used (LRU) entries first. On a cache hit into a valid entry, that entry becomes the most recently used. Entries that remain unused for some time become less recently used and are eventually evicted from the cache.
@@ -59,7 +59,7 @@ The cache hit ratio of the initial version was about 10%. Most of the time, **th
 
 One way to improve cache invalidations is to determine whether the query execution depends on the cycle balance and system time:
 
-1. **Query execution does not modify the blockchain state:** this Internet Computer property enables executing queries in any order and cache the result of their execution.
+1. **Query execution does not modify the blockchain state:** this BigFile property enables executing queries in any order and cache the result of their execution.
 2. **Query execution is deterministic:** the result of the execution is always the same, provided the same state, cycles balance, and system time. This property is also crucial for query caching.
 3. **Tracking query execution:** the system can monitor if the query attempted to read the current cycle balance or system time.
 4. **Ignoring cache invalidations:** since most queries never read the balance and time, their cached result remains valid even when the balance or time changes.
@@ -109,7 +109,7 @@ The new functionality is transparent and available on all the subnets and local 
 
 ## References
 
-- [Source code of the Internet Computer query cache implementation](https://github.com/dfinity/ic/)
+- [Source code of the BigFile query cache implementation](https://github.com/dfinity/ic/)
 
-- [The Internet Computer interface specification: Synchronicity across nodes](/docs/current/references/ic-interface-spec#synchronicity-across-nodes)
+- [The BigFile interface specification: Synchronicity across nodes](/docs/current/references/ic-interface-spec#synchronicity-across-nodes)
 

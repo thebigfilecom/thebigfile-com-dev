@@ -78,7 +78,7 @@ impl LedgerIdentity {
         }
     }
     /// Within the provided scope, transfers will be marked as 'staking' transactions.
-    /// The IC app will refuse transfers to the governance canister unless this is used.
+    /// The BIG app will refuse transfers to the governance canister unless this is used.
     pub fn with_staking<T>(f: impl FnOnce() -> T) -> T {
         // This is designed the way it is because Ledger signing has two modes and Identity::sign has one.
         // Short of re-parsing the transaction to figure out if it's transferring to the governance canister,
@@ -92,7 +92,7 @@ impl LedgerIdentity {
             f()
         })
     }
-    /// Gets the version of the IC app.
+    /// Gets the version of the BIG app.
     #[allow(unused)]
     pub fn version(&self) -> AnyhowResult<LedgerVersion> {
         get_version(&self.inner.transport.lock().unwrap())
@@ -128,7 +128,7 @@ impl Identity for LedgerIdentity {
         let next_stake = NEXT_STAKE.with(|next_stake| next_stake.replace(false));
         let transport = self.inner.transport.lock().unwrap();
         let (_, pk) = get_identity(&transport, &path)?;
-        // The IC ledger app expects to receive the entire envelope, sans signature.
+        // The BIG ledger app expects to receive the entire envelope, sans signature.
         #[derive(Serialize)]
         struct Envelope<'a> {
             content: &'a EnvelopeContent,
@@ -223,15 +223,15 @@ fn interpret_response<'a>(
                         if !supported_transaction(canister_id, method_name)
             ) => {
                 Err(format!(
-                    "Error {action}: The IC app for Ledger only supports transfers and certain neuron management operations"
+                    "Error {action}: The BIG app for Ledger only supports transfers and certain neuron management operations"
                 ))
             }
             APDUErrorCode::DataInvalid if matches!(content, Some(EnvelopeContent::Call { method_name, .. }) if method_name == "icrc1_transfer") => {
                 Err(format!(
-                    "Error {action}: The IC app for Ledger only supports transfers to user principals, not canisters or the anonymous principal"
+                    "Error {action}: The BIG app for Ledger only supports transfers to user principals, not canisters or the anonymous principal"
                 ))
             }
-            APDUErrorCode::ClaNotSupported => Err(format!("Error {action}: IC app not open on device")),
+            APDUErrorCode::ClaNotSupported => Err(format!("Error {action}: BIG app not open on device")),
             APDUErrorCode::CommandNotAllowed => Err(format!("Error {action}: Device rejected the message")),
             errcode => match std::str::from_utf8(response.apdu_data()) {
                 Ok(s) if !s.trim().is_empty() => Err(format!("Error {action}: {errcode:?}: {s}")),
@@ -240,7 +240,7 @@ fn interpret_response<'a>(
         }
     } else {
         match response.retcode() {
-            0x6E01 => Err(format!("Error {action}: IC app not open on device")),
+            0x6E01 => Err(format!("Error {action}: BIG app not open on device")),
             0x5515 => Err(format!("Error {action}: device is sleeping")),
             retcode => Err(format!("Error {action}: {retcode:#X}")),
         }

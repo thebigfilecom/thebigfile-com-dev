@@ -7,7 +7,7 @@ slug: architecture-of-the-bigfile
 
 # Architecture of the BigFile
 
-BigFile is developing a highly scalable blockchain-based platform to securely host and execute smart contracts. The technology behind BigFile (BIG) is being developed on top of the IC Open source blockchain fork, taking into account many lessons learned from previous projects (e.g. lack of scalability). The BigFile intends to become a *No-Document World*, an open and secure public blockchain network that can scale infinitely and be used by everyone to host their smart contracts securely.
+BigFile is developing a highly scalable blockchain-based platform to securely host and execute smart contracts. The technology behind BigFile (BIG) is being developed on top of the BIG Open source blockchain fork, taking into account many lessons learned from previous projects (e.g. lack of scalability). The BigFile intends to become a *No-Document World*, an open and secure public blockchain network that can scale infinitely and be used by everyone to host their smart contracts securely.
 
 ## Cube smart contracts
 

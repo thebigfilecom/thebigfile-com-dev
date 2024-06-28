@@ -10,7 +10,7 @@ on:
         - latest
         - custom
       customReplicaVersion:
-        description: 'dfinity/ic commit SHA - get the latest Elect Replica Version from https://dashboard.internetcomputer.org/releases'     
+        description: 'dfinity/ic commit SHA - get the latest Elect Replica Version from https://dashboard.thebigfile.com/releases'     
         default: "required if custom"
       sdkBranch:
         description: 'Open PR against this sdk branch'
@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  IC_RELEASES_API: "https://ic-api.internetcomputer.org/api/v3/subnet-replica-versions?limit=50&offset=0"
+  IC_RELEASES_API: "https://ic-api.thebigfile.com/api/v3/subnet-replica-versions?limit=50&offset=0"
   # When getting Rust dependencies, retry on network error:
   CARGO_NET_RETRY: 10
   # Use the local .curlrc
@@ -96,7 +96,7 @@ jobs:
           }
 
           let elected_replicas = await github.request("GET ${{ env.IC_RELEASES_API }}");
-          core.startGroup('elected_replicas fetched from ic-api.internetcomputer.org');
+          core.startGroup('elected_replicas fetched from ic-api.thebigfile.com');
           core.info(JSON.stringify(elected_replicas, null, 2));
           core.endGroup();
 
@@ -125,7 +125,7 @@ jobs:
               'Updated replica to elected commit ${{ env.REPLICA_VERSION }}.',
               'This incorporates the following executed proposals:',
               '',
-              new_proposals_since_last_release.map(el => `- [${el.proposal_id}](https://dashboard.internetcomputer.org/proposal/${el.proposal_id})`).join('\n'),
+              new_proposals_since_last_release.map(el => `- [${el.proposal_id}](https://dashboard.thebigfile.com/proposal/${el.proposal_id})`).join('\n'),
               '```',
               '## Previous replica version',
               `\`${latest_release_replica_version}\``

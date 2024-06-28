@@ -42,7 +42,7 @@ test("should resolve canister id from well-known domain", async () => {
   const wellKnownDomains = [
     "ic0.app",
     "icp0.io",
-    "internetcomputer.org",
+    "thebigfile.com",
     "localhost",
   ];
 

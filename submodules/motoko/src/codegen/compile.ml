@@ -1,7 +1,7 @@
 (*
 This module is the backend of the Motoko compiler. It takes a program in
 the intermediate representation (ir.ml), and produces a WebAssembly module,
-with Internet Computer extensions (customModule.ml). An important helper module is
+with BigFile extensions (customModule.ml). An important helper module is
 instrList.ml, which provides a more convenient way of assembling WebAssembly
 instruction lists, as it takes care of (1) source locations and (2) labels.
 
@@ -4962,9 +4962,9 @@ module Lifecycle = struct
 end (* Lifecycle *)
 
 
-module IC = struct
+module BIG = struct
 
-  (* IC-specific stuff: System imports, databufs etc. *)
+  (* BIG-specific stuff: System imports, databufs etc. *)
 
   let register_globals env =
     (* result of last ic0.call_perform  *)
@@ -5485,7 +5485,7 @@ module IC = struct
     | _ ->
       E.trap_with env "cannot get certificate when running locally"
 
-end (* IC *)
+end (* BIG *)
 
 module Cycles = struct
 
@@ -5535,7 +5535,7 @@ module Cycles = struct
     Func.share_code0 Func.Always env "cycle_balance" [I32Type] (fun env ->
       Stack.with_words env "dst" 4l (fun get_dst ->
         get_dst ^^
-        IC.cycle_balance env ^^
+        BIG.cycle_balance env ^^
         get_dst ^^
         from_word128_ptr env
       )
@@ -5545,7 +5545,7 @@ module Cycles = struct
     Func.share_code1 Func.Always env "cycle_add" ("cycles", I32Type) [] (fun env get_x ->
       get_x ^^
       to_two_word64 env ^^
-      IC.cycles_add env
+      BIG.cycles_add env
     )
 
   let accept env =
@@ -5554,7 +5554,7 @@ module Cycles = struct
         get_x ^^
         to_two_word64 env ^^
         get_dst ^^
-        IC.cycles_accept env ^^
+        BIG.cycles_accept env ^^
         get_dst ^^
         from_word128_ptr env
       )
@@ -5564,7 +5564,7 @@ module Cycles = struct
     Func.share_code0 Func.Always env "cycle_available" [I32Type] (fun env ->
       Stack.with_words env "dst" 4l (fun get_dst ->
         get_dst ^^
-        IC.cycles_available env ^^
+        BIG.cycles_available env ^^
         get_dst ^^
         from_word128_ptr env
       )
@@ -5574,7 +5574,7 @@ module Cycles = struct
     Func.share_code0 Func.Always env "cycle_refunded" [I32Type] (fun env ->
       Stack.with_words env "dst" 4l (fun get_dst ->
         get_dst ^^
-        IC.cycles_refunded env ^^
+        BIG.cycles_refunded env ^^
         get_dst ^^
         from_word128_ptr env
       )
@@ -5582,7 +5582,7 @@ module Cycles = struct
 
 end (* Cycles *)
 
-(* Low-level, almost raw access to IC stable memory.
+(* Low-level, almost raw access to BIG stable memory.
    Essentially a virtual page allocator
    * enforcing limit --max-stable-pages not exceeded
    * tracking virtual page count, ignoring physical pages added for stable variable serialization (global`__stable_mem_size`)
@@ -5608,7 +5608,7 @@ module StableMem = struct
     E.require_stable_memory env;
     match E.mode env with
     | Flags.ICMode | Flags.RefMode ->
-       IC.system_call env "stable64_grow"
+       BIG.system_call env "stable64_grow"
     | _ ->
        Func.share_code1 Func.Always env "stable64_grow" ("pages", I64Type) [I64Type]
          (fun env get_pages ->
@@ -5632,7 +5632,7 @@ module StableMem = struct
     E.require_stable_memory env;
     match E.mode env with
     | Flags.ICMode | Flags.RefMode ->
-       IC.system_call env "stable64_size"
+       BIG.system_call env "stable64_size"
     | _ ->
        Func.share_code0 Func.Always env "stable64_size" [I64Type]
          (fun env ->
@@ -5643,7 +5643,7 @@ module StableMem = struct
     E.require_stable_memory env;
     match E.mode env with
     | Flags.ICMode | Flags.RefMode ->
-       IC.system_call env "stable64_read"
+       BIG.system_call env "stable64_read"
     | _ ->
        Func.share_code3 Func.Always env "stable64_read"
          (("dst", I64Type), ("offset", I64Type), ("size", I64Type)) []
@@ -5657,7 +5657,7 @@ module StableMem = struct
     E.require_stable_memory env;
     match E.mode env with
     | Flags.ICMode | Flags.RefMode ->
-       IC.system_call env "stable64_write"
+       BIG.system_call env "stable64_write"
     | _ ->
        Func.share_code3 Func.Always env "stable64_write"
          (("offset", I64Type), ("src", I64Type), ("size", I64Type)) []
@@ -5959,7 +5959,7 @@ end (* StableMem *)
 
 
 (* StableMemoryInterface *)
-(* Core, legacy interface to IC stable memory, used to implement prims `stableMemoryXXX` of
+(* Core, legacy interface to BIG stable memory, used to implement prims `stableMemoryXXX` of
    library `ExperimentalStableMemory.mo`.
    Each operation dispatches on the state of `StableMem.get_version()`.
    * StableMem.version_no_stable_memory/StableMem.version_some_stable_memory:
@@ -6183,7 +6183,7 @@ module RTS_Exports = struct
       Func.of_body env ["str", I32Type; "len", I32Type] [] (fun env ->
         let get_str = G.i (LocalGet (nr 0l)) in
         let get_len = G.i (LocalGet (nr 1l)) in
-        get_str ^^ get_len ^^ IC.trap_ptr_len env
+        get_str ^^ get_len ^^ BIG.trap_ptr_len env
       )
     ) in
     E.add_export env (nr {
@@ -7929,7 +7929,7 @@ module MakeSerialization (Strm : Stream) = struct
       Strm.check_filled env get_data_start get_data_size ^^
       get_refs_size ^^
       compile_eq_const 0l ^^
-      E.else_trap_with env "cannot send references on IC System API" ^^
+      E.else_trap_with env "cannot send references on BIG System API" ^^
 
       (* Extract the payload if possible *)
       Strm.terminate env get_data_start get_data_size tydesc_len
@@ -8054,7 +8054,7 @@ module MakeSerialization (Strm : Stream) = struct
     ))
 
   let deserialize env ts =
-    IC.arg_data env ^^
+    BIG.arg_data env ^^
     Bool.lit false ^^ (* can't recover *)
     deserialize_from_blob false env ts
 
@@ -9048,8 +9048,8 @@ module Var = struct
       SR.Const c, G.nop
     | Some (PublicMethod (_, name)) ->
       SR.Vanilla,
-      IC.get_self_reference env ^^
-      IC.actor_public_field env name
+      BIG.get_self_reference env ^^
+      BIG.actor_public_field env name
     | None -> assert false
 
   (* Returns the payload (vanilla representation) *)
@@ -9167,7 +9167,7 @@ module FuncDec = struct
         (* Stay in composite query state such that callbacks of 
         composite queries can also use the memory reserve. 
         The state is isolated since memory changes of queries 
-        are rolled back by the IC runtime system. *)
+        are rolled back by the BIG runtime system. *)
         Lifecycle.trans env Lifecycle.InComposite
       | _ -> assert false
 
@@ -9195,7 +9195,7 @@ module FuncDec = struct
        then
          Tuple.compile_unit env ^^
          Serialization.serialize env [] ^^
-         IC.reply_with_data env
+         BIG.reply_with_data env
        else G.nop) ^^
       (* Deserialize argument and add params to the environment *)
       let arg_list = List.map (fun a -> (a.it, a.note)) args in
@@ -9334,8 +9334,8 @@ module FuncDec = struct
          "@callback",
          (fun env ->
            Blob.of_size_copy env
-           (fun env -> IC.system_call env "msg_arg_data_size")
-           (fun env -> IC.system_call env "msg_arg_data_copy")
+           (fun env -> BIG.system_call env "msg_arg_data_size")
+           (fun env -> BIG.system_call env "msg_arg_data_copy")
            (fun env -> compile_unboxed_const 0l)))
     in
     Func.define_built_in env reply_name ["env", I32Type] [] (fun env ->
@@ -9372,7 +9372,7 @@ module FuncDec = struct
         (* Synthesize value of type `Text`, the error message
            (The error code is fetched via a prim)
         *)
-        IC.error_value env ^^
+        BIG.error_value env ^^
 
         get_closure ^^
         Closure.call_closure env 1 0 ^^
@@ -9429,20 +9429,20 @@ module FuncDec = struct
       push_continuations ^^
       set_cb_index ^^ get_cb_index ^^
       (* initiate call *)
-      IC.system_call env "call_new" ^^
+      BIG.system_call env "call_new" ^^
       cleanup_callback env ^^ get_cb_index ^^
-      IC.system_call env "call_on_cleanup" ^^
+      BIG.system_call env "call_on_cleanup" ^^
       (* the data *)
       add_data get_cb_index ^^
-      IC.system_call env "call_data_append" ^^
+      BIG.system_call env "call_data_append" ^^
       (* the cycles *)
       add_cycles ^^
       (* done! *)
-      IC.system_call env "call_perform" ^^
-      IC.set_call_perform_status env ^^
+      BIG.system_call env "call_perform" ^^
+      BIG.set_call_perform_status env ^^
       Blob.lit env message ^^
-      IC.set_call_perform_message env ^^
-      IC.get_call_perform_status env ^^
+      BIG.set_call_perform_message env ^^
+      BIG.get_call_perform_status env ^^
       (* save error code, cleanup on error *)
       G.if0
       begin (* send failed *)
@@ -9502,25 +9502,25 @@ module FuncDec = struct
       (* The reject callback *)
       ignoring_callback env ^^
       compile_unboxed_zero ^^
-      IC.system_call env "call_new" ^^
+      BIG.system_call env "call_new" ^^
       (* the data *)
       get_arg ^^ Serialization.serialize env ts ^^
-      IC.system_call env "call_data_append" ^^
+      BIG.system_call env "call_data_append" ^^
       (* the cycles *)
       add_cycles ^^
-      IC.system_call env "call_perform" ^^
+      BIG.system_call env "call_perform" ^^
       (* This is a one-shot function: just remember error code *)
       (if !Flags.trap_on_call_error then
          (* legacy: discard status, proceed as if all well *)
          G.i Drop ^^
          compile_unboxed_zero ^^
-         IC.set_call_perform_status env ^^
+         BIG.set_call_perform_status env ^^
          Blob.lit env "" ^^
-         IC.set_call_perform_message env
+         BIG.set_call_perform_message env
        else
-         IC.set_call_perform_status env ^^
+         BIG.set_call_perform_status env ^^
          Blob.lit env "could not perform oneway" ^^
-         IC.set_call_perform_message env)
+         BIG.set_call_perform_message env)
 
     | _ -> assert false
 
@@ -9542,7 +9542,7 @@ module FuncDec = struct
     end
 
   let export_async_method env =
-    let name = IC.async_method_name in
+    let name = BIG.async_method_name in
     begin match E.mode env with
     | Flags.ICMode | Flags.RefMode ->
       Func.define_built_in env name [] [] (fun env ->
@@ -9551,7 +9551,7 @@ module FuncDec = struct
         message_start env (Type.Shared Type.Write) ^^
 
         (* Check that we are calling this *)
-        IC.assert_caller_self env ^^
+        BIG.assert_caller_self env ^^
 
         (* Deserialize and look up continuation argument *)
         Serialization.deserialize env Type.[Prim Nat32] ^^
@@ -9574,13 +9574,13 @@ module FuncDec = struct
     end
 
   let export_gc_trigger_method env =
-    let name = IC.gc_trigger_method_name in
+    let name = BIG.gc_trigger_method_name in
     begin match E.mode env with
     | Flags.ICMode | Flags.RefMode ->
       Func.define_built_in env name [] [] (fun env ->
         message_start env (Type.Shared Type.Write) ^^
         (* Check that we are called from this or a controller, w/o allocation *)
-        IC.assert_caller_self_or_controller env ^^
+        BIG.assert_caller_self_or_controller env ^^
         (* To avoid more failing allocation, don't deserialize args nor serialize reply,
            i.e. don't even try to do this:
         Serialization.deserialize env [] ^^
@@ -9590,7 +9590,7 @@ module FuncDec = struct
         (* Instead, just ignore the argument and
            send a *statically* allocated, nullary reply *)
         Blob.lit_ptr_len env "DIDL\x00\x00" ^^
-        IC.reply_with_data env ^^
+        BIG.reply_with_data env ^^
         (* Finally, act like
         message_cleanup env (Type.Shared Type.Write)
            but *force* collection *)
@@ -10709,7 +10709,7 @@ and compile_prim_invocation (env : E.t) ae p es at =
   | ActorDotPrim name, [e] ->
     SR.Vanilla,
     compile_exp_vanilla env ae e ^^
-    IC.actor_public_field env name
+    BIG.actor_public_field env name
 
   | ArrayPrim (m, t), es ->
     SR.Vanilla,
@@ -10763,7 +10763,7 @@ and compile_prim_invocation (env : E.t) ae p es at =
   | AssertPrim, [e1] ->
     SR.unit,
     compile_exp_as env ae SR.bool e1 ^^
-    G.if0 G.nop (IC.fail_assert env at)
+    G.if0 G.nop (BIG.fail_assert env at)
   | RetPrim, [e] ->
     SR.Unreachable,
     compile_exp_as env ae (StackRep.of_arity (E.get_return_arity env)) e ^^
@@ -11256,15 +11256,15 @@ and compile_prim_invocation (env : E.t) ae p es at =
 
   | SystemTimePrim, [] ->
     SR.UnboxedWord64 Type.Nat64,
-    IC.get_system_time env
+    BIG.get_system_time env
 
   | OtherPrim "call_perform_status", [] ->
     SR.UnboxedWord32 Type.Nat32,
-    IC.get_call_perform_status env
+    BIG.get_call_perform_status env
 
   | OtherPrim "call_perform_message", [] ->
     SR.Vanilla,
-    IC.get_call_perform_message env
+    BIG.get_call_perform_message env
 
   | OtherPrim "rts_version", [] ->
     SR.Vanilla,
@@ -11438,7 +11438,7 @@ and compile_prim_invocation (env : E.t) ae p es at =
   | OtherPrim "global_timer_set", [e] ->
     SR.UnboxedWord64 Type.Nat64,
     compile_exp_as env ae (SR.UnboxedWord64 Type.Nat64) e ^^
-    IC.system_call env "global_timer_set"
+    BIG.system_call env "global_timer_set"
 
   | OtherPrim "is_controller", [e] ->
     SR.Vanilla,
@@ -11448,11 +11448,11 @@ and compile_prim_invocation (env : E.t) ae p es at =
     Blob.payload_ptr_unskewed env ^^
     get_principal ^^
     Blob.len env ^^
-    IC.is_controller env
+    BIG.is_controller env
 
   | OtherPrim "canister_version", [] ->
     SR.UnboxedWord64 Type.Nat64,
-    IC.canister_version env
+    BIG.canister_version env
 
   | OtherPrim "crc32Hash", [e] ->
     SR.UnboxedWord32 Type.Nat32,
@@ -11583,7 +11583,7 @@ and compile_prim_invocation (env : E.t) ae p es at =
   | OtherPrim "print", [e] ->
     SR.unit,
     compile_exp_vanilla env ae e ^^
-    IC.print_text env
+    BIG.print_text env
 
   | OtherPrim "text_lowercase", [e] ->
     SR.Vanilla,
@@ -11598,12 +11598,12 @@ and compile_prim_invocation (env : E.t) ae p es at =
   | OtherPrim "performanceCounter", [e] ->
     (SR.UnboxedWord64 Type.Nat64),
     compile_exp_as env ae (SR.UnboxedWord32 Type.Nat32) e ^^
-    IC.performance_counter env
+    BIG.performance_counter env
 
   | OtherPrim "trap", [e] ->
     SR.Unreachable,
     compile_exp_vanilla env ae e ^^
-    IC.trap_text env
+    BIG.trap_text env
 
   | OtherPrim ("blobToArray" | "blobToArrayMut"), e ->
     const_sr SR.Vanilla (Arr.ofBlob env)
@@ -11704,7 +11704,7 @@ and compile_prim_invocation (env : E.t) ae p es at =
 
   | OtherPrim "stableVarQuery", [] ->
     SR.UnboxedTuple 2,
-    IC.get_self_reference env ^^
+    BIG.get_self_reference env ^^
     Blob.lit env Type.(motoko_stable_var_info_fld.lab)
 
   (* Other prims, binary*)
@@ -11760,10 +11760,10 @@ and compile_prim_invocation (env : E.t) ae p es at =
     get_blob
 
   | SelfRef _, [] ->
-    SR.Vanilla, IC.get_self_reference env
+    SR.Vanilla, BIG.get_self_reference env
 
   | ICArgDataPrim, [] ->
-    SR.Vanilla, IC.arg_data env
+    SR.Vanilla, BIG.arg_data env
 
   | ICReplyPrim ts, [e] ->
     SR.unit, begin match E.mode env with
@@ -11772,16 +11772,16 @@ and compile_prim_invocation (env : E.t) ae p es at =
       (* TODO: We can try to avoid the boxing and pass the arguments to
         serialize individually *)
       Serialization.serialize env ts ^^
-      IC.reply_with_data env
+      BIG.reply_with_data env
     | _ ->
       E.trap_with env (Printf.sprintf "cannot reply when running locally")
     end
 
   | ICRejectPrim, [e] ->
-    SR.unit, IC.reject env (compile_exp_vanilla env ae e)
+    SR.unit, BIG.reject env (compile_exp_vanilla env ae e)
 
   | ICCallerPrim, [] ->
-    SR.Vanilla, IC.caller env
+    SR.Vanilla, BIG.caller env
 
   | ICCallPrim, [f;e;k;r] ->
     SR.unit, begin
@@ -11817,7 +11817,7 @@ and compile_prim_invocation (env : E.t) ae p es at =
     end
 
   | ICMethodNamePrim, [] ->
-    SR.Vanilla, IC.method_name env
+    SR.Vanilla, BIG.method_name env
 
   | ICStableRead ty, [] ->
     (*
@@ -11851,10 +11851,10 @@ and compile_prim_invocation (env : E.t) ae p es at =
     SR.Vanilla, Cycles.refunded env
 
   | SetCertifiedData, [e1] ->
-    SR.unit, compile_exp_vanilla env ae e1 ^^ IC.set_certified_data env
+    SR.unit, compile_exp_vanilla env ae e1 ^^ BIG.set_certified_data env
   | GetCertificate, [] ->
     SR.Vanilla,
-    IC.get_certificate env
+    BIG.get_certificate env
 
   (* Unknown prim *)
   | _ -> SR.Unreachable, todo_trap env "compile_prim_invocation" (Arrange_ir.prim p)
@@ -12038,7 +12038,7 @@ and compile_exp_with_hint (env : E.t) ae sr_hint exp =
     compile_exp_vanilla env ae exp_r ^^ set_r ^^
 
     FuncDec.ic_self_call env ts
-      IC.(get_self_reference env ^^
+      BIG.(get_self_reference env ^^
           actor_public_field env async_method_name)
       get_future
       get_k
@@ -12638,7 +12638,7 @@ and main_actor as_opt mod_env ds fs up =
       compile_exp_as env ae2 SR.unit up.preupgrade);
     Func.define_built_in env "post_exp" [] [] (fun env ->
       compile_exp_as env ae2 SR.unit up.postupgrade);
-    IC.export_upgrade_methods env;
+    BIG.export_upgrade_methods env;
 
     (* Export heartbeat (but only when required) *)
     begin match up.heartbeat.it with
@@ -12646,7 +12646,7 @@ and main_actor as_opt mod_env ds fs up =
      | _ ->
        Func.define_built_in env "heartbeat_exp" [] [] (fun env ->
          compile_exp_as env ae2 SR.unit up.heartbeat);
-       IC.export_heartbeat env;
+       BIG.export_heartbeat env;
     end;
 
     (* Export timer (but only when required) *)
@@ -12655,7 +12655,7 @@ and main_actor as_opt mod_env ds fs up =
      | _ ->
        Func.define_built_in env "timer_exp" [] [] (fun env ->
          compile_exp_as env ae2 SR.unit up.timer);
-       IC.export_timer env;
+       BIG.export_timer env;
     end;
 
     (* Export inspect (but only when required) *)
@@ -12664,7 +12664,7 @@ and main_actor as_opt mod_env ds fs up =
      | _ ->
        Func.define_built_in env "inspect_exp" [] [] (fun env ->
          compile_exp_as env ae2 SR.unit up.inspect);
-       IC.export_inspect env;
+       BIG.export_inspect env;
     end;
 
     (* Export metadata *)
@@ -12678,7 +12678,7 @@ and main_actor as_opt mod_env ds fs up =
       | Some [] ->
         (* Liberally accept empty as well as unit argument *)
         assert (arg_tys = []);
-        IC.system_call env "msg_arg_data_size" ^^
+        BIG.system_call env "msg_arg_data_size" ^^
         G.if0 (Serialization.deserialize env arg_tys) G.nop
       | Some (_ :: _) ->
         Serialization.deserialize env arg_tys ^^
@@ -12688,12 +12688,12 @@ and main_actor as_opt mod_env ds fs up =
       if up.timer.at <> no_region then
         (* initiate a timer pulse *)
         compile_const_64 1L ^^
-        IC.system_call env "global_timer_set" ^^
+        BIG.system_call env "global_timer_set" ^^
         G.i Drop
       else
         G.nop
     end ^^
-    IC.init_globals env ^^
+    BIG.init_globals env ^^
     (* Continue with decls *)
     decls_codeW G.nop
   )
@@ -12725,7 +12725,7 @@ and conclude_module env set_serialization_globals start_fi_o =
 
   Heap.register env;
   GCRoots.register env static_roots;
-  IC.register env;
+  BIG.register env;
 
   set_heap_base (E.get_end_of_static_memory env);
 
@@ -12739,7 +12739,7 @@ and conclude_module env set_serialization_globals start_fi_o =
       Lifecycle.set env Lifecycle.PreInit
   )) in
 
-  IC.default_exports env;
+  BIG.default_exports env;
 
   let func_imports = E.get_func_imports env in
   let ni = List.length func_imports in
@@ -12804,9 +12804,9 @@ and conclude_module env set_serialization_globals start_fi_o =
   | Some rts -> Linking.LinkModule.link emodule "rts" rts
 
 let compile mode rts (prog : Ir.prog) : Wasm_exts.CustomModule.extended_module =
-  let env = E.mk_global mode rts IC.trap_with (Lifecycle.end_ ()) in
+  let env = E.mk_global mode rts BIG.trap_with (Lifecycle.end_ ()) in
 
-  IC.register_globals env;
+  BIG.register_globals env;
   Stack.register_globals env;
   GC.register_globals env;
   StableMem.register_globals env;
@@ -12815,16 +12815,16 @@ let compile mode rts (prog : Ir.prog) : Wasm_exts.CustomModule.extended_module =
   (* See Note [Candid subtype checks] *)
   let set_serialization_globals = Serialization.register_delayed_globals env in
 
-  IC.system_imports env;
+  BIG.system_imports env;
   RTS.system_imports env;
 
   compile_init_func env prog;
   let start_fi_o = match E.mode env with
     | Flags.ICMode | Flags.RefMode ->
-      IC.export_init env;
+      BIG.export_init env;
       None
     | Flags.WASIMode ->
-      IC.export_wasi_start env;
+      BIG.export_wasi_start env;
       None
     | Flags.WasmMode ->
       Some (nr (E.built_in env "init"))

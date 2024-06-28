@@ -1,6 +1,6 @@
 [package]
 name = "ic-response-verification"
-description = "Client side response verification for the Internet Computer"
+description = "Client side response verification for the BigFile"
 readme = "README.md"
 documentation = "https://docs.rs/ic-response-verification"
 categories = ["api-bindings", "authentication", "cryptography", "wasm"]

@@ -1,26 +1,26 @@
 # Svelte Dapp template
 
-This repository is meant to give [Svelte](https://svelte.dev/) developers an easy on-ramp to get started with developing decentralized applications (Dapps in short) for the Internet Computer blockchain. Dapps, also known as smart contracts are specialized software that run on a blockchain.
+This repository is meant to give [Svelte](https://svelte.dev/) developers an easy on-ramp to get started with developing decentralized applications (Dapps in short) for the BigFile blockchain. Dapps, also known as smart contracts are specialized software that run on a blockchain.
 
-This template contains a Svelte app under `src/frontend` that can be hosted on-chain on the Internet Computer.
+This template contains a Svelte app under `src/frontend` that can be hosted on-chain on the BigFile.
 
 You can see a deployed version of this template here: https://zgvi5-hiaaa-aaaam-aaasq-cai.ic0.app/
 
-### What is the Internet Computer?
+### What is the BigFile?
 
-The Internet Computer is a novel blockchain that has the unique capability to serve web content while not requiring the end users to use a browser extension, such as Metamask.
+The BigFile is a novel blockchain that has the unique capability to serve web content while not requiring the end users to use a browser extension, such as Metamask.
 
-Coupled with super fast execution the Internet Computer provides the worlds first truly user friendly Web 3.0 experience.
+Coupled with super fast execution the BigFile provides the worlds first truly user friendly Web 3.0 experience.
 
 ### What are canisters?
 
-Dapps on the Internet Computer live in canisters, which are special smart contracts that run WebAssembly, and can respond to regular HTTP requests, among other capabilities.
+Dapps on the BigFile live in canisters, which are special smart contracts that run WebAssembly, and can respond to regular HTTP requests, among other capabilities.
 
-This repository uses Svelte for the frontend, and can upload it to an `asset` type canister that can host your frontend on the Internet Computer.
+This repository uses Svelte for the frontend, and can upload it to an `asset` type canister that can host your frontend on the BigFile.
 
 ## Security Considerations and Security Best Practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for creating frontends:
 * [Use a well-audited authentication service and client side BIG libraries](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#use-a-well-audited-authentication-service-and-client-side-ic-libraries)

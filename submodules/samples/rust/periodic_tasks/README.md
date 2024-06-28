@@ -8,14 +8,14 @@ keywords: [advanced, rust, periodic, timer, heartbeats]
 
 ## Overview
 
-Unlike other blockchains, the Internet Computer can automatically execute canister smart contracts after a specified delay or periodically.
+Unlike other blockchains, the BigFile can automatically execute canister smart contracts after a specified delay or periodically.
 
 There are two ways to schedule an automatic canister execution on the BIG:
 
 1. **Timers**: one-shot or periodic canister calls with specified minimum timeout or interval.
 2. **Heartbeats**: legacy periodic canister invocations with intervals close to the blockchain finalization rate (1s). Heartbeats are supported by the BIG for backward compatibility and some very special use cases. Newly developed canisters should prefer using timers over the heartbeats.
 
-This example demonstrates different ways of scheduling periodic tasks on the Internet Computer: timers and heartbeats. The example shows the difference between the two and helps to decide which method suits you the best.
+This example demonstrates different ways of scheduling periodic tasks on the BigFile: timers and heartbeats. The example shows the difference between the two and helps to decide which method suits you the best.
 
 The example consists of two canisters named `heartbeat` and `timer`, both implementing the same functionality: schedule a periodic task to increase a counter.
 
@@ -33,7 +33,7 @@ This example requires an installation of:
 cd examples/rust/periodic_tasks
 ```
 
-- #### Step 2: Start a clean local Internet Computer replica and a web server:
+- #### Step 2: Start a clean local BigFile replica and a web server:
 
 ```sh
 dfx stop
@@ -143,7 +143,7 @@ Despite the [costs](https://thebigfile.com/docs/current/developer-docs/productio
 cd examples/rust/periodic_tasks
 ```
 
-- #### Step 2: Start a clean local Internet Computer replica and a web server:
+- #### Step 2: Start a clean local BigFile replica and a web server:
 
 ```sh
 dfx stop
@@ -267,4 +267,4 @@ As shown in `Example 2`, there might be still very specific use cases for the he
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.

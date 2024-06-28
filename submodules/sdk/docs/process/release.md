@@ -1,4 +1,4 @@
-# IC SDK Release Process
+# BIG SDK Release Process
 
 ## Stage 1: Preparation - day 1
 

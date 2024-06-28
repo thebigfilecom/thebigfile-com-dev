@@ -85,10 +85,10 @@ const Decks = ({ className = "" }: { className?: string }) => {
       {/* <div className="bg-[linear-gradient(48.09deg,#4DEDD3_-32.7%,#31A782_46.37%,#3B00B9_129.51%)"> */}
       <Card
         className="bg-[linear-gradient(270deg,#C772EF_6.01%,#6A85F1_100%)] text-white hover:text-white"
-        href="https://deck.internetcomputer.org"
+        href="https://deck.thebigfile.com"
       >
         <CardLabel>Pitch Deck</CardLabel>
-        <CardTitle>Internet Computer</CardTitle>
+        <CardTitle>BigFile</CardTitle>
 
         <CardImage
           src="/img/home/deck-astronaut.webp"
@@ -98,7 +98,7 @@ const Decks = ({ className = "" }: { className?: string }) => {
       </Card>
       <Card
         className="text-black hover:text-black bg-white"
-        href="https://identitydeck.internetcomputer.org"
+        href="https://identitydeck.thebigfile.com"
       >
         <CardLabel>Pitch Deck</CardLabel>
         <CardTitle className="text-infinite">Internet Identity</CardTitle>

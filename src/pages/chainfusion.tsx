@@ -408,7 +408,7 @@ async fn check_evm_log() {
 // Function that sends bitcoin. This is used by check_evm_log()
 async fn send_bitcoin() {
     // for more information on bitcoin_send_transaction check
-    // https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction
+    // https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin_send_transaction
     ic_cdk::api::management_canister::bitcoin::bitcoin_send_transaction(
         ic_cdk::api::management_canister::bitcoin::SendTransactionRequest {
             transaction: b"beef".into(),
@@ -997,8 +997,8 @@ pub enum MultiGetLogsResult {
                   </p>
                   <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
                     {[
-                      "IC ETH Starter",
-                      "Add ERC-20 to IC ETH Starter",
+                      "BIG ETH Starter",
+                      "Add ERC-20 to BIG ETH Starter",
                       "OISY",
                       "PoS app for ckBTC",
                       "ICRC2 Swap Demo",

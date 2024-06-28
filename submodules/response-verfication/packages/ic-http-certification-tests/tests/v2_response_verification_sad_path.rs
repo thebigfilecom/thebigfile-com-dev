@@ -48,7 +48,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "max-age=604800".into()),
             ],
             upgrade: None,
@@ -66,7 +66,7 @@ mod tests {
 
         response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
 
         let result = verify_request_response_pair(
             wrong_request,
@@ -106,7 +106,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "max-age=604800".into()),
             ],
             upgrade: None,
@@ -115,7 +115,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "public".into()),
                 ("Cache-Control".into(), "immutable".into()),
             ],
@@ -134,7 +134,7 @@ mod tests {
 
         wrong_response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
 
         let result = verify_request_response_pair(
             request,
@@ -175,7 +175,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.to_string()),
+                ("BIG-CertificateExpression".into(), cel_expr.to_string()),
                 ("Cache-Control".into(), "max-age=604800".into()),
             ],
             upgrade: None,
@@ -199,11 +199,11 @@ mod tests {
 
         response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
         let _ = std::mem::replace(
             &mut response.headers[0],
             (
-                "IC-CertificateExpression".into(),
+                "BIG-CertificateExpression".into(),
                 wrong_cel_expr.to_string(),
             ),
         );
@@ -270,7 +270,7 @@ mod tests {
             status_code: 200,
             body: body.as_bytes().to_vec(),
             headers: vec![
-                ("IC-CertificateExpression".into(), cel_expr.clone()),
+                ("BIG-CertificateExpression".into(), cel_expr.clone()),
                 ("Cache-Control".into(), "max-age=604800".into()),
             ],
             upgrade: None,
@@ -278,7 +278,7 @@ mod tests {
 
         response
             .headers
-            .push(("IC-Certificate".into(), certificate_header));
+            .push(("BIG-Certificate".into(), certificate_header));
 
         let result = verify_request_response_pair(
             request,

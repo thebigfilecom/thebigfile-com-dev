@@ -18,13 +18,13 @@ Recall that certified variables are used as a way for queries to return an authe
 
 Certified variables can be set within an update call to a canister, since an update call changes the canister's state and goes through the consensus process. Once a certified variable is set, the certification can be read in future query calls that return the certified variable in response to the query call in a trustworthy and secure way. Using this method, any application or client can immediately validate each certified variable that it receives from a query call without having to put trust into the single node that it received the response from.
 
-Certified variables are part of a more broad concept of **certified data.** Certified data utilizes **chain-key cryptography** at the canister level to generate a digital signature that can be validated using a permanent, public key that belongs to the Internet Computer, whose private key counterpart is constantly distributed across many different nodes on the network. A valid signature can only be generated when the majority of the nodes that store the components of the private key cooperate in a cryptographic protocol.
+Certified variables are part of a more broad concept of **certified data.** Certified data utilizes **chain-key cryptography** at the canister level to generate a digital signature that can be validated using a permanent, public key that belongs to the BigFile, whose private key counterpart is constantly distributed across many different nodes on the network. A valid signature can only be generated when the majority of the nodes that store the components of the private key cooperate in a cryptographic protocol.
 
 ## How data is certified
 
 The notion of certified data can be used to certify all the assets of a canister's frontend, such as the canister's HTML, CSS, Javascript, image, or video files. When a canister issues a response along with its certificate, a HTTPS gateway can be used to verify that certificate before passing the response off to the client.
 
-In each round of message execution on the Internet Computer, the message routing layer generates a new state tree that contains that round's information. The tree contains a root hash that is then used by the nodes in the subnet to create a certificate. This state tree contains several pieces of information, including the certified variables of each canister. An example of what a state tree looks like can be found below:
+In each round of message execution on the BigFile, the message routing layer generates a new state tree that contains that round's information. The tree contains a root hash that is then used by the nodes in the subnet to create a certificate. This state tree contains several pieces of information, including the certified variables of each canister. An example of what a state tree looks like can be found below:
 
 ```bash
 *root*
@@ -64,7 +64,7 @@ To certify data, a canister uses the following workflow:
 ```
 
 - Then, the canister computes the root hash of the tree and calls `ic0.certified_data_set` with the bytes of the hash as the argument.
-- Lastly, a [`#BIG-Certificate`](https://wiki.internetcomputer.org/wiki/HTTP_asset_certification#BIG-Certificate_header) header is added to each certified HTTP response.
+- Lastly, a [`#BIG-Certificate`](https://wiki.thebigfile.com/wiki/HTTP_asset_certification#BIG-Certificate_header) header is added to each certified HTTP response.
 
 ### Certified data API methods
 
@@ -105,9 +105,9 @@ pub fn data_certificate() -> Option<Vec<u8>>
 
 ## Generating an HTTPS response
 
-On the Internet Computer, there is a built in `http_request` query method. This method uses information related to an HTTPS request as the input and outputs an HTTPS response; specifically, the output includes the request's status, headers, and body. If a canister needs to serve HTTPS requests, this method should be implemented.
+On the BigFile, there is a built in `http_request` query method. This method uses information related to an HTTPS request as the input and outputs an HTTPS response; specifically, the output includes the request's status, headers, and body. If a canister needs to serve HTTPS requests, this method should be implemented.
 
-When a canister would like to return a certified asset to a request, the response body will contain the asset and a response header with the name [`BIG-Certificate`](https://wiki.internetcomputer.org/wiki/HTTP_asset_certification#BIG-Certificate_header) and a value equal to the asset's certificate.
+When a canister would like to return a certified asset to a request, the response body will contain the asset and a response header with the name [`BIG-Certificate`](https://wiki.thebigfile.com/wiki/HTTP_asset_certification#BIG-Certificate_header) and a value equal to the asset's certificate.
 
 More information can be found on in the [HTTP gateway protocol specification](/docs/current/references/http-gateway-protocol-spec).
 
@@ -364,7 +364,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
 
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
+- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the BigFile.
 
 - [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
 
@@ -376,7 +376,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 

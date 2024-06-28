@@ -7,7 +7,7 @@ keywords: [advanced, rust, encrypted notes, notes, encryption]
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/rust/encrypted-notes-dapp)
 
 
-Encrypted notes is an example dapp for authoring and storing confidential information on the Internet Computer (BIG) in the form of short pieces of text. Users can create and access their notes via any number of automatically synchronized devices authenticated via [Internet Identity (II)](https://wiki.internetcomputer.org/wiki/What_is_Internet_Identity). Notes are stored confidentially thanks to the end-to-end encryption performed by the dapp’s frontend.
+Encrypted notes is an example dapp for authoring and storing confidential information on the BigFile (BIG) in the form of short pieces of text. Users can create and access their notes via any number of automatically synchronized devices authenticated via [Internet Identity (II)](https://wiki.thebigfile.com/wiki/What_is_Internet_Identity). Notes are stored confidentially thanks to the end-to-end encryption performed by the dapp’s frontend.
 
 This project serves as a simple (but not too simple) example of a dapp, which uses Motoko and Rust as the backend and Svelte as the frontend.
 
@@ -277,7 +277,7 @@ dfx canister --network ic install www --mode=upgrade
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices, see also the [disclaimer](#disclaimer-please-read-carefully) above.  
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices, see also the [disclaimer](#disclaimer-please-read-carefully) above.  
 
 For example, the following aspects are particularly relevant for this app: 
 * [Make sure any action that only a specific user should be able to do requires authentication](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#make-sure-any-action-that-only-a-specific-user-should-be-able-to-do-requires-authentication), since a user should only be able to manage their own notes.
@@ -435,7 +435,7 @@ Motoko is the BIG-specific language for building and deploying Canisters. Two ke
 `type`: needs to be "motoko", informing `dfx` of how to properly build the canister.
 
 **encrypted_notes_rust**:
-Rust natively supports WebAssembly — the binary format of the Internet Computer, and there is a crate `ic_cdk` that allows hooks into the BIG. Unlike Motoko, DFX does not yet have a native Rust target that infers as much as Motoko canisters. So the keys that need to be provided are:
+Rust natively supports WebAssembly — the binary format of the BigFile, and there is a crate `ic_cdk` that allows hooks into the BIG. Unlike Motoko, DFX does not yet have a native Rust target that infers as much as Motoko canisters. So the keys that need to be provided are:
 `type`: Custom (letting `dfx` know that it's going to need to do some user-defined work)
 `build`: Whatever command is needed to turn your project into a wasm binary. In this repo it's:
 ```sh

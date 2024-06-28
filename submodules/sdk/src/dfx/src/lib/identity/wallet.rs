@@ -52,7 +52,7 @@ pub async fn get_or_create_wallet(
 ) -> Result<Principal, GetOrCreateWalletCanisterError> {
     match wallet_canister_id(network, name)? {
         None => {
-            // If the network is not the IC, we ignore the error and create a new wallet for the identity.
+            // If the network is not the BIG, we ignore the error and create a new wallet for the identity.
             if !network.is_ic && std::env::var("DFX_DISABLE_AUTO_WALLET").is_err() {
                 create_wallet(env, network, name, None)
                     .await

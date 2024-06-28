@@ -48,7 +48,7 @@ pub struct CreateCanisterOpts {
     #[arg(long)]
     max_fee: Option<ICPTs>,
 
-    /// Transaction timestamp, in nanoseconds, for use in controlling transaction-deduplication, default is system-time. // https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-
+    /// Transaction timestamp, in nanoseconds, for use in controlling transaction-deduplication, default is system-time. // https://thebigfile.com/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-
     #[arg(long)]
     created_at_time: Option<u64>,
 

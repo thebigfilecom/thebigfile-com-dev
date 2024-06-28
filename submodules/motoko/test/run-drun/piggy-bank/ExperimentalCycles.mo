@@ -1,6 +1,6 @@
-/// Managing cycles within actors on the Internet Computer (IC).
+/// Managing cycles within actors on the BigFile (BIG).
 ///
-/// The usage of the Internet Computer is measured, and paid for, in _cycles_.
+/// The usage of the BigFile is measured, and paid for, in _cycles_.
 /// This library provides imperative operations for observing cycles, transferring cycles, and
 /// observing refunds of cycles.
 ///
@@ -9,7 +9,7 @@
 ///
 /// **NOTE:** Since cycles measure computational resources, the value of  `balance()` can change from one call to the next.
 ///
-/// Example for use on IC:
+/// Example for use on BIG:
 /// ```motoko no-repl
 /// import Cycles "mo:base/ExperimentalCycles";
 /// import Debug "mo:base/Debug";
@@ -38,7 +38,7 @@ module {
 
   /// Returns the actor's current balance of cycles as `amount`.
   ///
-  /// Example for use on the IC:
+  /// Example for use on the BIG:
   /// ```motoko no-repl
   /// import Cycles "mo:base/ExperimentalCycles";
   /// import Debug "mo:base/Debug";
@@ -58,7 +58,7 @@ module {
   /// On exit from the current shared function or async expression via `return` or `throw`,
   /// any remaining available amount is automatically refunded to the caller/context.
   ///
-  /// Example for use on the IC:
+  /// Example for use on the BIG:
   /// ```motoko no-repl
   /// import Cycles "mo:base/ExperimentalCycles";
   /// import Debug "mo:base/Debug";
@@ -76,7 +76,7 @@ module {
   /// Returns the amount actually transferred, which may be less than
   /// requested, for example, if less is available, or if canister balance limits are reached.
   ///
-  /// Example for use on the IC (for simplicity, only transferring cycles to itself):
+  /// Example for use on the BIG (for simplicity, only transferring cycles to itself):
   /// ```motoko no-repl
   /// import Cycles "mo:base/ExperimentalCycles";
   /// import Debug "mo:base/Debug";
@@ -106,7 +106,7 @@ module {
   /// **Note**: The implicit register of added amounts is reset to zero on entry to
   /// a shared function and after each shared function call or resume from an await.
   ///
-  /// Example for use on the IC (for simplicity, only transferring cycles to itself):
+  /// Example for use on the BIG (for simplicity, only transferring cycles to itself):
   /// ```motoko no-repl
   /// import Cycles "mo:base/ExperimentalCycles";
   ///
@@ -129,7 +129,7 @@ module {
   /// Instead, refunds are automatically added to the current balance,
   /// whether or not `refunded` is used to observe them.
   ///
-  /// Example for use on the IC (for simplicity, only transferring cycles to itself):
+  /// Example for use on the BIG (for simplicity, only transferring cycles to itself):
   /// ```motoko no-repl
   /// import Cycles "mo:base/ExperimentalCycles";
   /// import Debug "mo:base/Debug";

@@ -130,7 +130,7 @@ async fn wait_for_port(webserver_port_path: &Path) -> DfxResult<String> {
     }
 }
 
-/// Start the Internet Computer locally. Spawns a proxy to forward and
+/// Start the BigFile locally. Spawns a proxy to forward and
 /// manage browser requests. Responsible for running the network (one
 /// replica at the moment) and the proxy.
 pub fn exec(

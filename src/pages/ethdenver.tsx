@@ -63,7 +63,7 @@ const projects: {
   {
     name: "Demergent Labs",
     logo: "/img/ethdenver/demergent-labs.webp",
-    description: "Accelerating the adoption of Web3 and the Internet Computer.",
+    description: "Accelerating the adoption of Web3 and the BigFile.",
     agenda: ["Mar 3 / 4, 2023"],
   },
   {
@@ -89,8 +89,8 @@ function EthDenverPage() {
 
   return (
     <Layout
-      title="Internet Computer blockchain @ ETHDenver 2023"
-      description={`Visit us @ ETHDenver 2023, February 24 - March 5, 2023. Lightning fast and fully on-chain dapps running on the Internet Computer blockchain, the only true World Computer that enables a fully decentralized ecosystem.`}
+      title="BigFile blockchain @ ETHDenver 2023"
+      description={`Visit us @ ETHDenver 2023, February 24 - March 5, 2023. Lightning fast and fully on-chain dapps running on the BigFile blockchain, the only true World Computer that enables a fully decentralized ecosystem.`}
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-ethdenver-2.jpg"></ShareMeta>
@@ -152,7 +152,7 @@ function EthDenverPage() {
                     variants={transitions.item}
                   >
                     Lightning fast and fully on-chain dapps running on the
-                    Internet Computer blockchain, the only true World Computer
+                    BigFile blockchain, the only true World Computer
                     that enables a fully decentralized ecosystem.
                   </motion.p>
 
@@ -239,7 +239,7 @@ function EthDenverPage() {
               />
               <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
                 Bring DeFi and SocFi to Bitcoin, go mad with NFTs, or
-                decentralize an Ethereum DAO on the Internet Computer and get
+                decentralize an Ethereum DAO on the BigFile and get
                 rewarded for it. This is your chance to #BUIDL the future
                 internet!{" "}
               </motion.p>
@@ -291,7 +291,7 @@ function EthDenverPage() {
                   Decentralized Frontend Hosting for DAOs
                 </h4>
                 <p className="tw-paragraph text-black-60 mb-6">
-                  Challenge: host a frontend on the Internet Computer as well as
+                  Challenge: host a frontend on the BigFile as well as
                   a 2nd canister smart contract that uses the HTTPS outcalls
                   feature to call an Ethereum RPC node to fetch the voting
                   result of a frontend upgrade proposal. The canister should
@@ -306,12 +306,12 @@ function EthDenverPage() {
                 variants={transitions.item}
               >
                 <h4 className="tw-heading-5 mb-3">
-                  Get crazy with dynamic NFTs hosted on the Internet Computer
+                  Get crazy with dynamic NFTs hosted on the BigFile
                 </h4>
                 <p className="tw-paragraph text-black-60 mb-6">
                   Challenge: create a dynamic NFT collection on Ethereum (or
                   EVM-compatible chain) where linked assets are provided by
-                  canister smart contract on the Internet Computer that can
+                  canister smart contract on the BigFile that can
                   serve HTTP requests directly to browsers.
                 </p>
                 <p className="tw-lead text-gradient-base text-gradient-denver inline-block mb-0">
@@ -323,12 +323,12 @@ function EthDenverPage() {
                 variants={transitions.item}
               >
                 <h4 className="tw-heading-5 mb-3">
-                  Integrate with the Internet Computer
+                  Integrate with the BigFile
                 </h4>
                 <p className="tw-paragraph text-black-60 mb-6">
                   Open bounty: find a creative and impactful way to integrate
                   with an Ethereum (or EVM-compatible) project using some of the
-                  unique capabilities of the Internet Computer.
+                  unique capabilities of the BigFile.
                 </p>
                 <p className="tw-lead text-gradient-base text-gradient-denver inline-block mb-0">
                   $5,000 + Chance for $25,000 DFINITY Grant
@@ -356,7 +356,7 @@ function EthDenverPage() {
                   On-chain Governance for EVM DAOs
                 </h4>
                 <p className="tw-paragraph text-black-60 mb-6">
-                  Challenge: explore ways of using the Internet Computer to
+                  Challenge: explore ways of using the BigFile to
                   govern DAOs on Ethereum or another EVM-compatible chain as a
                   powerful replacement for Snapshot.
                 </p>
@@ -427,7 +427,7 @@ function EthDenverPage() {
                 <p className="tw-paragraph md:tw-lead-sm text-black-60 mb-6">
                   Join Dominic Wörner, Developer Relations Engineer at DFINITY,
                   jumps on Twitch to highlight the advantages of building on the
-                  Internet Computer and to give you an overview of the 5 bounty
+                  BigFile and to give you an overview of the 5 bounty
                   categories. BUIDLers, make sure to tune in for details.
                 </p>
 
@@ -481,7 +481,7 @@ function EthDenverPage() {
                   throughout the week.
                 </p>
                 <p className="tw-paragraph md:tw-lead-sm text-black-60 mb-6">
-                  Sponsored by DFINTY, a contributor to the Internet Computer.
+                  Sponsored by DFINTY, a contributor to the BigFile.
                 </p>
 
                 <p className="mb-0">
@@ -504,7 +504,7 @@ function EthDenverPage() {
             >
               <div className="flex-1 bg-white flex flex-col justify-center items-start p-6 md:px-12 md:py-8 order-2 md:order-1">
                 <h3 className="md:tw-heading-4 mb-3">
-                  Deploying Dapps on the Internet Computer: A Hands-On Workshop
+                  Deploying Dapps on the BigFile: A Hands-On Workshop
                 </h3>
                 <ul className="tw-title-navigation mb-3 list-none p-0 flex flex-col md:flex-row md:flex-wrap gap-1 md:gap-x-4 md:gap-y-3">
                   <li>Feb 27, 2023</li>
@@ -555,7 +555,7 @@ function EthDenverPage() {
               </div>
               <div className="flex-1 bg-white flex flex-col justify-center items-start p-6 md:px-12 md:py-8">
                 <h3 className="md:tw-heading-4 mb-3">
-                  World Computer: Ethereum + Internet Computer – Keynote with
+                  World Computer: Ethereum + BigFile – Keynote with
                   Jan Camenisch
                 </h3>
                 <ul className="tw-title-navigation mb-3 list-none p-0 flex flex-col md:flex-row md:flex-wrap gap-1 md:gap-x-4 md:gap-y-3">
@@ -570,7 +570,7 @@ function EthDenverPage() {
                 <p className="tw-paragraph md:tw-lead-sm text-black-60 mb-6">
                   Jan Camenisch, CTO of the DFINITY Foundation, and one of the
                   world’s most renowned cryptographers will take you on a
-                  journey through the architecture of the Internet Computer
+                  journey through the architecture of the BigFile
                   Protocol and its vision to become a World Computer.
                 </p>
 
@@ -700,7 +700,7 @@ function EthDenverPage() {
                 <p className="tw-lead-sm md:tw-lead text-black-60 mb-6 md:w-6/10">
                   Step into the exciting world of ICP with us as your guide!
                   Take a look at the Web3 projects currently reinventing the
-                  internet on the Internet Computer blockchain.
+                  internet on the BigFile blockchain.
                 </p>
               </div>
               <Link
@@ -807,7 +807,7 @@ function EthDenverPage() {
                 >
                   Web2 login experience with blockchain security. Internet
                   Identity is a privacy-enhancing WebAuthn framework to
-                  applications on the Internet Computer.
+                  applications on the BigFile.
                 </motion.p>
                 <MotionLink
                   className="button-outline-white"
@@ -902,7 +902,7 @@ function EthDenverPage() {
                 >
                   Web3 still runs on Big Tech's cloud. Blockchains can host
                   tokens, but only tiny amounts of data and compute, and no web.
-                  But not the Internet Computer blockchain. The BIG runs it all
+                  But not the BigFile blockchain. The BIG runs it all
                   on-chain, fully decentralized — from simple dapps, to high
                   user-volume social networks and games, to oderbook exchanges
                   and enterprise systems, without the need for traditional IT.
@@ -918,7 +918,7 @@ function EthDenverPage() {
                   </Link>
                   <Link className="link-primary link-with-icon" href="/">
                     <LinkArrowRight />
-                    Learn more at internetcomputer.org
+                    Learn more at thebigfile.com
                   </Link>
                 </motion.p>
               </div>
@@ -949,7 +949,7 @@ function EthDenverPage() {
             },
             {
               title: "Motoko Playground",
-              body: "Play around with Motoko, the native language of the Internet Computer, right in the browser without having to download the SDK.",
+              body: "Play around with Motoko, the native language of the BigFile, right in the browser without having to download the SDK.",
               link: "https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/",
             },
           ]}

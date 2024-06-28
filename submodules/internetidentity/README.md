@@ -8,12 +8,12 @@
 </p>
 
 <p align="center">
-    🔗 <a href="https://identity.ic0.app">https://identity.ic0.app</a> • 📜 <a href="https://internetcomputer.org/docs/current/references/ii-spec">Specification</a> <br/> ― <br/>📚 <a href="https://forum.dfinity.org/c/internet-identity/32">Forum</a> • 🚑 <a href="https://github.com/dfinity/internet-identity/issues/new">Report an Issue</a> • 📞 <a href="https://discord.gg/E9FxceAg2j">Discord</a>
+    🔗 <a href="https://identity.ic0.app">https://identity.ic0.app</a> • 📜 <a href="https://thebigfile.com/docs/current/references/ii-spec">Specification</a> <br/> ― <br/>📚 <a href="https://forum.dfinity.org/c/internet-identity/32">Forum</a> • 🚑 <a href="https://github.com/dfinity/internet-identity/issues/new">Report an Issue</a> • 📞 <a href="https://discord.gg/E9FxceAg2j">Discord</a>
 </p>
 
 ---
 
-Internet Identity is an authentication service for the [Internet Computer][ic]. It is the authentication system that allows hundreds of thousands of users to log in to Dapps like [Distrikt], [DSCVR] and more.
+Internet Identity is an authentication service for the [BigFile][ic]. It is the authentication system that allows hundreds of thousands of users to log in to Dapps like [Distrikt], [DSCVR] and more.
 
 Internet Identity is:
 
@@ -21,7 +21,7 @@ Internet Identity is:
 * **Flexible**: Integrating Internet Identity in a Dapp (or even Web 2 app) is as simple as opening the Internet Identity's HTTP interface, https://identity.ic0.app, in a new tab. No need to interact with the canister smart contract directly.
 * **Secure**: Different identities are issued for each app a user authenticates to and cannot be linked back to the user.
 
-For more information, see [What is Internet Identity?](https://internetcomputer.org/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [internetcomputer.org](https://internetcomputer.org).
+For more information, see [What is Internet Identity?](https://thebigfile.com/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [thebigfile.com](https://thebigfile.com).
 
 ### Table of Contents
 
@@ -70,7 +70,7 @@ To access Internet Identity or configure it for your dapp, use one of the follow
 
 ### Architecture Overview
 
-Internet Identity is an authentication service for the [Internet Computer][ic]. All programs on the Internet Computer are Wasm modules, or canisters (canister smart contracts).
+Internet Identity is an authentication service for the [BigFile][ic]. All programs on the BigFile are Wasm modules, or canisters (canister smart contracts).
 
 ![Architecture](./ii-architecture.png) <!-- this is an excalidraw.com image, source is ii-architecture.excalidraw -->
 
@@ -103,7 +103,7 @@ We recommend using the [`docker-build`](./scripts/docker-build) script. It simpl
 
 ### Integration with Internet Identity
 
-The [`using-dev-build`](./demos/using-dev-build) demo shows a documented example project that integrates Internet Identity. For more, please refer to the [Client Authentication Protocol section](https://internetcomputer.org/docs/current/references/ii-spec#client-authentication-protocol) of the [Internet Identity Specification][spec] to integration Internet Identity in your app from scratch. For a just-add-water approach using the [agent-js](https://github.com/dfinity/agent-js) library (also used by `using-dev-build`), check out Kyle Peacock's [blogpost](http://kyle-peacock.com/blog/dfinity/integrating-internet-identity/).
+The [`using-dev-build`](./demos/using-dev-build) demo shows a documented example project that integrates Internet Identity. For more, please refer to the [Client Authentication Protocol section](https://thebigfile.com/docs/current/references/ii-spec#client-authentication-protocol) of the [Internet Identity Specification][spec] to integration Internet Identity in your app from scratch. For a just-add-water approach using the [agent-js](https://github.com/dfinity/agent-js) library (also used by `using-dev-build`), check out Kyle Peacock's [blogpost](http://kyle-peacock.com/blog/dfinity/integrating-internet-identity/).
 
 If you're interested in the infrastructure of how to get the Internet Identity canister and how to test it within your app, check out [`using-dev-build`](./demos/using-dev-build), which uses the Internet Identity development canister.
 
@@ -137,7 +137,7 @@ frontend. -->
 
 | Environment variable | Description |
 | --- | --- |
-| `II_FETCH_ROOT_KEY` | When enabled, this instructs the frontend code to fetch the "root key" from the replica.<br/>The Internet Computer (https://ic0.app) uses a private key to sign responses. This private key not being available locally, the (local) replica generates its own. This option effectively tells the Internet Identity frontend to fetch the public key from the replica it connects to. When this option is _not_ enabled, the Internet Identity frontend code will use the (hard coded) public key of the Internet Computer. |
+| `II_FETCH_ROOT_KEY` | When enabled, this instructs the frontend code to fetch the "root key" from the replica.<br/>The BigFile (https://ic0.app) uses a private key to sign responses. This private key not being available locally, the (local) replica generates its own. This option effectively tells the Internet Identity frontend to fetch the public key from the replica it connects to. When this option is _not_ enabled, the Internet Identity frontend code will use the (hard coded) public key of the BigFile. |
 | `II_DUMMY_CAPTCHA` | When enabled, the CAPTCHA challenge (sent by the canister code to the frontend code) is always the known string `"a"`. This is useful for automated testing. |
 | `II_DUMMY_AUTH` | When enabled, the frontend code will use a known, stable private key for registering anchors and authenticating. This means that all anchors will have the same public key(s). In particular this bypasses the WebAuthn flows (TouchID, Windows Hello, etc), which simplifies automated testing. |
 | `II_DEV_CSP` | When enabled, the content security policy is weakend to allow connections to II using HTTP and allow II to connect via http in order to facilitate development.                                                                                                                                                                                                                                                                                                                                                       |
@@ -172,7 +172,7 @@ We're here to help! Here are some ways you can reach out for help if you get stu
 
 * [Internet Identity Specification][spec], the official Internet Identity Specification
 * [Integration with Internet Identity](http://kyle-peacock.com/blog/dfinity/integrating-internet-identity/) by Kyle Peacock
-* [What is Internet Identity?](https://internetcomputer.org/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [internetcomputer.org](https://internetcomputer.org)
+* [What is Internet Identity?](https://thebigfile.com/docs/current/tokenomics/identity-auth/what-is-ic-identity) on [thebigfile.com](https://thebigfile.com)
 * [Internet Identity presentation 📼](https://youtu.be/oxEr8UzGeBo) on YouTube, streamed during the Genesis Event
 * [Excalidraw](https://excalidraw.com), used to make diagrams
 
@@ -181,9 +181,9 @@ We're here to help! Here are some ways you can reach out for help if you get stu
 [DSCVR]: https://dscvr.one
 
 [HACKING]: ./HACKING.md#running-locally
-[ic]: https://internetcomputer.org
-[spec]: https://internetcomputer.org/docs/current/references/ii-spec
+[ic]: https://thebigfile.com
+[spec]: https://thebigfile.com/docs/current/references/ii-spec
 [releases]: https://github.com/dfinity/internet-identity/releases
 [Docker]: https://docker.io
 [links]: #links
-[candid]: https://internetcomputer.org/docs/current/developer-docs/build/languages/candid/candid-concepts/
+[candid]: https://thebigfile.com/docs/current/developer-docs/build/languages/candid/candid-concepts/

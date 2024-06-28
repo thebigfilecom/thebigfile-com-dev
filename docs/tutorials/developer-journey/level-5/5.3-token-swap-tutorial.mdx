@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-The Internet Computer enables decentralized finance (DeFi) applications through its design that includes complex, on-chain computation. One primary example of a DeFi application is a decentralized exchange (DEX). A DEX is an exchange that can be used to buy, sell, trade, and withdraw cryptocurrencies and other digital assets without a centralized authority that authorizes the trades, such as bank. Decentralized exchanges are extremely useful, as they allow users to buy and hold cryptocurrencies, trade it directly for another token or coin, then withdraw the tokens to be used elsewhere.
+The BigFile enables decentralized finance (DeFi) applications through its design that includes complex, on-chain computation. One primary example of a DeFi application is a decentralized exchange (DEX). A DEX is an exchange that can be used to buy, sell, trade, and withdraw cryptocurrencies and other digital assets without a centralized authority that authorizes the trades, such as bank. Decentralized exchanges are extremely useful, as they allow users to buy and hold cryptocurrencies, trade it directly for another token or coin, then withdraw the tokens to be used elsewhere.
 
 ## Decentralized token swap canister
 
@@ -26,7 +26,7 @@ Once a user has deposited funds, the tokens deposited can be swapped from one to
 
 In this example, the token swap canister simply swaps all deposits for two users. `user_a`'s entire token balance of `token_a` is given to `user_b`, and `user_b`'s entire token balance of `token_b` is given to `user_a`.
 
-This example will use ICRC-2 tokens. To learn more about ICRC tokens, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-icrc-tokens)
+This example will use ICRC-2 tokens. To learn more about ICRC tokens, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
 
 
 ### Prerequisites
@@ -107,9 +107,9 @@ In this project's configuration, you can see definition of three canisters:
 
 - The `swap` canister: This canister provides the deposit, swap, and withdraw functionality for the project's ICRC-2 tokens. It uses the source code found at `src/swap/main.mo`.
 
-- The `token_a` canister: This canister is used to create `token_a`, an ICRC-2 token. This canister uses the most recent ICRC ledger Wasm and Candid files. To learn more about the ICRC Wasm and Candid files, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-icrc-tokens)
+- The `token_a` canister: This canister is used to create `token_a`, an ICRC-2 token. This canister uses the most recent ICRC ledger Wasm and Candid files. To learn more about the ICRC Wasm and Candid files, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
 
-- The `token_b` canister: The canister is used to create `token_b`, an ICRC-2 token. This canister uses the most recent ICRC ledger Wasm and Candid files. To learn more about the ICRC Wasm and Candid files, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-icrc-tokens)
+- The `token_b` canister: The canister is used to create `token_b`, an ICRC-2 token. This canister uses the most recent ICRC ledger Wasm and Candid files. To learn more about the ICRC Wasm and Candid files, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
 
 Next, open the `src/swap/main.mo` file and review its contents. This code has been annotated with notes to explain the program's functionality:
 
@@ -807,7 +807,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Developer tooling working group](https://www.google.com/calendar/event?eid=MHY0cjBubmlnYXY1cTkzZzVzcmozb3ZjZm5fMjAyMzEwMDVUMTcwMDAwWiBjX2Nnb2VxOTE3cnBlYXA3dnNlM2lzMWhsMzEwQGc&ctz=Europe/Zurich).
 
-- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the Internet Computer.
+- [Motoko Bootcamp - The DAO Adventure](https://github.com/motoko-bootcamp/dao-adventure) - Discover the Motoko language in this 7 day adventure and learn to build a DAO on the BigFile.
 
 - [Motoko Bootcamp - Discord community](https://discord.gg/YbksCUxdzk) - A community for and by Motoko developers to ask for advice, showcase projects and participate in collaborative events.
 
@@ -819,7 +819,7 @@ Did you get stuck somewhere in this tutorial, or feel like you need additional h
 
 - [Weekly developer office hours](https://discord.gg/4a7SZzRk?event=1164114241893187655) to ask questions, get clarification, and chat with other developers live via voice chat. This is hosted on our [developer Discord](https://discord.com/invite/cA7y6ezyE2) group.
 
-- Submit your feedback to the [BIG Developer feedback board](http://dx.internetcomputer.org).
+- Submit your feedback to the [BIG Developer feedback board](http://dx.thebigfile.com).
 
 ## Next steps
 

@@ -86,7 +86,7 @@
   },
   {
     "name": "Oisy Wallet",
-    "oneLiner": "A novel Ethereum wallet hosted on the Internet Computer",
+    "oneLiner": "A novel Ethereum wallet hosted on the BigFile",
     "website": "https://oisy.com",
     "logo": "oisy_logo.svg"
   },
@@ -145,7 +145,7 @@
   },
   {
     "name": "Canistergeek",
-    "oneLiner": "IC canister management tool",
+    "oneLiner": "BIG canister management tool",
     "website": "https://canistergeek.app/",
     "logo": "canistergeek_logo.webp"
   },
@@ -189,7 +189,7 @@
     "logo": "kontribute_logo.webp"
   },
   {
-    "name": "IC Drive",
+    "name": "BIG Drive",
     "website": "https://rglue-kyaaa-aaaah-qakca-cai.ic0.app/",
     "logo": "icdrive_logo.webp"
   },
@@ -200,7 +200,7 @@
   },
   {
     "name": "CrowdGov.org",
-    "oneLiner": "The simplified, one-stop shop for IC Governance.",
+    "oneLiner": "The simplified, one-stop shop for BIG Governance.",
     "website": "https://crowdgov.org",
     "logo": "crowdgovorg_logo.webp"
   },
@@ -228,7 +228,7 @@
   },
   {
     "name": "Canlista",
-    "oneLiner": "Internet Computer Canister Registry",
+    "oneLiner": "BigFile Canister Registry",
     "website": "https://k7gat-daaaa-aaaae-qaahq-cai.ic0.app/",
     "logo": "canlista_logo.webp"
   },
@@ -255,7 +255,7 @@
   },
   {
     "name": "Usergeek",
-    "oneLiner": "Product analytics for IC dapps",
+    "oneLiner": "Product analytics for BIG dapps",
     "website": "https://usergeek.app/",
     "logo": "usergeek_logo.webp"
   },
@@ -267,7 +267,7 @@
   },
   {
     "name": "Canister Store",
-    "oneLiner": "Empowering Users to Easily Deploy Canisters on the Internet Computer",
+    "oneLiner": "Empowering Users to Easily Deploy Canisters on the BigFile",
     "website": "https://canister.app",
     "logo": "canister-store_logo.png"
   },
@@ -275,7 +275,7 @@
     "name": "cyql.io",
     "website": "https://cyql.io/",
     "logo": "cyqlio_logo.svg",
-    "oneLiner": "Curated Internet Computer projects gallery."
+    "oneLiner": "Curated BigFile projects gallery."
   },
   {
     "name": "Dbox",
@@ -371,7 +371,7 @@
     "name": "John Dao",
     "website": "https://johndao.gg",
     "logo": "john-dao_logo.webp",
-    "oneLiner": "A Twitter/X account controlled by a DAO on the Internet Computer"
+    "oneLiner": "A Twitter/X account controlled by a DAO on the BigFile"
   },
   {
     "name": "aVa",
@@ -383,7 +383,7 @@
     "name": "Open Internet Metaverse",
     "website": "https://vdfyi-uaaaa-aaaai-acptq-cai.ic0.app",
     "logo": "open-internet-metaverse_logo.webp",
-    "oneLiner": "Create Your Virtual Space as a 3D-Website on the Internet Computer"
+    "oneLiner": "Create Your Virtual Space as a 3D-Website on the BigFile"
   },
   {
     "name": "Faceless Project",
@@ -410,20 +410,20 @@
     "oneLiner": "Kids rewards dapp"
   },
   {
-    "name": "IC WebSocket",
+    "name": "BIG WebSocket",
     "website": "https://demo.icws.io",
     "logo": "ic-websocket_logo.webp",
     "oneLiner": "Send updates from canisters to your users"
   },
   {
     "name": "TaxLint",
-    "oneLiner": "Your automated tax reporting IC assistant.",
+    "oneLiner": "Your automated tax reporting BIG assistant.",
     "website": "https://vresg-vyaaa-aaaag-qcj2q-cai.icp0.io/",
     "logo": "taxlint_logo.png"
   },
   {
     "name": "ICPsig",
-    "oneLiner": "Multisig for Internet Computer",
+    "oneLiner": "Multisig for BigFile",
     "website": "https://icpsig.in/",
     "logo": "icpsig_logo.png"
   },
@@ -437,7 +437,7 @@
     "name": "The Asset App",
     "website": "https://h3cjw-syaaa-aaaam-qbbia-cai.ic0.app/",
     "logo": "asset-app_logo.png",
-    "oneLiner": "Allows any user to generate their own file canister smart contract and visually manage their files on the Internet Computer without requiring any code"
+    "oneLiner": "Allows any user to generate their own file canister smart contract and visually manage their files on the BigFile without requiring any code"
   },
   {
     "name": "icgpt",
@@ -513,7 +513,7 @@
   },
   {
     "name": "ICTO",
-    "oneLiner": "ICTO is a one-stop platform automating token operations on the Internet Computer.",
+    "oneLiner": "ICTO is a one-stop platform automating token operations on the BigFile.",
     "website": "https://icto.app",
     "logo": "icto_logo.png"
   },
@@ -533,7 +533,7 @@
     "name": "ICPanda DAO",
     "website": "https://panda.fans/",
     "logo": "icpanda-dao_logo.webp",
-    "oneLiner": "A decentralized Panda meme brand built on the Internet Computer."
+    "oneLiner": "A decentralized Panda meme brand built on the BigFile."
   },
   {
     "name": "ICPEx",

@@ -5,6 +5,6 @@ pub fn display_dfxvm_installation_instructions() {
     println!();
     let command = Style::new()
         .cyan()
-        .apply_to(r#"sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)""#);
+        .apply_to(r#"sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)""#);
     println!("    {command}");
 }

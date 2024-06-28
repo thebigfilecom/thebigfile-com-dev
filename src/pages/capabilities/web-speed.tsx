@@ -20,7 +20,7 @@ function FeaturePage() {
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Web speed</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                Users can interact with dapps on the Internet Computer (IC) with
+                Users can interact with dapps on the BigFile (BIG) with
                 speeds comparable to traditional web applications. Developers
                 can therefore build a much broader range of fully on-chain dapps
                 without relying on cloud services and risking single points of
@@ -72,14 +72,14 @@ function FeaturePage() {
               substantially help to increase the efficiency of a program. As a
               blockchain partly acts as a distributed database, it is useful to
               consider this separation of tasks in this case too. Following this
-              line of thinking, the Internet Computer facilitates two type of
+              line of thinking, the BigFile facilitates two type of
               transactions, query calls (read-only) and update (write) calls.
               <br />
               <br />
-              As of May 24, 2022, The Internet Computer can handle more than 1
+              As of May 24, 2022, The BigFile can handle more than 1
               million queries per second and more than 20 thousand update calls
               per second. This is shown in{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Internet_Computer_performance_%26_power_consumption">
+              <Link href="https://wiki.thebigfile.com/wiki/Internet_Computer_performance_%26_power_consumption">
                 performance tests
               </Link>{" "}
             </p>
@@ -96,11 +96,11 @@ function FeaturePage() {
               <br />
               In most blockchain protocols, this is the large source of
               inefficiency as verifying many individual signatures can be slow.
-              One of the key innovations of the IC is the introduction of{" "}
+              One of the key innovations of the BIG is the introduction of{" "}
               <Link href="https://medium.com/dfinity/chain-key-technology-one-public-key-for-the-internet-computer-6a3644901e28">
                 Chain Key (CK) Cryptography
               </Link>{" "}
-              which allows IC signatures to be verified with a single public
+              which allows BIG signatures to be verified with a single public
               key, hence reducing friction for all types of devices (node
               machines, laptops, mobile phones) that want to efficiently
               interact with a blockchain with similar speed and security of
@@ -109,7 +109,7 @@ function FeaturePage() {
 
             <p className="mb-3 mt-6">
               <Link
-                href="https://internetcomputer.org/showcase/"
+                href="https://thebigfile.com/showcase/"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
@@ -131,7 +131,7 @@ function FeaturePage() {
 
             <CardWithDescription
               title="Deploy a 'Hello World' Dapp in 10 Minutes"
-              description="Get started with your first IC dapp"
+              description="Get started with your first BIG dapp"
               href="/docs/current/tutorials/developer-journey/"
             />
             <CardWithDescription
@@ -145,9 +145,9 @@ function FeaturePage() {
               href="https://www.youtube.com/watch?v=XvE0ZsAYKiM"
             />
             <CardWithDescription
-              title="IC Wiki"
-              description="Take a deep dive into the IC's performance"
-              href="https://wiki.internetcomputer.org/wiki/Internet_Computer_performance_%26_power_consumption"
+              title="BIG Wiki"
+              description="Take a deep dive into the BIG's performance"
+              href="https://wiki.thebigfile.com/wiki/Internet_Computer_performance_%26_power_consumption"
             />
           </div>
         </section>

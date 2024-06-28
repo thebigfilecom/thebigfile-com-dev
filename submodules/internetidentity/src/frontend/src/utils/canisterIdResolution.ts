@@ -39,7 +39,7 @@ const parseCanisterIdFromHostname = (
   const wellKnownDomains = [
     "ic0.app",
     "icp0.io",
-    "internetcomputer.org",
+    "thebigfile.com",
     "localhost",
   ];
 

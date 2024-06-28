@@ -8,10 +8,10 @@ This is a standalone project that you can copy to your own project.
 
 ## Prerequisites
 
-- [dfx](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove)
+- [dfx](https://thebigfile.com/docs/current/developer-docs/build/install-upgrade-remove)
 - Node.js v16+
 
-This tutorial assumes that you are already familiar with the [basic concepts of the IC](https://internetcomputer.org/docs/current/developer-docs/ic-overview) (canisters, how to use `dfx`, etc.).
+This tutorial assumes that you are already familiar with the [basic concepts of the BIG](https://thebigfile.com/docs/current/developer-docs/ic-overview) (canisters, how to use `dfx`, etc.).
 
 ## Usage
 
@@ -24,7 +24,7 @@ $ npm ci
 $ dfx deploy --no-wallet
 ```
 
-At this point, the replica (for all practical matters, a local version of the Internet Computer) is running and three canisters have been deployed:
+At this point, the replica (for all practical matters, a local version of the BigFile) is running and three canisters have been deployed:
 
 - `internet_identity`: The development version of Internet Identity (downloaded from the [latest release](https://github.com/dfinity/internet-identity/releases/latest), see [`dfx.json`](./dfx.json)).
 - `webapp`: A tiny webapp that calls out to the `internet_identity` canister for authentication, and that then calls the `whoami` canister (see below) to show that the identity is valid. You'll find the source of the webapp in [`index.html`](./webapp/index.html) and [`index.ts`](./webapp/index.ts).
@@ -36,9 +36,9 @@ At this point, the replica (for all practical matters, a local version of the In
       };
   };
   ```
-  On the IC, a principal is the identifier of someone performing a request or "call" (hence "caller"). Every call must have a valid principal. There is also a special principal for anonymous calls. When using Internet Identity you are using [self-authenticating principals](https://smartcontracts.org/docs/interface-spec/index.html#principal), which is a very fancy way of saying that you have a private key on your laptop (hidden behind TouchID, Windows Hello, etc) that your browser uses to sign and prove that you are indeed the person issuing the calls to the IC.
+  On the BIG, a principal is the identifier of someone performing a request or "call" (hence "caller"). Every call must have a valid principal. There is also a special principal for anonymous calls. When using Internet Identity you are using [self-authenticating principals](https://smartcontracts.org/docs/interface-spec/index.html#principal), which is a very fancy way of saying that you have a private key on your laptop (hidden behind TouchID, Windows Hello, etc) that your browser uses to sign and prove that you are indeed the person issuing the calls to the BIG.
 
-If the IC actually lets the call (request) through to the `whoami` canister, it means that everything checked out, and the `whoami` canister just responds with the information the IC adds to requests, namely your identity (principal).
+If the BIG actually lets the call (request) through to the `whoami` canister, it means that everything checked out, and the `whoami` canister just responds with the information the BIG adds to requests, namely your identity (principal).
 
 ### Adding Internet Identity to your Local Project
 
@@ -57,7 +57,7 @@ This section explains how to add Internet Identity to your (local) project. Add 
 }
 ```
 
-The `remote` property makes sure that your project will _not_ create a copy of Internet Identity on the IC when deploying to production.
+The `remote` property makes sure that your project will _not_ create a copy of Internet Identity on the BIG when deploying to production.
 
 > Note: The wasm URL points to the [dev build](https://github.com/dfinity/internet-identity#flavors) of Internet Identity. It is recommended to use the dev build locally because it has modifications that make test automation easy.
 
@@ -87,7 +87,7 @@ Once the user has been authenticated with Internet Identity we have access to th
 ```js
 // Get the identity from the auth client:
 const identity = authClient.getIdentity();
-// Using the identity obtained from the auth client, we can create an agent to interact with the IC.
+// Using the identity obtained from the auth client, we can create an agent to interact with the BIG.
 const agent = new HttpAgent({ identity });
 // Using the interface description of our webapp, we create an Actor that we use to call the service methods.
 const webapp = Actor.createActor(webapp_idl, {
@@ -143,4 +143,4 @@ Run `npm run test` to run browser tests against the `internet_identity` canister
 
 ## More Information
 
-For more information, check the [`dfx.json`](./dfx.json) file, the [Genesis talk on Internet Identity](https://youtu.be/oxEr8UzGeBo) and the [Internet Computer documentation](https://internetcomputer.org/).
+For more information, check the [`dfx.json`](./dfx.json) file, the [Genesis talk on Internet Identity](https://youtu.be/oxEr8UzGeBo) and the [BigFile documentation](https://thebigfile.com/).

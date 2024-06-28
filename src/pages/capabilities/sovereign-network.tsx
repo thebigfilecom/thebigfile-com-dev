@@ -22,9 +22,9 @@ function FeaturePage() {
                 Sovereign Network
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The Internet Computer blockchain network is formed by special
+                The BigFile blockchain network is formed by special
                 node machines, which are hardware devices that are dedicated to
-                the task of running the Internet Computer Protocol (thus creating a sovereign network). This is
+                the task of running the BigFile Protocol (thus creating a sovereign network). This is
                 conceptually similar to how the Internet is formed by interconnected network
                 routing devices.
               </p>
@@ -84,12 +84,12 @@ function FeaturePage() {
             </p>
 
             <p>
-              These issues do not exist with the Internet Computer, because it
+              These issues do not exist with the BigFile, because it
               runs on a sovereign network.
             </p>
 
             <p>
-              Every node in the Internet Computer network is a dedicated
+              Every node in the BigFile network is a dedicated
               physical device, called a node machine, which is owned and run by an
               independent node provider, typically from rack space in an
               independent data center. The nodes cannot therefore be switched
@@ -100,7 +100,7 @@ function FeaturePage() {
             <p>
               While this is an important advantage, there are other technical
               reasons that special node machines are required to participate in
-              the Internet Computer network. The node machines are built
+              the BigFile network. The node machines are built
               to standardized public hardware specifications. This means that
               when the network is under load, they do not fall behind other
               nodes inside the same subnet blockchain and stay within the statistical
@@ -110,7 +110,7 @@ function FeaturePage() {
 
             <p className="mb-3 mt-6">
               <Link
-                href="https://internetcomputer.org/showcase/"
+                href="https://thebigfile.com/showcase/"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
@@ -137,7 +137,7 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="Sample Code"
-              description="Learn about IC capabilities from community samples."
+              description="Learn about BIG capabilities from community samples."
               href="/samples"
             />
           </div>

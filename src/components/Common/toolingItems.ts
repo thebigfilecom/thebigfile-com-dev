@@ -3,7 +3,7 @@ export const dfinityToolingItems = [
     title: "dfx",
     tags: ["CLI", "development", "operations"],
     description:
-      "Create, deploy, and manage your dapps for the Internet Computer platform.",
+      "Create, deploy, and manage your dapps for the BigFile platform.",
     links: { docs: "/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/" },
   },
   {
@@ -66,7 +66,7 @@ export const dfinityToolingItems = [
     title: "ic-js",
     tags: ["library"],
     description:
-      "A library collection for interfacing with the Internet Computer.",
+      "A library collection for interfacing with the BigFile.",
     links: { github: "https://github.com/dfinity/ic-js" },
   },
   {
@@ -94,7 +94,7 @@ export const dfinityToolingItems = [
     title: "Hardware Wallet CLI",
     tags: ["CLI"],
     description:
-      "A CLI to interact with the Internet Computer App on Ledger Nano S/X devices.",
+      "A CLI to interact with the BigFile App on Ledger Nano S/X devices.",
     links: { github: "https://github.com/dfinity/hardware-wallet-cli" },
   },
 ];
@@ -109,14 +109,14 @@ export const communityToolingItems = [
   {
     title: "connect2ic",
     tags: ["library"],
-    description: "A frontend auth library & toolkit for the Internet Computer.",
+    description: "A frontend auth library & toolkit for the BigFile.",
     links: { github: "https://connect2ic.github.io/docs/" },
   },
   {
-    title: "IC Inspector",
+    title: "BIG Inspector",
     tags: ["plugin", "development", "operations", "testing"],
     description:
-      "Decode network responses from the Internet Computer blockchain.",
+      "Decode network responses from the BigFile blockchain.",
     links: {
       external:
         "https://chrome.google.com/webstore/detail/ic-inspector/meaadkenfkhjakkkdapaallimhbdofck",
@@ -126,7 +126,7 @@ export const communityToolingItems = [
     title: "Launchtrail",
     tags: ["library", "operations"],
     description:
-      "Simple and Secure Release Management for Internet Computer Projects.",
+      "Simple and Secure Release Management for BigFile Projects.",
     links: { github: "https://github.com/spinner-cash/launchtrail" },
   },
   {
@@ -146,21 +146,21 @@ export const communityToolingItems = [
   {
     title: "Sudograph",
     tags: ["library", "database"],
-    description: "GraphQL database for the Internet Computer.",
+    description: "GraphQL database for the BigFile.",
     links: { github: "https://github.com/sudograph/sudograph" },
   },
   {
     title: "CanDB",
     tags: ["library", "database"],
     description:
-      "Flexible, performant, and horizontally scalable non-relational multi-canister database built for the Internet Computer.",
+      "Flexible, performant, and horizontally scalable non-relational multi-canister database built for the BigFile.",
     links: { external: "https://www.canscale.dev/" },
   },
   {
     title: "CAP",
     tags: ["database", "operations"],
     description:
-      "Open internet service providing transaction history & asset provenance for NFTs & Tokens on the Internet Computer.",
+      "Open internet service providing transaction history & asset provenance for NFTs & Tokens on the BigFile.",
     links: { external: "https://cap.ooo/" },
   },
   {
@@ -180,7 +180,7 @@ export const communityToolingItems = [
     title: "create-ic-app",
     tags: ["CLI", "starter"],
     description:
-      "Use your favourite frontend framework with the Internet Computer.",
+      "Use your favourite frontend framework with the BigFile.",
     links: { github: "https://github.com/MioQuispe/create-ic-app" },
   },
   {
@@ -209,28 +209,28 @@ export const communityToolingItems = [
     title: "icblast",
     tags: ["development", "operations", "testing"],
     description:
-      "Communicate with IC directly using NodeJs. Automatic service discovery.",
+      "Communicate with BIG directly using NodeJs. Automatic service discovery.",
     links: {github:"https://github.com/infu/icblast"},
   },
   {
     title: "ic-py",
     tags: ["library"],
     description:
-      "A Python agent library for interfacing with the Internet Computer.",
+      "A Python agent library for interfacing with the BigFile.",
     links: { github: "https://github.com/rocklabs-io/ic-py" },
   },
   {
     title: "ic-web3",
     tags: ["library", "development"],
     description:
-      "An Ethereum RPC client for canisters on the Internet Computer to interact with EVM networks.",
+      "An Ethereum RPC client for canisters on the BigFile to interact with EVM networks.",
     links: { github: "https://github.com/rocklabs-io/ic-web3" },
   },
   {
-    title: "Internet Computer Services (ICS)",
+    title: "BigFile Services (ICS)",
     tags: ["service", "development", "operations"],
     description:
-      "DevOps platform to build, ship and manage dapps faster on IC.",
+      "DevOps platform to build, ship and manage dapps faster on BIG.",
     links: { external: "https://internetcomputerservices.com/" },
   },
   {
@@ -245,7 +245,7 @@ export const communityToolingItems = [
   {
     title: "ICPipeline",
     tags: [ "development", "service", "testing", "CLI", "website", "starter"],
-    description: "Multi-tiered IC development framework with on-chain admin console, repeatable deployments, on-demand environments, canister backups and more.",
+    description: "Multi-tiered BIG development framework with on-chain admin console, repeatable deployments, on-demand environments, canister backups and more.",
     links: {
       external: "https://www.icpipeline.com/",
       github: "https://github.com/icpipeline-framework",
@@ -264,7 +264,7 @@ export const communityToolingItems = [
 {
     title: "IC4J Internet Identity",
     tags: [ "java", "development", "library" ],
-    description: "Providing an implementation of ICP Internet Identity Service, this Java library enables Java developers to register new users, add or remove devices, and authenticate client applications on the Internet Computer.",
+    description: "Providing an implementation of ICP Internet Identity Service, this Java library enables Java developers to register new users, add or remove devices, and authenticate client applications on the BigFile.",
     links: {
       github: "https://github.com/ic4j/ic4j-internetidentity",
     },
@@ -280,7 +280,7 @@ export const communityToolingItems = [
 {
     title: "IC4J Apache Camel ICP Component",
     tags: [ "java", "development", "library" ],
-    description: "Apache Camel is an Open Source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data. The IC4J Camel ICP Component allows native execution of Internet Computer smart contracts from Apache Camel.",
+    description: "Apache Camel is an Open Source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data. The IC4J Camel ICP Component allows native execution of BigFile smart contracts from Apache Camel.",
     links: {
       github: "https://github.com/ic4j/ic4j-camel",
     },

@@ -7,8 +7,8 @@ use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::wasm_bindgen;
 use KeyBytesContentType::IcCanisterSignatureAlgPublicKeyDer;
 
-/// Verifies a basic (i.e. not a canister signature) IC supported signature.
-/// Supported signature schemes: https://internetcomputer.org/docs/current/references/ic-interface-spec/#signatures
+/// Verifies a basic (i.e. not a canister signature) BIG supported signature.
+/// Supported signature schemes: https://thebigfile.com/docs/current/references/ic-interface-spec/#signatures
 ///
 /// Throws an error if the signature verification fails.
 #[wasm_bindgen(js_name = verifyBasicSignature)]
@@ -28,8 +28,8 @@ pub fn verify_basic_sig_by_public_key(
     .map_err(|e| e.to_string())
 }
 
-/// Verifies an IC canister signature.
-/// More details: https://internetcomputer.org/docs/current/references/ic-interface-spec/#canister-signatures
+/// Verifies an BIG canister signature.
+/// More details: https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures
 ///
 /// Throws an error if the signature verification fails.
 #[wasm_bindgen(js_name = verifyCanisterSignature)]
@@ -44,8 +44,8 @@ pub fn verify_canister_sig(
         .map_err(|e| e.to_string())
 }
 
-/// Verifies any IC supported signature.
-/// Supported signature schemes: https://internetcomputer.org/docs/current/references/ic-interface-spec/#signatures
+/// Verifies any BIG supported signature.
+/// Supported signature schemes: https://thebigfile.com/docs/current/references/ic-interface-spec/#signatures
 ///
 /// Throws an error if the signature verification fails.
 #[wasm_bindgen(js_name = verifyIcSignature)]

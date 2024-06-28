@@ -5,7 +5,7 @@ import ShareMeta from "../components/Common/ShareMeta";
 
 const IcpNewsletterRedirectPage: React.FC = () => {
   const metaDescription =
-    "Stay informed with the latest on the Internet Computer. Browse the previous Newsletters for current updates.";
+    "Stay informed with the latest on the BigFile. Browse the previous Newsletters for current updates.";
   const title = "ICP News & Updates Mailing";
   const { siteConfig } = useDocusaurusContext();
 

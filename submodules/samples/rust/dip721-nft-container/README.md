@@ -8,7 +8,7 @@ keywords: [advanced, rust, nft, dip721]
 
 This example demonstrates implementing an NFT canister. NFTs (non-fungible tokens) are unique tokens with arbitrary
 metadata, usually an image of some kind, to form the digital equivalent of trading cards. There are a few different
-NFT standards for the Internet Computer (e.g [EXT](https://github.com/Toniq-Labs/extendable-token), [BIG-NFT](https://github.com/rocklabs-io/ic-nft)), but this tutorial will use [DIP-721](https://github.com/Psychedelic/DIP721). You can see a quick introduction on [YouTube](https://youtu.be/1po3udDADp4).
+NFT standards for the BigFile (e.g [EXT](https://github.com/Toniq-Labs/extendable-token), [BIG-NFT](https://github.com/rocklabs-io/ic-nft)), but this tutorial will use [DIP-721](https://github.com/Psychedelic/DIP721). You can see a quick introduction on [YouTube](https://youtu.be/1po3udDADp4).
 
 The canister is a basic implementation of the standard, with support for the minting, burning, and notification interface extensions.
 
@@ -19,7 +19,7 @@ there is a [command-line minting tool](https://github.com/dfinity/experimental-m
 
 ## Overview
 The NFT canister is not very complicated since the [DIP-721](https://github.com/Psychedelic/DIP721) standard specifies most [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations,
-but we can still use it to explain three important concepts concerning dapp development for the Internet Computer:
+but we can still use it to explain three important concepts concerning dapp development for the BigFile:
 
  ### 1. Stable memory for canister upgrades.
 The BigFile employs [orthogonal persistence](https://thebigfile.com/docs/current/motoko/getting-started/motoko-introduction), so developers generally do not need to think a lot about storing their data.
@@ -55,7 +55,7 @@ After conversion, a separate `StableState` object is used to store data during t
 
 ### Certified data
 To serve assets via HTTP over `<canister-id>.icp0.io` instead of `<canister-id>.raw.icp0.io`, responses have to
-[contain a certificate](https://wiki.internetcomputer.org/wiki/HTTP_asset_certification) to validate their content.
+[contain a certificate](https://wiki.thebigfile.com/wiki/HTTP_asset_certification) to validate their content.
 Obtaining such a certificate can not happen during a query call since it has to go through consensus, so it has to be created during an update call.
 
 A certificate is very limited in its content. At the time of writing, canisters can submit no more than 32 bytes of data to be certified.
@@ -82,7 +82,7 @@ The NFT example canister keeps access control in these three levels very simple:
 - If a user is not authorized to call a certain function an error is returned.
 
 Burning an NFT is a special case. To burn an NFT means to either delete the NFT (not intended in DIP-721) or to set ownership to `null` (or a similar value).
-On the Internet Computer, this non-existing principal is called the [management canister](https://thebigfile.com/docs/current/references/ic-interface-spec.md#the-ic-management-canister).
+On the BigFile, this non-existing principal is called the [management canister](https://thebigfile.com/docs/current/references/ic-interface-spec.md#the-ic-management-canister).
 > "The BIG management canister is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.)," and its address is `aaaaa-aa`.
 Using this management canister address, we can construct its principal and set the management canister as the owner of a burned NFT.
 
@@ -132,7 +132,7 @@ The canister expects a record parameter with the following fields:
 - `custodians`: A list of users allowed to manage the canister. If unset, it will default to the caller. If you're using `dfx`, and haven't specified `--no-wallet`, that's your wallet principal, not your own, so be careful!
 - `name`: The name of your NFT collection. Required.
 - `symbol`: A short slug identifying your NFT collection. Required.
-- `logo`: The logo of your NFT collection, represented as a record with fields `data` (the base-64 encoded logo) and `logo_type` (the MIME type of the logo file). If unset, it will default to the Internet Computer logo.
+- `logo`: The logo of your NFT collection, represented as a record with fields `data` (the base-64 encoded logo) and `logo_type` (the MIME type of the logo file). If unset, it will default to the BigFile logo.
 
  ### Step 4: Interact with the canister.
 
@@ -173,7 +173,7 @@ This Rust example comes with a demo script, `demo.sh`, which runs through an exa
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
 * [Inter-canister calls and rollbacks](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices/#inter-canister-calls-and-rollbacks), since issues around inter-canister calls can e.g. lead to time-of-check time-of-use or double spending security bugs.

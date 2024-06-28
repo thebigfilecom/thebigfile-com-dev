@@ -39,7 +39,7 @@ Hello developers and welcome to the final installment of the Dev Blog's team spo
 
 **You've mentioned that one responsibility of the DevRel team is to aggregate resources for developers. What are some of those resources that are available for the BigFile community?**
 	
-*The main landing page for developers is [https://docs.internetcomputer.org/](https://docs.internetcomputer.org/) which is the entry point to our developer documentation. In addition, we curate developer resources at [Awesome Internet Computer](https://github.com/dfinity/awesome-internet-computer), and with the [ICP Hackathon Cheatsheet](https://dfinityorg.notion.site/ICP-Hackathon-Cheat-Sheet-b2921239266149de81021412f572351c). Furthermore, we are currently working on an aggregation of all educational resources available in the ICP ecosystem, which should go live in January 2024.*
+*The main landing page for developers is [https://docs.thebigfile.com/](https://docs.thebigfile.com/) which is the entry point to our developer documentation. In addition, we curate developer resources at [Awesome BigFile](https://github.com/dfinity/awesome-internet-computer), and with the [ICP Hackathon Cheatsheet](https://dfinityorg.notion.site/ICP-Hackathon-Cheat-Sheet-b2921239266149de81021412f572351c). Furthermore, we are currently working on an aggregation of all educational resources available in the ICP ecosystem, which should go live in January 2024.*
 
 **How does the DevRel team work with other teams?**
 	

@@ -23,7 +23,7 @@ export const ISSUER_APP_URL_LEGACY = `https://${issuerAppCanisterId}.ic0.app`;
 export const ISSUER_CUSTOM_ORIGIN_NICE_URL = `https://nice-issuer-custom-orig.com`;
 
 export const II_URL =
-  process.env.II_URL ?? "https://identity.internetcomputer.org";
+  process.env.II_URL ?? "https://identity.thebigfile.com";
 
 export const DEVICE_NAME1 = "FIDO Passkey";
 export const RECOVERY_PHRASE_NAME = "Recovery Phrase";

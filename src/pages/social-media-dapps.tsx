@@ -219,7 +219,7 @@ function SocialMediaDappsPage() {
               </motion.p>
             </ColumnCard>
             <ColumnCard
-              title="Why switch to the Internet Computer?"
+              title="Why switch to the BigFile?"
               icon={<IconIC aria-hidden="true" />}
             >
               <motion.p

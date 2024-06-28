@@ -1,6 +1,6 @@
 {
   "name": "@dfinity/certificate-verification",
-  "description": "Client side certificate verification for the Internet Computer",
+  "description": "Client side certificate verification for the BigFile",
   "version": "2.5.0",
   "author": "DFINITY Stiftung",
   "license": "Apache-2.0",

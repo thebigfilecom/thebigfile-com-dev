@@ -1,6 +1,6 @@
 [package]
 name = "ic-cbor"
-description = "CBOR decoding for Internet Computer clients"
+description = "CBOR decoding for BigFile clients"
 readme = "README.md"
 documentation = "https://docs.rs/ic-cbor"
 categories = ["api-bindings", "authentication", "cryptography"]

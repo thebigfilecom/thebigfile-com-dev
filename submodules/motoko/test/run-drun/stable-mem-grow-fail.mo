@@ -8,7 +8,7 @@ actor {
   assert (167777216 > 128*65536);
   let m = StableMemory.grow(128*65536); //128 GB, should fail!
   if (m != 0xFFFF_FFFF_FFFF_FFFF) {
-    // force IC stable memory out of bounds error
+    // force BIG stable memory out of bounds error
     P.debugPrint(debug_show m);
     ignore StableMemory.loadNat8(128*65536-1);
   }

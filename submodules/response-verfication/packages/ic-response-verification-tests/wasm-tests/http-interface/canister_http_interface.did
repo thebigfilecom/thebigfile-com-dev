@@ -1,4 +1,4 @@
-// adapted from https://internetcomputer.org/docs/current/references/ic-interface-spec/#http-gateway-interface
+// adapted from https://thebigfile.com/docs/current/references/ic-interface-spec/#http-gateway-interface
 
 type HeaderField = record { text; text; };
 

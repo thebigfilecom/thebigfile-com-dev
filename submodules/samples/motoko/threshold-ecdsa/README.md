@@ -16,7 +16,7 @@ More specifically:
 
 - The sample canister receives a request that provides a message.
 - The sample canister hashes the message and uses the key derivation string for the derivation path. 
-- The sample canister uses the above to request a signature from the threshold ECDSA [subnet](https://wiki.internetcomputer.org/wiki/Subnet_blockchain) (the threshold ECDSA is a subnet specializing in generating threshold ECDSA signatures).
+- The sample canister uses the above to request a signature from the threshold ECDSA [subnet](https://wiki.thebigfile.com/wiki/Subnet_blockchain) (the threshold ECDSA is a subnet specializing in generating threshold ECDSA signatures).
 
 This tutorial gives a complete overview of the development, starting with downloading the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/index.md), up to the deployment and trying out the code on the BIG mainnet.
 
@@ -68,7 +68,7 @@ To deploy this canister to the mainnet, one needs to do two things:
 
 #### Acquire cycles to deploy
 
-Deploying to the Internet Computer requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
+Deploying to the BigFile requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
 
 #### Update source code with the right key ID
 

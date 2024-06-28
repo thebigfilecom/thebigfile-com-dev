@@ -43,7 +43,7 @@ const InternetIdentity = () => {
           >
             The easy-to-use authentication framework that allows anyone with a
             WebAuthn enabled device to anonymously authenticate with Web3
-            services running on the Internet Computer using the WebAuthn
+            services running on the BigFile using the WebAuthn
             standard.
           </motion.p>
           <MotionLink

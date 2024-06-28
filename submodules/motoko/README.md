@@ -1,7 +1,7 @@
-# [Motoko](https://internetcomputer.org/docs/current/motoko/main/about-this-guide) &middot; [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Tests](https://img.shields.io/github/actions/workflow/status/dfinity/motoko/release.yml?branch=master&logo=github)](https://github.com/dfinity/motoko/actions?query=workflow:"release") [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/dfinity/motoko/blob/master/Building.md)
+# [Motoko](https://thebigfile.com/docs/current/motoko/main/about-this-guide) &middot; [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Tests](https://img.shields.io/github/actions/workflow/status/dfinity/motoko/release.yml?branch=master&logo=github)](https://github.com/dfinity/motoko/actions?query=workflow:"release") [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/dfinity/motoko/blob/master/Building.md)
 
 
-A safe, simple, actor-based programming language for authoring [Internet Computer](https://internetcomputer.org/) (IC) canister smart contracts.
+A safe, simple, actor-based programming language for authoring [BigFile](https://thebigfile.com/) (BIG) canister smart contracts.
 
 ## User Documentation & Samples
 
@@ -18,13 +18,13 @@ A safe, simple, actor-based programming language for authoring [Internet Compute
 
 ### Motivation and Goals
 
-* High-level language for programming IC applications
+* High-level language for programming BIG applications
 
 * Simple ("K.I.S.S.") design and familiar syntax for average programmers
 
 * Good and convenient support for actor model
 
-* Good fit for underlying Wasm and IC execution model
+* Good fit for underlying Wasm and BIG execution model
 
 * Anticipate future extensions to Wasm where possible
 
@@ -59,7 +59,7 @@ A safe, simple, actor-based programming language for authoring [Internet Compute
 
 * [Awesome Motoko](https://github.com/motoko-unofficial/awesome-motoko#readme)
 * [Blocks - an online low-code editor for Motoko](https://github.com/Blocks-Editor/blocks)
-* [MOPS - a Motoko package manager hosted on the IC](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/)
+* [MOPS - a Motoko package manager hosted on the BIG](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/)
 * [Motoko Bootcamp](https://github.com/motoko-bootcamp/bootcamp#readme) &middot; ([YouTube channel](https://www.youtube.com/channel/UCa7_xHjvOESf9v281VU4qVw))
 * [Motoko library starter template](https://github.com/ByronBecker/motoko-library-template)
 

@@ -2,7 +2,7 @@
     "candid": {
         "branch": "master",
         "builtin": false,
-        "description": "Candid Library for the Internet Computer",
+        "description": "Candid Library for the BigFile",
         "homepage": "",
         "owner": "dfinity",
         "repo": "candid",
@@ -22,7 +22,7 @@
     },
     "ic": {
         "branch": "pull/153/head",
-        "description": "Internet Computer blockchain source: the client/replica software run by nodes",
+        "description": "BigFile blockchain source: the client/replica software run by nodes",
         "homepage": "",
         "owner": "dfinity",
         "repo": "ic",
@@ -35,7 +35,7 @@
     "ic-hs": {
         "branch": "master",
         "builtin": false,
-        "description": "A haskell toolbox for the Internet Computer",
+        "description": "A haskell toolbox for the BigFile",
         "homepage": "",
         "owner": "dfinity",
         "repo": "ic-hs",
@@ -47,7 +47,7 @@
     },
     "ic-wasm": {
         "branch": "main",
-        "description": "A collection of libraries and tools for transforming Wasm canisters running on the Internet Computer",
+        "description": "A collection of libraries and tools for transforming Wasm canisters running on the BigFile",
         "homepage": null,
         "owner": "dfinity",
         "repo": "ic-wasm",

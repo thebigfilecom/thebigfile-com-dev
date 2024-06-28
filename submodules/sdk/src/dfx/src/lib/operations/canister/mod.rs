@@ -316,7 +316,7 @@ pub async fn deposit_cycles(
     Ok(())
 }
 
-/// Can only run this locally, not on the real IC.
+/// Can only run this locally, not on the real BIG.
 /// Conjures cycles from nothing and deposits them in the selected canister.
 #[context(
     "Failed provisional deposit of {} cycles to canister {}.",

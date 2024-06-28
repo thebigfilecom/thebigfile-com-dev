@@ -55,7 +55,7 @@ After conversion, a separate `StableState` object is used to store data during t
 
 ### Certified data
 To serve assets via HTTP over `<canister-id>.icp0.io` instead of `<canister-id>.raw.icp0.io`, responses have to
-[contain a certificate](https://wiki.internetcomputer.org/wiki/HTTP_asset_certification) to validate their content.
+[contain a certificate](https://wiki.thebigfile.com/wiki/HTTP_asset_certification) to validate their content.
 Obtaining such a certificate can not happen during a query call since it has to go through consensus, so it has to be created during an update call.
 
 A certificate is very limited in its content. At the time of writing, canisters can submit no more than 32 bytes of data to be certified.
@@ -435,7 +435,7 @@ dfx identity get-principal
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
 * [Inter-canister calls and rollbacks](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices/#inter-canister-calls-and-rollbacks), since issues around inter-canister calls can e.g. lead to time-of-check time-of-use or double spending security bugs.

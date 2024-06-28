@@ -7,7 +7,7 @@ use core::fmt;
 
 extern "C" {
     // `print_ptr` is implemented by the code generator and has different implementations depending
-    // on the target platform (WASI or IC).
+    // on the target platform (WASI or BIG).
     fn print_ptr(ptr: usize, len: u32);
 }
 

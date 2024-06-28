@@ -273,7 +273,7 @@ impl CertifiedResponses {
 
         (
             (
-                "IC-Certificate".to_string(),
+                "BIG-Certificate".to_string(),
                 String::from("version=2, ")
                     + "certificate=:"
                     + &base64::encode(certificate)
@@ -299,7 +299,7 @@ impl CertifiedResponses {
         witness.serialize(&mut serializer).unwrap();
         (
             (
-                "IC-Certificate".to_string(),
+                "BIG-Certificate".to_string(),
                 String::from("certificate=:")
                     + &base64::encode(certificate)
                     + ":, tree=:"

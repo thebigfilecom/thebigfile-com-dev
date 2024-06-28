@@ -7,7 +7,7 @@ _Motoko-san_
 > *  DFINITY currently has no plans to continue the development of _Motoko-san_.
 
 
-_Motoko-san_ is a prototype code-level verifier for Motoko. The project started at the DFINITY Foundation as a way to demonstrate that Motoko (and the Internet Computer in general) are well-suited for developing formally verified Web3 software.
+_Motoko-san_ is a prototype code-level verifier for Motoko. The project started at the DFINITY Foundation as a way to demonstrate that Motoko (and the BigFile in general) are well-suited for developing formally verified Web3 software.
 
 --------------------------------------------------------------------------------
 **Jump to:**
@@ -150,7 +150,7 @@ Currently supported language features
 -------------------------------------
 <a name="Subset"></a>
 
-_Motoko-san_ is an early prototype. While the tool supports only a modest subset of [_Motoko proper_](https://internetcomputer.org/docs/current/motoko/getting-started/motoko-introduction), we hope that _Motoko-san_ will enable the community to build more sophisticated Motoko code-level verifiers, simply by extending this prototype. In particular, the tool enables verifying _reentrancy safety_ in simple (asynchronous) smart contracts (e.g., `test/viper/claim.mo`).
+_Motoko-san_ is an early prototype. While the tool supports only a modest subset of [_Motoko proper_](https://thebigfile.com/docs/current/motoko/getting-started/motoko-introduction), we hope that _Motoko-san_ will enable the community to build more sophisticated Motoko code-level verifiers, simply by extending this prototype. In particular, the tool enables verifying _reentrancy safety_ in simple (asynchronous) smart contracts (e.g., `test/viper/claim.mo`).
 
 Below, we summarize the language features that _Motoko-san_ currently supports. For each feature, we try to estimate the complexity of its natural generalization. For that purpose, we use the terms _trivial_ (e.g., extending code by analogy), _simple_ (we already know how to do it), _hard_ (more discussions would be needed to figure out the exact approach or feasible level of generality).
 

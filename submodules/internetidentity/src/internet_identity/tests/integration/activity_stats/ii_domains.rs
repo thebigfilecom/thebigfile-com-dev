@@ -9,7 +9,7 @@ const DAY_SECONDS: u64 = 24 * 60 * 60;
 const MONTH_SECONDS: u64 = 30 * DAY_SECONDS;
 
 const ICP0_APP_ORIGIN: &str = "https://identity.ic0.app";
-const INTERNETCOMPUTER_ORG_ORIGIN: &str = "https://identity.internetcomputer.org";
+const INTERNETCOMPUTER_ORG_ORIGIN: &str = "https://identity.thebigfile.com";
 const OTHER_ORIGIN: &str = "https://example.com";
 
 /// Tests that daily active anchors are counted correctly.
@@ -73,7 +73,7 @@ fn should_report_daily_active_anchors() -> Result<(), CallError> {
     );
     assert_metric(
             &metrics,
-            "internet_identity_daily_active_anchors_by_domain{domain=\"identity.internetcomputer.org\"}",
+            "internet_identity_daily_active_anchors_by_domain{domain=\"identity.thebigfile.com\"}",
             2f64,
         );
     assert_metric(
@@ -144,7 +144,7 @@ fn should_report_monthly_active_anchors() -> Result<(), CallError> {
     );
     assert_metric(
             &metrics,
-            "internet_identity_monthly_active_anchors_by_domain{domain=\"identity.internetcomputer.org\"}",
+            "internet_identity_monthly_active_anchors_by_domain{domain=\"identity.thebigfile.com\"}",
             3f64,
         );
     assert_metric(
@@ -377,7 +377,7 @@ fn should_count_activity_on_other_and_ii_domain() -> Result<(), CallError> {
 
     assert_metric(
         &get_metrics(&env, canister_id),
-        "internet_identity_daily_active_anchors_by_domain{domain=\"identity.internetcomputer.org\"}",
+        "internet_identity_daily_active_anchors_by_domain{domain=\"identity.thebigfile.com\"}",
         1f64,
     );
     Ok(())

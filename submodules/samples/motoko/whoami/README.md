@@ -53,7 +53,7 @@ dfx canister call whoami id
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
 * [Make sure any action that only a specific user should be able to do requires authentication](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#make-sure-any-action-that-only-a-specific-user-should-be-able-to-do-requires-authentication), since this example illustrates how to access the caller system API. 

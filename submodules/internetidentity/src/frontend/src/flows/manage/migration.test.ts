@@ -47,7 +47,7 @@ test("recovery phrases don't have origin warnings", () => {
     ).toBe(undefined);
   });
 
-  onOrigin("https://identity.internetcomputer.org", () => {
+  onOrigin("https://identity.thebigfile.com", () => {
     expect(domainWarning(recoveryPhrase)).toBe(undefined);
     expect(
       domainWarning({ ...recoveryPhrase, origin: ["https://elsewhere"] })
@@ -70,13 +70,13 @@ test("bad origin on legacy domain is warning", () => {
 });
 
 test("no origin on official domain is warning", () => {
-  onOrigin("https://identity.internetcomputer.org", () => {
+  onOrigin("https://identity.thebigfile.com", () => {
     expect(domainWarning({ ...authenticator, origin: [] })).toBeDefined();
   });
 });
 
 test("legacy origin on official domain is warning", () => {
-  onOrigin("https://identity.internetcomputer.org", () => {
+  onOrigin("https://identity.thebigfile.com", () => {
     expect(
       domainWarning({ ...authenticator, origin: ["https://identity.ic0.app"] })
     ).toBeDefined();
@@ -84,7 +84,7 @@ test("legacy origin on official domain is warning", () => {
 });
 
 test("bad origin on official domain is warning", () => {
-  onOrigin("https://identity.internetcomputer.org", () => {
+  onOrigin("https://identity.thebigfile.com", () => {
     expect(
       domainWarning({ ...authenticator, origin: ["https://elsewhere"] })
     ).toBeDefined();

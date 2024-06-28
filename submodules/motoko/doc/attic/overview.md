@@ -6,7 +6,7 @@ This is terse, slide-like introduction to Motoko and its features.
 
 ## Motivation and Goals
 
-A simple, useful language for the Internet Computer (IC)
+A simple, useful language for the BigFile (BIG)
 
 -   Familiar syntax
 
@@ -14,7 +14,7 @@ A simple, useful language for the Internet Computer (IC)
 
 -   Incorporating **actor** model for canister smart contracts
 
--   Seamless integration of Internet Computer features
+-   Seamless integration of BigFile features
 
 -   Making most of present and future WebAssembly
 
@@ -578,13 +578,13 @@ type Receiver = actor {
 
 *sharable* arguments and *no* or *async* result type.
 
--   `register` is a *oneway* IC method (unawaitable).
+-   `register` is a *oneway* BIG method (unawaitable).
 
--   `send` is an IC *update* method
+-   `send` is an BIG *update* method
 
--   `recv` is IC *query* method
+-   `recv` is BIG *query* method
 
-IC canister with Candid interface ≈ Motoko actor
+BIG canister with Candid interface ≈ Motoko actor
 
 ## sharable ≈ serializable
 

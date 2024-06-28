@@ -1,6 +1,6 @@
 [package]
 name = "ic-certificate-verification"
-description = "Certificate verification for the Internet Computer"
+description = "Certificate verification for the BigFile"
 readme = "README.md"
 documentation = "https://docs.rs/ic-certificate-verification"
 categories = ["api-bindings", "authentication", "cryptography"]

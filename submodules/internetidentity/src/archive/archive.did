@@ -151,7 +151,7 @@ type CallErrorInfo = record {
     message: text;
 };
 
-// HTTP gateway types: https://internetcomputer.org/docs/current/references/ic-interface-spec/#http-gateway-interface
+// HTTP gateway types: https://thebigfile.com/docs/current/references/ic-interface-spec/#http-gateway-interface
 
 type HeaderField = record {
     text;
@@ -188,7 +188,7 @@ type StreamingStrategy = variant {
     };
 };
 
-// management canister types: https://internetcomputer.org/docs/current/references/ic-interface-spec/#ic-candid
+// management canister types: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-candid
 
 type DefiniteCanisterSettings = record {
     controllers : vec principal;

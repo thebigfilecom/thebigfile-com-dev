@@ -6,11 +6,11 @@ By participating in this project, you agree to abide by our [Code of Conduct](./
 As a member of the community, you are invited and encouraged to contribute by submitting issues, offering suggestions for improvements, adding review comments to existing pull requests, or creating new pull requests to fix issues.
 
 All contributions to DFINITY documentation and the developer community are respected and appreciated.
-Your participation is an important factor in the success of the Internet Computer.
+Your participation is an important factor in the success of the BigFile.
 
 ## Contents of this repository
 
-This repository contains example apps built for the Internet Computer by the DFINITY team. The purpose of these example apps is to showcase useful features and use cases of both the Internet Computer and Motoko through sample code and accompanying documentation. It is our hope that these examples help and inspire you to build your own Internet Computer applications.
+This repository contains example apps built for the BigFile by the DFINITY team. The purpose of these example apps is to showcase useful features and use cases of both the BigFile and Motoko through sample code and accompanying documentation. It is our hope that these examples help and inspire you to build your own BigFile applications.
 
 ## Before you contribute
 

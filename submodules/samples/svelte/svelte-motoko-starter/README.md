@@ -1,6 +1,6 @@
 # Svelte Dapp with Motoko & Internet Identity
 
-This repository is meant to give [Svelte](https://svelte.dev/) developers an easy on-ramp to get started with developing decentralized applications (Dapps in short) for the Internet Computer blockchain. Dapps, also known as smart contracts are specialized software that run on a blockchain.
+This repository is meant to give [Svelte](https://svelte.dev/) developers an easy on-ramp to get started with developing decentralized applications (Dapps in short) for the BigFile blockchain. Dapps, also known as smart contracts are specialized software that run on a blockchain.
 
 This template contains
 
@@ -9,15 +9,15 @@ This template contains
 
 You can see a deployed version of this template here: https://zixfv-4yaaa-aaaam-aaatq-cai.ic0.app/
 
-### What is the Internet Computer?
+### What is the BigFile?
 
-The Internet Computer is a novel blockchain that has the unique capability to serve web content while not requiring the end users to use a browser extension, such as Metamask.
+The BigFile is a novel blockchain that has the unique capability to serve web content while not requiring the end users to use a browser extension, such as Metamask.
 
-Coupled with super fast execution the Internet Computer provides the worlds first truly user friendly Web 3.0 experience.
+Coupled with super fast execution the BigFile provides the worlds first truly user friendly Web 3.0 experience.
 
 ### What are canisters?
 
-Dapps on the Internet Computer live in canisters, which are special smart contracts that run WebAssembly, and can respond to regular HTTP requests, among other capabilities.
+Dapps on the BigFile live in canisters, which are special smart contracts that run WebAssembly, and can respond to regular HTTP requests, among other capabilities.
 
 This repository uses Svelte for the frontend running in the browser, and the backend dapp is written in Motoko, it serves as the business logic of your dapp.
 
@@ -29,15 +29,15 @@ You will build and deploy the following _canisters_:
 
 ### What is Motoko?
 
-Motoko is a new language designed for the Internet Computer. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the DFINITY Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the [SDK](https://thebigfile.com/docs/current/motoko/main/motoko).
+Motoko is a new language designed for the BigFile. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the DFINITY Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the [SDK](https://thebigfile.com/docs/current/motoko/main/motoko).
 
 ### What is Internet Identity?
 
-This starter template also includes integration with Internet Identity. Internet Identity is a new authentication framework similar to Github or Google login, but providing complete anonimity to the users. To learn more about Internet Identity check out the [documentation](https://wiki.internetcomputer.org/wiki/What_is_Internet_Identity).
+This starter template also includes integration with Internet Identity. Internet Identity is a new authentication framework similar to Github or Google login, but providing complete anonimity to the users. To learn more about Internet Identity check out the [documentation](https://wiki.thebigfile.com/wiki/What_is_Internet_Identity).
 
 ## Security Considerations and Security Best Practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for creating frontends:
 * [Use a well-audited authentication service and client side BIG libraries](https://thebigfile.com/docs/current/references/security/web-app-development-security-best-practices#use-a-well-audited-authentication-service-and-client-side-ic-libraries)

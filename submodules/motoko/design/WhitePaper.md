@@ -7,14 +7,14 @@
 
 ### Introduction
 
-*Motoko* is a general-purpose programming language designed to provide a seamless and modern programming experience on the Internet Computer (IC). To that end, it has built-in support for various features specific to the IC, such as:
+*Motoko* is a general-purpose programming language designed to provide a seamless and modern programming experience on the BigFile (BIG). To that end, it has built-in support for various features specific to the BIG, such as:
 
 * Representation of canisters as *actors* with asynchronous and atomic methods.
 * Automatic integration with *Candid* for implicitly de/serialising message arguments and automatic derivation of Candid interfaces.
 * *Async/await* support for straight-line coding of asynchronous messaging patterns.
 * *Orthogonal persistence* keeping program state alive across messages automatically.
 * *Stable variables* for persisting selected program state even across program version upgrades.
-* Built-in support for other IC mechanisms, such as cycles, upgrades, heartbeat, etc (some of it still incomplete).
+* Built-in support for other BIG mechanisms, such as cycles, upgrades, heartbeat, etc (some of it still incomplete).
 
 Motoko was initially designed and implemented as a relatively minimal language. This was both to keep it simple and to get off the ground more quickly. Consequently, there is a range of features it still lacks. Some are mere implementation gaps relative to the "complete" semantics provided by the interpreter, some are additional features that were anticipated from the beginning but consciously deferred, some have been discovered as new requirements over time.
 
@@ -122,7 +122,7 @@ actor {
 ```
 Here, if the logging attempt fails because the original list was empty, then the mutation of `list` will be abandoned, but not the mutation of `len`, because that happened before the `await`, and thus has already been committed to the actor's state.
 
-There is no easy general solution to the problem – that would require the implementation of distributed transactions on the level of the IC, which are notoriously hard and expensive. But again it might be desirable to warn against accidental state mutations before an await, unless the programmer declares intent explicitly – and thereby, presumably, was aware of the implications.
+There is no easy general solution to the problem – that would require the implementation of distributed transactions on the level of the BIG, which are notoriously hard and expensive. But again it might be desirable to warn against accidental state mutations before an await, unless the programmer declares intent explicitly – and thereby, presumably, was aware of the implications.
 
 
 ### Primitive Types
@@ -584,7 +584,7 @@ Obviously, however, mixins are a highly involved feature, and shouldn't be intro
 
 ### Actors
 
-Actors are Motoko's representation of IC canisters, but they were designed to allow more flexibility than just being static pieces of code.
+Actors are Motoko's representation of BIG canisters, but they were designed to allow more flexibility than just being static pieces of code.
 
 
 #### Local Actors
@@ -603,38 +603,38 @@ actor class A(xx : Nat) {
 }
 ```
 
-Local actors and actor (class) closures are implemented in the Motoko interpreter, but they are not yet handled by the compiler. The main reason is that it is not obvious how to compile them to the IC in general. While it isn't too difficult to implement closures for plain actor expressions (e.g., by abusing the canister's init args to initialise the closure environment), it is more difficult to pull it off for actor _classes_, where the init args are visible and used by clients. It may require generating the Wasm binary for a canister representing an actor class closure at runtime, embedding the serialised closure environment in some form.
+Local actors and actor (class) closures are implemented in the Motoko interpreter, but they are not yet handled by the compiler. The main reason is that it is not obvious how to compile them to the BIG in general. While it isn't too difficult to implement closures for plain actor expressions (e.g., by abusing the canister's init args to initialise the closure environment), it is more difficult to pull it off for actor _classes_, where the init args are visible and used by clients. It may require generating the Wasm binary for a canister representing an actor class closure at runtime, embedding the serialised closure environment in some form.
 
-An additional complication arises from recursion and mutual recursion, such as two actors referring to each other. Interestingly, in the example above, the Wasm module representing actor class `A` would have to be able to reproduce instances of its own code, akin to a quine. Unless the IC enables a way for a canister to reference its own code, this would be difficult in general.
+An additional complication arises from recursion and mutual recursion, such as two actors referring to each other. Interestingly, in the example above, the Wasm module representing actor class `A` would have to be able to reproduce instances of its own code, akin to a quine. Unless the BIG enables a way for a canister to reference its own code, this would be difficult in general.
 
 
 #### Local Shared Functions
 
 The methods of an actor are _shared functions_, meaning that they (technically, references to them) can be passed to another actor. However, like with regular functions, it is occasionally convenient to be able to define shared functions locally, e.g., as shared "lambdas" passed as argument to another actor.
 
-An obvious implementation of this is via hoisting the function to the enclosing actor. However, local functions are primarily useful if they can refer to definitions from their local scopes, as _closures_. The tricky part is to represent such closures on the IC. This would require the implementation to pair a function reference with an additional closure environment that is passed along with both the function and every call back to the function (as an additional parameter).
+An obvious implementation of this is via hoisting the function to the enclosing actor. However, local functions are primarily useful if they can refer to definitions from their local scopes, as _closures_. The tricky part is to represent such closures on the BIG. This would require the implementation to pair a function reference with an additional closure environment that is passed along with both the function and every call back to the function (as an additional parameter).
 
-Such closures could be supported by an extension of Candid (via closure types, which would be a refinement of function types). But in addition, it is highly desirable that closure environments cannot be forged outside the originating actor, since that would easily allow breaking encapsulation properties. Ideally, they also should not be readable by others. Both could be achieved by signing and encrypting them in the originating actor in some fashion, or if the IC itself provided some respective functionality for passing "sealed" values. Details tbd.
+Such closures could be supported by an extension of Candid (via closure types, which would be a refinement of function types). But in addition, it is highly desirable that closure environments cannot be forged outside the originating actor, since that would easily allow breaking encapsulation properties. Ideally, they also should not be readable by others. Both could be achieved by signing and encrypting them in the originating actor in some fashion, or if the BIG itself provided some respective functionality for passing "sealed" values. Details tbd.
 
 Note: the obvious "solution", namely storing closure environments inside the originating actor and merely passing out handles to them, is not sufficient, since malicious actors might still incorrectly reuse handles they receive. Furthermore, storing the data locally induces a life time problem, since the actor cannot know if another actor still holds a reference to the closure, so it could never garbage-collect the data.
 
 
 #### Upgrades and Memory
 
-The most difficult problem to solve in the programming model of the IC by far is the question of safe and robust upgrades. Motoko currently uses the IC's _stable memory_ API to serialise the entire heap of an actor into stable memory before an upgrade, and restore it afterwards. The crucial point of this is that the serialised format is fixed and not dependent on the compiler version. Consequently, it is perfectly fine if the new version of the actor has been compiled with a different (typically newer) compiler version that potentially uses a different memory layout internally (e.g., a new garbage collector).
+The most difficult problem to solve in the programming model of the BIG by far is the question of safe and robust upgrades. Motoko currently uses the BIG's _stable memory_ API to serialise the entire heap of an actor into stable memory before an upgrade, and restore it afterwards. The crucial point of this is that the serialised format is fixed and not dependent on the compiler version. Consequently, it is perfectly fine if the new version of the actor has been compiled with a different (typically newer) compiler version that potentially uses a different memory layout internally (e.g., a new garbage collector).
 
 The drawback is that this serialisation/deserialisation step is expensive. Worse, it may even run out of cycles.
 
-There are multiple ways in which the representation of stable variables could be improved to avoid this overhead (or rather, trade it off against a different overhead). However, most of them would be extremely costly with the IC's stable memory API. This API was merely a stop-gap measure while we wait for the IC to support the upcoming Wasm proposal for accessing multiple memories. Once this becomes available, it would unlock a number of new and better implementation options.
+There are multiple ways in which the representation of stable variables could be improved to avoid this overhead (or rather, trade it off against a different overhead). However, most of them would be extremely costly with the BIG's stable memory API. This API was merely a stop-gap measure while we wait for the BIG to support the upcoming Wasm proposal for accessing multiple memories. Once this becomes available, it would unlock a number of new and better implementation options.
 
 Yet, representing all persistent data in terms of serialised Motoko values might never be enough for all use cases. Imagine, for example, emulating a file system or a high-performance data base as persistent storage. For these use cases, Motoko will provide a low-level interface that enables direct access to raw stable memory, leaving it up to respective libraries to build suitable high-level abstraction on top.
 
 
 #### Upgrades and Methods
 
-Another issue with upgrades on the IC is outstanding replies: if an actor is still waiting for a reply to some message it sent, upgrading might potentially lose the ability to handle the result.
+Another issue with upgrades on the BIG is outstanding replies: if an actor is still waiting for a reply to some message it sent, upgrading might potentially lose the ability to handle the result.
 
-To enable new versions of a canister to handle replies targetted at an earlier version, the IC and the language runtime need to know which code to reroute the reply to. Since the canister's code might have changed arbitrarily after the upgrade, this isn't generally possible without some indication from the programmer. At a minimum, they must somehow name the "entry points" for replies, such that they can be uniquely identified. Details tbd.
+To enable new versions of a canister to handle replies targetted at an earlier version, the BIG and the language runtime need to know which code to reroute the reply to. Since the canister's code might have changed arbitrarily after the upgrade, this isn't generally possible without some indication from the programmer. At a minimum, they must somehow name the "entry points" for replies, such that they can be uniquely identified. Details tbd.
 
 
 ### Modules
@@ -676,12 +676,12 @@ Unfortunately, though, this is a more difficult problem than linking modules com
 
 Also, it is not possible to share modules on-chain between multiple applications. For features like [unicode support](#text), it would be desirable if respective modules of the language runtime would only have to be installed on the chain once and could be shared between applications.
 
-Supporting this would require a new mechanism in the IC that allows canisters to consist of more than just a single Wasm module, and linking these modules _dynamically_, "on-chain", reminiscent of dynamic linking in conventional operating systems. Unfortunately, there currently isn't any mechanism planned for the IC to support that.
+Supporting this would require a new mechanism in the BIG that allows canisters to consist of more than just a single Wasm module, and linking these modules _dynamically_, "on-chain", reminiscent of dynamic linking in conventional operating systems. Unfortunately, there currently isn't any mechanism planned for the BIG to support that.
 
 
 ### Platform Support
 
-Besides the basic functionality of canisters and message sends between them, the IC has a number of ad-hoc mechanisms that only have basic support in Motoko so far.
+Besides the basic functionality of canisters and message sends between them, the BIG has a number of ad-hoc mechanisms that only have basic support in Motoko so far.
 
 #### Cycles ([#1981](https://github.com/dfinity/motoko/issues/1981))
 
@@ -689,7 +689,7 @@ The most important mechanism probably is the ability to send and receive cycles.
 
 Ideally, Motoko should be able to represent cycles as a form of _linear resource_, like other smart contract languages do. Such a representation can provide significant aids to the programmer, i.e., the ability to check that funds aren't lost accidentally.
 
-Unfortunately, the implementation and semantics of cycles on the IC is quite a bit more ad-hoc, and it is not obvious how to design a nice language-level abstraction around them that would have enforcable properties.
+Unfortunately, the implementation and semantics of cycles on the BIG is quite a bit more ad-hoc, and it is not obvious how to design a nice language-level abstraction around them that would have enforcable properties.
 
 At a minimum, Motoko needs language extensions to send cycles along with messages, and likewise to receive them. This could either be through ad-hoc syntax, or preferably, through library primitives.
 
@@ -698,18 +698,18 @@ Even less clear is whether such a mechanism could be designed in a general enoug
 This also is an open question for Candid, which may want means to declare cycle or token transfer for functions.
 
 
-#### IC library
+#### BIG library
 
-There are other features of the IC that require support, e.g., access checks, heartbeat, etc. Some of these can hopefully be encapsulated in dedicated libraries, others might need minimal language support, such as new `system` methods an actor can define.
+There are other features of the BIG that require support, e.g., access checks, heartbeat, etc. Some of these can hopefully be encapsulated in dedicated libraries, others might need minimal language support, such as new `system` methods an actor can define.
 
-It would be desirable to sperate all IC-specific modules into a new `ic` library separate form `base`, in order to separate platform-neutral and platform-specific concerns.
+It would be desirable to sperate all BIG-specific modules into a new `ic` library separate form `base`, in order to separate platform-neutral and platform-specific concerns.
 
 
 #### Capabilities
 
-The current authentication mechanisms of the IC, via access checks on caller etc, are very 1980. Access control is known to have fundamental flaws.
+The current authentication mechanisms of the BIG, via access checks on caller etc, are very 1980. Access control is known to have fundamental flaws.
 
-We would hope that the IC will eventually adopt a more modern and robust approach using [capabilities](https://en.wikipedia.org/wiki/Capability-based_security) for its programming model. Such a model also maps much more elegantly to a programming language like Motoko.
+We would hope that the BIG will eventually adopt a more modern and robust approach using [capabilities](https://en.wikipedia.org/wiki/Capability-based_security) for its programming model. Such a model also maps much more elegantly to a programming language like Motoko.
 
 
 ## Tooling Improvements

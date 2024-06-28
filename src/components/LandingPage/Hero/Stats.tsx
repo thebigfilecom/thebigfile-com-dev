@@ -147,7 +147,7 @@ export const EthEquivalentTxRate = () => {
               computational work of Ethereum per transaction.{" "}
               <Link
                 className="text-white hover:underline hover:text-white"
-                href="https://wiki.internetcomputer.org/wiki/Not_all_transactions_are_equal"
+                href="https://wiki.thebigfile.com/wiki/Not_all_transactions_are_equal"
               >
                 Learn More
               </Link>

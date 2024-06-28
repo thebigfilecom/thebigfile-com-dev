@@ -591,7 +591,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "DeAI",
+      label: "FileAI",
       items: [
         "developer-docs/ai/overview",
         "developer-docs/ai/ai-on-chain",
@@ -620,12 +620,12 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "ICRC-1 tokens",
+          label: "BIGRC-1 tokens",
           items: [
-            "developer-docs/defi/icrc-1/token-quickstart",
-            "developer-docs/defi/icrc-1/icrc1-ledger-setup",
-            "developer-docs/defi/icrc-1/using-icrc1-ledger",
-            "developer-docs/defi/icrc-1/icrc1-index-setup",
+            "developer-docs/defi/bigrc-1/token-quickstart",
+            "developer-docs/defi/bigrc-1/bigrc1-ledger-setup",
+            "developer-docs/defi/bigrc-1/using-bigrc1-ledger",
+            "developer-docs/defi/bigrc-1/bigrc1-index-setup",
           ],
         },
         {
@@ -1029,8 +1029,8 @@ const sidebars = {
                 id: "tutorials/developer-journey/level-4/index",
               },
               items: [
-                "tutorials/developer-journey/level-4/4.1-icp-ledger",
-                "tutorials/developer-journey/level-4/4.2-icrc-tokens",
+                "tutorials/developer-journey/level-4/4.1-big-ledger",
+                "tutorials/developer-journey/level-4/4.2-bigrc-tokens",
                 "tutorials/developer-journey/level-4/4.3-ckbtc-and-bitcoin",
                 "tutorials/developer-journey/level-4/4.4-nns-governance",
                 "tutorials/developer-journey/level-4/4.5-using-quill",
@@ -1039,7 +1039,7 @@ const sidebars = {
             },
             {
               type: "category",
-              label: "Level 5: Internet Computer astronaut",
+              label: "Level 5: BigFile astronaut",
               link: {
                 type: "doc",
                 id: "tutorials/developer-journey/level-5/index",
@@ -1096,7 +1096,7 @@ const sidebars = {
       items: [
         {
           type: "category",
-          label: "Internet Computer specification",
+          label: "BigFile specification",
           items: [
             "references/http-gateway-protocol-spec",
             "references/ic-interface-spec",
@@ -1136,8 +1136,8 @@ const sidebars = {
             },
             {
               type: "doc",
-              label: "ICRC-1 token standard",
-              id: "references/icrc1-standard",
+              label: "BIGRC-1 token standard",
+              id: "references/bigrc1-standard",
             },
             {
               type: "doc",
@@ -1229,7 +1229,7 @@ const sidebars = {
         },
         {
           type: "link",
-          label: "3. Internet Computer programming concepts",
+          label: "3. BigFile programming concepts",
           href: "https://motoko-book.dev/internet-computer-programming-concepts.html",
         },
         {

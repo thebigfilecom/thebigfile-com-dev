@@ -33,7 +33,7 @@ This example requires an installation of:
 
 Begin by opening a terminal window.
 
-### Step 1: Navigate into the folder containing the project's files and start a local instance of the Internet Computer with the command:
+### Step 1: Navigate into the folder containing the project's files and start a local instance of the BigFile with the command:
 
 ```bash
 cd examples/motoko/persistent-storage
@@ -155,7 +155,7 @@ This project is licensed under the Apache 2.0 license, see LICENSE.md for detail
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [Security Best Practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
 * [Consider using stable memory, version it, test it](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#consider-using-stable-memory-version-it-test-it), since this canister uses stable memory. 

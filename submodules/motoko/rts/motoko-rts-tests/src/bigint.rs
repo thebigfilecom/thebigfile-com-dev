@@ -5,7 +5,7 @@ use motoko_rts::buf::Buf;
 use motoko_rts::types::{Bytes, Value, Words};
 
 // mp functions below are implemented separately for tests as we can't modify mp_int source code to
-// pass a generic heap argument (then monomorphise it for IC).
+// pass a generic heap argument (then monomorphise it for BIG).
 
 // This global is used to pass a reference to heap to the mp functions
 static mut HEAP: *mut TestMemory = std::ptr::null_mut();

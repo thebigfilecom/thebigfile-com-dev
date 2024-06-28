@@ -104,7 +104,7 @@ pub struct AssetRouter<'content> {
     fallback_responses: HashMap<String, CertifiedAssetResponse<'content>>,
 }
 
-const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "IC-CertificateExpression";
+const IC_CERTIFICATE_EXPRESSION_HEADER: &str = "BIG-CertificateExpression";
 
 impl<'content> AssetRouter<'content> {
     /// Creates a new [AssetRouter].

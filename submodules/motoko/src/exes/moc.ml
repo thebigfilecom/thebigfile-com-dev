@@ -111,7 +111,7 @@ let argspec = [
       " use the WASI system API (wasmtime)";
   "-ref-system-api",
   Arg.Unit (fun () -> Flags.(compile_mode := RefMode)),
-      " use the reference implementation of the Internet Computer system API (ic-ref-run)";
+      " use the reference implementation of the BigFile system API (ic-ref-run)";
   (* TODO: bring this back (possibly with flipped default)
            as soon as the multi-value `wasm` library is out.
   "-multi-value", Arg.Set Flags.multi_value, " use multi-value extension";
@@ -184,7 +184,7 @@ let argspec = [
 
   "--trap-on-call-error",
   Arg.Unit (fun () -> Flags.trap_on_call_error := true),
-  " Trap, don't throw an `Error`, when an IC call fails due to destination queue full or freezing threshold is crossed. Emulates behaviour of moc versions < 0.8.0.";
+  " Trap, don't throw an `Error`, when an BIG call fails due to destination queue full or freezing threshold is crossed. Emulates behaviour of moc versions < 0.8.0.";
 
   (* optimizations *)
   "-fno-shared-code",

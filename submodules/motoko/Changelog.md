@@ -111,7 +111,7 @@
   * bugfix: fully implement `Region.loadXXX/storeXXX` for `Int8`, `Int16` and `Float` (#4270).
 
   * BREAKING CHANGE (Minor): values of type [`Principal`](doc/md/base/Principal.md) are now constrained to contain
-    at most 29 bytes, matching the IC's notion of principal (#4268).
+    at most 29 bytes, matching the BIG's notion of principal (#4268).
 
     In particular:
 
@@ -144,7 +144,7 @@
     Controlled by flags:
       * `-fno-shared-code` (default)
       * `-fshared-code` (legacy)
-    (Helps mitigate the effect of the IC's new cost model, that increases
+    (Helps mitigate the effect of the BIG's new cost model, that increases
 	the cost of function calls).
 
 * motoko-base
@@ -158,7 +158,7 @@
 * motoko (`moc`)
 
   * Added a new stable `Region` type of dynamically allocated, independently growable and
-    isolated regions of IC stable memory (#3768). See documentation.
+    isolated regions of BIG stable memory (#3768). See documentation.
     BREAKING CHANGE: stable memory changes may occur that can prevent returning
     to previous `moc` versions.
 
@@ -168,7 +168,7 @@
 
   * Exposed conversions between adjacent fixed-width types (dfinity/motoko-base⁠#585).
 
-  * Added library `Region.mo` offering isolated regions of IC stable memory (dfinity/motoko-base⁠#580).
+  * Added library `Region.mo` offering isolated regions of BIG stable memory (dfinity/motoko-base⁠#580).
 
 ## 0.9.8 (2023-08-11)
 
@@ -258,7 +258,7 @@
 
   * BREAKING CHANGE (Minor):
 
-    New keyword `composite` allows one to declare Internet Computer *composite queries* (#4003).
+    New keyword `composite` allows one to declare BigFile *composite queries* (#4003).
 
     For example,
     ``` motoko
@@ -336,7 +336,7 @@
 
     The GC distributes its workload across multiple steps, called increments, that each pause the mutator
     (user's program) for only a limited amount of time. As a result, the GC work can fit within the instruction-limited
-    IC messages, regardless of the heap size and the object structures.
+    BIG messages, regardless of the heap size and the object structures.
 
     According to GC benchmark measurements, the incremental GC is more efficient than the existing copying, compacting,
     and generational GC in the following regards:
@@ -504,11 +504,11 @@
 
     Failure to send a message no longer traps but, instead, throws a catchable `Error` with new error code `#call_error` (#3630).
 
-    On the IC, the act of making a call to a canister function can fail, so that the call cannot (and will not be) performed.
+    On the BIG, the act of making a call to a canister function can fail, so that the call cannot (and will not be) performed.
     This can happen due to a lack of canister resources, typically because the local message queue for the destination canister is full,
     or because performing the call would reduce the current cycle balance of the calling canister to a level below its freezing threshold.
     Such call failures are now reported by throwing an `Error` with new `ErrorCode` `#call_error { err_code = n }`,
-    where `n` is the non-zero `err_code` value returned by the IC.
+    where `n` is the non-zero `err_code` value returned by the BIG.
     Like other errors, call errors can be caught and handled using `try ... catch ...` expressions, if desired.
 
     The constructs that now throw call errors, instead of trapping as with previous version of Motoko are:
@@ -647,7 +647,7 @@
     This feature is experimental and may evolve in future. Use with discretion.
     See the [manual](doc/md/reference/language-manual.md) for details.
 
-  * Suppress GC during IC `canister_heartbeat`, deferring any GC to the scheduled Motoko `heartbeat` `system` method (#3623).
+  * Suppress GC during BIG `canister_heartbeat`, deferring any GC to the scheduled Motoko `heartbeat` `system` method (#3623).
     This is a temporary workaround, to be removed once DTS is supported for `canister_heartbeat` itself (#3622).
 
   * Add a new _generational_ GC, enabled with new moc flag `--generational-gc` (#3495).
@@ -745,7 +745,7 @@
     This is a _breaking change_, as a new keyword `with` has been added.
     Restrictions for ambiguous and `var` fields from bases apply. (#3084)
 
-  * Add new support for installing actor class instances on the IC,
+  * Add new support for installing actor class instances on the BIG,
     enabling specification of canister settings, install, upgrade and
     reinstall. (#3386)
 
@@ -784,7 +784,7 @@
     rts_mutator_instructions : () -> Nat
     rts_collector_instructions : () -> Nat
     ```
-    to report approximate IC instruction costs of the last message
+    to report approximate BIG instruction costs of the last message
     due to mutation (computation) and collection (GC), respectively (#3381)
 
 * motoko-base
@@ -942,13 +942,13 @@
 
 * moc
 
-  * Add runtime support for low-level, direct access to 64-bit IC stable memory, including documentation.
+  * Add runtime support for low-level, direct access to 64-bit BIG stable memory, including documentation.
   * Add compiler flag `--max-stable-pages <n>` to cap any use of `ExperimentalStableMemory.mo` (see below), while reserving space for stable variables.
   Defaults to 65536 (4GiB).
 
 * motoko-base
 
-  * (Officially) add `ExperimentalStableMemory.mo` library, exposing 64-bit IC stable memory
+  * (Officially) add `ExperimentalStableMemory.mo` library, exposing 64-bit BIG stable memory
 
 * BREAKING CHANGE (Minor):
   The previously available (but unadvertised) `ExperimentalStableMemory.mo` used
@@ -977,7 +977,7 @@
 
 * The compiler now embeds the existing Candid interface  and  new
   _stable signature_ of a canister in additional Wasm custom sections,
-  to be selectively exposed by the IC, and to be used by tools such as `dfx`
+  to be selectively exposed by the BIG, and to be used by tools such as `dfx`
   to verify upgrade compatibility (see extended documentation).
 
   New compiler options:
@@ -1166,7 +1166,7 @@
 
 ## 0.6.1 (2021-04-30)
 
-* Internal: Update to IC interface spec 0.17 (adapt to breaking change to signature of `create_canister`)
+* Internal: Update to BIG interface spec 0.17 (adapt to breaking change to signature of `create_canister`)
 
 ## 0.6.0 (2021-04-16)
 

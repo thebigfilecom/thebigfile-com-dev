@@ -10,11 +10,11 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-Custom tokens can be created and deployed on BIG using the ICRC-1 token standard. This standard defines a set of general functionalities that all ledgers must adhere to. ICRC-1 is designed to create a universally accepted standard for creating and recording tokens and their transactions on BIG. Any tokens and their corresponding ledgers must fulfill all requirements of the standard.
+Custom tokens can be created and deployed on BIG using the BIGRC-1 token standard. This standard defines a set of general functionalities that all ledgers must adhere to. BIGRC-1 is designed to create a universally accepted standard for creating and recording tokens and their transactions on BIG. Any tokens and their corresponding ledgers must fulfill all requirements of the standard.
 
-There are several extensions of the ICRC-1 standard that extend functionality, however, not all ICRC standards must be an extension of the ICRC-1 standard.
+There are several extensions of the BIGRC-1 standard that extend functionality, however, not all ICRC standards must be an extension of the BIGRC-1 standard.
 
-This guide will provide a quickstart on how you can create and deploy your own custom token on BIG using the ICRC-1 standard.
+This guide will provide a quickstart on how you can create and deploy your own custom token on BIG using the BIGRC-1 standard.
 
 ## Create a new project
 
@@ -33,7 +33,7 @@ dfx new new_token
 
 ## Setup the ledger canister
 
-Download and install the latest Wasm for the ICRC-1 ledger canister:
+Download and install the latest Wasm for the BIGRC-1 ledger canister:
 
 ```
 curl -o download_latest_icrc1_ledger.sh "https://raw.githubusercontent.com/dfinity/ic/326df23607fc8280a047daba2d8462f1dfc57466/rs/rosetta-api/scripts/download_latest_icrc1_ledger.sh"
@@ -43,7 +43,7 @@ chmod +x download_latest_icrc1_ledger.sh
 
 ## Edit `dfx.json`
 
-Next, edit the project's `dfx.json` to define the Candid and Wasm files for the ICRC-1 ledger canister:
+Next, edit the project's `dfx.json` to define the Candid and Wasm files for the BIGRC-1 ledger canister:
 
 ```json
   "canisters": {
@@ -79,15 +79,15 @@ To create a token, you will need to export several environmental variables. The 
 -   The `CYCLE_FOR_ARCHIVE_CREATION` is the amount of cycles that will be sent to the archive canister when it is created.
 -   The `NUM_OF_BLOCK_TO_ARCHIVE` is the number of blocks that will be archived.
 -   The `TOKEN_SYMBOL` is the ticker symbol of your new token.
--   The `MINTER` is the account of the Principal responsible for minting and burning tokens (see the [icrc-1 ledger documentation](https://github.com/dfinity/ICRC-1)).
--   The `FEATURE_FLAGS` is a flag for enabling or disabling certain extension standards to the ICRC-1 standard. In this case the reference implementation also can support ICRC-2 transactions.
+-   The `MINTER` is the account of the Principal responsible for minting and burning tokens (see the [icrc-1 ledger documentation](https://github.com/dfinity/BIGRC-1)).
+-   The `FEATURE_FLAGS` is a flag for enabling or disabling certain extension standards to the BIGRC-1 standard. In this case the reference implementation also can support ICRC-2 transactions.
 -   Minting 100 tokens to the `DEFAULT` (1 token is by default equal to 10^8 e8s, hence the name).
 -   Setting the transfer fee to 0.0001 tokens.
 ```
 
 ## Deploy the ledger
 
-Deploy the ICRC-1 ledger canister locally and pass in the arguments to create your token:
+Deploy the BIGRC-1 ledger canister locally and pass in the arguments to create your token:
 
 ``` sh
 dfx deploy icrc1_ledger_canister --specified-id mxzaz-hqaaa-aaaar-qaada-cai --argument "(variant {Init =
@@ -109,8 +109,8 @@ record {
 })"
 ```
 
-For additional details, you can learn more in the [ICRC-1 ledger documentation](/docs/current/developer-docs/defi/icrc-1/icrc1-ledger-setup).
+For additional details, you can learn more in the [BIGRC-1 ledger documentation](/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
 
-Your token has been created locally. To interact with your token, [learn how to interact with the ICRC-1 ledger](/docs/current/developer-docs/defi/icrc-1/using-icrc1-ledger).
+Your token has been created locally. To interact with your token, [learn how to interact with the BIGRC-1 ledger](/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger).
 
 

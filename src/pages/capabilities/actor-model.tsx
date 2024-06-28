@@ -96,9 +96,9 @@ function FeaturePage() {
 
             <p>
               An important difference between traditional actors and canisters
-              is that canisters on the Internet Computer have bidirectional
+              is that canisters on the BigFile have bidirectional
               message passing. Messages are divided into requests and responses,
-              where requests can be replied to and the Internet Computer keeps
+              where requests can be replied to and the BigFile keeps
               track of the callback for responses.
             </p>
 
@@ -125,12 +125,12 @@ function FeaturePage() {
 
             <p>
               In addition, the Motoko programming language, which is tailored to
-              the Internet Computer, is inspired by the actor model.
+              the BigFile, is inspired by the actor model.
             </p>
 
             <p className="mb-3 mt-6">
               <Link
-                href="https://internetcomputer.org/showcase/"
+                href="https://thebigfile.com/showcase/"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
@@ -152,7 +152,7 @@ function FeaturePage() {
 
             <CardWithDescription
               title="Deploy a 'Hello World' Dapp in 10 Minutes"
-              description="Get started with your first IC dapp"
+              description="Get started with your first BIG dapp"
               href="/docs/current/tutorials/developer-journey/"
             />
             <CardWithDescription
@@ -162,13 +162,13 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="Sample Code"
-              description="Learn about IC capabilities from community samples."
+              description="Learn about BIG capabilities from community samples."
               href="/samples"
             />
             <CardWithDescription
-              title="'Parallelism' article on the IC Wiki"
-              description="Learn about how actor model on the IC can can achieve parallelism."
-              href="https://wiki.internetcomputer.org/wiki/Parallelism"
+              title="'Parallelism' article on the BIG Wiki"
+              description="Learn about how actor model on the BIG can can achieve parallelism."
+              href="https://wiki.thebigfile.com/wiki/Parallelism"
             />
           </div>
         </section>

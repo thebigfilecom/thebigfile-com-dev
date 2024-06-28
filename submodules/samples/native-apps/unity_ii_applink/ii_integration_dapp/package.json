@@ -1,9 +1,9 @@
 {
   "name": "internet_identity_integration",
   "version": "0.1.0",
-  "description": "Internet Computer starter application with Internet Identity integration",
+  "description": "BigFile starter application with Internet Identity integration",
   "keywords": [
-    "Internet Computer",
+    "BigFile",
     "Motoko",
     "JavaScript",
     "Canister"

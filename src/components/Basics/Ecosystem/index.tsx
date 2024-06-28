@@ -79,7 +79,7 @@ const Ecosystem = () => {
           </p>
           <Link href="/ecosystem" className="link-primary link-with-icon">
             <LinkArrowRight />
-            Explore Internet Computer Ecosystem
+            Explore BigFile Ecosystem
           </Link>
         </motion.div>
         <div className={clsx(styles.cards, styles.cardsDesktop)}>

@@ -390,7 +390,7 @@ function DefiPage() {
                 className="tw-paragraph md:tw-lead text-black mb-0 text-center max-w-[500px] mx-auto"
                 variants={transitions.item}
               >
-                The Internet Computer offers an array of innovative features to
+                The BigFile offers an array of innovative features to
                 build next-gen DeFi.
               </motion.p>
             </AnimateSpawn>
@@ -402,7 +402,7 @@ function DefiPage() {
               </h2>
               <p className="tw-lead-sm mb-6 md:mb-10">
                 Building on Chain-Key Signatures and HTTPS outcalls, Oisy, a
-                browser-based Ethereum wallet secured by the Internet Computer,
+                browser-based Ethereum wallet secured by the BigFile,
                 can already natively support a plethora of ERC-20 tokens.
                 Plugging into services such as Infura and the like, BIG smart
                 contracts sign transactions for any ERC-20 token without relying
@@ -467,7 +467,7 @@ function DefiPage() {
               className="tw-lead-sm mb-0 mt-2 md:mt-6 text-center mx-auto md:w-6/12"
               variants={transitions.item}
             >
-              The Internet Computer offers a plethora of out-of-the-box features
+              The BigFile offers a plethora of out-of-the-box features
               you can use in your DeFi application.
             </motion.p> */}
           </AnimateSpawn>

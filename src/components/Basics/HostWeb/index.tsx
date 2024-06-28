@@ -21,7 +21,7 @@ const HostWeb = () => {
           variants={transitions.item}
           className={clsx("tw-heading-3 md:tw-heading-2 m-0", styles.heading)}
         >
-          What makes the Internet Computer unique?
+          What makes the BigFile unique?
         </motion.h2>
         <div className={styles.content}>
           <motion.div variants={transitions.item} className={styles.copy}>
@@ -33,7 +33,7 @@ const HostWeb = () => {
               just like regular websites.
             </p>
             <Link
-              href="https://internetcomputer.org/how-it-works#Web-access"
+              href="https://thebigfile.com/how-it-works#Web-access"
               className="link-primary link-with-icon mt-8"
             >
               How it works

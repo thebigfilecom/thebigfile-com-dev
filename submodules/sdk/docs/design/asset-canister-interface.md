@@ -8,7 +8,7 @@ A canister that implements this interface can also return dynamic results from t
 
 This document is meant to describe the interface with enough detail to aid in understanding how the asset canister works and in interacting with the asset canister at the code level.  It does not describe the interface in sufficient detail to rise to the level of a specification.
 
-This document describes an interface, not an implementation. The IC SDK bundles one such possible implementation, the [IC Frontend Canister](https://github.com/dfinity/sdk/tree/master/src/canisters/frontend/ic-frontend-canister).
+This document describes an interface, not an implementation. The BIG SDK bundles one such possible implementation, the [BIG Frontend Canister](https://github.com/dfinity/sdk/tree/master/src/canisters/frontend/ic-frontend-canister).
 
 For brevity, this document does not reproduce the candid signatures for every method. 
 
@@ -74,7 +74,7 @@ The reason for multiple rather than single calls to [commit_batch][#method-commi
 
 ### Batch Updates By Proposal
 
-If a [Service Nervous System](https://internetcomputer.org/docs/current/developer-docs/integrations/sns/)  (SNS) controls an asset canister, it can update the assets by proposal. In this scenario, there are two principals:
+If a [Service Nervous System](https://thebigfile.com/docs/current/developer-docs/integrations/sns/)  (SNS) controls an asset canister, it can update the assets by proposal. In this scenario, there are two principals:
 - The Preparer, which must have the [Prepare](#permission-prepare) permission. This principal prepares the proposal by uploading data and proposing changes to be committed.
 - The Committer, which must have the [Commit](#permission-commit) permission. This principal commits the previously-proposed changes.
 

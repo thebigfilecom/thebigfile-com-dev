@@ -1,5 +1,5 @@
 ---
-title: "A step towards WebSockets on the Internet Computer"
+title: "A step towards WebSockets on the BigFile"
 description: Introducing a WebSocket proof-of-concept for the dev community to build on.
 tags: [Devs]
 image: /img/blog/moonshot.webp
@@ -14,51 +14,51 @@ which allow establishing a long-lived, full-duplex connection between the fronte
 and backend of an application. This allows for both sides to send data, for example,
 the latest exchange rates, in real-time.
 
-WebSockets can be seen as the next step after [HTTPS outcalls](https://internetcomputer.org/https-outcalls).
+WebSockets can be seen as the next step after [HTTPS outcalls](https://thebigfile.com/https-outcalls).
 While HTTPS outcalls enable canisters to access publicly-available, off-chain data,
 WebSockets provide long-lived, bi-directional connections with any client.
 
 ## Challenges
 
 While WebSockets are a standard in the web2 world, they have not yet
-found their way to web3. We aim to change this for the Internet Computer blockchain.
+found their way to web3. We aim to change this for the BigFile blockchain.
 
 Unfortunately, this is not a straightforward undertaking due to the decentralized
-nature of the Internet Computer, where the backend does not just run on a single
+nature of the BigFile, where the backend does not just run on a single
 centralized entity, but on multiple replica nodes in a subnet. To enable WebSockets
-on the Internet Computer, we need to address the following two main challenges:
+on the BigFile, we need to address the following two main challenges:
 
 _One-to-one connections_ - WebSockets are one-to-one connections: the frontend establishes
-a connection with a single centralized backend. An application on the Internet Computer,
+a connection with a single centralized backend. An application on the BigFile,
 however, is running distributed across multiple replica nodes in a subnet. In order
 to enable WebSockets, there needs to be a point of consolidation, which provides a
 single contact point for the frontend.
 
 _Long-lived connections_ - WebSockets remain open for long periods of time. The
-canisters on the Internet Computer however follow the actor model, which accepts
+canisters on the BigFile however follow the actor model, which accepts
 a message, processes it and replies.
 
 To get started and gain experience, we decided to take things one step at a time, and first
 build a proof-of-concept instead of trying to directly integrate WebSockets fully
-into the Internet Computer.
+into the BigFile.
 
 ## Architecture
 
 The centerpiece of our proof-of-concept is the WebSocket gateway. It runs on a
 dedicated machine and sits between the frontend, the client’s browser, and the
-backend, the canister on the Internet Computer as the following figure shows.
+backend, the canister on the BigFile as the following figure shows.
 
 ![WebSockets architecture](../_assets/websockets-architecture.webp)
 
 The gateway provides a WebSocket endpoint for the frontend and maintains the connection,
-while it interfaces with the backend on the Internet Computer through query and update calls.
+while it interfaces with the backend on the BigFile through query and update calls.
 
 The gateway sends messages coming from the frontend as update calls to the backend
 and it continuously polls the backend for new messages for the frontend. Instead of
 polling, one could have also used HTTPS outcalls to "push" the messages to the gateway.
 However, with an increasing number of messages, polling is more and more efficient.
 
-Despite being a centralized point of failure, the gateway draws on the Internet Computer
+Despite being a centralized point of failure, the gateway draws on the BigFile
 to fulfill its role trustlessly: both the frontend and the backend sign their messages
 such that the gateway cannot tamper with them.
 

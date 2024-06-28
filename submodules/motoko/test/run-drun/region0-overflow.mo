@@ -5,7 +5,7 @@ import {grow; size; loadBlob} "stable-mem/StableMemory";
 // test for correct out-of-bounds detection.
 // Both ok() and bad() should fail for the same reason (but don't)
 // ok() reports RTS error: region access out of bounds, caught by RTS
-// bad() reports: "stable memory out of bounds", not caught by RTS but by IC
+// bad() reports: "stable memory out of bounds", not caught by RTS but by BIG
 
 // I think one could exploit this bound check failure to break isolation between regions...
 

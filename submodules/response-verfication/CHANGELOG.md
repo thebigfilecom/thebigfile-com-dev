@@ -215,8 +215,8 @@
 - envelope request verification adding the certified response
 - create separate function for response header hashing
 - conditionally execute v1 response verification
-- extract version and expr_path from IC certificate header
-- extract version and expr_path from IC certificate header
+- extract version and expr_path from BIG certificate header
+- extract version and expr_path from BIG certificate header
 - add request hash
 - add response hash implementation
 - add support for numbers in representation independent hash

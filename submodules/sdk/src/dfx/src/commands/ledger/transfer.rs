@@ -48,7 +48,7 @@ pub struct TransferOpts {
     /// Canister ID of the ledger canister.
     ledger_canister_id: Option<Principal>,
 
-    /// Transaction timestamp, in nanoseconds, for use in controlling transaction-deduplication, default is system-time. // https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-
+    /// Transaction timestamp, in nanoseconds, for use in controlling transaction-deduplication, default is system-time. // https://thebigfile.com/docs/current/developer-docs/integrations/icrc-1/#transaction-deduplication-
     #[arg(long)]
     created_at_time: Option<u64>,
 }

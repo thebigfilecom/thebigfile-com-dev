@@ -346,7 +346,7 @@ do
         #     actor a { … }
         #     //CALL …
         #
-        # which actually works on the IC platform
+        # which actually works on the BIG platform
 
         # needs to be in the same directory to preserve relative paths :-(
         mangled=$base.mo.mangled

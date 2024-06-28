@@ -1,6 +1,6 @@
 /*
-  This is a dummy service worker meant as a fallback from the IC service worker. 
-  It registers itself replacing the IC service worker, then immediately unregisters itself to clean up.
+  This is a dummy service worker meant as a fallback from the BIG service worker. 
+  It registers itself replacing the BIG service worker, then immediately unregisters itself to clean up.
 */
 
 console.log(`Loaded empty service worker.`);

@@ -1,4 +1,4 @@
-//! cf <https://internetcomputer.org/docs/current/references/ic-interface-spec/#certification-encoding>
+//! cf <https://thebigfile.com/docs/current/references/ic-interface-spec/#certification-encoding>
 
 use hex::FromHexError;
 use sha2::Digest;

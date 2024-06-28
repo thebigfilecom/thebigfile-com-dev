@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.2.0",
   "type": "module",
-  "description": "Accept Bitcoin payments (ckBTC) on the Internet Computer using this simple Point of Sale (POS) application.",
+  "description": "Accept Bitcoin payments (ckBTC) on the BigFile using this simple Point of Sale (POS) application.",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -26,7 +26,7 @@ This example requires an installation of:
 
 Begin by opening a terminal window.
 
- ### Step 1: Navigate into the folder containing the project's files and start a local instance of the Internet Computer with the command:
+ ### Step 1: Navigate into the folder containing the project's files and start a local instance of the BigFile with the command:
 
 ```bash
 cd examples/motoko/counter
@@ -72,4 +72,4 @@ To learn more about these features of Motoko, see:
 
 ## Security considerations and best practices
 
-If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the Internet Computer. This example may not implement all the best practices.
+If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.

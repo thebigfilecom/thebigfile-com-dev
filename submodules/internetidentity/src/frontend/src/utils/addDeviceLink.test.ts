@@ -10,9 +10,9 @@ test("add device link looks as expected", () => {
   expect(
     addDeviceLink({
       userNumber: BigInt(10000),
-      origin: "https://identity.internetcomputer.org",
+      origin: "https://identity.thebigfile.com",
     })
-  ).toBe("https://identity.internetcomputer.org/?action=add-passkey&ii=10000");
+  ).toBe("https://identity.thebigfile.com/?action=add-passkey&ii=10000");
 });
 
 test("anchor is read from add-device link", () => {

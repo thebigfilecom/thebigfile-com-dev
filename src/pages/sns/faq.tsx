@@ -16,7 +16,7 @@ function SnsFaqPage() {
   return (
     <Layout
       title="SNS DAO FAQ"
-      description="All you need to know about DAOs on the Internet Computer and how to participate in them."
+      description="All you need to know about DAOs on the BigFile and how to participate in them."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-sns.jpg"></ShareMeta>
@@ -90,7 +90,7 @@ function SnsFaqPage() {
               <p>
                 SNS stands for Service Nervous System. An SNS is a powerful form
                 of DAO that allows communities to govern smart contracts and
-                decentralized apps (dapps) running on the Internet Computer
+                decentralized apps (dapps) running on the BigFile
                 (ICP) completely on chain. Main things to note about SNS:
               </p>
               <ul>
@@ -167,8 +167,8 @@ function SnsFaqPage() {
               the launch of the SNS technology. OpenChat was the first dapp that
               handed control over to an SNS DAO in Q1 of 2023. Since then, many
               ecosystem projects have followed. Currently, there are 11 SNS DAOs
-              on the Internet Computer. Follow their progress on the{" "}
-              <Link href="https://dashboard.internetcomputer.org/sns">
+              on the BigFile. Follow their progress on the{" "}
+              <Link href="https://dashboard.thebigfile.com/sns">
                 SNS dashboard
               </Link>
               .
@@ -353,7 +353,7 @@ function SnsFaqPage() {
                 holders.
               </p>
               More about the{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Neurons_Fund">
+              <Link href="https://wiki.thebigfile.com/wiki/Neurons_Fund">
                 Neurons' fund
               </Link>
               .
@@ -403,7 +403,7 @@ function SnsFaqPage() {
                 swap, from its initiation to execution, is completely
                 decentralized and not controlled by any centralized entity. Even
                 the decision to create the SNS and its token is made by the NNS
-                (the DAO that controls the Internet Computer) and not the developer
+                (the DAO that controls the BigFile) and not the developer
                 in order to ensure complete decentralizion of the app.
               </p>
               <p>
@@ -434,7 +434,7 @@ function SnsFaqPage() {
               <p>
                 If the decentralization swap is successful, you will receive a
                 basket of{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/Neurons_101">
+                <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                   neurons
                 </Link>{" "}
                 that hold your SNS tokens. Depending on the SNS configuration,
@@ -487,7 +487,7 @@ function SnsFaqPage() {
               </ul>
               <p>
                 Visis the ICP Wiki for a more detailed overvire of{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/How-To:_SNS_tokenomics_configuration">
+                <Link href="https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration">
                   SNS tokenomics
                 </Link>
               </p>
@@ -607,7 +607,7 @@ function SnsFaqPage() {
                 decentralizing the dapp. In any case, it is crucial that you
                 trust the developers will not change the dapp during the SNS
                 launch. Learn what you could verify and what to look out for on{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/SNS_decentralization_swap_trust">
+                <Link href="https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust">
                   the ICP Wiki.
                 </Link>
               </p>
@@ -642,7 +642,7 @@ function SnsFaqPage() {
                   as the one you're interacting with.
                 </li>
                 See Wiki for more info on{" "}
-                <Link href="https://wiki.internetcomputer.org/wiki/How-to:_Verify_SNS_decentralization_swap_proposal">
+                <Link href="https://wiki.thebigfile.com/wiki/How-to:_Verify_SNS_decentralization_swap_proposal">
                   verification
                 </Link>
               </ul>
@@ -685,7 +685,7 @@ function SnsFaqPage() {
                 <li>
                   Typically, after an SNS has launched it has an SNS token treasury and an ICP
                   treasury (from the decentralization swap). An SNS can, however, also own other
-                  tokens on the Internet Computer.
+                  tokens on the BigFile.
                 </li>
                 <li>
                   The treasury funds could, for example, be used to open liquidity pools on
@@ -771,12 +771,12 @@ function SnsFaqPage() {
             <Faq title="What is voting power and how do I get it?">
               SNS DAOs have a stake-based governance system. This means the more
               tokens participants stake in their{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Neurons_101">
+              <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                 neurons
               </Link>
               , the more voting power their neurons have. In addition to the
               stake, a neuron's voting power is dependent on the{" "}
-              <Link href="https://wiki.internetcomputer.org/wiki/Neurons_101">
+              <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                 dissolve delay
               </Link>{" "}
               bonus and age bonus. Each SNS DAO decides these bonuses in its
@@ -815,7 +815,7 @@ function SnsFaqPage() {
             <Faq title="Is it possible to transfer SNS tokens to another person?">
               <p>
                 Yes. SNS tokens are ICRC-1 tokens and can be transferred between
-                any Internet Computer-based wallets that support ICRC-1,
+                any BigFile-based wallets that support ICRC-1,
                 including your NNS wallet. Note that each SNS has its own
                 ICRC-1-compliant ledger for keeping track of its tokens.
               </p>
@@ -873,7 +873,7 @@ function SnsFaqPage() {
               </ul>
               <p className="not-prose">
                 <Link
-                  href="https://wiki.internetcomputer.org/wiki/How-To:_SNS_tokenomics_configuration"
+                  href="https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration"
                   className="link-primary link-with-icon"
                 >
                   <LinkArrowRight></LinkArrowRight>
@@ -930,7 +930,7 @@ function SnsFaqPage() {
             title="Technical overview of ICP"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="https://wiki.internetcomputer.org/wiki/Service_Nervous_System_(SNS)"
+            href="https://wiki.thebigfile.com/wiki/Service_Nervous_System_(SNS)"
             title="SNS Wiki"
           ></SmallCardWithDescription>
           <SmallCardWithDescription

@@ -320,9 +320,9 @@ pub enum DomainActivity {
     NonIIDomain,
     // only active on the identity.ic0.app domain
     Ic0App,
-    // only active on the identity.internetcomputer.org domain
+    // only active on the identity.thebigfile.com domain
     InternetComputerOrg,
-    // activity on both identity.ic0.app and identity.internetcomputer.org
+    // activity on both identity.ic0.app and identity.thebigfile.com
     BothIIDomains,
 }
 
