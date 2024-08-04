@@ -123,21 +123,21 @@ async fn main() -> anyhow::Result<()> {
 
     match &opts.subcommand {
         SubCommand::List(o) => {
-            let canister = ic_utils::Canister::builder()
+            let canister = ic_utils::Cube::builder()
                 .with_agent(&agent)
                 .with_canister_id(Principal::from_text(&o.canister_id)?)
                 .build()?;
             list(&canister, &logger).await?;
         }
         SubCommand::Sync(o) => {
-            let canister = ic_utils::Canister::builder()
+            let canister = ic_utils::Cube::builder()
                 .with_agent(&agent)
                 .with_canister_id(Principal::from_text(&o.canister_id)?)
                 .build()?;
             sync(&canister, o, &logger).await?;
         }
         SubCommand::Upload(o) => {
-            let canister = ic_utils::Canister::builder()
+            let canister = ic_utils::Cube::builder()
                 .with_agent(&agent)
                 .with_canister_id(Principal::from_text(&o.canister_id)?)
                 .build()?;

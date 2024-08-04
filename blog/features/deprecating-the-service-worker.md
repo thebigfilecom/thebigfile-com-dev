@@ -170,7 +170,7 @@ Service workers are not intended to be a critical path technology, but as a [pro
 
 #### No functionality duplication
 
-Technologies that are already provided by the browser need to be reimplemented in The Service Worker, for example content decoding and client side caching. This is because the browser normally implements those functions on responses _before_ they reach The Service Worker. Canister provided headers and response bodies are not visible to the browser until _after_ they leave The Service Worker.
+Technologies that are already provided by the browser need to be reimplemented in The Service Worker, for example content decoding and client side caching. This is because the browser normally implements those functions on responses _before_ they reach The Service Worker. Cube provided headers and response bodies are not visible to the browser until _after_ they leave The Service Worker.
 
 #### API Boundary Node routing/discovery
 

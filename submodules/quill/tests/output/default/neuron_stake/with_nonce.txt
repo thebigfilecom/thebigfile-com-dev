@@ -2,7 +2,7 @@ Sending message with
 
   Call type:   update
   Sender:      fdsgv-62ihb-nbiqv-xgic5-iefsv-3cscz-tmbzv-63qd5-vh43v-dqfrt-pae
-  Canister id: ryjl3-tyaaa-aaaaa-aaaba-cai
+  Cube id: ryjl3-tyaaa-aaaaa-aaaba-cai
   Method name: send_dfx
   Arguments:   (
   record {
@@ -20,7 +20,7 @@ Sending message with
 
   Call type:   update
   Sender:      fdsgv-62ihb-nbiqv-xgic5-iefsv-3cscz-tmbzv-63qd5-vh43v-dqfrt-pae
-  Canister id: rrkah-fqaaa-aaaaa-aaaaq-cai
+  Cube id: rrkah-fqaaa-aaaaa-aaaaq-cai
   Method name: claim_or_refresh_neuron_from_account
   Arguments:   (
   record {

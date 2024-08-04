@@ -258,7 +258,7 @@ module.exports = [
       "https://www.youtube.com/watch?v=L4443aaAP5A&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng&index=21",
   },
   {
-    title: "Root Canister Governance Upgrade Proposals",
+    title: "Root Cube Governance Upgrade Proposals",
     speaker: "David Ribeiro Alves",
     speakerTitle: "Team Lead (NNS)",
     description:
@@ -302,7 +302,7 @@ module.exports = [
       "https://www.youtube.com/watch?v=-wFkX4r2KcA&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng&index=25",
   },
   {
-    title: "The Ledger Canister",
+    title: "The Ledger Cube",
     speaker: "Bogdan Warinschi",
     speakerTitle: "Senior Researcher",
     description:
@@ -344,7 +344,7 @@ module.exports = [
       "https://www.youtube.com/watch?v=kz4DoIiptAg&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng&index=27",
   },
   {
-    title: "Canister Sandboxing",
+    title: "Cube Sandboxing",
     speaker: "Ulan Degenbaev & Helge Bahmann ",
     speakerTitle: "Principal Software Engineer & Senior Researcher",
     description:
@@ -397,7 +397,7 @@ module.exports = [
   },
   {
     title:
-      "Reproducible Canister Builds or: What Code is This Canister Running ",
+      "Reproducible Cube Builds or: What Code is This Cube Running ",
     speaker: "Ognjen Maric",
     speakerTitle: "Senior Researcher",
     description:
@@ -470,7 +470,7 @@ module.exports = [
     speaker: "Stefan Kaestle ",
     speakerTitle: "Senior Researcher",
     description:
-      "<p>The current design and implementation of the BIG protocol has been focused on simplicity and low engineering effort. While this suffices to demonstrate the possibilities of canister smart contracts, unleashing the full capacity of the BIG requires a high-performance design and implementation. The goal of this project is to address bottlenecks and thus increase the performance of individual BIG nodes, so that more query and update requests can be executed in the same amount of time.\nThis will involve improvements such as to the orthogonal persistence mechanism, NIC virtualization, OS and Canister scheduling, caching and the investigation of HW accelerators for compute-intensive tasks.</p>\n",
+      "<p>The current design and implementation of the BIG protocol has been focused on simplicity and low engineering effort. While this suffices to demonstrate the possibilities of canister smart contracts, unleashing the full capacity of the BIG requires a high-performance design and implementation. The goal of this project is to address bottlenecks and thus increase the performance of individual BIG nodes, so that more query and update requests can be executed in the same amount of time.\nThis will involve improvements such as to the orthogonal persistence mechanism, NIC virtualization, OS and Cube scheduling, caching and the investigation of HW accelerators for compute-intensive tasks.</p>\n",
     startTimeUtc: 1641916800000,
     startTimePt: 1641884400000,
     startTimeEu: 1641916800000,
@@ -493,7 +493,7 @@ module.exports = [
     youtubeLink: "https://www.youtube.com/watch?v=Ku4p67W0JjU",
   },
   {
-    title: "Canister Sandboxing Update (Helge, Adam, Ulan)",
+    title: "Cube Sandboxing Update (Helge, Adam, Ulan)",
     speaker:
       "Adam Bratschi-Kaye, Senior Software Engineer &  Helge Bahmann, Research Scientist & Ulan Degenbaev, Principal Software Engineer",
     description:

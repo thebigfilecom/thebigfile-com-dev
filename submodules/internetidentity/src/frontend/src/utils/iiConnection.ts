@@ -579,7 +579,7 @@ export class AuthenticatedConnection extends Connection {
     });
 
     if (isNullish(result)) {
-      console.error("Canister did not send a response");
+      console.error("Cube did not send a response");
       return { error: "internal_error" };
     }
 
@@ -630,7 +630,7 @@ export class AuthenticatedConnection extends Connection {
     });
 
     if (isNullish(result)) {
-      console.error("Canister did not send a response");
+      console.error("Cube did not send a response");
       return { error: "internal_error" };
     }
 

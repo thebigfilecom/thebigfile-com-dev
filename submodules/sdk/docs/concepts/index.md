@@ -1,4 +1,4 @@
 # DFX Concepts
 
-- [Asset Canister Interface](../design/asset-canister-interface.md)
-- [Canister metadata](./canister-metadata.md)
+- [Asset Cube Interface](../design/asset-canister-interface.md)
+- [Cube metadata](./canister-metadata.md)

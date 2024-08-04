@@ -1,12 +1,12 @@
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
-# ICRC-1 standard
+# BIGRC-1 standard
 
 <MarkdownChipRow labels={["Reference"]} />
 
-ICRC-1 is a token standard created by the BigFile working group. ICRC stands for "BigFile Request for Comments", you can find documentation on the working group [here](https://github.com/dfinity/ICRC). The [ICRC-1](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-1/README.md) is a standard for **fungible tokens** on the BigFile. This means that any ICRC-1 ledger has to implement at least the specifications that are defined there.
+BIGRC-1 is a token standard created by the BigFile working group. BIGRC stands for "BigFile Request for Comments", you can find documentation on the working group [here](https://github.com/dfinity/BIGRC). The [BIGRC-1](https://github.com/dfinity/BIGRC-1/blob/main/standards/BIGRC-1/README.md) is a standard for **fungible tokens** on the BigFile. This means that any BIGRC-1 ledger has to implement at least the specifications that are defined there.
 
-However, there are extensions to this standard. One of them being ICRC-2, which you can read up on [here](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md). Further, officially supported standards by the reference implementation can be found [here](https://github.com/dfinity/ICRC-1/tree/main/standards).
+However, there are extensions to this standard. One of them being BIGRC-2, which you can read up on [here](https://github.com/dfinity/BIGRC-1/blob/main/standards/BIGRC-2/README.md). Further, officially supported standards by the reference implementation can be found [here](https://github.com/dfinity/BIGRC-1/tree/main/standards).
 
 ## Data
 
@@ -22,7 +22,7 @@ type Account = record { owner : principal; subaccount : opt Subaccount; };
 ```
 
 ## Methods
-This section will give you an overview of the ICRC-1 standard methods. If you want to have a more detailed description on how to interact with those endpoints, you can have a look at [the guide on how to interact with an ICRC-1 ledger](/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger).
+This section will give you an overview of the BIGRC-1 standard methods. If you want to have a more detailed description on how to interact with those endpoints, you can have a look at [the guide on how to interact with an BIGRC-1 ledger](/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger).
 ### icrc1_name <span id="name_method"></span>
 
 Returns the name of the token (e.g., `MyToken`).
@@ -148,7 +148,7 @@ icrc1_supported_standards : () -> (vec record { name : text; url : text }) query
 The result of the call should always have at least one entry,
 
 ```candid
-record { name = "ICRC-1"; url = "https://github.com/dfinity/ICRC-1" }
+record { name = "BIGRC-1"; url = "https://github.com/dfinity/BIGRC-1" }
 ```
 
 ## Extensions <span id="extensions"></span>
@@ -160,7 +160,7 @@ The base standard intentionally excludes some ledger functions essential for bui
   - Pre-signed transactions.
 
 The standard defines the `icrc1_supported_standards` endpoint to accommodate these and other future extensions.
-This endpoint returns names of all specifications (e.g., `"ICRC-42"` or `"DIP-20"`) implemented by the ledger.
+This endpoint returns names of all specifications (e.g., `"BIGRC-42"` or `"DIP-20"`) implemented by the ledger.
 
 ## Metadata
 
@@ -186,11 +186,11 @@ Namespace `icrc1` is reserved for keys defined in this standard.
 
 Consider the following scenario:
 
-- An agent sends a transaction to an ICRC-1 ledger hosted on BIG.
+- An agent sends a transaction to an BIGRC-1 ledger hosted on BIG.
 - The ledger accepts the transaction.
 - The agent loses the network connection for several minutes and cannot learn about the outcome of the transaction.
 
-An ICRC-1 ledger **should** implement transfer deduplication to simplify the error recovery for agents.
+An BIGRC-1 ledger **should** implement transfer deduplication to simplify the error recovery for agents.
 The deduplication covers all transactions submitted within a pre-configured time window `TX_WINDOW` (for example, last 24 hours).
 The ledger **may** extend the deduplication window into the future by the `PERMITTED_DRIFT` parameter (for example, 2 minutes) to account for the time drift between the client and the BigFile.
 
@@ -225,7 +225,7 @@ The minting account is also the receiver of the fees burnt in regular transfers.
 
 ## Textual encoding of accounts
 
-Each ICRC-1 account has two components: the owner (up to 29 bytes) and the subaccount (32 bytes). If a subaccount is not included, it is equal to an array comprised of 32 zero bytes.
+Each BIGRC-1 account has two components: the owner (up to 29 bytes) and the subaccount (32 bytes). If a subaccount is not included, it is equal to an array comprised of 32 zero bytes.
 
 ```candid
 type Account = { owner : principal; subaccount : opt blob };

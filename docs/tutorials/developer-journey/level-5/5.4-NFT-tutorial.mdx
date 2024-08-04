@@ -42,9 +42,9 @@ Even if 5_000 NFTs of the same exact item are minted, each token will have a uni
 
 ## NFT standards
 
-Similar to token standards, such as the ICRC-1 and ICRC-2 fungible token standards, NFTs are required to use a standard that sets the guidelines for API methods that support necessary NFT functionalities. Some common API methods for NFTs are the ability to mint an NFT, transfer the NFT, and query the NFT's metadata.
+Similar to token standards, such as the BIGRC-1 and BIGRC-2 fungible token standards, NFTs are required to use a standard that sets the guidelines for API methods that support necessary NFT functionalities. Some common API methods for NFTs are the ability to mint an NFT, transfer the NFT, and query the NFT's metadata.
 
-Currently on BIG, there are two NFT standards: DIP721 and ICRC-7.
+Currently on BIG, there are two NFT standards: DIP721 and BIGRC-7.
 
 ### DIP721
 
@@ -64,19 +64,19 @@ This tutorial will showcase creating an NFT using the DIP721 standard.
 
 [View the source code for the DIP721 standard](https://github.com/Psychedelic/DIP721), and read the full [standard specification document](https://github.com/Psychedelic/DIP721/blob/develop/spec.md).
 
-### ICRC-7
+### BIGRC-7
 
-ICRC-7 is a new standard for non-fungible tokens on BIG. Recall that "ICRC" stands for "BigFile Request for Comments", and is the standard created by the BigFile working group. An ICRC standard can be used for creating anything on BIG, not just fungible tokens such as the ICRC-1 and ICRC-2 token standards.
+BIGRC-7 is a new standard for non-fungible tokens on BIG. Recall that "BIGRC" stands for "BigFile Request for Comments", and is the standard created by the BigFile working group. An BIGRC standard can be used for creating anything on BIG, not just fungible tokens such as the BIGRC-1 and BIGRC-2 token standards.
 
-The ICRC-7 standard is designed to be a minimal standard for allowing an NFT collection to be deployed on BIG. In an NFT collection, each NFT may have unique metadata information. This metadata may include a unique image, traits or tags, or a description describing the NFT.
+The BIGRC-7 standard is designed to be a minimal standard for allowing an NFT collection to be deployed on BIG. In an NFT collection, each NFT may have unique metadata information. This metadata may include a unique image, traits or tags, or a description describing the NFT.
 
-The ICRC-7 standard implements several additional API methods compared to the DIP721 standard, such as batch query methods, batch update methods, and collection approval methods.
+The BIGRC-7 standard implements several additional API methods compared to the DIP721 standard, such as batch query methods, batch update methods, and collection approval methods.
 
 :::caution
-The ICRC-7 standard isn't used in this tutorial since it is still currently in the drafting stages and is not yet live in production. This tutorial will be updated in the future when the ICRC-7 standard is ready to be used.
+The BIGRC-7 standard isn't used in this tutorial since it is still currently in the drafting stages and is not yet live in production. This tutorial will be updated in the future when the BIGRC-7 standard is ready to be used.
 :::
 
-Read more about the [ICRC-7 standard in the specification draft document](https://github.com/dfinity/ICRC/blob/icrc7-wg-draft/ICRCs/ICRC-7/ICRC-7.md).
+Read more about the [BIGRC-7 standard in the specification draft document](https://github.com/dfinity/BIGRC/blob/icrc7-wg-draft/ICRCs/BIGRC-7/BIGRC-7.md).
 
 ## Creating and deploying an NFT
 
@@ -774,7 +774,7 @@ dfx identity get-principal
 
 - [DIP721 specification](https://github.com/Psychedelic/DIP721/blob/develop/spec.md).
 
-- [ICRC-7 specification draft document](https://github.com/dfinity/ICRC/blob/icrc7-wg-draft/ICRCs/ICRC-7/ICRC-7.md).
+- [BIGRC-7 specification draft document](https://github.com/dfinity/BIGRC/blob/icrc7-wg-draft/ICRCs/BIGRC-7/BIGRC-7.md).
 
 
 ## Need help?

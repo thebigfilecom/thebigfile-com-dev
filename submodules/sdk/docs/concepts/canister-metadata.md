@@ -1,4 +1,4 @@
-# Canister Metadata
+# Cube Metadata
 
 ## Overview
 
@@ -75,7 +75,7 @@ A string containing the path of a file containing the wasm section contents. Con
 
 A string containing the wasm section content directly. Conflicts with "path".
 
-## Canister Metadata Standard
+## Cube Metadata Standard
 
 Contents should be valid UTF-8 text.
 

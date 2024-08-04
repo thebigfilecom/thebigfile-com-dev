@@ -316,7 +316,7 @@
       ],
       "properties": {
         "playground_canister": {
-          "description": "Canister ID of the playground canister",
+          "description": "Cube ID of the playground canister",
           "type": "string"
         },
         "timeout_seconds": {

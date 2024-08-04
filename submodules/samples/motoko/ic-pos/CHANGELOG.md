@@ -4,7 +4,7 @@
 
 ### Added
 
-- Now you can charge a set amount, similar to Sumup and the likes. Enter the amount to charge and click the "Charge" button. The generated QR code will contain information about the token and amount to charge. The customer can then scan and pay with any wallet that supports the QR format, NNS for instance. Raad more about ICRC-22 payment requests: https://github.com/dfinity/ICRC/issues/22
+- Now you can charge a set amount, similar to Sumup and the likes. Enter the amount to charge and click the "Charge" button. The generated QR code will contain information about the token and amount to charge. The customer can then scan and pay with any wallet that supports the QR format, NNS for instance. Raad more about BIGRC-22 payment requests: https://github.com/dfinity/BIGRC/issues/22
 
 ### Fixed
 
@@ -19,7 +19,7 @@
 ### Changed
 
 - The `icpos` canister continuoulsy monitors the ckBTC ledger and sends notifications to merchants that choosen to receive email or sms. The ledger id used to be hardcode, now there is a function `setLedgerId` that can be called at runtime.
-- `dfx.json`: settings now included to run an ICRC-1 ledger and index locally.
+- `dfx.json`: settings now included to run an BIGRC-1 ledger and index locally.
 - Upgraded to latest versions of `@dfinity/xxx` packages.
 - Removed reliance on the HTTP ckBTC transaction API. Instead, BIG-POS now uses the ledger canister directly to monitor transactions.
 - ckBTC balances are now updated in the UI after received transfers.

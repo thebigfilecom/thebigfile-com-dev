@@ -6,7 +6,7 @@ pub enum AddDependenciesError {
     #[error("Circular canister dependencies: {}", _0.join(" -> "))]
     CanisterCircularDependency(Vec<String>),
 
-    #[error("Canister '{0}' not found in dfx.json.")]
+    #[error("Cube '{0}' not found in dfx.json.")]
     CanisterNotFound(String),
 }
 
@@ -15,7 +15,7 @@ pub enum GetCanisterConfigError {
     #[error("No canisters in the configuration file.")]
     CanistersFieldDoesNotExist(),
 
-    #[error("Canister '{0}' not found in dfx.json.")]
+    #[error("Cube '{0}' not found in dfx.json.")]
     CanisterNotFound(String),
 }
 

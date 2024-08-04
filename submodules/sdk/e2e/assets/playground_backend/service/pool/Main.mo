@@ -244,7 +244,7 @@ shared (creator) actor class Self(opt_params : ?Types.InitParams) = this {
 
     public query func getSubtree(parent : Types.CanisterInfo) : async [(Principal, [Types.CanisterInfo])] {
         if (not pool.find(parent)) {
-            throw Error.reject "Canister not found";
+            throw Error.reject "Cube not found";
         };
         // Do not return subtree for non-root parent to save cost
         if (not pool.isRoot(parent.id)) {

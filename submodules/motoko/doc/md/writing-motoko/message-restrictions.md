@@ -8,7 +8,7 @@ sidebar_position: 15
 
 BIG places restrictions on when and how canisters are allowed to communicate. These restrictions are enforced dynamically but prevented statically in Motoko, ruling out a class of dynamic execution errors. Two examples are:
 
--   Canister installation can execute code, but not send messages.
+-   Cube installation can execute code, but not send messages.
 
 -   A canister query method cannot send messages.
 

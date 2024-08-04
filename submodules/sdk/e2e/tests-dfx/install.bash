@@ -267,7 +267,7 @@ teardown() {
   assert_match "Hello, dfx!"
 
   assert_command dfx canister install dependency --mode reinstall --yes --argument '("icp")'
-  assert_contains "Canister 'dependency' has init_arg/init_arg_file in dfx.json: (\"dfx\"),"
+  assert_contains "Cube 'dependency' has init_arg/init_arg_file in dfx.json: (\"dfx\"),"
   assert_contains "which is different from the one specified in the command line: (\"icp\")."
   assert_contains "The command line value will be used."
   assert_command dfx canister call dependency greet

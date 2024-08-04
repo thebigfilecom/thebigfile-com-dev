@@ -39,7 +39,7 @@ pub async fn initialize_integration_canister(
     init_arg: &str,
 ) -> DfxResult {
     if already_installed(agent, &canister_id, wasm).await? {
-        debug!(logger, "Canister {canister_id} already installed");
+        debug!(logger, "Cube {canister_id} already installed");
         return Ok(());
     }
 
@@ -93,7 +93,7 @@ pub async fn wait_for_canister_installed(agent: &Agent, canister_id: &Principal)
             break;
         }
         if retries >= 60 {
-            bail!("Canister {canister_id} was never installed");
+            bail!("Cube {canister_id} was never installed");
         }
         tokio::time::sleep(Duration::from_secs(1)).await;
         retries += 1;

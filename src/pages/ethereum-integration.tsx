@@ -259,7 +259,7 @@ function EthereumIntegrationPage() {
               with 1-2s finality, and no gas fees.
             </p>
             <p className="tw-lead-sm mb-6 md:mb-6">
-              ckETH is now live on the mainnet and exposes ICRC-1 and 2 ledger
+              ckETH is now live on the mainnet and exposes BIGRC-1 and 2 ledger
               interfaces (the fungible token standard of ICP), making it simple
               for all ICP wallets to offer ckETH support. Total value of ckETH
               is fully backed 1:1 by ETH, and can always be verified by viewing

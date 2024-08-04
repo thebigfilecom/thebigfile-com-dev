@@ -5,7 +5,7 @@ use backoff::ExponentialBackoff;
 use candid::{CandidType, Deserialize, Principal};
 use ic_agent::{Agent, AgentError};
 use ic_utils::call::SyncCall;
-use ic_utils::Canister;
+use ic_utils::Cube;
 
 use super::retryable::retryable;
 
@@ -26,7 +26,7 @@ pub async fn get_subnet_for_canister(
     agent: &Agent,
     canister_id: Principal,
 ) -> DfxResult<Principal> {
-    let registry_canister = Canister::builder()
+    let registry_canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(MAINNET_REGISTRY_CANISTER_ID)
         .build()?;

@@ -734,7 +734,7 @@ type ErrorCode = {
   #destination_invalid;
   // Explicit reject by canister code.
   #canister_reject;
-  // Canister trapped.
+  // Cube trapped.
   #canister_error;
   // Future error code (with unrecognized numeric code).
   #future : Nat32;

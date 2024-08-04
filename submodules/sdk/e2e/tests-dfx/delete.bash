@@ -23,7 +23,7 @@ teardown() {
   assert_command_fail dfx canister info e2e_project_backend
   assert_contains "Cannot find canister id. Please issue 'dfx canister create e2e_project_backend'."
   assert_command_fail dfx canister status "$id"
-  assert_contains "Canister $id not found"
+  assert_contains "Cube $id not found"
   assert_command dfx deploy
 }
 
@@ -36,7 +36,7 @@ teardown() {
   assert_command_fail dfx canister info e2e_project_backend
   assert_contains "Cannot find canister id. Please issue 'dfx canister create e2e_project_backend'."
   assert_command_fail dfx canister status "$id"
-  assert_contains "Canister $id not found"
+  assert_contains "Cube $id not found"
 }
 
 @test "delete requires confirmation if the canister is not stopped" {
@@ -49,5 +49,5 @@ teardown() {
   assert_command_fail dfx canister info e2e_project_backend
   assert_contains "Cannot find canister id. Please issue 'dfx canister create e2e_project_backend'."
   assert_command_fail dfx canister status "$id"
-  assert_contains "Canister $id not found"
+  assert_contains "Cube $id not found"
 }

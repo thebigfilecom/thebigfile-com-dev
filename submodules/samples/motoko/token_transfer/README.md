@@ -4,7 +4,7 @@
 
 ## Overview
 
-Token transfer is a canister that can transfer ICRC-1 tokens from its account to other accounts. It is an example of a canister that uses an ICRC-1 ledger canister. Sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/token_transfer) and [Rust](https://github.com/dfinity/examples/tree/master/rust/token_transfer).
+Token transfer is a canister that can transfer BIGRC-1 tokens from its account to other accounts. It is an example of a canister that uses an BIGRC-1 ledger canister. Sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/token_transfer) and [Rust](https://github.com/dfinity/examples/tree/master/rust/token_transfer).
 
 ## Architecture
 
@@ -33,10 +33,10 @@ dfx new --type=motoko token_transfer --no-frontend
 cd token_transfer
 ```
 
-### Step 2: Determine ICRC-1 ledger file locations
+### Step 2: Determine BIGRC-1 ledger file locations
 
 > [!NOTE]
-> You can read more about how to setup the ICRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
+> You can read more about how to setup the BIGRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
 
 Go to the [releases overview](https://dashboard.thebigfile.com/releases) and copy the latest replica binary revision. At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
@@ -45,7 +45,7 @@ The URL for the ledger Wasm module is `https://download.dfinity.systems/ic/<REVI
 The URL for the ledger .did file is `https://raw.githubusercontent.com/dfinity/ic/<REVISION>/rs/rosetta-api/icrc1/ledger/ledger.did`, so with the above revision it would be `https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icrc1/ledger/ledger.did`.
 
 **OPTIONAL:**
-If you want to make sure, you have the latest ICRC-1 ledger files you can run the following script.
+If you want to make sure, you have the latest BIGRC-1 ledger files you can run the following script.
 
 ```sh
 curl -o download_latest_icrc1_ledger.sh "https://raw.githubusercontent.com/dfinity/ic/326df23607fc8280a047daba2d8462f1dfc57466/rs/rosetta-api/scripts/download_latest_icrc1_ledger.sh"
@@ -82,7 +82,7 @@ Replace its contents with this but adapt the URLs to be the ones you determined 
 }
 ```
 
-If you chose to download the ICRC-1 ledger files with the script, you need to replace the Candid and Wasm file entries:
+If you chose to download the BIGRC-1 ledger files with the script, you need to replace the Candid and Wasm file entries:
 
 ```json
 ...
@@ -115,9 +115,9 @@ dfx identity use default
 export DEFAULT=$(dfx identity get-principal)
 ```
 
-### Step 7: Deploy the ICRC-1 ledger locally:
+### Step 7: Deploy the BIGRC-1 ledger locally:
 
-Take a moment to read the details of the call made below. Not only are you deploying an ICRC-1 ledger canister, you are also:
+Take a moment to read the details of the call made below. Not only are you deploying an BIGRC-1 ledger canister, you are also:
 
 -   Setting the minting account to the principal you saved in a previous step (`MINTER`)
 -   Minting 100 tokens to the DEFAULT principal
@@ -154,7 +154,7 @@ URLs:
 ### Step 8: Verify that the ledger canister is healthy and working as expected by using the command:
 
 > [!NOTE]
-> You can find more information on how to interact with the ICRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger#bigrc-1-and-bigrc-1-extension-endpoints)
+> You can find more information on how to interact with the BIGRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger#bigrc-1-and-bigrc-1-extension-endpoints)
 
 ````bash
 dfx canister call icrc1_ledger_canister icrc1_balance_of "(record {

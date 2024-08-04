@@ -58,7 +58,7 @@ teardown() {
   assert_command dfx canister call e2e_project_backend greet '("alice")' --query
   assert_command dfx canister call e2e_project_backend greet '("alice")' --update
   assert_command_fail dfx canister call e2e_project_backend greet_update '("alice")'
-  assert_contains "Canister exceeded its current Wasm memory limit of 8 bytes"
+  assert_contains "Cube exceeded its current Wasm memory limit of 8 bytes"
 }
 
 @test "set controller" {

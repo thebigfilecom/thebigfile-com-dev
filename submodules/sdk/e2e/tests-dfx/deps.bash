@@ -267,9 +267,9 @@ Failed to download from url: http://httpbin.org/status/404."
   assert_file_not_exists "deps/pulled.json"
 
   assert_command dfx deps pull --network local -vvv
-  assert_contains "Canister $CANISTER_ID_A specified a custom hash:"
-  assert_contains "Canister $CANISTER_ID_B specified a custom hash via url:"
-  assert_contains "Canister $CANISTER_ID_C specified a custom hash via url:"
+  assert_contains "Cube $CANISTER_ID_A specified a custom hash:"
+  assert_contains "Cube $CANISTER_ID_B specified a custom hash via url:"
+  assert_contains "Cube $CANISTER_ID_C specified a custom hash via url:"
  
   # warning: specified both `wasm_hash` and `wasm_hash_url`. Providers should avoid this.
   PULLED_DIR="$DFX_CACHE_ROOT/.cache/dfinity/pulled/"
@@ -281,7 +281,7 @@ Failed to download from url: http://httpbin.org/status/404."
 
   cd ../app
   assert_command dfx deps pull --network local -vvv
-  assert_contains "WARN: Canister $CANISTER_ID_C specified both \`wasm_hash\` and \`wasm_hash_url\`. \`wasm_hash\` will be used."
+  assert_contains "WARN: Cube $CANISTER_ID_C specified both \`wasm_hash\` and \`wasm_hash_url\`. \`wasm_hash\` will be used."
 
   # hash mismatch is ok
   rm -r "${PULLED_DIR:?}/"
@@ -290,7 +290,7 @@ Failed to download from url: http://httpbin.org/status/404."
 
   cd ../app
   assert_command dfx deps pull --network local -vvv
-  assert_contains "Canister $CANISTER_ID_A specified a custom hash:"
+  assert_contains "Cube $CANISTER_ID_A specified a custom hash:"
 }
 
 @test "dfx deps init works" {
@@ -309,7 +309,7 @@ Failed to download from url: http://httpbin.org/status/404."
   dfx_stop
 
   assert_command dfx deps init
-  assert_contains "Canister $CANISTER_ID_C (dep_c) set init argument with \"(null)\"."
+  assert_contains "Cube $CANISTER_ID_C (dep_c) set init argument with \"(null)\"."
   assert_contains "WARN: The following canister(s) require an init argument. Please run \`dfx deps init <NAME/PRINCIPAL>\` to set them individually:
 $CANISTER_ID_A"
 
@@ -332,15 +332,15 @@ $CANISTER_ID_A"
   assert_command jq -r '.canisters."'"$CANISTER_ID_A"'".arg_raw' deps/init.json
   assert_eq "4449444c00017103616263" "$output"
 
-  # Canister A has been set, set again without --argument will prompt a info message
+  # Cube A has been set, set again without --argument will prompt a info message
   assert_command dfx deps init "$CANISTER_ID_A"
-  assert_contains "Canister $CANISTER_ID_A already set init argument."
+  assert_contains "Cube $CANISTER_ID_A already set init argument."
   
   # error cases
   rm deps/init.json
   ## require init arguments but not provide
   assert_command_fail dfx deps init "$CANISTER_ID_A"
-  assert_contains "Canister $CANISTER_ID_A requires an init argument. The following info might be helpful:
+  assert_contains "Cube $CANISTER_ID_A requires an init argument. The following info might be helpful:
 init_guide => A natural number, e.g. 10.
 candid:args => (nat)"
 
@@ -350,7 +350,7 @@ candid:args => (nat)"
 
   ## require no init argument but provide
   assert_command_fail dfx deps init dep_b --argument 1
-  assert_contains "Canister $CANISTER_ID_B (dep_b) takes no init argument. Please rerun without \`--argument\`"
+  assert_contains "Cube $CANISTER_ID_B (dep_b) takes no init argument. Please rerun without \`--argument\`"
 
   ## canister ID not in pulled.json
   assert_command_fail dfx deps init aaaaa-aa
@@ -365,7 +365,7 @@ candid:args => (nat)"
 
   setup_onchain
   cd onchain
-  # Canister A: set init_arg in pullable metadata then redeploy and copy wasm file to web server dir
+  # Cube A: set init_arg in pullable metadata then redeploy and copy wasm file to web server dir
   jq '.canisters.a.pullable.init_arg="42"' dfx.json | sponge dfx.json
   dfx build a
   dfx canister install a --argument 1 --mode=reinstall --yes
@@ -396,7 +396,7 @@ candid:args => (nat)"
 
   setup_onchain
   cd onchain
-  # Canister A: set init_arg in pullable metadata then redeploy and copy wasm file to web server dir
+  # Cube A: set init_arg in pullable metadata then redeploy and copy wasm file to web server dir
   jq '.canisters.a.pullable.init_arg="(\"abc\")"' dfx.json | sponge dfx.json
   dfx build a
   dfx canister install a --argument 1 --mode=reinstall --yes
@@ -617,7 +617,7 @@ Installing canister: $CANISTER_ID_C (dep_c)"
 
   # pulled dependency dep_b hasn't been deployed on local replica
   assert_command_fail dfx canister call app get_b
-  assert_contains "Canister $CANISTER_ID_B not found"
+  assert_contains "Cube $CANISTER_ID_B not found"
 
   assert_command dfx deps init
   assert_command dfx deps init "$CANISTER_ID_A" --argument 11

@@ -22,7 +22,7 @@ Usage:
 
 Options:
   --wasm PATH                     Path to the archive wasm file to deploy.
-  --canister-id CANISTER_ID       Canister id of the II canister to deploy the archive to.
+  --canister-id CANISTER_ID       Cube id of the II canister to deploy the archive to.
   --network URL                   Optional network parameter. Defaults to local replica.
 EOF
 }

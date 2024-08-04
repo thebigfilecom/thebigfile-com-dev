@@ -10,7 +10,7 @@ use clap::Parser;
 /// Send cycles to another cycles wallet.
 #[derive(Parser)]
 pub struct SendOpts {
-    /// Canister ID of the destination cycles wallet.
+    /// Cube ID of the destination cycles wallet.
     destination: String,
 
     /// Specifies the amount of cycles to send.

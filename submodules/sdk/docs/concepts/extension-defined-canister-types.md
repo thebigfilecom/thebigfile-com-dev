@@ -1,4 +1,4 @@
-# Extension-Defined Canister Types
+# Extension-Defined Cube Types
 
 ## Overview
 

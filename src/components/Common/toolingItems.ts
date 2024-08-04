@@ -272,7 +272,7 @@ export const communityToolingItems = [
 {
     title: "IC4J ICP Management",
     tags: [ "java", "development", "library","management" ],
-    description: "This Java library is an implementation of ICP Virtual Canister Management API and directly communicates with the Management Virtual Canister. Developers can utilize this library within any Java application to perform various operations, such as creating, deleting, starting, and stopping a canister, installing, uninstalling, and reinstalling WASM canister code, updating canister settings, and adding additional funds to a canister.",
+    description: "This Java library is an implementation of ICP Virtual Cube Management API and directly communicates with the Management Virtual Cube. Developers can utilize this library within any Java application to perform various operations, such as creating, deleting, starting, and stopping a canister, installing, uninstalling, and reinstalling WASM canister code, updating canister settings, and adding additional funds to a canister.",
     links: {
       github: "https://github.com/ic4j/ic4j-management",
     },
@@ -296,7 +296,7 @@ export const communityToolingItems = [
 {
     title: "icpp-pro",
     tags: [ "C++", "development", "CDK" ],
-    description: "C++ Canister Development Kit (CDK).",
+    description: "C++ Cube Development Kit (CDK).",
     links: {
       docs: "https://docs.icpp.world/",
     },

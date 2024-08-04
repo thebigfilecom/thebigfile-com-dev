@@ -59,7 +59,7 @@ moc some/path/input.mo            \
 This _reads_ the following files
  * `some/path/input.mo`
  * any `.mo` file referenced by `some/path/input.mo`, either relatively, absolutely or via the provided package aliases
- * for every actor import `ic:⟨canisterid⟩` imported by any of the Motoko files, it reads `actorpath/⟨canisterid⟩.did`, see section “Resolving Canister aliases” below. Here `⟨canisterid⟩` is the textual representation (e.g. `em77e-bvlzu-aq`).
+ * for every actor import `ic:⟨canisterid⟩` imported by any of the Motoko files, it reads `actorpath/⟨canisterid⟩.did`, see section “Resolving Cube aliases” below. Here `⟨canisterid⟩` is the textual representation (e.g. `em77e-bvlzu-aq`).
 
 The package name `prim` is special and should not be set using `--package`.
 
@@ -70,7 +70,7 @@ not create `another/path/`.
 
 Compiler warnings and errors are reported to `stderr`. Nothing writes to `stdout`.
 
-Resolving Canister aliases
+Resolving Cube aliases
 --------------------------
 
 For every actor imported using `import "canister:alias"`, the Motoko compiler treats that as `import "ic:⟨canisterid⟩"`, if the command line flag `--actor-alias alias ⟨canisterid⟩` is given. Here, `⟨canisterid⟩` is the textual representation (e.g. `em77e-bvlzu-aq`).
@@ -81,7 +81,7 @@ The given aliases must be unique (i.e. no `--actor-alias a aaaaa-aa --actor-alia
 
 [textual representation]: https://sdk.dfinity.org/docs/interface-spec/index.html#textual-ids
 
-Resolving Canister types
+Resolving Cube types
 ------------------------
 
 For every actor imported using `import "ic:⟨canisterid⟩"` (or `import "canister:alias"` if `alias` resolves to `ic:⟨canisterid⟩` as described above), the Motoko compiler assumes the presence of a file `⟨canisterid⟩.did` in the actor idl path specified by `--actor-idl`. This file informs Motoko about the interface of that canister, e.g. the output of `moc --idl` for a locally known canister, or the IDL file as fetched from the BigFile.
@@ -92,7 +92,7 @@ This file informs Motoko about the interface of that canister. It could be the o
 
 Open problem: how to resolve mutual canister imports.
 
-Exporting Canister Metadata
+Exporting Cube Metadata
 ---------------------------
 
 The compiler generates various metadata about the canister via command line flags.

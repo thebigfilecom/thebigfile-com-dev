@@ -40,7 +40,7 @@
       "properties": {
         "dependencies": {
           "title": "dependencies",
-          "description": "Canister IDs (Principal) of direct dependencies.",
+          "description": "Cube IDs (Principal) of direct dependencies.",
           "type": "array",
           "items": {
             "type": "string"

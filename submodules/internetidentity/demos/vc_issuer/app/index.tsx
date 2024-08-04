@@ -98,7 +98,7 @@ const App = () => {
       </section>
       <section>
         <label>
-          Canister Replies:
+          Cube Replies:
           {canisterLogs.length === 0 ? (
             <output data-unset data-role="canister-logs"></output>
           ) : (

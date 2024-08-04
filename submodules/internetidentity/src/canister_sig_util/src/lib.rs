@@ -13,7 +13,7 @@ pub const IC_ROOT_PK_DER: &[u8; 133] = b"\x30\x81\x82\x30\x1d\x06\x0d\x2b\x06\x0
 pub const IC_ROOT_PK_LENGTH: usize = 96;
 
 pub const CANISTER_SIG_PK_DER_PREFIX_LENGTH: usize = 19;
-// Canister signatures' public key OID is 1.3.6.1.4.1.56387.1.2,
+// Cube signatures' public key OID is 1.3.6.1.4.1.56387.1.2,
 // cf. https://thebigfile.com/docs/current/references/ic-interface-spec#canister-signatures
 pub const CANISTER_SIG_PK_DER_OID: &[u8; 14] =
     b"\x30\x0C\x06\x0A\x2B\x06\x01\x04\x01\x83\xB8\x43\x01\x02";

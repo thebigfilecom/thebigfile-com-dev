@@ -1,12 +1,12 @@
 use candid::{CandidType, Int, Nat};
 use ic_utils::call::SyncCall;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use num_traits::ToPrimitive;
 use serde::Deserialize;
 use slog::{info, Logger};
 use time::{format_description, OffsetDateTime};
 
-pub async fn list(canister: &Canister<'_>, logger: &Logger) -> anyhow::Result<()> {
+pub async fn list(canister: &Cube<'_>, logger: &Logger) -> anyhow::Result<()> {
     #[derive(CandidType, Deserialize)]
     struct Encoding {
         modified: Int,

@@ -443,7 +443,7 @@ pub fn apply_command_line_parameters(
             logger,
             "The --enable-canister-http parameter is deprecated."
         );
-        warn!(logger, "Canister HTTP suppport is enabled by default.  It can be disabled through dfx.json or networks.json.");
+        warn!(logger, "Cube HTTP suppport is enabled by default.  It can be disabled through dfx.json or networks.json.");
     }
 
     let _ = network_descriptor.local_server_descriptor()?;

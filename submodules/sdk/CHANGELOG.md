@@ -97,7 +97,7 @@ In the remote canister declaration it is possible to set a candid file to use wh
 
 `dfx schema --for dfx-metadata` to display JSON schema of the "dfx" metadata.
 
-### feat: add tech_stack to the Canister Metadata Standard
+### feat: add tech_stack to the Cube Metadata Standard
 
 The standardized `dfx` metadata is extended with another object: `tech_stack`.
 
@@ -343,7 +343,7 @@ curl -v --http2-prior-knowledge "http://localhost:$(dfx info webserver-port)/api
 
 It is now possible to approve other principals to spend cycles on your behalf using `dfx cycles approve <spender> <amount>`.
 `dfx cycles transfer` now also supports `--from`, `--from-subaccount`, and `--spender-subaccount`.
-For detailed explanations on how these fields work please refer to the [ICRC-2 specification](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md).
+For detailed explanations on how these fields work please refer to the [BIGRC-2 specification](https://github.com/dfinity/BIGRC-1/blob/main/standards/BIGRC-2/README.md).
 
 ### feat: cut over to dfxvm
 
@@ -1243,7 +1243,7 @@ Adds a new field `canister_init_arg` to the bitcoin configuration in dfx.json an
 
 Cleaned up documentation of BIG SDK.
 
-## Asset Canister Synchronization
+## Asset Cube Synchronization
 
 ### feat: Added more detailed logging to `ic-asset`.
 
@@ -1431,7 +1431,7 @@ Builds the specified asset canister, determines the batch operations required to
 
 No permissions are required to compute evidence, so this can be called with `--identity anonymous` or any other identity.
 
-## Asset Canister
+## Asset Cube
 
 Added `validate_take_ownership()` method so that an SNS is able to add a custom call to `take_ownership()`.
 
@@ -1502,7 +1502,7 @@ Started bundling ic-btc-canister, release 2023-03-31
 
 # 0.13.1
 
-## Asset Canister
+## Asset Cube
 
 Added validate_grant_permission() and validate_revoke_permission() methods per SNS requirements.
 
@@ -1927,7 +1927,7 @@ See https://forum.dfinity.org/t/fixing-incorrect-compute-allocation-fee/14830
 Until the rollout is complete, `dfx canister update-settings --compute-allocation <N>`
 will fail with an error from the replica such as the following:
 ```
-The Replica returned an error: code 1, message: "Canister requested a compute allocation of 1% which cannot be satisfied because the Subnet's remaining compute capacity is 0%"
+The Replica returned an error: code 1, message: "Cube requested a compute allocation of 1% which cannot be satisfied because the Subnet's remaining compute capacity is 0%"
 ```
 
 ### fix: For default node starter template: copy `ic-assets.json5` file from `src` to `dist`
@@ -2149,7 +2149,7 @@ This is a breaking change.  The only thing this was still serving was the /_/can
 
 ### fix: canister creation cost is 0.1T cycles
 
-Canister creation fee was calculated with 1T cycles instead of 0.1T.
+Cube creation fee was calculated with 1T cycles instead of 0.1T.
 
 ### fix: dfx deploy and dfx canister install write .old.did files under .dfx/
 
@@ -2167,7 +2167,7 @@ This fixes the following error:
 Error: Failed while determining if canister 'eop7r-riaaa-aaaak-qasxq-cai' is remote on network 'ic'.
 Caused by: Failed while determining if canister 'eop7r-riaaa-aaaak-qasxq-cai' is remote on network 'ic'.
   Failed to figure out if canister 'eop7r-riaaa-aaaak-qasxq-cai' has a remote id on network 'ic'.
-    Invalid argument: Canister eop7r-riaaa-aaaak-qasxq-cai not found in dfx.json
+    Invalid argument: Cube eop7r-riaaa-aaaak-qasxq-cai not found in dfx.json
 ```
 
 ### feat: allow replica log level to be configured
@@ -2181,7 +2181,7 @@ The log level can be specified in the following places (See [system-wide dfx sta
 
 ### feat: enable canister sandboxing
 
-Canister sandboxing is enabled to be consistent with the mainnet.
+Cube sandboxing is enabled to be consistent with the mainnet.
 
 ### chore: dfx ledger account-id --of-canister also accepts principal
 
@@ -3184,7 +3184,7 @@ Updated Motoko from 0.6.20 to 0.6.21.
 
 ### feat!: Remove the wallet proxy and the --no-wallet flag
 
-Breaking change: Canister commands, except for `dfx canister create`, will make the call directly, rather than via the user's wallet. The `--no-wallet` flag is thus removed from `dfx canister` as its behavior is the default.
+Breaking change: Cube commands, except for `dfx canister create`, will make the call directly, rather than via the user's wallet. The `--no-wallet` flag is thus removed from `dfx canister` as its behavior is the default.
 
 When working with existing canisters, use the `--wallet` flag in conjunction with `dfx identity get-wallet` in order to restore the old behavior.
 
@@ -3475,7 +3475,7 @@ We suggest to use the `import` subcommand since it also validate the private key
 
 Define DFX_WALLET_WASM in the environment to use a different wasm module when creating or upgrading the wallet.
 
-## Asset Canister
+## Asset Cube
 
 ### fix: trust full asset SHA-256 hashes provided by the caller
 
@@ -3682,7 +3682,7 @@ DFX will now also delete assets from the container that do not exist in the proj
 This means if you stored assets in the container, and they are not in the project,
 dfx deploy or dfx install will delete them.
 
-## Asset Canister
+## Asset Cube
 
 ### Breaking change: change to store() method signature
 
@@ -3699,7 +3699,7 @@ dfx deploy or dfx install will delete them.
 
 Added `dfx canister info` command to get certified canister information. Currently this information is limited to the controller of the canister and the SHA256 hash of its WASM module. If there is no WASM module installed, the hash will be None.
 
-## Asset Canister
+## Asset Cube
 
 ### Breaking change: change to list() method signature
 
@@ -3761,7 +3761,7 @@ dfx identity use <name>
 dfx canister call ...
 ```
 
-## Asset Canister
+## Asset Cube
 
 ### feat: The asset canister can now store assets that exceed the message ingress limit (2 MB)
 
@@ -3882,4 +3882,4 @@ FLAGS:
 
 ## Agents
 
-## Canister Development Kit (CDK)
+## Cube Development Kit (CDK)

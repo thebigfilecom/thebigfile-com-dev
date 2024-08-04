@@ -356,7 +356,7 @@ const redirects = `
   /docs/current/developer-docs/integrations/icrc-1/index /docs/current/references/bigrc1-standard
   /docs/current/developer-docs/integrations/bigrc-1/ /docs/current/references/bigrc1-standard
   /docs/current/developer-docs/integrations/bigrc-1/bigrc1-ledger-setup /docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup
-  /docs/current/developer-docs/integrations/bigrc-1/interact-with-ICRC-1-ledger /docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger
+  /docs/current/developer-docs/integrations/bigrc-1/interact-with-BIGRC-1-ledger /docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger
   /docs/current/developer-docs/integrations/bigrc-1/bigrc1-index-setup /docs/current/developer-docs/defi/bigrc-1/bigrc1-index-setup
   /docs/current/developer-docs/integrations/exchange-rate/exchange-rate-canister /docs/current/developer-docs/defi/exchange-rate-canister
   /docs/current/developer-docs/integrations/rosetta/index  /docs/current/developer-docs/defi/rosetta/overview

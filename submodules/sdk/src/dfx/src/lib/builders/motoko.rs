@@ -96,7 +96,7 @@ impl CanisterBuilder for MotokoBuilder {
         Ok(imports
             .iter()
             .filter_map(|import| {
-                if let MotokoImport::Canister(name) = import {
+                if let MotokoImport::Cube(name) = import {
                     pool.get_first_canister_with_name(name)
                 } else {
                     None
@@ -261,7 +261,7 @@ fn motoko_compile(logger: &Logger, cache: &dyn Cache, params: &MotokoParams<'_>)
 
 #[derive(Debug, PartialOrd, Ord, PartialEq, Eq)]
 enum MotokoImport {
-    Canister(String),
+    Cube(String),
     Ic(String),
     Lib(String),
     Relative(PathBuf),
@@ -294,7 +294,7 @@ impl TryFrom<&str> for MotokoImport {
                 }
                 let (prefix, name) = url.split_at(index + 1);
                 match prefix {
-                    "canister:" => MotokoImport::Canister(name.to_owned()),
+                    "canister:" => MotokoImport::Cube(name.to_owned()),
                     "ic:" => MotokoImport::Ic(name.to_owned()),
                     "mo:" => MotokoImport::Lib(name.to_owned()),
                     _ => {

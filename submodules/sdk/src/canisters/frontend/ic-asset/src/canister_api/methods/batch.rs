@@ -9,11 +9,11 @@ use backoff::backoff::Backoff;
 use backoff::ExponentialBackoffBuilder;
 use candid::{CandidType, Nat};
 use ic_agent::AgentError;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use serde_bytes::ByteBuf;
 use std::time::Duration;
 
-pub(crate) async fn create_batch(canister: &Canister<'_>) -> Result<Nat, AgentError> {
+pub(crate) async fn create_batch(canister: &Cube<'_>) -> Result<Nat, AgentError> {
     let mut retry_policy = ExponentialBackoffBuilder::new()
         .with_initial_interval(Duration::from_secs(1))
         .with_max_interval(Duration::from_secs(16))
@@ -45,7 +45,7 @@ pub(crate) async fn create_batch(canister: &Canister<'_>) -> Result<Nat, AgentEr
 }
 
 pub(crate) async fn submit_commit_batch<T: CandidType + Sync>(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     method_name: &str,
     arg: T, // CommitBatchArguments_{v0,v1,etc}
 ) -> Result<(), AgentError> {
@@ -77,21 +77,21 @@ pub(crate) async fn submit_commit_batch<T: CandidType + Sync>(
 }
 
 pub(crate) async fn commit_batch<T: CandidType + Sync>(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     arg: T, // CommitBatchArguments_{v0,v1,etc}
 ) -> Result<(), AgentError> {
     submit_commit_batch(canister, COMMIT_BATCH, arg).await
 }
 
 pub(crate) async fn propose_commit_batch<T: CandidType + Sync>(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     arg: T, // CommitBatchArguments_{v0,v1,etc}
 ) -> Result<(), AgentError> {
     submit_commit_batch(canister, PROPOSE_COMMIT_BATCH, arg).await
 }
 
 pub(crate) async fn compute_evidence(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     arg: &ComputeEvidenceArguments,
 ) -> Result<Option<ByteBuf>, AgentError> {
     let mut retry_policy = ExponentialBackoffBuilder::new()

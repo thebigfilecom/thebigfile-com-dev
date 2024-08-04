@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed `quill ckbtc update-balance` allowing the anonymous principal. (#191)
 - Added `disburse`, `disburse-maturity`, `split-neuron`, and `follow-neuron` to `quill sns`. (#191)
 - Added option to print DFN address for Genesis investors. (#184)
-- Updated to new ICRC-1 account ID format. (#190)
+- Updated to new BIGRC-1 account ID format. (#190)
 
 ## [0.4.1] - 2023-03-23
 
@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed `quill generate` requiring authentication. (#181)
 - Require an additional `--already-transferred` flag for the single-message form of `quill neuron-stake`. (#173)
 - Added `--disburse-amount` and `--disburse-to` to `quill neuron-manage`. (#171)
-- Accepts bare principals and ICRC-1 account IDs in `quill account-balance` and `quill transfer`. (#168)
+- Accepts bare principals and BIGRC-1 account IDs in `quill account-balance` and `quill transfer`. (#168)
 - Allowed omitting the account ID in `quill account-balance`. (#167)
 - Added `--from-subaccount` to `quill transfer` and `quill neuron-stake`. (#166)
 - Added `--summary-path` to `quill sns make-upgrade-canister-proposal`. (#164)

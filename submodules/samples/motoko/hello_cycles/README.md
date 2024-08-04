@@ -68,7 +68,7 @@ dfx canister status hello_cycles
 The output of this command will be similar to:
 
 ```bash
-Canister status call result for hello_cycles.
+Cube status call result for hello_cycles.
 Status: Running
 Controllers: 2vxsx-fae b77ix-eeaaa-aaaaa-qaada-cai
 Memory allocation: 0

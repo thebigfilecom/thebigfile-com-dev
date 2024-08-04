@@ -17,7 +17,7 @@ The following stable memory backups are currently used:
 
 ## Creating New Test Memory Backups
 
-### Using Canister Test Infrastructure
+### Using Cube Test Infrastructure
 These backup memory files are generated using the `canister_tests` infrastructure. To create a new backup file:
 1. Install II on the `StateMachine`
     ```rust

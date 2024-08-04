@@ -7,7 +7,7 @@
     "BigFile",
     "Motoko",
     "JavaScript",
-    "Canister"
+    "Cube"
   ],
   "scripts": {
     "build": "npm run build:react",

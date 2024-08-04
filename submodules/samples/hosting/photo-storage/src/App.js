@@ -16,7 +16,7 @@ if (isLocal) {
     agent.fetchRootKey();
 }
 
-// Canister id can be fetched from URL since frontend in this example is hosted in the same canister as file upload
+// Cube id can be fetched from URL since frontend in this example is hosted in the same canister as file upload
 const canisterId = new URLSearchParams(window.location.search).get('canisterId') ?? /(.*?)(?:\.raw)?\.ic0.app/.exec(window.location.host)?.[1] ?? /(.*)\.localhost/.exec(window.location.host)?.[1];
 
 // Create asset manager instance for above asset canister

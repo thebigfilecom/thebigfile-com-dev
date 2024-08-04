@@ -1,4 +1,4 @@
-name: Check Bitcoin Canister Release Update
+name: Check Bitcoin Cube Release Update
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch Bitcoin Canister latest release tag
+      - name: Fetch Bitcoin Cube latest release tag
         env:
           GH_TOKEN: "${{ secrets.NIV_UPDATER_TOKEN }}"
         run: |
@@ -52,7 +52,7 @@ jobs:
           niv update ic-btc-canister -a version=$URL_ENCODED_LATEST_TAG
           ./scripts/write-dfx-asset-sources.sh
 
-      - name: Update dfx to use the latest Bitcoin Canister version
+      - name: Update dfx to use the latest Bitcoin Cube version
         env:
           GH_TOKEN: "${{ secrets.NIV_UPDATER_TOKEN }}"
         run: |
@@ -60,8 +60,8 @@ jobs:
           git config user.email github-actions@github.com
           git checkout -b bot/update-bitcoin-canister/$LATEST_TAG
           git add .
-          git commit -m "Update Bitcoin Canister to $LATEST_TAG"
+          git commit -m "Update Bitcoin Cube to $LATEST_TAG"
           git push --set-upstream origin bot/update-bitcoin-canister/$LATEST_TAG
-          PR_TITLE="chore: Update Bitcoin Canister Version to $LATEST_TAG"
-          PR_BODY="This PR updates the Bitcoin Canister version to the latest tag: $LATEST_TAG"
+          PR_TITLE="chore: Update Bitcoin Cube Version to $LATEST_TAG"
+          PR_BODY="This PR updates the Bitcoin Cube version to the latest tag: $LATEST_TAG"
           gh pr create --title "$PR_TITLE" --body "$PR_BODY" --base master --head $(git branch --show-current)

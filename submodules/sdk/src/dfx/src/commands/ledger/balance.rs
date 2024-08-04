@@ -18,7 +18,7 @@ pub struct BalanceOpts {
     #[arg(long, conflicts_with("of"))]
     subaccount: Option<Subaccount>,
 
-    /// Canister ID of the ledger canister.
+    /// Cube ID of the ledger canister.
     #[arg(long)]
     ledger_canister_id: Option<Principal>,
 }

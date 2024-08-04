@@ -22,13 +22,13 @@ An HTTP request by an HTTP client is handled by these steps:
 10. If applicable, the HTTP Gateway validates the certificate of the response.
 11. The HTTP Gateway returns the decoded response to the HTTP client.
 
-## Canister ID Resolution
+## Cube ID Resolution
 
 The HTTP Gateway needs to know the canister ID of the canister to talk to, and obtains that information from the hostname as follows:
 
 1. If the hostname is in the following table, use the given canister ids:
 
-   | Hostname             | Canister id                   |
+   | Hostname             | Cube id                   |
    | -------------------- | ----------------------------- |
    | `identity.ic0.app`   | `rdmx6-jaaaa-aaaaa-aaadq-cai` |
    | `nns.ic0.app`        | `qoctq-giaaa-aaaaa-aaaea-cai` |
@@ -70,7 +70,7 @@ type HttpRequest = record {
 };
 ```
 
-The full [Candid](https://github.com/dfinity/candid/blob/master/spec/Candid.md) interface is described in [Canister HTTP Interface](#canister-http-interface).
+The full [Candid](https://github.com/dfinity/candid/blob/master/spec/Candid.md) interface is described in [Cube HTTP Interface](#canister-http-interface).
 
 - The `method` field contains the HTTP method in all upper case letters, e.g. `"GET"`.
 - The `url` field contains the URL from the HTTP request line, i.e. without protocol or hostname, and includes query parameters.
@@ -100,7 +100,7 @@ type HttpResponse = record {
 };
 ```
 
-The full [Candid](https://github.com/dfinity/candid/blob/master/spec/Candid.md) interface is described in [Canister HTTP Interface](#canister-http-interface).
+The full [Candid](https://github.com/dfinity/candid/blob/master/spec/Candid.md) interface is described in [Cube HTTP Interface](#canister-http-interface).
 
 - The HTTP response status code is taken from the `status_code` field.
 - The HTTP response headers are taken from the `headers` field.
@@ -181,7 +181,7 @@ The decoded `expr_path` field of [The Certificate Header](#the-certificate-heade
 
 ### Certificate Validation
 
-Certificate validation is performed as part of [response verification](#response-verification) as per [Canister Signatures](https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures) and [Certification](https://thebigfile.com/docs/current/references/ic-interface-spec/#certificate). It is expanded on here concerning [response verification](#response-verification) for completeness:
+Certificate validation is performed as part of [response verification](#response-verification) as per [Cube Signatures](https://thebigfile.com/docs/current/references/ic-interface-spec/#canister-signatures) and [Certification](https://thebigfile.com/docs/current/references/ic-interface-spec/#certificate). It is expanded on here concerning [response verification](#response-verification) for completeness:
 
 1. Case-insensitive search for a response header called `BIG-Certificate`.
 2. The value of the header corresponds to the format described in [the certificate header](#the-certificate-header) section.
@@ -347,7 +347,7 @@ Else, it makes a query call to the given method, passing the token value given i
 
 That method returns a `StreamingCallbackHttpResponse`. The body therein is appended to the body of the HTTP response. This is repeated as long as the method returns some token in the token field until that field is null.
 
-The type of the token value is chosen by the canister; the HTTP Gateway obtains the Candid type of the encoded message from the canister and uses it when passing the token back to the canister. This generic use of Candid is not covered by the Candid specification, and may not be possible in some cases (e.g. when using "future types"). Canister authors may have to use "simple" types.
+The type of the token value is chosen by the canister; the HTTP Gateway obtains the Candid type of the encoded message from the canister and uses it when passing the token back to the canister. This generic use of Candid is not covered by the Candid specification, and may not be possible in some cases (e.g. when using "future types"). Cube authors may have to use "simple" types.
 
 ## Upgrade to Update Calls
 
@@ -390,7 +390,7 @@ The HTTP Gateway can only allow for arbitrary certification version if the custo
 
 :::
 
-## Canister HTTP Interface
+## Cube HTTP Interface
 
 The full [Candid](https://github.com/dfinity/candid/blob/master/spec/Candid.md) interface that a canister is expected to implement is as follows:
 
@@ -525,7 +525,7 @@ type StreamingStrategy = variant {
 };
 ```
 
-### Minimum Canister Interface
+### Minimum Cube Interface
 
 If all of the above optional features are not needed by a canister, the minimum [Candid](https://github.com/dfinity/candid/blob/master/spec/Candid.md) interface that it needs to implement is as follows:
 

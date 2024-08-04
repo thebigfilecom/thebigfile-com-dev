@@ -148,7 +148,7 @@ async fn send(message: &Ingress, opts: &SendOpts) -> AnyhowResult {
     println!("Sending message with\n");
     println!("  Call type:   {call_type}");
     println!("  Sender:      {sender}");
-    println!("  Canister id: {canister_id}");
+    println!("  Cube id: {canister_id}");
     println!("  Method name: {method_name}");
     println!("  Arguments:   {args}");
 

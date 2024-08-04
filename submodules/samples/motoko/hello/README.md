@@ -21,7 +21,7 @@ This sample is based on the default project created by running `dfx new` as desc
 
 The sample code is available from the [samples](https://github.com/dfinity/examples) repository in both [Motoko](https://github.com/dfinity/examples/tree/master/motoko/hello) and [Rust](https://github.com/dfinity/examples/tree/master/rust/hello).
 
-Canister `hello`, whether implemented in Motoko or Rust, presents the same Candid interface:
+Cube `hello`, whether implemented in Motoko or Rust, presents the same Candid interface:
 ```candid
 service : {
   greet: (text) -> (text);

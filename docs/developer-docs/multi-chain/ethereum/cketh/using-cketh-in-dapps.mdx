@@ -12,13 +12,13 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-ckETH is an ICRC-2 compliant token, meaning it supports the [ICRC-1](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-1) and [ICRC-2](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md) token standards.
+ckETH is an BIGRC-2 compliant token, meaning it supports the [BIGRC-1](https://github.com/dfinity/BIGRC-1/tree/main/standards/BIGRC-1) and [BIGRC-2](https://github.com/dfinity/BIGRC-1/blob/main/standards/BIGRC-2/README.md) token standards.
 
-To integrate ckETH into your dapp, you can simply write code that uses the [ICRC-1 standard](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-1). For token transfers and account balances, ckETH requests must be sent to the ckETH ledger canister with principal ID `ss2fx-dyaaa-aaaar-qacoq-cai`.
+To integrate ckETH into your dapp, you can simply write code that uses the [BIGRC-1 standard](https://github.com/dfinity/BIGRC-1/tree/main/standards/BIGRC-1). For token transfers and account balances, ckETH requests must be sent to the ckETH ledger canister with principal ID `ss2fx-dyaaa-aaaar-qacoq-cai`.
 
 ## Write a smart contract that uses ckETH
 
-To write canister code that makes calls to the ckETH ledger, you will need to use inter-canister calls and specify the principal ID of the ckETH ledger canister. Then, to interact with ckETH, you can use the [ICRC-1 endpoints](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-1).
+To write canister code that makes calls to the ckETH ledger, you will need to use inter-canister calls and specify the principal ID of the ckETH ledger canister. Then, to interact with ckETH, you can use the [BIGRC-1 endpoints](https://github.com/dfinity/BIGRC-1/tree/main/standards/BIGRC-1).
 
 You can deploy the ckETH ledger locally for testing. [Learn more in the ckETH ledger documentation](https://github.com/dfinity/ic/tree/master/rs/ethereum/cketh/mainnet#installing-the-ledger).
 
@@ -157,7 +157,7 @@ ic_cdk::export_candid!();
 </TabItem>
 </Tabs>
 
-View the [ICRC-1 endpoints](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-1) for more information on sending and receiving tokens.
+View the [BIGRC-1 endpoints](https://github.com/dfinity/BIGRC-1/tree/main/standards/BIGRC-1) for more information on sending and receiving tokens.
 
 ## ckETH production application examples
 

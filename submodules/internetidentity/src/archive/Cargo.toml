@@ -1,6 +1,6 @@
 [package]
 name = "archive"
-description = "Internet Identity Archive Canister"
+description = "Internet Identity Archive Cube"
 version = "0.1.0"
 edition = "2021"
 

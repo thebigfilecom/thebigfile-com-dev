@@ -6,11 +6,11 @@ use crate::error::CreateChunkError;
 use backoff::backoff::Backoff;
 use backoff::ExponentialBackoffBuilder;
 use candid::{Decode, Nat};
-use ic_utils::Canister;
+use ic_utils::Cube;
 use std::time::Duration;
 
 pub(crate) async fn create_chunk(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     batch_id: &Nat,
     content: &[u8],
     semaphores: &Semaphores,

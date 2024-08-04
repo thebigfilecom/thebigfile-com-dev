@@ -20,7 +20,7 @@ pub async fn try_create_canister(
     match read_state_tree_canister_controllers(agent, *canister_id).await? {
         Some(cs) if cs.len() == 1 && cs[0] == Principal::anonymous() => Ok(()),
         Some(_) => {
-            bail!("Canister {canister_id} has been created before and its controller is not the anonymous identity. Please stop and delete it and then deploy again.");
+            bail!("Cube {canister_id} has been created before and its controller is not the anonymous identity. Please stop and delete it and then deploy again.");
         }
         None => {
             let mgr = ManagementCanister::create(agent);

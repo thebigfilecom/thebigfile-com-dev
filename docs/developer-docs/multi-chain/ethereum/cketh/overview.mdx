@@ -11,7 +11,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## What is ckETH?
 
-Chain-key Ethereum (ckETH) is an [ICRC-2](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md)-compliant token that is backed 1:1 by ETH held 100% on the mainnet.
+Chain-key Ethereum (ckETH) is an [BIGRC-2](https://github.com/dfinity/BIGRC-1/blob/main/standards/BIGRC-2/README.md)-compliant token that is backed 1:1 by ETH held 100% on the mainnet.
 
 Like [ckBTC](/docs/current/developer-docs/multi-chain/bitcoin/ckbtc/overview), ckETH does not rely on a centralized bridge to facilitate the conversion between ETH and ckETH, which makes it substantially more secure when compared to other traditional 'wrapped' tokens.
 
@@ -22,7 +22,7 @@ ckETH has the same attributes and advantages as ckBTC, but corresponding to ETH 
 The ckETH functionality is provided through an interplay of a suite of canisters on BIG, and a
 helper contract on Ethereum:
 
-| Canister / contract                                                                                   | Ethereum mainnet                                                                                                                                                                    | Sepolia testnet                                                                                                                                                                     |
+| Cube / contract                                                                                   | Ethereum mainnet                                                                                                                                                                    | Sepolia testnet                                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Minter](https://github.com/dfinity/ic/tree/master/rs/ethereum/cketh/minter)                        | [sv3dd-oaaaa-aaaar-qacoa-cai](https://dashboard.thebigfile.com/canister/sv3dd-oaaaa-aaaar-qacoa-cai) ([Dashboard](https://sv3dd-oaaaa-aaaar-qacoa-cai.raw.icp0.io/dashboard)) | [jzenf-aiaaa-aaaar-qaa7q-cai](https://dashboard.thebigfile.com/canister/jzenf-aiaaa-aaaar-qaa7q-cai) ([Dashboard](https://jzenf-aiaaa-aaaar-qaa7q-cai.raw.ic0.app/dashboard)) |
 | [Ledger](https://github.com/dfinity/ic/tree/master/rs/rosetta-api/icrc1/ledger)                     | [ss2fx-dyaaa-aaaar-qacoq-cai](https://dashboard.thebigfile.com/canister/ss2fx-dyaaa-aaaar-qacoq-cai)                                                                          | [apia6-jaaaa-aaaar-qabma-cai](https://dashboard.thebigfile.com/canister/apia6-jaaaa-aaaar-qabma-cai)                                                                          |
@@ -42,13 +42,13 @@ It uses the following workflow:
   logs from multiple Ethereum JSON RPC cloud providers and mints the
   corresponding amount of ckETH to the receiver's account on the ckETH ledger.
 
-- Users can withdraw ETH by creating an [ICRC-2 approval](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-2#icrc2_approve) on the ledger and calling `withdraw_eth` with a receiver ETH address as an argument on the minter.
+- Users can withdraw ETH by creating an [BIGRC-2 approval](https://github.com/dfinity/BIGRC-1/tree/main/standards/BIGRC-2#icrc2_approve) on the ledger and calling `withdraw_eth` with a receiver ETH address as an argument on the minter.
 
 - The minter will then burn the ckETH on the ledger and create an Ethereum transaction and submit it to the Ethereum network.
 
 A detailed description of the ckETH minter can be found in its [GitHub repository](https://github.com/dfinity/ic/tree/master/rs/ethereum/cketh/minter).
 
-The **ckETH ledger** and **ckETH index** canisters are regular ICRC-1 compliant canisters. A guide on how to interact with these canisters can be found in the [using the ICRC-1 ledger](/docs/developer-docs/defi/bigrc-1/using-bigrc1-ledger.mdx) section.
+The **ckETH ledger** and **ckETH index** canisters are regular BIGRC-1 compliant canisters. A guide on how to interact with these canisters can be found in the [using the BIGRC-1 ledger](/docs/developer-docs/defi/bigrc-1/using-bigrc1-ledger.mdx) section.
 
 ## ckETH use-cases
 

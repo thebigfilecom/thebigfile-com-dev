@@ -215,7 +215,7 @@ fn interpret_response<'a>(
         match errcode {
             APDUErrorCode::NoError => Ok(response.apdu_data()),
             APDUErrorCode::DataInvalid if matches!(content, Some(EnvelopeContent::Call { method_name, .. }) if method_name == "send_dfx") => {
-                Err(format!("Error {action}: Must use a principal or ICRC-1 account ID, not a legacy account ID"))
+                Err(format!("Error {action}: Must use a principal or BIGRC-1 account ID, not a legacy account ID"))
             }
             APDUErrorCode::DataInvalid if matches!(content,
                 Some(EnvelopeContent::Call { method_name, canister_id, .. }

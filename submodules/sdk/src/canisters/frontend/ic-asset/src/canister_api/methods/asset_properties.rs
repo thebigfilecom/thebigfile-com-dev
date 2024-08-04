@@ -6,11 +6,11 @@ use crate::error::GetAssetPropertiesError;
 use crate::error::GetAssetPropertiesError::GetAssetPropertiesFailed;
 use ic_agent::{agent::RejectResponse, AgentError};
 use ic_utils::call::SyncCall;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use std::collections::HashMap;
 
 pub(crate) async fn get_assets_properties(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     canister_assets: &HashMap<String, AssetDetails>,
 ) -> Result<HashMap<String, AssetProperties>, GetAssetPropertiesError> {
     let mut all_assets_properties = HashMap::new();
@@ -38,7 +38,7 @@ pub(crate) async fn get_assets_properties(
 }
 
 pub(crate) async fn get_asset_properties(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     asset_id: &str,
 ) -> Result<AssetProperties, AgentError> {
     let (asset_properties,): (AssetProperties,) = canister

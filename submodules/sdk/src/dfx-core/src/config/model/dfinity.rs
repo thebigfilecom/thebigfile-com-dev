@@ -75,7 +75,7 @@ const EMPTY_CONFIG_DEFAULTS_BUILD: ConfigDefaultsBuild = ConfigDefaultsBuild {
     args: None,
 };
 
-/// # Remote Canister Configuration
+/// # Remote Cube Configuration
 /// This field allows canisters to be marked 'remote' for certain networks.
 /// On networks where this canister contains a remote ID, the canister is not deployed.
 /// Instead it is assumed to exist already under control of a different project.
@@ -127,7 +127,7 @@ pub enum MetadataVisibility {
     Private,
 }
 
-/// # Canister Metadata Configuration
+/// # Cube Metadata Configuration
 /// Configures a custom metadata section for the canister wasm.
 /// dfx uses the first definition of a given name matching the current network, ignoring any of the same name that follow.
 #[derive(Clone, Debug, Default, Serialize, Deserialize, JsonSchema)]
@@ -188,7 +188,7 @@ pub struct Pullable {
     /// If both are defined, the `wasm_hash_url` field will be ignored.
     pub wasm_hash_url: Option<String>,
     /// # dependencies
-    /// Canister IDs (Principal) of direct dependencies.
+    /// Cube IDs (Principal) of direct dependencies.
     #[schemars(with = "Vec::<String>")]
     pub dependencies: Vec<Principal>,
     /// # init_guide
@@ -228,7 +228,7 @@ pub const DEFAULT_IC_GATEWAY: &str = "https://icp0.io";
 pub const DEFAULT_IC_GATEWAY_TRAILING_SLASH: &str = "https://icp0.io/";
 pub const DEFAULT_REPLICA_PORT: u16 = 8080;
 
-/// # Canister Configuration
+/// # Cube Configuration
 /// Configurations for a single canister.
 #[derive(Clone, Debug, Serialize, Deserialize, JsonSchema)]
 pub struct ConfigCanistersCanister {
@@ -243,7 +243,7 @@ pub struct ConfigCanistersCanister {
     #[serde(default)]
     pub remote: Option<ConfigCanistersCanisterRemote>,
 
-    /// # Canister-Specific Build Argument
+    /// # Cube-Specific Build Argument
     /// This field defines an additional argument to pass to the Motoko compiler when building the canister.
     pub args: Option<String>,
 
@@ -262,7 +262,7 @@ pub struct ConfigCanistersCanister {
     /// If this value is not null, a frontend URL is displayed after deployment even if the canister type is not 'asset'.
     pub frontend: Option<BTreeMap<String, String>>,
 
-    /// # Type-Specific Canister Properties
+    /// # Type-Specific Cube Properties
     /// Depending on the canister type, different fields are required.
     /// These are defined in this object.
     #[serde(flatten)]
@@ -273,17 +273,17 @@ pub struct ConfigCanistersCanister {
     #[serde(default)]
     pub post_install: SerdeVec<String>,
 
-    /// # Path to Canister Entry Point
+    /// # Path to Cube Entry Point
     /// Entry point for e.g. Motoko Compiler.
     pub main: Option<PathBuf>,
 
-    /// # Shrink Canister WASM
-    /// Whether run `ic-wasm shrink` after building the Canister.
+    /// # Shrink Cube WASM
+    /// Whether run `ic-wasm shrink` after building the Cube.
     /// Enabled by default for Rust/Motoko canisters.
     /// Disabled by default for custom canisters.
     pub shrink: Option<bool>,
 
-    /// # Optimize Canister WASM
+    /// # Optimize Cube WASM
     /// Invoke wasm level optimizations after building the canister. Optimization level can be set to "cycles" to optimize for cycle usage, "size" to optimize for binary size, or any of "O4, O3, O2, O1, O0, Oz, Os".
     /// Disabled by default.
     /// If this option is specified, the `shrink` option will be ignored.
@@ -305,12 +305,12 @@ pub struct ConfigCanistersCanister {
     #[serde(default)]
     pub tech_stack: Option<TechStack>,
 
-    /// # Gzip Canister WASM
+    /// # Gzip Cube WASM
     /// Disabled by default.
     pub gzip: Option<bool>,
 
-    /// # Specified Canister ID
-    /// Attempts to create the canister with this Canister ID.
+    /// # Specified Cube ID
+    /// Attempts to create the canister with this Cube ID.
     /// This option only works with non-mainnet replica.
     /// If the `--specified-id` argument is also provided, this `specified_id` field will be ignored.
     #[schemars(with = "Option<String>")]
@@ -379,7 +379,7 @@ pub enum CanisterTypeProperties {
     Motoko,
     /// # Pull-Specific Properties
     Pull {
-        /// # Canister ID
+        /// # Cube ID
         /// Principal of the canister on the ic network.
         #[schemars(with = "String")]
         id: Principal,
@@ -463,7 +463,7 @@ pub struct CanisterDeclarationsConfig {
     /// Default is ['js', 'ts', 'did'].
     pub bindings: Option<Vec<String>>,
 
-    /// # Canister ID ENV Override
+    /// # Cube ID ENV Override
     /// A string that will replace process.env.CANISTER_ID_{canister_name_uppercase}
     /// in the 'src/dfx/assets/language_bindings/canister.js' template.
     pub env_override: Option<String>,
@@ -696,7 +696,7 @@ fn default_playground_timeout_seconds() -> u64 {
 /// Playground config to borrow canister from instead of creating new canisters.
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
 pub struct PlaygroundConfig {
-    /// Canister ID of the playground canister
+    /// Cube ID of the playground canister
     pub playground_canister: String,
 
     /// How many seconds a canister can be borrowed for

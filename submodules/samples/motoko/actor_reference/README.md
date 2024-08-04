@@ -57,9 +57,9 @@ dfx canister call actor_reference burn '()'
 The output will resemble the following:
 
 ```bash
-[Canister by6od-j4aaa-aaaaa-qaadq-cai] balance before: 3091661916488
-[Canister by6od-j4aaa-aaaaa-qaadq-cai] cycles: 1538138650552
-[Canister by6od-j4aaa-aaaaa-qaadq-cai] balance after: 1545830657728
+[Cube by6od-j4aaa-aaaaa-qaadq-cai] balance before: 3091661916488
+[Cube by6od-j4aaa-aaaaa-qaadq-cai] cycles: 1538138650552
+[Cube by6od-j4aaa-aaaaa-qaadq-cai] balance after: 1545830657728
 ```
 
 ## Resources

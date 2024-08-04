@@ -29,7 +29,7 @@ pub struct ApproveOpts {
     from_subaccount: Option<Subaccount>,
 
     /// The number of previously approved cycles.
-    /// See https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md for details.
+    /// See https://github.com/dfinity/BIGRC-1/blob/main/standards/BIGRC-2/README.md for details.
     #[arg(long, value_parser = cycle_amount_parser)]
     expected_allowance: Option<u128>,
 

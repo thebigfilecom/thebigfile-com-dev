@@ -20,7 +20,7 @@ thread_local! {
 static MIN_INTERVAL_SECS: AtomicU64 = AtomicU64::new(10);
 /// Initial canister balance to track the cycles usage.
 static INITIAL_CANISTER_BALANCE: AtomicU64 = AtomicU64::new(0);
-/// Canister cycles usage tracked in the periodic task.
+/// Cube cycles usage tracked in the periodic task.
 static CYCLES_USED: AtomicU64 = AtomicU64::new(0);
 
 ////////////////////////////////////////////////////////////////////////
@@ -84,7 +84,7 @@ fn heartbeat() {
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Canister interface
+// Cube interface
 ////////////////////////////////////////////////////////////////////////
 
 /// Returns the `COUNTER` value.

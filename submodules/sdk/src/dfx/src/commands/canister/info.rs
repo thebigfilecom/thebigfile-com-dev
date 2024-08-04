@@ -29,7 +29,7 @@ pub async fn exec(env: &dyn Environment, opts: InfoOpts) -> DfxResult {
 
     let controllers_sorted: Vec<_> = read_state_tree_canister_controllers(agent, canister_id)
         .await?
-        .ok_or_else(|| anyhow!("Canister {canister_id} does not exist."))?
+        .ok_or_else(|| anyhow!("Cube {canister_id} does not exist."))?
         .iter()
         .map(Principal::to_text)
         .sorted()

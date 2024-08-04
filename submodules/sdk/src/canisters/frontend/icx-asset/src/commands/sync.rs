@@ -1,10 +1,10 @@
 use crate::SyncOpts;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use slog::Logger;
 use std::path::Path;
 
 pub(crate) async fn sync(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     o: &SyncOpts,
     logger: &Logger,
 ) -> anyhow::Result<()> {

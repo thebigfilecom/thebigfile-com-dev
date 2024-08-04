@@ -120,7 +120,7 @@ fn set_init(
             }
         }
         (Some(_), true) => {
-            bail!("Canister {canister_prompt} takes no init argument. Please rerun without `--argument`");
+            bail!("Cube {canister_prompt} takes no init argument. Please rerun without `--argument`");
         }
         (None, false) => {
             // No argument provided from CLI but the canister requires an init argument.
@@ -136,7 +136,7 @@ fn set_init(
             if init_json.contains(canister_id) {
                 info!(
                     logger,
-                    "Canister {canister_prompt} already set init argument."
+                    "Cube {canister_prompt} already set init argument."
                 );
             } else if let Some(init_arg) = pulled_json.get_init_arg(canister_id)? {
                 let bytes = fuzzy_parse_argument(init_arg, &env, &types).with_context(|| {
@@ -152,10 +152,10 @@ The following info might be helpful:
                 init_json.set_init_arg(canister_id, Some("(null)".to_string()), &bytes);
                 info!(
                     logger,
-                    "Canister {canister_prompt} set init argument with \"(null)\"."
+                    "Cube {canister_prompt} set init argument with \"(null)\"."
                 );
             } else {
-                bail!("Canister {canister_prompt} requires an init argument. The following info might be helpful:\n{help_message}");
+                bail!("Cube {canister_prompt} requires an init argument. The following info might be helpful:\n{help_message}");
             }
         }
         (None, true) => {

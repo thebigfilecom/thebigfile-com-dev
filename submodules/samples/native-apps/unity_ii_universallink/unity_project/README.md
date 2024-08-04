@@ -34,7 +34,7 @@ The current Unity project is configured to use the [deployed dapp](https://nytzv
 
 1. In Unity, open the `Assets\Scenes\SampleScene.unity`.
 2. Navigate to the `AgentAndPlugin` in the scene hierarchy.
-3. Update the `Greet Backend Canister` with your own greeting backend canister id.
+3. Update the `Greet Backend Cube` with your own greeting backend canister id.
 4. Update the `Greet Frontend` with your own greeting frontend.
 5. Please update the `kURLIdentifier` in [iOSPostBuildProcessor.cs](./Assets/Editor/iOSPostBuildProcessor.cs) to the URL of your deployed [universallink_website](https://github.com/dfinity/examples/tree/master/native-apps/unity_ii_universallink/ii_integration_dapp/src/universallink_website).
 

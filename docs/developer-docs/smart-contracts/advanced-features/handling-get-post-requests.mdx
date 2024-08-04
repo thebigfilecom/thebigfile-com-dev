@@ -101,7 +101,7 @@ Check out the [Rust documentation](https://docs.rs/ic-cdk/latest/ic_cdk/attr.que
 import {
     blob,
     bool,
-    Canister,
+    Cube,
     Func,
     nat16,
     None,
@@ -154,7 +154,7 @@ const HttpRequest = Record({
     certificate_version: Opt(nat16)
 });
 
-export default Canister({
+export default Cube({
     http_request: query([HttpRequest], HttpResponse, (req) => {
         return {
             status_code: 200,
@@ -298,7 +298,7 @@ Check out the [Rust documentation](https://docs.rs/ic-cdk/latest/ic_cdk/attr.upd
 import {
     blob,
     bool,
-    Canister,
+    Cube,
     Func,
     nat16,
     None,
@@ -351,7 +351,7 @@ const HttpRequest = Record({
     certificate_version: Opt(nat16)
 });
 
-export default Canister({
+export default Cube({
     http_request_update: update([HttpRequest], HttpResponse, (req) => {
         return {
             status_code: 200,

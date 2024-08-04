@@ -2,7 +2,7 @@
 # integration tests, e2e tests). The canister code is built in docker and the
 # wasm is then reused by subsequent build steps. We build various flavors of
 # the code, see `docker-build-...` for more info.
-name: Canister tests
+name: Cube tests
 
 on:
   push:
@@ -117,7 +117,7 @@ jobs:
       - name: Set up docker buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build Archive Canister
+      - name: Build Archive Cube
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -159,7 +159,7 @@ jobs:
           actual_size=${{ steps.record-size.outputs.size }}
           if (( actual_size > max_size ))
           then
-            echo "Canister size too big"
+            echo "Cube size too big"
             echo "($actual_size > $max_size)"
             exit 1
           fi

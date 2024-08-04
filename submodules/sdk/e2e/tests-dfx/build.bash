@@ -56,7 +56,7 @@ teardown() {
   jq '.canisters.e2e_project.build="echo nope"' dfx.json | sponge dfx.json
 
   assert_command_fail dfx deploy
-  assert_contains "Canister 'e2e_project' defines its wasm field as a URL, and has a build step."
+  assert_contains "Cube 'e2e_project' defines its wasm field as a URL, and has a build step."
 }
 
 @test "build uses default build args" {

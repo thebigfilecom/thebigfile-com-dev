@@ -154,7 +154,7 @@ Note the same performance counters behavior for composite queries.
 1. Have a look at the locally running dashboard. The URL is at the end of the `dfx start` command: `Dashboard: http://localhost/...`
 2. Check out the Candid user interface for `performance_counters` canister. The URL is at the end of the `dfx deploy` command: `performance_counters: http://127.0.0.1/...`
 
-### Canister interface
+### Cube interface
 
 The `performance_counters` canisters provide the following interface:
 

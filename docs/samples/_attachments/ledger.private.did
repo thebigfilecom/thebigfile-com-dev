@@ -74,7 +74,7 @@ type NotifyCanisterArgs = record {
     max_fee: Tokens;
     // Subaccount the payment came from.
     from_subaccount: opt SubAccount;
-    // Canister that received the payment.
+    // Cube that received the payment.
     to_canister: principal;
     // Subaccount that received the payment.
     to_subaccount: opt SubAccount;

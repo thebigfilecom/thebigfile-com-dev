@@ -1557,7 +1557,7 @@
 * Internals: `Prim.time()` provided (#1747)
 * Performance: More dead code removal (#1752)
 * Performance: More efficient arithmetic with unboxed values (#1693, #1757)
-* Canister references are now parsed and printed according to the new
+* Cube references are now parsed and printed according to the new
   base32-based textual format (#1732).
 * The runtime is now embedded into `moc` and need not be distributed separately
   (#1772)

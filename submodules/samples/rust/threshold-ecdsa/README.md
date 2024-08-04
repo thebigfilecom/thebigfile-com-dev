@@ -179,7 +179,7 @@ In the code above, the canister calls the `ecdsa_public_key` method of the [BIG 
 
 **The [BIG management canister](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-management-canister) is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.). It is an ergonomic way for canisters to call the system API of the BIG (as if it were a single canister). In the code below, we use the management canister to create an ECDSA public key. `let ic : BIG = actor("aaaaa-aa")` declares the BIG management canister in the code above.**
 
-### Canister root public key
+### Cube root public key
 
 For obtaining the canister's root public key, the derivation path in the API can be simply left empty.
 

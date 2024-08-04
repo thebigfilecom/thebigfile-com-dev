@@ -811,7 +811,7 @@ current_time_nanoseconds() {
   # one other canister already exists
   assert_command dfx canister create one --subnet aaaaa-aa
   ONE_ID="$(dfx canister id one)"
-  echo "Canister one: $ONE_ID"
+  echo "Cube one: $ONE_ID"
   assert_command dfx canister call "$REGISTRY" set_subnet_for_canister "(vec { record {0 = principal \"$ONE_ID\"; 1 = principal \"$SUBNET1\"} })"
 
   assert_command dfx canister create e2e_project_backend
@@ -827,7 +827,7 @@ current_time_nanoseconds() {
   # multiple other canisters already exist - all on same subnet
   assert_command dfx canister create two --subnet aaaaa-aa
   TWO_ID="$(dfx canister id two)"
-  echo "Canister two: $TWO_ID"
+  echo "Cube two: $TWO_ID"
   assert_command dfx canister call "$REGISTRY" set_subnet_for_canister "(vec { record {0 = principal \"$ONE_ID\"; 1 = principal \"$SUBNET1\"}; record { 0 = principal \"$TWO_ID\"; 1 = principal \"$SUBNET1\"} })"
 
   assert_command dfx canister create e2e_project_backend

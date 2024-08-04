@@ -52,7 +52,7 @@
             {/if}
         </div>
 
-        <div class="info_title">Canister ID</div>
+        <div class="info_title">Cube ID</div>
         <hr>
         <div class="info_detail">
             {nft.canister}

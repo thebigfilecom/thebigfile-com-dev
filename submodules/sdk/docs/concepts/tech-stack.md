@@ -2,9 +2,9 @@
 
 ## Overview
 
-Canister authors can opt in to display the tech stack of the canister.
+Cube authors can opt in to display the tech stack of the canister.
 
-Providing a standard format of such information makes it easier to build tools like a Canister Explorer.
+Providing a standard format of such information makes it easier to build tools like a Cube Explorer.
 
 ## JSON schema
 
@@ -132,4 +132,4 @@ Currently, `dfx` sets `tech_stack` for Rust and Motoko canisters if they don't d
 
 For Azle and Kybra projects created with `dfx new`, the corresponding `tech_stack` configuration will be added `dfx.json` by default.
 
-Canister developers can always add/overwrite/remove the `tech_stack` fields set by CDK.
+Cube developers can always add/overwrite/remove the `tech_stack` fields set by CDK.

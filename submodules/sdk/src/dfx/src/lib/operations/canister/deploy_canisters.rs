@@ -415,7 +415,7 @@ async fn compute_evidence(
         .get_canister_id()
         .context("Could not find canister ID.")?;
 
-    let canister = ic_utils::Canister::builder()
+    let canister = ic_utils::Cube::builder()
         .with_agent(agent)
         .with_canister_id(canister_id)
         .build()

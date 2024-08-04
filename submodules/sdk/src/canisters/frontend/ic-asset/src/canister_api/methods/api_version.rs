@@ -1,8 +1,8 @@
 use crate::canister_api::methods::method_names::API_VERSION;
 use ic_utils::call::SyncCall;
-use ic_utils::Canister;
+use ic_utils::Cube;
 
-pub(crate) async fn api_version(canister: &Canister<'_>) -> u16 {
+pub(crate) async fn api_version(canister: &Cube<'_>) -> u16 {
     canister
         .query(API_VERSION)
         .build()

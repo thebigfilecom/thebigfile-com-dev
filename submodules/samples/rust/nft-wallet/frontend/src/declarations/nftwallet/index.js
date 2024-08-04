@@ -8,7 +8,7 @@ export const canisterId = process.env.NFTWALLET_CANISTER_ID;
 
 /**
  * 
- * @param {string | import("@dfinity/principal").Principal} canisterId Canister ID of Agent
+ * @param {string | import("@dfinity/principal").Principal} canisterId Cube ID of Agent
  * @param {{agentOptions?: import("@dfinity/agent").HttpAgentOptions; actorOptions?: import("@dfinity/agent").ActorConfig}} [options]
  * @return {import("@dfinity/agent").ActorSubclass<import("./nftwallet.did.js")._SERVICE>}
  */

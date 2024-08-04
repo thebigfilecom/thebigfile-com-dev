@@ -115,7 +115,7 @@ document.getElementById("setBtn").addEventListener("click", async () => {
   console.log("Check 2: Timestamp difference seems legit (< 5 sec).", diff);
 
   // Checks 3 and 4:
-  // - Canister ID is correct.
+  // - Cube ID is correct.
   // - Certified data is correct.
   const pathData = [te.encode('canister'),
                     cid.toUint8Array(),
@@ -133,7 +133,7 @@ document.getElementById("setBtn").addEventListener("click", async () => {
     log.innerText = "Failure: Wrong certified data!";
     return;
   }
-  console.log("Check 3: Canister ID is correct.", cid);
+  console.log("Check 3: Cube ID is correct.", cid);
   console.log("Check 4: Data is correct.", decodedData);
   console.log("Success.");
 

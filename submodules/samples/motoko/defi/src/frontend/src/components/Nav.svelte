@@ -78,7 +78,7 @@
             },
           }),
         }));
-        // Create Canister Actors with II
+        // Create Cube Actors with II
     }
     
     function login() {

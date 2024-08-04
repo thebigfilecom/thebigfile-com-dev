@@ -119,10 +119,10 @@ async fn delete_canister(
                         Principal::from_text(target_canister_id).with_context(|| {
                             format!("Failed to read canister id {:?}.", target_canister_id)
                         })?;
-                    WithdrawTarget::Canister { canister_id }
+                    WithdrawTarget::Cube { canister_id }
                 }
                 None => match call_sender {
-                    CallSender::Wallet(wallet_id) => WithdrawTarget::Canister {
+                    CallSender::Wallet(wallet_id) => WithdrawTarget::Cube {
                         canister_id: *wallet_id,
                     },
                     CallSender::SelectedId => {
@@ -133,7 +133,7 @@ async fn delete_canister(
                             .to_string();
                         // If there is no wallet, then do not attempt to withdraw the cycles.
                         match wallet_canister_id(network, &identity_name)? {
-                            Some(canister_id) => WithdrawTarget::Canister { canister_id },
+                            Some(canister_id) => WithdrawTarget::Cube { canister_id },
                             None if cycles_ledger_enabled() => {
                                 let Some(my_principal) = env.get_selected_identity_principal()
                                 else {
@@ -172,7 +172,7 @@ async fn delete_canister(
             let status = canister::get_canister_status(env, canister_id, call_sender).await?;
             if status.status != CanisterStatus::Stopped && !skip_confirmation {
                 ask_for_consent(&format!(
-                    "Canister {canister} has not been stopped. Delete anyway?"
+                    "Cube {canister} has not been stopped. Delete anyway?"
                 ))?;
             }
             let agent = env.get_agent();
@@ -246,7 +246,7 @@ async fn delete_canister(
                                 .await
                                 .context("Failed mint call.")
                         }
-                        WithdrawTarget::Canister {
+                        WithdrawTarget::Cube {
                             canister_id: target_canister_id,
                         } => {
                             info!(
@@ -366,5 +366,5 @@ enum WithdrawTarget {
     NoWithdrawal,
     Dank,
     CyclesLedger { to: Account },
-    Canister { canister_id: Principal },
+    Cube { canister_id: Principal },
 }

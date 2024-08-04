@@ -36,7 +36,7 @@ pub async fn exec(env: &dyn Environment, opts: NotifyCreateOpts) -> DfxResult {
 
     match result {
         Ok(principal) => {
-            println!("Canister created with id: {:?}", principal.to_text());
+            println!("Cube created with id: {:?}", principal.to_text());
         }
         Err(Notify(Refunded {
             reason,

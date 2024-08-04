@@ -112,7 +112,7 @@ teardown() {
   jq ".canisters.remote.remote.id.actuallylocal=\"$REMOTE_CANISTER_ID\"" dfx.json | sponge dfx.json
 
   assert_command_fail dfx canister create remote --network actuallylocal
-  assert_match "Canister 'remote' is a remote canister on network 'actuallylocal', and cannot be created from here."
+  assert_match "Cube 'remote' is a remote canister on network 'actuallylocal', and cannot be created from here."
 }
 
 @test "canister install <canister> fails for a remote canister" {
@@ -134,7 +134,7 @@ teardown() {
   jq ".canisters.remote.remote.id.actuallylocal=\"$REMOTE_CANISTER_ID\"" dfx.json | sponge dfx.json
 
   assert_command_fail dfx canister install remote --network actuallylocal
-  assert_match "Canister 'remote' is a remote canister on network 'actuallylocal', and cannot be installed from here."
+  assert_match "Cube 'remote' is a remote canister on network 'actuallylocal', and cannot be installed from here."
 }
 
 @test "canister create --all, canister install --all skip remote canisters" {

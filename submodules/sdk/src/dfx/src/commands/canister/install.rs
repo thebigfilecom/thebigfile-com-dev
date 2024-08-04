@@ -144,7 +144,7 @@ pub async fn exec(
                 );
             }
             if config_interface.is_remote_canister(canister, &network.name)? {
-                bail!("Canister '{}' is a remote canister on network '{}', and cannot be installed from here.", canister, &network.name)
+                bail!("Cube '{}' is a remote canister on network '{}', and cannot be installed from here.", canister, &network.name)
             }
 
             let canister_id = canister_id_store.get(canister)?;

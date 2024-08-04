@@ -228,7 +228,7 @@
   },
   {
     "name": "Canlista",
-    "oneLiner": "BigFile Canister Registry",
+    "oneLiner": "BigFile Cube Registry",
     "website": "https://k7gat-daaaa-aaaae-qaahq-cai.ic0.app/",
     "logo": "canlista_logo.webp"
   },
@@ -266,7 +266,7 @@
     "logo": "configeek_logo.webp"
   },
   {
-    "name": "Canister Store",
+    "name": "Cube Store",
     "oneLiner": "Empowering Users to Easily Deploy Canisters on the BigFile",
     "website": "https://canister.app",
     "logo": "canister-store_logo.png"

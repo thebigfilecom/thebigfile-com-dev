@@ -14,14 +14,14 @@ use crate::canister_api::types::batch_upload::v0;
 use crate::error::CompatibilityError::DowngradeV1TOV0Failed;
 use crate::error::UploadError;
 use crate::error::UploadError::{CommitBatchFailed, CreateBatchFailed, ListAssetsFailed};
-use ic_utils::Canister;
+use ic_utils::Cube;
 use slog::{info, Logger};
 use std::collections::HashMap;
 use std::path::PathBuf;
 
 /// Upload the specified files
 pub async fn upload(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     files: HashMap<String, PathBuf>,
     logger: &Logger,
 ) -> Result<(), UploadError> {

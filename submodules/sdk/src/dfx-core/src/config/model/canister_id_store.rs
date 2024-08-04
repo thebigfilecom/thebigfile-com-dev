@@ -394,7 +394,7 @@ impl CanisterIdStore {
         }
 
         for canister in canisters_to_prune {
-            warn!(log, "Canister '{}' has timed out.", &canister);
+            warn!(log, "Cube '{}' has timed out.", &canister);
             self.remove(&canister)?;
         }
 

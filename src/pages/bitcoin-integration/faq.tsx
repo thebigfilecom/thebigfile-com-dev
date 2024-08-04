@@ -328,7 +328,7 @@ function BitcoinFaqPage() {
               <p className="tw-paragraph mb-3">
                 ckBTC isn't considered a wrapped token because it doesn't involve
                 centralized custodians or bridges to work. More than a token, while
-                ckBTC implements the ICRC-1 fungible token standard, it is a pair of
+                ckBTC implements the BIGRC-1 fungible token standard, it is a pair of
                 canister smart contracts that allow bitcoin to be freely sent between
                 addresses either on the Bitcoin network or the BigFile,
                 making it the first true multi-chain asset.
@@ -350,7 +350,7 @@ function BitcoinFaqPage() {
                 limitations.
               </p>
               <p>
-                Canister smart contracts can programmatically hold and transfer
+                Cube smart contracts can programmatically hold and transfer
                 ckBTC, making it possible to develop fully on-chain Layer-2
                 applications for Bitcoin, which is not possible using the
                 Lightning Network.

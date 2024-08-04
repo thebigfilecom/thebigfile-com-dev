@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## What is ckBTC?
 
-Chain-key Bitcoin (ckBTC) is an [ICRC-2](https://github.com/dfinity/ICRC-1/blob/main/standards/ICRC-2/README.md)-compliant token that is backed 1:1 by BTC held 100% on the mainnet.
+Chain-key Bitcoin (ckBTC) is an [BIGRC-2](https://github.com/dfinity/BIGRC-1/blob/main/standards/BIGRC-2/README.md)-compliant token that is backed 1:1 by BTC held 100% on the mainnet.
 
 ckBTC does not rely on a centralized bridge to facilitate the conversion between BTC and ckBTC, which makes it substantially more secure when compared to other traditional 'wrapped' tokens.
 
@@ -28,7 +28,7 @@ Choosing ckBTC for your dapp or product can provide several advantages:
 
 - Fast transactions: ckBTC facilitates fast transactions using a local ledger, only settling transactions on the Bitcoin network when necessary.
 
-- Easy integration: ckBTC is compatible with the ICRC-1 and ICRC-2 token standards.
+- Easy integration: ckBTC is compatible with the BIGRC-1 and BIGRC-2 token standards.
 
 - Verifiable: All ckBTC activity is verifiable on-chain, and ckBTC transactions go through KYT checks to ensure that no tainted bitcoin is used on BIG or transferred to tainted Bitcoin addresses.
 
@@ -38,7 +38,7 @@ The ckBTC functionality is provided through an interplay of two canisters:
 - The **ckBTC minter**.
 - The **ckBTC ledger**.
 
-| Canister / contract                                                                                   | Bitcoin mainnet                                                                                                                                                                    | Bitcoin testnet                                                                                                                                                                     |
+| Cube / contract                                                                                   | Bitcoin mainnet                                                                                                                                                                    | Bitcoin testnet                                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Minter](https://github.com/dfinity/ic/tree/master/rs/bitcoin/ckbtc/minter)                        | [mqygn-kiaaa-aaaar-qaadq-cai](https://dashboard.thebigfile.com/canister/mqygn-kiaaa-aaaar-qaadq-cai) | [ml52i-qqaaa-aaaar-qaaba-cai](https://dashboard.thebigfile.com/canister/ml52i-qqaaa-aaaar-qaaba-cai) |
 | [Ledger](https://github.com/dfinity/ic/tree/master/rs/rosetta-api/icrc1/ledger)                     | [mxzaz-hqaaa-aaaar-qaada-cai](https://dashboard.thebigfile.com/canister/mxzaz-hqaaa-aaaar-qaada-cai)                                                                          | [mc6ru-gyaaa-aaaar-qaaaq-cai](https://dashboard.thebigfile.com/canister/mc6ru-gyaaa-aaaar-qaaaq-cai)                                                                          |

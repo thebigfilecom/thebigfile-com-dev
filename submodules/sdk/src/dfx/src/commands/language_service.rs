@@ -101,7 +101,7 @@ fn get_main_path(config: &ConfigInterface, canister_name: Option<String>) -> Dfx
             (Some(canisters), Some(canister_name)) => {
                 let c = canisters.get(canister_name.as_str()).ok_or_else(|| {
                     error_invalid_data!(
-                        "Canister {0} cannot not be found in {1}",
+                        "Cube {0} cannot not be found in {1}",
                         canister_name,
                         dfx_json
                     )
@@ -125,7 +125,7 @@ fn get_main_path(config: &ConfigInterface, canister_name: Option<String>) -> Dfx
         Ok(main)
     } else {
         Err(error_invalid_data!(
-            "Canister {0} lacks a 'main' element in {1}",
+            "Cube {0} lacks a 'main' element in {1}",
             canister_name,
             dfx_json
         ))

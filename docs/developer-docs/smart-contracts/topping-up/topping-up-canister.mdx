@@ -34,7 +34,7 @@ For ease of use, you can copy/paste the cycles amounts below:
 
 ### Checking the cycles balance of a canister
 
-Canister cycles balances are not exposed publicly by default; you can only see them if you are the controller of a canister. Using `jqylk-byaaa-aaaal-qbymq-cai` as an example, you can query it by calling:
+Cube cycles balances are not exposed publicly by default; you can only see them if you are the controller of a canister. Using `jqylk-byaaa-aaaal-qbymq-cai` as an example, you can query it by calling:
 
 ```bash
 dfx canister status jqylk-byaaa-aaaal-qbymq-cai --network ic
@@ -43,7 +43,7 @@ dfx canister status jqylk-byaaa-aaaal-qbymq-cai --network ic
 Output will look like this:
 
 ```bash
-Canister status call result for jqylk-byaaa-aaaal-qbymq-cai.
+Cube status call result for jqylk-byaaa-aaaal-qbymq-cai.
 Status: Running
 Controllers: mto6d-zfnut-rlsxr-ogdeg-apo53-evpob-ljgnp-ma2x3-6yf3b-t4rd5-qqe t5j57-vyaaa-aaaal-qatsq-cai
 Memory allocation: 0
@@ -111,7 +111,7 @@ dfx wallet send 1000000 dfds-sddds-aaaal-qbsms-cai --network ic
 You can also top up any canister via the [NNS frontend dapp](https://nns.ic0.app):
 
 - #### Step 1: Navigate to the **My Canisters** section of the dapp.
-- #### Step 2: Click **Link Canister**.
+- #### Step 2: Click **Link Cube**.
 - #### Step 3: Add a canister principal (it is not necessary for the user to actually control said canister).
 - #### Step 4: Once canister is added, click on that canister.
 - #### Step 5: Click `add cycles` to add cycles using the BIG in your NNS frontend dapp.
@@ -133,7 +133,7 @@ dfx canister update-settings poll_backend --freezing-threshold 3472000
 Then, you can confirm that this threshold has been set by running the `dfx canister status poll_backend --network ic ` command again:
 
 ```
-Canister status call result for poll_backend.
+Cube status call result for poll_backend.
 Status: Stopped
 Controllers: lalyb-uhvmt-p7ubs-u5t7l-hce6v-lp7c5-dlmj5-wi2gc-depab-wtgi3-pae
 Memory allocation: 0

@@ -22,7 +22,7 @@ use dfx_core::canister::build_wallet_canister;
 use fn_error_context::context;
 use ic_agent::Agent;
 use ic_utils::call::SyncCall;
-use ic_utils::{Argument, Canister};
+use ic_utils::{Argument, Cube};
 use icrc_ledger_types::icrc1;
 use icrc_ledger_types::icrc1::account::{Account, Subaccount};
 use icrc_ledger_types::icrc1::transfer::{BlockIndex, TransferError};
@@ -51,7 +51,7 @@ pub async fn balance(
     owner: Principal,
     subaccount: Option<icrc1::account::Subaccount>,
 ) -> DfxResult<u128> {
-    let canister = Canister::builder()
+    let canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(CYCLES_LEDGER_CANISTER_ID)
         .build()?;
@@ -87,7 +87,7 @@ pub async fn transfer(
     created_at_time: u64,
     memo: Option<u64>,
 ) -> DfxResult<BlockIndex> {
-    let canister = Canister::builder()
+    let canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(CYCLES_LEDGER_CANISTER_ID)
         .build()?;
@@ -148,7 +148,7 @@ pub async fn transfer_from(
     memo: Option<u64>,
     created_at_time: u64,
 ) -> DfxResult<BlockIndex> {
-    let canister = Canister::builder()
+    let canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(CYCLES_LEDGER_CANISTER_ID)
         .build()?;
@@ -208,7 +208,7 @@ pub async fn approve(
     created_at_time: u64,
     memo: Option<u64>,
 ) -> DfxResult<BlockIndex> {
-    let canister = Canister::builder()
+    let canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(CYCLES_LEDGER_CANISTER_ID)
         .build()?;
@@ -265,7 +265,7 @@ pub async fn withdraw(
     created_at_time: u64,
     from_subaccount: Option<icrc1::account::Subaccount>,
 ) -> DfxResult<BlockIndex> {
-    let canister = Canister::builder()
+    let canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(CYCLES_LEDGER_CANISTER_ID)
         .build()?;
@@ -385,7 +385,7 @@ pub async fn create_with_cycles_ledger(
             canister_id,
         }) => {
             if let Some(canister) = canister_id {
-                info!(env.get_logger(), "Duplicate of block {duplicate_of}. Canister already created with id {canister}.");
+                info!(env.get_logger(), "Duplicate of block {duplicate_of}. Cube already created with id {canister}.");
                 Ok(canister)
             } else {
                 bail!("Duplicate of block {duplicate_of} but no canister id is available.");

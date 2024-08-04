@@ -22,7 +22,7 @@ There are two ways to schedule an automatic canister execution on BIG:
 Timers are implemented on two layers:
 
 - **The protocol level implementation:** the BigFile protocol supports minimalistic on-shot global timer per canister via `ic0.global_timer_set()` system API call and `canister_global_timer` handler (see the [BigFile interface specification](/docs/current/references/ic-interface-spec#timer)).
-- **The CDK timers library level:** the library wraps the minimalistic protocol implementation, adding multiple and periodic timers on top. Canister developers can enjoy the familiar timers functionality using the CDK timers library for [Rust](https://crates.io/crates/ic-cdk-timers) or [Motoko](/docs/current/motoko/main/timers).
+- **The CDK timers library level:** the library wraps the minimalistic protocol implementation, adding multiple and periodic timers on top. Cube developers can enjoy the familiar timers functionality using the CDK timers library for [Rust](https://crates.io/crates/ic-cdk-timers) or [Motoko](/docs/current/motoko/main/timers).
 
 Internally the CDK timers library does the following:
 
@@ -45,7 +45,7 @@ For the code composability reasons, i.e. to be able to use different libraries w
 
 Despite its superiority over the heartbeats, the CDK timers library has a few known shortcomings:
 
-- **Canister upgrades:** the library keeps a global list of multiple and periodic tasks inside the canister heap. During the canister upgrade, a fresh WebAssembly state is created, all the timers are deactivated and the list of timers is cleared. It is up to the canister developer to serialize the timers in the `canister_pre_upgrade` and reactivate them in the `canister_post_upgrade` method if needed.
+- **Cube upgrades:** the library keeps a global list of multiple and periodic tasks inside the canister heap. During the canister upgrade, a fresh WebAssembly state is created, all the timers are deactivated and the list of timers is cleared. It is up to the canister developer to serialize the timers in the `canister_pre_upgrade` and reactivate them in the `canister_post_upgrade` method if needed.
 - **Self canister calls:** to isolate the tasks from each other and from the scheduling logic, CDK timers library initiates a self canister call to execute each task. There are a few implications:
    * Normal [inter-canister call costs](/docs/current/developer-docs/gas-cost) apply to execute each task. Note, timers are [still more cost effective](https://github.com/dfinity/examples/tree/master/rust/periodic_tasks) than the heartbeats.
    * The tasks to execute are added at the end of the canister input queue. Depending on the canister and subnet load, the actual execution might be delayed.

@@ -26,7 +26,7 @@ Once a user has deposited funds, the tokens deposited can be swapped from one to
 
 In this example, the token swap canister simply swaps all deposits for two users. `user_a`'s entire token balance of `token_a` is given to `user_b`, and `user_b`'s entire token balance of `token_b` is given to `user_a`.
 
-This example will use ICRC-2 tokens. To learn more about ICRC tokens, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
+This example will use BIGRC-2 tokens. To learn more about BIGRC tokens, refer to the previous module [4.2: BIGRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
 
 
 ### Prerequisites
@@ -57,7 +57,7 @@ First, let's review the files that are in this project:
 ├── package.json
 ├── src
 │   └── swap
-│       ├── ICRC.mo
+│       ├── BIGRC.mo
 │       └── main.mo
 ├── test
 │   ├── deploy.sh
@@ -74,7 +74,7 @@ In this project, there are two Motoko files in the `src/swap` subdirectory:
 
 - `main.mo`: The token swap canister's source code.
 
-- `ICRC.mo`: Defines an `ICRC` module containing types that are imported into the `main.mo` file.
+- `BIGRC.mo`: Defines an `BIGRC` module containing types that are imported into the `main.mo` file.
 
 This project also includes a `test` subdirectory containing TypeScript files that can be used to test the token swap canister's functionality.
 
@@ -105,11 +105,11 @@ Then, open the project's `dfx.json` file to review the project's canisters and c
 
 In this project's configuration, you can see definition of three canisters:
 
-- The `swap` canister: This canister provides the deposit, swap, and withdraw functionality for the project's ICRC-2 tokens. It uses the source code found at `src/swap/main.mo`.
+- The `swap` canister: This canister provides the deposit, swap, and withdraw functionality for the project's BIGRC-2 tokens. It uses the source code found at `src/swap/main.mo`.
 
-- The `token_a` canister: This canister is used to create `token_a`, an ICRC-2 token. This canister uses the most recent ICRC ledger Wasm and Candid files. To learn more about the ICRC Wasm and Candid files, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
+- The `token_a` canister: This canister is used to create `token_a`, an BIGRC-2 token. This canister uses the most recent BIGRC ledger Wasm and Candid files. To learn more about the BIGRC Wasm and Candid files, refer to the previous module [4.2: BIGRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
 
-- The `token_b` canister: The canister is used to create `token_b`, an ICRC-2 token. This canister uses the most recent ICRC ledger Wasm and Candid files. To learn more about the ICRC Wasm and Candid files, refer to the previous module [4.2: ICRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
+- The `token_b` canister: The canister is used to create `token_b`, an BIGRC-2 token. This canister uses the most recent BIGRC ledger Wasm and Candid files. To learn more about the BIGRC Wasm and Candid files, refer to the previous module [4.2: BIGRC tokens](/docs/current/tutorials/developer-journey/level-4/4.2-bigrc-tokens)
 
 Next, open the `src/swap/main.mo` file and review its contents. This code has been annotated with notes to explain the program's functionality:
 
@@ -124,8 +124,8 @@ import Principal "mo:base/Principal";
 import Result "mo:base/Result";
 import TrieMap "mo:base/TrieMap";
 
-// Import the ICRC type definitions that are stored in the ICRC.mo file:
-import ICRC "./ICRC";
+// Import the BIGRC type definitions that are stored in the BIGRC.mo file:
+import BIGRC "./BIGRC";
 
 // This swap canister is the primary backend canister in this example.
 // For simplicity, this canister is configured with two tokens that will be swapped:
@@ -152,7 +152,7 @@ shared (init_msg) actor class Swap(
   public type DepositArgs = {
     spender_subaccount : ?Blob;
     token : Principal;
-    from : ICRC.Account;
+    from : BIGRC.Account;
     amount : Nat;
     fee : ?Nat;
     memo : ?Blob;
@@ -160,16 +160,16 @@ shared (init_msg) actor class Swap(
   };
 
   public type DepositError = {
-    #TransferFromError : ICRC.TransferFromError;
+    #TransferFromError : BIGRC.TransferFromError;
   };
 
   // Accept deposits:
   // - Accept TokenA and TokenB
   // - User approves transfer: `token_a.icrc2_approve({ spender=swap_canister; amount=amount; ... })`
   // - User deposits their token: `swap_canister.deposit({ token=token_a; amount=amount; ... })`
-  // - These deposit handlers show how to safely accept and register deposits of an ICRC-2 token.
+  // - These deposit handlers show how to safely accept and register deposits of an BIGRC-2 token.
   public shared (msg) func deposit(args : DepositArgs) : async Result.Result<Nat, DepositError> {
-    let token : ICRC.Actor = actor (Principal.toText(args.token));
+    let token : BIGRC.Actor = actor (Principal.toText(args.token));
     let balances = which_balances(args.token);
 
     // Load the fee from the token:
@@ -245,7 +245,7 @@ shared (init_msg) actor class Swap(
 
   public type WithdrawArgs = {
     token : Principal;
-    to : ICRC.Account;
+    to : BIGRC.Account;
     amount : Nat;
     fee : ?Nat;
     memo : ?Blob;
@@ -255,15 +255,15 @@ shared (init_msg) actor class Swap(
     // Define a function that catches an error if the caller does not have sufficient funds deposited into the swap.
     // This error is different from the TransferError(InsufficientFunds) error, which indicates that the canister does not have enough funds to fulfill a withdraw.
   public type WithdrawError = {
-    #InsufficientFunds : { balance : ICRC.Tokens };
-    #TransferError : ICRC.TransferError;
+    #InsufficientFunds : { balance : BIGRC.Tokens };
+    #TransferError : BIGRC.TransferError;
   };
 
   // Define the functionality for withdrawing tokens:
   // - Allow users to withdraw any tokens they hold.
-  // - These withdrawal handlers show how to safely send outbound transfers of an ICRC-1 token:
+  // - These withdrawal handlers show how to safely send outbound transfers of an BIGRC-1 token:
   public shared (msg) func withdraw(args : WithdrawArgs) : async Result.Result<Nat, WithdrawError> {
-    let token : ICRC.Actor = actor (Principal.toText(args.token));
+    let token : BIGRC.Actor = actor (Principal.toText(args.token));
     let balances = which_balances(args.token);
 
     // Load the fee from the token:
@@ -355,10 +355,10 @@ shared (init_msg) actor class Swap(
 };
 ```
 
-Next, open the `ICRC.mo` file and review its contents. This file defines several types that are imported in the `main.mo` file:
+Next, open the `BIGRC.mo` file and review its contents. This file defines several types that are imported in the `main.mo` file:
 
 ```motoko
-module ICRC {
+module BIGRC {
   public type BlockIndex = Nat;
   public type Subaccount = Blob;
   // Number of nanoseconds since the UNIX epoch in UTC timezone.
@@ -571,7 +571,7 @@ In this command, `token_a` is created with the following configuration:
 - `num_blocks_to_archive`: Defines the number of blocks to archive as '1000'.
 - `controller_id`: Define's the controller ID as the `OWNER` environmental variable.
 - `feature_flags`: Defines a feature flag.
-    - `icrc2`: Set as 'true' to define the token using the ICRC-2 standard.
+    - `icrc2`: Set as 'true' to define the token using the BIGRC-2 standard.
 
 ### Deploying token_b
 
@@ -621,7 +621,7 @@ In this command, `token_b` is created with the following configuration:
 - `num_blocks_to_archive`: Defines the number of blocks to archive as '1000'.
 - `controller_id`: Define's the controller ID as the `OWNER` environmental variable.
 - `feature_flags`: Defines a feature flag.
-    - `icrc2`: Set as 'true' to define the token using the ICRC-2 standard.
+    - `icrc2`: Set as 'true' to define the token using the BIGRC-2 standard.
 
 
 ### Exporting the token canister IDs as environmental variables
@@ -654,7 +654,7 @@ export SWAP=$(dfx canister id swap)
 
 ### Depositing tokens into the swap canister
 
-Before tokens can be swapped, they must be transferred into the swap canister. Since the tokens in this example uses ICRC-2 tokens, this is a two-step process. First, the transfer must be approved. In this example, approve `user_a` to deposit 1.00000000 of `token_a`, and include 0.0001 extra for the transfer fee:
+Before tokens can be swapped, they must be transferred into the swap canister. Since the tokens in this example uses BIGRC-2 tokens, this is a two-step process. First, the transfer must be approved. In this example, approve `user_a` to deposit 1.00000000 of `token_a`, and include 0.0001 extra for the transfer fee:
 
 ```bash
 dfx canister call --identity user_a token_a icrc2_approve '

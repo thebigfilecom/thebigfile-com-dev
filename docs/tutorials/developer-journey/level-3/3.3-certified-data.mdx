@@ -312,9 +312,9 @@ curl "http://localhost:$(dfx info webserver-port)?canisterId=$(dfx canister id c
 Since there aren't any requests stored in the cache to begin with, you will receive the following output:
 
 ```bash
-2023-10-02 22:22:09.157001 UTC: [Canister bkyz2-fmaaa-aaaaa-qaaaq-cai] Request was not found in cache. Upgrading to update request.
+2023-10-02 22:22:09.157001 UTC: [Cube bkyz2-fmaaa-aaaaa-qaaaq-cai] Request was not found in cache. Upgrading to update request.
 
-2023-10-02 22:22:11.069725 UTC: [Canister bkyz2-fmaaa-aaaaa-qaaaq-cai] Storing request in cache.
+2023-10-02 22:22:11.069725 UTC: [Cube bkyz2-fmaaa-aaaaa-qaaaq-cai] Storing request in cache.
 
 <html><head><meta name='viewport' content='width=device-width, initial-scale=1'><link rel='stylesheet' href='https://unpkg.com/chota@latest'><title>BIG certified assets demo</title></head><body><div class='container' role='document'><pre>Request has been stored in cache:
 URL is: /?canisterId=bkyz2-fmaaa-aaaaa-qaaaq-cai
@@ -328,7 +328,7 @@ Timestamp is:
 Then, if you use this call again, the request will be returned automatically without the request having to be upgraded to an update request:
 
 ```bash
-2023-10-02 22:42:09.868110 UTC: [Canister bkyz2-fmaaa-aaaaa-qaaaq-cai] <html><head><meta name='viewport' content='width=device-width, initial-scale=1'><link rel='stylesheet' href='https://unpkg.com/chota@latest'><title>BIG certified assets demo</title></head><body><div class='container' role='document'><pre>Request has been stored in cache:
+2023-10-02 22:42:09.868110 UTC: [Cube bkyz2-fmaaa-aaaaa-qaaaq-cai] <html><head><meta name='viewport' content='width=device-width, initial-scale=1'><link rel='stylesheet' href='https://unpkg.com/chota@latest'><title>BIG certified assets demo</title></head><body><div class='container' role='document'><pre>Request has been stored in cache:
 URL is: /?canisterId=bkyz2-fmaaa-aaaaa-qaaaq-cai
 Method is GET
 Body is: ""

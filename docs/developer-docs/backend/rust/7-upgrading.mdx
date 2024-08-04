@@ -14,7 +14,7 @@ Unlike a canister reinstall that preserves the canister identifier but no state,
 
 For example, assume you have a dapp that manages professional profiles and social connections. If you want to add a new feature to the dapp, you need to be able to update the canister code without losing any of the previously-stored data. A canister upgrade enables you to update existing canister identifiers with program changes without losing the program state.
 
-## Canister upgrades
+## Cube upgrades
 When a canister needs to be upgraded, the following workflow is used:
 - If a `pre_upgrade` hook is defined, the system calls it. Note: Having a `pre_upgrade` hook is not recommended, since the `pre_upgrade` hook is run in the current Wasm. If there are any bugs or errors, the canister will trap.
 - The system calls a `pre_upgrade` hook if your canister defines it.

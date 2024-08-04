@@ -2,7 +2,7 @@ Sending message with
 
   Call type:   update
   Sender:      fdsgv-62ihb-nbiqv-xgic5-iefsv-3cscz-tmbzv-63qd5-vh43v-dqfrt-pae
-  Canister id: mqygn-kiaaa-aaaar-qaadq-cai
+  Cube id: mqygn-kiaaa-aaaar-qaadq-cai
   Method name: update_balance
   Arguments:   (
   record {

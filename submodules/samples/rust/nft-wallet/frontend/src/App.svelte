@@ -46,7 +46,7 @@
                         {/if}
                     {/await}
                     <a href="/transactions">Transactions</a>
-                    <div id="walletID_container">Wallet Canister ID
+                    <div id="walletID_container">Wallet Cube ID
                         <div id="walletID">
                             <CanisterId/>
                         </div>
