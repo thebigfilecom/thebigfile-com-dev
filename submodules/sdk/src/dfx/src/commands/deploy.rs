@@ -61,7 +61,7 @@ pub struct DeployOpts {
     #[arg(long, value_parser = cycle_amount_parser)]
     with_cycles: Option<u128>,
 
-    /// Attempts to create the canister with this Canister ID.
+    /// Attempts to create the canister with this Cube ID.
     ///
     /// This option only works with non-mainnet replica.
     /// This option implies the --no-wallet flag.

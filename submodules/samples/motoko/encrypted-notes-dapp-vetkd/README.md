@@ -84,7 +84,7 @@ If you have multiple `dfx` identities set up, ensure you are using the identity 
    3. Visit the URL from above and create at least one local internet identity.
 
 ### Step 8: Install the vetKD system API canister:
-   1. Ensure the Canister SDK (dfx) uses the canister ID that is hard-coded in the backend canister Rust source code:
+   1. Ensure the Cube SDK (dfx) uses the canister ID that is hard-coded in the backend canister Rust source code:
       ```sh
       dfx canister create vetkd_system_api --specified-id s55qq-oqaaa-aaaaa-aaakq-cai
       ```

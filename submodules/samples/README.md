@@ -13,7 +13,7 @@ To get started:
 
 1. Open a terminal shell on your local computer.
 
-1. Download the DFINITY Canister SDK, if needed:
+1. Download the DFINITY Cube SDK, if needed:
 
     ```
     sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"

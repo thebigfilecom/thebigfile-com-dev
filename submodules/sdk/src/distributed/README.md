@@ -1,5 +1,5 @@
 
-# Building the Wallet Canister
+# Building the Wallet Cube
 
 The `wallet.wasm` and `wallet.did` files here are built using `dfx build` in the
 https://github.com/dfinity/cycles-wallet repo.
@@ -11,7 +11,7 @@ you will first have to create the canister ids with `dfx start --background` and
 
 An issue was created to automate this using nix; https://github.com/dfinity-lab/sdk/issues/1078
 
-# Building the Asset Canister
+# Building the Asset Cube
 
 The `assetstorage.wasm.gz` and `assetstorage.did` files here are built using scripts/update-frontend-canister.sh in this repo.
 

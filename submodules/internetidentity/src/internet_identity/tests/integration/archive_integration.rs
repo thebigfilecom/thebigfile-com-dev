@@ -755,7 +755,7 @@ mod pull_entries_tests {
             method: "fetch_entries".to_string(),
             argument: ByteBuf::from(candid::encode_one(()).unwrap()),
             rejection_code: 5,
-            message: format!("Canister {} is stopped", ii_canister.to_text()),
+            message: format!("Cube {} is stopped", ii_canister.to_text()),
         };
         let actual_error = status.call_info.call_errors.first().unwrap();
         assert_eq!(actual_error.canister, expected_error.canister);

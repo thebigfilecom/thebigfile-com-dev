@@ -132,7 +132,7 @@ Specify which standards to support. If you only want to support the BIGRC-1 stan
 ``` sh
 export FEATURE_FLAGS=false
 ```
-If you want your BIGRC-1 ledger to also support the extension standard ICRC-2 then set the flag to true:
+If you want your BIGRC-1 ledger to also support the extension standard BIGRC-2 then set the flag to true:
 ``` sh
 export FEATURE_FLAGS=true
 ```
@@ -148,7 +148,7 @@ For each variable, the exported environment variable will be used unless otherwi
 -   The `NUM_OF_BLOCK_TO_ARCHIVE` is the number of blocks that will be archived.
 -   The `TOKEN_SYMBOL` is the ticker symbol of your new token.
 -   The `MINTER` is the account of the Principal responsible for minting and burning tokens (see the [icrc-1 ledger documentation](https://github.com/dfinity/BIGRC-1)).
--   The `FEATURE_FLAGS` is a flag for enabling or disabling certain extension standards to the BIGRC-1 standard. In this case the reference implementation also can support ICRC-2 transactions.
+-   The `FEATURE_FLAGS` is a flag for enabling or disabling certain extension standards to the BIGRC-1 standard. In this case the reference implementation also can support BIGRC-2 transactions.
 -   Minting 100 tokens to the `DEFAULT` (1 token is by default equal to 10^8 e8s, hence the name).
 -   Setting the transfer fee to 0.0001 tokens.
 

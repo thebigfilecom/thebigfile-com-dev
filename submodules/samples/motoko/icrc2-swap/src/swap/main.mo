@@ -8,8 +8,8 @@ import Principal "mo:base/Principal";
 import Result "mo:base/Result";
 import TrieMap "mo:base/TrieMap";
 
-// Import our ICRC type definitions
-import ICRC "./ICRC";
+// Import our BIGRC type definitions
+import BIGRC "./BIGRC";
 
 // The swap canister is the main backend canister for this example. To simplify
 // this example we configure the swap canister with the two tokens it will be
@@ -38,7 +38,7 @@ shared (init_msg) actor class Swap(
   public type DepositArgs = {
     spender_subaccount : ?Blob;
     token : Principal;
-    from : ICRC.Account;
+    from : BIGRC.Account;
     amount : Nat;
     fee : ?Nat;
     memo : ?Blob;
@@ -46,16 +46,16 @@ shared (init_msg) actor class Swap(
   };
 
   public type DepositError = {
-    #TransferFromError : ICRC.TransferFromError;
+    #TransferFromError : BIGRC.TransferFromError;
   };
 
   // Accept deposits
   // - Accept TokenA, and TokenB
   // - user approves transfer: `token_a.icrc2_approve({ spender=swap_canister; amount=amount; ... })`
   // - user deposits their token: `swap_canister.deposit({ token=token_a; amount=amount; ... })`
-  // - These deposit handlers show how to safely accept and register deposits of an ICRC-2 token.
+  // - These deposit handlers show how to safely accept and register deposits of an BIGRC-2 token.
   public shared (msg) func deposit(args : DepositArgs) : async Result.Result<Nat, DepositError> {
-    let token : ICRC.Actor = actor (Principal.toText(args.token));
+    let token : BIGRC.Actor = actor (Principal.toText(args.token));
     let balances = which_balances(args.token);
 
     // Load the fee from the token here. The user can pass a null fee, which
@@ -160,7 +160,7 @@ shared (init_msg) actor class Swap(
 
   public type WithdrawArgs = {
     token : Principal;
-    to : ICRC.Account;
+    to : BIGRC.Account;
     amount : Nat;
     fee : ?Nat;
     memo : ?Blob;
@@ -173,16 +173,16 @@ shared (init_msg) actor class Swap(
     // TransferError(InsufficientFunds), which would indicate that this
     // canister doesn't have enough funds to fulfil the withdrawal (a much more
     // serious error).
-    #InsufficientFunds : { balance : ICRC.Tokens };
+    #InsufficientFunds : { balance : BIGRC.Tokens };
     // For other transfer errors, we can just wrap and return them.
-    #TransferError : ICRC.TransferError;
+    #TransferError : BIGRC.TransferError;
   };
 
   // Allow withdrawals
   // - Allow users to withdraw any tokens they hold.
-  // - These withdrawal handlers show how to safely send outbound transfers of an ICRC-1 token.
+  // - These withdrawal handlers show how to safely send outbound transfers of an BIGRC-1 token.
   public shared (msg) func withdraw(args : WithdrawArgs) : async Result.Result<Nat, WithdrawError> {
-    let token : ICRC.Actor = actor (Principal.toText(args.token));
+    let token : BIGRC.Actor = actor (Principal.toText(args.token));
     let balances = which_balances(args.token);
 
     // Load the fee from the token here. The user can pass a null fee, which

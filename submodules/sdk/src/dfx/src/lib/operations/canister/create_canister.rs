@@ -97,7 +97,7 @@ pub async fn create_canister(
             if specified_id_from_json != specified_id_from_cli {
                 warn!(
                     env.get_logger(),
-                    "Canister '{0}' has a specified ID in dfx.json: {1},
+                    "Cube '{0}' has a specified ID in dfx.json: {1},
 which is different from the one specified in the command line: {2}.
 The command line value will be used.",
                     canister_name,
@@ -237,7 +237,7 @@ async fn create_with_management_canister(
         })) if reject_message.contains("is not allowed to call ic00 method") => {
             Err(anyhow!(NEEDS_WALLET))
         }
-        Err(e) => Err(e).context("Canister creation call failed."),
+        Err(e) => Err(e).context("Cube creation call failed."),
     }
 }
 

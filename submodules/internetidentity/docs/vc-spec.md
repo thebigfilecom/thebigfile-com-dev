@@ -19,7 +19,7 @@ type CredentialSpec = record {
 };
 type ArgumentValue = variant { "Int" : int32; String : text };
 
-/// Types for ICRC-21 consent message, cf.
+/// Types for BIGRC-21 consent message, cf.
 /// https://github.com/dfinity/wg-identity-authentication/blob/main/topics/icrc_21_consent_msg.md
 type Icrc21ConsentInfo = record { consent_message : text; language : text };
 type Icrc21ConsentPreferences = record { language : text };
@@ -95,7 +95,7 @@ service: {
 In the attribute sharing flow a user must approve the issuance of a verifiable
 credential by an issuer, and this happens by approving a human-readable consent message from the issuer.
 
-Identity provider uses a VC-extension of  [ICRC-21](https://github.com/dfinity/wg-identity-authentication/blob/main/topics/icrc_21_consent_msg.md), and requests the consent message via `Icrc21VcConsentMessageRequest`,
+Identity provider uses a VC-extension of  [BIGRC-21](https://github.com/dfinity/wg-identity-authentication/blob/main/topics/icrc_21_consent_msg.md), and requests the consent message via `Icrc21VcConsentMessageRequest`,
 Upon successful response idenity provider displays the consent message from `Icrc21ConsentInfo` to the user.
 
 ### 2: Derivation Origin

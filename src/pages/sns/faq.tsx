@@ -814,10 +814,10 @@ function SnsFaqPage() {
 
             <Faq title="Is it possible to transfer SNS tokens to another person?">
               <p>
-                Yes. SNS tokens are ICRC-1 tokens and can be transferred between
-                any BigFile-based wallets that support ICRC-1,
+                Yes. SNS tokens are BIGRC-1 tokens and can be transferred between
+                any BigFile-based wallets that support BIGRC-1,
                 including your NNS wallet. Note that each SNS has its own
-                ICRC-1-compliant ledger for keeping track of its tokens.
+                BIGRC-1-compliant ledger for keeping track of its tokens.
               </p>
               <p>
                 When receiving your SNS tokens in the form of neurons, the

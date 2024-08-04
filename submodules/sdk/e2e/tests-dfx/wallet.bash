@@ -83,7 +83,7 @@ teardown() {
   dfx_start
   setup_actuallylocal_shared_network
 
-  # get Canister IDs to install the wasm onto
+  # get Cube IDs to install the wasm onto
   dfx canister create hello_backend --network actuallylocal
   ID=$(dfx canister id hello_backend --network actuallylocal)
   dfx canister create hello_frontend --network actuallylocal
@@ -106,7 +106,7 @@ teardown() {
   dfx_start
   setup_actuallylocal_shared_network
 
-  # get Canister IDs to install the wasm onto
+  # get Cube IDs to install the wasm onto
   dfx canister create hello_frontend --network actuallylocal
   ID=$(dfx canister id hello_frontend --network actuallylocal)
   dfx deploy hello_backend --network actuallylocal

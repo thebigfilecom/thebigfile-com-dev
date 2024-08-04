@@ -143,7 +143,7 @@ tc_to_num() {
   balance=$(tc_to_num "$(dfx wallet balance)")
 
   assert_command dfx ledger top-up "$wallet" --icp 5
-  assert_match "Canister was topped up with 617283500000000 cycles"
+  assert_match "Cube was topped up with 617283500000000 cycles"
   balance_now=$(tc_to_num "$(dfx wallet balance)")
 
   (( balance_now - balance > 600000000000000 ))
@@ -161,7 +161,7 @@ tc_to_num() {
   # shellcheck disable=SC2154
   assert_match "Using transfer at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
-  assert_match "Canister was topped up with" "$stdout"
+  assert_match "Cube was topped up with" "$stdout"
 
   assert_command dfx ledger top-up "$wallet" --icp 5 --created-at-time $((t+1))
   # shellcheck disable=SC2154
@@ -169,7 +169,7 @@ tc_to_num() {
   # shellcheck disable=SC2154
   assert_match "Using transfer at block height" "$stdout"
   # shellcheck disable=SC2154
-  assert_match "Canister was topped up with" "$stdout"
+  assert_match "Cube was topped up with" "$stdout"
   # shellcheck disable=SC2154
   assert_not_match "Transfer sent at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
@@ -183,13 +183,13 @@ tc_to_num() {
   # shellcheck disable=SC2154
   assert_contains "Using transfer at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
-  assert_contains "Canister was topped up with" "$stdout"
+  assert_contains "Cube was topped up with" "$stdout"
 
   # Top up canister by name instead of principal
   dfx_new
   assert_command dfx canister create e2e_project_backend
   assert_command dfx ledger top-up e2e_project_backend --amount 5
-  assert_contains "Canister was topped up with 617283500000000 cycles"
+  assert_contains "Cube was topped up with 617283500000000 cycles"
 }
 
 @test "ledger create-canister" {
@@ -212,14 +212,14 @@ tc_to_num() {
   # shellcheck disable=SC2154
   block_height=$(echo "$stdout" | sed '1q' | sed 's/Transfer sent at block height //')
   # shellcheck disable=SC2154
-  created_canister_id=$(echo "$stdout" | sed '3q;d' | sed 's/Canister created with id: //')
+  created_canister_id=$(echo "$stdout" | sed '3q;d' | sed 's/Cube created with id: //')
 
   # shellcheck disable=SC2154
   assert_match "Transfer sent at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
   assert_match "Using transfer at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
-  assert_match "Canister created with id: $created_canister_id" "$stdout"
+  assert_match "Cube created with id: $created_canister_id" "$stdout"
 
   assert_command dfx ledger create-canister --amount=100 --created-at-time $((t+1)) "$(dfx identity get-principal)"
   # shellcheck disable=SC2154
@@ -227,13 +227,13 @@ tc_to_num() {
   # shellcheck disable=SC2154
   assert_match "Using transfer at block height" "$stdout"
   # shellcheck disable=SC2154
-  assert_match "Canister created with id:" "$stdout"
+  assert_match "Cube created with id:" "$stdout"
   # shellcheck disable=SC2154
   assert_not_match "Transfer sent at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
   assert_not_match "Using transfer at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
-  assert_not_match "Canister created with id: $created_canister_id" "$stdout"
+  assert_not_match "Cube created with id: $created_canister_id" "$stdout"
 
   assert_command dfx ledger create-canister --amount=100 --created-at-time "$t" "$(dfx identity get-principal)"
   # shellcheck disable=SC2154
@@ -243,7 +243,7 @@ tc_to_num() {
   # shellcheck disable=SC2154
   assert_contains "Using transfer at block height $block_height" "$stdout"
   # shellcheck disable=SC2154
-  assert_contains "Canister created with id: $created_canister_id" "$stdout"
+  assert_contains "Cube created with id: $created_canister_id" "$stdout"
 
 }
 

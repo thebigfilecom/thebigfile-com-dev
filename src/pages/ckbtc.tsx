@@ -238,7 +238,7 @@ function CkbtcPage(): JSX.Element {
                 </p>
                 <ul className="checklist space-y-3 mb-0">
                   <li className="checklist-item pl-8">
-                    Canister smart contracts can hold and send ckBTC
+                    Cube smart contracts can hold and send ckBTC
                   </li>
                   <li className="checklist-item pl-8">
                     Build web applications with BTC support. Users only need a
@@ -530,7 +530,7 @@ function CkbtcPage(): JSX.Element {
                   </h3>
 
                   <p className="tw-paragraph mb-3">
-                    More than a token, while ckBTC implements the ICRC-1
+                    More than a token, while ckBTC implements the BIGRC-1
                     fungible token standard, the pair of canister smart
                     contracts also allow bitcoin to be freely sent between
                     addresses either on the Bitcoin network or the Internet
@@ -594,7 +594,7 @@ function CkbtcPage(): JSX.Element {
                     network liquidity limitations.
                   </p>
                   <p className="tw-paragraph mb-3">
-                    Canister smart contracts can programmatically hold and
+                    Cube smart contracts can programmatically hold and
                     transfer ckBTC, making it possible to develop fully on-chain
                     Layer-2 applications for Bitcoin, which is not possible
                     using the Lightning Network.

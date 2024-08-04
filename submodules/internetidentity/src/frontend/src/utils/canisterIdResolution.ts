@@ -93,7 +93,7 @@ const lookupCanister = async ({
     const headerValue = response.headers.get(HEADER_NAME);
     if (isNullish(headerValue)) {
       console.error(
-        `Canister ID header '${HEADER_NAME}' was not set on origin ${origin}`
+        `Cube ID header '${HEADER_NAME}' was not set on origin ${origin}`
       );
 
       return "not_found";

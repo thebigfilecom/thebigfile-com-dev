@@ -4,4 +4,4 @@ debug.print: (pre
 debug.print: filled
 debug.print: 65_535
 debug.print: try to trigger OOM
-ingress Err: IC0503: Canister rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: RTS error: Cannot allocate memory
+ingress Err: IC0503: Cube rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: RTS error: Cannot allocate memory

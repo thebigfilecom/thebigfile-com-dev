@@ -2,7 +2,7 @@ Sending message with
 
   Call type:   update
   Sender:      2vxsx-fae
-  Canister id: mxzaz-hqaaa-aaaar-qaada-cai
+  Cube id: mxzaz-hqaaa-aaaar-qaada-cai
   Method name: icrc1_balance_of
   Arguments:   (
   record {

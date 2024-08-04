@@ -2,7 +2,7 @@ Sending message with
 
   Call type:   update
   Sender:      fdsgv-62ihb-nbiqv-xgic5-iefsv-3cscz-tmbzv-63qd5-vh43v-dqfrt-pae
-  Canister id: rwlgt-iiaaa-aaaaa-aaaaa-cai
+  Cube id: rwlgt-iiaaa-aaaaa-aaaaa-cai
   Method name: update_node_operator_config_directly
   Arguments:   (
   record {

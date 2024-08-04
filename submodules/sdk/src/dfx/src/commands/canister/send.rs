@@ -71,7 +71,7 @@ pub async fn exec(
     eprintln!("  Network:     {}", message.network);
     eprintln!("  Call type:   {}", message.call_type);
     eprintln!("  Sender:      {}", message.sender);
-    eprintln!("  Canister id: {}", message.canister_id);
+    eprintln!("  Cube id: {}", message.canister_id);
     eprintln!("  Method name: {}", message.method_name);
     eprintln!("  Arg:         {:?}", message.arg);
 
@@ -116,7 +116,7 @@ pub async fn exec(
             eprintln!("Alternatively, if you have the correct identity on this machine, using `dfx canister request-status` with following arguments.");
             eprint!("Request ID: ");
             println!("0x{}", String::from(request_id));
-            eprint!("Canister ID: ");
+            eprint!("Cube ID: ");
             println!("{}", canister_id);
         }
         // message.validate() guarantee that call_type must be query or update

@@ -36,7 +36,7 @@ The current Unity project is configured to use the [deployed dapp](https://6x7nu
 
 1. In Unity, open the `Assets\Scenes\SampleScene.unity`
 2. Navigate to the `AgentAndPlugin` in the scene hierarchy
-3. Update the `Greet Backend Canister` with your own greeting backend canister id
+3. Update the `Greet Backend Cube` with your own greeting backend canister id
 4. Update the `Greet Frontend` with your own greeting frontend
 5. If you use a different URL scheme to launch your Unity project in [ii_integration_dapp](https://github.com/dfinity/examples/blob/master/native-apps/unity_ii_deeplink/ii_integration_dapp/README.md), please
     - Update the `kAndroidScheme` & `kAndroidHost` in [AndroidPostBuildProcessor.cs](./Assets/Editor/AndroidPostBuildProcessor.cs) accordingly.

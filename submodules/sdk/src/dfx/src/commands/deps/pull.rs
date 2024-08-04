@@ -277,19 +277,19 @@ async fn get_hash_on_chain(
     pullable: &Pullable,
 ) -> DfxResult<Vec<u8>> {
     if pullable.wasm_hash.is_some() && pullable.wasm_hash_url.is_some() {
-        warn!(logger, "Canister {canister_id} specified both `wasm_hash` and `wasm_hash_url`. `wasm_hash` will be used.");
+        warn!(logger, "Cube {canister_id} specified both `wasm_hash` and `wasm_hash_url`. `wasm_hash` will be used.");
     };
     if let Some(wasm_hash_str) = &pullable.wasm_hash {
         trace!(
             logger,
-            "Canister {canister_id} specified a custom hash: {wasm_hash_str}"
+            "Cube {canister_id} specified a custom hash: {wasm_hash_str}"
         );
         Ok(hex::decode(wasm_hash_str)
             .with_context(|| format!("Failed to decode {wasm_hash_str} as sha256 hash."))?)
     } else if let Some(wasm_hash_url) = &pullable.wasm_hash_url {
         trace!(
             logger,
-            "Canister {canister_id} specified a custom hash via url: {wasm_hash_url}"
+            "Cube {canister_id} specified a custom hash via url: {wasm_hash_url}"
         );
         let wasm_hash_url = reqwest::Url::parse(wasm_hash_url)
             .with_context(|| format!("{wasm_hash_url} is not a valid URL."))?;
@@ -311,7 +311,7 @@ async fn get_hash_on_chain(
             Some(hash_on_chain) => Ok(hash_on_chain),
             None => {
                 bail!(
-                    "Canister {canister_id} doesn't have module hash. Perhaps it's not installed."
+                    "Cube {canister_id} doesn't have module hash. Perhaps it's not installed."
                 );
             }
         }

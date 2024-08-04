@@ -175,7 +175,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 10,
     title: "ICMaps",
-    body: "ICMaps brings maps to the internet computer. With the ICMaps frontend you can install your own map server provided by ICMaps on Canister and integrate maps into Web3, Web2 and even desktop GIS apps.",
+    body: "ICMaps brings maps to the internet computer. With the ICMaps frontend you can install your own map server provided by ICMaps on Cube and integrate maps into Web3, Web2 and even desktop GIS apps.",
     links: {
       github: "https://github.com/stumpigit/icmaps",
       livePreview: "https://discord.gg/PruV4RxD9S",
@@ -607,7 +607,7 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 35,
-    title: "Secure Canister Communication on the BIG Blockchain",
+    title: "Secure Cube Communication on the BIG Blockchain",
     body: "We provide a framework where sensitive messages can be securely passed between canisters, i.e to avoid man-in-the-middle attacks. Our solution allows secrets to be securely communicated.",
     links: {
       github:
@@ -995,7 +995,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 59,
     title: "iCAN",
-    body: "What is iCAN? -- The best easy-to-use Canister Management Platform on BIG.",
+    body: "What is iCAN? -- The best easy-to-use Cube Management Platform on BIG.",
     links: {
       github: "https://github.com/PrimLabs/iCAN",
       external: "https://supernova.devpost.com/submissions/329653-ican",
@@ -1423,7 +1423,7 @@ const communityProjects: SampleItem[] = [
   },
   {
     index: 87,
-    title: "InfinitySwap Canister SDK",
+    title: "InfinitySwap Cube SDK",
     body: "An enhanced CDK for Rust Canisters, providing:(1) A framework to test inter-canister communications(2 Compose canister APIs using rust traits.(3) Versioned state management for canister upgrades",
     links: {
       github: "https://github.com/infinity-swap/canister-sdk",

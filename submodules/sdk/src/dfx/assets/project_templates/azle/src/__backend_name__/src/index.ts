@@ -1,6 +1,6 @@
-import { Canister, query, text } from 'azle';
+import { Cube, query, text } from 'azle';
 
-export default Canister({
+export default Cube({
     greet: query([text], text, (name) => {
         return `Hello, ${name}!`;
     })

@@ -3,8 +3,8 @@ debug.print: {l1 = 0; s1 = 0}
 debug.print: {l2 = 16; s2 = 16}
 ingress Completed: Reply: 0x4449444c0000
 debug.print: {l1 = 16; s1 = 18}
-ingress Err: IC0503: Canister rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: pattern failed
+ingress Err: IC0503: Cube rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: pattern failed
 debug.print: {l1 = 16; s1 = 18}
-ingress Err: IC0503: Canister rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: pattern failed
+ingress Err: IC0503: Cube rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: pattern failed
 debug.print: {l1 = 16; s1 = 18}
-ingress Err: IC0503: Canister rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: pattern failed
+ingress Err: IC0503: Cube rwlgt-iiaaa-aaaaa-aaaaa-cai trapped explicitly: pattern failed

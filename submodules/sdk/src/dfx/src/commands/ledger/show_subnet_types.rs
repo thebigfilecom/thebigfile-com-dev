@@ -12,7 +12,7 @@ const GET_SUBNET_TYPES_TO_SUBNETS_METHOD: &str = "get_subnet_types_to_subnets";
 #[derive(Parser)]
 pub struct ShowSubnetTypesOpts {
     #[arg(long)]
-    /// Canister ID of the cycles minting canister.
+    /// Cube ID of the cycles minting canister.
     cycles_minting_canister_id: Option<Principal>,
 }
 

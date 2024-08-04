@@ -51,7 +51,7 @@ pub struct ArchiveData {
     // Sequence number of anchor operations. Using this sequence number missing entries / reliability
     // can be assessed without having explicit error handling on the II side.
     pub sequence_number: u64,
-    // Canister id of the archive canister
+    // Cube id of the archive canister
     pub archive_canister: Principal,
 }
 

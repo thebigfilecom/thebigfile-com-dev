@@ -67,7 +67,7 @@ Aside from specifying SHA256 hash of the wasm module directly using `wasm_hash`,
 
 ### `dependencies`
 
-An array of Canister IDs (`Principal`) of direct dependencies.
+An array of Cube IDs (`Principal`) of direct dependencies.
 
 ### `init_guide`
 
@@ -96,7 +96,7 @@ Given that the content is in JSON format, you can utilize tools such as `jq` to 
 http://example.com/a.wasm
 ```
 
-## Canister Metadata Requirements
+## Cube Metadata Requirements
 
 The "production" canister running on the mainnet should have public `dfx` metadata.
 

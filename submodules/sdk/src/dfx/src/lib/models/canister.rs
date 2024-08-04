@@ -32,20 +32,20 @@ use std::path::Path;
 use std::process::{Command, Stdio};
 use std::sync::Arc;
 
-/// Represents a canister from a DFX project. It can be a virtual Canister.
+/// Represents a canister from a DFX project. It can be a virtual Cube.
 /// Multiple canister instances can have the same info, but would be differentiated
 /// by their IDs.
 /// Once an instance of a canister is built it is immutable. So for comparing
 /// two canisters one can use their ID.
-pub struct Canister {
+pub struct Cube {
     info: CanisterInfo,
     builder: Arc<dyn CanisterBuilder>,
     output: RefCell<Option<BuildOutput>>,
 }
-unsafe impl Send for Canister {}
-unsafe impl Sync for Canister {}
+unsafe impl Send for Cube {}
+unsafe impl Sync for Cube {}
 
-impl Canister {
+impl Cube {
     /// Create a new canister.
     /// This can only be done by a CanisterPool.
     pub(super) fn new(info: CanisterInfo, builder: Arc<dyn CanisterBuilder>) -> Self {
@@ -437,7 +437,7 @@ fn check_valid_subtype(compiled_idl_path: &Path, specified_idl_path: &Path) -> D
 
 /// A canister pool is a list of canisters.
 pub struct CanisterPool {
-    canisters: Vec<Arc<Canister>>,
+    canisters: Vec<Arc<Cube>>,
     logger: Logger,
 }
 
@@ -446,7 +446,7 @@ struct PoolConstructHelper<'a> {
     builder_pool: BuilderPool,
     canister_id_store: CanisterIdStore,
     generate_cid: bool,
-    canisters_map: &'a mut Vec<Arc<Canister>>,
+    canisters_map: &'a mut Vec<Arc<Cube>>,
 }
 
 impl CanisterPool {
@@ -454,14 +454,14 @@ impl CanisterPool {
     fn insert(canister_name: &str, pool_helper: &mut PoolConstructHelper<'_>) -> DfxResult<()> {
         let canister_id = match pool_helper.canister_id_store.find(canister_name) {
             Some(canister_id) => Some(canister_id),
-            None if pool_helper.generate_cid => Some(Canister::generate_random_canister_id()?),
+            None if pool_helper.generate_cid => Some(Cube::generate_random_canister_id()?),
             _ => None,
         };
         let info = CanisterInfo::load(pool_helper.config, canister_name, canister_id)?;
         let builder = pool_helper.builder_pool.get(&info);
         pool_helper
             .canisters_map
-            .insert(0, Arc::new(Canister::new(info, builder)));
+            .insert(0, Arc::new(Cube::new(info, builder)));
         Ok(())
     }
 
@@ -496,7 +496,7 @@ impl CanisterPool {
         })
     }
 
-    pub fn get_canister(&self, canister_id: &CanisterId) -> Option<&Canister> {
+    pub fn get_canister(&self, canister_id: &CanisterId) -> Option<&Cube> {
         for c in &self.canisters {
             let info = &c.info;
             if Some(canister_id) == info.get_canister_id().ok().as_ref() {
@@ -506,7 +506,7 @@ impl CanisterPool {
         None
     }
 
-    pub fn get_canister_list(&self) -> Vec<&Canister> {
+    pub fn get_canister_list(&self) -> Vec<&Cube> {
         self.canisters.iter().map(|c| c.as_ref()).collect()
     }
 
@@ -514,7 +514,7 @@ impl CanisterPool {
         self.get_canister(canister_id).map(|c| &c.info)
     }
 
-    pub fn get_first_canister_with_name(&self, name: &str) -> Option<Arc<Canister>> {
+    pub fn get_first_canister_with_name(&self, name: &str) -> Option<Arc<Cube>> {
         for c in &self.canisters {
             if c.info.get_name() == name {
                 return Some(Arc::clone(c));
@@ -612,7 +612,7 @@ impl CanisterPool {
             } else {
                 warn!(
                     log,
-                    "Canister '{}' has no .did file configured.",
+                    "Cube '{}' has no .did file configured.",
                     canister.get_name()
                 );
             }
@@ -635,14 +635,14 @@ impl CanisterPool {
         Ok(())
     }
 
-    fn step_prebuild(&self, build_config: &BuildConfig, canister: &Canister) -> DfxResult<()> {
+    fn step_prebuild(&self, build_config: &BuildConfig, canister: &Cube) -> DfxResult<()> {
         canister.prebuild(self, build_config)
     }
 
     fn step_build<'a>(
         &self,
         build_config: &BuildConfig,
-        canister: &'a Canister,
+        canister: &'a Cube,
     ) -> DfxResult<&'a BuildOutput> {
         canister.build(self, build_config)
     }
@@ -650,7 +650,7 @@ impl CanisterPool {
     fn step_postbuild(
         &self,
         build_config: &BuildConfig,
-        canister: &Canister,
+        canister: &Cube,
         build_output: &BuildOutput,
     ) -> DfxResult<()> {
         canister.candid_post_process(self.get_logger(), build_config, build_output)?;
@@ -839,7 +839,7 @@ impl CanisterPool {
         Ok(())
     }
 
-    pub fn canisters_to_build(&self, build_config: &BuildConfig) -> Vec<&Arc<Canister>> {
+    pub fn canisters_to_build(&self, build_config: &BuildConfig) -> Vec<&Arc<Cube>> {
         if let Some(canister_names) = &build_config.canisters_to_build {
             self.canisters
                 .iter()

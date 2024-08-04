@@ -1,5 +1,5 @@
 use crate::UploadOpts;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use slog::Logger;
 use std::collections::HashMap;
 use std::path::PathBuf;
@@ -7,7 +7,7 @@ use std::str::FromStr;
 use walkdir::WalkDir;
 
 pub(crate) async fn upload(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     opts: &UploadOpts,
     logger: &Logger,
 ) -> anyhow::Result<()> {

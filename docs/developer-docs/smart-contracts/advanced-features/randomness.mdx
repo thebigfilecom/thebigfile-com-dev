@@ -48,10 +48,10 @@ let (randomBytes,): (Vec<u8>,) = ic_cdk::api::call(Principal.management_canister
 <TabItem value="typescript" label="typescript">
 
 ```typescript
-import { blob, Canister, ic, update } from 'azle';
+import { blob, Cube, ic, update } from 'azle';
 import { managementCanister } from 'azle/canisters/management';
 
-export default Canister({
+export default Cube({
     randomBytes: update([], blob, async () => {
         return await ic.call(managementCanister.raw_rand);
     })

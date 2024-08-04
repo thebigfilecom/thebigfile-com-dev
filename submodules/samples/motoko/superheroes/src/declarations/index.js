@@ -9,7 +9,7 @@ export const canisterId = process.env.SUPERHEROES_CANISTER_ID;
 /**
  * @deprecated since dfx 0.11.1
  * Do not import from `.dfx`, instead switch to using `dfx generate` to generate your JS interface.
- * @param {string | import("@dfinity/principal").Principal} canisterId Canister ID of Agent
+ * @param {string | import("@dfinity/principal").Principal} canisterId Cube ID of Agent
  * @param {{agentOptions?: import("@dfinity/agent").HttpAgentOptions; actorOptions?: import("@dfinity/agent").ActorConfig} | { agent?: import("@dfinity/agent").Agent; actorOptions?: import("@dfinity/agent").ActorConfig }} [options]
  * @return {import("@dfinity/agent").ActorSubclass<import("./superheroes.did.js")._SERVICE>}
  */

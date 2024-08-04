@@ -86,7 +86,7 @@
         style="padding: 50px 40px 10px; border: solid 1px grey; broder-radius: 10px; border-radius: 15px;">
         <h2>Register a new NFT</h2>
         <FormGroup>
-            <TextInput size="large" labelText="NFT Canister ID" placeholder="Principal" bind:value={canister} on:blur={validateCanister} on:focus={removeError}/>
+            <TextInput size="large" labelText="NFT Cube ID" placeholder="Principal" bind:value={canister} on:blur={validateCanister} on:focus={removeError}/>
             <div id="nft_cid_help" class="form_text">
                 Please enter the principal of your NFT management canister.
             </div>

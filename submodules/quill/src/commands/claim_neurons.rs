@@ -10,7 +10,7 @@ use candid::Encode;
 use clap::Parser;
 use k256::{elliptic_curve::sec1::ToEncodedPoint, SecretKey};
 
-/// Claim seed neurons from the Genesis Token Canister.
+/// Claim seed neurons from the Genesis Token Cube.
 #[derive(Parser)]
 pub struct ClaimNeuronOpts;
 

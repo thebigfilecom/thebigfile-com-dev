@@ -124,7 +124,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko"],
     level: "advanced",
     contentType: ["code samples", "documentation"],
-    body: "ICRC-2 Swap demo: Manages ICRC-2 tokens, unique in async BigFile design.",
+    body: "BIGRC-2 Swap demo: Manages BIGRC-2 tokens, unique in async BigFile design.",
     links: {
       motoko:
         "https://github.com/dfinity/examples/tree/master/motoko/icrc2-swap",
@@ -243,7 +243,7 @@ export const sampleItems: SampleItem[] = [
   },
   {
     index: 12,
-    title: "Canister HTTPS Outcalls",
+    title: "Cube HTTPS Outcalls",
     image: "/img/samples/https-outcalls.jpeg",
     domains: ["Global", "Website"],
     languages: ["rust", "motoko"],
@@ -381,7 +381,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko", "rust"],
     level: "advanced",
     contentType: ["code samples", "documentation"],
-    body: "Create a canister that can hold and transfer ICRC-1 tokens.",
+    body: "Create a canister that can hold and transfer BIGRC-1 tokens.",
     links: {
       motoko:
         "https://github.com/dfinity/examples/tree/master/motoko/token_transfer",
@@ -471,7 +471,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["motoko", "rust"],
     level: "advanced",
     contentType: ["code samples", "documentation"],
-    body: "Create a canister that can hold and transfer ICRC-1 tokens on behalf of accounts to other accounts.",
+    body: "Create a canister that can hold and transfer BIGRC-1 tokens on behalf of accounts to other accounts.",
     links: {
       motoko:
         "https://github.com/dfinity/examples/tree/master/motoko/token_transfer_from",

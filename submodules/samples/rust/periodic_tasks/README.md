@@ -242,7 +242,7 @@ For such isolation of execution and scheduling contexts, the timers library uses
 2. Check out `heartbeat` and `timer` canisters Candid user interface. The URLs are at the end of the `dfx deploy` command: `heartbeat: http://127.0.0.1/...`
 3. Find which interval makes even the costs of running periodic tasks in the `timer` and `heartbeat` canisters: `dfx deploy heartbeat --argument 5 && dfx deploy timer --argument 5`
 
-### Canister interface
+### Cube interface
 
 The `heartbeat` and `timer` canisters provide the following interface:
 

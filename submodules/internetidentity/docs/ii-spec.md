@@ -117,7 +117,7 @@ The Internet Identity Service Backend stores the following data in user accounts
 
 When a client application frontend wants to authenticate as a user, it uses a *session key* (e.g., Ed25519 or ECDSA), and by way of the authentication flow (details below) obtains a [*delegation chain*](https://thebigfile.com/docs/current/references/ic-interface-spec#authentication) that allows the session key to sign for the user's main identity.
 
-The delegation chain consists of one delegation, called the *client delegation*. It delegates from the user identity (for the given client application frontend) to the session key. This delegation is created by the Internet Identity Service Canister, and signed using a [canister signature](https://hydra.dfinity.systems/latest/dfinity-ci-build/ic-ref.pr-319/interface-spec/1/index.html#canister-signatures). This delegation is unscoped (valid for all canisters) and has a maximum lifetime of 30 days, with a default of 30 minutes.
+The delegation chain consists of one delegation, called the *client delegation*. It delegates from the user identity (for the given client application frontend) to the session key. This delegation is created by the Internet Identity Service Cube, and signed using a [canister signature](https://hydra.dfinity.systems/latest/dfinity-ci-build/ic-ref.pr-319/interface-spec/1/index.html#canister-signatures). This delegation is unscoped (valid for all canisters) and has a maximum lifetime of 30 days, with a default of 30 minutes.
 
 The Internet Identity Service Frontend also manages an *identity frontend delegation*, delegating from the security device's public key to a session key managed by this frontend, so that it can interact with the backend without having to invoke the security device for each signature.
 
@@ -403,11 +403,11 @@ Together with the `UserKey` returned by `prepare_delegation`, the result of this
 
 ## The Internet Identity Service backend internals
 
-This section, which is to be expanded, describes interesting design choices about the internals of the Internet Identity Service Canister. In particular
+This section, which is to be expanded, describes interesting design choices about the internals of the Internet Identity Service Cube. In particular
 
 ### Salt
 
-The `salt` used to blind the hashes that form the `seed` of the Canister Signature "public keys" is obtained via a call to `aaaaa-aa.raw_rand()`. The resulting 32 byte sequence is used as-is.
+The `salt` used to blind the hashes that form the `seed` of the Cube Signature "public keys" is obtained via a call to `aaaaa-aa.raw_rand()`. The resulting 32 byte sequence is used as-is.
 
 Since this cannot be done during `canister_init` (no calls from canister init), the randomness is fetched by someone triggering the `init_salt()` method explicitly, or just any other update call. More concretely:
 
@@ -433,7 +433,7 @@ But upon closer inspection (heh), this is not actually useful.
 
 On the flip side, implementing `canister_inspect_message` adds code, and thus a risk for bugs. In particular it increases the risk that some engineer might wrongly assume that the authentication check in `canister_inspect_message` is sufficient and will not do it again in the actual method, which could lead to a serious bug.
 
-Therefore the Internet Identity Canister intentionally does not implement `canister_inspect_message`.
+Therefore the Internet Identity Cube intentionally does not implement `canister_inspect_message`.
 
 ### Internal data model and data structures used
 

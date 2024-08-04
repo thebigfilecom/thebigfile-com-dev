@@ -36,7 +36,7 @@ pub fn exec(auth: &AuthInfo, opts: PublicOpts) -> AnyhowResult {
     println!("Legacy account id: {account_id}");
     if let Some(sub) = opts.subaccount {
         println!(
-            "ICRC-1 account id: {}",
+            "BIGRC-1 account id: {}",
             ParsedAccount(Account {
                 owner: principal_id,
                 subaccount: Some(sub.0 .0)

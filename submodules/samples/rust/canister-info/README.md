@@ -2,7 +2,7 @@
 keywords: [beginner, rust, canister info]
 ---
 
-# Canister info
+# Cube info
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/rust/canister-info)
 

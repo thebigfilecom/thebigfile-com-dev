@@ -101,7 +101,7 @@ const principal = await webapp.whoami();
 See [`index.js`](./webapp/index.ts) for the full working example.
 A detailed description of what happens behind the scenes is available in the [client auth protocol specification](https://github.com/dfinity/internet-identity/blob/main/docs/internet-identity-spec.adoc#client-auth-protocol).
 
-### Getting the Canister IDs
+### Getting the Cube IDs
 
 Let's now use those canisters.
 

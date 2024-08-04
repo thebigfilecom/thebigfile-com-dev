@@ -15,7 +15,7 @@ use crate::error::ComputeEvidenceError;
 use crate::error::HashContentError;
 use crate::error::HashContentError::{EncodeContentFailed, LoadContentFailed};
 use crate::sync::gather_asset_descriptors;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use sha2::{Digest, Sha256};
 use slog::{info, Logger};
 use std::collections::{BTreeMap, HashMap};
@@ -36,7 +36,7 @@ const TAG_SET_ASSET_PROPERTIES: [u8; 1] = [9];
 
 /// Compute the hash ("evidence") over the batch operations required to update the assets
 pub async fn compute_evidence(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     dirs: &[&Path],
     logger: &Logger,
 ) -> Result<String, ComputeEvidenceError> {

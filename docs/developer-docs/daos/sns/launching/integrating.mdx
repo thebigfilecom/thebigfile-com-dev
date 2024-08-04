@@ -20,10 +20,10 @@ For example, DEXs might want to interact with the SNS ledger canisters or wallet
 The SNS ledger canister keeps track of the transactions between accounts in a **chain**,
 as well as the account balances at the last block of the chain.
 A ledger canister is always deployed as part of the SNS canisters.
-The ledger canister follows the [ICRC-1](https://github.com/dfinity/ICRC-1) specification.
+The ledger canister follows the [BIGRC-1](https://github.com/dfinity/BIGRC-1) specification.
 
-For instructions on how to install the ICRC-1 Ledger follow [ICRC-1 Ledger Deployment](/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
-For instructions on how to interact with the ICRC-1 Ledger follow [ICRC-1 Ledger Interaction](/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger).
+For instructions on how to install the BIGRC-1 Ledger follow [BIGRC-1 Ledger Deployment](/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
+For instructions on how to interact with the BIGRC-1 Ledger follow [BIGRC-1 Ledger Interaction](/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger).
 
 ## Index integration
 
@@ -41,7 +41,7 @@ the ledger canister and then build the index of known transaction per account.
 This sections explains how to deploy an index canister in isolation.
 When the NNS creates a new SNS for a dapp, it will automatically be deployed with an SNS index canister.
 
-The index canister initialization requires the principal of the ICRC-1 ledger canister that should be indexed:
+The index canister initialization requires the principal of the BIGRC-1 ledger canister that should be indexed:
 
 ```
 type InitArgs = record {

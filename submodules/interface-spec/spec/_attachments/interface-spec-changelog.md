@@ -9,7 +9,7 @@
 * Specify the resource reservation mechanism.
 * Allow `in_replicated_execution` system API method to be executed during `canister_start`.
 * Set the maximum depth of a delegation in a read_state response/certified variable certificate to 1.
-* Canister version is guaranteed to increase if the canister's running status changes.
+* Cube version is guaranteed to increase if the canister's running status changes.
 * Calls to frozen canisters are rejected with `SYS_TRANSIENT` instead of `CANISTER_ERROR`.
 * Add API boundary nodes information into the certified state tree.
 
@@ -25,7 +25,7 @@
 * Remove `senders` field from user delegations.
 
 ### 0.21.0 (2023-09-18) {#0_21_0}
-* Canister cycle balance cannot decrease below the freezing limit after executing `install_code` on the management canister.
+* Cube cycle balance cannot decrease below the freezing limit after executing `install_code` on the management canister.
 * System API calls `ic0.msg_caller_size` and `ic0.msg_caller_copy` can be called in all contexts except for (start) function.
 * Added note on confidentiality of values in the certified state tree.
 * Update algorithm computing the request and response hash in the HTTP Gateway including clarification of when the HTTP Gateway can allow for arbitrary certification version in the canister's response.
@@ -59,12 +59,12 @@
 
 ### 0.18.9 (2022-12-06) {#0_18_9}
 * Global timers
-* Canister version
+* Cube version
 * Clarifications for HTTP requests & Bitcoin integration costs
 
 ### 0.18.8 (2022-11-09) {#0_18_8}
 * Updated HTTP request API
-* Canister status available to canister
+* Cube status available to canister
 * 64-bit stable memory is no longer experimental
 
 ### 0.18.7 (2022-09-27) {#0_18_7}
@@ -72,7 +72,7 @@
 * Reserved principals
 
 ### 0.18.6 (2022-08-09) {#0_18_6}
-* Canister access to performance metrics
+* Cube access to performance metrics
 * Query calls are rejected when the canister is frozen
 * Support for implementation-specific error codes for requests
 * Deleted call contexts do not prevent canister from reaching Stopped state
@@ -86,11 +86,11 @@
 
 ### 0.18.4 (2022-06-20) {#0_18_4}
 
-* Canister cycle balances are represented by 128 bits, and no system-defined upper limit exists anymore
-* Canister modules can be gzip-encoded
+* Cube cycle balances are represented by 128 bits, and no system-defined upper limit exists anymore
+* Cube modules can be gzip-encoded
 * Expose Wasm custom sections in the state tree
-* EXPERIMENTAL: Canister API for accessing Bitcoin transactions
-* EXPERIMENTAL: Canister API for threshold ECDSA signatures
+* EXPERIMENTAL: Cube API for accessing Bitcoin transactions
+* EXPERIMENTAL: Cube API for threshold ECDSA signatures
 
 ### 0.18.3 (2022-01-10) {#0_18_3}
 
@@ -99,7 +99,7 @@
 
 ### 0.18.2 (2021-09-29) {#0_18_2}
 
-* Canister heartbeat
+* Cube heartbeat
 * Terminology changes
 * Support for 64-bit stable memory
 
@@ -117,10 +117,10 @@
 
 ### 0.17.0 (2021-04-22) {#0_17_0}
 
-* Canister Signatures are introduced
+* Cube Signatures are introduced
 * Spec clarification: the signature in the WebAuthn scheme is prefixed by the CBOR self-identifying tag
 * Cycle-depleted canisters are forcibly uninstalled
-* Canister settings in `create_canister` and `update_settings`. `install_code` no longer takes allocation settings.
+* Cube settings in `create_canister` and `update_settings`. `install_code` no longer takes allocation settings.
 * A freezing threshold can be configured via the canister settings
 
 ### 0.16.1 (2021-04-14) {#0_16_1}
@@ -245,8 +245,8 @@
 
 ### 0.9.2 (2020-08-05) {#v0_9_2}
 
-* Canister controllers can stop/start canisters and can query their status.
-* Canister controllers can delete canisters
+* Cube controllers can stop/start canisters and can query their status.
+* Cube controllers can delete canisters
 
 
 ### 0.9.1 (2020-07-20) {#v0_9_1}

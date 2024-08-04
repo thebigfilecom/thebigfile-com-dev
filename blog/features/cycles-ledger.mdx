@@ -37,7 +37,7 @@ Today, we sat down with the team behind its development to talk about how the pr
 
 *The cycles ledger can be used through `dfx` using the new `dfx cycles` command. The command can be used to view the cycles balance of the current `dfx` identity, transfer cycles to other principal IDs, and withdraw cycles to top up canisters. It is also possible to increase [your] cycles balance by burning ICP and create canisters using cycles on the cycles ledger directly, all through `dfx`.*
 
-*Since the cycles ledger complies with the ICRC-1, ICRC-2, and ICRC-3 standards, the cycles ledger can also be easily integrated into dapps, for example in the DeFi space.*
+*Since the cycles ledger complies with the BIGRC-1, BIGRC-2, and BIGRC-3 standards, the cycles ledger can also be easily integrated into dapps, for example in the DeFi space.*
 
 **What are the plans for the cycles ledger in the future?**
 
@@ -59,9 +59,9 @@ Today, we sat down with the team behind its development to talk about how the pr
 
 **How did the team design the project?**
 
-*The first step was to determine a suitable substitute for the cycles wallet. There are many approaches that one could pursue. As an example, support for principal IDs to hold cycles could be added to the replica itself, which would require a lot of changes and there would be many technical details to be worked out. Agreement to develop a global ledger in the form of a canister was reached rather quickly because it is a natural and straightforward solution to the problem. Furthermore, a canister implementation has the added benefit that it can adhere to standards for ICRC tokens, which makes the cycles ledger also interesting for dapps such as DEXs.*
+*The first step was to determine a suitable substitute for the cycles wallet. There are many approaches that one could pursue. As an example, support for principal IDs to hold cycles could be added to the replica itself, which would require a lot of changes and there would be many technical details to be worked out. Agreement to develop a global ledger in the form of a canister was reached rather quickly because it is a natural and straightforward solution to the problem. Furthermore, a canister implementation has the added benefit that it can adhere to standards for BIGRC tokens, which makes the cycles ledger also interesting for dapps such as DEXs.*
 
-*The design was then worked out around the concept of a global ICRC ledger, also specifying the required changes to `dfx` and the NNS.*
+*The design was then worked out around the concept of a global BIGRC ledger, also specifying the required changes to `dfx` and the NNS.*
 
 **Are there some portions of the original design that didn’t make it into the final release?**
 
@@ -73,7 +73,7 @@ Today, we sat down with the team behind its development to talk about how the pr
 
 **What teams were involved in creating the cycles ledger?**
 
-*The SDK team led the development, implementing all the required changes in `dfx` and the NNS, as well as the non-ICRC endpoints of the cycles ledger. The FI team was responsible for the development of all functionality related to the ICRC-1, ICRC-2, and IRCR-3 standards. Additionally, the NNS team was involved to oversee the changes to the NNS and the product security team to provide security reviews for the design and the implementation.*
+*The SDK team led the development, implementing all the required changes in `dfx` and the NNS, as well as the non-BIGRC endpoints of the cycles ledger. The FI team was responsible for the development of all functionality related to the BIGRC-1, BIGRC-2, and IRCR-3 standards. Additionally, the NNS team was involved to oversee the changes to the NNS and the product security team to provide security reviews for the design and the implementation.*
 
 **Were there any other features or tools that were created as a result of this project?**
 

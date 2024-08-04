@@ -16,7 +16,7 @@ thread_local! {
 
 /// Initial canister balance to track the cycles usage.
 static INITIAL_CANISTER_BALANCE: AtomicU64 = AtomicU64::new(0);
-/// Canister cycles usage tracked in the periodic task.
+/// Cube cycles usage tracked in the periodic task.
 static CYCLES_USED: AtomicU64 = AtomicU64::new(0);
 
 ////////////////////////////////////////////////////////////////////////
@@ -45,7 +45,7 @@ fn track_cycles_used() {
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Canister interface
+// Cube interface
 ////////////////////////////////////////////////////////////////////////
 
 /// Returns the `COUNTER` value.

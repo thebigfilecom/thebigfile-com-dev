@@ -130,7 +130,7 @@ async fn migrate_canister(
                 .await
                 .context("Could not update canister settings")?;
         } else {
-            println!("Canister {canister_name} is outdated; run `dfx canister update-settings` with the --add-controller flag")
+            println!("Cube {canister_name} is outdated; run `dfx canister update-settings` with the --add-controller flag")
         }
         Ok(true)
     } else {

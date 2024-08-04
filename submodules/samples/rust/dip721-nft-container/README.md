@@ -45,7 +45,7 @@ This function is called by the system before the upgrade happens. After the upgr
 during the `post_upgrade` function. The `post_upgrade` function is called by the system after the upgrade happened.
 In case an error occurs during any part of the upgrade (including `post_upgdrade`), the entire upgrade is reverted.
 
-The Rust CDK (Canister Development Kit) currently only supports one value in stable memory, so it is necessary to create an object that can hold everything you care about.
+The Rust CDK (Cube Development Kit) currently only supports one value in stable memory, so it is necessary to create an object that can hold everything you care about.
 In addition, not every data type can be stored in stable memory; only ones that implement the [CandidType trait](https://docs.rs/candid/latest/candid/types/trait.CandidType.html)
 (usually via the [CandidType derive macro](https://docs.rs/candid/latest/candid/derive.CandidType.html)) can be written to stable memory. 
 

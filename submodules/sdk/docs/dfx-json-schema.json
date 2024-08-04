@@ -113,7 +113,7 @@
           }
         },
         "env_override": {
-          "title": "Canister ID ENV Override",
+          "title": "Cube ID ENV Override",
           "description": "A string that will replace process.env.CANISTER_ID_{canister_name_uppercase} in the 'src/dfx/assets/language_bindings/canister.js' template.",
           "type": [
             "string",
@@ -137,7 +137,7 @@
       }
     },
     "CanisterMetadataSection": {
-      "title": "Canister Metadata Configuration",
+      "title": "Cube Metadata Configuration",
       "description": "Configures a custom metadata section for the canister wasm. dfx uses the first definition of a given name matching the current network, ignoring any of the same name that follow.",
       "type": "object",
       "required": [
@@ -189,7 +189,7 @@
       }
     },
     "ConfigCanistersCanister": {
-      "title": "Canister Configuration",
+      "title": "Cube Configuration",
       "description": "Configurations for a single canister.",
       "type": "object",
       "oneOf": [
@@ -323,7 +323,7 @@
           ],
           "properties": {
             "id": {
-              "title": "Canister ID",
+              "title": "Cube ID",
               "description": "Principal of the canister on the ic network.",
               "type": "string"
             },
@@ -338,7 +338,7 @@
       ],
       "properties": {
         "args": {
-          "title": "Canister-Specific Build Argument",
+          "title": "Cube-Specific Build Argument",
           "description": "This field defines an additional argument to pass to the Motoko compiler when building the canister.",
           "type": [
             "string",
@@ -381,7 +381,7 @@
           }
         },
         "gzip": {
-          "title": "Gzip Canister WASM",
+          "title": "Gzip Cube WASM",
           "description": "Disabled by default.",
           "type": [
             "boolean",
@@ -421,7 +421,7 @@
           ]
         },
         "main": {
-          "title": "Path to Canister Entry Point",
+          "title": "Path to Cube Entry Point",
           "description": "Entry point for e.g. Motoko Compiler.",
           "type": [
             "string",
@@ -438,7 +438,7 @@
           }
         },
         "optimize": {
-          "title": "Optimize Canister WASM",
+          "title": "Optimize Cube WASM",
           "description": "Invoke wasm level optimizations after building the canister. Optimization level can be set to \"cycles\" to optimize for cycle usage, \"size\" to optimize for binary size, or any of \"O4, O3, O2, O1, O0, Oz, Os\". Disabled by default. If this option is specified, the `shrink` option will be ignored.",
           "default": null,
           "anyOf": [
@@ -487,16 +487,16 @@
           ]
         },
         "shrink": {
-          "title": "Shrink Canister WASM",
-          "description": "Whether run `ic-wasm shrink` after building the Canister. Enabled by default for Rust/Motoko canisters. Disabled by default for custom canisters.",
+          "title": "Shrink Cube WASM",
+          "description": "Whether run `ic-wasm shrink` after building the Cube. Enabled by default for Rust/Motoko canisters. Disabled by default for custom canisters.",
           "type": [
             "boolean",
             "null"
           ]
         },
         "specified_id": {
-          "title": "Specified Canister ID",
-          "description": "Attempts to create the canister with this Canister ID. This option only works with non-mainnet replica. If the `--specified-id` argument is also provided, this `specified_id` field will be ignored.",
+          "title": "Specified Cube ID",
+          "description": "Attempts to create the canister with this Cube ID. This option only works with non-mainnet replica. If the `--specified-id` argument is also provided, this `specified_id` field will be ignored.",
           "type": [
             "string",
             "null"
@@ -518,7 +518,7 @@
       }
     },
     "ConfigCanistersCanisterRemote": {
-      "title": "Remote Canister Configuration",
+      "title": "Remote Cube Configuration",
       "description": "This field allows canisters to be marked 'remote' for certain networks. On networks where this canister contains a remote ID, the canister is not deployed. Instead it is assumed to exist already under control of a different project.",
       "type": "object",
       "required": [
@@ -1010,7 +1010,7 @@
       ],
       "properties": {
         "playground_canister": {
-          "description": "Canister ID of the playground canister",
+          "description": "Cube ID of the playground canister",
           "type": "string"
         },
         "timeout_seconds": {
@@ -1044,7 +1044,7 @@
       "properties": {
         "dependencies": {
           "title": "dependencies",
-          "description": "Canister IDs (Principal) of direct dependencies.",
+          "description": "Cube IDs (Principal) of direct dependencies.",
           "type": "array",
           "items": {
             "type": "string"

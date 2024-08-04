@@ -1,4 +1,4 @@
-module ICRC {
+module BIGRC {
   public type BlockIndex = Nat;
   public type Subaccount = Blob;
   // Number of nanoseconds since the UNIX epoch in UTC timezone.

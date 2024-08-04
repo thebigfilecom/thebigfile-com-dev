@@ -51,7 +51,7 @@ dfx canister call canister1 main
 The output should resemble the following:
 
 ```
-2023-06-15 15:53:39.567801 UTC: [Canister ajuq4-ruaaa-aaaaa-qaaga-cai] Hello from canister 2!
+2023-06-15 15:53:39.567801 UTC: [Cube ajuq4-ruaaa-aaaaa-qaaga-cai] Hello from canister 2!
 (10 : nat)
 ```
 

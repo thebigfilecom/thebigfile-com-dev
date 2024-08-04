@@ -5,7 +5,7 @@
 //! ```rust,no_run
 //! use ic_agent::agent::{Agent, http_transport::ReqwestTransport};
 //! use ic_agent::identity::BasicIdentity;
-//! use ic_utils::Canister;
+//! use ic_utils::Cube;
 //! use std::time::Duration;
 //! # async fn not_main() -> Result<(), Box<dyn std::error::Error>> {
 //! # let replica_url = "";
@@ -15,7 +15,7 @@
 //!     .with_transport(ReqwestTransport::create(replica_url)?)
 //!     .with_identity(BasicIdentity::from_pem_file(pemfile)?)
 //!     .build()?;
-//! let canister = Canister::builder()
+//! let canister = Cube::builder()
 //!     .with_canister_id(canister_id)
 //!     .with_agent(&agent)
 //!     .build()?;

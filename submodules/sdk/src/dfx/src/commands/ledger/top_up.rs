@@ -87,7 +87,7 @@ pub async fn exec(env: &dyn Environment, opts: TopUpOpts) -> DfxResult {
 
     match result {
         Ok(cycles) => {
-            println!("Canister was topped up with {cycles} cycles!");
+            println!("Cube was topped up with {cycles} cycles!");
         }
         Err(Notify(Refunded {
             reason,

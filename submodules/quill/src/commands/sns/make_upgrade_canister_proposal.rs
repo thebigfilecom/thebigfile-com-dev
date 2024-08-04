@@ -27,7 +27,7 @@ pub struct MakeUpgradeCanisterProposalOpts {
     proposer_neuron_id: ParsedSnsNeuron,
 
     /// Title of the proposal.
-    #[clap(long, default_value_t = String::from("Upgrade Canister"))]
+    #[clap(long, default_value_t = String::from("Upgrade Cube"))]
     title: String,
 
     /// URL of the proposal.
@@ -46,7 +46,7 @@ pub struct MakeUpgradeCanisterProposalOpts {
     #[clap(long, conflicts_with("summary"))]
     summary_path: Option<PathBuf>,
 
-    /// Canister to be upgraded.
+    /// Cube to be upgraded.
     #[clap(long)]
     target_canister_id: Principal,
 

@@ -11,18 +11,18 @@ image: /img/blog/dev-update-blog-oct-11.jpg
 
 Hello everyone and welcome to DFINITY developer weekly! This week, we'll talk about updates to ckBTC, the `ic-js` library, and increased subnet storage and resource reservation. Let's dive in! 
 
-## ckBTC now supports ICRC-2 standards 
+## ckBTC now supports BIGRC-2 standards 
 
-The ledger, index, and archive canisters for ckBTC have been upgraded to now support the ICRC-2 standard! As part of this upgrade, the ckBTC minter has also been upgraded to support a simpler flow for transferring ckBTC into BTC. In this new minter workflow, the minter can be authorized to take ckBTC and use it to obtain BTC using the new `retrieve_btc_with_approval` endpoint instead of sending ckBTC to a minter-controlled subaccount.
+The ledger, index, and archive canisters for ckBTC have been upgraded to now support the BIGRC-2 standard! As part of this upgrade, the ckBTC minter has also been upgraded to support a simpler flow for transferring ckBTC into BTC. In this new minter workflow, the minter can be authorized to take ckBTC and use it to obtain BTC using the new `retrieve_btc_with_approval` endpoint instead of sending ckBTC to a minter-controlled subaccount.
 
 You can read the full details on the DFINITY [forum](https://forum.dfinity.org/t/ckbtc-a-canister-issued-bitcoin-twin-token-on-the-ic-1-1-backed-by-btc/17606/166).
 
 
-## ICP/ICRC ledger breaking changes 
+## ICP/BIGRC ledger breaking changes 
 
-Recently, the `ic-js` library has undergone breaking changes. Part of these changes include relocating ICP ledger features previously included in the package `@dfinity/nns` to `@dfinity/ledger-icp` and moving the ICRC ledger features to `@dfinity/ledger-icrc`. The `@dfinity-ledger` package will be deprecated and retired in the future.
+Recently, the `ic-js` library has undergone breaking changes. Part of these changes include relocating ICP ledger features previously included in the package `@dfinity/nns` to `@dfinity/ledger-icp` and moving the BIGRC ledger features to `@dfinity/ledger-icrc`. The `@dfinity-ledger` package will be deprecated and retired in the future.
 
-Essentially, as a result of these changes, the `@dfinity/ledger-icp` package encompasses the ICP ledger functions, and the `@dfinity/ledger-icrc` package encompasses functions for ICRC tokens, ckBTC, and SNSs.  
+Essentially, as a result of these changes, the `@dfinity/ledger-icp` package encompasses the ICP ledger functions, and the `@dfinity/ledger-icrc` package encompasses functions for BIGRC tokens, ckBTC, and SNSs.  
 
 The full details can be found on the forum [here](https://forum.dfinity.org/t/breaking-changes-in-ledger-icrc-icp-javascript-libraries/23465?utm_source=weekininternetcomputer.beehiiv.com&utm_medium=referral&utm_campaign=week-in-internet-computer-icp-news-oct-7-2023).
 

@@ -106,10 +106,10 @@ To better understand the `pullable` object, let's look at each property in depth
 If the `wasm_hash` of the Wasm module at `wasm_url` does not match, dfx will abort with an error message indicating that there is a hash mismatch. In this scenario, the service consumer should contact the service provider. It is the responsibility of the service provider to assure that the correct Wasm module can be downloaded from the `wasm_url`.
 :::
 
-- `dependencies`: An array of Canister IDs (`Principal`) of direct dependencies.
+- `dependencies`: An array of Cube IDs (`Principal`) of direct dependencies.
 - `init_guide`: A message to guide consumers how to initialize the canister.
 
-### Canister metadata requirements
+### Cube metadata requirements
 
 A service provider canister used in production or in a production environment running on the mainnet should have public `dfx` metadata.
 
@@ -272,14 +272,14 @@ yahli-baaaa-aaaaa-aabtq-cai (dep_c)
 
 ```
 dfx deps init yofga-2qaaa-aaaaa-aabsq-cai
-Error: Canister yofga-2qaaa-aaaaa-aabsq-cai requires an init argument. The following info might be helpful:
+Error: Cube yofga-2qaaa-aaaaa-aabsq-cai requires an init argument. The following info might be helpful:
 init_guide => A natural number, e.g. 10.
 candid:args => (nat)
 ```
 
 ```
 dfx deps init deps_c
-Error: Canister yahli-baaaa-aaaaa-aabtq-cai (dep_c) requires an init argument. The following info might be helpful:
+Error: Cube yahli-baaaa-aaaaa-aabtq-cai (dep_c) requires an init argument. The following info might be helpful:
 init_guide => A natural number, e.g. 20.
 candid:args => (nat)
 ```

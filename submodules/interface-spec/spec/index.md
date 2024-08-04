@@ -13,7 +13,7 @@ This document describes this *external* view of the BigFile, i.e. the low-level 
 
 :::note
 
-While this document describes the external interface and behavior of the BigFile, it is not intended as end-user or end-developer documentation. Most developers will interact with the BigFile through additional tooling like the SDK, Canister Development Kits and Motoko. Please see the [developer docs](https://thebigfile.com/docs/current/home) for suitable documentation.
+While this document describes the external interface and behavior of the BigFile, it is not intended as end-user or end-developer documentation. Most developers will interact with the BigFile through additional tooling like the SDK, Cube Development Kits and Motoko. Please see the [developer docs](https://thebigfile.com/docs/current/home) for suitable documentation.
 
 :::
 
@@ -49,7 +49,7 @@ The user can also use the HTTPS interface to issue read-only queries, which are 
     actor Developer
     actor User
     participant "BigFile" as BIG
-    participant "Canister 1" as Can1
+    participant "Cube 1" as Can1
     Developer -> BIG : /submit create canister
     create Can1
     BIG -> Can1 : create
@@ -64,7 +64,7 @@ The user can also use the HTTPS interface to issue read-only queries, which are 
 ```
 **A typical use of the BigFile. (This is a simplified view; some of the arrows represent multiple interaction steps or polling.)**
 
-Sections "[HTTPS Interface](#http-interface)" and "[Canister interface (System API)](#system-api)" describe these interfaces, together with a brief description of what they do. Afterwards, you will find a [more formal description](#abstract-behavior) of the BigFile that describes its abstract behavior with more rigor.
+Sections "[HTTPS Interface](#http-interface)" and "[Cube interface (System API)](#system-api)" describe these interfaces, together with a brief description of what they do. Afterwards, you will find a [more formal description](#abstract-behavior) of the BigFile that describes its abstract behavior with more rigor.
 
 ### Nomenclature
 
@@ -245,7 +245,7 @@ Canisters are empty after creation and uninstallation, and become non-empty thro
 
 If an empty canister receives a response, that response is dropped, as if the canister trapped when processing the response. The cycles set aside for its processing and the cycles carried on the responses are added to the canister's *cycles* balance.
 
-#### Canister cycles {#canister-cycles}
+#### Cube cycles {#canister-cycles}
 
 The BIG relies on *cycles*, a utility token, to manage its resources. A canister pays for the resources it uses from its *cycle balances*. A *cycle\_balance* is stored as 128-bit unsigned integers and operations on them are saturating. In particular, if *cycles* are added to a canister that would bring its main cycle balance beyond 2<sup>128</sup>-1, then the balance will be capped at 2<sup>128</sup>-1 and any additional cycles will be lost.
 
@@ -263,7 +263,7 @@ Once the BIG frees the resources of a canister, its id, *cycle* balances, *contr
 
 :::
 
-#### Canister status {#canister-status}
+#### Cube status {#canister-status}
 
 The canister status can be used to control whether the canister is processing calls:
 
@@ -355,7 +355,7 @@ You can also view the wrapping in [an online ASN.1 JavaScript decoder](https://l
 
     -   `signature` (`blob`): Signature as specified in the [WebAuthn w3c recommendation](https://www.w3.org/TR/webauthn/#signature-attestation-types), which means DER encoding in the case of an ECDSA signature.
 
-#### Canister signatures {#canister-signatures}
+#### Cube signatures {#canister-signatures}
 
 The BIG also supports a scheme where a canister can sign a payload by declaring a special "certified variable".
 
@@ -532,7 +532,7 @@ Request statuses will not actually be kept around indefinitely, and eventually t
 
     The certified data of the canister with the given id, see [Certified data](#system-api-certified-data).
 
-### Canister information {#state-tree-canister-information}
+### Cube information {#state-tree-canister-information}
 
 Users have the ability to learn about the hash of the canister's module, its current controllers, and metadata in a certified way.
 
@@ -784,7 +784,7 @@ In order to make a query call to a canister, the user makes a POST request to `/
 
 -   `arg` (`blob`): Argument to pass to the canister method.
 
-Canister methods that do not change the canister state (except for cycle balance changes due to message execution) can be executed more efficiently. This method provides that ability, and returns the canister's response directly within the HTTP response.
+Cube methods that do not change the canister state (except for cycle balance changes due to message execution) can be executed more efficiently. This method provides that ability, and returns the canister's response directly within the HTTP response.
 
 If the query call resulted in a reply, the response is a CBOR (see [CBOR](#cbor)) map with the following fields:
 
@@ -858,7 +858,7 @@ This specification leaves it up to the client to define expiry times for the tim
 The `<effective_canister_id>` in the URL paths of requests is the *effective* destination of the request.
 It must be contained in the canister ranges of a subnet, otherwise the corresponding HTTP request is rejected.
 
--   If the request is an update call to the Management Canister (`aaaaa-aa`), then:
+-   If the request is an update call to the Management Cube (`aaaaa-aa`), then:
 
     -   If the call is to the `provisional_create_canister_with_cycles` method, then any principal can be used as the effective canister id for this call.
 
@@ -866,7 +866,7 @@ It must be contained in the canister ranges of a subnet, otherwise the correspon
 
     -   Otherwise, the call is rejected by the system independently of the effective canister id.
 
--   If the request is an update call to a canister that is not the Management Canister (`aaaaa-aa`) or if the request is a query call, then the effective canister id must be the `canister_id` in the request.
+-   If the request is an update call to a canister that is not the Management Cube (`aaaaa-aa`) or if the request is a query call, then the effective canister id must be the `canister_id` in the request.
 
 :::note
 
@@ -1028,7 +1028,7 @@ Rejection codes are member of the following enumeration:
 
 -   `CANISTER_REJECT` (4): Explicit reject by the canister.
 
--   `CANISTER_ERROR` (5): Canister error (e.g., trap, no response)
+-   `CANISTER_ERROR` (5): Cube error (e.g., trap, no response)
 
 The symbolic names of this enumeration are used throughout this specification, but on all interfaces (HTTPS API, System API), they are represented as positive numbers as given in the list above.
 
@@ -1135,11 +1135,11 @@ Applications can work around these problems. For the first problem, the query re
 
 :::
 
-## Canister module format {#canister-module-format}
+## Cube module format {#canister-module-format}
 
 A canister module is a [WebAssembly module](https://webassembly.github.io/spec/core/index.html) that is either in binary format (typically `.wasm`) or gzip-compressed (typically `.wasm.gz`). If the module starts with byte sequence `[0x1f, 0x8b, 0x08]`, then the system decompresses the contents as a gzip stream according to [RFC-1952](https://datatracker.ietf.org/doc/html/rfc1952.html) and then parses the output as a WebAssembly binary.
 
-## Canister interface (System API) {#system-api}
+## Cube interface (System API) {#system-api}
 
 The System API is the interface between the running canister and the BigFile. It allows the WebAssembly module of a canister to expose functionality to the users (method entry points) and the BIG (e.g. initialization), and exposes functionality of the BIG to the canister (e.g. calling other canisters). Because WebAssembly is rather low-level, it also explains how to express higher level concepts (e.g. binary blobs).
 
@@ -1219,13 +1219,13 @@ The canister provides entry points which are invoked by the BIG under various ci
 
 If the execution of any of these entry points traps for any reason, then all changes to the WebAssembly state, as well as the effect of any externally visible system call (like `ic0.msg_reply`, `ic0.msg_reject`, `ic0.call_perform`), are discarded. For upgrades, this transactional behavior applies to the `canister_pre_upgrade`/`canister_post_upgrade` sequence as a whole.
 
-#### Canister initialization {#system-api-init}
+#### Cube initialization {#system-api-init}
 
 If `canister_init` is present, then this is the first exported WebAssembly function invoked by the BIG. The argument that was passed along with the canister initialization call (see [BIG method](#ic-install_code)) is available to the canister via `ic0.msg_arg_data_size/copy`.
 
 The BIG assumes the canister to be fully instantiated if the `canister_init` method entry point returns. If the `canister_init` method entry point traps, then canister installation has failed, and the canister is reverted to its previous state (i.e. empty with `install`, or whatever it was for a `reinstall`).
 
-#### Canister upgrades {#system-api-upgrades}
+#### Cube upgrades {#system-api-upgrades}
 
 When a canister is upgraded to a new WebAssembly module, the BIG:
 
@@ -1513,7 +1513,7 @@ A canister can learn about its own identity:
 
     These functions allow the canister to query its own canister id (as a blob).
 
-### Canister status {#system-api-canister-status}
+### Cube status {#system-api-canister-status}
 
 This function allows a canister to find out if it is running, stopping or stopped (see [BIG method](#ic-canister_status) and [BIG method](#ic-stop_canister) for context).
 
@@ -1525,7 +1525,7 @@ This function allows a canister to find out if it is running, stopping or stoppe
 
     Status `3` (stopped) can be observed, for example, in `canister_pre_upgrade` and can be used to prevent accidentally upgrading a canister that is not fully stopped.
 
-### Canister version {#system-api-canister-version}
+### Cube version {#system-api-canister-version}
 
 For each canister, the system maintains a *canister version*. Upon canister creation, it is set to 0, and it is **guaranteed** to be incremented upon every change of the canister's code, settings, running status (Running, Stopping, Stopped), and memory (WASM and stable memory), i.e., upon every successful management canister call of methods `update_settings`, `install_code`, `install_chunked_code`, `uninstall_code`, `start_canister`, and `stop_canister` on that canister, code uninstallation due to that canister running out of cycles, canister's running status transitioning from Stopping to Stopped, and successful execution of update methods, response callbacks, heartbeats, and global timers. The system can arbitrarily increment the canister version also if the canister's code, settings, running status, and memory do not change.
 
@@ -1994,11 +1994,11 @@ Canisters have associated some storage space (hence forth chunk storage) where t
  
 ### BIG method `clear_chunk_store` {#ic-clear_chunk_store}
 
-Canister controllers (and the canister itself) can clear the entire chunk storage of a canister. 
+Cube controllers (and the canister itself) can clear the entire chunk storage of a canister. 
 
 ### BIG method `stored_chunks` {#ic-stored_chunks}
 
-Canister controllers (and the canister itself) can list the hashes of chunks in the chunk storage of a canister.
+Cube controllers (and the canister itself) can list the hashes of chunks in the chunk storage of a canister.
 
 ### BIG method `install_code` {#ic-install_code}
 
@@ -2006,13 +2006,13 @@ This method installs code into a canister.
 
 Only controllers of the canister can install code.
 
--   If `mode = variant { install }`, the canister must be empty before. This will instantiate the canister module and invoke its `canister_init` method (if present), as explained in Section "[Canister initialization](#system-api-init)", passing the `arg` to the canister.
+-   If `mode = variant { install }`, the canister must be empty before. This will instantiate the canister module and invoke its `canister_init` method (if present), as explained in Section "[Cube initialization](#system-api-init)", passing the `arg` to the canister.
 
 -   If `mode = variant { reinstall }`, if the canister was not empty, its existing code and state (including stable memory) is removed before proceeding as for `mode = install`.
 
     Note that this is different from `uninstall_code` followed by `install_code`, as `uninstall_code` generates a synthetic reject response to all callers of the uninstalled canister that the uninstalled canister did not yet reply to and ensures that callbacks to outstanding calls made by the uninstalled canister won't be executed (i.e., upon receiving a response from a downstream call made by the uninstalled canister, the cycles attached to the response are refunded, but no callbacks are executed).
 
--   If `mode =  variant { upgrade }`,  `mode = variant  { upgrade  = opt record { skip_pre_upgrade = null } }`, or `mode = variant { upgrade = opt record { skip_pre_upgrade = opt false} }`, this will perform an upgrade of a non-empty canister as described in [Canister upgrades](#system-api-upgrades), passing `arg` to the `canister_post_upgrade` method of the new instance.
+-   If `mode =  variant { upgrade }`,  `mode = variant  { upgrade  = opt record { skip_pre_upgrade = null } }`, or `mode = variant { upgrade = opt record { skip_pre_upgrade = opt false} }`, this will perform an upgrade of a non-empty canister as described in [Cube upgrades](#system-api-upgrades), passing `arg` to the `canister_post_upgrade` method of the new instance.
 
 -   If `mode = variant { upgrade = opt record { skip_pre_upgrade = opt true} }`, the system handles this method similarly to the `mode = variant { upgrade }` case, except that it does not execute the `canister_pre_upgrade` method on the old instance.
 
@@ -2024,7 +2024,7 @@ Some canisters may not be able to make sense of callbacks after upgrades; these 
 
 :::
 
-The `wasm_module` field specifies the canister module to be installed. The system supports multiple encodings of the `wasm_module` field, as described in [Canister module format](#canister-module-format):
+The `wasm_module` field specifies the canister module to be installed. The system supports multiple encodings of the `wasm_module` field, as described in [Cube module format](#canister-module-format):
 
 -   If the `wasm_module` starts with byte sequence `[0x00, 'a', 's', 'm']`, the system parses `wasm_module` as a raw WebAssembly binary.
 
@@ -2093,7 +2093,7 @@ Only the controllers of the cube or the cube itself can request its status.
 
 Provides the history of the canister, its current module SHA-256 hash, and its current controllers. Every canister can call this method on every other canister (including itself). Users cannot call this method.
 
-The canister history consists of a list of canister changes (canister creation, code uninstallation, code deployment, or controllers change). Every canister change consists of the system timestamp at which the change was performed, the canister version after performing the change, the change's origin (a user or a canister), and its details. The change origin includes the principal (called *originator* in the following) that initiated the change and, if the originator is a canister, the originator's canister version when the originator initiated the change (if available). Code deployments are described by their mode (code install, code reinstall, code upgrade) and the SHA-256 hash of the newly deployed canister module. Canister creations and controllers changes are described by the full new set of the canister controllers after the change. The order of controllers stored in the canister history may vary depending on the implementation.
+The canister history consists of a list of canister changes (canister creation, code uninstallation, code deployment, or controllers change). Every canister change consists of the system timestamp at which the change was performed, the canister version after performing the change, the change's origin (a user or a canister), and its details. The change origin includes the principal (called *originator* in the following) that initiated the change and, if the originator is a canister, the originator's canister version when the originator initiated the change (if available). Code deployments are described by their mode (code install, code reinstall, code upgrade) and the SHA-256 hash of the newly deployed canister module. Cube creations and controllers changes are described by the full new set of the canister controllers after the change. The order of controllers stored in the canister history may vary depending on the implementation.
 
 The system can drop the oldest canister changes from the list to keep its length bounded (at least `20` changes are guaranteed to remain in the list). The system also drops all canister changes if the canister runs out of cycles.
 
@@ -2238,7 +2238,7 @@ If you do not specify the `max_response_bytes` parameter, the maximum of a `2MB`
 
 :::note
 
-The node metrics management canister API is considered EXPERIMENTAL. Canister developers must be aware that the API may evolve in a non-backward-compatible way.
+The node metrics management canister API is considered EXPERIMENTAL. Cube developers must be aware that the API may evolve in a non-backward-compatible way.
 
 :::
 
@@ -2790,7 +2790,7 @@ The [WebAssembly System API](#system-api) is relatively low-level, and some of i
           }
         }
 
-This high-level interface presents a pure, mathematical model of a canister, and hides the bookkeeping required to provide the System API as seen in Section [Canister interface (System API)](#system-api).
+This high-level interface presents a pure, mathematical model of a canister, and hides the bookkeeping required to provide the System API as seen in Section [Cube interface (System API)](#system-api).
 
 The `CanisterId` parameter of `init` and `post_upgrade` is merely passed through to the canister, via the `canister.self` system call.
 
@@ -3808,7 +3808,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Canister creation
+#### BIG Management Cube: Cube creation
 
 The BIG chooses an appropriate canister id (referred to as `CanisterId`) and subnet id (referred to as `SubnetId`, `SubnetId ∈ Subnets`, where `Subnets` is the under-specified set of subnet ids on the BIG) and instantiates a new (empty) canister identified by `CanisterId` on the subnet identified by `SubnetId` with subnet size denoted by `SubnetSize`. The *controllers* are set such that the sender of this request is the only controller, unless the `settings` say otherwise. All cycles on this call are now the canister's initial cycles.
 
@@ -3932,7 +3932,7 @@ To avoid clashes with potential user ids or is derived from users or canisters, 
 
 -   `is_system_assigned ic_principal = false`.
 
-#### BIG Management Canister: Changing settings
+#### BIG Management Cube: Changing settings
 
 Only the controllers of the given canister can update the canister settings.
 
@@ -4033,7 +4033,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Canister status
+#### BIG Management Cube: Cube status
 
 The controllers of a canister can obtain detailed information about the canister.
 
@@ -4093,7 +4093,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Canister information
+#### BIG Management Cube: Cube information
 
 Every canister can retrieve the canister history, current module hash, and current controllers of every other canister (including itself).
 
@@ -4134,7 +4134,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Upload Chunk
+#### BIG Management Cube: Upload Chunk
 
 A controller of a canister, or the canister itself can upload chunks to the chunk store of that canister.
 
@@ -4166,7 +4166,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Clear chunk store
+#### BIG Management Cube: Clear chunk store
 
 The controller of a canister, or the canister itself can clear the chunk store of that canister. 
 
@@ -4193,7 +4193,7 @@ S with
 
 ```
 
-#### BIG Management Canister: List stored chunks
+#### BIG Management Cube: List stored chunks
 
 The controller of a canister, or the canister itself can list the hashes of the chunks stored in the chunk store.
 
@@ -4223,9 +4223,9 @@ S with
 
 
 
-#### BIG Management Canister: Code installation
+#### BIG Management Cube: Code installation
 
-Only the controllers of the given canister can install code. This transition installs new code over a canister. This involves invoking the `canister_init` method (see [Canister initialization](#system-api-init)), which must succeed.
+Only the controllers of the given canister can install code. This transition installs new code over a canister. This involves invoking the `canister_init` method (see [Cube initialization](#system-api-init)), which must succeed.
 
 Conditions  
 
@@ -4351,7 +4351,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Code upgrade
+#### BIG Management Cube: Code upgrade
 
 Only the controllers of the given canister can install new code. This changes the code of an *existing* canister, preserving the state in the stable memory. This involves invoking the `canister_pre_upgrade` method, if the `skip_pre_upgrade` flag is not set to `opt true`, on the old and `canister_post_upgrade` method on the new canister, which must succeed and must not invoke other methods.
 
@@ -4503,7 +4503,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Install chunked code
+#### BIG Management Cube: Install chunked code
 
 Conditions
 
@@ -4539,7 +4539,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Code uninstallation {#rule-uninstall}
+#### BIG Management Cube: Code uninstallation {#rule-uninstall}
 
 Upon uninstallation, the canister is reverted to an empty canister, and all outstanding call contexts are rejected and marked as deleted.
 
@@ -4604,7 +4604,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Stopping a canister
+#### BIG Management Cube: Stopping a canister
 
 The controllers of a canister can stop a canister. Stopping a canister goes through two steps. First, the status of the canister is set to `Stopping`; as explained above, a stopping canister rejects all incoming requests and continues processing outstanding responses. When a stopping canister has no more open call contexts, its status is changed to `Stopped` and a response is generated. Note that when processing responses, a stopping canister can make calls to other canisters and thus create new call contexts. In addition, a canister which is stopped or stopping will accept (and respond) to further `stop_canister` requests.
 
@@ -4751,7 +4751,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Starting a canister
+#### BIG Management Cube: Starting a canister
 
 The controllers of a canister can start a `stopped` canister. If the canister is already running, the command has no effect on the canister (except for incrementing its canister version).
 
@@ -4824,7 +4824,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Canister deletion
+#### BIG Management Cube: Cube deletion
 
 Conditions  
 
@@ -4869,7 +4869,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Depositing cycles
+#### BIG Management Cube: Depositing cycles
 
 Conditions  
 
@@ -4900,7 +4900,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Random numbers
+#### BIG Management Cube: Random numbers
 
 The management canister can produce pseudo-random bytes. It always returns a 32-byte `blob`:
 
@@ -4933,11 +4933,11 @@ S with
 
 ```
 
-#### BIG Management Canister: Node Metrics
+#### BIG Management Cube: Node Metrics
 
 :::note
 
-The node metrics management canister API is considered EXPERIMENTAL. Canister developers must be aware that the API may evolve in a non-backward-compatible way.
+The node metrics management canister API is considered EXPERIMENTAL. Cube developers must be aware that the API may evolve in a non-backward-compatible way.
 
 :::
 
@@ -4971,7 +4971,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Canister creation with cycles
+#### BIG Management Cube: Cube creation with cycles
 
 This is a variant of `create_canister`, which sets the initial cycle balance based on the `amount` argument.
 
@@ -5080,7 +5080,7 @@ S with
 
 ```
 
-#### BIG Management Canister: Top up canister
+#### BIG Management Cube: Top up canister
 
 Conditions  
 
@@ -5239,9 +5239,9 @@ S with
 
 ```
 
-#### Canister out of cycles
+#### Cube out of cycles
 
-Once a canister runs out of cycles, its code is uninstalled (cf. [BIG Management Canister: Code uninstallation](#rule-uninstall)), the canister changes in the canister history are dropped (their total number is preserved), and the allocations are set to zero (NB: allocations are currently not modeled in the formal model):
+Once a canister runs out of cycles, its code is uninstalled (cf. [BIG Management Cube: Code uninstallation](#rule-uninstall)), the canister changes in the canister history are dropped (their total number is preserved), and the allocations are set to zero (NB: allocations are currently not modeled in the formal model):
 
 Conditions  
 
@@ -5421,7 +5421,7 @@ S with
 
 #### Query call {#query-call}
 
-Canister query calls to `/api/v2/canister/<ECID>/query` can be executed directly. They can only be executed against non-empty canisters which have a status of `Running` and are also not frozen.
+Cube query calls to `/api/v2/canister/<ECID>/query` can be executed directly. They can only be executed against non-empty canisters which have a status of `Running` and are also not frozen.
 
 In query and composite query methods evaluated on the target canister of the query call, a certificate is provided to the canister that is valid, contains a current state tree (or "recent enough"; the specification is currently vague about how old the certificate may be), and reveals the canister's [Certified Data](#system-api-certified-data).
 

@@ -185,7 +185,7 @@
     "tags": [
       "Tools / Infrastructure"
     ],
-    "description": "Azle is a TypeScript Canister Development Kit (CDK) for the BigFile. In other words, it's a TypeScript/JavaScript runtime for building applications on the BIG.",
+    "description": "Azle is a TypeScript Cube Development Kit (CDK) for the BigFile. In other words, it's a TypeScript/JavaScript runtime for building applications on the BIG.",
     "usesInternetIdentity": false,
     "logo": "/img/showcase/azle_logo.svg",
     "github": "https://github.com/demergent-labs/azle",

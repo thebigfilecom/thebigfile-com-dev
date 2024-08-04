@@ -19,7 +19,7 @@ use ic_agent::{
     hash_tree::{HashTree, LookupResult},
     lookup_value, Agent, AgentError,
 };
-use ic_utils::{call::SyncCall, Canister};
+use ic_utils::{call::SyncCall, Cube};
 use slog::{info, Logger};
 use std::time::{SystemTime, UNIX_EPOCH};
 
@@ -32,7 +32,7 @@ pub async fn balance(
     ledger_canister_id: Option<Principal>,
 ) -> DfxResult<ICPTs> {
     let canister_id = ledger_canister_id.unwrap_or(MAINNET_LEDGER_CANISTER_ID);
-    let canister = Canister::builder()
+    let canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(canister_id)
         .build()?;
@@ -49,7 +49,7 @@ pub async fn balance(
 
 /// Returns XDR-permyriad (i.e. ten-thousandths-of-an-XDR) per ICP.
 pub async fn xdr_permyriad_per_icp(agent: &Agent) -> DfxResult<u64> {
-    let canister = Canister::builder()
+    let canister = Cube::builder()
         .with_agent(agent)
         .with_canister_id(MAINNET_CYCLE_MINTER_CANISTER_ID)
         .build()?;

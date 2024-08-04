@@ -349,7 +349,7 @@
             <table class='balance-table'>
                 <thead>
                     <th>Token</th>
-                    <th>Canister Balance</th>
+                    <th>Cube Balance</th>
                     <th></th>
                     <th>DEX Balance</th>
                 </thead>

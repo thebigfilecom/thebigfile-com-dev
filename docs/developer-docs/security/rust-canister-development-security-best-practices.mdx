@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
-sidebar_label: "Canister development"
+sidebar_label: "Cube development"
 keywords: [security, concept]
 ---
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
-# Canister development security best practices
+# Cube development security best practices
 
 <MarkdownChipRow labels={["Security", "Concept"]} />
 
@@ -137,7 +137,7 @@ If an app is served through `raw.icp0.io` in addition to `icp0.io`, an adversary
 
 - Check in the canister’s `http_request` method if the request came through raw. If so, return an error and do not serve any assets.
 
-## Canister storage
+## Cube storage
 
 ### Rust: Use `thread_local!` with `Cell/RefCell` for state variables and put all your globals in one basket
 
@@ -165,7 +165,7 @@ Limit the amount of data that can be stored in a canister per user. This limit h
 
 #### Security concern
 
-Canister memory is not persisted across upgrades. If data needs to be kept across upgrades, a natural thing to do is to serialize the canister memory in `pre_upgrade`, and deserialize it in `post_upgrade`. However, the available number of instructions for these methods is limited. If the memory grows too big, the canister can no longer be updated.
+Cube memory is not persisted across upgrades. If data needs to be kept across upgrades, a natural thing to do is to serialize the canister memory in `pre_upgrade`, and deserialize it in `post_upgrade`. However, the available number of instructions for these methods is limited. If the memory grows too big, the canister can no longer be updated.
 
 #### Recommendation
 
@@ -373,7 +373,7 @@ Extending the ledger example above, a recovery process could look as follows:
 1. The app journals the result of the transfer call.
 1. The app journals the intention to update internal state according to the result of the transfer call, then updates the internal state, and finally journals the result of the attempt to update the internal state. (Journaling this step is still useful even if it does not contain outcalls, because outcalls may be introduced later, and the step could conflict with other processes that are not atomic.)
 
-Note that querying the BIG ledger or an ICRC ledger to determine whether a transaction has succeeded is not straightforward to automate, so it could be done manually.
+Note that querying the BIG ledger or an BIGRC ledger to determine whether a transaction has succeeded is not straightforward to automate, so it could be done manually.
 
 #### Example implementation of journaling
 
@@ -542,7 +542,7 @@ Loops in the call graph (e.g. canister A calling B, B calling C, C calling A) ma
 
 - For more information, see [current limitations of the BigFile](https://wiki.thebigfile.com/wiki/Current_limitations_of_the_Internet_Computer), section "Loops in call graphs".
 
-## Canister upgrades
+## Cube upgrades
 
 ### Be careful with panics during upgrades
 

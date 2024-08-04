@@ -70,7 +70,7 @@ pub fn exec(env: &dyn Environment, opts: CanisterBuildOpts) -> DfxResult {
     if build_mode_check {
         slog::warn!(
             logger,
-            "Building canisters to check they build ok. Canister IDs might be hard coded."
+            "Building canisters to check they build ok. Cube IDs might be hard coded."
         );
     } else {
         // CanisterIds would have been set in CanisterPool::load, if available.

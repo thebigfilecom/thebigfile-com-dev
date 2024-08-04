@@ -29,7 +29,7 @@ pub async fn exec(env: &dyn Environment, opts: NotifyTopUpOpts) -> DfxResult {
 
     match result {
         Ok(cycles) => {
-            println!("Canister {canister} topped up with {cycles} cycles");
+            println!("Cube {canister} topped up with {cycles} cycles");
         }
         Err(Notify(Refunded {
             reason,

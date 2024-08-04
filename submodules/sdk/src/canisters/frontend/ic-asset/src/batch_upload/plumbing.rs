@@ -11,7 +11,7 @@ use crate::error::CreateProjectAssetError;
 use candid::Nat;
 use futures::future::try_join_all;
 use futures::TryFutureExt;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use mime::Mime;
 use slog::{debug, info, Logger};
 use std::collections::HashMap;
@@ -47,13 +47,13 @@ pub(crate) struct ProjectAsset {
 }
 
 pub(crate) struct ChunkUploader<'agent> {
-    canister: Canister<'agent>,
+    canister: Cube<'agent>,
     batch_id: Nat,
     chunks: Arc<AtomicUsize>,
     bytes: Arc<AtomicUsize>,
 }
 impl<'agent> ChunkUploader<'agent> {
-    pub(crate) fn new(canister: Canister<'agent>, batch_id: Nat) -> Self {
+    pub(crate) fn new(canister: Cube<'agent>, batch_id: Nat) -> Self {
         Self {
             canister,
             batch_id,

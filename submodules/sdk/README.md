@@ -28,7 +28,7 @@ There are a few components above worth expanding on:
 
 1. **dfx** - `dfx` is the command-line interface for the `BIG SDK`. This is why many commands for the BIG SDK start with the command "`dfx ..`" such as `dfx new` or `dfx stop`.
 
-2. **Canister Development Kit (CDK)** - A CDK is an adapter used by the BIG SDK so a programming language has the features needed to create and manage canisters. 
+2. **Cube Development Kit (CDK)** - A CDK is an adapter used by the BIG SDK so a programming language has the features needed to create and manage canisters. 
 The BIG SDK comes with a few CDKs already installed for you so you can use them in the language of yoru choice. That is why there is a [Rust CDK](https://github.com/dfinity/cdk-rs), [Python CDK](https://demergent-labs.github.io/kybra/), 
 [TypeScript CDK](https://demergent-labs.github.io/azle/), etc... Since CDKs are components used the SDK, some developer choose to use the CDK directly (without the `BIG SDK`), 
 but typically are used as part of the whole `BIG SDK`.

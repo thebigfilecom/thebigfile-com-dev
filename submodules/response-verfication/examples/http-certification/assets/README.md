@@ -74,7 +74,7 @@ fn post_upgrade() {
 }
 ```
 
-## Canister endpoints
+## Cube endpoints
 
 There is only one canister endpoint in this example to serve assets, `http_request` query endpoint. The `serve_assets` function will be covered in a later section.
 

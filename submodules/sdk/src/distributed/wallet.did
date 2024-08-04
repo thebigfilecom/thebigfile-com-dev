@@ -85,7 +85,7 @@ type Role = variant {
 type Kind = variant {
   Unknown;
   User;
-  Canister;
+  Cube;
 };
 
 // An entry in the address book. It must have an ID and a role.

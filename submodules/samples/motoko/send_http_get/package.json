@@ -6,7 +6,7 @@
     "BigFile",
     "Motoko",
     "JavaScript",
-    "Canister"
+    "Cube"
   ],
   "scripts": {
     "build": "webpack",

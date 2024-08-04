@@ -25,7 +25,7 @@ const readCanisterId = (): string => {
   ) as HTMLElement | null;
   if (isNullish(setupJs) || isNullish(setupJs.dataset.canisterId)) {
     void displayError({
-      title: "Canister ID not set",
+      title: "Cube ID not set",
       message:
         "There was a problem contacting the BIG. The host serving this page did not give us a canister ID. Try reloading the page and contact support if the problem persists.",
       primaryButton: "Reload",

@@ -23,7 +23,7 @@ use ic_agent::Identity as _;
 use icrc_ledger_types::icrc1::account::Subaccount;
 use slog::info;
 
-/// Creates an empty canister and associates the assigned Canister ID to the canister name.
+/// Creates an empty canister and associates the assigned Cube ID to the canister name.
 #[derive(Parser)]
 pub struct CanisterCreateOpts {
     /// Specifies the canister name. Either this or the --all flag are required.
@@ -39,7 +39,7 @@ pub struct CanisterCreateOpts {
     #[arg(long, value_parser = cycle_amount_parser)]
     with_cycles: Option<u128>,
 
-    /// Attempts to create the canister with this Canister ID.
+    /// Attempts to create the canister with this Cube ID.
     ///
     /// This option only works with non-mainnet replica.
     /// This option implies the --no-wallet flag.
@@ -163,7 +163,7 @@ pub async fn exec(
         let canister_is_remote =
             config_interface.is_remote_canister(canister_name, &network.name)?;
         if canister_is_remote {
-            bail!("Canister '{canister_name}' is a remote canister on network '{}', and cannot be created from here.", &network.name)
+            bail!("Cube '{canister_name}' is a remote canister on network '{}', and cannot be created from here.", &network.name)
         }
         let compute_allocation = get_compute_allocation(
             opts.compute_allocation,

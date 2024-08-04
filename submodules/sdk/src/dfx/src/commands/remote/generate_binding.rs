@@ -114,14 +114,14 @@ pub fn exec(env: &dyn Environment, opts: GenerateBindingOpts) -> DfxResult {
             } else {
                 info!(
                     log,
-                    "Canister {} is missing attribute 'main'. Without this attribute I do not know where to generate the bindings.",
+                    "Cube {} is missing attribute 'main'. Without this attribute I do not know where to generate the bindings.",
                     canister.get_name()
                 );
             }
         } else {
             info!(
                 log,
-                "Canister {} is not remote. Skipping.",
+                "Cube {} is not remote. Skipping.",
                 canister.get_name()
             );
         }

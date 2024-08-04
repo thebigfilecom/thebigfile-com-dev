@@ -48,7 +48,7 @@ pub struct LoggerConfig {
     pub level: HttpAdapterLogLevel,
 }
 
-/// This struct contains configuration options for the Canister HTTP Adapter.
+/// This struct contains configuration options for the Cube HTTP Adapter.
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Config {
     /// Specifies which unix domain socket should be used for serving incoming requests.

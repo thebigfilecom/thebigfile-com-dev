@@ -46,7 +46,7 @@ pub enum CertificateVerificationError {
 
     /// Certificate is for a different subnet
     #[error(
-        "Canister ID {canister_id} is not within the certificate's range: {canister_ranges:?}"
+        "Cube ID {canister_id} is not within the certificate's range: {canister_ranges:?}"
     )]
     PrincipalOutOfRange {
         /// The canister ID that was looked up in the certificate

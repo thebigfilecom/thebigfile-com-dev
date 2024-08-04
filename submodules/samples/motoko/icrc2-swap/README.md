@@ -2,14 +2,14 @@
 keywords: [advanced, motoko, swap, token swap, icrc2]
 ---
 
-# ICRC-2 swap
+# BIGRC-2 swap
 
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/motoko/icrc2-swap)
 
 ## Overview
 
-ICRC-2 Swap is a simple canister demonstrating how to safely work with ICRC-2
-tokens. It handles depositing, swapping, and withdrawing ICRC-2 tokens.
+BIGRC-2 Swap is a simple canister demonstrating how to safely work with BIGRC-2
+tokens. It handles depositing, swapping, and withdrawing BIGRC-2 tokens.
 
 The asynchronous nature of developing on the BigFile presents some
 unique challenges, which means the design patterns for inter-canister calls are
@@ -143,7 +143,7 @@ export SWAP=$(dfx canister id swap)
 ### Step 4: Approve & deposit tokens:
 
 Before you can swap the tokens, they must be transferred to the swap canister.
-With ICRC-2, this is a two-step process. First, approve the transfer:
+With BIGRC-2, this is a two-step process. First, approve the transfer:
 
 ```bash
 # Approve Bob to deposit 1.00000000 of Token B, and 0.0001 extra for the
@@ -170,7 +170,7 @@ dfx canister call --identity bob token_b icrc2_approve '
 ```
 
 Then call the `swap` canister's `deposit` method. This method will do the
-actual ICRC-1 token transfer, to move the tokens from your wallet into the `swap`
+actual BIGRC-1 token transfer, to move the tokens from your wallet into the `swap`
 canister, and then update your deposited token balance in the `swap` canister.
 
 :::info

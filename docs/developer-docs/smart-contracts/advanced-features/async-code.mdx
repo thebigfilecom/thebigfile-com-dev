@@ -37,14 +37,14 @@ Let's look at an example where two canisters interact with each other. In the fo
 
 
 ```
-/// Canister A
+/// Cube A
 async fn foo() {
   do_work();
   call(canister_b, 'bar').await;
   do_more_work(res);
 }
 
-/// Canister B
+/// Cube B
 fn bar() {
   do_some_more_work();
 }
@@ -67,7 +67,7 @@ In the following example, another call is added to a local function to canister 
 
 
 ```
-/// Canister A
+/// Cube A
 async fn foo() {
   baz().await;
   call(canister_b, 'bar').await;
@@ -78,7 +78,7 @@ async fn baz() {
   do_local_work();
 }
 
-/// Canister B
+/// Cube B
 fn bar() {
   do_some_more_work();
 }

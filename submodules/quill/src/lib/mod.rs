@@ -462,39 +462,39 @@ impl FromStr for ParsedAccount {
         let Some((rest, subaccount)) = s.split_once('.') else {
             return Ok(Self(Account {
                 owner: Principal::from_str(s)
-                    .map_err(|e| anyhow!("Invalid ICRC-1 account: missing subaccount, or: {e}"))?,
+                    .map_err(|e| anyhow!("Invalid BIGRC-1 account: missing subaccount, or: {e}"))?,
                 subaccount: None,
             }));
         };
         let (principal, crc) = rest
             .rsplit_once('-')
-            .context("Invalid ICRC-1 address (no principal)")?;
+            .context("Invalid BIGRC-1 address (no principal)")?;
         let crc = BASE32_NOPAD
             .decode(crc.to_ascii_uppercase().as_bytes())
-            .context("Invalid ICRC-1 account: invalid CRC")?;
+            .context("Invalid BIGRC-1 account: invalid CRC")?;
         let crc = u32::from_be_bytes(
             crc[..]
                 .try_into()
-                .context("Invalid ICRC-1 account: invalid CRC")?,
+                .context("Invalid BIGRC-1 account: invalid CRC")?,
         );
         let principal =
-            Principal::from_str(principal).context("Invalid ICRC-1 account: invalid principal")?;
+            Principal::from_str(principal).context("Invalid BIGRC-1 account: invalid principal")?;
         ensure!(
             !subaccount.starts_with('0'),
-            "Invalid ICRC-1 account: subaccount started with 0",
+            "Invalid BIGRC-1 account: subaccount started with 0",
         );
         ensure!(
             !subaccount.is_empty(),
-            "Invalid ICRC-1 account: empty subaccount despite subaccount separator",
+            "Invalid BIGRC-1 account: empty subaccount despite subaccount separator",
         );
         let subaccount = ParsedSubaccount::from_str(subaccount)
-            .context("Invalid ICRC-1 account: invalid subaccount")?;
+            .context("Invalid BIGRC-1 account: invalid subaccount")?;
         let mut hasher = Hasher::new();
         hasher.update(principal.as_slice());
         hasher.update(&subaccount.0 .0);
         ensure!(
             hasher.finalize() == crc,
-            "Invalid ICRC-1 account: account ID did not match checksum (was it copied wrong?)"
+            "Invalid BIGRC-1 account: account ID did not match checksum (was it copied wrong?)"
         );
         Ok(Self(Account {
             owner: principal,

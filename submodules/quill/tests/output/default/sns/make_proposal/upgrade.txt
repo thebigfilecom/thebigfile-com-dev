@@ -2,7 +2,7 @@ Sending message with
 
   Call type:   update
   Sender:      fdsgv-62ihb-nbiqv-xgic5-iefsv-3cscz-tmbzv-63qd5-vh43v-dqfrt-pae
-  Canister id: rrkah-fqaaa-aaaaa-aaaaq-cai
+  Cube id: rrkah-fqaaa-aaaaa-aaaaq-cai
   Method name: manage_neuron
   Arguments:   (
   record {
@@ -10,7 +10,7 @@ Sending message with
     command = opt variant {
       MakeProposal = record {
         url = "";
-        title = "Upgrade Canister";
+        title = "Upgrade Cube";
         action = opt variant {
           UpgradeSnsControlledCanister = record {
             new_canister_wasm = blob "\00\61\73\6d\01\00\00\00";

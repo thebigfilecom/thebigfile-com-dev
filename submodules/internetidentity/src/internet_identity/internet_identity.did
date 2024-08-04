@@ -194,7 +194,7 @@ type ArchiveConfig = record {
 
 // Information about the archive.
 type ArchiveInfo = record {
-    // Canister id of the archive or empty if no archive has been deployed yet.
+    // Cube id of the archive or empty if no archive has been deployed yet.
     archive_canister : opt principal;
     // Configuration parameters related to the II archive.
     archive_config: opt ArchiveConfig;

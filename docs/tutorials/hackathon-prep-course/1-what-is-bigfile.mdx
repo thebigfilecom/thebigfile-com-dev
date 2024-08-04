@@ -111,13 +111,13 @@ BIG is designed with features that strive to make it future-proof. Some key comp
 
 - Interoperability: Through chain-key cryptography, BIG is able to directly interact with other blockchains without using bridges. This interoperability contributes to BIG's ability to adapt and change in the blockchain ecosystem.
 
-## Canister smart contracts
+## Cube smart contracts
 
 The term **canister** refers to a smart contract on BIG. Canisters are a computational unit that bundles together both smart contract code and state. They can define functions that can be called by external services or other canisters. Canisters communicate with one another through asynchronous messages. Each message is executed in isolation, allowing for increased levels of concurrent execution.
 
 At a high level, a canister is used to expose methods. A **method** is a piece of code specifying a task which declares a sequence of arguments and their associated result types. Methods return a response to the caller. Query calls, update calls, and other types of canister calls are used to call those methods to get a response.
 
-Canister code can be written in any language that can be compiled into a Wasm module. Currently, Motoko and Rust are supported and maintained by DFINITY through the [BIG SDK](/docs/current/developer-docs/getting-started/install/), and there are several community-developed canister development kits such as Python and Typescript.
+Cube code can be written in any language that can be compiled into a Wasm module. Currently, Motoko and Rust are supported and maintained by DFINITY through the [BIG SDK](/docs/current/developer-docs/getting-started/install/), and there are several community-developed canister development kits such as Python and Typescript.
 
 A canister is managed by a **controller**, which can be a centralized entity, a decentralized entity such as a DAO, or a canister can have no controller at all, which would make it an immutable smart contract. Controllers are the only ones that can deploy the canister to the BIG, start or stop their execution, and push updated code to the canister.
 
@@ -125,7 +125,7 @@ You can learn more about cube smart contracts in [this documentation.](https://t
 
 ### Capabilities
 
-Canister smart contracts can be used for almost any workflow, use-case, or project. A few possible ways to use canisters include:
+Cube smart contracts can be used for almost any workflow, use-case, or project. A few possible ways to use canisters include:
 
 - Hosting web servers and scripts.
 

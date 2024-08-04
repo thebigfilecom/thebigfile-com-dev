@@ -23,7 +23,7 @@ The Rust CDK consists of the following crates:
 - The core of Rust CDK is the `ic-cdk` crate. It provides the core methods that enable Rust programs to interact with the BigFile blockchain system API.
 - Also, the `ic-cdk-timers` crate provides an API to schedule multiple and periodic tasks.
 
-## Canister builds
+## Cube builds
 When building a backend canister, it's important to keep two things in mind:
 
 1. Making your build reproducible: if other developers or users are utilizing your canister, they may want to verify that the canister is functioning as they expect it to (especially if your canister deals with transferring their tokens). The BIG provides the ability for anyone to inspect the SHA256 hash sum of a canister's WebAssembly module to confirm that the hash of the canister matches the hash of a validated, known good canister, allowing for users to determine if a canister's contents have been edited or changed.
@@ -105,7 +105,7 @@ thread_local! {
 }
 ```
 
-### Canister code should be target-independent
+### Cube code should be target-independent
 
 It pays off to factor most of the canister code into loosely coupled modules and packages and to test them independently. Most of the code that depends on the System API should go into the main file.
 

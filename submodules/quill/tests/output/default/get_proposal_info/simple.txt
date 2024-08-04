@@ -2,6 +2,6 @@ Sending message with
 
   Call type:   update
   Sender:      2vxsx-fae
-  Canister id: rrkah-fqaaa-aaaaa-aaaaq-cai
+  Cube id: rrkah-fqaaa-aaaaa-aaaaq-cai
   Method name: get_proposal_info
   Arguments:   (22_174 : nat64)

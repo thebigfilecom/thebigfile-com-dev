@@ -18,7 +18,7 @@ pub async fn build_wallet_canister(
     agent: &Agent,
 ) -> Result<WalletCanister<'_>, CanisterBuilderError> {
     WalletCanister::from_canister(
-        ic_utils::Canister::builder()
+        ic_utils::Cube::builder()
             .with_agent(agent)
             .with_canister_id(id)
             .build()

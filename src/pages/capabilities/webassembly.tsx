@@ -317,7 +317,7 @@ function WebAssemblyPage() {
               className="tw-heading-3 text-center mb-2 w-full mx-auto md:tw-heading-60 md:mb-6 lg:w-6/12"
               variants={transitions.item}
             >
-              Canister Development Kits
+              Cube Development Kits
             </motion.h2>
             <motion.p
               className="tw-lead-sm md:tw-lead md:w-5/12 md:mx-auto text-center"

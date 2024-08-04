@@ -4,7 +4,7 @@
 
 ## Overview
 
-`token_transfer_from_backend` is a canister that can transfer ICRC-1 tokens on behalf of accounts to other accounts. It is an example of a canister that uses an ICRC-1 ledger canister that supports the [ICRC-2](https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-2) approve and transfer from standard. Sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/token_transfer_from) and [Rust](https://github.com/dfinity/examples/tree/master/rust/token_transfer_from).
+`token_transfer_from_backend` is a canister that can transfer BIGRC-1 tokens on behalf of accounts to other accounts. It is an example of a canister that uses an BIGRC-1 ledger canister that supports the [BIGRC-2](https://github.com/dfinity/BIGRC-1/tree/main/standards/BIGRC-2) approve and transfer from standard. Sample code is available in [Motoko](https://github.com/dfinity/examples/tree/master/motoko/token_transfer_from) and [Rust](https://github.com/dfinity/examples/tree/master/rust/token_transfer_from).
 
 ## Architecture
 
@@ -33,7 +33,7 @@ dfx new --type=rust token_transfer_from --no-frontend
 cd token_transfer_from
 ```
 
-### Step 2: Determine ICRC-1 ledger file locations
+### Step 2: Determine BIGRC-1 ledger file locations
 
 > [!NOTE]
 > You can read more about how to setup the BIGRC-1 ledger locally [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/bigrc1-ledger-setup).
@@ -55,7 +55,7 @@ chmod +x download_latest_icrc1_ledger.sh
 
 ### Step 3: Configure the `dfx.json` file to use the ledger :
 
-Replace its contents with this but adapt the URLs to be the ones you determined in step 2. Note that we are deploying the ICRC-1 ledger to the same canister id the ckBTC ledger uses on mainnet. This will make it easier to interact with it later.
+Replace its contents with this but adapt the URLs to be the ones you determined in step 2. Note that we are deploying the BIGRC-1 ledger to the same canister id the ckBTC ledger uses on mainnet. This will make it easier to interact with it later.
 
 ```json
 {
@@ -83,7 +83,7 @@ Replace its contents with this but adapt the URLs to be the ones you determined 
 }
 ```
 
-If you chose to download the ICRC-1 ledger files with the script, you need to replace the Candid and Wasm file entries:
+If you chose to download the BIGRC-1 ledger files with the script, you need to replace the Candid and Wasm file entries:
 
 ```
 ...
@@ -98,18 +98,18 @@ If you chose to download the ICRC-1 ledger files with the script, you need to re
 dfx start --background --clean
 ```
 
-### Step 5: Deploy the ICRC-1 ledger locally:
+### Step 5: Deploy the BIGRC-1 ledger locally:
 
 > [!IMPORTANT]
 > Transfers from the `minting_account` will create Mint transactions. Transfers to the minting account will create Burn transactions.
 
-Take a moment to read the details of the call made below. Not only are you deploying an ICRC-1 ledger canister, you are also:
+Take a moment to read the details of the call made below. Not only are you deploying an BIGRC-1 ledger canister, you are also:
 
 -   Setting the minting account to the anonymous principal (`2vxsx-fae`)
 -   Minting 100 tokens to the default identity
 -   Setting the transfer fee to 0.0001 tokens
 -   Naming the token Local ICRC1 / L-ICRC1
--   Enabling the ICRC-2 standard for the ledger
+-   Enabling the BIGRC-2 standard for the ledger
 
 ```bash
 dfx deploy icrc1_ledger_canister --argument "(variant {
@@ -153,7 +153,7 @@ URLs:
 ### Step 6: Verify that the ledger canister is healthy and working as expected by using the command:
 
 > [!NOTE]
-> You can find more information on how to interact with the ICRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger#bigrc-1-and-bigrc-1-extension-endpoints)
+> You can find more information on how to interact with the BIGRC-1 ledger [here](https://thebigfile.com/docs/current/developer-docs/defi/bigrc-1/using-bigrc1-ledger#bigrc-1-and-bigrc-1-extension-endpoints)
 
 ````bash
 dfx canister call icrc1_ledger_canister icrc1_balance_of "(record {

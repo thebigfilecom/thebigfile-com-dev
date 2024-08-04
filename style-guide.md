@@ -209,8 +209,8 @@ The following is a list of common abbreviations that are capitalized within the 
 - ECDSA
 - HTTP/HTTPS
 - ICP
-- ICRC-1
-- ICRC-2
+- BIGRC-1
+- BIGRC-2
 - II
 - IOS
 - NFT

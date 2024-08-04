@@ -63,7 +63,7 @@ For example, a security-sensitive dapp like Encrypted Notes should set `maxTimeT
 * Motoko: Done
 * Rust: Done
 
-# 6. Canister Storage
+# 6. Cube Storage
 
 ### 6.1. Use thread_local! with Cell/RefCell for state variables and put all your globals in one basket
 * Motoko: Not applicable
@@ -85,7 +85,7 @@ For example, a security-sensitive dapp like Encrypted Notes should set `maxTimeT
 * Motoko: Future
 * Rust: Future
 
-# 7. Inter-Canister Calls and Rollbacks
+# 7. Inter-Cube Calls and Rollbacks
 
 ### 5.1. Don’t panic after await and don’t lock shared resources across await boundaries
 * Motoko: Done (we don't use await)
@@ -103,7 +103,7 @@ For example, a security-sensitive dapp like Encrypted Notes should set `maxTimeT
 * Motoko: Done
 * Rust: Done
 
-# 8. Canister Upgrades
+# 8. Cube Upgrades
 
 ### 8.1. Don’t panic/trap during upgrades:   
 * Motoko: Done, assuming that [`Iter.toArray`](https://github.com/dfinity/motoko-base/blob/master/src/Iter.mo) and [`Map.fromIter`](https://github.com/dfinity/motoko-base/blob/master/src/HashMap.mo) do not trap.

@@ -32,7 +32,7 @@ use crate::error::UploadContentError;
 use crate::error::UploadContentError::{CreateBatchFailed, ListAssetsFailed};
 use candid::Nat;
 use ic_agent::AgentError;
-use ic_utils::Canister;
+use ic_utils::Cube;
 use slog::{debug, info, trace, warn, Logger};
 use std::collections::HashMap;
 use std::path::Path;
@@ -40,7 +40,7 @@ use walkdir::WalkDir;
 
 /// Sets the contents of the asset canister to the contents of a directory, including deleting old assets.
 pub async fn upload_content_and_assemble_sync_operations(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     dirs: &[&Path],
     logger: &Logger,
 ) -> Result<CommitBatchArguments, UploadContentError> {
@@ -101,14 +101,14 @@ pub async fn upload_content_and_assemble_sync_operations(
 
 /// Sets the contents of the asset canister to the contents of a directory, including deleting old assets.
 pub async fn sync(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     dirs: &[&Path],
     logger: &Logger,
 ) -> Result<(), SyncError> {
     let commit_batch_args =
         upload_content_and_assemble_sync_operations(canister, dirs, logger).await?;
     let canister_api_version = api_version(canister).await;
-    debug!(logger, "Canister API version: {canister_api_version}. ic-asset API version: {BATCH_UPLOAD_API_VERSION}");
+    debug!(logger, "Cube API version: {canister_api_version}. ic-asset API version: {BATCH_UPLOAD_API_VERSION}");
     info!(logger, "Committing batch.");
     match canister_api_version {
         0 => {
@@ -121,7 +121,7 @@ pub async fn sync(
 }
 
 async fn commit_in_stages(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     commit_batch_args: CommitBatchArguments,
     logger: &Logger,
 ) -> Result<(), AgentError> {
@@ -176,7 +176,7 @@ async fn commit_in_stages(
 
 /// Stage changes and propose the batch for commit.
 pub async fn prepare_sync_for_proposal(
-    canister: &Canister<'_>,
+    canister: &Cube<'_>,
     dirs: &[&Path],
     logger: &Logger,
 ) -> Result<(), PrepareSyncForProposalError> {

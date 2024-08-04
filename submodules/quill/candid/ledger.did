@@ -353,8 +353,8 @@ service: (LedgerCanisterInitPayload) -> {
     send_dfx : (SendArgs) -> (BlockIndex);
     account_balance_dfx : (AccountBalanceArgsDfx) -> (Tokens) query;
 
-    // The following methods implement the ICRC-1 Token Standard.
-    // https://github.com/dfinity/ICRC-1/tree/main/standards/ICRC-1
+    // The following methods implement the BIGRC-1 Token Standard.
+    // https://github.com/dfinity/BIGRC-1/tree/main/standards/BIGRC-1
     icrc1_name : () -> (text) query;
     icrc1_symbol : () -> (text) query;
     icrc1_decimals : () -> (nat8) query;

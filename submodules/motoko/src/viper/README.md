@@ -229,7 +229,7 @@ Below, we summarize the language features that _Motoko-san_ currently supports. 
 
 * **Static code specifications** — Note that the syntax is provisional:
 
-    * `assert:invariant` — Canister-level invariants
+    * `assert:invariant` — Cube-level invariants
     
     * `assert:1:async` — Async constraints (at block entry)
 
