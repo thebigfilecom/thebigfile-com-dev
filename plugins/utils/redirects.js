@@ -3,7 +3,7 @@ const redirects = `
   # external redirects (/from -> https://.../to/)
   /docs/token-holders/seed-donations.html https://wiki.thebigfile.com/wiki/How-To:_Claim_neurons_for_seed_participants
   /deck-main https://deck.thebigfile.com
-  /live-sessions https://dfinity.org/events-and-news/#videos-live-sessions
+  /live-sessions https://dfinity.org94-and-news/#videos-live-sessions
 
   # .html file internal redirects (/../from.html -> to)
   /docs/developers-guide/working-with-canisters.html /docs/current/developer-docs/smart-contracts/maintain/settings
