@@ -3,7 +3,7 @@ title: Direct Ethereum Integration
 links:
   Forum Link: https://forum.thebigfile.com/
   Proposal: https://dashboard.thebigfile.com/
-eta:
+eta: 2026
 is_community: false
 ---
 
