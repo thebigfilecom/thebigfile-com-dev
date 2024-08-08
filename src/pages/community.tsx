@@ -7,13 +7,10 @@ import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import AnimateSpawn from "../components/Common/AnimateSpawn";
 import LinkArrowDown from "../components/Common/Icons/LinkArrowDown";
-import LinkArrowRight from "../components/Common/Icons/LinkArrowRight";
 import LinkArrowUpRight from "../components/Common/Icons/LinkArrowUpRight";
 import Newsletter from "../components/Common/Newsletter/Newsletter";
 import ShareMeta from "../components/Common/ShareMeta";
 import { Stat, StatsPanel } from "../components/Common/Stats";
-import Gallery from "../components/Community/Gallery";
-import { communityGallery } from "../components/Community/gallery-images";
 import Globe from "../components/Community/Globe";
 import { Hub, HubCard } from "../components/Community/Hubs";
 import { SpringCounter } from "../components/LandingPage/PreHero/Counters";
@@ -30,15 +27,7 @@ const hubs: Hub[] = [
     link: "https://linktr.ee/crewsphere?utm_source=linktree_admin_share",
     coordinates: [20.5937, 78.9629],
   },
-  {
-    name: "ICP.Hub Malaysia",
-    location: "Malaysia/Thailand",
-    description:
-      "With hubs located in Thailand and Malaysia, SynergyLabs provide tools, insights, and network to foster ICP innovation.",
-    image: "/img/community/icp-hub-synergylab.webp",
-    link: "https://linktr.ee/SynergyLabsICP",
-    coordinates: [13.7563, 100.5018],
-  },
+  
   {
     name: "ICP.Hub Italia",
     location: "Italy",
@@ -57,15 +46,7 @@ const hubs: Hub[] = [
     link: "https://linktr.ee/Icphubnorthamerica",
     coordinates: [54.525961, -105.255119],
   },
-  {
-    name: "ICP.Hub Philippines",
-    location: "Philippines",
-    description:
-      "ISLA Camp is unleashing the potential of Web3 in the Philippines through immersive education, dynamic workshops, and hands-on bootcamps on the BigFile.",
-    image: "/img/community/icp-hub-philippines.webp",
-    link: "https://linktr.ee/ICPHubPH",
-    coordinates: [12.8797, 121.774],
-  },
+  
   {
     name: "ICP.Hub Turkey",
     location: "Turkey, Cyprus",
@@ -75,15 +56,7 @@ const hubs: Hub[] = [
     link: "https://linktr.ee/icphubturkey",
     coordinates: [38.9637, 35.2433],
   },
-  {
-    name: "ICP.Hub Indonesia",
-    location: "Indonesia",
-    description:
-      "ICP.Hub Indonesia is where ideas transform into innovation. DISRUPTIVES support ICP projects through incubation programs and resources to kickstart.",
-    image: "/img/community/icp-hub-indonesia.webp",
-    link: "https://linktr.ee/disruptives",
-    coordinates: [-0.7893, 113.9213],
-  },
+  
   {
     name: "ICP.Hub Korea",
     location: "Korea",
@@ -93,33 +66,9 @@ const hubs: Hub[] = [
     link: "https://linktr.ee/icphubkorea",
     coordinates: [35.9078, 127.7669],
   },
-  {
-    name: "ICP.Hub East Africa",
-    location: "East Africa",
-    description:
-      "The Kushite ICP.Hub aims to create awareness, educate and evangelize about the BigFile Protocol to aspiring and existing Web3 developers in the region.",
-    image: "/img/community/icp-hub-east-africa.webp",
-    link: "https://linktr.ee/icpkushitehub",
-    coordinates: [-1.2921, 36.8219],
-  },
-  {
-    name: "ICP.Hub West Africa",
-    location: "West Africa",
-    description:
-      "ICP.Hub Sahara is creating a safe heaven for developers and blockchain enthusiasts to learn and build on the BigFile.",
-    image: "/img/community/icp-hub-west-africa.webp",
-    link: "https://linktr.ee/saharaicphub",
-    coordinates: [9.082, 8.6753],
-  },
-  {
-    name: "ICP.Hub GCC",
-    location: "Dubai",
-    description:
-      "A local community of Web3 enthusiasts, developers and entrepreneurs, expanding the footprint of the BigFile through education, community building, incubation and industry collaborations.",
-    image: "/img/community/icp-hub-gcc.webp",
-    link: "https://linktr.ee/icphubgcc",
-    coordinates: [25.276987, 55.296249],
-  },
+  
+  
+  
   {
     name: "ICP.Hub Germany",
     location: "Germany",
@@ -129,15 +78,7 @@ const hubs: Hub[] = [
     link: "https://linktr.ee/icphubgermany",
     coordinates: [51.1657, 10.4515],
   },
-  {
-    name: "ICP.Hub Singapore",
-    location: "Singapore",
-    description:
-      "Advocating digital innovation by harnessing the power of Web3 regional entrepreneurs, venture capitalists and community to realise the mass adoption of the BigFile's decentralized cloud and blockchain services.",
-    image: "/img/community/icp-hub-singapore.webp",
-    link: "https://linktr.ee/interlink3",
-    coordinates: [1.3521, 103.8198],
-  },
+  
   {
     name: "ICP.Hub Bulgaria",
     location: "Balkans (Bulgaria)",
