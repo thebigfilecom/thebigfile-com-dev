@@ -104,7 +104,7 @@ const subnavItems = [
     items: [
       {
         label: "Awesome BigFile",
-        href: "https://github.com/thebigfilecom/awesome-internet-computer#readme",
+        href: "https://github.com/thebigfilecom/awesome-big-file#readme",
       },
       { label: "Sample Code", to: "/samples" },
       {
@@ -182,11 +182,7 @@ const marketingNav = {
               href: "/roadmap",
               description: "Milestones and what’s next",
             },
-            {
-              name: "BigFile on YouTube",
-              href: "https://www.youtube.com/",
-              description: "Watch & Learn",
-            },
+            
           ],
           featured: {
             title: "Blockchain for Sustainable Business",
@@ -203,24 +199,20 @@ const marketingNav = {
               description: "Transforming the Cloud & Document",
             },
             {
-              name: "BigFile as a Bitcoin L2",
+              name: "BigFile as a Bitcoin",
               href: "/bitcoin-integration",
               description: "Bringing smart contracts to Bitcoin",
             },
             {
-              name: "BigFile as an Ethereum sidechain",
+              name: "BigFile as a Ethereum",
               href: "/ethereum-integration",
               description: "Native ETH on BigFile",
             },
-            {
-              name: "HTTPS Outcalls",
-              href: "/https-outcalls",
-              description: "Connecting smart contracts to Web2",
-            },
+            
           ],
           featured: {
-            title: "Connect without oracles",
-            href: "/https-outcalls",
+            title: "Connect BIG Wallet",
+            href: "/big-wallet",
             image: "/img/nav/featured-capabilities.webp",
           },
         },
@@ -352,20 +344,10 @@ const marketingNav = {
               description: "Get inspired by existing projects",
             },
             {
-              name: "Motoko Playground",
-              href: "https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/",
-              description: "Learn the BigFile native language",
-            },
-            {
               name: "Programming languages",
 
               description: "BigFile supports multiple languages",
               href: "/docs/current/developer-docs/smart-contracts/write/overview",
-            },
-            {
-              name: "Hackathons",
-              description: "Join like-minded hackers",
-              href: "https://thebigfile.com/hackathons",
             },
           ],
           featured: {
@@ -400,69 +382,58 @@ const marketingNav = {
       ],
     },
     {
-      name: "Participate",
-      auxItems: [
+      "name": "Participate",
+      "auxItems": [
         {
-          name: "Community grants",
-          href: "https://thebigfile.com/community-grants/",
+          "name": "Community grants",
+          "href": "https://thebigfile.com/community-grants/"
         },
         {
-          name: "Help & Support",
-          href: "https://support.thebigfile.com/",
-        },
+          "name": "Help & Support",
+          "href": "https://support.thebigfile.com/"
+        }
       ],
-
-      sections: [
+      "sections": [
         {
-          name: "Get Involved",
-          items: [
+          "name": "Get Involved",
+          "items": [
             {
-              name: "BigFile community",
-              href: "/community",
-              description: "Join the global community",
+              "name": "BigFile community",
+              "href": "/community",
+              "description": "Join the global community"
             },
             {
-              name: "Sovereign network",
-              href: "/node-providers",
-              description: "Become a node provider",
+              "name": "Sovereign network",
+              "href": "/node-providers",
+              "description": "Become a node provider"
             },
             {
-              name: "Events",
-              href: "/events",
-              description: "Meet fellow Web3 enthusiasts",
-            },
-            {
-              name: "Community Blog",
-              href: "https://bigfile.medium.com/",
-              description: "Keep up to date",
-            },
+              "name": "Community Blog",
+              "href": "https://bigfile.medium.com/",
+              "description": "Keep up to date"
+            }
           ],
           featured: {
-            title: "OLYMPUS",
-            subtitle: "The On-Chain Acceleration Platform",
-            href: "/olympus",
-            image: "/img/nav/featured-olympus.webp",
-          },
-        },
+            title: "",
+            subtitle: "",
+            href: "",
+            image: ""
+          }
+        }
       ],
-
-      socialIcons: [
+      "socialIcons": [
         {
-          label: "BigFile Forum",
-          href: "https://forum.thebigfile.com/",
-          iconUrl: "/img/svgIcons/purple/forum.svg",
-        },
-      ],
+          "label": "BigFile Forum",
+          "href": "https://forum.thebigfile.com/",
+          "iconUrl": "/img/svgIcons/purple/forum.svg"
+        }
+      ]
     },
   ],
   auxItems: [
     {
       name: "BigFile Dashboard",
       href: "https://dashboard.thebigfile.com/",
-    },
-    {
-      name: "Developer Grants",
-      href: "https://thebigfile.com/grants",
     },
     {
       name: "Help & Support",

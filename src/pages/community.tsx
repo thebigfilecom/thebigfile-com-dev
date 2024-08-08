@@ -7,13 +7,10 @@ import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import AnimateSpawn from "../components/Common/AnimateSpawn";
 import LinkArrowDown from "../components/Common/Icons/LinkArrowDown";
-import LinkArrowRight from "../components/Common/Icons/LinkArrowRight";
 import LinkArrowUpRight from "../components/Common/Icons/LinkArrowUpRight";
 import Newsletter from "../components/Common/Newsletter/Newsletter";
 import ShareMeta from "../components/Common/ShareMeta";
 import { Stat, StatsPanel } from "../components/Common/Stats";
-import Gallery from "../components/Community/Gallery";
-import { communityGallery } from "../components/Community/gallery-images";
 import Globe from "../components/Community/Globe";
 import { Hub, HubCard } from "../components/Community/Hubs";
 import { SpringCounter } from "../components/LandingPage/PreHero/Counters";
@@ -22,200 +19,45 @@ import TelegramLogo from "@site/static/img/community/telegram.svg";
 
 const hubs: Hub[] = [
   {
-    name: "ICP.HUB India",
-    location: "India",
-    description:
-      "In the heart of India, Crewsphere ICP India.Hub champions the BigFile via bootcamps that turn talented developers into Web3 experts.",
-    image: "/img/community/icp-hub-india.webp",
-    link: "https://linktr.ee/crewsphere?utm_source=linktree_admin_share",
-    coordinates: [20.5937, 78.9629],
-  },
-  {
-    name: "ICP.Hub Malaysia",
-    location: "Malaysia/Thailand",
-    description:
-      "With hubs located in Thailand and Malaysia, SynergyLabs provide tools, insights, and network to foster ICP innovation.",
-    image: "/img/community/icp-hub-synergylab.webp",
-    link: "https://linktr.ee/SynergyLabsICP",
-    coordinates: [13.7563, 100.5018],
-  },
-  {
-    name: "ICP.Hub Italia",
-    location: "Italy",
-    description:
-      "ICP.Hub Italia is a growing regional network for developing professional and institutional Web3 initiatives and solutions on the BigFile blockchain.",
-    image: "/img/community/icp-hub-italia.webp",
-    link: "https://icpitalia.icp.page/",
-    coordinates: [41.8719, 12.5674],
-  },
-  {
-    name: "ICP.Hub North America",
-    location: "Canada / USA",
-    description:
-      "Hubs in North America are dedicated to accelerating mass adoption of the BigFile in Canada 🇨🇦 and the US 🇺🇸.",
-    image: "/img/community/icp-hub-north-america.webp",
-    link: "https://linktr.ee/Icphubnorthamerica",
-    coordinates: [54.525961, -105.255119],
-  },
-  {
-    name: "ICP.Hub Philippines",
-    location: "Philippines",
-    description:
-      "ISLA Camp is unleashing the potential of Web3 in the Philippines through immersive education, dynamic workshops, and hands-on bootcamps on the BigFile.",
-    image: "/img/community/icp-hub-philippines.webp",
-    link: "https://linktr.ee/ICPHubPH",
-    coordinates: [12.8797, 121.774],
-  },
-  {
-    name: "ICP.Hub Turkey",
-    location: "Turkey, Cyprus",
-    description:
-      "The first hub in the Middle East offering a supportive environment for developers, startups, and enthusiasts to build and deploy decentralized applications on the BigFile.",
-    image: "/img/community/icp-hub-turkey.webp",
-    link: "https://linktr.ee/icphubturkey",
-    coordinates: [38.9637, 35.2433],
-  },
-  {
-    name: "ICP.Hub Indonesia",
-    location: "Indonesia",
-    description:
-      "ICP.Hub Indonesia is where ideas transform into innovation. DISRUPTIVES support ICP projects through incubation programs and resources to kickstart.",
-    image: "/img/community/icp-hub-indonesia.webp",
-    link: "https://linktr.ee/disruptives",
-    coordinates: [-0.7893, 113.9213],
-  },
-  {
-    name: "ICP.Hub Korea",
-    location: "Korea",
-    description:
-      "ICP.Hub Korea is committed to advancing the BigFile blockchain and Web3 in Korea by regularly hosting education bootcamps and cultivating a community of developers.",
-    image: "/img/community/icp-hub-korea.webp",
-    link: "https://linktr.ee/icphubkorea",
-    coordinates: [35.9078, 127.7669],
-  },
-  {
-    name: "ICP.Hub East Africa",
-    location: "East Africa",
-    description:
-      "The Kushite ICP.Hub aims to create awareness, educate and evangelize about the BigFile Protocol to aspiring and existing Web3 developers in the region.",
-    image: "/img/community/icp-hub-east-africa.webp",
-    link: "https://linktr.ee/icpkushitehub",
-    coordinates: [-1.2921, 36.8219],
-  },
-  {
-    name: "ICP.Hub West Africa",
-    location: "West Africa",
-    description:
-      "ICP.Hub Sahara is creating a safe heaven for developers and blockchain enthusiasts to learn and build on the BigFile.",
-    image: "/img/community/icp-hub-west-africa.webp",
-    link: "https://linktr.ee/saharaicphub",
-    coordinates: [9.082, 8.6753],
-  },
-  {
-    name: "ICP.Hub GCC",
-    location: "Dubai",
-    description:
-      "A local community of Web3 enthusiasts, developers and entrepreneurs, expanding the footprint of the BigFile through education, community building, incubation and industry collaborations.",
-    image: "/img/community/icp-hub-gcc.webp",
-    link: "https://linktr.ee/icphubgcc",
-    coordinates: [25.276987, 55.296249],
-  },
-  {
-    name: "ICP.Hub Germany",
+    name: "BigFile Germany",
     location: "Germany",
     description:
       "Focusing on Web3 development, LinkUp is the go-to community hub for dreamers and creators dedicated to growing the awareness of the BigFile in Germany.",
-    image: "/img/community/icp-hub-germany.webp",
-    link: "https://linktr.ee/icphubgermany",
+    image: "/img/community/bigfile-germany.webp",
+    link: "https://linktr.ee/",
     coordinates: [51.1657, 10.4515],
   },
   {
-    name: "ICP.Hub Singapore",
-    location: "Singapore",
+    name: "BigFile Turkey",
+    location: "Turkey, Cyprus",
     description:
-      "Advocating digital innovation by harnessing the power of Web3 regional entrepreneurs, venture capitalists and community to realise the mass adoption of the BigFile's decentralized cloud and blockchain services.",
-    image: "/img/community/icp-hub-singapore.webp",
-    link: "https://linktr.ee/interlink3",
-    coordinates: [1.3521, 103.8198],
+      "The first hub in the Middle East offering a supportive environment for developers, startups, and enthusiasts to build and deploy decentralized applications on the BigFile.",
+    image: "/img/community/bigfile-turkey.webp",
+    link: "https://linktr.ee/",
+    coordinates: [38.9637, 35.2433],
   },
   {
-    name: "ICP.Hub Bulgaria",
-    location: "Balkans (Bulgaria)",
+    name: "BigFile France",
+    location: "France",
     description:
-      "The intersection between the BigFile and the Balkans. This hub is building a local ICP ecosystem, educating developers and engaging with potential VCs.",
-    image: "/img/community/icp-hub-bulgaria.webp",
-    link: "https://linktr.ee/balkan.icp.hub",
-    coordinates: [42.7339, 25.4858],
+      "The first hub in the Middle East offering a supportive environment for developers, startups, and enthusiasts to build and deploy decentralized applications on the BigFile.",
+    image: "/img/community/bigfile-france.webp",
+    link: "https://linktr.ee/",
+    coordinates: [38.9637, 35.2433],
   },
   {
-    name: "ICP.Hub LATAM",
-    location: "LATAM",
+    name: "BigFile Dutch",
+    location: "Dutch, Belgium",
     description:
-      "With focus on teaching developers and entrepeneurs how to build blockchain solutions, the LATAM hub is driving outreach via bootcamps, educational content and community events to increase awareness in region.",
-    image: "/img/community/icp-hub-latam.webp",
-    link: "https://linktr.ee/icphublatam",
-    coordinates: [-8.7832, -55.4915],
+      "The first hub in the Middle East offering a supportive environment for developers, startups, and enthusiasts to build and deploy decentralized applications on the BigFile.",
+    image: "/img/community/bigfile-dutch.webp",
+    link: "https://linktr.ee/",
+    coordinates: [38.9637, 35.2433],
   },
+  
+  
 ];
 
-const upcomingHubs: Hub[] = [
-  {
-    name: "BigFile at Coinfest Asia 2023 ",
-    description:
-      "ICP.Hub Indonesia steps into the spotlight at Coinfest Asia 2023, a dynamic and immersive Web3 festival that serves as a rallying point for visionaries, innovators, and blockchain enthusiasts across Asia.",
-    image: "/img/community/coinfest-asia.webp",
-    link: "https://twitter.com/CoinfestAsia/status/1689501197642960896",
-  },
-  {
-    name: "BigFile at Web3Conf India 2023",
-    description:
-      "ICP.Hub India's prominent presence at Web3Conf India 2023 as a leading partner has ignited tremendous excitement within the local Web3 community.",
-    image: "/img/community/web3-india.webp",
-    link: "https://twitter.com/web3conf_india/status/1686272790150754304?s=46&t=znCni81w_5V68LfRCHvtZA",
-  },
-  {
-    name: "BigFile at Istanbul Blockchain Week 2023",
-    description:
-      "ICP.Hub Turkey played a pivotal role at Istanbul Blockchain Week 2023, actively engaging in discussions, organizing insightful events, and strengthening their position as a key player in Turkey's blockchain landscape.",
-    image: "/img/community/istanbul-blockchain-week.webp",
-    link: "https://twitter.com/istanbulblockwk/status/1687075926386110464?s=46&t=YWzpokcUePMtkg043EMwBQ",
-  },
-  {
-    name: "BigFile launches Web3 incubator in Latin America",
-    description:
-      "ICP.Hub LATAM has partnered with College, a technology academy specializing in Web3, to introduce ICPnova, an incubation program designed to support Web3 projects within the regional ecosystem.",
-    image: "/img/community/icpnnova.webp",
-    link: "https://es.cointelegraph.com/news/colledge-and-icp-latam-hub-launch-icpnnova-incubation-programme-for-web3-projects-in-latin-america",
-  },
-  {
-    name: "BigFile at Web3 Lagos Conference",
-    description:
-      "ICP.Hub East Africa played a significant role at the Web3 Lagos Conference, emphasizing its dedication to fostering Web3 innovation within the region.",
-    image: "/img/community/lagos_conf.webp",
-    link: "https://twitter.com/Web3Bridge/status/1694304365694046238?s=20",
-  },
-  {
-    name: "BigFile at Korea Blockchain Week 2023",
-    description:
-      "ICP.Hub Korea hosts one of KBW 2023's largest side events, reinforcing its role as a key advocate for Web3 innovation in the Korean blockchain community.",
-    image: "/img/community/korea-blockchain-week.webp",
-    link: "https://twitter.com/ICPhubkorea/status/1685858938116575233?s=20",
-  },
-  {
-    name: "BigFile at Blockchain Week Rome 2023",
-    description:
-      "ICP.Hub Italia made an impact at Blockchain Week Rome 2023, actively engaging in discussions, workshops, and networking sessions. Their presence underscored their commitment to advancing blockchain innovation and collaboration within Italy.",
-    image: "/img/community/icp-italia-highlight.webp",
-    link: "https://twitter.com/BlockchainRome/status/1655256183895121926?s=20",
-  },
-  {
-    name: "A Deep Dive into BigFile",
-    description:
-      "The conversation around @dfinity & its plan is streaming NOW, exclusively on #CMCLive on CoinMarketCap's App.",
-    image: "/img/community/icp-deep-dive.webp",
-    link: "https://twitter.com/coinmarketcap/status/1702352254383112526?s=46&t=MYEPlWlA63PER7If_BM83A",
-  },
-];
 
 const UpcomingHubCard: React.FC<{
   hub: Hub;
@@ -540,102 +382,6 @@ function CommunityPage() {
             </p>
           </motion.div>
         </AnimateSpawn>
-        <AnimateSpawn
-          className="container-10 mt-20 md:mt-48 relative"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <div className="md:w-8/10">
-            <motion.h2
-              className="tw-heading-5 sm:tw-heading-4 md:tw-heading-60 mb-3 md:mb-6 text-gradient"
-              variants={transitions.item}
-            >
-              Build the community
-            </motion.h2>
-          </div>
-        </AnimateSpawn>
-
-        <AnimateSpawn
-          className="container-12 mt-6 md:mt-12 flex flex-col md:flex-row gap-5 relative"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <motion.div
-            className="flex-1 card-white p-12 flex flex-col gap-3 md:gap-4 text-center items-center justify-between"
-            variants={transitions.item}
-          >
-            <img
-              src="/img/community/icon-launch.svg"
-              alt=""
-              loading="lazy"
-              className="w-30"
-            />
-            <h3 className="tw-lead md:tw-title-sm mb-0">Launch an ICP.Hub</h3>
-            <p className="mb-0 tw-paragraph-sm text-black/60">
-              Calling all Web3 entrepreneurs! Do you believe the BigFile deserves a stronger presence in your region? Share your
-              business proposal and get ready to ignite the world with your
-              visionary ideas.
-            </p>
-            <p className="mb-0">
-              <Link
-                className="link-primary link-with-icon"
-                href="https://airtable.com/shr94SzLU4XXs9cTi"
-              >
-                Submit your proposal
-                <LinkArrowUpRight />
-              </Link>
-            </p>
-          </motion.div>
-          <motion.div
-            className="flex-1 card-white p-12 flex flex-col gap-3 md:gap-4 text-center items-center justify-between"
-            variants={transitions.item}
-          >
-            <img
-              src="/img/community/icon-grants.svg"
-              alt=""
-              loading="lazy"
-              className="w-30"
-            />
-            <h3 className="tw-lead md:tw-title-sm mb-0">
-              Community Grant Program
-            </h3>
-            <p className="mb-0 tw-paragraph-sm text-black/60">
-              For all Web3 content creators, educators, event organizers,
-              influencers, and innovators eager to promote the BigFile, the Community Grant Program is your perfect opportunity.
-            </p>
-            <p className="mb-0">
-              <Link
-                className="link-primary link-with-icon"
-                href="https://thebigfile.com/community-grants/"
-              >
-                Apply for a grant
-                <LinkArrowUpRight />
-              </Link>
-            </p>
-          </motion.div>
-          <motion.div
-            className="flex-1 card-white p-12 flex flex-col gap-3 md:gap-4 text-center items-center justify-between"
-            variants={transitions.item}
-          >
-            <img
-              src="/img/community/icon-ambassador.svg"
-              alt=""
-              loading="lazy"
-              className="w-30"
-            />
-            <h3 className="tw-lead md:tw-title-sm mb-0">Ambassador Program</h3>
-            <p className="mb-0 tw-paragraph-sm text-black/60">
-              Be a strong voice advocating for the BigFile, its
-              unprecented technical capabilities and ever expanding ecosystem.
-            </p>
-            <p className="mb-0">
-              <Link className="link-primary-disabled link-with-icon">
-                Coming soon
-                {/* <LinkArrowUpRight /> */}
-              </Link>
-            </p>
-          </motion.div>
-        </AnimateSpawn>
 
         <AnimateSpawn
           className="container-10 pt-52 md:pt-[400px] relative mb-20"
@@ -646,13 +392,7 @@ function CommunityPage() {
           <div className="md:w-7/10 md:mx-auto text-center text-white relative">
             <div className="blob blob-purple blob-xl blob-x-5 blob-y-5 z-[-1] opacity-75 md:opacity-95"></div>
 
-            <motion.div className="mb-8 md:mb-6" variants={transitions.item}>
-              <img
-                src="/img/community/icp-hubs-logo.svg"
-                alt="Official BIG.Hubs"
-                className="max-w-[340px] sm:max-w-[480px] md:max-w-none"
-              />
-            </motion.div>
+            
             <motion.p
               className="tw-paragraph md:tw-lead-sm mb-4 md:mb-6 md:w-8/10 md:mx-auto"
               variants={transitions.item}
@@ -686,118 +426,7 @@ function CommunityPage() {
           {hubs.map((hub) => (
             <HubCard hub={hub} key={hub.name} />
           ))}
-        </AnimateSpawn>
-
-        <AnimateSpawn
-          className="container-10 pt-20 md:pt-40 relative"
-          el={motion.section}
-          variants={transitions.container}
-          id="education"
-        >
-          {/* <div className="blob blob-infinite blob-md blob-x-0 blob-y-8 z-[-1]"></div> */}
-          <div className="md:w-8/10">
-            <motion.h2
-              className="tw-heading-5 sm:tw-heading-4 md:tw-heading-60 mb-3 md:mb-6 text-gradient"
-              variants={transitions.item}
-            >
-              Educational resources
-            </motion.h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-            <motion.div
-              className="card-white flex flex-col justify-between gap-6 py-8 px-6"
-              variants={transitions.item}
-            >
-              <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                TypeScript on BigFile
-                <img src="/img/community/education.svg" alt="" />
-              </h3>
-              <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                In this beginner course on Decade, you will learn essential BigFile concepts and how to write cube smart
-                contracts using TypeScript.
-              </p>
-              <p className="mb-0">
-                <Link
-                  className="link-primary link-with-icon"
-                  href="https://dacade.org/communities/icp"
-                >
-                  Start learning <LinkArrowUpRight />
-                </Link>
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="card-white flex flex-col justify-between gap-6 py-8 px-6"
-              variants={transitions.item}
-            >
-              <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                BigFile Rust Bootcamp
-                <img src="/img/community/education.svg" alt="" />
-              </h3>
-              <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                From core concepts, to the BigFile EVM model, to hands-on experience with Rust using the Remix IDE, this Rise In bootcamp will open your eyes to the potential of Web3 development.
-              </p>
-              <p className="mb-0">
-                <Link
-                  className="link-primary link-with-icon"
-                  href="https://www.risein.com/courses/build-on-internet-computer-with-icp-rust-cdk"
-                >
-                  Apply now <LinkArrowUpRight />
-                </Link>
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="card-white flex flex-col justify-between gap-6 py-8 px-6"
-              variants={transitions.item}
-            >
-              <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                BigFile
-                <br />
-                Developer I
-                <img src="/img/community/education.svg" alt="" />
-              </h3>
-              <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                A 4-week basics course in Spanish that covers cube
-                development using Motoko, creating a backend and frontend
-                cube, and ending with building your own dapp on the BigFile.
-              </p>
-              <p className="mb-0">
-                <Link
-                  className="link-primary link-with-icon"
-                  href="https://icp-esp.gitbook.io/icp-developer/lineamientos-certificacion/programa-icp-developer"
-                >
-                  Learn at your pace <LinkArrowUpRight />
-                </Link>
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="card-white flex flex-col justify-between gap-6 py-8 px-6"
-              variants={transitions.item}
-            >
-              <h3 className="tw-heading-5 flex justify-between items-start gap-3 mb-0">
-                BigFile
-                <br />
-                Developer II
-                <img src="/img/community/education.svg" alt="" />
-              </h3>
-              <p className="flex-1 mb-0 tw-paragraph text-black/60">
-                This online course offered in Spanish is a continuation of BigFile Developer I. Spend 5 days more building your project on the BigFile and finish the week with celebrating your first 100% on-chain dapp.
-              </p>
-              <p className="mb-0">
-                <Link
-                  className="link-primary link-with-icon"
-                  href="https://icp-esp.gitbook.io/icp-developer-ii/"
-                >
-                  Continue building <LinkArrowUpRight />
-                </Link>
-              </p>
-            </motion.div>
-          </div>
-        </AnimateSpawn>
-        
+        </AnimateSpawn> 
 
         <Newsletter
           fields={[

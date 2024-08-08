@@ -25,7 +25,7 @@ To get started:
 
 1. Open the project folder for the example you want to use.
 
-1. Start a local internet computer replica by running the following command:
+1. Start a local bigfile replica by running the following command:
 
     ```
     dfx start

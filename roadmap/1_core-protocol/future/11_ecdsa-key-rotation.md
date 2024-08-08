@@ -2,7 +2,7 @@
 title: ECDSA key rotation and resharing
 links:
   Forum Link: https://forum.thebigfile.com/
-eta: 2025
+eta: 2026
 is_community: true
 in_beta: false
 ---

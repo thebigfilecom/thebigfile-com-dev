@@ -73,8 +73,8 @@ function InternetIdentityPage() {
           <div className="container-12 relative">
             <div className="text-center md:w-5/10 relative md:absolute top-0 sm:top-40 md:top-0 translate-y-24 sm:translate-y-10 md:-translate-y-1/2 right-0 -mt-30 md:-mt-30">
               <img
-                src="/img/internet-identity/internet-identity-hero.webp"
-                alt="Start building on Internet Identity"
+                src="/img/internet-identity/big-wallet-hero.webp"
+                alt="Start building on BIG Wallet"
                 className="w-full max-w-sm sm:max-w-[720px] md:max-w-none"
                 loading="lazy"
               />
@@ -150,7 +150,7 @@ function InternetIdentityPage() {
                 Once BigFile completes its integration with the Ethereum Virtual Machine, decentralized apps built on the Ethereum protocol will be able to integrate BIG Wallet and offer users from both ecosystems a convenient, secure, and private way to log in and share verifiable credentials.
               </p>
             </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/internet-identity/image-6.webp">
+            <TranslatedLayout imageUrl="/img/internet-identity/image-3.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Easy integration
               </h3>
@@ -194,7 +194,7 @@ function InternetIdentityPage() {
               >
                 <div className="blob blob-purple blob-md blob-x-2 blob-y-3 z-0 opacity-50"></div>
                 <img
-                  src="/img/internet-identity/astronaut-2.webp"
+                  src="/img/internet-identity/seamless-authentication.webp"
                   alt="Seamless authentication"
                   className="relative"
                   loading="lazy"
@@ -214,48 +214,6 @@ function InternetIdentityPage() {
                     framework. It removes the need for usernames and passwords
                     and replaces them with passkeys: registered devices like
                     smartphones or laptops and hardware wallets such as YubiKey or Ledger. To authenticate their identity, users simply connect with Internet Identity and unlock their device.
-                  </p>
-                </motion.div>
-              </div>
-            </AnimateSpawn>
-            <AnimateSpawn
-              className="md:mx-1/12 mt-24 md:mt-12 md:flex md:gap-1/10 md:items-center"
-              variants={transitions.container}
-            >
-              <motion.div
-                className="relative flex-[5] max-w-sm md:max-w-none md:order-2"
-                variants={transitions.fadeIn}
-              >
-                <div className="blob blob-white blob-md blob-x-8 blob-y-8 z-0 opacity-70"></div>
-                <img
-                  src="/img/internet-identity/astronaut-3.webp"
-                  alt="Verifiable credentials"
-                  loading="lazy"
-                />
-              </motion.div>
-
-              <div className="mt-6 md:mt-0 flex-[5] md:order-1">
-                <motion.h2
-                  className="tw-heading-4 mb-6 md:tw-heading-3"
-                  variants={transitions.item}
-                >
-                  Verifiable credentials
-                </motion.h2>
-                <motion.div variants={transitions.item}>
-                  <p className="mb-8 tw-lead-sm md:tw-lead text-white/80">
-                    Once a user registers for a credential, such as date of
-                    birth or nationality, they can reuse it with any apps they
-                    choose. To protect a user's privacy, BIG Wallet
-                    creates a temporary identifier when they share a credential, which prevents issuers and verifiers from tracking their activity across different apps.
-                  </p>
-                  <p className="mb-0">
-                    <Link
-                      href=""
-                      className="button-white pointer-events-none !text-black/30"
-                      aria-disabled
-                    >
-                      COMING SOON
-                    </Link>
                   </p>
                 </motion.div>
               </div>
@@ -493,7 +451,7 @@ function InternetIdentityPage() {
             },
             {
               label: "BigFile community events",
-              href: "/events",
+              href: "/community",
             },
             {
               label: "Dev docs",

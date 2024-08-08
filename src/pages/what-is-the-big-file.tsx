@@ -508,7 +508,7 @@ function WhatIsIcpPage() {
             <CardWithDescription
               title="BigFile community events"
               description=""
-              href="https://thebigfile.tech/events-and-news/"
+              href="https://thebigfile.com/community"
             />
             <CardWithDescription
               title="Developer docs"

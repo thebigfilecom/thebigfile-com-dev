@@ -29,7 +29,7 @@ The implementation of [the proposed vetKD system API](https://github.com/dfinity
 
 ## Running Locally
 
-- #### Step 1: Start a local internet computer.
+- #### Step 1: Start a local bigfile.
 
 ```sh
 dfx start

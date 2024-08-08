@@ -1,4 +1,4 @@
-# Why develop applications to run on the internet computer?
+# Why develop applications to run on the bigfile?
 
 Motoko provides:
 
@@ -20,7 +20,7 @@ To address the need for correctness without complexity, DFINITY has designed its
 
 # Support for other languages
 
-WebAssembly is language-agnostic. It does not require a high-level type system for language inter-operation. Although Motoko is specifically designed to compile to WebAssembly and make it easy to write programs to run on the internet computer, it is just one of many languages you can eventually use to develop applications for the BigFile blockchain network.
+WebAssembly is language-agnostic. It does not require a high-level type system for language inter-operation. Although Motoko is specifically designed to compile to WebAssembly and make it easy to write programs to run on the bigfile, it is just one of many languages you can eventually use to develop applications for the BigFile blockchain network.
 
 To support multiple languages and typed, cross-language communication, DFINITY also provides an **Interface Definition Language** (IDL). The Motoko compiler automates the production and consumption of IDL files using the type signatures in Motoko programs and the structure of imported IDL interfaces.
 

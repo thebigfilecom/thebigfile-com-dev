@@ -25,7 +25,7 @@ If you base your application on this example, we recommend you familiarize yours
 
 ## Demo
 
-1. Start a local internet computer.
+1. Start a local bigfile.
 
    ```text
    dfx start

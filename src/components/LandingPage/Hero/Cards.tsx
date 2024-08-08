@@ -57,7 +57,7 @@ export const CardsSection = () => {
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">Start coding</h2>
       </CardWithImage>
 
-      <CardWithImage href="/events" image="/img/home/events-card.webp">
+      <CardWithImage href="/community" image="/img/home/events-card.webp">
         <div className="tw-heading-7 md:tw-heading-6 mb-2">BIG.Lab</div>
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">
           Meet the community worldwide
