@@ -47,7 +47,7 @@ Verify the following before running this demo:
 
 ## Install
 
-### Step 1: Start a local internet computer.
+### Step 1: Start a local bigfile.
 
 ```bash
 dfx start

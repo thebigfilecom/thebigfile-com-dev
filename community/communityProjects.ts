@@ -175,7 +175,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 10,
     title: "ICMaps",
-    body: "ICMaps brings maps to the internet computer. With the ICMaps frontend you can install your own map server provided by ICMaps on Cube and integrate maps into Web3, Web2 and even desktop GIS apps.",
+    body: "ICMaps brings maps to the bigfile. With the ICMaps frontend you can install your own map server provided by ICMaps on Cube and integrate maps into Web3, Web2 and even desktop GIS apps.",
     links: {
       github: "https://github.com/stumpigit/icmaps",
       livePreview: "https://discord.gg/PruV4RxD9S",
@@ -1137,7 +1137,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 68,
     title: "dfx agent",
-    body: "A easy way to learn & execute internet computer dfx commands.",
+    body: "A easy way to learn & execute bigfile dfx commands.",
     links: {
       github: "https://github.com/samshi/dfx-agent",
       external: "https://supernova.devpost.com/submissions/333096-dfx-agent",
@@ -1390,7 +1390,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 85,
     title: "Fundnation",
-    body: "Fast, secure, decentralized and affordable crowdfunding application powered by internet computer blockchain.",
+    body: "Fast, secure, decentralized and affordable crowdfunding application powered by bigfile blockchain.",
     links: {
       github: "https://github.com/Fundnation/Fund-Raiser",
       livePreview: "https://jwj2d-5aaaa-aaaap-aahha-cai.ic0.app/",
@@ -1470,7 +1470,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 90,
     title: "Polaris",
-    body: "Polaris, a fully transparent internet computer based social trading platform.",
+    body: "Polaris, a fully transparent bigfile based social trading platform.",
     links: {
       github: "https://github.com/nijna/polaris",
       livePreview:
@@ -1838,7 +1838,7 @@ const communityProjects: SampleItem[] = [
   {
     index: 112,
     title: "Q messaging system",
-    body: "Q is an uncensored open source messaging system.Q is written in the Motoko language of internet computer ICP.One of the aims is to give a unified identity to the multitude of anonymous people.",
+    body: "Q is an uncensored open source messaging system.Q is written in the Motoko language of bigfile ICP.One of the aims is to give a unified identity to the multitude of anonymous people.",
     links: {
       github: "https://github.com/metaquid/Q-messaging-system",
       livePreview: "https://meize-wiaaa-aaaan-qamyq-cai.ic0.app/",

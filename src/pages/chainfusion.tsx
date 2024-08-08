@@ -1052,7 +1052,7 @@ pub enum MultiGetLogsResult {
             variants={transitions.container}
           >
             <CardWithDescription
-              title="BigFile as a Bitcoin L2"
+              title="BigFile as a Bitcoin"
               description=""
               href="/bitcoin-integration"
             />

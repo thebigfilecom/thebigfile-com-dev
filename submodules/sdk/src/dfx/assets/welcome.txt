@@ -1,6 +1,6 @@
 
 ===============================================================================
-        Welcome to the internet computer developer community!
+        Welcome to the bigfile developer community!
                         You're using dfx {0}
 
 {1}

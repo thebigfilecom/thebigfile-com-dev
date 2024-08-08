@@ -104,7 +104,7 @@ const subnavItems = [
     items: [
       {
         label: "Awesome BigFile",
-        href: "https://github.com/thebigfilecom/awesome-internet-computer#readme",
+        href: "https://github.com/thebigfilecom/awesome-big-file#readme",
       },
       { label: "Sample Code", to: "/samples" },
       {
@@ -203,12 +203,12 @@ const marketingNav = {
               description: "Transforming the Cloud & Document",
             },
             {
-              name: "BigFile as a Bitcoin L2",
+              name: "BigFile as a Bitcoin",
               href: "/bitcoin-integration",
               description: "Bringing smart contracts to Bitcoin",
             },
             {
-              name: "BigFile as an Ethereum sidechain",
+              name: "BigFile as a Ethereum",
               href: "/ethereum-integration",
               description: "Native ETH on BigFile",
             },

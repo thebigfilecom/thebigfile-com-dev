@@ -144,26 +144,7 @@ const cardsData: CardData[] = [
   },
 ];
 
-const dePinCardsData: CardData[] = [
-  {
-    title: "Loka Mining",
-    description:
-      "Loka is a platform that enables retail investors to acquire BTC at a lower-than-market price by providing liquidity to Bitcoin miners without any exposure to centralized party risk using the trustless non-custodial escrow and fully decentralized mining pool.",
-    image: "/img/features/nns_image.webp",
-    href: "https://lokamining.com",
-    refText: "Learn more",
-    imageSide: "right",
-  },
-  {
-    title: "RentSpace",
-    description:
-      "RentSpace is pioneering the future of property rentals by harnessing the power of blockchain technology and Web3 innovations. Their mission is to revolutionize the real estate industry by providing features like Tik-Tok-style video marketing, crypto and fiat payment integrations, collaborative booking, and action-based rewards programs.",
-    image: "/img/features/sns_image.webp",
-    href: "https://rentb.space",
-    refText: "Learn more",
-    imageSide: "left",
-  },
-];
+
 
 const smallCardsData = [
   {
@@ -483,83 +464,9 @@ function FeaturesPage() {
             </motion.p>
           </SingleCard>
         </section>
-        <AnimateSpawn
-          className="container-10 text-white relative mt-20 md:mt-64 mb-32 md:mb-20"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <motion.div
-            variants={transitions.fadeIn}
-            className="
-            z-[-1]
-            blob
-            blob-purple 
-            blob-md md:blob-lg
-            blob-center
-          "
-          ></motion.div>
-          <div className="md:w-8/10  mx-auto text-center">
-            <motion.h2
-              className="tw-heading-3 md:tw-heading-60 mb-3 md:mb-6"
-              variants={transitions.item}
-            >
-              BIG as a DePIN Network
-            </motion.h2>
-            <motion.p
-              className="tw-lead-sm  md:tw-lead mb-0"
-              variants={transitions.item}
-            >
-              Decentralized physical infrastructure networks (DePINs) are
-              blockchain protocols that build, maintain, and operate hardware
-              infrastructure in an open and decentralized manner. The BigFile is one of the leading DePIN networks, hosted by special
-              node machines dedicated to creating a sovereign network, governed
-              by an advanced DAO. Cube smart contracts can rent compute and
-              storage on the network.
-            </motion.p>
-          </div>
-        </AnimateSpawn>
 
-        <section className="container-12 grid md:grid-cols-2 gap-5">
-          {dePinCardsData.map((card, index) => (
-            <SplitCard
-              key={index}
-              className="md:col-span-2"
-              imageSide={card.imageSide}
-              image={
-                <img
-                  className={card.imageSide === "right" ? "float-right" : null}
-                  src={card.image}
-                  alt=""
-                  loading="lazy"
-                ></img>
-              }
-            >
-              <motion.h3
-                className="tw-heading-4 md:tw-heading-3 mb-4"
-                variants={transitions.item}
-              >
-                {card.title}
-              </motion.h3>
-              <motion.p
-                className="tw-paragraph md:tw-lead-sm mb-0 text-black-60 mb-6"
-                variants={transitions.item}
-              >
-                {card.description}
-              </motion.p>
-              {card.refText && card.href && (
-                <motion.p className="mb-0" variants={transitions.item}>
-                  <Link
-                    href={card.href}
-                    className="tw-heading-6 flex gap-2 items-center"
-                  >
-                    <RightPointer className="w-6 h-6"></RightPointer>
-                    {card.refText}
-                  </Link>
-                </motion.p>
-              )}
-            </SplitCard>
-          ))}
-        </section>
+
+        
         <AnimateSpawn
           className="container-10 text-white relative mb-20 mt-44  md:mt-56"
           el={motion.section}

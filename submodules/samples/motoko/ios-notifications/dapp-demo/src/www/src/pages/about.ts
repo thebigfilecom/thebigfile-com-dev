@@ -4,7 +4,7 @@ import { Page, PageOptions } from "../types";
 const content = (homeUrl: string) => html`<div class="container">
   <h2>About</h2>
   <p>
-  This dapp is one of the examples available on possible integrations with the internet computer, 
+  This dapp is one of the examples available on possible integrations with the bigfile, 
   for more examples check the <a href="https://github.com/dfinity/examples">examples repository</a>.
   </p>
   <br /><br />
