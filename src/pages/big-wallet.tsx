@@ -73,8 +73,8 @@ function InternetIdentityPage() {
           <div className="container-12 relative">
             <div className="text-center md:w-5/10 relative md:absolute top-0 sm:top-40 md:top-0 translate-y-24 sm:translate-y-10 md:-translate-y-1/2 right-0 -mt-30 md:-mt-30">
               <img
-                src="/img/internet-identity/internet-identity-hero.webp"
-                alt="Start building on Internet Identity"
+                src="/img/internet-identity/big-wallet-hero.webp"
+                alt="Start building on BIG Wallet"
                 className="w-full max-w-sm sm:max-w-[720px] md:max-w-none"
                 loading="lazy"
               />
