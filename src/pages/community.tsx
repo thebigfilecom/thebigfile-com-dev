@@ -104,20 +104,20 @@ const stats: {
   ],
 
   [
-    { title: "University Collaborations", value: "32", fallbackValue: "" },
-    { title: "Network Entrepreneurs", value: "2000", fallbackValue: "" },
-    { title: "New Users Accounts", value: "25000", fallbackValue: "" },
+    { title: "University Collaborations", value: "0", fallbackValue: "" },
+    { title: "Network Entrepreneurs", value: "50", fallbackValue: "" },
+    { title: "New Users Accounts", value: "500", fallbackValue: "" },
   ],
 
   [
-    { title: "Ecosystem Partnerships", value: "12", fallbackValue: "" },
+    { title: "Ecosystem Partnerships", value: "1", fallbackValue: "" },
     { title: "Conference Appearances", value: "15", fallbackValue: "" },
-    { title: "Incubated Projects", value: "60", fallbackValue: "" },
+    { title: "Incubated Projects", value: "2", fallbackValue: "" },
   ],
   [
     { title: "Hackathons Held", value: "5", fallbackValue: "" },
     { title: "Education Courses", value: "4", fallbackValue: "" },
-    { title: "Devs Trained", value: "600", fallbackValue: "" },
+    { title: "Devs Trained", value: "10", fallbackValue: "" },
   ],
 ];
 

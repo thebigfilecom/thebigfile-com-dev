@@ -70,7 +70,7 @@ function SustainabilityPage() {
                 </p>
                 <div className="mt-8">
                   <Link
-                    href="/blockchain_for_sustainable_business_use_cases.pdf"
+                    href="/"
                     target="_blank"
                     className="link-white link-with-icon"
                     download
