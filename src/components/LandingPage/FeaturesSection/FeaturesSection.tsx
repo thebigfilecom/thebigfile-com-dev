@@ -165,7 +165,7 @@ const FeaturesSection = () => {
             faster to market
           </p>
           <p className="mb-0">
-            <span className="tw-heading-5">$5 / GB / year</span>
+            <span className="tw-heading-5">$3 / GB / year</span>
           </p>
         </motion.div>
       </AnimateSpawn>
