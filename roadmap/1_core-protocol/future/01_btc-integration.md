@@ -1,13 +1,13 @@
 ---
-title: Direct Bitcoin Integration
+title: BigFile Node BIG Testnet
 links:
-  Forum Link: https://forum.thebigfile.com/
+  Forum Link: https://forum.thebigfile.com/t/bigfile-node-big-testnet/17
   Proposal: https://dashboard.thebigfile.com/
-  BIG Wiki: https://wiki.thebigfile.com/wiki/Bitcoin_integration
-  Documentation: https://thebigfile.com/bitcoin-integration
-eta: 2025
+  BIG Wiki: https://wiki.thebigfile.com/wiki/
+  Documentation: https://thebigfile.com/docs/current/home
+eta: Q1 2025
 is_community: false
 in_beta: false
 ---
 
-Direct integration of the BigFile with the Bitcoin blockchain enables cube smart contracts to receive, hold and transfer bitcoin. With this feature, neither additional trust assumptions, nor additional parties, such as bridges, are required. Bitcoin integration relies on threshold ECDSA signatures that make it possible for a subnet to sign on behalf of a cube with a secret-shared key.
+BigFile blockchain source: Client/Replica software run by nodes. BigFile is a blockchain that runs at web speed and can continuously increase its capacity. It consists of many nodes connected to the TCP/IP protocol, like Bitcoin and Ethereum. You can review detailed explanations on the Forum and Wiki. BIG Node will receive continuous software updates and these updates will be shared with you.
