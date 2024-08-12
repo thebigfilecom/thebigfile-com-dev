@@ -67,7 +67,7 @@ export const sampleItems: SampleItem[] = [
     contentType: ["code samples", "documentation"],
     body: "BIG-ETH verifies ETH NFTs, supports main/test nets.",
     links: {
-      github: "https://github.com/thebigfilecom/ic-eth-starter",
+      github: "https://github.com/dfinity/ic-eth-starter",
       docs: "/docs/current/tutorials/developer-journey/level-5/5.1-BIG-ETH-tutorial",
       youtube: "https://www.youtube.com/watch?v=",
     },
@@ -87,8 +87,49 @@ export const sampleItems: SampleItem[] = [
     },
   },
 
+  {
+    index: 2,
+    title: "OISY",
+    image: "/img/samples/oisy.png",
+    domains: ["Multi-chain"],
+    languages: ["rust"],
+    level: "advanced",
+    contentType: ["community repo"],
+    body: "Oisy Wallet: Multichain, ICP-based, manages ETH/ERC20, extendable to BTC/BIG.",
+    links: {
+      github: "https://github.com/dfinity/oisy-wallet",
+    },
+  },
 
-  
+  {
+    index: 3,
+    title: "PoS app for ckBTC",
+    image: "/img/samples/pos-app-for-ckbtc.webp",
+    domains: ["Multi-chain"],
+    languages: ["motoko"],
+    level: "advanced",
+    contentType: ["code samples", "documentation"],
+    body: "Experimental app showcasing ckBTC use on BigFile for POS payments.",
+
+    links: {
+      motoko: "https://github.com/dfinity/examples/tree/master/motoko/ic-pos",
+    },
+  },
+
+  {
+    index: 4,
+    title: "ICRC2 Swap Demo",
+    image: "/img/samples/icrc2-swap-demo.png",
+    domains: ["Multi-chain"],
+    languages: ["motoko"],
+    level: "advanced",
+    contentType: ["code samples", "documentation"],
+    body: "BIGRC-2 Swap demo: Manages BIGRC-2 tokens, unique in async BigFile design.",
+    links: {
+      motoko:
+        "https://github.com/dfinity/examples/tree/master/motoko/icrc2-swap",
+    },
+  },
 
   {
     index: 5,
@@ -279,7 +320,20 @@ export const sampleItems: SampleItem[] = [
       youtube: "https://youtu.be/fLbaOmH24Gs",
     },
   },
-  
+  {
+    index: 16,
+    title: "NFT Minting",
+    image: "/img/samples/nftMinting.png",
+    domains: ["Metaverse and NFTs", "GameFi"],
+    languages: ["rust"],
+    level: "intermediate",
+    contentType: ["code samples", "documentation", "tutorial", "videos"],
+    body: "Create a user generated NFT and share it. This dapp uses the DIP721 NFT standard.",
+    links: {
+      rust: "https://github.com/dfinity/examples/tree/master/rust/dip721-nft-container",
+      youtube: "https://youtu.be/1po3udDADp4",
+    },
+  },
   {
     index: 17,
     title: "Basic DAO",
@@ -296,7 +350,29 @@ export const sampleItems: SampleItem[] = [
       youtube: "https://youtu.be/3IcYlieA-EE",
     },
   },
-  
+  {
+    index: 18,
+    title: "Encrypted note-taking",
+    image: "/img/samples/encryptedNoteTaking.png",
+    domains: ["Website"],
+    languages: ["motoko", "rust", "javascript"],
+    level: "advanced",
+    contentType: [
+      "code samples",
+      "documentation",
+      "videos",
+      "live demos",
+      "tutorial",
+    ],
+    body: "Create, access and modify confidential notes from multiple devices using Internet Identity and end-to-end encryption.",
+    links: {
+      motoko:
+        "https://github.com/dfinity/examples/tree/master/motoko/encrypted-notes-dapp/src/encrypted_notes_motoko",
+      rust: "https://github.com/dfinity/examples/tree/master/motoko/encrypted-notes-dapp/src/encrypted_notes_rust",
+      livePreview: "https://cvhrw-2yaaa-aaaaj-aaiqa-cai.ic0.app/",
+      youtube: "https://youtu.be/DZQmtPSxvbs",
+    },
+  },
   {
     index: 19,
     title: "Token transfer",

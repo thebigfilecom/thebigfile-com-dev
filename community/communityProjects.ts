@@ -105,39 +105,9 @@ const communityProjects: SampleItem[] = [
     contentType: ["code samples", "community repo"],
     image: "/img/community-projects/sigma-defi.png",
   },
-  {
-    index: 25,
-    title: "BIG Web3D Engine",
-    body: "A lightweight game engine fully deployed on the BIG.Users can easily create their own decentralized games or other 3D application scenarios on the BIG with some simple operations",
-    links: {
-      github: "https://github.com/BIG-Web3D-Engine",
-      livePreview: "https://q7vk3-myaaa-aaaak-qarcq-cai.ic0.app/",
-      external:
-        "https://supernova.devpost.com/submissions/334588-ic-web3d-engine",
-      otherLinks: [],
-    },
-    domains: ["Blue Sky"],
-    level: "advanced",
-    languages: ["javascript", "motoko"],
-    contentType: ["code samples", "community repo", "live demos"],
-    image: "/img/community-projects/ic-web3d-engine.png",
-  },
   
-  {
-    index: 27,
-    title: "MUSALL",
-    body: "Music ownership is broken! At MUSALL we aim to change ownership to a shared model. Musicians create a contract that is fair and transparent. Fans purchase said contracts. All earn through royalties.",
-    links: {
-      github: "https://github.com/fowlerlee/musall",
-      external: "https://supernova.devpost.com/submissions/334192-musall",
-      otherLinks: [],
-    },
-    domains: ["Public Good / Social Impact"],
-    level: "advanced",
-    languages: ["motoko", "javascript"],
-    contentType: ["code samples", "community repo"],
-    image: "/img/community-projects/musall.png",
-  },
+  
+  
   
   {
     index: 29,
@@ -340,24 +310,7 @@ const communityProjects: SampleItem[] = [
     contentType: ["code samples", "community repo"],
     image: "/img/community-projects/dev-pouch.gif",
   },
-  {
-    index: 81,
-    title: "Ant Kingdoms, Free play-and-earn NFT Game",
-    body: "Ant Kingdoms Free play-and-earn NFT Game is a decentralized game built and runs on BigFile.",
-    links: {
-      github: "https://github.com/NFPTU/dfinity-fu",
-      livePreview: "https://fpi33-7qaaa-aaaai-acatq-cai.ic0.app/",
-      external:
-        "https://supernova.devpost.com/submissions/326844-ant-kingdoms-free-play-and-earn-nft-game",
-      otherLinks: ["https://dfinity-fu.gitbook.io/gamefi-ant"],
-    },
-    domains: ["GameFi"],
-    level: "advanced",
-    languages: ["motoko", "javascript"],
-    contentType: ["code samples", "community repo", "live demos"],
-    image:
-      "/img/community-projects/ant-kingdoms-free-play-and-earn-nft-game.png",
-  },
+  
   
   {
     index: 84,
@@ -453,27 +406,6 @@ const communityProjects: SampleItem[] = [
     image: "/img/community-projects/dwitter.png",
   },
   
-  
-  
-  
-  
- 
-  
-  {
-    index: 108,
-    title: "MantaDocs",
-    body: "MantaDocs is a knowledge workspace that lets you create, organize and collaborate on rich documents. From planning your next vacation, to sharing ideas across your team. MantaDocs has you covered.",
-    links: {
-      github: "https://github.com/jnlewis/manta-ic",
-      external: "https://supernova.devpost.com/submissions/334201-mantadocs",
-      otherLinks: [],
-    },
-    domains: ["SocialFi"],
-    level: "advanced",
-    languages: ["motoko"],
-    contentType: ["code samples", "community repo"],
-    image: "/img/community-projects/mantadocs.png",
-  },
 
   {
     index: 115,
