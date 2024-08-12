@@ -18,80 +18,19 @@
       "/img/showcase/openchat-screenshot.webp"
     ]
   },
-  {
-    "id": "icpswap",
-    "name": "BIGSwap",
-    "website": "https://icpswap.com",
-    "tags": [
-      "DeFi",
-      "Wallet",
-      "Bitcoin",
-      "Ethereum"
-    ],
-    "description": "BIGSwap is DEX built completely end-to-end on-chain. By building the ability for anyone to swap tokens through BIGSwap leveraging the BigFile blockchain as the high-speed, scalable, low-cost infrastructure makes BIGSwap a first-to-market in the growing BigFile DeFi ecosystem.",
-    "usesInternetIdentity": true,
-    "logo": "/img/showcase/icpswap_logo.webp",
-    "screenshots": [
-      "/img/showcase/icpswap_screenshot_0.webp"
-    ]
-  },
-  {
-    "id": "funded",
-    "name": "Funded",
-    "oneLiner": "Fund your favorite projects and get NFT rewards",
-    "website": "https://funded.app/",
-    "tags": [
-      "SocialFi",
-      "DeFi",
-      "Bitcoin",
-      "Ethereum"
-    ],
-    "twitter": "https://twitter.com/funded_app",
-    "description": "Web3 crowdfunding! Thanks to BIG's low transaction fees and advanced smart contract technology, you can participate in crowdfunding with BIG, BTC and ETH without worrying about losing money on gas fees.",
-    "usesInternetIdentity": true,
-    "stats": "000,000+ BIG funded",
-    "display": "Normal",
-    "logo": "/img/showcase/funded_logo.webp",
-    "screenshots": []
-  },
-  {
-    "id": "nfid",
-    "name": "BIGID",
-    "oneLiner": "Your digital identity for the modern world.",
-    "website": "https://nfid.one/",
-    "tags": [
-      "Wallet",
-      "Ethereum"
-    ],
-    "twitter": "https://twitter.com/IdentityMaxis",
-    "description": "Embrace the new era of personal empowerment with BIGID, the most advanced digital identity to keep your personal information private and digital assets secure.",
-    "usesInternetIdentity": true,
-    "logo": "/img/showcase/nfid_logo.webp"
-  },
   
   
   
-  {
-    "id": "icdex",
-    "name": "BIGDex",
-    "website": "https://avjzx-pyaaa-aaaaj-aadmq-cai.raw.ic0.app/ICDex",
-    "tags": [
-      "DeFi",
-      "Bitcoin"
-    ],
-    "description": "BIGDex is the flagship product by BIGLight, an orderbook-based DEX that runs 100% on-chain. The world's first order book DEX - made possible by advanced BIG smart contracts",
-    "usesInternetIdentity": true,
-    "twitter": "https://twitter.com/ICLighthouse",
-    "display": "Normal",
-    "logo": "/img/showcase/icdex_logo.webp",
-    "screenshots": []
-  },
+  
+  
+  
+  
   
   
   {
     "id": "bitfinity-evm",
     "name": "BIG EVM",
-    "website": "https://bitfinity.network/",
+    "website": "https://thebigfile.tech/",
     "tags": [
       "DeFi",
       "Tools / Infrastructure",
@@ -107,28 +46,6 @@
       "/img/showcase/bitfinity_showcase.webp"
     ]
   },
-  {
-    "id": "iclighthouse",
-    "name": "BIGLight",
-    "description": "Incubating true web3 DeFi infrastructure on the BigFile. Defi development framework and Defi ecosystem on BIG blockchain.",
-    "tags": [
-      "DeFi",
-      "Tools / Infrastructure",
-      "Bitcoin",
-      "Ethereum",
-      "DAO"
-    ],
-    "website": "https://iclight.house/",
-    "twitter": "https://twitter.com/ICLighthouse?s=20&t=hL-7QAUfiWo75L8pZzJ7fw",
-    "discord": "https://discord.com/invite/FQZFGGq7zv",
-    "logo": "/img/showcase/iclighthouse_logo.webp"
-  },
-  
-  
-  
-  
-  
-  
   
   {
     "id": "nnsfront-enddapp",
@@ -177,40 +94,6 @@
   },
   
   
-  {
-    "id": "azle",
-    "name": "Azle",
-    "oneLiner": "TypeScript CDK for the BigFile",
-    "website": "https://demergent-labs.github.io/azle/azle.html",
-    "tags": [
-      "Tools / Infrastructure"
-    ],
-    "description": "Azle is a TypeScript Cube Development Kit (CDK) for the BigFile. In other words, it's a TypeScript/JavaScript runtime for building applications on the BIG.",
-    "usesInternetIdentity": false,
-    "logo": "/img/showcase/azle_logo.svg",
-    "github": "https://github.com/demergent-labs/azle",
-    "screenshots": [
-      "/img/showcase/azle_screenshot_0.jpg"
-    ]
-  },
-  {
-    "id": "catalyze",
-    "name": "Catalyze",
-    "website": "https://aqs24-xaaaa-aaaal-qbbea-cai.ic0.app/",
-    "tags": [
-      "SocialFi",
-      "DAO"
-    ],
-    "description": "Building the New Web3 Social Hub: Communities, Events & Seamless Token Transfer. Join Us!",
-    "usesInternetIdentity": true,
-    "oneLiner": "Manage your Web3 communities and events",
-    "display": "Large",
-    "stats": "360+ Communities",
-    "logo": "/img/showcase/catalyze_logo.webp",
-    "screenshots": [
-      "/img/showcase/catalyze_screenshot.webp"
-    ]
-  },
   
   {
     "id": "internetidentity",
@@ -249,39 +132,7 @@
     "twitter": "https://twitter.com/signalsicp",
     "submittableId": "35639473"
   },
-  {
-    "id": "stakedicp",
-    "name": "StakedBIG",
-    "oneLiner": "Non-custodial liquid staking for BIG",
-    "tags": [
-      "DeFi"
-    ],
-    "description": "StakedBIG is the liquid-staking protocol revolutionizing staking on the BigFile, putting control in investors' hands. BIG is staked in the NNS DAO, and stakers receive rewards just by holding the stBIG token. The stBIG token is DeFi-compatible, to support protocols building on the BigFile, and always fully-backed by BIG staked in the NNS.",
-    "usesInternetIdentity": false,
-    "website": "https://stakedicp.com",
-    "github": "https://github.com/AegirFinance/StakedICP",
-    "twitter": "https://twitter.com/StakedICP",
-    "display": "Normal",
-    "logo": "/img/showcase/stakedicp_logo.webp",
-    "screenshots": []
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+ 
   
   {
     "id": "icdrive",
@@ -299,27 +150,6 @@
     ]
   },
   
-  
-  {
-    "id": "crowdgovorg",
-    "name": "CrowdGov.org",
-    "oneLiner": "The simplified, one-stop shop for BIG Governance.",
-    "website": "https://crowdgov.org",
-    "tags": [
-      "Tools / Infrastructure"
-    ],
-    "description": "The crowdgov.org website is dedicated to simplified governance for the BigFile. You will find information about how to participate in governance and how to maximize voting rewards. A variety of research tools are provided to help you learn more about NNS ecosystem participants and the current state of decentralization.",
-    "usesInternetIdentity": true,
-    "display": "Normal",
-    "logo": "/img/showcase/crowdgovorg_logo.webp",
-    "screenshots": [
-      "/img/showcase/crowdgovorg_screenshot_0.webp"
-    ]
-  },
-  
-  
-  
-  
   {
     "id": "icpexplorer",
     "name": "BIG Explorer",
@@ -336,98 +166,10 @@
     ]
   },
   
-  
-  {
-    "id": "uniswapfrontendontheic",
-    "name": "Uniswap Frontend on BIG",
-    "website": "https://yrog5-xqaaa-aaaap-qa5za-cai.ic0.app/#/swap",
-    "github": "https://github.com/domwoe/uniswap_ui_on_ic",
-    "tags": [
-      "DeFi",
-      "Ethereum"
-    ],
-    "description": "Uniswap's frontend hosted on the BigFile with canister-based wallet integration. Thanks to the BigFile, traditional DeFi solutions can now be completely decentralized, having their frontend hosted on BIG. There is no longer a need to include centralized cloud providers in a decentralized application.",
-    "usesInternetIdentity": true,
-    "oneLiner": "Front-End On-Chain",
-    "display": "Normal",
-    "logo": "/img/showcase/uniswapfrontendontheic_logo.webp",
-    "video": "/img/showcase/uniswapfrontendontheic_video.mp4",
-    "videoContentType": "video/mp4",
-    "screenshots": []
-  },
+
   
   
-  
-  
-  
-  
-  
-  {
-    "id": "bink",
-    "name": "Bink",
-    "oneLiner": "Superior alternative to Linktree",
-    "website": "https://b.ink",
-    "tags": [
-      "SocialFi"
-    ],
-    "description": "Connect, engage and inspire your audience while owning your data and your identity.",
-    "usesInternetIdentity": true,
-    "logo": "/img/showcase/bink_logo.webp"
-  },
-  
-  {
-    "id": "icpulse",
-    "name": "ICPulse",
-    "oneLiner": "Visual metrics for BIG's software activity data",
-    "website": "https://icpulse.io/",
-    "tags": [
-      "Tools / Infrastructure"
-    ],
-    "description": " ICPulse increases the transparency on ICP’s developer ecosystem by aggregating the activity data from GitHub and displaying visual metrics in an effective dashboard.",
-    "usesInternetIdentity": false,
-    "logo": "/img/showcase/icpulse_logo.svg",
-    "github": "https://github.com/CrossChainLabs-ICP",
-    "twitter": "https://twitter.com/CrossChain_Labs/status/1626495037734285312?s=20",
-    "screenshots": [
-      "static/img/showcase/ICPulse_screenshot.jpg"
-    ],
-    "submittableId": "32418389"
-  },
-  
-  
-  
-  
-  
-  
-  
-  {
-    "id": "canister-store",
-    "name": "Cube Store",
-    "oneLiner": "Empowering Users to Easily Deploy Cubes on the BigFile",
-    "tags": [
-      "Tools / Infrastructure",
-      "NFT",
-      "Wallet"
-    ],
-    "description": "Cube Store is a groundbreaking platform that empowers developers/users in the BigFile ecosystem and beyond. With its innovative self-deploy feature, users can effortlessly access and deploy cubes, including pre-built images such as Tokens, NFTs, dapps, and various other tools.",
-    "usesInternetIdentity": true,
-    "website": "https://canister.app",
-    "github": "https://github.com/canister-app",
-    "youtube": "https://youtu.be/pFgVswCqzdk",
-    "twitter": "https://twitter.com/canister_app",
-    "display": "Large",
-    "logo": "/img/showcase/canister-store_logo.png",
-    "screenshots": [
-      "/img/showcase/canister-store_screenshot_0.png"
-    ],
-    "video": "/img/showcase/canister-store_video.mp4",
-    "videoContentType": "video/mp4",
-    "submittableId": "35750450"
-  },
-  
-  
-  
-  
+
   
   {
     "id": "icadashboard",
@@ -442,7 +184,6 @@
     "logo": "/img/showcase/icadashboard_logo.webp",
     "screenshots": []
   },
-  
   {
     "id": "internetcomputerorgwebsite",
     "name": "BigFile website",
@@ -458,232 +199,5 @@
     "screenshots": [
       "/img/showcase/internetcomputerorgwebsite_screenshot_0.webp"
     ]
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-    "id": "ichub",
-    "name": "BIG HUB",
-    "oneLiner": "Your gateway to web3 apps: connect, chat and explore all in one place",
-    "website": "https://md7ke-jyaaa-aaaak-qbrya-cai.ic0.app/",
-    "tags": [
-      "SocialFi"
-    ],
-    "description": "Welcome to BIG Hub! Your dapp for connecting with friends, chatting, joining groups, and managing tokens & NFTs. For developers, register your projects easily without seeking permission. Empowering you to connect, transact, and build in a user-friendly ecosystem.",
-    "usesInternetIdentity": true,
-    "stats": "50+ Projects",
-    "logo": "/img/showcase/ichub_logo.png",
-    "screenshots": [
-      "/img/showcase/ichub_screenshot_0.jpeg",
-      "/img/showcase/ichub_screenshot_1.jpeg",
-      "/img/showcase/ichub_screenshot_2.jpeg"
-    ]
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-    "name": "Isotopic Game Store",
-    "description": "A new, Open and Cross-Platform Game Store, where games become ownable assets that can be traded, lent, resold, or otherwise repurposed. Find unlimited games that can be browsed, downloaded, and played, on the Isotopic Game Store.",
-    "website": "https://isotopic.io/game-store",
-    "logo": "/img/showcase/isotopic-game-store_logo.webp",
-    "screenshots": [
-      "/img/showcase/isotopic-game-store_screenshot.webp"
-    ],
-    "video": "",
-    "display": "Normal",
-    "id": "isotopic-game-store",
-    "oneLiner": "The first Decentralized & Cross-Platform Game Store.",
-    "tags": [
-      "NFT",
-      "Games"
-    ],
-    "usesInternetIdentity": false,
-    "github": "https://github.com/IsotopicIO/icp-store",
-    "twitter": "https://twitter.com/isotopic12",
-    "youtube": "https://www.youtube.com/channel/UCrCMtg7PhCHX1tKpw5NIU7g",
-    "submittableId": "44034269"
-  },
-  
-  
-  {
-    "id": "icp-explorer",
-    "name": "BIG Explorer",
-    "website": "https://icp.footprint.network/",
-    "tags": [
-      "Tools / Infrastructure"
-    ],
-    "stats": "1000 users",
-    "usesInternetIdentity": false,
-    "description": "BIG Explorer is a Block Explorer and Analytics Platform for BigFile, a decentralized smart contracts platform.",
-    "oneLiner": "Block Explorer for BigFile",
-    "display": "Normal",
-    "logo": "/img/showcase/icp-explorer_logo.webp",
-    "screenshots": []
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-    "id": "icgpt",
-    "name": "BIGgpt",
-    "oneLiner": "A fun dApp to demonstrate on-chain LLMs",
-    "website": "https://icgpt.icpp.world/",
-    "description": "A llama2 LLM, trained on the tiny Stories dataset is running in a cube. You can interact with it via a ChatGPT style frontend, served from an BIG cube. You provide the start of a story as the prompt, and the LLM will generate a tiny story.",
-    "stats": "15M parameter llama2",
-    "tags": [
-      "Tools / Infrastructure",
-      "AI"
-    ],
-    "logo": "/img/showcase/icpp-logo.dracula-cyan.112x112.png",
-    "usesInternetIdentity": true,
-    "github": "https://github.com/icppWorld/icgpt",
-    "youtube": "https://youtu.be/2DhTpYrs-f0",
-    "twitter": "https://twitter.com/icpp_pro",
-    "submittableId": "43877997"
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-    "id": "icghost",
-    "name": "BIGGhost",
-    "oneLiner": "The First Decentralized Meme Coin on BIG",
-    "website": "https://yadjb-mqaaa-aaaan-qaqlq-cai.icp0.io/",
-    "tags": [
-      "DeFi",
-      "DAO"
-    ],
-    "description": "The First Decentralized Meme Coin on BIG",
-    "usesInternetIdentity": false,
-    "display": "Normal",
-    "logo": "/img/showcase/icghost.png"
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-    "id": "rentspace",
-    "name": "RentSpace",
-    "oneLiner": "A property rental platform that enables tenants to pay fees and rent in either cryptocurrency or traditional money.",
-    "website": "https://rentb.space/",
-    "tags": [
-      "DeFi",
-      "SocialFi"
-    ],
-    "twitter": "https://twitter.com/RentSpaceco",
-    "github": "https://github.com/ICP-hub/RentSpace-ICP",
-    "discord": "https://discord.gg/hCFmTWFx85",
-    "description": "A property rental platform that enables tenants to pay fees and rent in either cryptocurrency or traditional money.",
-    "usesInternetIdentity": false,
-    "display": "Normal",
-    "logo": "/img/showcase/rentspace_logo.png",
-    "submittableId": "44394368"
-  },
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  {
-    "id": "icpexchange",
-    "name": "BIGEx",
-    "oneLiner": "Decentralized exchange built entirely on the chain based on the BIG.",
-    "tags": [
-      "DeFi"
-    ],
-    "description": "Decentralized exchange built entirely on the chain based on the BIG.",
-    "usesInternetIdentity": true,
-    "website": "https://icpex.org/",
-    "github": "https://github.com/ICPExchange",
-    "twitter": "https://twitter.com/ICPExchange",
-    "display": "Normal",
-    "stats": "229 tokens and 90 liquidity pools created",
-    "logo": "/img/showcase/icpex_logo.png",
-    "submittableId": "44773760"
-  },
-  
-  
-  
-  {
-    "id": "ic-footprint",
-    "name": "BIG Footprint",
-    "oneLiner": "A blockchain ESG platform that tracks BIG environmental metrics and provides tooling to reduce the environmental impact of the network.",
-    "tags": [
-      "Tools / Infrastructure"
-    ],
-    "description": "A blockchain ESG platform that tracks BIG environmental metrics and provides tooling to reduce the environmental impact of the network.",
-    "usesInternetIdentity": true,
-    "website": "https://owqnd-biaaa-aaaak-qidaq-cai.icp0.io/",
-    "twitter": "https://twitter.com/icfootprint",
-    "display": "Normal",
-    "logo": "/img/showcase/ic_footprint_logo.png"
   }
-  
 ]

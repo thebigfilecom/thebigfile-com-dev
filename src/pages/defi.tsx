@@ -478,7 +478,7 @@ function DefiPage() {
             <CardWithDescription
               title="ETH starter tutorial"
               description=""
-              href="/docs/current/tutorials/developer-journey/level-5/5.2-BIG-ETH-tutorial"
+              href="/docs/current/tutorials/developer-journey/level-5/5.1-BIG-ETH-tutorial"
             />
 
             <CardWithDescription

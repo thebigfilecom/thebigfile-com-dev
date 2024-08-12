@@ -68,8 +68,8 @@ export const sampleItems: SampleItem[] = [
     body: "BIG-ETH verifies ETH NFTs, supports main/test nets.",
     links: {
       github: "https://github.com/dfinity/ic-eth-starter",
-      docs: "/docs/current/tutorials/developer-journey/level-5/5.2-BIG-ETH-tutorial",
-      youtube: "https://www.youtube.com/watch?v=ZI5I36aioVw",
+      docs: "/docs/current/tutorials/developer-journey/level-5/5.1-BIG-ETH-tutorial",
+      youtube: "https://www.youtube.com/watch?v=",
     },
   },
 

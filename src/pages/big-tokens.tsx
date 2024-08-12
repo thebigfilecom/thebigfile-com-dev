@@ -378,84 +378,6 @@ function TokenHolders(): JSX.Element {
             </motion.p>
           </AnimateSpawn>
 
-          <AnimateSpawn
-            className="bg-infinite text-white"
-            el={motion.section}
-            variants={transitions.container}
-          >
-            <div className="container-10 py-20 md:pt-40 md:pb-44">
-              <div className="md:w-7/10">
-                <motion.h2
-                  className="tw-heading-4 md:tw-heading-3 mb-10"
-                  variants={transitions.item}
-                >
-                  Swap BTC for BIG on a DEX.
-                </motion.h2>
-                <motion.p
-                  className="tw-paragraph md:tw-lead-sm mb-0"
-                  variants={transitions.item}
-                >
-                  Directly fund a ckBTC wallet with BTC and swap it for BIG using any of these DEXs — all without centralized exchanges. This was made possible on the BigFile through native{" "}
-                  <Link
-                    className="text-white hover:text-white underline hover:cursor-pointer"
-                    href="/bitcoin-integration"
-                  >
-                    Bitcoin integration
-                  </Link>
-                  .
-                </motion.p>
-              </div>
-
-              <div className="mt-20 grid grid-cols-1 gap-5 text-black sm:grid-cols-2 md:grid-cols-[3fr_3fr_5fr]">
-                <motion.div className="" variants={transitions.item}>
-                  <Link
-                    className="bg-white/90 border border-white border-solid rounded-xl px-6 py-8 md:p-8 flex flex-col text-black hover:text-black hover:no-underline hover:-translate-y-3 transition-transform"
-                    href="https://icdex.io"
-                  >
-                    <img
-                      src="/img/showcase/icdex_logo.webp"
-                      loading="lazy"
-                      alt=""
-                      className="w-20 h-20"
-                    ></img>
-                    <h3 className="tw-heading-5 mb-2 mt-8">BIGDex</h3>
-                    <p className="tw-lead-sm mb-0 text-black/60">
-                      First orderbook-based DEX running fully on-chain. Bypass CEXs and get BIG or CHAT tokens for your BTC.{" "}
-                    </p>
-                  </Link>
-                </motion.div>
-                <motion.div className="" variants={transitions.item}>
-                  <Link
-                    className="bg-white/90 border border-white border-solid rounded-xl px-6 py-8 md:p-8 flex flex-col text-black hover:text-black hover:no-underline hover:-translate-y-3 transition-transform"
-                    href="https://icpswap.com"
-                  >
-                    <img
-                      src="/img/showcase/icpswap_logo.webp"
-                      loading="lazy"
-                      alt=""
-                      className="w-20 h-20"
-                    ></img>
-                    <h3 className="tw-heading-5 mb-2 mt-8">BIG.Swap</h3>
-                    <p className="tw-lead-sm mb-0 text-black/60">
-                      Offers the largest number of tokens on the BigFile. Trade meme coins or SNS DAO tokens.
-                    </p>
-                  </Link>
-                </motion.div>
-
-                <motion.div
-                  className="-mb-24 lg:mb-0 relative sm:text-center md:text-left sm:col-span-2 md:col-span-1"
-                  variants={transitions.fadeIn}
-                >
-                  <img
-                    src="/img/big-tokens/ckBTC-token-1.webp"
-                    alt=""
-                    loading="lazy"
-                    className="lg:absolute -top-20"
-                  />
-                </motion.div>
-              </div>
-            </div>
-          </AnimateSpawn>
           <section className="container-12 pt-20 md:pt-40">
             <AnimateSpawn
               className="text-center md:w-8/10 md:mx-auto"
@@ -502,14 +424,6 @@ function TokenHolders(): JSX.Element {
                     icon="/img/showcase/nnsfront-enddapp_logo.webp"
                   />
                   
-                  
-                  <WalletCard
-                    title="BIGChat"
-                    description="Chat accounts are crypto wallets. Send BIG, ckBTC and SNS tokens via messages."
-                    link="https://oc.app"
-                    icon="/img/showcase/openchat_logo.webp"
-                  />
-                  
                   <WalletCard
                     title="BIGID"
                     description="Web3 Identity. Every new account creates an untraceable hardware wallet."
@@ -525,24 +439,7 @@ function TokenHolders(): JSX.Element {
                   Mobile apps offer easy access to crypto assets for people who use them frequently.
                 </p>
                 <div className="space-y-4">
-                  <WalletCard
-                    title="Plug"
-                    description="Access ICP and other tokens, cycles and dapps in one click."
-                    link="https://plugwallet.ooo/"
-                    icon="/img/showcase/plug_logo.webp"
-                  />
-                  <WalletCard
-                    title="AstroX ME"
-                    description="ME wallet secures crypto assets without seed phrase across any device."
-                    link="https://astrox.me/"
-                    icon="/img/showcase/astroxme_logo.webp"
-                  />
-                  <WalletCard
-                    title="Klever"
-                    description="Multi-chain mobile wallet integrated with the ICP ledger."
-                    link="https://klever.io/"
-                    icon="/img/showcase/kleverio_logo.webp"
-                  />
+                  
                 </div>
 
                 <h3 className="tw-heading-5 mb-6 mt-16">
@@ -553,12 +450,7 @@ function TokenHolders(): JSX.Element {
                 </p>
 
                 <div className="space-y-4">
-                  <WalletCard
-                    title="Plug"
-                    description="Access ICP and other tokens, cycles and dapps in one click."
-                    link="https://plugwallet.ooo/"
-                    icon="/img/showcase/plug_logo.webp"
-                  />
+                  
                   
                 </div>
               </motion.div>
@@ -576,18 +468,7 @@ function TokenHolders(): JSX.Element {
                     link="https://support.ledger.com/hc/en-us/articles/4412643422481-Internet-Computer-ICP-?support=true"
                     icon="/img/showcase/ledger_logo.webp"
                   />
-                  <WalletCard
-                    title="AirGap"
-                    description="Turn your old smartphone into an air gapped crypto wallet."
-                    link="https://support.airgap.it/currencies/icp/introduction/"
-                    icon="/img/showcase/airgap_logo.webp"
-                  />
-                  <WalletCard
-                    title="Quill"
-                    description="Provides a command line tool to manage BIG in an air gapped computer."
-                    link="https://github.com/dfinity/quill"
-                    icon="/img/showcase/quill_logo.webp"
-                  />
+                  
                 </div>
                 <h3 className="tw-heading-5 mb-6 mt-16">
                   Institutional custody
