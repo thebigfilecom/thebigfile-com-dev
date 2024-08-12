@@ -177,7 +177,7 @@ function NodeProvidersPage() {
             <p className="tw-lead-sm mb-6 md:mb-10">
               If node providers are accepted into the community and their node
               machines are up and running, they receive rewards for their
-              services. Rewards are set by the NNS DAO, which follows the 30-day average price of ICP, and are distributed on the 15th of every month. The NNS DAO issues rewards depending on three main factors: generation of hardware (Gen 1 or Gen2), geographic location, and total number of nodes operated.
+              services. Rewards are set by the NNS DAO, which follows the 30-day average price of BIG, and are distributed on the 15th of every month. The NNS DAO issues rewards depending on three main factors: generation of hardware (Gen 1 or Gen2), geographic location, and total number of nodes operated.
             </p>
             <p className="mb-0">
               <Link
@@ -191,70 +191,7 @@ function NodeProvidersPage() {
               </Link>
             </p>
           </TranslatedLayout>
-          <TranslatedLayout
-            reverse={true}
-            imageUrl="/img/node-providers/hardware.webp"
-          >
-            <h2 className="tw-heading-3 md:tw-heading-60 md:mb-6">
-              The hardware
-            </h2>
-            <p className="tw-lead-sm mb-6 md:mb-10">
-              The BigFile network consist of two generations of node
-              machines — Gen 1 and Gen 2 — with standardized public hardware
-              specifications. Gen 1 hardware is vendor specific and used by node providers who joined the community before 2022. New Gen 2 node machines are generic to support VM memory encryption and
-              attestation, which will facilitate the future development of
-              features on the BigFile. While Gen 2 machines follow
-              generic specifications, a list of hardware configurations has been
-              validated by the community.
-            </p>
-            <p className="mb-0">
-              <Link
-                href="https://wiki.thebigfile.com/wiki/Node_Provider_Machine_Hardware_Guide"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-primary link-with-icon"
-              >
-                <LinkArrowRight />
-                See hardware guide
-              </Link>
-            </p>
-          </TranslatedLayout>
 
-          <TranslatedLayout imageUrl="/img/node-providers/sustainable.webp">
-            <h2 className="md:tw-heading-60 md:mb-6">
-              Climate friendly compute
-            </h2>
-            <p className="tw-lead-sm mb-6 md:mb-10">
-              A key goal of the BigFile is to provide an energy
-              efficient compute platform at low carbon costs without
-              compromising scalability and utility. Operating at 0.008 kW per
-              transaction, it is one of the most sustainable blockchains out
-              there, and has comparable energy consumption levels to traditional
-              software running on big tech cloud services. Instantaneous power
-              for each node is around 0.3 kW, which is roughly between 200 and
-              300 kWh a month, per node.
-            </p>
-            <p className="tw-lead-sm mb-6 md:mb-10">
-              The BigFile is also the first blockchain to join the
-              Proof of Green (PoG) initiative, which aims to set blockchain
-              industry standards by making ‘claims of green’ transparent,
-              verifiable and accountable through metrics and real-time
-              reporting. PoG is still in a pilot phase but a handful of nodes
-              and their carbon emissions are already represented on a live
-              dashboard. Further steps towards carbon footprint transparency are on the roadmap, including data sourcing, validation and incentive mechanisms.
-            </p>
-            <p className="mb-0">
-              <Link
-                href="https://dashboard.thebigfile.com/node/45huy-6h3k3-m7uao-7w4bu-dtcgx-4yxpc-s36gr-pq7k5-xesnw-vnjut-oae"
-                className="link-primary link-with-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkArrowRight />
-                Visit the live dashboard
-              </Link>
-            </p>
-          </TranslatedLayout>
         </section>
 
         <section className=" mt-20 md:mt-40 mb-30 md:mb-60">
