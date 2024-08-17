@@ -29,7 +29,7 @@
 </script>
 
 <main>
-	<img src="logo2.svg" alt="DFINITY logo" />
+	<img src="logo2.svg" alt="BigFile logo" />
 	<br />
 	<br />
 

@@ -14,7 +14,7 @@ const MyHello = () => {
   return (
     <div style={{ "fontSize": "30px" }}>
       <div style={{ "backgroundColor": "yellow" }}>
-        <p>Greetings, from DFINITY!</p>
+        <p>Greetings, from BigFile!</p>
         <p>
           {" "}
           Type your message in the Name input field, then click{" "}

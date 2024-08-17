@@ -63,7 +63,7 @@ The `remote` property makes sure that your project will _not_ create a copy of I
 
 ### Using the Auth-Client Library To Log In With Internet Identity
 
-DFINITY provides an [easy-to-use library (agent-js)](https://github.com/dfinity/agent-js) to log in with Internet Identity.
+BigFile provides an [easy-to-use library (agent-js)](https://github.com/dfinity/agent-js) to log in with Internet Identity.
 
 These are the steps required to log in and use the obtained identity for canister calls:
 

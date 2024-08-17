@@ -218,7 +218,7 @@ app.listen(8000, function () {
 </head>
 <body style="background-color:powderblue; text-align:center;">
   <div>
-    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/1X/a6d6c5b4e246cd075a009424601bc981b3086fb4.png" alt="DFINITY logo" />
+    <img src="https://global.discourse-cdn.com/business4/uploads/dfn/original/1X/a6d6c5b4e246cd075a009424601bc981b3086fb4.png" alt="BigFile logo" />
       <div> <label for="name">New value of variable</label>
         <input id="newValue" alt="New Value" type="number" />
         <button id="setBtn">Set and get!</button>

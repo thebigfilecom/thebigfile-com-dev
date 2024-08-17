@@ -108,7 +108,7 @@
       rel="noopener noreferrer"
       class="logo"
     >
-      <img src="images/dfinity.svg" alt="DFINITY logo" />
+      <img src="images/dfinity.svg" alt="BigFile logo" />
     </a>
     <ul>
       <li>

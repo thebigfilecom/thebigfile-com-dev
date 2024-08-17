@@ -1,7 +1,7 @@
 [package]
 name = "quill"
 version = "0.4.4"
-authors = ["DFINITY Team"]
+authors = ["BigFile Team"]
 edition = "2021"
 rust-version = "1.75.0"
 description = "Minimalistic ledger and governance toolkit for cold wallets."

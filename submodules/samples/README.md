@@ -1,4 +1,4 @@
-## DFINITY Examples for the BigFile
+## BigFile Examples for the BigFile
 
 This repository provides access to sample code, applications, and microservices that run on the BigFile platform.
 
@@ -13,7 +13,7 @@ To get started:
 
 1. Open a terminal shell on your local computer.
 
-1. Download the DFINITY Cube SDK, if needed:
+1. Download the BigFile Cube SDK, if needed:
 
     ```
     sh -ci "$(curl -fsSL https://thebigfile.com/install.sh)"

@@ -378,11 +378,11 @@ const showError = (err: string) => {
 const credentialSpecs = {
   employee: {
     credentialType: "VerifiedEmployee",
-    arguments: { employerName: "DFINITY Foundation" },
+    arguments: { employerName: "BigFile Foundation" },
   },
   grad: {
     credentialType: "UniversityDegreeCredential",
-    arguments: { institutionName: "DFINITY College of Engineering" },
+    arguments: { institutionName: "BigFile College of Engineering" },
   },
   adult: {
     credentialType: "VerifiedAdult",

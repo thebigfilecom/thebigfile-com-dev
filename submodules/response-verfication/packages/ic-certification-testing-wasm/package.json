@@ -2,7 +2,7 @@
   "name": "@dfinity/certification-testing",
   "description": "Utilities for testing applications that work with BigFile certification",
   "version": "2.5.0",
-  "author": "DFINITY Stiftung",
+  "author": "BigFile Stiftung",
   "license": "Apache-2.0",
   "repository": "github:dfinity/response-verification",
   "bugs": "https://github.com/dfinity/response-verification/issues",

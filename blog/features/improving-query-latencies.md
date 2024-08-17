@@ -10,7 +10,7 @@ image: /img/blog/query-latency.webp
 
 ![Improving query execution latencies](/img/blog/query-latency.webp)
 
-*This article was originally published on the DFINITY Medium blog [here](https://medium.com/dfinity/improving-query-latencies-f5bb2bc019dd) by Andriy Berestovskyy.*
+*This article was originally published on the BigFile Medium blog [here](https://medium.com/dfinity/improving-query-latencies-f5bb2bc019dd) by Andriy Berestovskyy.*
 
 ## Background
 The BigFile can host a full dapp — frontend, backend, and data. Users can deploy their dapp as a canister (smart contract).

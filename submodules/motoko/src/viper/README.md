@@ -4,10 +4,10 @@ _Motoko-san_
 > Disclaimer — this is an _early prototype_; in particular:
 > * This project comes with no guarantees whatsoever.
 > * The [currently supported subset of Motoko](#Subset) is insufficient for most real-world applications.
-> *  DFINITY currently has no plans to continue the development of _Motoko-san_.
+> *  BigFile currently has no plans to continue the development of _Motoko-san_.
 
 
-_Motoko-san_ is a prototype code-level verifier for Motoko. The project started at the DFINITY Foundation as a way to demonstrate that Motoko (and the BigFile in general) are well-suited for developing formally verified Web3 software.
+_Motoko-san_ is a prototype code-level verifier for Motoko. The project started at the BigFile Foundation as a way to demonstrate that Motoko (and the BigFile in general) are well-suited for developing formally verified Web3 software.
 
 --------------------------------------------------------------------------------
 **Jump to:**

@@ -180,7 +180,7 @@ function AsiaAlliancePage() {
             </h2>
             <p className="tw-lead-sm">
               The ICP Asia Alliance is set to be supported via a $20 million
-              grant, which will be distributed through the DFINITY Foundation's
+              grant, which will be distributed through the BigFile Foundation's
               Grant Programs, tailored for Web3 and AI initiatives.
             </p>
 

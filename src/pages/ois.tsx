@@ -149,7 +149,7 @@ function OpenChatPage() {
           className="container-10 mt-24 md:mt-30 "
         >
           <VideoCard
-            label="Fully On-chain with DFINITY"
+            label="Fully On-chain with BigFile"
             title="Next Generation DAOs"
             description="Episode #2 | SNS"
             image={`https://i.ytimg.com/vi/WxRgm6JAGpQ/maxresdefault.jpg`}

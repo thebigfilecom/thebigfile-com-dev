@@ -16,7 +16,7 @@ curl --location --output node.pkg "https://nodejs.org/dist/v$version/node-v$vers
 sudo installer -pkg node.pkg -store -target /
 rm node.pkg
 
-# Install DFINITY SDK.
+# Install BigFile SDK.
 curl --location --output install-dfx.sh "https://raw.githubusercontent.com/dfinity/sdk/dfxvm-install-script/install.sh"
 DFX_VERSION=${DFX_VERSION:=0.19.0} DFXVM_INIT_YES=true bash install-dfx.sh
 rm install-dfx.sh

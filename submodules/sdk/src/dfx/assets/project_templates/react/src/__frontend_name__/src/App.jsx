@@ -15,7 +15,7 @@ function App() {
 
   return (
     <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
+      <img src="/logo2.svg" alt="BigFile logo" />
       <br />
       <br />
       <form action="#" onSubmit={handleSubmit}>

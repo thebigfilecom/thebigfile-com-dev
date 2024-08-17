@@ -1,7 +1,7 @@
 {
   "name": "nft-wallet",
   "version": "0.1.0",
-  "description": "DFINITY BigFile NFT wallet",
+  "description": "BigFile BigFile NFT wallet",
   "keywords": [
     "BigFile",
     "Rust",

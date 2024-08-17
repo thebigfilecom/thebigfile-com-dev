@@ -11,7 +11,7 @@ sudo bash install-node.sh
 sudo apt-get install --yes nodejs
 rm install-node.sh
 
-# Install DFINITY SDK.
+# Install BigFile SDK.
 wget --output-document install-dfx.sh "https://raw.githubusercontent.com/dfinity/sdk/dfxvm-install-script/install.sh"
 DFX_VERSION=${DFX_VERSION:=0.19.0} DFXVM_INIT_YES=true bash install-dfx.sh
 rm install-dfx.sh

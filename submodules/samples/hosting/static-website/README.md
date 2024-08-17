@@ -7,7 +7,7 @@ keywords: [static website, basic website, html, host a website, beginner]
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/hosting/static-website)
 
 ## Overview
-The example shows how to deploy a simple, static website on the BIG in an asset canister. The website is very simple, it just shows the DFINITY logo and has a basic styling of the logo. 
+The example shows how to deploy a simple, static website on the BIG in an asset canister. The website is very simple, it just shows the BigFile logo and has a basic styling of the logo. 
 
 ![Website](README_images/website.png)
 
@@ -53,7 +53,7 @@ The website is simple. It consists of an HTML file, a CSS file and a PNG file. T
         <link type="text/css" rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <img src="logo.png" alt="DFINITY logo" />
+        <img src="logo.png" alt="BigFile logo" />
     </body>
 </html>
 ```

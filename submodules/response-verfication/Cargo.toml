@@ -41,7 +41,7 @@ default-members = [
 
 [workspace.package]
 version = "2.5.0"
-authors = ["DFINITY Stiftung"]
+authors = ["BigFile Stiftung"]
 edition = "2021"
 repository = "https://github.com/dfinity/response-verification"
 homepage = "https://github.com/dfinity/response-verification#readme"

@@ -24,10 +24,10 @@ To see a list of known problems with `dfx` or to report a problem you discovered
 
 ## Additional questions and feedback
 
-Joining the [DFINITY Developer Forum](https://forum.dfinity.org/) is an effective way to learn from community members, ask questions, solicit help from other developers, and provide insight and feedback about your experiences.
+Joining the [BigFile Developer Forum](https://forum.dfinity.org/) is an effective way to learn from community members, ask questions, solicit help from other developers, and provide insight and feedback about your experiences.
 
 If you have questions that aren’t answered by the community, you might also want to check out [Troubleshooting](/docs/current/developer-docs/smart-contracts/test/troubleshooting) topics for information about common issues, workarounds for known issues, or help troubleshooting warnings or errors.
 
-For technical support, send email to [DFINITY Support](mailto:support@dfinity.org).
+For technical support, send email to [BigFile Support](mailto:support@dfinity.org).
 
 A self-service Help Center of Knowledge Base articles will also be coming soon.

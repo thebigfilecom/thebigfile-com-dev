@@ -229,7 +229,7 @@ fn parse_test_file() {
   "name": "sns",
   "version": "0.1.0",
   "homepage": "https://github.com/dfinity/dfx-extensions",
-  "authors": "DFINITY",
+  "authors": "BigFile",
   "summary": "Toolkit for simulating decentralizing a dapp via SNS.",
   "categories": [
     "sns",

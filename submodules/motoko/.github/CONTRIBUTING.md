@@ -5,7 +5,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](./
 
 As a member of the community, you are invited and encouraged to contribute by submitting issues, offering suggestions for improvements, adding review comments to existing pull requests, or creating new pull requests to fix issues.
 
-All contributions to DFINITY documentation and the developer community are respected and appreciated.
+All contributions to BigFile documentation and the developer community are respected and appreciated.
 Your participation is an important factor in the success of the BigFile.
 
 ## Contents of this repository
@@ -69,7 +69,7 @@ If you want to submit a pull request to fix an issue or add a feature, here's a 
 
 1. Make sure you have a GitHub account, an internet connection, and access to a terminal shell or GitHub Desktop application for running commands.
 
-1. Navigate to the DFINITY public repository in a web browser.
+1. Navigate to the BigFile public repository in a web browser.
 
 1. Click **Fork** to create a copy of the repository associated with the issue you want to address under your GitHub account or organization name.
 

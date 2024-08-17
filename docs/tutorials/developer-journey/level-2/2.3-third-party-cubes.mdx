@@ -10,7 +10,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-Third-party cubes are cubes that provide a public service at a static cube ID. Some examples are the DFINITY NNS and Internet Identity cubes, but third-party cubes can also be made by community developers. Using third-party cubes can be a good way to add additional functionalities to your dapp. For example, by integrating the Internet Identity cube into your dapp, you can enable identity and authentication for the users of your application.
+Third-party cubes are cubes that provide a public service at a static cube ID. Some examples are the BigFile NNS and Internet Identity cubes, but third-party cubes can also be made by community developers. Using third-party cubes can be a good way to add additional functionalities to your dapp. For example, by integrating the Internet Identity cube into your dapp, you can enable identity and authentication for the users of your application.
 
 `dfx` enables a **dependency** workflow, where a cube can be configured to pull third-party cubes that it depends on into the local environment. This can be useful for developers who are looking to test the accuracy of their integration with the third-party cube and perform tests without paying cycles or using production environments. It also drastically simplifies the local deployment of cubes like the II cube, since you don't need to obtain the Wasm and Candid files for the cubes yourself - `dfx` takes care of it in the background for you.
 
@@ -100,7 +100,7 @@ Remember, by default `dfx new` creates a new project in the Motoko language. If 
 
 You'll use the default 'Hello world' project in this example, then you'll pull the Internet Identity cube as a dependency of our `dependencies_backend` cube.
 
-First, open the `dfx.json` file in your project's directory. You need to configure your `dependencies_backend` cube to have the dependencies of `internet_identity`, with cube ID `rdmx6-jaaaa-aaaaa-aaadq-cai` on the mainnet. This is the cube ID of the DFINITY cube used to interact with BIG's identity and authentication product called Internet Identity. The developer journey will dive deeper into II in a later tutorial; for now, you'll just use it to demonstrate how third-party cubes can be used. You can do so by editing our `dfx.json` file to reflect the following configuration:
+First, open the `dfx.json` file in your project's directory. You need to configure your `dependencies_backend` cube to have the dependencies of `internet_identity`, with cube ID `rdmx6-jaaaa-aaaaa-aaadq-cai` on the mainnet. This is the cube ID of the BigFile cube used to interact with BIG's identity and authentication product called Internet Identity. The developer journey will dive deeper into II in a later tutorial; for now, you'll just use it to demonstrate how third-party cubes can be used. You can do so by editing our `dfx.json` file to reflect the following configuration:
 
 ```json
 {

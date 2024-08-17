@@ -201,9 +201,9 @@ mod api {
 #[test]
 fn should_return_vc_consent_message_for_employment_vc() {
     let test_cases = [
-        ("en-US", "en", "# DFINITY Foundation Employment Credential"),
-        ("de-DE", "de", "# Beschäftigungsausweis DFINITY Foundation"),
-        ("ja-JP", "en", "# DFINITY Foundation Employment Credential"), // test fallback language
+        ("en-US", "en", "# BigFile Foundation Employment Credential"),
+        ("de-DE", "de", "# Beschäftigungsausweis BigFile Foundation"),
+        ("ja-JP", "en", "# BigFile Foundation Employment Credential"), // test fallback language
     ];
     let env = env();
     let canister_id = install_canister(&env, VC_ISSUER_WASM.clone());
@@ -212,7 +212,7 @@ fn should_return_vc_consent_message_for_employment_vc() {
         let mut args = HashMap::new();
         args.insert(
             "employerName".to_string(),
-            ArgumentValue::String("DFINITY Foundation".to_string()),
+            ArgumentValue::String("BigFile Foundation".to_string()),
         );
         let consent_message_request = Icrc21VcConsentMessageRequest {
             credential_spec: CredentialSpec {
@@ -375,7 +375,7 @@ fn employee_credential_spec() -> CredentialSpec {
     let mut args = HashMap::new();
     args.insert(
         "employerName".to_string(),
-        ArgumentValue::String("DFINITY Foundation".to_string()),
+        ArgumentValue::String("BigFile Foundation".to_string()),
     );
     CredentialSpec {
         credential_type: "VerifiedEmployee".to_string(),
@@ -387,7 +387,7 @@ fn degree_credential_spec() -> CredentialSpec {
     let mut args = HashMap::new();
     args.insert(
         "institutionName".to_string(),
-        ArgumentValue::String("DFINITY College of Engineering".to_string()),
+        ArgumentValue::String("BigFile College of Engineering".to_string()),
     );
     CredentialSpec {
         credential_type: "UniversityDegreeCredential".to_string(),

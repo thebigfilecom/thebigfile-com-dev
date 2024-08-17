@@ -1,6 +1,6 @@
 /**
  * Module     : common.mo
- * Copyright  : 2020 DFINITY Stiftung
+ * Copyright  : 2020 BigFile Stiftung
  * License    : Apache 2.0 with LLVM Exception
  * Stability  : stable
  */

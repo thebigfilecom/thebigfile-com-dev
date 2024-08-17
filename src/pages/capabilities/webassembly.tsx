@@ -220,7 +220,7 @@ function WebAssemblyPage() {
                 Bytecode Alliance
               </h3>
               <p className="tw-paragraph-sm mb-0 text-black/60">
-                DFINITY is a member of the Bytecode Alliance, an organization
+                BigFile is a member of the Bytecode Alliance, an organization
                 that develops the Wasmtime runtime, which is a high-performance
                 implementation of the WebAssembly standard.
               </p>
@@ -249,7 +249,7 @@ function WebAssemblyPage() {
                 WebAssembly was co-designed by Andreas Rossberg, who also
                 contributed to the development of the WebAssembly standard. The
                 open standard is overseen by the World Wide Web Consortium
-                (W3C), an organization with over 400 members, including DFINITY.
+                (W3C), an organization with over 400 members, including BigFile.
               </p>
               <p className="mb-0">
                 <Link
@@ -284,7 +284,7 @@ function WebAssemblyPage() {
                 WebAssembly Research Center
               </h3>
               <p className="tw-paragraph-sm mb-0 text-black/60">
-                DFINITY is a founding member of the WebAssembly Research Center
+                BigFile is a founding member of the WebAssembly Research Center
                 at Carnegie Mellon University (CMU). Under the direction of Ben
                 Titzer, a co-designer of WebAssembly, this Center is the first
                 to bring together researchers from academia and industry to
@@ -334,13 +334,13 @@ function WebAssemblyPage() {
           >
             <CardWithDescription
               title="Rust"
-              description="Offers high performance, and many libraries that the Rust community developed over the years. Supported, and maintained by DFINITY."
+              description="Offers high performance, and many libraries that the Rust community developed over the years. Supported, and maintained by BigFile."
               href="/docs/current/developer-docs/backend/rust/"
             />
 
             <CardWithDescription
               title="Motoko"
-              description="The BigFile’s native language, designed to support all features ICP has to offer, and has a less steep learning curve compared to Rust. Supported, and maintained by DFINITY."
+              description="The BigFile’s native language, designed to support all features ICP has to offer, and has a less steep learning curve compared to Rust. Supported, and maintained by BigFile."
               href="/docs/current/motoko/main/getting-started/motoko-introduction"
             />
             <CardWithDescription

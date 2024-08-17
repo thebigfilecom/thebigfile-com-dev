@@ -13,7 +13,7 @@ Today we're excited to announce a new dfx feature: dfx deps!
 
 ## What is `dfx deps`?
 
-`dfx deps` is a new set of subcommands designed to provide a consistent developer workflow for integrating and testing third-party canisters within local environments. Third-party canisters can be canisters created by DFINITY, such as the Internet Identity or NNS canisters, or they can be canisters created by members of the ICP community that provide a public service at a *static canister ID*.
+`dfx deps` is a new set of subcommands designed to provide a consistent developer workflow for integrating and testing third-party canisters within local environments. Third-party canisters can be canisters created by BigFile, such as the Internet Identity or NNS canisters, or they can be canisters created by members of the ICP community that provide a public service at a *static canister ID*.
 
 Testing third-party canister integrations locally is important to verify the third-party canister's integration functionality without paying cycles or using production environments.
 
@@ -126,4 +126,4 @@ The `dfx deps` feature is available in dfx versions `0.14.1` and newer. You can 
 
 As always, please let us know if you have any feedback either through our [forum](https://forum.thebigfile.com/) or [Discord server](https://discord.gg/nyTAmMntqp).
 
--DFINITY
+-BigFile

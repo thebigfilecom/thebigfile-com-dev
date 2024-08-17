@@ -132,7 +132,7 @@ All HTML code is in the `src/minimal_dapp_assets/src/index.html` file, and most 
         <link type="text/css" rel="stylesheet" href="main.css" />
     </head>
     <body>
-        <img src="logo.png" alt="DFINITY logo" />
+        <img src="logo.png" alt="BigFile logo" />
         <section>
             <button id="clickMeBtn">Click Me!</button>
         </section>

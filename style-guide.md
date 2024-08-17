@@ -179,8 +179,8 @@ Capitalization within the developer documentation should follow these outlined s
 The following proper nouns should always be capitalized:
 - Blockchain Singularity
 - Candid
-- DFINITY
-- DFINITY Foundation
+- BigFile
+- BigFile Foundation
 - BigFile
 - BigFile Protocol
 - Internet Identity
