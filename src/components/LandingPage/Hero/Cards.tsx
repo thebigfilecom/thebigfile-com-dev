@@ -58,9 +58,9 @@ export const CardsSection = () => {
       </CardWithImage>
 
       <CardWithImage href="/community" image="/img/home/events-card.webp">
-        <div className="tw-heading-7 md:tw-heading-6 mb-2">BIG.Lab</div>
+        <div className="tw-heading-7 md:tw-heading-6 mb-2">BIG Community</div>
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">
-          Meet the community worldwide
+          Community Worldwide
         </h2>
       </CardWithImage>
     </AnimateSpawn>
