@@ -202,45 +202,8 @@ export const sampleItems: SampleItem[] = [
       github: "https://github.com/dfinity/ic/tree/master/rs/ethereum/cketh",
     },
   },
-  {
-    index: 10,
-    title: "Bitcoin",
-    image: "/img/samples/bitcoin.png",
-    domains: ["Asynchronous DeFi", "Multi-chain"],
-    languages: ["motoko", "rust"],
-    level: "advanced",
-    contentType: ["code samples", "documentation", "live demos", "tutorial"],
-    body: "Deploy a canister on the BigFile that can send and receive Bitcoin.",
-    links: {
-      action: {
-        text: "Get code",
-        to: "https://github.com/dfinity/examples/tree/master/motoko/basic_bitcoin",
-      },
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/basic_bitcoin",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/basic_bitcoin",
-    },
-  },
-  {
-    index: 11,
-    title: "Threshold ECDSA",
-    image: "/img/samples/t-ecdsa.png",
-    domains: ["Global", "Multi-chain"],
-    languages: ["motoko", "rust"],
-    level: "advanced",
-    contentType: ["code samples", "documentation", "live demos", "tutorial"],
-    body: "Build a threshold ECDSA test key on a subnet.",
-    links: {
-      action: {
-        text: "Get code",
-        to: "https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa",
-      },
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa",
-      docs: "/docs/current/developer-docs/integrations/t-ecdsa/",
-    },
-  },
+  
+  
   
   {
     index: 13,
