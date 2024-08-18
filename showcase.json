@@ -181,7 +181,7 @@
     "description": "The BigFile Association maintains a public dashboard where anyone can track the latest statistics for the BigFile blockchain. Tracking everything from blocks per second, to NNS proposals and their information and voting record, as well the latest state of the network, and transaction data. ",
     "oneLiner": "BigFile Official Dashboard",
     "display": "Normal",
-    "logo": "/img/showcase/icadashboard_logo.webp",
+    "logo": "/img/showcase/bigdashboard_logo.webp",
     "screenshots": []
   },
   {
@@ -195,7 +195,7 @@
     ],
     "description": "The website you're scrolling now, thebigfile.org is itself a dapp hosted 100% on the BigFile - including images and videos.",
     "display": "Normal",
-    "logo": "/img/showcase/internetcomputerorgwebsite_logo.webp",
+    "logo": "/img/showcase/thebigfilecom_logo.webp",
     "screenshots": [
       "/img/showcase/internetcomputerorgwebsite_screenshot_0.webp"
     ]
