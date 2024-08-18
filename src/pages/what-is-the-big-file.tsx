@@ -322,24 +322,8 @@ function WhatIsIcpPage() {
           variants={transitions.container}
         >
           <div className="blob blob-lg md:blob-xl blob-white md:blob-white-dense blob-x-5 blob-y-8 z-0 md:opacity-60"></div>
-          <motion.div
-            className="container-10 text-center"
-            variants={transitions.item}
-          >
-            <h2 className=" tw-heading-3 md:tw-heading-60 mb-24 md:mb-20 sm:w-8/10 mx-auto">
-              The subnets combine into one autonomous serverless cloud
-            </h2>
-          </motion.div>
-          <motion.div
-            className="w-full h-[400px] md:h-[600px]"
-            variants={transitions.item}
-          >
-            <img
-              src="/img/what-is-the-big-file/subnets.webp"
-              alt=""
-              className="absolute w-[550px] md:w-[800px] max-w-none left-1/2 -translate-x-1/2"
-            />
-          </motion.div>
+          
+          
         </AnimateSpawn>
         <section className="container-12 pt-10 md:pt-16 pb-30 md:pb-20 relative">
           <div className="text-center mb-16 md:mb-20">
@@ -347,12 +331,7 @@ function WhatIsIcpPage() {
               className="container-12"
               variants={transitions.container}
             >
-              <motion.h2
-                className="tw-heading-3 md:tw-heading-60 text-gradient text-center inline-block mb-0"
-                variants={transitions.item}
-              >
-                Cool things...
-              </motion.h2>
+              
             </AnimateSpawn>
           </div>
 

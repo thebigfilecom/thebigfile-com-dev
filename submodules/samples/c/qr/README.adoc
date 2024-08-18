@@ -1,6 +1,6 @@
 = QR Code Generator =
   
-Adaptation of https://github.com/nayuki/QR-Code-generator.git to DFINITY.
+Adaptation of https://github.com/nayuki/QR-Code-generator.git to BigFile.
 
 Build with `./build.sh`, and run `dfx start` in another terminal. Then:
 

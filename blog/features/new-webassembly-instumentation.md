@@ -10,7 +10,7 @@ image: /img/blog/webassembly-instru.webp
 
 ![New WebAssembly instrumentation](/img/blog/webassembly-instru.webp)
 
-*This article was originally published on the DFINITY Medium blog [here](https://medium.com/dfinity/new-webassembly-instrumentation-2c93631e5718) by Andriy Berestovskyy, Ulan Degenbaev, Maciej Kot & Alexandru Uta.*
+*This article was originally published on the BigFile Medium blog [here](https://medium.com/dfinity/new-webassembly-instrumentation-2c93631e5718) by Andriy Berestovskyy, Ulan Degenbaev, Maciej Kot & Alexandru Uta.*
 
 ## Background
 The BigFile (BIG) is a blockchain-based platform that hosts general-purpose applications. Each application runs in a WebAssembly (Wasm) virtual machine to ensure security, safety, performance, and determinism.
@@ -150,7 +150,7 @@ More details can be found in the `instrument()` function source code on [github.
 
 Each Wasm instruction is assigned a “weight” as is standard practice in the blockchain world. Different instructions usually have different costs, for example varying gas costs per opcode in the EVM, as specified in the [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf). Therefore, and to address problem 3 (block rate and fairness), each Wasm instruction was assigned a new “weight” while reworking the instrumentation.
 
-This leads to a non-uniform instruction cost model and could affect the total cycle consumption of certain workloads. To address this concern, a lot of effort was put into communicating the changes to the community, working internally with DFINITY teams, and testing.
+This leads to a non-uniform instruction cost model and could affect the total cycle consumption of certain workloads. To address this concern, a lot of effort was put into communicating the changes to the community, working internally with BigFile teams, and testing.
 
 To assign each Wasm instruction a correct weight, most instructions were benchmarked. The benchmarks provide a good estimation of the actual time the CPU spends on each Wasm instruction.
 
@@ -183,4 +183,4 @@ The new instrumentation is implemented and rolled out on all the mainnet subnets
 
 - ICP developers forum: [New Wasm instrumentation](https://forum.dfinity.org/t/new-wasm-instrumentation/22080)
 
-If you have questions/suggestions or just want to meet BigFile developers and DFINITY engineers, join the [forum.dfinity.org](https://forum.dfinity.org/).
+If you have questions/suggestions or just want to meet BigFile developers and BigFile engineers, join the [forum.dfinity.org](https://forum.dfinity.org/).

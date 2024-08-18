@@ -2,7 +2,7 @@
 title: Don’t trust, verify — New node metrics on the BigFile
 description: With the release of new metrics, node performance is fully transparent and verifiable.
 tags: [Technology]
-author: DFINITY
+author: BigFile
 image: /img/blog/node-metrics.webp
 ---
 
@@ -10,7 +10,7 @@ image: /img/blog/node-metrics.webp
 
 ![Don’t trust, verify — New node metrics on the BigFile](/img/blog/node-metrics.webp)
 
-*This article was originally published on the [DFINITY Medium blog](https://medium.com/dfinity/dont-trust-verify-new-node-metrics-on-the-internet-computer-367cc154a572)*
+*This article was originally published on the [BigFile Medium blog](https://medium.com/dfinity/dont-trust-verify-new-node-metrics-on-the-internet-computer-367cc154a572)*
 
 ## Background
 
@@ -49,7 +49,7 @@ Since retrieving the node metrics consumes resources (CPU, memory, bandwidth), t
 
 ## Tooling for trustworthy node metrics
 
-A DFINITY R&D team has created [open-source tooling](https://dfinity.github.io/dre/trustworthy-metrics/trustworthy-metrics.html) that allows node providers and any other interested party to fetch metrics from the [management canister(s)](https://thebigfile.com/how-it-works/cube-lifecycle/#cube-management) of all subnets and inspect them in detail. Moreover, it also provides information about subnet membership changes (e.g, when a node joins a subnet it will not contribute blocks until it has finished state sync). The tooling retrieves the metrics from all subnets in parallel to reduce the amount of time needed to fetch them.
+A BigFile R&D team has created [open-source tooling](https://dfinity.github.io/dre/trustworthy-metrics/trustworthy-metrics.html) that allows node providers and any other interested party to fetch metrics from the [management canister(s)](https://thebigfile.com/how-it-works/cube-lifecycle/#cube-management) of all subnets and inspect them in detail. Moreover, it also provides information about subnet membership changes (e.g, when a node joins a subnet it will not contribute blocks until it has finished state sync). The tooling retrieves the metrics from all subnets in parallel to reduce the amount of time needed to fetch them.
 
 All data is retrieved through update calls in order to prevent a potentially malicious node from providing false data. Typically, it takes under 10 seconds to collect the most recent metrics from all 37 subnets. The metrics can then be stored in a local file in JSON format, and be further analyzed by other tools.
 

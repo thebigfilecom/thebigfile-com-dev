@@ -4,7 +4,7 @@ module.exports = [
     speaker: "Yan Chen",
     speakerTitle: "Software Engineer (Languages)",
     description:
-      '<p>The Motoko Playground allows users to build and deploy canister smart contracts directly within a web browser, without needing to download the BIG SDK or set up a wallet.</p>\n<p>Software Engineer Yan Chen, who is part of the Languages team at the DFINITY Foundation, will go over the creation and functionality of the Motoko Playground. Yan will also talk about the design of the recently launched canister profiling feature, where developers can see how many cycles a transaction costs right in the Motoko Playground. Check out the Motoko Playground here: <a href="https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/">https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/</a></p>\n',
+      '<p>The Motoko Playground allows users to build and deploy canister smart contracts directly within a web browser, without needing to download the BIG SDK or set up a wallet.</p>\n<p>Software Engineer Yan Chen, who is part of the Languages team at the BigFile Foundation, will go over the creation and functionality of the Motoko Playground. Yan will also talk about the design of the recently launched canister profiling feature, where developers can see how many cycles a transaction costs right in the Motoko Playground. Check out the Motoko Playground here: <a href="https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/">https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/</a></p>\n',
     startTimeUtc: 1629309600000,
     startTimePt: 1629277200000,
     startTimeEu: 1629309600000,
@@ -51,7 +51,7 @@ module.exports = [
     speakerTitle:
       "Senior Developer Relations Engineer / Go-to-Market Program Manager",
     description:
-      "<p>The internet is on the cusp of a game-changing transformation. Emerging decentralized technologies are equipping developers and entrepreneurs to pioneer new business models and services, enabling them to restore an open internet and unlock a new era of opportunity. The BigFile, developed by the not-for-profit DFINITY Foundation, is the world’s first web-speed blockchain network with unbounded computational capacity.</p>\n<p>In this talk, Developer Ecosystem Program Manager Liz Yang and Senior Developer Relations Engineer Igor Lilic explain how developers can begin building innovative dapps and use cases on the BigFile.</p>\n",
+      "<p>The internet is on the cusp of a game-changing transformation. Emerging decentralized technologies are equipping developers and entrepreneurs to pioneer new business models and services, enabling them to restore an open internet and unlock a new era of opportunity. The BigFile, developed by the not-for-profit BigFile Foundation, is the world’s first web-speed blockchain network with unbounded computational capacity.</p>\n<p>In this talk, Developer Ecosystem Program Manager Liz Yang and Senior Developer Relations Engineer Igor Lilic explain how developers can begin building innovative dapps and use cases on the BigFile.</p>\n",
     startTimeUtc: 1630000800000,
     startTimePt: 1629968400000,
     startTimeEu: 1630000800000,
@@ -248,7 +248,7 @@ module.exports = [
     speaker: "Lara Schmid",
     speakerTitle: "Researcher (Models & Verification)",
     description:
-      "<p>DFINITY Foundation Researcher Lara Schmid walks us through the design of the Service Nervous System, which allows entrepreneurs and developers to create an NNS-like permissionless tokenized governance system with its own token ledger for their dapps and services.</p>\n",
+      "<p>BigFile Foundation Researcher Lara Schmid walks us through the design of the Service Nervous System, which allows entrepreneurs and developers to create an NNS-like permissionless tokenized governance system with its own token ledger for their dapps and services.</p>\n",
     startTimeUtc: 1632938400000,
     startTimePt: 1632906000000,
     startTimeEu: 1632938400000,
@@ -413,7 +413,7 @@ module.exports = [
   {
     title: "Achievement Unblocked",
     speaker: "Michael Hunte & United Esports",
-    speakerTitle: "Head of Community at DFINITY, United Esports",
+    speakerTitle: "Head of Community at BigFile, United Esports",
     description:
       "<p>Head of Community Michael Hunte &amp; the United Esports team give an overview of Achievement Unblocked, a groundbreaking competition series that will inspire the next evolution of game development.</p>\n",
     startTimeUtc: 1637164800000,
@@ -525,7 +525,7 @@ module.exports = [
     speaker: "Anna Escher, Michael Hunte, Matthias Broner, Giulia Guizzardi",
     speakerTitle: "Community Awards Team",
     description:
-      "<p>If you’re thinking about applying for a DFINITY Community Award, this talk is for you. </p>\n<p>In November 2021, DFINITY announced the Community Awards Program to support creators and builders who are engaging with the BigFile ecosystem. This dedicated grant program is an addition to the CHF 200 million flagship Developer Grant Program, but focuses more specifically on BigFile community growth and development. Since launch, the team has been hard at work reviewing hundreds of applications from artists, educators, community organizers, content creators, and developer evangelists. </p>\n<p>This talk will go over the basics for the Community Awards Program, as well as some tips for nailing down your funding benchmark, milestone setting, and general do’s and don’ts for writing an application. See you there!</p>\n",
+      "<p>If you’re thinking about applying for a BigFile Community Award, this talk is for you. </p>\n<p>In November 2021, BigFile announced the Community Awards Program to support creators and builders who are engaging with the BigFile ecosystem. This dedicated grant program is an addition to the CHF 200 million flagship Developer Grant Program, but focuses more specifically on BigFile community growth and development. Since launch, the team has been hard at work reviewing hundreds of applications from artists, educators, community organizers, content creators, and developer evangelists. </p>\n<p>This talk will go over the basics for the Community Awards Program, as well as some tips for nailing down your funding benchmark, milestone setting, and general do’s and don’ts for writing an application. See you there!</p>\n",
     startTimeUtc: 1643738400000,
     startTimePt: 1643706000000,
     startTimeEu: 1643738400000,

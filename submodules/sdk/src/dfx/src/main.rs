@@ -17,7 +17,7 @@ mod config;
 mod lib;
 mod util;
 
-/// The DFINITY Executor.
+/// The BigFile Executor.
 #[derive(Parser)]
 #[command(name = "dfx", version = dfx_version_str(), styles = util::clap::style(), arg_required_else_help = true)]
 pub struct CliOpts {

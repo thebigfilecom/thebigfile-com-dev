@@ -38,7 +38,7 @@ class Life extends React.Component {
   render() {
     return (
         <div className="nes-container with-title is-centered life-title" >
-          <p className="title">Live... from DFINITY!</p>
+          <p className="title">Live... from BigFile!</p>
 	  <p> <pre className="life-grid"> {this.state.grid} </pre> </p>
 	  <p>
             <div style={{ "margin": "30px" }}>

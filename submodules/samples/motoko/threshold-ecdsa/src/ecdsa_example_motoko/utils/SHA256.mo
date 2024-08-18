@@ -1,7 +1,7 @@
 /**
  * Module      : SHA256.mo
  * Description : Cryptographic hash function.
- * Copyright   : 2020 DFINITY Stiftung
+ * Copyright   : 2020 BigFile Stiftung
  * License     : Apache 2.0 with LLVM Exception
  * Maintainer  : Enzo Haussecker <enzo@dfinity.org>
  * Stability   : Stable

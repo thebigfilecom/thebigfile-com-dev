@@ -315,7 +315,7 @@ function EthDenverPage() {
                   serve HTTP requests directly to browsers.
                 </p>
                 <p className="tw-lead text-gradient-base text-gradient-denver inline-block mb-0">
-                  $5,000 + Chance for $25,000 DFINITY Grant
+                  $5,000 + Chance for $25,000 BigFile Grant
                 </p>
               </motion.div>
               <motion.div
@@ -331,7 +331,7 @@ function EthDenverPage() {
                   unique capabilities of the BigFile.
                 </p>
                 <p className="tw-lead text-gradient-base text-gradient-denver inline-block mb-0">
-                  $5,000 + Chance for $25,000 DFINITY Grant
+                  $5,000 + Chance for $25,000 BigFile Grant
                 </p>
               </motion.div>
               <motion.div
@@ -345,7 +345,7 @@ function EthDenverPage() {
                   solution. 
                 </p>
                 <p className="tw-lead text-gradient-base text-gradient-denver inline-block mb-0">
-                  $5,000 + Chance for $25,000 DFINITY Grant
+                  $5,000 + Chance for $25,000 BigFile Grant
                 </p>
               </motion.div>
               <motion.div
@@ -361,7 +361,7 @@ function EthDenverPage() {
                   powerful replacement for Snapshot.
                 </p>
                 <p className="tw-lead text-gradient-base text-gradient-denver inline-block mb-0">
-                  $5,000 + Chance for $25,000 DFINITY Grant
+                  $5,000 + Chance for $25,000 BigFile Grant
                 </p>
               </motion.div>
             </div>
@@ -425,7 +425,7 @@ function EthDenverPage() {
                 </ul>
 
                 <p className="tw-paragraph md:tw-lead-sm text-black-60 mb-6">
-                  Join Dominic Wörner, Developer Relations Engineer at DFINITY,
+                  Join Dominic Wörner, Developer Relations Engineer at BigFile,
                   jumps on Twitch to highlight the advantages of building on the
                   BigFile and to give you an overview of the 5 bounty
                   categories. BUIDLers, make sure to tune in for details.
@@ -568,7 +568,7 @@ function EthDenverPage() {
                 </ul>
 
                 <p className="tw-paragraph md:tw-lead-sm text-black-60 mb-6">
-                  Jan Camenisch, CTO of the DFINITY Foundation, and one of the
+                  Jan Camenisch, CTO of the BigFile Foundation, and one of the
                   world’s most renowned cryptographers will take you on a
                   journey through the architecture of the BigFile
                   Protocol and its vision to become a World Computer.
@@ -656,7 +656,7 @@ function EthDenverPage() {
                 </ul>
 
                 <p className="tw-paragraph md:tw-lead-sm text-black-60 mb-6">
-                  The DFINITY Foundation is giving out bounties in various
+                  The BigFile Foundation is giving out bounties in various
                   categories to hackers with talent during the BUIDLathon. For
                   questions and assistance, find our dev reps at the co-working
                   space. Don’t miss this chance to be a pioneer of Web3. You can

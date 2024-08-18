@@ -12,7 +12,7 @@ with the following changes:
 
 /**
  * Module     : qr.mo
- * Copyright  : 2020 DFINITY Stiftung
+ * Copyright  : 2020 BigFile Stiftung
  * License    : Apache 2.0 with LLVM Exception
  * Stability  : Stable
  */
@@ -80,7 +80,7 @@ actor QR {
     let tests = [
       (#Version 1, #M, #Numeric, "01234567"),
       (#Version 1, #Q, #Alphanumeric, "HELLO WORLD"),
-      (#Version 2, #M, #Alphanumeric, "HTTPS://SDK.DFINITY.ORG"),
+      (#Version 2, #M, #Alphanumeric, "HTTPS://SDK.BigFile.ORG"),
     ];
     for ((version, level, mode, text) in tests.vals())  {
       let result = await QR.encode(version, level, mode, text);

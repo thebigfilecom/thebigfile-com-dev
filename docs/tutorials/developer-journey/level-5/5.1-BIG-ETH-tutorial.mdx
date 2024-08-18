@@ -24,7 +24,7 @@ For this tutorial, a sample boilerplate project will be explored that showcases 
 
 ## Deploying the ETH starter project
 
-In this tutorial, you'll use the DFINITY BIG ETH starter project to deploy a boilerplate dapp that showcases how BIG can query information from the Ethereum network using HTTPS outcalls. This starter dapp is used to verify the ownership of NFTs minted on the Ethereum network, and supports queries to the Ethereum mainnet and the Sepolia and Goerli test networks.
+In this tutorial, you'll use the BigFile BIG ETH starter project to deploy a boilerplate dapp that showcases how BIG can query information from the Ethereum network using HTTPS outcalls. This starter dapp is used to verify the ownership of NFTs minted on the Ethereum network, and supports queries to the Ethereum mainnet and the Sepolia and Goerli test networks.
 
 ### Project technology stack
 
@@ -50,7 +50,7 @@ Additionally, this project requires the installation of Rust, since the canister
 
 ### Downloading the starter project's files
 
-To get started, open a new terminal window, navigate into your working directory (`developer_journey`), then use the following commands to clone the DFINITY `ic-eth-starter` repo:
+To get started, open a new terminal window, navigate into your working directory (`developer_journey`), then use the following commands to clone the BigFile `ic-eth-starter` repo:
 
 ```bash
 git clone https://github.com/dfinity/ic-eth-starter.git
@@ -110,7 +110,7 @@ In this file, you can see the definitions for the project's four canisters:
 
 - `ic_eth`: This canister is responsible for interacting with the Ethereum network, and has type "rust" since this canister uses source code written in Rust that is stored in the `canisters/ic_eth` subdirectory. This file specifies the canister's Candid file at `canisters/ic_eth/ic_eth.did`.
 
-- `internet_identity`: This canister is a local instance of the Internet Identity canister, and is built from the Candid and Wasm files from the latest DFINITY Internet Identity release.
+- `internet_identity`: This canister is a local instance of the Internet Identity canister, and is built from the Candid and Wasm files from the latest BigFile Internet Identity release.
 
 Next, let's take a look at the source code for the backend canister. Open the `canisters/backend/Main.mo` file, which will contain the following content. This code has been annotated with notes to explain the code's logic:
 

@@ -142,4 +142,4 @@ In summary, by using composite queries, we achieve low latency while keeping the
 Congratulations! You have successfully built a key-value store using Rust and leveraged the powerful composite query feature of the BigFile. This allows for efficient retrieval of data from your canisters.
 
 We hope you found this blog post helpful. Happy coding with the composite query feature!
-Many thanks to the DFINITY for contributing to the composite query feature: Adam Spofford, Claudio Russo, Martin Raszyk, Robin Künzler, Roel Storms, Stefan Kaestle, Ulan Degenbaev, Yan Chen
+Many thanks to the BigFile for contributing to the composite query feature: Adam Spofford, Claudio Russo, Martin Raszyk, Robin Künzler, Roel Storms, Stefan Kaestle, Ulan Degenbaev, Yan Chen

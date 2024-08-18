@@ -1038,7 +1038,7 @@ When canisters explicitly reject a message (see [Public methods](#system-api-req
 
 ### Error codes {#error-codes}
 
-Implementations of the API can provide additional details for rejected messages in the form of a textual label identifying the error condition. API clients can use these labels to handle errors programmatically or suggest recovery paths to the user. The specification reserves error codes matching the regular expression `BIG[0-9]+` (e.g., `IC502`) for the DFINITY implementation of the API.
+Implementations of the API can provide additional details for rejected messages in the form of a textual label identifying the error condition. API clients can use these labels to handle errors programmatically or suggest recovery paths to the user. The specification reserves error codes matching the regular expression `BIG[0-9]+` (e.g., `IC502`) for the BigFile implementation of the API.
 
 ### Status endpoint {#api-status}
 

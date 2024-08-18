@@ -202,65 +202,9 @@ export const sampleItems: SampleItem[] = [
       github: "https://github.com/dfinity/ic/tree/master/rs/ethereum/cketh",
     },
   },
-  {
-    index: 10,
-    title: "Bitcoin",
-    image: "/img/samples/bitcoin.png",
-    domains: ["Asynchronous DeFi", "Multi-chain"],
-    languages: ["motoko", "rust"],
-    level: "advanced",
-    contentType: ["code samples", "documentation", "live demos", "tutorial"],
-    body: "Deploy a canister on the BigFile that can send and receive Bitcoin.",
-    links: {
-      action: {
-        text: "Get code",
-        to: "https://github.com/dfinity/examples/tree/master/motoko/basic_bitcoin",
-      },
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/basic_bitcoin",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/basic_bitcoin",
-    },
-  },
-  {
-    index: 11,
-    title: "Threshold ECDSA",
-    image: "/img/samples/t-ecdsa.png",
-    domains: ["Global", "Multi-chain"],
-    languages: ["motoko", "rust"],
-    level: "advanced",
-    contentType: ["code samples", "documentation", "live demos", "tutorial"],
-    body: "Build a threshold ECDSA test key on a subnet.",
-    links: {
-      action: {
-        text: "Get code",
-        to: "https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa",
-      },
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/threshold-ecdsa",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa",
-      docs: "/docs/current/developer-docs/integrations/t-ecdsa/",
-    },
-  },
-  {
-    index: 12,
-    title: "Cube HTTPS Outcalls",
-    image: "/img/samples/https-outcalls.jpeg",
-    domains: ["Global", "Website"],
-    languages: ["rust", "motoko"],
-    level: "intermediate",
-    contentType: ["code samples", "documentation"],
-    body: "Demonstrates how to build a dapp with canister outgoing HTTP calls.",
-    links: {
-      action: {
-        text: "Get Code",
-        to: "https://github.com/dfinity/examples/tree/master/motoko/send_http_get",
-      },
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/send_http_get",
-      docs: "docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-how-to-use",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/send_http_get",
-    },
-  },
+  
+  
+  
   {
     index: 13,
     title: "Hello World",
@@ -320,20 +264,7 @@ export const sampleItems: SampleItem[] = [
       youtube: "https://youtu.be/fLbaOmH24Gs",
     },
   },
-  {
-    index: 16,
-    title: "NFT Minting",
-    image: "/img/samples/nftMinting.png",
-    domains: ["Metaverse and NFTs", "GameFi"],
-    languages: ["rust"],
-    level: "intermediate",
-    contentType: ["code samples", "documentation", "tutorial", "videos"],
-    body: "Create a user generated NFT and share it. This dapp uses the DIP721 NFT standard.",
-    links: {
-      rust: "https://github.com/dfinity/examples/tree/master/rust/dip721-nft-container",
-      youtube: "https://youtu.be/1po3udDADp4",
-    },
-  },
+  
   {
     index: 17,
     title: "Basic DAO",
@@ -373,109 +304,11 @@ export const sampleItems: SampleItem[] = [
       youtube: "https://youtu.be/DZQmtPSxvbs",
     },
   },
-  {
-    index: 19,
-    title: "Token transfer",
-    image: "/img/samples/tokenTransfer.png",
-    domains: ["Global", "Asynchronous DeFi", "Multi-chain"],
-    languages: ["motoko", "rust"],
-    level: "advanced",
-    contentType: ["code samples", "documentation"],
-    body: "Create a canister that can hold and transfer BIGRC-1 tokens.",
-    links: {
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/token_transfer",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/token_transfer",
-    },
-  },
-  {
-    index: 20,
-    title: "Actor reference",
-    image: "/img/samples/actorReference.png",
-    domains: ["Website"],
-    languages: ["motoko"],
-    level: "advanced",
-    contentType: ["code samples", "documentation"],
-    body: "Learn how the BIG management canister functions as an actor (reference).",
-    links: {
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/actor_reference",
-    },
-  },
-  {
-    index: 21,
-    title: "WebGL",
-    image: "/img/samples/webgl.png",
-    domains: ["GameFi", "Website", "Global"],
-    languages: ["motoko", "rust", "javascript"],
-    level: "beginner",
-    contentType: ["documentation"],
-    body: "Demonstrates how to deploy a web game on the BIG.",
-    links: {
-      docs: "/docs/current/samples/host-a-webgame",
-    },
-  },
-  {
-    index: 22,
-    title: "NNS Integration",
-    image: "/img/samples/nns-proposal.jpg",
-    domains: ["Website"],
-    languages: ["motoko", "javascript"],
-    level: "intermediate",
-    contentType: ["code samples", "documentation", "live demos"],
-    body: "Learn how to connect a canister to a neuron, to make a dapp that can submit proposals to the NNS.",
-    links: {
-      motoko:
-        "https://github.com/InternetComputerOG/NNS-Proposal-Submission-Dapp",
-      livePreview: "https://uf2fn-liaaa-aaaal-abeba-cai.ic0.app/",
-    },
-  },
-  {
-    index: 23,
-    title: "IOS Integration",
-    image: "/img/samples/default.gif",
-    domains: ["Website"],
-    languages: ["motoko", "javascript"],
-    level: "intermediate",
-    contentType: ["code samples", "documentation"],
-    body: "Integrate with a native ios application enabling push notifications and authentication.",
-    links: {
-      action: {
-        text: "Get Code",
-        to: "https://github.com/dfinity/examples/tree/master/motoko/ios-notifications",
-      },
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/ios-notifications",
-    },
-  },
-  {
-    index: 24,
-    title: "ICP transfer",
-    image: "/img/samples/tokenTransfer.png",
-    domains: ["Global", "Asynchronous DeFi", "Multi-chain"],
-    languages: ["motoko", "rust"],
-    level: "advanced",
-    contentType: ["code samples", "documentation"],
-    body: "Create a canister that can hold and transfer ICP tokens.",
-    links: {
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/icp_transfer",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/icp_transfer",
-    },
-  },
-  {
-    index: 25,
-    title: "Token transfer_from",
-    image: "/img/samples/tokenTransfer.png",
-    domains: ["Global", "Asynchronous DeFi", "Multi-chain"],
-    languages: ["motoko", "rust"],
-    level: "advanced",
-    contentType: ["code samples", "documentation"],
-    body: "Create a canister that can hold and transfer BIGRC-1 tokens on behalf of accounts to other accounts.",
-    links: {
-      motoko:
-        "https://github.com/dfinity/examples/tree/master/motoko/token_transfer_from",
-      rust: "https://github.com/dfinity/examples/tree/master/rust/token_transfer_from",
-    },
-  },
+  
+  
+  
+  
+  
+  
+  
 ];

@@ -68,7 +68,7 @@ Once the `BIG SDK` is installed, get acquainted with its capabilities by enterin
 dfx help
 ```
 
-## Contributing to the DFINITY SDK
+## Contributing to the BigFile SDK
 
 See our contributing guidelines [here](./CONTRIBUTING.md).
 

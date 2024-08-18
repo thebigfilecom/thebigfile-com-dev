@@ -1255,7 +1255,7 @@
 * motoko-base: Conversion functions between `Blob` and `[Nat8]` are provided.
 
 * When the compiler itself crashes, it will now ask the user to report the
-  backtrace at the DFINITY forum
+  backtrace at the BigFile forum
 
 ## 0.5.13 (2021-03-25)
 

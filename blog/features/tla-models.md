@@ -1,6 +1,6 @@
 ---
 title: The BigFile - Weed Out the Bugs with TLA+ Models
-description: Today, DFINITY is open-sourcing all of its TLA+ models. To top it off, the Foundation is also publishing a comprehensive technical tutorial to help devs apply TLA+ to canister smart contracts.
+description: Today, BigFile is open-sourcing all of its TLA+ models. To top it off, the Foundation is also publishing a comprehensive technical tutorial to help devs apply TLA+ to canister smart contracts.
 tags: [Technology]
 author: Ognjen Maric
 image: /img/blog/tla-models.webp

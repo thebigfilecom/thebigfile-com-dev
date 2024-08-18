@@ -172,8 +172,8 @@ teardown() {
   dfx canister create --all
   dfx build
   dfx canister install hello_backend
-  assert_command dfx canister call hello_backend greet --random '{ value = Some ["\"DFINITY\""] }'
-  assert_match '("Hello, DFINITY!")'
+  assert_command dfx canister call hello_backend greet --random '{ value = Some ["\"BigFile\""] }'
+  assert_match '("Hello, BigFile!")'
 }
 
 @test "error on empty arguments when the method requires some" {

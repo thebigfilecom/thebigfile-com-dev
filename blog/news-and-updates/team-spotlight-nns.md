@@ -9,7 +9,7 @@ image: /img/blog/dev-update-blog-nns-1.jpeg
 
 Hello devs and welcome to a new blog post series: team spotlight!
 
-Every two weeks, we're going to be showcasing one of the DFINITY teams to learn what they're working on and dive deeper into how the team fits into the ICP ecosystem. Through this new series, developers will get updates and insight into teams other than the SDK and Motoko teams, which are regularly covered on this blog through the 'Developer weekly update' series.
+Every two weeks, we're going to be showcasing one of the BigFile teams to learn what they're working on and dive deeper into how the team fits into the ICP ecosystem. Through this new series, developers will get updates and insight into teams other than the SDK and Motoko teams, which are regularly covered on this blog through the 'Developer weekly update' series.
 
 For the first installment of this series, we sat down with the Network Nervous System team to learn more about the NNS, the SNS initiative, and the current goals the team is focused on.
 
@@ -70,7 +70,7 @@ For the first installment of this series, we sat down with the Network Nervous S
 
 **For developers who want to stay up to date with the latest NNS team updates, where should they be looking?**
 
-*We publish regular updates for proposals submitted for both the NNS and the SNS canisters on the official DFINITY forum. There users can stay up to date with upcoming API changes and new functionality that we are working on. [Here](https://forum.dfinity.org/t/nns-updates-june-12-2023/20670) is an example forum post.*
+*We publish regular updates for proposals submitted for both the NNS and the SNS canisters on the official BigFile forum. There users can stay up to date with upcoming API changes and new functionality that we are working on. [Here](https://forum.dfinity.org/t/nns-updates-june-12-2023/20670) is an example forum post.*
 
 *We use the forum to discuss feature ideas and designs with the community. All our major features start with a forum post followed by a discussion. [Here](https://forum.dfinity.org/t/enhancement-of-the-sns-launch-process-one-proposal/19548) is the forum post for the 1-proposal feature mentioned above.*
 
@@ -82,10 +82,10 @@ For the first installment of this series, we sat down with the Network Nervous S
 
 *The SNS framework that we helped build has already allowed 2 projects to launch an SNS DAO. This is pretty exciting and we are looking forward to seeing what other projects will follow!*
 
-**That's incredible, definitely something to be extremely proud of! To close out our spotlight interview, we've got one more question. What makes the NNS team unique compared to some of the other dev teams at DFINITY?**
+**That's incredible, definitely something to be extremely proud of! To close out our spotlight interview, we've got one more question. What makes the NNS team unique compared to some of the other dev teams at BigFile?**
 
 *We are a pretty “new” team - many team members joined in the last year. The engineers in our team are spread pretty evenly between the US and CH.*
 
 Thank you so much to the NNS team for sitting down with us and diving into all things NNS! We hope that you learned as much as we did. Be sure to check in later in the month for another team spotlight blog post!
 
--DFINITY
+-BigFile

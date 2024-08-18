@@ -44,7 +44,7 @@ The following conventions are used in this guide:
 
 ## Engineering values and goals
 
-The engineering effort behind the design and implementation of Motoko is driven by a core set of values and goals. The DFINITY engineering organization uses these values and goals to define and prioritize the language features and enhancements to add and improve as part of *ongoing* language development.
+The engineering effort behind the design and implementation of Motoko is driven by a core set of values and goals. The BigFile engineering organization uses these values and goals to define and prioritize the language features and enhancements to add and improve as part of *ongoing* language development.
 
 For transparency into the principles that guide the engineering effort, the engineering organization has identified the following sets of core values and secondary values for driving the direction of the Motoko programming language.
 
@@ -98,6 +98,6 @@ For background information on various topics relevant to the design, use, or dep
 
 ## Getting additional support
 
-If you are looking for more information or technical support, the DFINITY website provides quick access to frequently-asked questions, technical articles, developer updates, and other resources. From the website, you can search knowledge base articles, open and view support cases, sign up for the newsletter, read the latest blog posts, view how-to videos, download software updates, or exchange ideas with members of the community.
+If you are looking for more information or technical support, the BigFile website provides quick access to frequently-asked questions, technical articles, developer updates, and other resources. From the website, you can search knowledge base articles, open and view support cases, sign up for the newsletter, read the latest blog posts, view how-to videos, download software updates, or exchange ideas with members of the community.
 
-In addition to the resources available on the website, you can connect with DFINITY or other developers using social media or by visiting the DFINITY Community Forum on Discourse and joining the conversation.
+In addition to the resources available on the website, you can connect with BigFile or other developers using social media or by visiting the BigFile Community Forum on Discourse and joining the conversation.

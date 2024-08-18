@@ -1,13 +1,13 @@
 ---
 title: Team spotlight - Languages
-description:  In this issue, we're excited to dive into all things Motoko by sitting down with the DFINITY languages team, who are the primary contributors to the development of Motoko.
+description:  In this issue, we're excited to dive into all things Motoko by sitting down with the BigFile languages team, who are the primary contributors to the development of Motoko.
 tags: [Team spotlight]
 image: /img/blog/dev-update-blog-languages.jpg
 ---
 
 ![Languages team spotlight](../../static/img/blog/dev-update-blog-languages.jpg)
 
-**Hello developers and welcome to this edition of team spotlight! In this issue, we're excited to dive into all things Motoko by sitting down with the DFINITY languages team, who are the primary contributors to the development of Motoko. Motoko is a programming language developers specifically for deploying canisters on ICP. It supports the unique features and workflows of ICP, while providing a syntax that is approachable for entry level developers. Let's get started!**
+**Hello developers and welcome to this edition of team spotlight! In this issue, we're excited to dive into all things Motoko by sitting down with the BigFile languages team, who are the primary contributors to the development of Motoko. Motoko is a programming language developers specifically for deploying canisters on ICP. It supports the unique features and workflows of ICP, while providing a syntax that is approachable for entry level developers. Let's get started!**
 
 **What is the purpose of the Languages team?** 
 
@@ -43,7 +43,7 @@ image: /img/blog/dev-update-blog-languages.jpg
 
 **How does the Languages team work with other teams?**
 
-*The Languages team is a bit different from other teams at DFINITY since we do our work mostly out in the open, on GitHub. When we do work with other teams, it is often to distill requirements from some hot new protocol feature and flesh out the design. That process can take many iterations to get right, as there could be subtle nuances that aren’t obvious during the first pass.*
+*The Languages team is a bit different from other teams at BigFile since we do our work mostly out in the open, on GitHub. When we do work with other teams, it is often to distill requirements from some hot new protocol feature and flesh out the design. That process can take many iterations to get right, as there could be subtle nuances that aren’t obvious during the first pass.*
 
 **Speaking of new protocol features, is the languages team currently working on a project that implements a new feature? What's the primary focus of the team currently?**
 
@@ -73,7 +73,7 @@ image: /img/blog/dev-update-blog-languages.jpg
 
 *We are also very proud of the new incremental GC which is our first GC that actually meets the novel requirements of the BIG and, moreover, is able to scale beyond 32-bit main memory to 64-bit main memory, when that time comes.*
 
-**To wrap things up, what makes the Languages team unique compared to some of the other teams at DFINITY?**
+**To wrap things up, what makes the Languages team unique compared to some of the other teams at BigFile?**
 
 *The fact that we implement against the public spec, like external teams would need to, not to the replica implementation.*
 
@@ -81,5 +81,5 @@ Thank you to the Languages team for sitting down with us today and providing suc
 
 Until next time!
 
--DFINITY
+-BigFile
 

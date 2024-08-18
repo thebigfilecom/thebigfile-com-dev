@@ -41,8 +41,8 @@ const MINUTE_NS: u64 = 60 * 1_000_000_000;
 const PROD_II_CANISTER_ID: &str = "rdmx6-jaaaa-aaaaa-aaadq-cai";
 // The expiration of issued verifiable credentials.
 const VC_EXPIRATION_PERIOD_NS: u64 = 15 * MINUTE_NS;
-const VC_EMPLOYER_NAME: &str = "DFINITY Foundation";
-const VC_INSTITUTION_NAME: &str = "DFINITY College of Engineering";
+const VC_EMPLOYER_NAME: &str = "BigFile Foundation";
+const VC_INSTITUTION_NAME: &str = "BigFile College of Engineering";
 
 #[derive(Debug)]
 pub enum SupportedCredentialType {

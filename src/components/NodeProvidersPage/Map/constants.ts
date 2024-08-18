@@ -345,7 +345,7 @@ const Constants = {
   votingHistoryChartLineColorYes: '#176bf8', // $color-blue-main
   votingHistoryChartLineColorYesNew: '#D0B2FD', // $color-violet-o
   votingHistoryChartStepSeconds: oneMinuteSeconds * 5, // 5 minutes
-  // First day of data for v3/participation-rates after which DFINITY did not use its full voting
+  // First day of data for v3/participation-rates after which BigFile did not use its full voting
   // power (with following) on Governance topic proposals. We currently subtract one day from this
   // value due to an apparent bug in v3/participation-rates.
   votingParticipationChartDataStartTimestamp: 1640188800 - 86400

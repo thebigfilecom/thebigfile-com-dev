@@ -80,7 +80,7 @@ function NewsPage() {
   return (
     <Layout
       title="News"
-      description=" We love getting new impulses from the industry and sharing DFINITY insights and our vision about the BigFile. Join us at an upcoming event or check out past events, news and presentations."
+      description=" We love getting new impulses from the industry and sharing BigFile insights and our vision about the BigFile. Join us at an upcoming event or check out past events, news and presentations."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-news.jpg"></ShareMeta>
@@ -111,7 +111,7 @@ function NewsPage() {
                   variants={transitions.item}
                 >
                   We love getting new impulses from the industry and sharing
-                  DFINITY insights and our vision about the BigFile.
+                  BigFile insights and our vision about the BigFile.
                   Join us at an upcoming event or check out past events, news
                   and presentations.
                 </motion.p>
@@ -207,7 +207,7 @@ function NewsPage() {
               </motion.p>
               <MotionLink
                 variants={transitions.item}
-                href="https://www.youtube.com/@DFINITY"
+                href="https://www.youtube.com/@BigFile"
                 className="link-primary link-with-icon"
               >
                 Explore more videos on YouTube <LinkArrowUpRight />
@@ -243,7 +243,7 @@ function NewsPage() {
             },
             {
               label: "Watch all the ICP videos on YouTube",
-              href: "https://www.youtube.com/@DFINITY",
+              href: "https://www.youtube.com/@BigFile",
             },
             {
               label: "Follow ICP on X",

@@ -5,7 +5,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](./
 
 As a member of the community, you are invited and encouraged to contribute by submitting issues, offering suggestions for improvements, adding review comments to existing pull requests, or creating new pull requests to fix issues.
 
-All contributions to DFINITY documentation and the developer community are respected and appreciated.
+All contributions to BigFile documentation and the developer community are respected and appreciated.
 Your participation is an important factor in the success of the BigFile.
 
 ## Before you contribute

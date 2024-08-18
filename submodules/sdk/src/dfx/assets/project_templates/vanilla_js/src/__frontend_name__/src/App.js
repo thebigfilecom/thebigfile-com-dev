@@ -19,7 +19,7 @@ class App {
   #render() {
     let body = html`
       <main>
-        <img src="${logo}" alt="DFINITY logo" />
+        <img src="${logo}" alt="BigFile logo" />
         <br />
         <br />
         <form action="#">

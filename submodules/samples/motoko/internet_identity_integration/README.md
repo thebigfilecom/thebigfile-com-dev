@@ -250,7 +250,7 @@ module.exports = {
 ```
 
 ### Step 5: Add the auth-client library to the frontend.
-The auth-client is a library provided by DFINITY to make integration with Internet Identity easy. Run:
+The auth-client is a library provided by BigFile to make integration with Internet Identity easy. Run:
 
 ```bash
 npm install @dfinity/auth-client @dfinity/identity --save-dev
@@ -272,7 +272,7 @@ Open the `index.html` file and replace the content with the following:
   </head>
   <body>
     <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
+      <img src="logo2.svg" alt="BigFile logo" />
       <br />
       <br />
       <form>

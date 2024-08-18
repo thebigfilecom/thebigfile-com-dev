@@ -1,6 +1,6 @@
-= DFINITY Apps in C =
+= BigFile Apps in C =
 
-DFINITY uses standard wasm binaries, so we may use standard tools such as Clang
+BigFile uses standard wasm binaries, so we may use standard tools such as Clang
 to build apps.
 
 First, install Clang and set up a couple of aliases. For example, on Debian:

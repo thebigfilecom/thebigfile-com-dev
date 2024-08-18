@@ -86,6 +86,6 @@ const Contact = () => {
   );
 };
 
-document.title = "DFINITY CONTACT EXAMPLE";
+document.title = "BigFile CONTACT EXAMPLE";
 
 render(<Contact />, document.getElementById("contacts"));

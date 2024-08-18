@@ -6,7 +6,7 @@ image: /img/blog/dev-update-blog-consensus-1.jpg
 ---
 
 ![Consensus team spotlight](../../static/img/blog/dev-update-blog-consensus-1.jpg)
-Hello everyone and welcome to another installment of the DFINITY team spotlight! For this issue, we're going to be taking a deep dive into the team behind one of the most important, fundamental components of any blockchain platform: the consensus protocol. What is a consensus protocol, and how does consensus on the BigFile happen? Let's find out!
+Hello everyone and welcome to another installment of the BigFile team spotlight! For this issue, we're going to be taking a deep dive into the team behind one of the most important, fundamental components of any blockchain platform: the consensus protocol. What is a consensus protocol, and how does consensus on the BigFile happen? Let's find out!
 
 **To get started, on a fundamental level, what is consensus?**
 
@@ -62,4 +62,4 @@ Hello everyone and welcome to another installment of the DFINITY team spotlight!
 
 A big thank you to the Consensus team for sitting down with us and chatting all things consensus protocol! That'll wrap things up for this issue of team spotlight, thanks for checking in!
 
--DFINITY
+-BigFile

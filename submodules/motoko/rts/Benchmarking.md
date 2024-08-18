@@ -42,7 +42,7 @@ moc flags that are helpful when benchmarking GCs:
 
 ## Building the hacky replica to generate canister stats
 
-You should be using drun from `roman/hypervisor-instr-hack` branch of DFINITY.
+You should be using drun from `roman/hypervisor-instr-hack` branch of BigFile.
 
 This version of drun generates a `canister_perf.csv` file after each run with
 these columns:

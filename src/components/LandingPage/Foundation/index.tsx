@@ -69,7 +69,7 @@ import AnimateSpawn from "../../Common/AnimateSpawn";
               className="tw-paragraph md:tw-lead text-center mb-6 md:mb-12"
               variants={transitions.item}
             >
-              The DFINITY Foundation is committed to realizing the most
+              The BigFile Foundation is committed to realizing the most
               disruptive vision in tech: the adoption of public blockchain as a
               single technology stack that hosts all of humanity’s systems and
               services.

@@ -29,7 +29,7 @@ You will build and deploy the following _canisters_:
 
 ### What is Motoko?
 
-Motoko is a new language designed for the BigFile. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the DFINITY Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the [SDK](https://thebigfile.com/docs/current/motoko/main/motoko).
+Motoko is a new language designed for the BigFile. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the BigFile Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the [SDK](https://thebigfile.com/docs/current/motoko/main/motoko).
 
 ### What is Internet Identity?
 
@@ -142,7 +142,7 @@ During local development you will be building and deploying the Motoko backend t
 
 ### Motoko back end
 
-If you're using Visual Studio Code it is recommended to use the [Motoko extension](https://marketplace.visualstudio.com/items?itemName=dfinity-foundation.vscode-motoko) developed by the DFINITY Foundation.
+If you're using Visual Studio Code it is recommended to use the [Motoko extension](https://marketplace.visualstudio.com/items?itemName=dfinity-foundation.vscode-motoko) developed by the BigFile Foundation.
 
 To build the backend canister and regenerate the Candid interface declaration files for the frontend run
 
