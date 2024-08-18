@@ -4,12 +4,9 @@ import Layout from "@theme/Layout";
 import React from "react";
 
 import FeaturesSection from "../components/LandingPage/FeaturesSection/FeaturesSection";
-import FoundationSection from "../components/LandingPage/Foundation";
-import GallerySection from "../components/LandingPage/Gallery";
 import { CardsSection } from "../components/LandingPage/Hero/Cards";
 import Hero from "../components/LandingPage/Hero/Hero";
 import IntroCards from "../components/LandingPage/Hero/IntroCards";
-import { NewsSection } from "../components/LandingPage/Hero/News";
 import {
   CollapsedVisionSection,
   VisionSection,
