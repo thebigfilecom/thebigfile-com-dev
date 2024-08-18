@@ -9,6 +9,9 @@ slug: architecture-of-the-bigfile
 
 BigFile is developing a highly scalable blockchain-based platform to securely host and execute smart contracts. The technology behind BigFile (BIG) is being developed on top of the BIG Open source blockchain fork, taking into account many lessons learned from previous projects (e.g. lack of scalability). The BigFile intends to become a *No-Document World*, an open and secure public blockchain network that can scale infinitely and be used by everyone to host their smart contracts securely.
 
+BigFile is developing a highly scalable blockchain-based platform for securely hosting and running smart contracts. The technology behind BigFile (BIG) is being built on top of a fork of the Internet Computer (IC) Open Source blockchain, incorporating many lessons learned from previous projects (e.g., addressing the lack of scalability). BigFile aims to become the *Documentless World, Decentralized and Cost-Effective Cloud Infrastructure—an* open and secure public blockchain network that can scale infinitely and be used by anyone to securely host their smart contracts.
+
+
 ## Cube smart contracts
 
 A smart contract on BigFile is called *cube smart contract*, or just *cube*. A Cube bundles [*WebAssembly (Wasm)*](https://en.wikipedia.org/wiki/WebAssembly) program code and data storage into a single unit. Anyone can deploy a cube on the BigFile. Cubes are stored and their code executed in a replicated, fault-tolerant manner on multiple machines, that is, the nodes of a subnet. Unlike other blockchains, a smart contract on BigFile can respect one of several possible *mutability policies*: it can be completely immutable (cannot be changed by anyone), unilaterally mutable (can be changed unilaterally by the dapp developer), or DAO mutable (it can be changed as authorized by a decentralized autonomous organization).
@@ -71,11 +74,10 @@ dapps on the BIG can be governed by an out-of-the-box deployable governance syst
 
 ## Go even deeper
 
-If you want to learn in more detail how the BIG works and realizes the vision of a No-document World, read through the sections of the page and the referenced Medium articles, or watch the YouTube videos. If you prefer to have a single source of information, the [White Paper](https://thebigfile.com/whitepaper.pdf) is highly recommended. However, note that it is a little technical at times.
+If you want to learn in more detail how the BIG works and realizes the vision of a No-document World, read through the sections of the page and the referenced Medium articles, or watch the YouTube videos. If you prefer to have a single source of information, the [White Paper](https://thebigfile.com/whit.pdf) is highly recommended. However, note that it is a little technical at times.
 
-[BigFile for Geeks – White Paper](https://thebigfile.com/whitepaper.pdf)
+[BigFile for Geeks – White Paper](https://thebigfile.com/whit.pdf)
 [BigFile Dashboard](https://dashboard.thebigfile.com/)
 [BigFile Source Code](https://github.com/thebigfilecom/big)
-[Public Repositories for the BigFile](https://github.com/thebigfilecom?q=&type=public&language=&sort=)
 [BigFile Interface Specification Docs](https://thebigfile.com/docs/ic-interface-spec.md)
 [BigFile SDK](https://github.com/thebigfilecom/sdk)

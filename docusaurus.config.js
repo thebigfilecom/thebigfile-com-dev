@@ -150,7 +150,7 @@ const marketingNav = {
         { name: "BigFile Wiki", href: "https://wiki.thebigfile.com/" },
         {
           name: "Whitepaper",
-          href: "https://thebigfile.com/whitepaper.pdf",
+          href: "https://thebigfile.com/white.pdf",
         },
         {
           name: "History of BigFile",
