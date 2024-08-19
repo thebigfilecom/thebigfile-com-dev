@@ -8,6 +8,13 @@ const completedRoadmapItems = [
     link: "/how-it-works/web-authentication-identity",
   },
   {
+    title: "Wiki for BigFile Project",
+    description:
+      "Wiki page for the BigFile Project. There are detailed explanations from the community and project developers. All details of the BigFile project are managed through this Wiki.",
+    image: "/img/roadmap/completed/roadmap-cover.jpg",
+    link: "https://wiki.thebigfile.com/index.php/Main_Page",
+  },
+  {
     title: "Forum for BigFile Project",
     description:
       "Forum page for the BigFile Project. There are detailed explanations from the community and project developers. All details of the BigFile project are managed through this forum.",
