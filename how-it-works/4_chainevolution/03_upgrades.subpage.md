@@ -32,4 +32,4 @@ Suppose a protocol upgrade of the subnet is supposed to be done at the beginning
 
 [Upgrading the BigFile](https://medium.com/)
 
-[Whitepaper, see Section 8](https://thebigfile.com/whitepaper.pdf)
+[Whitepaper, see Section 8](https://thebigfile.com/white.pdf)

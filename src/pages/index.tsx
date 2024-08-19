@@ -4,12 +4,9 @@ import Layout from "@theme/Layout";
 import React from "react";
 
 import FeaturesSection from "../components/LandingPage/FeaturesSection/FeaturesSection";
-import FoundationSection from "../components/LandingPage/Foundation";
-import GallerySection from "../components/LandingPage/Gallery";
 import { CardsSection } from "../components/LandingPage/Hero/Cards";
 import Hero from "../components/LandingPage/Hero/Hero";
 import IntroCards from "../components/LandingPage/Hero/IntroCards";
-import { NewsSection } from "../components/LandingPage/Hero/News";
 import {
   CollapsedVisionSection,
   VisionSection,
@@ -39,7 +36,7 @@ export default function Home(): JSX.Element {
         
         <VisionSection>
         BigFile is an all-in-one infrastructure platform that is secure, flexible, easy to use, and highly scalable. 
-        Our blockchain integrates seamlessly with our built-in service layers that enable businesses, infrastructures, and applications to be optimized. The entire platform is developed as a stack so additional service layers keep systems running without compromising performance.
+        Our blockchain integrates seamlessly with our built-in service layers that enable businesses, infrastructures, and applications to be optimized.
         </VisionSection>
         <IntroCards />
       </Hero>
@@ -72,9 +69,9 @@ export default function Home(): JSX.Element {
                 link: "/samples",
               },
               {
-                title: "Motoko playground",
-                body: "Play around with Motoko, the native language of the BigFIle, right in the browser without having to download the SDK.",
-                link: "https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/",
+                title: "File AI",
+                body: "File AI Complet Solutions Blockchain AI.",
+                link: "/ai",
               },
             ]}
           />

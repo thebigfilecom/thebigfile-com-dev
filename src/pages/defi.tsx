@@ -125,7 +125,7 @@ function DefiPage() {
           variants={transitions.fadeIn}
         >
           <div className="md:w-6/12 md:absolute top-10 md:-translate-y-1/2 right-0 -mt-30 md:mt-0">
-            <img src="/img/defi/defi-hero.webp" alt="" className="w-full" />
+            <img src="/img/what-is-the-big-file/multi-chain.webp" alt="" className="w-full" />
           </div>
         </AnimateSpawn>
         <AnimateSpawn
@@ -150,15 +150,7 @@ function DefiPage() {
           </div>
         </AnimateSpawn>
 
-        <AnimateSpawn
-          className="container-12 mt-16 md:mt-24"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <QueryClientProvider client={queryClient}>
-            <Stats />
-          </QueryClientProvider>
-        </AnimateSpawn>
+        
 
         <AnimateSpawn
           className="container-12 mt-6 md:mt-10"
@@ -209,89 +201,7 @@ function DefiPage() {
           </div>
         </AnimateSpawn>
 
-        <section className="container-12 py-30 md:py-48">
-          <div className="mb-16 md:mb-30">
-            <AnimateSpawn className="" variants={transitions.container}>
-              <motion.h2
-                className="tw-heading-3 md:tw-heading-2 text-gradient text-center md:w-7/12 md:mx-auto mb-0 md:mb-8"
-                variants={transitions.item}
-              >
-                Move between chains on ICP DEXs
-              </motion.h2>
-            </AnimateSpawn>
-          </div>
-          <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout imageUrl="/img/defi/icdex.webp" reverse={true}>
-              <div className="tw-heading-6 md:tw-heading-5 mb-2 md:mb-6">
-                BIGDex
-              </div>
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Fully on-chain order book DEX
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                BIGDex provides the world’s first fully on-chain order book DEX. Create limit orders or swap tokens instantly with complete transparency and decentralization. ckBTC/ckETH swaps now possible.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://iclight.io/ICDex/ckETH/ICP"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get ckBTC/ckETH on BIGDex <LinkArrowUpRight />
-              </Link>
-            </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/defi/sonic.webp" reverse={false}>
-              <div className="tw-heading-6 md:tw-heading-5 mb-2 md:mb-6">
-                Sonic
-              </div>
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                SNS DAO-controlled DEX
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                One-stop access to decentralized finance and the first DEX on the BigFile to become an SNS DAO. Swap tokens, earn fees as a liquidity provider and participate in governance and decision-making through Sonic token membership. Now supports ckBTC/ckETH pair.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://app.sonic.ooo/swap"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Swap ckBTC/ckETH on Sonic <LinkArrowUpRight />
-              </Link>
-            </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/defi/icpswap.webp" reverse={true}>
-              <div className="tw-heading-6 md:tw-heading-5 mb-2 md:mb-6">
-                BIG.Swap
-              </div>
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Swap any BIG based token
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              BIG.Swap offers the largest number of tokens on the BigFile, including ckBTC and ckETH. Trade the latest meme coins or the most successful SNS DAO governance tokens.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="https://app.icpswap.com/swap"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get ckBTC/ckETH on BIG.Swap <LinkArrowUpRight />
-              </Link>
-            </TranslatedLayout>
-
-            <motion.div
-              variants={transitions.container}
-              className="text-center"
-            >
-              <Link
-                className="button-primary text-center"
-                href="/ecosystem?tag=DeFi"
-              >
-                Go to all DeFi Dapps
-              </Link>
-            </motion.div>
-          </div>
-        </section>
+        
         <BackgroundPanel
           panelClassName="bg-gradient-to-bl from-[#e07934] via-[#964680] to-[#4421a0]"
           threshold={0}
@@ -429,8 +339,7 @@ function DefiPage() {
               </h2>
               <p className="tw-lead-sm mb-6 md:mb-10">
                 Blockchains today have to rely on oracles if they want to access
-                price data from Web2 APIs. Using HTTPS outcalls, the Internet
-                Computer can query up-to-date prices from any traditional Web2
+                price data from Web2 APIs. Using HTTPS outcalls, the BigFile can query up-to-date prices from any traditional Web2
                 API without oracles, which reduces costs and increases speed.
                 Making calls to the Exchange Rate Cube, you can already
                 query price data.
@@ -484,7 +393,7 @@ function DefiPage() {
             <CardWithDescription
               title="Code ckETH"
               description=""
-              href="https://github.com/dfinity/ic/tree/master/rs/ethereum/cketh"
+              href="https://github.com/thebigfilecom/ic/tree/main/rs/ethereum/cketh"
             />
             <CardWithDescription
               title="DeFi sample code"
