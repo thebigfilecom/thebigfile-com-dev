@@ -1,5 +1,5 @@
 ---
-title: Thebigfile.com Developer Portal 
+title: BigFile Developer Forum 
 links:
   Forum Link: https://forum.thebigfile.com/t/thebigfile-com-developer-portal/18
   Proposal:
