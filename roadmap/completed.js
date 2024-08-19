@@ -1,13 +1,6 @@
 const completedRoadmapItems = [
   
   {
-    title: "BIG Wallet: Anonymizing Blockchain Authentication System",
-    description:
-      "Today, the main means of identity and authentication prevalently used online are usernames and passwords. The BigFile blockchain has replaced this model with a more advanced and much more secure method of cryptographic authentication that is more convenient, works across all of a user's devices, and helps to protect user privacy.",
-    image: "/img/roadmap/completed/internet-identity.jpeg",
-    link: "/how-it-works/web-authentication-identity",
-  },
-  {
     title: "Wiki for BigFile Project",
     description:
       "Wiki page for the BigFile Project. There are detailed explanations from the community and project developers. All details of the BigFile project are managed through this Wiki.",
