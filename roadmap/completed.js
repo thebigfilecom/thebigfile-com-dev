@@ -1,18 +1,25 @@
 const completedRoadmapItems = [
   
   {
-    title: "BIG Wallet: Anonymizing Blockchain Authentication System",
+    title: "Wiki for BigFile Project",
     description:
-      "Today, the main means of identity and authentication prevalently used online are usernames and passwords. The BigFile blockchain has replaced this model with a more advanced and much more secure method of cryptographic authentication that is more convenient, works across all of a user's devices, and helps to protect user privacy.",
-    image: "/img/roadmap/completed/internet-identity.jpeg",
-    link: "/how-it-works/web-authentication-identity",
+      "Wiki page for the BigFile Project. There are detailed explanations from the community and project developers. All details of the BigFile project are managed through this Wiki.",
+    image: "/img/roadmap/completed/roadmap-cover.jpg",
+    link: "https://wiki.thebigfile.com/index.php/Main_Page",
   },
   {
-    title: "BigFile Consensus",
+    title: "Forum for BigFile Project",
     description:
-      "The BigFile blockchain runs on a network of nodes in independent data centers located around the world. In each of its subnet blockchains, the participating nodes must process the same messages in the same order to ensure that they achieve the same state. To this end, the BigFile relies on a novel consensus protocol, as described in this presentation.",
-    image: "/img/roadmap/completed/consensusbig.jpg",
-    link: "/how-it-works/consensus",
+      "Forum page for the BigFile Project. There are detailed explanations from the community and project developers. All details of the BigFile project are managed through this forum.",
+    image: "/img/roadmap/completed/roadmap-cover.jpg",
+    link: "https://forum.thebigfile.com/t/thebigfile-com-developer-portal/18",
+  },
+  {
+    title: "Thebigfile.com Developer Portal",
+    description:
+      "The BigFile Project's official website www.thebigfile.com has been completed and published. The website has been shared as open source via our githup repository. Since the project is an open source blockchain project, details can be accessed via the forum.",
+    image: "/img/roadmap/completed/roadmap-cover.jpg",
+    link: "https://forum.thebigfile.com/t/thebigfile-com-developer-portal/18",
   },
   {
     title: "Digital Bureaucracy Rebranding",
