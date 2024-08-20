@@ -6,6 +6,6 @@ title: Certified variables
 
 # Certified variables
 
-Cube smart contracts can declare variables as certified. Whenever set, these variables will automatically get a Merkle tree certificate, signed by the BigFile blockchain. This allows anyone to verify the authenticity of this type of data using the BigFile public key.
+Cube smart contracts can declare variables as certified. When these variables are set, they automatically receive a Merkle tree certificate, signed by the BigFile blockchain. This allows anyone to verify the authenticity of this data using the BigFile public key.
 
 [Go deeper](/how-it-works/response-certification/)
