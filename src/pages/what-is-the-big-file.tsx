@@ -69,7 +69,7 @@ function WhatIsIcpPage() {
                 className="pb-[15%] sm:pb-0 tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                BigFile is a blockchain-based decentralized platform aimed at revolutionizing digital data storage and bureaucratic processes. By leveraging decentralized technology principles, BigFile provides a secure, scalable, and cost-effective solution for storing, accessing, and transferring digital files.
+                BigFile (BIG) is an open and secure AI-powered blockchain network that can host programs, files, data, and Big Data in the form of smart contracts, perform computations on smart contracts securely, and scale infinitely.
               </motion.p>
             </div>
           </AnimateSpawn>

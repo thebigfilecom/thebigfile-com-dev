@@ -29,7 +29,7 @@ const Sustainable: React.FC<{ id?: string }> = ({ id }) => {
           </div>
           <div className="flex-1 md:order-1">
             <h2 className="tw-heading-3 md:tw-heading-60 mb-6">
-              Transparently sustainable blockchain
+              Blockchain Based AI Models
             </h2>
             <p className="tw-lead-sm mb-6">
               Scalability and utility with low carbon cost — the BigFile is committed to building green tech, not just making

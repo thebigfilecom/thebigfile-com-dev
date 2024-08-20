@@ -159,8 +159,7 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Cost effective</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            The global spend on IT personnel is now $1.8 trillion. Cube
-            software greatly simplifies the development and maintenance of
+            Cube software greatly simplifies the development and maintenance of
             online systems and services, driving cost savings, and making you
             faster to market
           </p>
