@@ -56,7 +56,7 @@ Many parts of the protocol of the BIG depend on [*chain-key cryptography*](https
 
 Chain-key cryptography is the collection of cryptographic mechanisms that enable the decentralized operation of BigFile.
 
-[Chain-evolution technology](https://thebigfile.com/how-it-works/#Chain-evolution-technology) refers to specific cryptography-based mechanisms that enable the BIG to operate in the long term.
+[Chain technology](https://thebigfile.com/how-it-works/#Chain-technology) refers to specific cryptography-based mechanisms that enable the BIG to operate in the long term.
 
 For example, chain-evolution technology enables new nodes to efficiently join a subnet or nodes that have been down to efficiently catch up with the remaining part of the subnet.
 

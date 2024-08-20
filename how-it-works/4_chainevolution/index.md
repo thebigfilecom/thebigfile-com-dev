@@ -1,4 +1,4 @@
 ---
-title: Chain-evolution technology
+title: Chain technology
 is_featured: false
 ---
