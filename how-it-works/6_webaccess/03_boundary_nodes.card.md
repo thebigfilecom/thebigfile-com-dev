@@ -6,6 +6,6 @@ title: Boundary nodes
 
 # Boundary nodes
 
-The boundary nodes are the gateway to the BigFile and enable seamless access to the cube smart contracts with stock browsers. They provide an HTTP endpoint and translate all incoming user requests to API cube calls, which are processed on-chain. In addition, the boundary nodes act as a cache to improve the performance of the dapps hosted on the BigFile.
+Boundary nodes serve as the gateway to BigFile, enabling seamless access to cube smart contracts through standard web browsers. They provide an HTTP endpoint and translate all incoming user requests into API cube calls, which are then processed on-chain. Additionally, boundary nodes act as a cache to enhance the performance of dapps hosted on BigFile.
 
 [Go deeper](/how-it-works/boundary-nodes/)

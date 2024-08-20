@@ -7,7 +7,7 @@ slug: boundary-nodes
 
 # Boundary nodes
 
-The boundary nodes form the globally distributed edge of the BigFile (BIG) through which all the accesses to the cube smart contracts go. The boundary nodes provide a public endpoint for the BIG and route all incoming requests to the right subnet, loadbalance requests across replica nodes, and cache responses for improved performance.
+Boundary nodes form the globally distributed edge of BigFile (BIG), handling all access to cube smart contracts. These nodes provide a public endpoint for BIG, routing all incoming requests to the appropriate subnet, load balancing requests across replica nodes, and caching responses to enhance performance.
 
 <figure>
 <img src="/img/how-it-works/boundary-nodes.webp" alt="Architecture of boundary nodes" title="Architecture of boundary nodes" align="center" />
@@ -16,15 +16,13 @@ Boundary nodes are the gateway to the BigFile, which allow users to seamlessly a
 </figcaption>
 </figure>
 
-The boundary nodes provide two ways of accessing cube smart contracts hosted on the BigFile: first, one can access them using stock browsers through the HTTP gateway, and second, one can access them using API cube calls through the API boundary node.
+Boundary nodes provide two methods for accessing cube smart contracts hosted on BigFile: first, through stock browsers via the HTTP gateway, and second, through API cube calls using the API boundary node.
 
-The HTTP gateway allows users to access the dapps hosted on the BIG through their browsers the same way they are used to accessing any Web 2.0 service. To this end, the HTTP gateway translates all incoming HTTP requests into API cube calls, which are then routed to the right subnet.
+The HTTP gateway allows users to access dapps hosted on BIG through their browsers, just as they would with any Web 2.0 service. The HTTP gateway translates all incoming HTTP requests into API cube calls, which are then routed to the appropriate subnet.
 
-The API boundary node allows BIG native applications to directly call the cube smart contracts. In this case, the boundary node simply routes the API cube calls to the right subnet. Hence, no trust is required between the user and the boundary node.
+The API boundary node enables BIG-native applications to directly call cube smart contracts. In this case, the boundary node simply routes the API cube calls to the correct subnet, requiring no trust between the user and the boundary node. [For more information check our updates in the forum.](https://forum.thebigfile.com/t/boundary-node-roadmap/22)
 
-Both the HTTP gateway and the API boundary node are currently combined into the boundary node. Work to separate the two into two independent services is ongoing. Once complete, the API boundary nodes will be fully under the control of the NNS, while the HTTP gateways can be run by anyone in the community ensuring compliance with local jurisdictions. [For more information check our updates in the forum.](https://forum.thebigfile.com/)
-
-In addition to the two endpoints, the boundary nodes provide to access the BIG, the boundary nodes also provide caching to improve the performance of the dapps hosted on the BIG.
+In addition to the two endpoints for accessing BIG, boundary nodes also provide caching to enhance the performance of dapps hosted on the BIG network.
 
 ## Go Even Deeper
 

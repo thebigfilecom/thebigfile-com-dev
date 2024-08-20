@@ -6,6 +6,6 @@ title: Tokenomics
 
 # Tokenomics
 
-The BigFile makes use of an utility token called BIG. The BIG token is used for a variety of functions on the platform. Users can stake BIG giving them the right to vote and earn voting rewards. Investors can use BIG to participate in SNS swaps launched on the BigFile, i.e., the initial offerings of the native DAOs. Developers use BIG token to purchase cycles to power their dapps on the BigFile. And node providers are remunerated in BIG for the compute power they provide to the BigFile platform. 
+BigFile utilizes a utility token called BIG, which serves various functions on the platform. Users can stake BIG, granting them the right to vote and earn voting rewards. Investors can use BIG to participate in SNS swaps launched on BigFile, which are the initial offerings of the native DAOs. Developers use the BIG token to purchase cycles that power their dapps on BigFile. Additionally, node providers are compensated in BIG for the compute power they contribute to the BigFile platform. 
 
 [Go deeper](/how-it-works/tokenomics/)
