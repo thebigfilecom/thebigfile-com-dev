@@ -6,7 +6,7 @@ title: Protocol upgrade
 
 # Protocol upgrade
 
-The BigFile blockchain is governed by the Network Nervous System (NNS), its algorithmic governance system. One of the many duties of the NNS is to orchestrate upgrades of the BigFile to a new protocol version when the community has adopted an upgrade proposal. Making upgrades to any blockchain requires solutions to several challenging problems posed by the nature of decentralized systems including how to allow arbitrary changes to the protocol, preserve state of all cube smart contracts, minimize downtime, and roll out upgrades autonomously.
+The BigFile blockchain is governed by the Network Nervous System (NNS), an algorithmic governance system. One of the NNS's many responsibilities is to orchestrate upgrades to the BigFile protocol when the community adopts an upgrade proposal. Upgrading any blockchain presents several challenging problems inherent to decentralized systems, including how to allow arbitrary changes to the protocol, preserve the state of all cube smart contracts, minimize downtime, and roll out upgrades autonomously.
 
 [Go deeper](/how-it-works/upgrades/)
 

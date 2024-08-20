@@ -8,8 +8,8 @@ coverImage: /img/how-it-works/big-wallet.webp
 
 # BIG Wallet
 
-The main means of identity and authentication used on the web are usernames and passwords, which are hard to manage and well-known for their security vulnerabilities. To solve these pitfalls, the BigFile blockchain pioneered a more advanced and much more secure method of cryptographic authentication, known as BIG Wallet, which is more convenient to use, works across all of a user's devices, and helps to protect user privacy.
+The primary means of identity and authentication on the web are usernames and passwords, which are difficult to manage and notorious for their security vulnerabilities. To address these issues, the BigFile blockchain has pioneered a more advanced and secure method of cryptographic authentication known as BIG Wallet. BIG Wallet is more convenient to use, works seamlessly across all of a user's devices, and enhances user privacy.
 
-BIG Wallet is a gateway to applications on the BigFile. When you use BIG Wallet, websites cannot collect and share information about your online activity. This is because BIG Wallet helps you create and manage anonymous, independent accounts for every website so that you get the privacy of having many different accounts without the burden of managing them.
+BIG Wallet serves as a gateway to applications on BigFile. When you use BIG Wallet, websites cannot collect or share information about your online activity. This is because BIG Wallet allows you to create and manage anonymous, independent accounts for each website, providing the privacy benefits of multiple accounts without the burden of managing them.
 
 [Go deeper](/how-it-works/web-authentication-identity/)
