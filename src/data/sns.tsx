@@ -48,36 +48,7 @@ export const extraMetadata: Record<string, Partial<DaoCardProps>> = {
   },
 
   "3e3x2-xyaaa-aaaaq-aaalq-cai": {
-    
-    
-    
-    
-    
-    
-    // BOOM DAO
-    twitter: "https://twitter.com/boomdaosns",
-    description: (
-      <>
-        A collaborative hub for all things Web3 gaming. Plus an all-in-one web3
-        game platform and protocol running 100% on-chain on the Internet
-        Computer.
-      </>
-    ),
-  },
 
-  "uly3p-iqaaa-aaaaq-aabma-cai": {
-    // Catalyze
-    twitter: "https://twitter.com/catalyze_one",
-    description: (
-      <>
-        A one-stop social-fi application for organising Web3 experiences and
-        building community. Event management, crowdsourcing, chat function, and
-        reward tooling.
-      </>
-    ),
-  },
-
-  "u67kc-jyaaa-aaaaq-aabpq-cai": {
     // ICX
     twitter: "https://twitter.com/icxdao",
     description: (

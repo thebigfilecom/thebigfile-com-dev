@@ -322,7 +322,7 @@ const marketingNav = {
           name: "Feedback Board",
           href: "https://dx.thebigfile.com/",
         },
-        { name: "Developer grants", href: "https://thebigfile.com/grants" },
+        
         {
           name: "Free Cycles",
           href: "/docs/current/developer-docs/getting-started/cycles/cycles-faucet",
@@ -384,10 +384,6 @@ const marketingNav = {
     {
       "name": "Participate",
       "auxItems": [
-        {
-          "name": "Community grants",
-          "href": "https://thebigfile.com/community-grants/"
-        },
         {
           "name": "Help & Support",
           "href": "https://support.thebigfile.com/"

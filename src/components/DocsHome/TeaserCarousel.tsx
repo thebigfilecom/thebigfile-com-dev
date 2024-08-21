@@ -17,28 +17,6 @@ interface CarouselCard {
 const CARDS: Array<CarouselCard> = [
   {
     title: (
-      <h2 className={"text-white"}>BigFile: Learn the Essentials</h2>
-    ),
-    subtitle: (
-      <p className={"text-white"}>
-        Explore the Protocol and Its Features with Our "Zero to dApp Educate
-        Series".
-      </p>
-    ),
-    backgroundImage: "/img/docs/teaser-cards/bg-2.svg",
-    cta: (
-      <Link
-        className="button-transparent button-with-icon pl-0"
-        href="https://youtube.com/playlist?list=PLuhDt1vhGcrcRcHvSKmxIgJAh1b3rcR7N&si=sIElj5bAkJeMqDoA"
-      >
-        Watch now!
-        <LinkArrowRight />
-      </Link>
-    ),
-    mainImage: "/img/docs/teaser-cards/main-zero-to-dapp.webp",
-  },
-  {
-    title: (
       <h2 className={"text-white"}>Follow @TheBigFile on X for Big tech news</h2>
     ),
     subtitle: (
@@ -62,7 +40,7 @@ const CARDS: Array<CarouselCard> = [
     ),
     subtitle: (
       <p className={"text-white"}>
-        Work your way up to ICP Astronaut with this 5-level video series
+        Work your way up to BigFile Astronaut with this 5-level video series
       </p>
     ),
     backgroundImage: "/img/docs/teaser-cards/bg-1.svg",

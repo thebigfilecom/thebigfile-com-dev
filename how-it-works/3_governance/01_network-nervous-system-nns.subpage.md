@@ -7,37 +7,35 @@ slug: network-nervous-system-nns
 
 # The Network Nervous System (NNS)
 
-The Network Nervous System (NNS) is the DAO that controls the BigFile blockchain. It is an open, permissionless governance system, where everyone can participate by staking BIG utility tokens in so-called _neurons_. Decisions are made by voting on _proposals_, which can be submitted by anyone.
-
-
-
+The Network Nervous System (NNS) is the DAO that governs the BigFile blockchain. It operates as an open, permissionless governance system where anyone can participate by staking BIG utility tokens in what are known as neurons. Decisions are made by voting on proposals, which can be submitted by any participant.
 
 ## Governance participation
-Governance participants are called _neurons_. Neurons are created by locking BIG utility tokens for a specified period of time. The NNS is a stake-based governance system, where a neuron's voting power is depending on three main factors:
-1) the amount of BIG tokens the neuron stakes
-2) the neuron's _dissolve delay_ which is the duration of the staking period
-3) the neuron's _age_, which on a high level is the time since the tokens have been staked.
+Governance participants are called neurons. Neurons are created by locking BIG utility tokens for a specified period of time. The NNS is a stake-based governance system, where a neuron's voting power depends on three main factors:
 
+1) The amount of BIG tokens the neuron stakes.
+2) The neuron's dissolve delay, which is the duration of the staking period.
+3) The neuron's age, which refers to the time since the tokens have been staked.
 
-This incentivises neurons to vote in the long-term interest of the BigFile as those neurons who are more committed have more voting power.
+This system incentivizes neurons to vote in the long-term interest of BigFile, as those neurons that are more committed have greater voting power.
 
-
-Governance participation is incentivised by _voting rewards_ to neurons. They are proportional to a neuron's voting power and how much voting decisions a neuron participated in.
+Governance participation is further incentivized through voting rewards for neurons. These rewards are proportional to a neuron's voting power and the extent of its participation in voting decisions.
 
 
 ## Proposals
-_Proposals_ are suggestions on how to change the BigFile protocol. Any neuron can submit a proposal, and all other neurons can then vote on it. Neurons can vote with the voting power they have at the time of the proposal's submission.
+Proposals are suggestions for changes to the BigFile. Any neuron can submit a proposal, and all other neurons can then vote on it. Neurons vote with the voting power they have at the time the proposal is submitted.
 
 
 ## Liquid democracy
-The NNS implements a form of _liquid democracy_, which means that neurons can either vote directly on proposals, or delegate their voting power to other neurons, called _following_. Following is done on the basis of proposal _topics_, i.e. groups of proposals that are similar. This facilitates following different experts on different topics. The voting delegations can be changed at any point in time.
+The NNS implements a form of liquid democracy, allowing neurons to either vote directly on proposals or delegate their voting power to other neurons, a process known as following. Following is based on proposal topics, which are groups of similar proposals. This allows neurons to follow different experts on different topics. Voting delegations can be changed at any time.
 
 
 ## Voting rules
-Voting on NNS proposals follows an algorithm called _wait-for-quiet_. The main idea of wait-for-quiet is that proposals where all voters agree can be executed quickly, while strongly contested proposals have a longer voting period. This allows voters to have enough time to react if a proposal result is turned all of a sudden. Currently, most proposals start with an initial voting period of 4 days that can be extended up to a total of 8 days.
-A proposal is adopted if either of the two conditions are met:
-1) the voting period has elapsed, there are more votes in favor than against the proposal (simple majority), and at least 3% of the totally available voting power voted in favor of the proposal (enough participation).
-2) more than 50% of the total voting power are in favor of the proposal. At this point, the proposal's result cannot be changed anymore even if all remaining voters vote against the proposal and therefore the proposal is executed without awaiting the end of the voting period.
+Voting on NNS proposals follows an algorithm called wait-for-quiet. The main idea behind wait-for-quiet is that proposals with unanimous agreement among voters can be executed quickly, while strongly contested proposals have a longer voting period. This approach allows voters sufficient time to react if the outcome of a proposal suddenly changes. Currently, most proposals start with an initial voting period of 4 days, which can be extended up to a total of 8 days.
+
+A proposal is adopted if either of the following conditions are met:
+
+1) The voting period has elapsed, there are more votes in favor than against (simple majority), and at least 3% of the total available voting power has voted in favor (sufficient participation).
+2) More than 50% of the total voting power is in favor of the proposal. At this point, the proposal's outcome cannot be changed, even if all remaining voters oppose it, and the proposal is executed without waiting for the voting period to end.
 
 
 ## Proposal execution
@@ -45,31 +43,19 @@ As soon as a proposal is adopted, it is executed by the NNS. With very few excep
 
 
 ## What the NNS governs
-The NNS governs the full BigFile blockchain. For example, the NNS makes decisions on the following topics.
-* *Network topology*: The NNS decides which node machines can join the network and how these nodes are organized into _subnets_.
-* *Software run on the nodes*: The NNS decides which software is run by the nodes that form the blockchain. This allows the NNS to upgrade the protocol without manual intervention of the individual node operators.
-* *Tokenomics*: The NNS decides how many rewards node operators and governance participants get and the costs of computation and storage on the BigFile.
-* *Governance*: The NNS decides on the rules of the governance itself, e.g. how many votes are needed for a proposal to be adopted, how long the voting period is, etc.
-* *Motion*: These proposals allow for opinion polls and are the only proposals that do not have a direct effect. 
+The NNS governs the entire BigFile blockchain, making decisions on a variety of topics, including:
 
+*Network Topology:* The NNS decides which node machines can join the network and how these nodes are organized into subnets.
+*Software Run on the Nodes:* The NNS determines which software is run by the nodes that form the blockchain. This allows the NNS to upgrade the protocol without requiring manual intervention from individual node operators.
+*Tokenomics:* The NNS sets the rewards for node operators and governance participants, as well as the costs of computation and storage on BigFile.
+*Governance:* The NNS defines the rules for governance itself, such as the number of votes needed for a proposal to be adopted, the length of the voting period, and more.
+*Motion:* These proposals allow for opinion polls and are the only proposals that do not have a direct effect.
 
-With the exception of motion proposals, all these decisions are executed fully on-chain and at low cost compared to other chains. Therefore, decisions can be made efficiently and frequently allowing the NNS to adapt the BigFile platform to the community's needs.
-
+With the exception of motion proposals, all these decisions are executed fully on-chain and at a low cost compared to other blockchains. This efficiency allows the NNS to make decisions frequently and adapt the BigFile platform to the community's needs.
 
 ## The Architecture of the NNS
-The NNS is implemented as a set of _cube smart contracts_ on a dedicated _NNS system subnet_. Facilitated by the low computation and storage costs on the BigFile, and since the NNS subnet is cross-subsidized by other subnets, voting on proposals is free of charge and a high volume of votes and proposals can be processed and stored on-chain.
+The NNS is implemented as a set of cube smart contracts on a dedicated NNS system subnet. Thanks to the low computation and storage costs on BigFile, and because the NNS subnet is cross-subsidized by other subnets, voting on proposals is free of charge, allowing a high volume of votes and proposals to be processed and stored on-chain.
 
+Two important cubes are the governance cube, which manages neurons, proposals, and the voting process, and the BigFile ledger cube, which implements the BIG token, the NNS governance token. Additionally, there are other cubes for specific purposes, such as the cycles minting cube (CMC), responsible for minting cycles—the "gas" used for computation and storage on BigFile.
 
-Two important cubes are the _governance cube_ that manages neurons, proposals, and the voting process, and the _BigFile ledger cube_ that implements the BIG token which is the NNS governance token. In addition, there are other cubes for special purposes, for example the _cycles minting cube (CMC)_ that is responsible to mint _cycles_ - the "gas" used for computation and storage on the BigFile.
-
-
-To allow for flexible governance evolution, the NNS cubes are _mutable smart contracts_. Two cubes, called _root_ and _lifeline_, are responsible for upgrading the NNS cubes. As NNS cubes control each other, it is ensured that they can only be changed by an NNS DAO decision.
-
-
-
-
-
-
-
-
-
+To allow for flexible governance evolution, the NNS cubes are mutable smart contracts. Two cubes, known as root and lifeline, are responsible for upgrading the NNS cubes. Since NNS cubes control each other, it is ensured that they can only be changed by an NNS DAO decision.

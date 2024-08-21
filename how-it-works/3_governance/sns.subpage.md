@@ -8,61 +8,54 @@ slug: sns
 ![](/img/how-it-works/service-nervous-system.webp)
 
 # Service Nervous System (SNS)
-
-The Service Nervous System (SNS) framework is the BigFile built-in solution for creating and maintaining decentralized autonomous organizations (DAOs) to govern dapps. An SNS consists of an open, permissionless governance system governing a dapp, and of a built-in governance token that is unique to each SNS.
+The Service Nervous System (SNS) framework is BigFile's built-in solution for creating and maintaining decentralized autonomous organizations (DAOs) to govern dapps. Each SNS consists of an open, permissionless governance system that governs a dapp, along with a built-in governance token that is unique to that SNS.
 
 
 ## SNS DAO
-Generally, for each dapp that is under SNS DAO control, there is one SNS DAO. The SNS DAO works very similarly to the [NNS DAO that governs the full BigFile](/how-it-works/network-nervous-system-nns/), where DAO participants are called _neurons_ and all neurons can suggest and vote on suggestions how to evolve the dapp that are called _proposals_. Each SNS community can choose its own unique tokenomics and governance rules by parameters that can be set for each SNS DAO.
+Generally, for each dapp under SNS DAO control, there is one SNS DAO. The SNS DAO operates similarly to the [NNS DAO that governs the full BigFile](/how-it-works/network-nervous-system-nns/), where DAO participants are called neurons and all neurons can propose and vote on suggestions, known as proposals, to evolve the dapp. Each SNS community can set its own unique tokenomics and governance rules through parameters that can be customized for each SNS DAO.
 
 
 ### What an SNS governs
-On a high level an SNS DAO governs a dapp, that is decides on the code of that dapp and how it is evolved. On the BigFile this can also include the dapp's data and frontend. Moreover, the SNS DAO makes decisions on the DAO itself, for example on how to change tokenomics. More technically, there are _native proposals_ that are common to all SNSs, such as proposals to upgrade the DAO-controlled dapp cubes, change governance rules, or making transfers from the treasury to open a liquidity pool on a DEX. In addition, each SNS can define _custom proposals_ that are specific to the dapp's needs. A proposal can be defined to call any method on any cube. This allows, for example to define proposals that orchestrate upgrades of dapps with many cubes.
+At a high level, an SNS DAO governs a dapp, making decisions on its code and how it evolves. On BigFile, this can also include the dapp's data and frontend. Additionally, the SNS DAO manages decisions about the DAO itself, such as changes to tokenomics.
 
-
-
+More technically, there are native proposals common to all SNSs, such as proposals to upgrade DAO-controlled dapp cubes, change governance rules, or make transfers from the treasury to open a liquidity pool on a DEX. Each SNS can also define custom proposals specific to the dapp's needs. A proposal can be defined to call any method on any cube, enabling the orchestration of upgrades for dapps with many cubes.
 
 ### Liquid democracy
-The SNS implements a form of _liquid democracy_, which means that neurons can either vote directly on proposals, or delegate their voting power to other neurons, called _following_. In the SNS, following is done on the basis of proposal _types_. This facilitates following different experts on different proposals kinds. The voting delegations can be changed at any point in time.
+The SNS implements a form of liquid democracy, allowing neurons to either vote directly on proposals or delegate their voting power to other neurons, a process known as following. In the SNS, following is done based on proposal types, enabling neurons to follow different experts for different kinds of proposals. Voting delegations can be changed at any time.
 
 
 ### Voting rules
-Voting on SNS proposals follows an algorithm called _wait-for-quiet_. The main idea of wait-for-quiet is that proposals where all voters agree can be executed quickly, while strongly contested proposals have a longer voting period. This allows voters to have enough time to react if a proposal result is turned all of a sudden. Each SNS can decide on the initial and maximal voting period of proposals.
+Voting on SNS proposals follows an algorithm called wait-for-quiet. The main idea behind wait-for-quiet is that proposals with unanimous agreement among voters can be executed quickly, while strongly contested proposals have a longer voting period. This allows voters ample time to react if the outcome of a proposal suddenly changes. Each SNS can decide on the initial and maximum voting period for proposals.
 
+For proposal adoption, SNSs distinguish between normal and critical proposals, such as treasury transfer proposals.
 
-For proposal adoption, SNSs distinguish between normal and _critical_ proposals, which include for example treasury transfer proposals.
-Most proposals are adopted if
-1) the voting period has elapsed, there are more votes in favor than against the proposal (simple majority), and at least 3% of the totally available voting power voted in favor of the proposal (enough participation).
-2) more than 50% of the total voting power are in favor of the proposal. At this point, the proposal's result cannot be changed anymore even if all remaining voters vote against the proposal and therefore the proposal is executed without awaiting the end of the voting period.
+Most proposals are adopted if:
 
+1) The voting period has elapsed, there are more votes in favor than against (simple majority), and at least 3% of the total available voting power has voted in favor (sufficient participation).
+2) More than 50% of the total voting power is in favor. At this point, the proposal's outcome cannot be changed, even if all remaining voters oppose it, and the proposal is executed without waiting for the voting period to end.
 
-For _critical_ proposals, these rules are more strict and passing a proposal requires two thirds of the votes to be in favor of it and at least 20% of the totally available voting power in favor of the proposal (enough participation).
+For critical proposals, the rules are stricter. Passing a proposal requires two-thirds of the votes to be in favor, with at least 20% of the total available voting power supporting the proposal (sufficient participation).
 
 
 ### Proposal execution
-As soon as a proposal is adopted, it is executed by the SNS. With very few exceptions, proposals are executed automatically and fully on-chain and thus do not require trusting any third party.
+As soon as a proposal is adopted, it is executed by the SNS. With very few exceptions, proposals are executed automatically and fully on-chain, eliminating the need to trust any third party.
 
 ## The Architecture of an SNS
 
 
 ### SNS cubes
-Each SNS DAO consists of a set of _cubes smart contracts_ that run _Wasm code_. The most central cubes closely resemble the [Network Nervous System](/how-it-works/network-nervous-system-nns/) (NNS) which is the DAO that governs the full BigFile. The _governance cube_ implements the governance system and the _ledger cube_ implements an SNS specific governance token. The _swap cube_ implements the initial decentralization swap that is used during the launch process (see below) to raise initial funds in the form of BIG and swap them for newly minted SNS tokens. These cubes, together with a few additional ones, form one SNS DAO that governs one dapp.
-
+Each SNS DAO consists of a set of cubes (smart contracts) that run Wasm code. The most central cubes closely resemble the [Network Nervous System](/how-it-works/network-nervous-system-nns/) (NNS), which is the DAO that governs the entire BigFile. The governance cube implements the governance system, and the ledger cube manages an SNS-specific governance token. The swap cube handles the initial decentralization swap used during the launch process (see below) to raise initial funds in the form of BIG and swap them for newly minted SNS tokens. These cubes, along with a few others, form an SNS DAO that governs a single dapp.
 
 ### SNS cube code
-The SNS DAOs are hosted on the _SNS subnet_.
+SNS DAOs are hosted on the SNS subnet.
 
-
-The Wasms run on SNS cube are approved by the [NNS](/how-it-works/network-nervous-system-nns/) and published on an NNS cube called the _SNS wasm modules cube (SNS-W)_. If an SNS community decides, by DAO decision, to update the SNS, then the DAO will automatically fetch the new version from SNS-W and update the cubes accordingly. This means that all the SNS DAOs run code that is pre-approved by the NNS and they all run the same code (some of the SNS might be a few versions behind). The fact that this is built into the platform makes it easy for SNS DAO communities to maintain the code. Moreover, it is easy for users to verify different SNS DAOs as they all run the same, pre-approved code.
+The Wasm modules that run on SNS cubes are approved by the [NNS](/how-it-works/network-nervous-system-nns/) and published on an NNS cube called the SNS Wasm Modules Cube (SNS-W). If an SNS community decides, through a DAO decision, to update the SNS, the DAO will automatically fetch the new version from SNS-W and update the cubes accordingly. This means that all SNS DAOs run code that is pre-approved by the NNS, and they all run the same code (though some SNS may be a few versions behind). This built-in feature makes it easy for SNS DAO communities to maintain their code. Additionally, it simplifies the process for users to verify different SNS DAOs, as they all run the same, pre-approved code.
 
 
 ## SNS Launch process
-The SNS framework includes a process how to launch a new SNS. To decentralize a dapp, the dapp is handed over to the BigFile together with an NNS proposal defining the details of the SNS launch and the initial configuration of the SNS DAO to be created. The proposal details, for example, the initial token distribution. If the NNS community approves this proposal, the following steps are executed fully automatically:
+The SNS framework includes a process for launching a new SNS. To decentralize a dapp, the dapp is handed over to BigFile along with an NNS proposal that defines the details of the SNS launch and the initial configuration of the SNS DAO to be created. The proposal details, for example, the initial token distribution. If the NNS community approves this proposal, the following steps are executed fully automatically:
+
 * The NNS creates a new set of SNS cubes and initializes them as defined in the NNS proposal.
-* The NNS hands over the dapp's control to the newly created SNS.
-* The NNS starts an [_initial decentralization swap_](/sns/faq#what-is-a-decentralization-swap) for the SNS. The purpose of this is to raise initial funds for the DAO and to decentralize the voting power. This is done by an open swap where users can contribute BIG tokens as initial funding and get in return (staked) SNS tokens and thereby a share of the DAO's voting power.
-* If the decentralization swap is successful, the SNS launch was successful and turns into a fully functional DAO.
-
-
-
-
+* The NNS transfers control of the dapp to the newly created SNS.
+* The NNS initiates an [_initial decentralization swap_](/sns/faq#what-is-a-decentralization-swap) for the SNS. The purpose of this swap is to raise initial funds for the DAO and decentralize voting power. This is done through an open swap where users can contribute BIG tokens as initial funding and, in return, receive (staked) SNS tokens, thereby gaining a share of the DAO's voting power.
+* If the decentralization swap is successful, the SNS launch is considered successful, and the SNS becomes a fully functional DAO.

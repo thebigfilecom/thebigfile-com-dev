@@ -13,7 +13,7 @@ import ExternalLinkIcon from "../../../../static/img/external-link.svg";
 const comparison = [
   {
     projectName: "ICP",
-    logo: "/img/basics/logos/logo-icp.svg",
+    logo: "/img/basics/logos/logo-big.svg",
     value: 0.008,
   },
   {

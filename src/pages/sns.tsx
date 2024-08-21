@@ -245,67 +245,7 @@ function SnsPage() {
           
         </section>
 
-        <section className="container-12 pt-20 md:pt-30">
-          <AnimateSpawn className="text-center" variants={transitions.item}>
-            <h2 className="tw-heading-4 md:tw-heading-60 mb-0">
-              Benefits of SNS DAOs
-            </h2>
-          </AnimateSpawn>
-
-          <div className="flex flex-col gap-16 md:gap-40 mt-10 md:mt-15">
-            <TranslatedLayout imageUrl="/img/sns/image-1.webp" reverse={true}>
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Web3: user-centric ownership
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-0">
-                While Web1 was all about users reading content on the internet,
-                and Web2 writing and sharing content on the internet, Web3
-                embraces ownership of the internet. Not only do users own
-                digital assets such as tokens and NFTs, they can also be a part
-                of communities that administer the mass market internet services
-                they love, from social media and gaming, to metaverse, DeFi and
-                beyond. This becomes possible when an internet service runs
-                entirely on the blockchain, and is controlled and updated by an
-                advanced decentralized autonomous organization (DAO), which
-                distributes voting power to community members in the form of
-                governance tokens.
-              </p>
-            </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/sns/image-2.webp">
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Open Internet Services via community DAOs
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-0">
-                An Open Internet Service or OIS runs entirely on the Internet
-                Computer blockchain, and is governed by a Service Nervous System
-                (SNS) - an advanced community DAO framework responsible for
-                controlling and updating the code of an online service. SNS DAOs
-                take over the traditional role of a company, so there’s no CEO,
-                board of directors or developers in control, just thousands of
-                community members whose wishes are mediated through digital
-                democracy algorithms.
-              </p>
-            </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/sns/image-3.webp" reverse={true}>
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                From user to co-owner
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-0">
-                Creating an open internet service involves a decentralization
-                swap where participants exchange ICP tokens for SNS DAO
-                governance tokens. The proceeds of the swap are then held in the
-                treasury of each individual SNS DAO under the decentralized
-                control of its governing community members. Governance tokens of
-                open internet services or SNS DAOs can also be granted to those
-                who help with tasks such as advocacy, creating viral content,
-                and content moderation. This form of co-ownership has the
-                potential to unlock a giant industrious virtual team of
-                millions, all with align incentives and a collective goal to
-                shape internet services into something they love.
-              </p>
-            </TranslatedLayout>
-          </div>
-        </section>
+        
         <section className="container-10 pt-20 md:pt-30">
           <AnimateSpawn className="text-center" variants={transitions.item}>
             <h2 className="tw-heading-4 md:tw-heading-60 mb-0 max-w-[660px] md:mx-auto">
@@ -330,76 +270,6 @@ function SnsPage() {
             ))}
           </AnimateSpawn>
         </section>
-        <AnimateSpawn
-          el={motion.section}
-          className="container-12 pt-20 md:pt-30"
-          variants={transitions.container}
-          onShow={() => setStartCountup(true)}
-          threshold={1}
-        >
-          <StatsPanel className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:justify-between gap-10">
-            {aggregateSnsData.map((stat, index) => (
-              <Stat
-                key={stat.label}
-                title={stat.label}
-                className="stat-fade-in"
-                titleClassName="whitespace-nowrap"
-                style={{
-                  animationDelay: `${150 + index * 100}ms`,
-                  animationPlayState: startCountup ? "running" : "paused",
-                }}
-                value={
-                  <SpringCounter
-                    delay={150 + index * 100}
-                    enabled={startCountup}
-                    initialValue={0}
-                    initialTarget={stat.value}
-                    target={stat.value}
-                    format={stat.format || ((value) => value.toFixed(0))}
-                    springConfig={[3, 2, 10]}
-                  />
-                }
-              />
-            ))}
-          </StatsPanel>
-        </AnimateSpawn>
-
-        <AnimateSpawn
-          variants={transitions.container}
-          className="container-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5"
-          el={motion.section}
-        >
-          {smallSnsCards.map((sns) => (
-            <SmallDaoCard
-              dashboardUrl={dashboardUrlFromRootCanisterId(sns.rootCanisterId)}
-              description={sns.description}
-              key={sns.name}
-              logo={sns.logo}
-              name={sns.name}
-              url={sns.url}
-              {...(extraMetadata[sns.rootCanisterId] ?? {})}
-            />
-          ))}
-
-          <motion.div
-            className="rounded-2xl  text-white flex px-6 py-8 backdrop-blur-2xl bg-gradient-100 from-[#3B00B9] to-[#2586B6]"
-            variants={transitions.item}
-          >
-            <div className="flex flex-col gap-2">
-              <h3 className="tw-title-sm mb-0">SNS DAO launchpad</h3>
-              <p className="tw-paragraph text-white/60 flex-1 mb-12">
-                Join an SNS DAO launch, participate in decentralized swaps and
-                dapp governance.
-              </p>
-              <Link
-                className="button-white text-center"
-                href="https://nns.ic0.app/launchpad/"
-              >
-                Go to Launchpad
-              </Link>
-            </div>
-          </motion.div>
-        </AnimateSpawn>
 
         <section className="max-w-page relative mx-auto mb-20 px-6 md:mb-40 md:px-15 mt-20 md:mt-30">
           <AnimateSpawn
@@ -439,7 +309,7 @@ function SnsPage() {
             />
             <CardWithDescription
               title="Get SNS governance 
-              tokens on ICP DEXs"
+              tokens on BIG DEXs"
               description=""
               href="/ecosystem?tag=DeFi"
             />
