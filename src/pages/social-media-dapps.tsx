@@ -82,7 +82,7 @@ const projects: {
   {
     title: "BIGChat",
     body: "BIGChat is the first instant messaging service running 100% on the blockchain. This web3 dapp is backed by the security of chain-key cryptography. Plus users can easily send crypto to friends via messages, or vote on BIG governance proposals without leaving the dapp.",
-    imageUrl: "/img/social-media-dapps/OpenChat.webp",
+    imageUrl: "/img/social-media-dapps/BigChat.webp",
   },
 ];
 
@@ -373,7 +373,7 @@ function SocialMediaDappsPage() {
                   <ul className="list-none pl-0 mb-0 space-y-10">
                     <li className="flex items-center">
                       <img
-                        src="/img/basics/logos/logo-icp.svg"
+                        src="/img/basics/logos/logo-big.svg"
                         alt=""
                         className="mr-4 w-11 h-11"
                       />
