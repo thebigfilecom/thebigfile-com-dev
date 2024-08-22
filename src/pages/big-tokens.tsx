@@ -211,58 +211,6 @@ function TokenHolders(): JSX.Element {
             </div>
           </AnimateSpawn>
 
-          <AnimateSpawn
-            className="container-12 mt-20 md:mt-40"
-            el={motion.section}
-            variants={transitions.container}
-          >
-            <div className="bg-white/80 border border-white border-solid rounded-xl px-6 py-12 flex flex-col gap-12 md:flex-row md:justify-between md:px-20 md:py-12 md:gap-6">
-              <motion.figure
-                className="flex flex-col items-center m-0"
-                variants={transitions.item}
-              >
-                <span className="tw-heading-3 lg:tw-heading-60 text-gradient mb-2">
-                  $0
-                </span>
-                <figcaption className="tw-paragraph md:tw-lead-sm">
-                  Gas fees for end users
-                </figcaption>
-              </motion.figure>
-              <motion.figure
-                className="flex flex-col items-center m-0"
-                variants={transitions.item}
-              >
-                <span className="tw-heading-3 lg:tw-heading-60 text-gradient mb-2">
-                  ${(cryptoPrice.icp * 0.0001).toFixed(5)}
-                </span>
-                <figcaption className="tw-paragraph md:tw-lead-sm">
-                  Ledger TX Fee
-                </figcaption>
-              </motion.figure>
-              <motion.figure
-                className="flex flex-col items-center m-0"
-                variants={transitions.item}
-              >
-                <span className="tw-heading-3 lg:tw-heading-60 text-gradient mb-2">
-                  1-2s
-                </span>
-                <figcaption className="tw-paragraph md:tw-lead-sm">
-                  Finality
-                </figcaption>
-              </motion.figure>
-              <motion.figure
-                className="flex flex-col items-center m-0"
-                variants={transitions.item}
-              >
-                <span className="tw-heading-3 lg:tw-heading-60 text-gradient mb-2">
-                  <NnsTvl />
-                </span>
-                <figcaption className="tw-paragraph md:tw-lead-sm">
-                  Locked in governance
-                </figcaption>
-              </motion.figure>
-            </div>
-          </AnimateSpawn>
 
           <section className="mt-20 md:mt-40">
             <AnimateSpawn
@@ -399,7 +347,7 @@ function TokenHolders(): JSX.Element {
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
                   className="link-primary link-with-icon"
-                  href="https://wiki.thebigfile.com/wiki/ICP_custody_options"
+                  href="https://wiki.thebigfile.com/wiki/BIG_custody_options"
                 >
                   Learn more about custody options <LinkArrowUpRight />
                 </Link>

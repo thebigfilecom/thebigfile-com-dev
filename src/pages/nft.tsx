@@ -201,7 +201,7 @@ function NftPage() {
             <div className="flex flex-col md:flex-row gap-4 mb-16 md:mb-24">
               <div className="flex-1 border border-solid border-white-30 rounded-xl flex flex-col gap-4 py-10 items-center panel-gradient">
                 <h3 className="tw-heading-7-caps mb-0">BigFile</h3>
-                <img src="/img/nft/ic-logo.webp" alt="" className="w-20" />
+                <img src="/img/nft/big-logo.webp" alt="" className="w-20" />
                 <div>
                   <span className="tw-heading-3">$3</span>{" "}
                   <span className="tw-heading-5">/ year</span>

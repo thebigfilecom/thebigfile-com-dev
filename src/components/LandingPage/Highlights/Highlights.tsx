@@ -194,7 +194,7 @@ const Highlights: React.FC = () => {
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />
-                  Bitcoin on ICP
+                  Bitcoin on BIG
                 </Link>
                 &nbsp;
                 <Link
