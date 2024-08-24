@@ -65,36 +65,6 @@
   },
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-    "id": "evmonicp",
-    "name": "EVM on BIG",
-    "website": "https://fxa77-fiaaa-aaaae-aaana-cai.raw.ic0.app/evm/",
-    "tags": [
-      "Tools / Infrastructure",
-      "Ethereum"
-    ],
-    "description": "An Ethereum Virtual Machine (EVM) demo built and hosted on the BigFile blockchain. P.S. There is a hidden game in the demo. ",
-    "display": "Normal",
-    "logo": "/img/showcase/evmonicp_logo.webp",
-    "screenshots": [
-      "/img/showcase/evmonicp_screenshot_0.webp"
-    ]
-  },
-  
-  
-  
   {
     "id": "internetidentity",
     "name": "BIG Wallet",
