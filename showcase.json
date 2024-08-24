@@ -99,7 +99,7 @@
     "id": "internetidentity",
     "name": "BIG Wallet",
     "oneLiner": "Decentralized Anonymous Blockchain Authentication",
-    "website": "https://identity.ic0.app/",
+    "website": "https://bigwallet.thebigfile.com/",
     "tags": [
       "Tools / Infrastructure"
     ],
@@ -137,7 +137,7 @@
   {
     "id": "icdrive",
     "name": "BIG Drive",
-    "website": "https://rglue-kyaaa-aaaah-qakca-cai.ic0.app/",
+    "website": "https://drive.thebigfile.com/",
     "tags": [
       "Tools / Infrastructure"
     ],
@@ -153,7 +153,7 @@
   {
     "id": "icpexplorer",
     "name": "BIG Explorer",
-    "website": "https://www.icpexplorer.org/#/datacenters",
+    "website": "https://explorer.thebigfile.com/#/datacenters",
     "tags": [
       "Tools / Infrastructure"
     ],
