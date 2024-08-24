@@ -41,7 +41,7 @@
     "usesInternetIdentity": true,
     "stats": "0,000+ TPS",
     "display": "Large",
-    "logo": "/img/showcase/bitfinity_evm.png",
+    "logo": "/img/showcase/big_evm.png",
     "screenshots": [
       "/img/showcase/bitfinity_showcase.webp"
     ]
@@ -107,7 +107,7 @@
     "github": "https://github.com/thebigfilecom/big-wallet",
     "usesInternetIdentity": true,
     "stats": "0,000,000+ users",
-    "logo": "/img/showcase/internetidentity_logo.webp",
+    "logo": "/img/showcase/nnsfront-enddapp_logo-dark.webp",
     "screenshots": [
       "/img/showcase/internetidentity_screenshot_0.gif"
     ]
