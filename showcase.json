@@ -41,7 +41,7 @@
     "usesInternetIdentity": true,
     "stats": "0,000+ TPS",
     "display": "Large",
-    "logo": "/img/showcase/bitfinity_evm.png",
+    "logo": "/img/showcase/big_evm.png",
     "screenshots": [
       "/img/showcase/bitfinity_showcase.webp"
     ]
@@ -65,41 +65,11 @@
   },
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-    "id": "evmonicp",
-    "name": "EVM on BIG",
-    "website": "https://fxa77-fiaaa-aaaae-aaana-cai.raw.ic0.app/evm/",
-    "tags": [
-      "Tools / Infrastructure",
-      "Ethereum"
-    ],
-    "description": "An Ethereum Virtual Machine (EVM) demo built and hosted on the BigFile blockchain. P.S. There is a hidden game in the demo. ",
-    "display": "Normal",
-    "logo": "/img/showcase/evmonicp_logo.webp",
-    "screenshots": [
-      "/img/showcase/evmonicp_screenshot_0.webp"
-    ]
-  },
-  
-  
-  
   {
     "id": "internetidentity",
     "name": "BIG Wallet",
     "oneLiner": "Decentralized Anonymous Blockchain Authentication",
-    "website": "https://identity.ic0.app/",
+    "website": "https://bigwallet.thebigfile.com/",
     "tags": [
       "Tools / Infrastructure"
     ],
@@ -107,7 +77,7 @@
     "github": "https://github.com/thebigfilecom/big-wallet",
     "usesInternetIdentity": true,
     "stats": "0,000,000+ users",
-    "logo": "/img/showcase/internetidentity_logo.webp",
+    "logo": "/img/showcase/nnsfront-enddapp_logo-dark.webp",
     "screenshots": [
       "/img/showcase/internetidentity_screenshot_0.gif"
     ]
@@ -137,7 +107,7 @@
   {
     "id": "icdrive",
     "name": "BIG Drive",
-    "website": "https://rglue-kyaaa-aaaah-qakca-cai.ic0.app/",
+    "website": "https://drive.thebigfile.com/",
     "tags": [
       "Tools / Infrastructure"
     ],
@@ -153,7 +123,7 @@
   {
     "id": "icpexplorer",
     "name": "BIG Explorer",
-    "website": "https://www.icpexplorer.org/#/datacenters",
+    "website": "https://explorer.thebigfile.com/#/datacenters",
     "tags": [
       "Tools / Infrastructure"
     ],

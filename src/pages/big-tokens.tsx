@@ -107,7 +107,7 @@ function TokenHolders(): JSX.Element {
                   className="tw-lead-sm md:tw-lead mb-0 relative"
                   variants={transitions.item}
                 >
-                  Engage with the BigFile and its ecosystem through
+                  Engage with the BigFile and its ecosystem through <br />
                   the use of its native utility token.
                 </motion.p>
               </div>
@@ -132,21 +132,19 @@ function TokenHolders(): JSX.Element {
                 className="tw-heading-4 md:tw-heading-3 mb-6 text-gradient"
                 variants={transitions.item}
               >
-                It empowers computation, staking, voting, governance and ownership.{" "}
+                It empowers computation, staking, voting, governance, and ownership.{" "}
               </motion.h2>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                The BIG token plays a number of roles on the BigFile.
-                Firstly, as a governance token, it can be staked to exercise those governance rights. As a utility token, it can be burned to obtain ‘cycles‘ which serves as gas for computation and storage in Cube smart contracts. It can also be minted to reward ‘node machine‘ providers for providing that compute and storage.
+                The BIG token serves multiple roles on the BigFile. Firstly, as a governance token, it can be staked to exercise governance rights. As a utility token, it can be burned to obtain "cycles," which serve as gas for computation and storage in Cube smart contracts. Additionally, BIG tokens can be minted to reward node machine providers for supplying compute and storage resources.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                In addition to these core uses, BIG tokens can be used to
-                participate in decentralisation swaps to become a co-owner of an SNS DAO, and when using many smart contract services built on the BigFile such as registries, marketplaces and exchanges.
+                In addition to these core uses, BIG tokens can be used to participate in decentralization swaps to become a co-owner of an SNS DAO, as well as in various smart contract services built on the BigFile, such as registries, marketplaces, and exchanges.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-0"
@@ -162,7 +160,7 @@ function TokenHolders(): JSX.Element {
               >
                 <h3 className="inline-flex items-center gap-3 mb-6">
                   <img
-                    src="/img/big-tokens/bf-token-logo.svg"
+                    src="/img/big-tokens/big-token-logo.svg"
                     alt="BIG logo"
                     loading="lazy"
                     className="w-16 h-16"
@@ -230,9 +228,7 @@ function TokenHolders(): JSX.Element {
                   Participate in governance
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                  The BigFile is run by the NNS, the largest
-                  DAO managing an L1 blockchain. BIG token holders can
-                  participate in network governance simply by staking tokens in neurons and locking them with a specified dissolve delay (time to unlock). A neuron with a dissolve delay greater than 6 months can vote on governance proposals and earn rewards. BIG neuron holders can also submit proposals to make changes to the protocol.
+                The BigFile is governed by the NNS, the largest DAO. BIG token holders can participate in network governance by staking tokens in neurons and locking them with a specified dissolve delay (the time required to unlock). A neuron with a dissolve delay greater than 6 months can vote on governance proposals and earn rewards. Additionally, BIG neuron holders can submit proposals to make changes to the protocol.
                 </p>
                 <p className="mb-0">
                   <Link
