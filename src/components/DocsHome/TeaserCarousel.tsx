@@ -56,17 +56,17 @@ const CARDS: Array<CarouselCard> = [
     mainImage: "/img/docs/teaser-cards/main-1.svg",
   },
   {
-    title: <h2 className={"text-white"}>Developer office hours on Discord</h2>,
+    title: <h2 className={"text-white"}>Developer on Discord</h2>,
     subtitle: (
-      <p className={"text-white"}>Every Wednesday 9AM CEST and 10:30AM PST</p>
+      <p className={"text-white"}>Our Discord developer account</p>
     ),
     backgroundImage: "/img/docs/teaser-cards/bg-2.svg",
     cta: (
       <Link
         className="button-transparent button-with-icon pl-0"
-        href="https://discord.com/invite/5PJMmmETQB"
+        href="https://discord.gg/FjhnqUdT"
       >
-        RSVP at #event channel
+        #developer channel
         <LinkArrowRight />
       </Link>
     ),
@@ -74,18 +74,18 @@ const CARDS: Array<CarouselCard> = [
   },
   {
     title: (
-      <h2 className={"text-white"}>Bi-weekly developer SNS office hours</h2>
+      <h2 className={"text-white"}>Developer SNS - NNS</h2>
     ),
     subtitle: (
-      <p className={"text-white"}>Every other Wednesday 5PM CEST / 8AM PST</p>
+      <p className={"text-white"}>SNS - NNS Developer</p>
     ),
     backgroundImage: "/img/docs/teaser-cards/bg-3.svg",
     cta: (
       <Link
         className="button-transparent button-with-icon pl-0"
-        href="https://dfinity.zoom.us/j/99550279424?pwd=SFlDbkRVVTV2bm1XSjFYMWJjanZmdz09"
+        href="https://discord.gg/FjhnqUdT"
       >
-        Join on Zoom
+        Join on Discord
         <LinkArrowRight />
       </Link>
     ),
