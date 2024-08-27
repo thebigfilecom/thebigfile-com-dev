@@ -5,7 +5,7 @@ links:
   Proposal: https://dashboard.thebigfile.com/
   BIG Wiki: https://wiki.thebigfile.com/wiki/Bitcoin_integration
   Documentation: https://thebigfile.com/bitcoin-integration
-eta: Q1 2026
+eta: Q4 2025
 is_community: false
 in_beta: false
 ---
