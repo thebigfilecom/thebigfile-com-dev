@@ -343,11 +343,11 @@ function EnterprisePage() {
                 Interested in running a pilot on the BigFile?
               </h2>
               <p className="tw-lead-sm md:tw-lead mb-6 md:mb-8">
-                Committing to a new technology stack is a big decision. Speak with experts to get a better sense of how the BigFile could benefit your business.
+              Embracing and committing to a new technology is a significant decision. Connect with our development team to explore how BigFile can benefit your business or government.
               </p>
               <p className="mb-0">
                 <Link
-                  href="mailto:comms@dfinity.org"
+                  href="mailto:info@thebigfile.com"
                   className="button-white"
                 >
                   get in touch
