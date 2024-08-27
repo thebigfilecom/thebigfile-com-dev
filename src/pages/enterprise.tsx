@@ -54,9 +54,9 @@ function EnterprisePage() {
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                <b>The future of cloud is serverless: for enterprise, government and Web3 applications.</b>
+                <b>The future of cloud computing is serverless, empowering enterprise, government, and Web3 applications</b>
                 <span style={{display: "block", height: "0.6em"}}></span>
-                A truly <i>autonomous cloud</i> is one which is not controlled by a company or entity, but is public and decentralized like the internet itself. Now imagine a blockchain protocol that enables an autonomous serverless cloud that hosts data as well as logic, where software is tamperproof and unstoppable, can scale horizontally, and processes HTTP, where you can build sovereign systems and services that don't need the protection of firewalls... 
+                A truly <i>autonomous cloud</i> is one that is not controlled by any single company or entity, but is public and decentralized, much like the internet itself. Now, imagine a blockchain protocol that enables an autonomous serverless cloud capable of hosting both data and logic—where software is tamperproof, unstoppable, and can scale horizontally, handling file transfers, bureaucracy, and processing HTTP requests seamlessly. This is a cloud where you can build sovereign systems and services that require no firewalls for protection...
                 <span style={{display: "block", height: "0.6em"}}></span>
               </motion.p>
             </div>
@@ -86,8 +86,8 @@ function EnterprisePage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-3 md:mb-6 text-gradient"
               variants={transitions.item}
             >
-              Legacy tech stacks, increasing development costs and fleeing talent are just a few of the blockers holding tech endeavors back from innovating and staying ahead of the competition &mdash; move forward by building on a serverless cloud that's
-              an <i>everything stack</i> created by an advanced public network.
+              Legacy technology stacks, bureaucratic processes, rising development and management costs, and missed business opportunities are just a few of the obstacles that hinder technology startups, institutions, and companies from innovating and staying ahead in the competitive landscape. 
+              We aim to solve these long-standing issues by building on a serverless cloud powered by an advanced public network, where everything comes together seamlessly.
             </motion.h2>
           </div>
         </AnimateSpawn>
@@ -99,7 +99,7 @@ function EnterprisePage() {
               className="tw-heading-3 md:tw-heading-60 text-center mb-0"
               variants={transitions.item}
             >
-              Why build on the <br /> BigFile?
+              Why build on the BigFile?
             </motion.h2>
           </div>
           <div className="mb-20 md:mb-40 container-12 flex flex-col gap-16 md:gap-40 relative pt-20">
@@ -111,19 +111,15 @@ function EnterprisePage() {
                 Serverless Computing
               </h2>
               <p className="tw-lead-sm">
-               Enterprises and Web3 projects looking for serverless architectures to enable quick and agile development cycles that reduce infrastructure maintenance and operational costs can rely on the BigFile, a decentralized blockchain protocol. 
+              Enterprises and Web3 projects seeking serverless architectures to enable rapid and agile development cycles while reducing infrastructure maintenance and operational costs can rely on BigFile, a decentralized blockchain protocol. 
               </p>
               <p className="tw-lead-sm">
-                The BigFile programming model is also similar to that of
-                serverless clouds in that applications can be written in common languages such as Rust or Python. It is simpler, however, as state is maintained automatically without the need for developer intervention &mdash; a major advance in the field. 
+              The BigFile programming model is similar to that of serverless clouds, allowing applications to be written in common languages such as Rust or Python. However, it is simpler, as state is maintained automatically without requiring developer intervention—a significant advancement in the field. 
               </p>
-              <p className="tw-lead-sm">
-                Serverless cloud addresses the $1.8 trillion global spend on IT personnel, the $900 billion spend on software, $600 billion spend on Big Tech's clouds, $224 billion spend 
-                on data center systems, $179 billion spend on cybersecurity, and the $50 billion cost of cybersecurity incidents, reported by Gartner.
-              </p>
+              
               <p className="mb-0">
                 <Link
-                  href="https://medium.com/@dfinity/the-internet-computer-a-blockchain-that-offers-stateful-decentralized-serverless-computing-cdbbfdca4b7e"
+                  href="https://forum.thebigfile.com/t/bigfile-a-blockchain-offering-ai-powered-decentralized-serverless-computing-and-bureaucratic-transactions/23"
                   className="link-white link-with-icon"
                 >
                   <LinkArrowUpRight />
@@ -136,18 +132,13 @@ function EnterprisePage() {
                 Manage platform risk
               </h2>
               <p className="tw-lead-sm">
-                Large-scale software systems relying on centralized cloud
-                providers are subject to vendor lock-in, which can lead to
-                increasing server costs or codebase refactoring.
+              Large-scale software systems that rely on centralized cloud providers are subject to vendor lock-in, which can lead to increasing server costs or necessitate codebase refactoring.
               </p>
               <p className="tw-lead-sm">
-                The BigFile offers an alternative technology stack
-                that's open and decentralized. Independently owned and operated "node machines," which are installed in independent data centers around the world, are connected by advanced network protocols to form a seamless serverless
-                cloud that's stateful, tamperproof, unstoppable, autonomous and sovereign, upon which any system can be built. Its software — cube smart contracts — are compiled to WebAssembly, the new Web3 industry standard for cross platform, language agnostic, portable server executable
-                code.
+              BigFile offers an alternative technology stack that is open and decentralized. Independently owned and operated "node machines," installed in data centers around the world, are connected by advanced network protocols to form a seamless, serverless cloud that is stateful, tamperproof, unstoppable, autonomous, and sovereign—capable of supporting any system. Its software, known as cube smart contracts, is compiled to WebAssembly, the new Web3 industry standard for cross-platform, language-agnostic, portable server executable code.
               </p>
               <p className="tw-lead-sm">
-                It's an open cloud where you can build sovereign enterprise infrastructure &mdash; which, just like the internet, doesn't have a corporate owner who can make arbitrary updates, and who has backdoors and kill switches.
+              This is an open cloud where you can build sovereign enterprise infrastructure—just like the internet—without a corporate owner who can make arbitrary updates, introduce backdoors, or implement kill switches.
               </p>
             </TranslatedLayout>
             <TranslatedLayout
@@ -157,17 +148,10 @@ function EnterprisePage() {
                 Kill security costs &amp; risks
               </h2>
               <p className="tw-lead-sm">
-                The BigFile hosts tamperproof and unstoppable software systems
-                and services, which don't need protection from firewalls, SIEM logging or other traditional cybersecurity frameworks. 
+              The BigFile hosts tamperproof and unstoppable software systems and services that don't require protection from firewalls, SIEM logging, or other traditional cybersecurity frameworks. 
               </p>
               <p className="tw-lead-sm">
-              Simply put, the BigFile has no backdoors through which hackers can pass, or hosted software or data can be attacked by viruses and ransomware. That's because it's a virtual platform created by advanced math &mdash; fault-tolerant network protocols and cryptography built by world class cryptographers, engineers and computer scientists in a project developed in hundreds of person-years of effort.          
-              </p>
-              <p className="tw-lead-sm">
-              Now you can move beyond the security flaws of Legacy IT, to a world in which software is tamperproof and unstoppable by building on the BigFile
-              </p>              
-              <p className="tw-lead-sm">
-                Say goodbye to being hacked and encrypted by ransomware, slash your cybersecurity costs, and focus instead on optimizing business logic and creating delightful user experiences.
+              Simply put, the BigFile has no backdoors for hackers to exploit, and hosted software or data cannot be attacked by viruses or ransomware. This is because it is a virtual platform created by advanced mathematics—fault-tolerant network protocols and cryptography developed by world-class cryptographers, engineers, and computer scientists, with hundreds of person-years of effort behind the project.         
               </p>
 
               <p className="mb-0">
@@ -182,10 +166,10 @@ function EnterprisePage() {
             </TranslatedLayout>            
             <TranslatedLayout imageUrl="/img/enterprise/digital-identity.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
-                Built-in digital identity framework
+                Built-in digital identity
               </h2>
               <p className="tw-lead-sm mb-6 md:mb-10">
-                No need to build proprietary identity solutions or rely on for-profit companies to keep user data safe and private. BIG Wallet is a privacy-enhancing authentication framework native to the BigFile. Following the open standards of the FIDO Alliance and W3C, BIG Wallet uses secure passkeys and WebAuthn that can be seamlessly integrated with any service running on the BigFile. Zero knowledge proofs enable users to privately share sensitive data.
+              There's no need to build proprietary identity solutions or rely on for-profit companies to keep user data safe and private. BIG Wallet is a privacy-enhancing authentication framework native to BigFile. Following W3C open standards, BIG Wallet uses secure passkeys and WebAuthn, which can be seamlessly integrated with any service running on BigFile. Zero-knowledge proofs enable users to privately share sensitive data.
               </p>
               <p className="mb-0">
                 <Link
@@ -197,37 +181,27 @@ function EnterprisePage() {
                 </Link>
               </p>
             </TranslatedLayout>
-            <TranslatedLayout
-              imageUrl="/img/enterprise/enterprise-custody-large.webp"
-              reverse={true}
-            >
-              <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
-                Enterprise custody of digital assets
-              </h2>
-              <p className="tw-lead-sm mb-6 md:mb-10">
-                Chain-key cryptography and secure multiparty computation enable enterprise-grade custody of digital assets on the BigFile. Security built into the protocol reduces the complexity of digital asset custody associated with traditional solutions.
-              </p>
-            </TranslatedLayout>            
-            <TranslatedLayout imageUrl="/img/enterprise/tokenized-business-models.webp">
+                        
+            <TranslatedLayout imageUrl="/img/big-tokens/hero.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
                 Tokenized business models
               </h2>
               <p className="tw-lead-sm">
-                From loyalty programs to memberships and ticketing, businesses need to manage customer relationships to be successful. The BigFile provides a common digital wallet that makes the handling of digital assets and identities much simpler.
+              From loyalty programs and memberships to ticketing, bureaucratic processes, car rentals or sales, real estate transactions, and title deeds, businesses and institutions must effectively manage customer and citizen relationships to succeed. BigFile provides a unified digital wallet that simplifies the management of digital assets and identities.
               </p>
               <p className="tw-lead-sm">
-                Organizations can effectively include their customers in the product development life cycle by leveraging built-in tokenized voting tools that are native to the BigFile, incentivizing users to actively participate.
+              Organizations can leverage BigFile's built-in token-based voting tools to effectively involve users in the product development lifecycle and actively encourage their participation.
               </p>
             </TranslatedLayout>
             <TranslatedLayout
-              imageUrl="/img/enterprise/https-outcalls.webp"
+              imageUrl="/img/what-is-the-big-file/open-internet-services.webp"
               reverse={true}
             >
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
                 Extending existing software with blockchain capabilities
               </h2>
               <p className="tw-lead-sm">
-                BigFile smart contracts can both process and create HTTP requests, which allows them to host complete web apps on the blockchain, as well as directly make calls to APIs of any online service running on traditional cloud or elsewhere. This gives businesses the option to add blockchain capabilities to their existing software instead of developing the whole application on the blockchain from scratch.
+              BigFile smart contracts can both handle and generate HTTP requests, enabling them to host full web applications, enterprise solutions, and bureaucratic process networks on the blockchain. They can also make direct calls to the APIs of any online service running in traditional cloud environments or elsewhere. This offers businesses, institutions, and individuals the option to enhance their existing software with blockchain capabilities, rather than having to build all their operations from scratch on the blockchain.
               </p>
             </TranslatedLayout>
             
