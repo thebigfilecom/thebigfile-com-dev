@@ -4,7 +4,7 @@ keywords: [advanced, motoko, bitcoin, pos, point of sale, ckbtc]
 
 # BIG-POS
 
-[View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/motoko/ic-pos)
+[View this sample's code on GitHub](https://github.com/thebigfilecom/examples/tree/master/motoko/ic-pos)
 
 ![](./media/header.png)
 
@@ -18,7 +18,7 @@ For deeper understanding of the BIG < > BTC integration, see the BIG wiki articl
 ## Features
 
 - **Create store**: Users log in with their Internet Identity and configure the store with a name and other settings.
-- **Charge customer**: Users can charge a customer by entering an amount. This will generate and display a QR code for the customer to scan and pay. QR code follows the [BIGRC-22](https://github.com/dfinity/BIGRC/issues/22) standard.
+- **Charge customer**: Users can charge a customer by entering an amount. This will generate and display a QR code for the customer to scan and pay. QR code follows the [BIGRC-22](https://github.com/thebigfilecom/BIGRC/issues/22) standard.
 - **Send tokens**: Users can send ckBTC tokens to other users.
 - **Receive notifications**: Users can choose to receive notifications by email or SMS when a payment is received. This uses the [HTTP Outcall](https://thebigfile.com/docs/current/developer-docs/integrations/https-outcalls/) feature of the BigFile.
 - **Transaction history**: Users can view a list of transactions made to the store.
@@ -62,7 +62,7 @@ The frontend interacts with the following BIG canisters:
 
 - [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
 - [x] Install [Node.js](https://nodejs.org/en/).
-- [x] Clone the example dapp project: `git clone https://github.com/dfinity/examples`
+- [x] Clone the example dapp project: `git clone https://github.com/thebigfilecom/examples`
 
 ### Step 1: Start a local instance of the replica:
 
@@ -216,13 +216,3 @@ If everything is working, you should see a notification in the second store.
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
-
-## Author
-
-- [kristofer@fmckl.se](mailto:kristofer@fmckl.se)
-- Twitter: [@kristoferlund](https://twitter.com/kristoferlund)
-- Discord: kristoferkristofer
-
-## License
-
-[MIT](https://github.com/thebigfilecom/examples/blob/master/motoko/ic-pos/LICENSE)
