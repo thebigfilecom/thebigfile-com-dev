@@ -98,9 +98,9 @@ const SmallCard: React.FC<{
 
 const cardsData: CardData[] = [
   {
-    title: "Serve web directly from smart contracts",
+    title: "Serve the web directly from smart contracts.",
     description:
-      "BigFile is a blockchain with Cube smart contracts that can provide web services by processing HTTP requests. This allows 100% of online services to be run from the blockchain, allowing for full decentralization.",
+      "BigFile is a blockchain with Cube smart contracts that can provide web services by processing HTTP requests. This enables 100% of online services to be run directly from the blockchain, ensuring full decentralization.",
     image: "/img/features/serve-web.webp",
     href: null,
     refText: null,
@@ -109,25 +109,25 @@ const cardsData: CardData[] = [
   {
     title: "Connect Web2 and Web3 without oracles",
     description:
-      "Until now, blockchains had to rely on expensive and slow oracles to read from off-chain data sources. BigFile smart contracts can directly connect to Web2 APIs, making oracles obsolete. This opens up countless possibilities like sending emails, push notifications, fetching digital asset or fiat prices and many more — directly from the blockchain.",
+      "Until now, blockchains had to rely on expensive and slow oracles to read from off-chain data sources. BigFile smart contracts can directly connect to Web2 APIs, rendering oracles obsolete. This opens up countless possibilities, such as sending emails, push notifications, fetching digital asset or fiat prices, and much more—directly from the blockchain.",
     image: "/img/features/no-oracles-image.webp",
     href: "/https-outcalls",
     refText: "About HTTPS outcalls",
     imageSide: "left",
   },
   {
-    title: "Googleable smart contracts in the world",
+    title: "Googleable smart contracts.",
     description:
-      "Search engines like Google can’t index smart contracts running on other blockchains. As developers have to use centralized cloud providers to store the frontends, at least those become searchable. A compromise. The BigFile hosts smart contracts that can directly be indexed by all popular search engines. No frontends on public cloud required. This is how true Web3 works.",
+      "Search engines like Google can’t index smart contracts running on other blockchains. Developers are often forced to use centralized cloud providers to host frontends, making them at least somewhat searchable—a compromise. BigFile, however, hosts smart contracts that can be directly indexed by all popular search engines. No need for frontends on public clouds. This is how true Web3 works.",
     image: "/img/features/seo-image.webp",
-    href: "https://medium.com/dfinity/seo-support-for-100-on-chain-websites-built-on-the-internet-computer-19c951d73853",
+    href: "https://forum.thebigfile.com/t/seo-support-for-fully-on-chain-websites-built-on-bigfile/25",
     refText: "Read the blog",
     imageSide: "right",
   },
   {
     title: "The brain of the BigFile",
     description:
-      "The BigFile is governed by a fully on-chain permissionless system that regularly upgrades the protocol following the intentions of BIG token holders expressed through their votes.",
+      "The BigFile is governed by a fully on-chain, permissionless system that regularly upgrades the protocol according to the intentions of BIG token holders, as expressed through their votes.",
     image: "/img/features/nns-image.webp",
     href: "/nns",
     refText: "Participate in BigFile governance",
@@ -224,10 +224,7 @@ function FeaturesPage() {
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                The BigFile provides numerous unique capabilities that
-                enable it to play the role of BigFile, provide a
-                foundation for transforming the Cloud & Document, and deliver
-                opportunity to builders and users.
+                BigFile (BIG) is an open and secure AI-powered blockchain network capable of hosting programs, files, data, and Big Data in the form of smart contracts. It securely performs computations on smart contracts and offers infinite scalability.
               </motion.p>
             </div>
           </div>
@@ -258,9 +255,7 @@ function FeaturesPage() {
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              The BigFile combines several innovations to provide web
-              experiences often indistinguishable from Web2 — all directly from
-              the blockchain.{" "}
+              The BigFile integrates several innovations to deliver web experiences that are often indistinguishable from Web2 — all powered directly by the blockchain.{" "}
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -419,17 +414,13 @@ function FeaturesPage() {
               variants={transitions.item}
               className="tw-heading-4 md:tw-heading-3 mb-4 "
             >
-              100% on chain: no cloud
+              100% On-Chain: No Cloud Required
             </motion.h3>
             <motion.p
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-0"
               variants={transitions.item}
             >
-              The BigFile provides a complete tech stack for
-              developers to build on. It can host online services and games
-              fully on chain without ever relying on centralized cloud
-              providers. This provides complete decentralization and removes
-              single points of failure.
+              The BigFile offers a comprehensive tech stack for developers to build on. It can host online services and games entirely on-chain, without ever relying on centralized cloud providers. This ensures complete decentralization and eliminates single points of failure.
             </motion.p>
           </SingleCard>
 
@@ -444,13 +435,7 @@ function FeaturesPage() {
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-4"
               variants={transitions.item}
             >
-              One of the major hurdles to blockchain adoption for end users is
-              having to buy and hold tokens to interact with the blockchain to
-              pay for gas fees. The BigFile has been designed with
-              mass adoption in mind from the ground up. Developers charge up
-              their smart contracts with cycles (the BIG analogue to gas), so
-              users don’t have to pay when interacting with the smart contracts.
-              This removes a major barrier of entry for end users.
+              One of the major hurdles to blockchain adoption for end users is having to buy and hold tokens to interact with the blockchain to pay for gas fees. Developers charge up their smart contracts with cycles (the BIG analogue to gas), so users don’t have to pay when interacting with the smart contracts. This removes a major barrier of entry for end users.
             </motion.p>
 
             <motion.p className="mb-0" variants={transitions.item}>
@@ -487,7 +472,7 @@ function FeaturesPage() {
               className="tw-heading-3 md:tw-heading-60 mb-3 md:mb-6"
               variants={transitions.item}
             >
-              Integrating chains
+              Streamlining Bureaucracy with BigFile
             </motion.h2>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-0"
@@ -542,61 +527,6 @@ function FeaturesPage() {
               </Link>
             </motion.p>
           </SplitCard>
-          <SingleCard>
-            <motion.h3
-              variants={transitions.item}
-              className="tw-heading-4 md:tw-heading-3 mb-4 "
-            >
-              Extending ETH
-            </motion.h3>
-            <motion.p
-              className="tw-paragraph md:tw-lead-sm text-black-60 mb-12"
-              variants={transitions.item}
-            >
-              Using chain-key ECSDA signatures (advanced threshold ECDSA), the
-              BigFile will integrate with Ethereum. BigFile
-              smart contracts can access and use all digital assets like ERC-20
-              and ERC-721 tokens from Ethereum, and smart contracts on Ethereum
-              can use the power of BIG smart contracts, e.g., low-cost storage
-              and computation.
-            </motion.p>
-            <motion.p className="mb-0" variants={transitions.item}>
-              <Link
-                href="https://wiki.thebigfile.com/wiki/Extend_Bitcoin,_Ethereum_and_other_blockchains"
-                className="tw-heading-6 flex gap-2 items-center"
-              >
-                <RightPointer className="w-6 h-6"></RightPointer>
-                Learn more
-              </Link>
-            </motion.p>
-          </SingleCard>
-          <SingleCard>
-            <motion.h3
-              variants={transitions.item}
-              className="tw-heading-4 md:tw-heading-3 mb-4 "
-            >
-              Cross-chain transaction signing
-            </motion.h3>
-            <motion.p
-              className="tw-paragraph md:tw-lead-sm text-black-60 mb-0"
-              variants={transitions.item}
-            >
-              Threshold ECDSA, coupled with chain-key cryptography is the main
-              innovation behind direct integration with other blockchains
-              without the use of bridges. It allows the BigFile to
-              natively create signed transactions on other blockchains such as
-              Bitcoin and Ethereum. The BigFile implements secure
-              threshold ECDSA signing, which is the signature scheme used by
-              most blockchains.
-              <Link
-                href="https://thebigfile.com/how-it-works/#Chain-key-technology"
-                className="tw-heading-6 flex gap-2 items-center mt-10"
-              >
-                <RightPointer className="w-6 h-6"></RightPointer>
-                Learn more
-              </Link>
-            </motion.p>
-          </SingleCard>
         </section>
 
         <AnimateSpawn
