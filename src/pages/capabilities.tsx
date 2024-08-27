@@ -148,42 +148,29 @@ const cardsData: CardData[] = [
 
 const smallCardsData = [
   {
-    title: "Chain-key cryptography",
+    title: "Chain-Key Cryptography",
     description:
-      "The BigFile uses a toolbox of advanced cryptographic mechanisms, collectively known as chain-key cryptography, which allows the BIG to achieve functionalities and scalability that are impossible on other blockchains.",
+      "BigFile employs a suite of advanced cryptographic mechanisms, collectively known as chain-key cryptography, enabling BIG to achieve functionalities and scalability that are unattainable on other blockchains.",
     href: "/how-it-works#Chain-key-technology",
   },
   {
-    title: "Concurrent execution",
-    description: `Enabled by the BIG's asynchronous communication, "actor" smart
-contracts run in parallel, unlocking horizontal scaling and
-preventing reentrancy attacks like the infamous DAO attack, which
-caused a major chain to hard fork and a loss of 60 million USD.`,
+    title: "Concurrent Execution",
+    description: `Powered by BIG's asynchronous communication, "actor" smart contracts run in parallel, enabling horizontal scaling and preventing reentrancy attacks, such as the infamous DAO attack.`,
     href: "/capabilities/actor-model",
   },
   {
     title: "Heartbeats",
-    description: `On other blockchain networks, smart contract computations can only
-  be invoked by submitting a new transaction to their networks. The
-  BigFile provides a means for cube smart contracts to
-  be configured so that they are invoked by the blockchain itself,
-  at some specified block interval.`,
+    description: `On other blockchain networks, smart contract computations can only be triggered by submitting a new transaction. In contrast, BigFile allows cube smart contracts to be configured for automatic invocation by the blockchain itself at specified block intervals.`,
     href: "/capabilities/daemon-contracts",
   },
   {
-    title: "Multi-block transactions",
-    description: `Smart contract calls (TXs) can be long-running and can span
-  multiple blocks. This removes the tedious "round gas limit" most
-  blockchains have, simplifies smart contract programming, and
-  unlocks new use cases.`,
+    title: "Multi-block Transactions",
+    description: `Smart contract calls (TXs) can be long-running and span multiple blocks, eliminating the tedious "round gas limit" present on most blockchains. This simplification of smart contract programming unlocks new use cases.`,
     href: "/capabilities/multi-block-transactions",
   },
   {
     title: "WebAssembly (Wasm)",
-    description: `Use any language that compiles to Wasm to write cube smart
-  contracts. SDKs are available for Motoko, Rust, TypeScript, Python
-  and C++. Any other language that compiles to Wasm can be used as
-  well.`,
+    description: `Write cube smart contracts in any language that compiles to Wasm. SDKs are available for Motoko, Rust, TypeScript, Python, and C++, but you can also use any other language that compiles to Wasm.`,
     href: "/capabilities/webassembly",
   },
   {
@@ -315,12 +302,7 @@ function FeaturesPage() {
                 className="tw-paragraph md:tw-lead-sm  mb-6 text-white-80"
                 variants={transitions.item}
               >
-                The BigFile blockchain has replaced the username and
-                password model with a more advanced and much more secure method
-                of cryptographic authentication that is more convenient, works
-                across all of a user's devices, and helps protect user privacy.
-                Based on W3C's Web Authentication (WebAuthn) Web standard. Using
-                hardware-based user key protection.
+                The BigFile blockchain has replaced the traditional username and password model with a more advanced and secure method of cryptographic authentication. This approach is not only more convenient but also works seamlessly across all of a user's devices and enhances privacy. It is based on the W3C's Web Authentication (WebAuthn) standard, utilizing hardware-based key protection for users.
               </motion.p>
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
@@ -344,37 +326,10 @@ function FeaturesPage() {
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-12"
               variants={transitions.item}
             >
-              Low latency and high throughput. The two most important metrics
-              for measuring performance. The BigFile excels in both.
-              Unlike most blockchains, BIG has no theoretical maximum TX/s.
-              Throughput scales horizontally with each added subnet, analougous
-              to how cloud computing scales out with added machines. Smart
-              contracts on different subnets can always communicate with each
-              other, without getting bottlenecked with a growing number of
-              subnets.
+              Low latency and high throughput are the two most important metrics for measuring performance, and BigFile excels in both. Unlike most blockchains, BIG has no theoretical maximum for transactions per second (TX/s). Throughput scales horizontally with each added subnet, similar to how cloud computing scales with added machines. Smart contracts on different subnets can always communicate with each other, without being bottlenecked by the growing number of subnets.
             </motion.p>
 
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2  md:gap-x-12 md:gap-y-6">
-              {[
-                ["~200ms", "GET Query calls"],
-                ["~1-2s to reach finality", "POST Update calls"],
-                ["~1,100,000 query calls/s", " Query Call Speed"],
-                ["~20,800 update calls/s", " Update Call Speed"],
-              ].map((rows) => (
-                <motion.div
-                  className="flex flex-col items-start"
-                  key={rows[0]}
-                  variants={transitions.item}
-                >
-                  <span className=" text-transparent bg-clip-text gradient-text text-[20px] leading-[34px] font-book">
-                    {rows[0]}
-                  </span>
-                  <span className="tw-paragraph-sm text-black-60">
-                    {rows[1]}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
+            
           </SingleCard>
           {cardsData.slice(2, 3).map((card, index) => (
             <SplitCard
@@ -478,10 +433,7 @@ function FeaturesPage() {
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              No more bridges. Hackers have stolen 100s of millions of dollars
-              by exploiting bridges. The BigFile uses advanced
-              cryptography to directly integrate with other blockchains without
-              using bridges.
+              BigFile is developing a blockchain and AI-powered solution for the increasingly complex bureaucratic processes. Bureaucracy is a broad field with various categories, and instead of creating separate solutions for each, BigFile offers a single, comprehensive solution aimed at eliminating the complexities of bureaucratic procedures.
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -492,7 +444,7 @@ function FeaturesPage() {
             imageSideClassName="text-center"
             image={
               <img
-                src="/img/features/btc-eth.webp"
+                src="/img/features/bureaucracy.webp"
                 alt=""
                 className="my-10 h-[150px] md:h-[280px] aspect-[708/420]"
                 loading="lazy"
@@ -504,26 +456,21 @@ function FeaturesPage() {
               className="tw-heading-4 md:tw-heading-3 mb-4 "
               variants={transitions.item}
             >
-              Native Bitcoin smart contracts
+              Streamlining Bureaucracy with BigFile
             </motion.h3>
             <motion.p
               className="tw-paragraph md:tw-lead-sm mb-6 "
               variants={transitions.item}
             >
-              The BigFile is integrated with the Bitcoin network at
-              the protocol level. Using chain-key ECDSA signatures (an advanced
-              form of threshold ECDSA) and a protocol-level integration, a
-              Cube smart contract can create Bitcoin addresses, and send and
-              receive bitcoin, all directly on the Bitcoin ledger, much like a
-              regular Bitcoin user.
+              The AI-supported BigFile Blockchain Project aims to eliminate the challenging and time-consuming paperwork and bureaucratic transactions between countries, institutions, and individuals. It is a document management and transfer solution specifically developed for a decentralized blockchain, designed to simplify your life by combining the power of artificial intelligence and blockchain technologies.
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
-                href="/bitcoin-integration/"
+                href="https://forum.thebigfile.com/t/streamlining-bureaucracy-with-bigfile/26"
                 className="tw-heading-6 flex gap-2 items-center text-white hover:text-white-60 hover:no-underline"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
-                How BTC integration works
+                How Bureaucracy integration works?
               </Link>
             </motion.p>
           </SplitCard>
@@ -555,8 +502,7 @@ function FeaturesPage() {
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              DAOs are the future of the digital economy and a core part of the
-              BigFile.
+              DAOs are the future of the digital economy and a fundamental component of BigFile.
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -631,15 +577,13 @@ function FeaturesPage() {
               className="tw-heading-3 md:tw-heading-60 mb-4 md:mb-8"
               variants={transitions.item}
             >
-              Cool protocol stuff
+              Innovative Protocol Features
             </motion.h2>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              Countless innovations in cryptography and distributed computing
-              were necessary to build the first true BigFile. Here are a
-              few favorites.
+              Countless innovations in cryptography and distributed computing were essential to create the first true BigFile. Here are a few of our favorites.
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -692,11 +636,7 @@ function FeaturesPage() {
               className="tw-lead-sm md:tw-lead mb-6"
               variants={transitions.item}
             >
-              Learn the inner workings of the BigFile blockchain.
-              Easy-to-read tech articles on the core protocol, governance,
-              chain-key cryptography, chain-key signatures, plus open-source
-              repositories, in-depth video academy sessions, white papers, and
-              more.
+              Discover the inner workings of the BigFile blockchain through easy-to-read tech articles covering the core protocol, governance, chain-key cryptography, chain-key signatures, and more. Explore open-source repositories, in-depth white papers, and additional resources.
             </motion.p>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-0"
