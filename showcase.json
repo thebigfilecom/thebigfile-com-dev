@@ -3,13 +3,13 @@
     "id": "openchat",
     "name": "BIGChat",
     "oneLiner": "Decentralized alternative to WhatsApp",
-    "website": "https://oc.app/",
+    "website": "/",
     "tags": [
       "SocialFi",
       "Bitcoin",
       "DAO"
     ],
-    "description": "BIGChat is a fully decentralized real-time messaging service that is indistinguishable from Web2 chat apps while living 100% on the blockchain. This allows users to send crypto to each other - including Bitcoin - and own a part of BIGChat through BIG tokens.",
+    "description": "BIGChat is a fully decentralized real-time messaging service that feels just like a Web2 chat app, yet operates 100% on the blockchain. This enables users to send cryptocurrencies—including Bitcoin—to each other and even own a part of BIGChat through BIG tokens.",
     "usesInternetIdentity": true,
     "display": "Large",
     "stats": "00,000+ users",
