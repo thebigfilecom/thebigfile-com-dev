@@ -1,5 +1,5 @@
 ---
-title: Adding NP Role to NNS Frontend Dapp
+title: NNS Frontend Dapp
 links:
   Forum Link: https://forum.thebigfile.com/
   Proposal: https://dashboard.thebigfile.com/
