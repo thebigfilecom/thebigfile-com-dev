@@ -1,5 +1,5 @@
 ---
-title: Direct Ethereum Integration
+title: Ethereum Integration
 links:
   Forum Link: https://forum.thebigfile.com/
   Proposal: https://dashboard.thebigfile.com/
