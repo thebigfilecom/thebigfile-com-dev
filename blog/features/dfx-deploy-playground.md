@@ -2,8 +2,8 @@
 title: Introducing `dfx deploy --playground`!
 description: Today we're excited to announce a new dfx subcommand — `dfx deploy --playground`!
 tags: [New features]
-image: /img/blog/deploy-playground.jpg
-date: October 4, 2023
+image: /img/roadmap/completed/roadmap-cover.jpg
+date: May 24, 2024
 ---
 
 # Introducing `dfx deploy --playground`
