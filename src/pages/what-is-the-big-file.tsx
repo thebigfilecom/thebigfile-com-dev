@@ -12,7 +12,7 @@ import TranslatedLayout from "../components/Common/TranslatedLayout/TranslatedLa
 import { useDarkHeaderInHero } from "../utils/use-dark-header-in-hero";
 import LinkArrowUpRight from "../components/Common/Icons/LinkArrowUpRight";
 
-function WhatIsIcpPage() {
+function WhatIsBigPage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const isDark = useDarkHeaderInHero(heroRef);
 
@@ -438,4 +438,4 @@ function WhatIsIcpPage() {
   );
 }
 
-export default WhatIsIcpPage;
+export default WhatIsBigPage;
