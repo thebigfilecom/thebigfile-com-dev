@@ -114,7 +114,7 @@ const benefits = [
     title: "User-centricity",
     description: (
       <>
-        Open internet services allow communities to align incentives and shape
+        BigFile allow communities to align incentives and shape
         services.
       </>
     ),
@@ -134,16 +134,7 @@ const benefits = [
     title: "Security",
     description: (
       <>
-        The SNS DAO framework has undergone security audits by{" "}
-        <Link
-          href="https://www.trailofbits.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link-subtle"
-        >
-          Trail of Bits
-        </Link>
-        , with no severe issues found.
+        BigFile always prioritizes security. Being 100% open source, security is at the highest level.
       </>
     ),
   },
@@ -157,7 +148,7 @@ function SnsPage() {
   return (
     <Layout
       title="Community-owned Web3"
-      description="Open Internet Services (OIS) on the BigFile blockchain allow communities to take full control and ownership of entire internet services — from social media networks and games, to open enterprise tech infrastructures — via participation in decentralized autonomous organizations (DAOs)."
+      description="The BigFile blockchain empowers communities to take full control and ownership of all internet services, from social media networks and games to open enterprise technology infrastructures, through participation in decentralized autonomous organizations (DAOs)."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-sns.jpg" />
@@ -186,12 +177,7 @@ function SnsPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  Open Internet Services (OIS) on the BigFile
-                  blockchain allow communities to take full control and
-                  ownership of entire internet services — from social media
-                  networks and games, to open enterprise tech infrastructures —
-                  via participation in decentralized autonomous organizations
-                  (DAOs).
+                  The BigFile blockchain empowers communities to take full control and ownership of all internet services, from social media networks and games to open enterprise technology infrastructures, through participation in decentralized autonomous organizations (DAOs).
                 </motion.p>
               </div>
             </div>
@@ -227,8 +213,7 @@ function SnsPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-60 mb-8 md:mb-12 md:w-8/10"
               variants={transitions.item}
             >
-              In Web3, you govern, own and shape your favorite internet
-              services.
+              In Web3, you govern, own, and shape the internet services you love.
             </motion.p>
             <motion.p
               className="mb-0 flex flex-col items-start sm:flex-row gap-6 md:gap-8"
