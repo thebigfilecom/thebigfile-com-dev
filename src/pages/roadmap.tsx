@@ -49,8 +49,7 @@ const RoadmapPage: React.FC = () => {
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Roadmap</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-              BigFile prepares various development environments and resources to make the blockchain more efficient, faster and easier to use.This roadmap shows the status of many projects across the 
-              BigFile stack, but not all - more to come over the next few weeks.
+              BigFile prepares various development environments and resources to make the blockchain more efficient, faster, and easier to use. This roadmap highlights the status of many projects across the BigFile stack, but not all—more updates will be coming in the next few weeks.
               </p>
             </div>
           </div>
@@ -146,7 +145,7 @@ const RoadmapPage: React.FC = () => {
               </p>
               <Link
                 className="link-external"
-                href="https://thebigfile.com/events-and-news"
+                href="https://thebigfile.com/blog"
               >
                 See events
               </Link>
@@ -157,12 +156,11 @@ const RoadmapPage: React.FC = () => {
             >
               <h3 className="tw-lead-lg md:tw-title-sm">Developer grants</h3>
               <p className="tw-paragraph-sm mb-3 text-black-60">
-                Do you have innovative ideas for building on the BigFile and need funding to launch your project? The BigFile
-                Developer Grant Program provides support to promising developers around the globe.
+              Do you have innovative ideas for building on BigFile and need funding to launch your project? The BigFile Developer Grant Program offers support to promising developers worldwide.
               </p>
               <Link
                 className="link-external"
-                href="https://thebigfile.com/grants/"
+                href="https://forum.thebigfile.com/"
               >
                 Apply for grants
               </Link>
