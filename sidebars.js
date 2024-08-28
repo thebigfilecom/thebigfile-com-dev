@@ -1140,8 +1140,8 @@ const sidebars = {
             },
             {
               type: "doc",
-              label: "Internet Identity",
-              id: "references/ii-spec",
+              label: "BIG Wallet",
+              id: "references/big-wallet-spec",
             },
             {
               type: "doc",

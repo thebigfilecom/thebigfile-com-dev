@@ -46,21 +46,19 @@ function InternetIdentityPage() {
               className="tw-heading-3 md:tw-heading-2 mb-2 md:mb-6 md:w-8/10"
               variants={transitions.item}
             >
-              A fully decentralized digital identity solution
+              A fully decentralized digital identity solution for the future.
             </motion.h1>
             <div className="relative  md:w-5/10">
               <motion.p
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                BIG Wallet redefines user experiences by removing
-                friction from the authentication journey and enabling data
-                sovereignty.
+                BIG Wallet redefines user experiences by eliminating friction in the authentication process and empowering data sovereignty.
               </motion.p>
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
                   className="link-white link-with-icon"
-                  href="/docs/current/references/ii-spec/"
+                  href="/docs/current/references/big-wallet-spec/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import BlobGradient from "@site/static/img/gradientBlurredCircle.webp";
 import transitions from "@site/static/transitions.json";
 import Head from "@docusaurus/Head";
-import VideoCard from "../components/Common/VideoCard";
 import {
   TranslatedCard,
   TranslatedCardList,
