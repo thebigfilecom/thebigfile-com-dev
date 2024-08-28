@@ -240,7 +240,7 @@ const ReportCard = () => {
         </p>
         <Link
           className="button-white link text-center"
-          href="/icp_ecosystem_report_03_2024.pdf"
+          href="/bigfile_ecosystem_report.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -309,7 +309,7 @@ function ShowcasePage(): JSX.Element {
   return (
     <Layout
       title="BigFile Ecosystem"
-      description="Explore a showcase of curated projects built by the BigFile ecosystem. This continually growing list features the newest projects, all built with blockchain. Try out decentralized social media, dapps and more. Only possible on the BIG. "
+      description="Explore a showcase of curated projects built within the BigFile ecosystem. This ever-growing list features the latest projects, all powered by blockchain. Experience decentralized social media, dapps, and more—only possible on BIG. "
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-showcase.jpg"></ShareMeta>

@@ -1,8 +1,8 @@
-# The Internet Identity Specification
+# The BIG Wallet Specification
 
 ## Introduction
 
-This document describes and specifies Internet Identity from various angles and at various levels of abstraction, namely:
+This document describes and specifies BIG Wallet from various angles and at various levels of abstraction, namely:
 
 -   High level goals, requirements and use cases
 
@@ -10,23 +10,23 @@ This document describes and specifies Internet Identity from various angles and 
 
 -   Interface as used by client applications frontends, i.e., our [client authentication protocol](#client-authentication-protocol)
 
--   The interface of the Internet Identity Service *backend*, i.e., describing its contract at the Candid layer, as used by its frontend
+-   The interface of the BIG Wallet Service *backend*, i.e., describing its contract at the Candid layer, as used by its frontend
 
--   Important implementation notes about the Internet Identity Service backend
+-   Important implementation notes about the BIG Wallet Service backend
 
--   Internal implementation notes about the Internet Identity Service frontend
+-   Internal implementation notes about the BIG Wallet Service frontend
 
-The Internet Identity Service consists of
+The BIG Wallet Service consists of
 
 -   its backend, a canister on the BIG. More precisely, a canister on a dedicated subnet with a *well-known* canister id, and
 
 -   its frontend, a web application served by the backend canister.
 
-Similarly, the client applications consist of a frontend (served by a canister) and (typically) one or more backend canisters. Only the frontend interacts with the Internet Identity Service directly (via the [client authentication protocol](#client-authentication-protocol) described below).
+Similarly, the client applications consist of a frontend (served by a canister) and (typically) one or more backend canisters. Only the frontend interacts with the BIG Wallet Service directly (via the [client authentication protocol](#client-authentication-protocol) described below).
 
 ## Goals, requirements and use cases
 
-The Internet Identity service allows users to
+The BIG Wallet service allows users to
 
 -   maintain identities on the BigFile
 
@@ -56,22 +56,22 @@ Some security requirements are
 
 Some noteworthy security assumptions are:
 
--   The delivery of frontend applications is secure. In particular, a user accessing the Internet Identity Service Frontend through a TLS-secured HTTP connection cannot be tricked into running another web application.
+-   The delivery of frontend applications is secure. In particular, a user accessing the BIG Wallet Service Frontend through a TLS-secured HTTP connection cannot be tricked into running another web application.
 
 :::note
 Just for background: At launch this meant we relied on the trustworthiness of the boundary nodes as well as the replica the boundary nodes happens to fetch the assets from. After launch, certification of our HTTP Gateway protocol and trustworthy client-side code (browser extensions, proxies, etc.) have improved this situation.
 :::
 
--   The security devices only allow the use of their keys from the same web application that created the key (in our case, the Internet Identity Service Frontend).
+-   The security devices only allow the use of their keys from the same web application that created the key (in our case, the BIG Wallet Service Frontend).
 
 -   The user's browser is trustworthy, `postMessage` communication between different origins is authentic.
 
--   For user privacy, we also assume the Internet Identity Service backend can keep a secret (but since data is replicated, we do not rely on this assumption for other security properties).
+-   For user privacy, we also assume the BIG Wallet Service backend can keep a secret (but since data is replicated, we do not rely on this assumption for other security properties).
 
 ## Identity design and data model
 
 
-The BigFile serves this frontend under hostnames `https://identity.ic0.app` (official) and `https://identity.thebigfile.com` (experimental).
+The BigFile serves this frontend under hostnames `https://bigwallet.thebigfile.tech` (official) and `https://bigwallet.thebigfile.com` (experimental).
 
 The canister maintains a salt (in the following the `salt`), a 32 byte long blob that is obtained via the BigFile's source of secure randomness.
 
@@ -105,7 +105,7 @@ where `H` is SHA-256, `·` is concatenation, `|…|` is a single byte representi
 A `frontend_host` of the form `<canister id>.icp0.io` will be rewritten to `<canister id>.ic0.app` before being used in the seed. This ensures transparent pseudonym transfer between apps hosted on `ic0.app` and `icp0.io` domains.
 :::
 
-The Internet Identity Service Backend stores the following data in user accounts, indexed by the respective Identity Anchor:
+The BIG Wallet Service Backend stores the following data in user accounts, indexed by the respective Identity Anchor:
 
 -   a set of *device information*, consisting of
 
@@ -117,19 +117,19 @@ The Internet Identity Service Backend stores the following data in user accounts
 
 When a client application frontend wants to authenticate as a user, it uses a *session key* (e.g., Ed25519 or ECDSA), and by way of the authentication flow (details below) obtains a [*delegation chain*](https://thebigfile.com/docs/current/references/ic-interface-spec#authentication) that allows the session key to sign for the user's main identity.
 
-The delegation chain consists of one delegation, called the *client delegation*. It delegates from the user identity (for the given client application frontend) to the session key. This delegation is created by the Internet Identity Service Cube, and signed using a [canister signature](https://hydra.dfinity.systems/latest/dfinity-ci-build/ic-ref.pr-319/interface-spec/1/index.html#canister-signatures). This delegation is unscoped (valid for all canisters) and has a maximum lifetime of 30 days, with a default of 30 minutes.
+The delegation chain consists of one delegation, called the *client delegation*. It delegates from the user identity (for the given client application frontend) to the session key. This delegation is created by the BIG Wallet Service Cube, and signed using a [canister signature](https://hydra.dfinity.systems/latest/dfinity-ci-build/ic-ref.pr-319/interface-spec/1/index.html#canister-signatures). This delegation is unscoped (valid for all canisters) and has a maximum lifetime of 30 days, with a default of 30 minutes.
 
-The Internet Identity Service Frontend also manages an *identity frontend delegation*, delegating from the security device's public key to a session key managed by this frontend, so that it can interact with the backend without having to invoke the security device for each signature.
+The BIG Wallet Service Frontend also manages an *identity frontend delegation*, delegating from the security device's public key to a session key managed by this frontend, so that it can interact with the backend without having to invoke the security device for each signature.
 
 ## Client authentication protocol
 
-This section describes the Internet Identity Service from the point of view of a client application frontend.
+This section describes the BIG Wallet Service from the point of view of a client application frontend.
 
 1.  The client application frontend creates a session key pair (e.g., Ed25519).
 
 2.  It installs a `message` event handler on its own `window`.
 
-3.  It loads the url `https://identity.ic0.app/#authorize` in a separate tab. Let `identityWindow` be the `Window` object returned from this.
+3.  It loads the url `https://bigwallet.thebigfile.tech/#authorize` in a separate tab. Let `identityWindow` be the `Window` object returned from this.
 
 4.  In the `identityWindow`, the user logs in, and the `identityWindow` invokes
     ```ts
@@ -145,7 +145,7 @@ This section describes the Internet Identity Service from the point of view of a
 
 5.  The client application, after receiving the `InternetIdentityReady`, invokes
     ```ts
-    identityWindow.postMessage(msg, "https://identity.ic0.app")
+    identityWindow.postMessage(msg, "https://bigwallet.thebigfile.tech")
     ```
 
     where `msg` is a value of type
@@ -167,12 +167,12 @@ This section describes the Internet Identity Service from the point of view of a
 
     -   the `allowPinAuthentication` (EXPERIMENTAL), if present, indicates whether or not the Identity Provider should allow the user to authenticate and/or register using a temporary key/PIN identity. Authenticating dapps may want to prevent users from using Temporary keys/PIN identities because Temporary keys/PIN identities are less secure than Passkeys (webauthn credentials) and because Temporary keys/PIN identities generally only live in a browser database (which may get cleared by the browser/OS).
 
-    -   the `derivationOrigin`, if present, indicates an origin that should be used for principal derivation instead of the client origin. Internet Identity will only accept values that are also listed in the HTTP resource `/.well-known/ii-alternative-origins` of the corresponding canister (see [Alternative Frontend Origins](#alternative-frontend-origins)).
+    -   the `derivationOrigin`, if present, indicates an origin that should be used for principal derivation instead of the client origin. BIG Wallet will only accept values that are also listed in the HTTP resource `/.well-known/ii-alternative-origins` of the corresponding canister (see [Alternative Frontend Origins](#alternative-frontend-origins)).
 
 
 6.  Now the client application window expects a message back, with data `event`.
 
-7.  If `event.origin` is not either `"https://identity.ic0.app"` or `"https://identity.thebigfile.com"` (depending on which endpoint you are using), ignore this message.
+7.  If `event.origin` is not either `"https://bigwallet.thebigfile.tech"` or `"https://bigwallet.thebigfile.com"` (depending on which endpoint you are using), ignore this message.
 
 8.  The `event.data` value is a JS object with the following type:
     ```ts
@@ -208,19 +208,19 @@ The [`@dfinity/auth-client`](https://www.npmjs.com/package/@dfinity/auth-client)
 The client application frontend should support delegation chains of length more than one, and delegations with `targets`, even if the present version of this spec does not use them, to be compatible with possible future versions.
 
 :::note
-The Internet Identity frontend will use `event.origin` as the "Frontend URL" to base the user identity on. This includes protocol, full hostname and port. This means
+The BIG Wallet frontend will use `event.origin` as the "Frontend URL" to base the user identity on. This includes protocol, full hostname and port. This means
 
 
 -   Changing protocol, hostname (including subdomains) or port will invalidate all user identities.
     - However, multiple different frontend URLs can be mapped back to the canonical frontend URL, see [Alternative Frontend Origins](#alternative-frontend-origins).
-    - Frontend URLs on `icp0.io` are mapped to `ic0.app` automatically, see [Identity design and data model](#identity-design-and-data-model).
+    - Frontend URLs on `thebigfile.tech` are mapped to `ic0.app` automatically, see [Identity design and data model](#identity-design-and-data-model).
 
 -   The frontend application must never allow any untrusted JavaScript code to be executed, on any page on that hostname. Be careful when implementing a JavaScript playground on the BigFile.
 :::
 
 ## Alternative Frontend Origins
 
-To allow flexibility regarding the canister frontend URL, the client may choose to provide another frontend URL as the `derivationOrigin` (see [Client authentication protocol](#client-authentication-protocol)). This means that Internet Identity will issue the same principals to the frontend (which uses a different origin) as it would if it were using the `derivationOrigin` directly.
+To allow flexibility regarding the canister frontend URL, the client may choose to provide another frontend URL as the `derivationOrigin` (see [Client authentication protocol](#client-authentication-protocol)). This means that BIG Wallet will issue the same principals to the frontend (which uses a different origin) as it would if it were using the `derivationOrigin` directly.
 This feature works for all [custom domains](https://thebigfile.com/docs/current/developer-docs/web-apps/custom-domains/using-custom-domains) backed by canisters.
 
 :::caution
@@ -231,7 +231,7 @@ This feature is intended to allow more flexibility with respect to the origins o
 `https://<canister_id>.ic0.app` and `https://<canister_id>.raw.ic0.app` do _not_ issue the same principals by default . However, this feature can also be used to map `https://<canister_id>.raw.ic0.app` to `https://<canister_id>.ic0.app` principals or vice versa.
 :::
 
-In order for Internet Identity to accept the `derivationOrigin` the corresponding canister must list the frontend origin in the JSON object served on the URL `https://<canister_id>.icp0.io/.well-known/ii-alternative-origins` (i.e. the canister _must_ implement the `http_request` query call as specified [here](https://github.com/dfinity/interface-spec/blob/master/spec/index.adoc#the-http-gateway-protocol)).
+In order for BIG Wallet to accept the `derivationOrigin` the corresponding canister must list the frontend origin in the JSON object served on the URL `https://<canister_id>.icp0.io/.well-known/ii-alternative-origins` (i.e. the canister _must_ implement the `http_request` query call as specified [here](https://github.com/thebigfilecom/interface-spec/blob/master/spec/index.adoc#the-http-gateway-protocol)).
 
 
 ### JSON Schema {#alternative-frontend-origins-schema}
@@ -272,7 +272,7 @@ In order for Internet Identity to accept the `derivationOrigin` the correspondin
 ```
 
 :::note
-The path `/.well-known/ii-alternative-origins` will always be requested using the non-raw `https://<canister_id>.ic0.app` domain (even if the `derivationOrigin` uses a `.raw`) and _must_ be delivered as a certified asset. Requests to `/.well-known/ii-alternative-origins` _must_ be answered with a `200` HTTP status code. More specifically Internet Identity _will not_ follow redirects and fail with an error instead. These measures are required in order to prevent malicious boundary nodes or replicas from tampering with `ii-alternative-origins`.
+The path `/.well-known/ii-alternative-origins` will always be requested using the non-raw `https://<canister_id>.ic0.app` domain (even if the `derivationOrigin` uses a `.raw`) and _must_ be delivered as a certified asset. Requests to `/.well-known/ii-alternative-origins` _must_ be answered with a `200` HTTP status code. More specifically BIG Wallet _will not_ follow redirects and fail with an error instead. These measures are required in order to prevent malicious boundary nodes or replicas from tampering with `ii-alternative-origins`.
 :::
 
 :::note
@@ -280,10 +280,10 @@ To prevent misuse of this feature, the number of alternative origins _must not_ 
 :::
 
 :::note
-In order to allow Internet Identity to read the path `/.well-known/ii-alternative-origins`, the CORS response header [`Access-Control-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) must be set and allow the Internet Identity origin `https://identity.ic0.app`.
+In order to allow BIG Wallet to read the path `/.well-known/ii-alternative-origins`, the CORS response header [`Access-Control-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) must be set and allow the BIG Wallet origin `https://bigwallet.thebigfile.tech`.
 :::
 
-## The Internet Identity Service Backend interface
+## The BIG Wallet Service Backend interface
 
 This section describes the interface that the backend canister provides.
 
@@ -301,17 +301,17 @@ The `init_salt` method is mostly internal, see [Salt](#salt).
 
 ### The `register` and `create_challenge` methods
 
-The `register` method is used to create a new user. The Internet Identity Service backend creates a *fresh* Identity Anchor, creates the account record, and adds the given device as the first device.
+The `register` method is used to create a new user. The BIG Wallet Service backend creates a *fresh* Identity Anchor, creates the account record, and adds the given device as the first device.
 
 **Authorization**: This request must be sent to the canister with `caller` that is the self-authenticating id derived from the given `DeviceKey`.
 
-In order to protect the BigFile from too many "free" update calls, and to protect the Internet Identity Service from too many user registrations, this call is protected using a CAPTCHA challenge. The `register` call can only succeed if the `ChallengeResult` contains a `key` for a challenge that was created with `create_challenge` (see below) in the last 5 minutes *and* if the `chars` match the characters that the Internet Identity Service has stored internally for that `key`.
+In order to protect the BigFile from too many "free" update calls, and to protect the BIG Wallet Service from too many user registrations, this call is protected using a CAPTCHA challenge. The `register` call can only succeed if the `ChallengeResult` contains a `key` for a challenge that was created with `create_challenge` (see below) in the last 5 minutes *and* if the `chars` match the characters that the BIG Wallet Service has stored internally for that `key`.
 
 ### The `add` method
 
 The `add` method appends a new device to the given user's record.
 
-The Internet Identity Service backend rejects the call if the user already has a device on record with the given public key.
+The BIG Wallet Service backend rejects the call if the user already has a device on record with the given public key.
 
 This may also fail (with a *reject*) if the user is registering too many devices.
 
@@ -381,7 +381,7 @@ Fetches the principal for a given user and front end.
 
 ### The `prepare_delegation` method
 
-The `prepare_delegation` method causes the Internet Identity Service backend to prepare a delegation from the user identity associated with the given Identity Anchor and Client Application Frontend Hostname to the given session key.
+The `prepare_delegation` method causes the BIG Wallet Service backend to prepare a delegation from the user identity associated with the given Identity Anchor and Client Application Frontend Hostname to the given session key.
 
 This method returns the user's identity that's associated with the given Client Application Frontend Hostname. By returning this here, and not in the less secure `get_delegation` query, we prevent attacks that trick the user into using a wrong identity.
 
@@ -401,9 +401,9 @@ Together with the `UserKey` returned by `prepare_delegation`, the result of this
 
 **Authorization**: This request must be sent to the canister with `caller` that is the self-authenticating id derived from any of the public keys of devices associated with the user before this call.
 
-## The Internet Identity Service backend internals
+## The BIG Wallet Service backend internals
 
-This section, which is to be expanded, describes interesting design choices about the internals of the Internet Identity Service Cube. In particular
+This section, which is to be expanded, describes interesting design choices about the internals of the BIG Wallet Service Cube. In particular
 
 ### Salt
 
@@ -421,7 +421,7 @@ Since this cannot be done during `canister_init` (no calls from canister init), 
 
 ### Why we do not use `canister_inspect_message`
 
-The system allows canisters to inspect ingress messages before they are actually ingressed, and decide if they want to pay for them (see [the interface spec](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-inspect-message)). Because the Internet Identity canisters run on a system subnet, cycles are not actually charged, but we still want to avoid wasting resources.
+The system allows canisters to inspect ingress messages before they are actually ingressed, and decide if they want to pay for them (see [the interface spec](https://thebigfile.com/docs/current/references/ic-interface-spec/#system-api-inspect-message)). Because the BIG Wallet canisters run on a system subnet, cycles are not actually charged, but we still want to avoid wasting resources.
 
 It seems that this implies that we should use `canister_inspect_message` to reject messages that would, for example, not pass authentication.
 
@@ -433,7 +433,7 @@ But upon closer inspection (heh), this is not actually useful.
 
 On the flip side, implementing `canister_inspect_message` adds code, and thus a risk for bugs. In particular it increases the risk that some engineer might wrongly assume that the authentication check in `canister_inspect_message` is sufficient and will not do it again in the actual method, which could lead to a serious bug.
 
-Therefore the Internet Identity Cube intentionally does not implement `canister_inspect_message`.
+Therefore the BIG Wallet Cube intentionally does not implement `canister_inspect_message`.
 
 ### Internal data model and data structures used
 
@@ -478,7 +478,7 @@ type UserDeviceList = vec(record {
 
 ### Initialization
 
-The Internet Identity canister is designed for sharded deployments. There can be many simultaneously installed instances of the canister code, each serving requests of a subset of users. As users are identified by their Identity Anchor, we split the range of Identity Anchors into continuous non-overlapping half-closed intervals and assign each region to one canister instance. The assigned range is passed to the canister as an init argument, encoded in Candid:
+The BIG Wallet canister is designed for sharded deployments. There can be many simultaneously installed instances of the canister code, each serving requests of a subset of users. As users are identified by their Identity Anchor, we split the range of Identity Anchors into continuous non-overlapping half-closed intervals and assign each region to one canister instance. The assigned range is passed to the canister as an init argument, encoded in Candid:
 ```did
 type InternetIdentityInit = record {
   // Half-closed interval of Identity Anchors assigned to this canister, [ left_bound, right_bound )
@@ -490,9 +490,9 @@ type InternetIdentityInit = record {
 
 We don't need any logic recovery logic in pre/post-upgrade hooks because we place all user data to stable memory in a way that can be accessed directly. The signature map is simply dropped on upgrade, so users will have to re-request their delegations.
 
-## The Internet Identity Service frontend
+## The BIG Wallet Service frontend
 
-The Internet Identity Service frontend is the user-visible part of the Internet Identity Service, and where it all comes together. It communicates with
+The BIG Wallet Service frontend is the user-visible part of the BIG Wallet Service, and where it all comes together. It communicates with
 
 -   the user
 
@@ -522,7 +522,7 @@ The possible login subflows are shared among entry points `/` and `/authorized`,
 
 -   the frontend has a `frontend_delegation` from the security device to the session key
 
-All update calls to the Internet Identity Service Backend are made under the `device_identity` and are signed with the session key.
+All update calls to the BIG Wallet Service Backend are made under the `device_identity` and are signed with the session key.
 
 :::info
 The steps marked with 👆 are the steps where the user presses the security device.
@@ -638,7 +638,7 @@ The steps marked with 👆 are the steps where the user presses the security dev
 
 This flow is the boring default
 
-1.  User browses to `https://identity.ic0.app/`
+1.  User browses to `https://bigwallet.thebigfile.tech/`
 
 2.  👆 The appropriate login subflow happens
 
@@ -658,7 +658,7 @@ One could imagine additional information, such as the last time a device was use
 
 ### Flow: adding remote device
 
-1.  The user accesses `https://identity.ic0.app/`
+1.  The user accesses `https://bigwallet.thebigfile.tech/`
 
 2.  👆 The appropriate login subflow happens
 
@@ -727,7 +727,7 @@ One could imagine additional information, such as the last time a device was use
 
 10. It posts that data to the client application, using `event.source.postMessage` and the types specified in [Client authentication protocol](#client-authentication-protocol).
 
-11. After receiving the data the client application is expected to close the Internet Identity window / tab.
+11. After receiving the data the client application is expected to close the BIG Wallet window / tab.
 
 ### Flow: Deleting devices
 

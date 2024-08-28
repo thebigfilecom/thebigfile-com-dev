@@ -1,5 +1,5 @@
 ---
-keywords: [intermediate, concept, user sign in, user login, internet identity]
+keywords: [intermediate, concept, user sign in, user login, big wallet]
 ---
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
@@ -8,11 +8,11 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Intermediate", "Concept"]} />
 
-Internet Identity is the BIG's native form of identity used for authenticating with BIG dapps.
+BIG Wallet is the BIG's native form of identity used for authenticating with BIG dapps.
 
-Internet Identity doesn't use usernames and passwords. Instead, users utilize a **passkey** to register and authenticate with websites and applications. Passkeys are a unique cryptographic public/private key pair. Internet Identity issues a new identity for each dapp that a user authenticates with, and the identity cannot be linked back to the user. No personal data is shared with dapps or the Internet Identity application itself, and no software downloads are required.
+BIG Wallet doesn't use usernames and passwords. Instead, users utilize a **passkey** to register and authenticate with websites and applications. Passkeys are a unique cryptographic public/private key pair. BIG Wallet issues a new identity for each dapp that a user authenticates with, and the identity cannot be linked back to the user. No personal data is shared with dapps or the BIG Wallet application itself, and no software downloads are required.
 
-Internet Identity uses a form of WebAuthn API running in a single canister that serves both the Internet Identity frontend and backend code. When a user sends a request to the frontend code, the backend authentication service issues a delegation on the user's behalf. This delegation is then signed with the user's passkey.
+BIG Wallet uses a form of WebAuthn API running in a single canister that serves both the BIG Wallet frontend and backend code. When a user sends a request to the frontend code, the backend authentication service issues a delegation on the user's behalf. This delegation is then signed with the user's passkey.
 
 BIG Wallet can be integrated into your dapp for users to authenticate with as a form of user sign-up and login.
 
@@ -26,8 +26,8 @@ Check out [how to integrate BIG Wallet into your dapp](integrate-big-wallet.mdx)
 
 ## Resources
 
-- [Internet Identity dashboard](https://identity.ic0.app/).
-- [Internet Identity specification](/docs/current/references/ii-spec).
-- [Internet Identity GitHub repository](https://github.com/thebigfilecom/big-wallet).
-- [Internet Identity alternative frontend origins](/docs/current/developer-docs/integrations/big-wallet/alternative-origins).
-- [Internet Identity integration](/docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet).
+- [BIG Wallet dashboard](https://bigwallet.thebigfile.app/).
+- [BIG Wallet specification](/docs/current/references/big-wallet-spec).
+- [BIG Wallet GitHub repository](https://github.com/thebigfilecom/big-wallet).
+- [BIG Wallet alternative frontend origins](/docs/current/developer-docs/integrations/big-wallet/alternative-origins).
+- [BIG Wallet integration](/docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet).

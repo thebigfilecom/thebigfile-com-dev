@@ -1,5 +1,5 @@
 ---
-keywords: [intermediate, tutorial, user sign in, user login, internet identity]
+keywords: [intermediate, tutorial, user sign in, user login, big wallet]
 ---
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
@@ -9,7 +9,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
 
 ## Overview
-This guide shows an example of how to integrate Internet Identity into an application by using a simple 'Who am I?' backend canister and a frontend UI that returns the Internet Identity principal of the user who calls the backend's `whoami` method.
+This guide shows an example of how to integrate BIG Wallet into an application by using a simple 'Who am I?' backend canister and a frontend UI that returns the BIG Wallet principal of the user who calls the backend's `whoami` method.
 
 This project uses the **pullable** version of the Internet identity canister. A pullable canister is a canister that provides a public service at a static canister ID. To learn more about pullable canisters, please [see the documentation](/docs/current/developer-docs/smart-contracts/maintain/import).
 
@@ -17,7 +17,7 @@ This project uses the **pullable** version of the Internet identity canister. A 
 
 Before you start, verify that you have:
 
-- Downloaded and installed [`dfx`](https://github.com/dfinity/sdk/releases/latest) version 0.14.1 or later.
+- Downloaded and installed [`dfx`](https://github.com/thebigfilecom/sdk/releases/latest) version 0.14.1 or later.
 - [Node.js v16+](https://nodejs.org/en).
 
 ### Step 1: To get started, open a terminal window and create a new project:
@@ -64,11 +64,11 @@ Then, select a frontend framework for your frontend canister. Select 'Vanilla JS
   No frontend canister
 ```
 
-Lastly, you can include extra features to be added to your project. Select 'Internet Identity'.
+Lastly, you can include extra features to be added to your project. Select 'BIG Wallet'.
 
 ```
   ? Add extra features (space to select, enter to confirm) ›
-x Internet Identity
+x BIG Wallet
 ⬚ Bitcoin (Regtest)
 ⬚ Frontend tests
 ```
@@ -91,7 +91,7 @@ Use `dfx new <project_name>` to create a new project:
 dfx new ii_integration
 ```
 
-As mentioned in the introduction, you'll be using the **pullable** version of the Internet Identity canister, which uses the `dfx deps` workflow. The project's `dfx.json` file defines the Internet Identity canister as `"type": "pull"`.
+As mentioned in the introduction, you'll be using the **pullable** version of the BIG Wallet canister, which uses the `dfx deps` workflow. The project's `dfx.json` file defines the BIG Wallet canister as `"type": "pull"`.
 
 Open the `dfx.json` file and replace the existing content with the following:
 
@@ -159,7 +159,7 @@ actor {
 };
 ```
 
-In this actor, there is a single method that responds with the caller's principal. This will show if you make a request from the application's frontend using an authenticated Internet Identity or an AnonymousIdentity.
+In this actor, there is a single method that responds with the caller's principal. This will show if you make a request from the application's frontend using an authenticated BIG Wallet or an AnonymousIdentity.
 
 ### Step 3: Install the @dfinity/auth-client package:
 
@@ -272,35 +272,35 @@ dfx deploy
 
 ### Step 7: Then, select 'Log in'.
 
-You'll be redirected to the II frontend. Since you're running this locally, this will be using a local, non-production Internet Identity. To create one, follow the on-screen steps.
+You'll be redirected to the II frontend. Since you're running this locally, this will be using a local, non-production BIG Wallet. To create one, follow the on-screen steps.
 
-### Step 8: Create a local Internet Identity
+### Step 8: Create a local BIG Wallet
 
 - Select 'Create New' from the UI.
 
-![Internet Identity 1](../_attachments/II_1.png)
+![BIG Wallet 1](../_attachments/II_1.png)
 
 - Next, select 'Create Passkey'.
 
-![Internet Identity 2](../_attachments/II_2.png)
+![BIG Wallet 2](../_attachments/II_2.png)
 
 - When prompted, choose how to create your passkey, either on your current device or you can use another device.
 
-![Internet Identity 3](../_attachments/II_3.png)
+![BIG Wallet 3](../_attachments/II_3.png)
 
 - Then, enter the CAPTCHA to continue.
 
-![Internet Identity 4](../_attachments/II_4.png)
+![BIG Wallet 4](../_attachments/II_4.png)
 
-Your Internet Identity has been created! It'll be shown on the screen, and it is recommended that you write it down in a safe location to save it.
+Your BIG Wallet has been created! It'll be shown on the screen, and it is recommended that you write it down in a safe location to save it.
 
-This number is your Internet Identity. With this number and your passkey, you will be able to create and securely connect to BigFile dapps. If you lose this number, you will lose any accounts that were created with it. This number is not secret, but is unique to you.
+This number is your BIG Wallet. With this number and your passkey, you will be able to create and securely connect to BigFile dapps. If you lose this number, you will lose any accounts that were created with it. This number is not secret, but is unique to you.
 
 Once you save it, select the 'I saved it, continue' button.
 
 ### Step 9: Once you are redirected back to the frontend of the app, click the 'Click me!' button.
 
-### Step 10: Your Internet Identity's principal ID will be returned:
+### Step 10: Your BIG Wallet's principal ID will be returned:
 
 ![Local integration 4](../_attachments/II_greet_2.png)
 
@@ -312,8 +312,8 @@ To start a local development server, run `npm run start`. The output will contai
 
 ## Resources
 
-- [Internet Identity dashboard](https://identity.ic0.app/).
-- [Internet Identity specification](/docs/current/references/ii-spec).
-- [Internet Identity GitHub repository](https://github.com/thebigfilecom/big-wallet).
-- [Internet Identity alternative frontend origins](/docs/current/developer-docs/integrations/big-wallet/alternative-origins).
-- [Internet Identity integration](/docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet).
+- [BIG Wallet dashboard](https://identity.ic0.app/).
+- [BIG Wallet specification](/docs/current/references/big-wallet-spec).
+- [BIG Wallet GitHub repository](https://github.com/thebigfilecom/big-wallet).
+- [BIG Wallet alternative frontend origins](/docs/current/developer-docs/integrations/big-wallet/alternative-origins).
+- [BIG Wallet integration](/docs/current/developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet).

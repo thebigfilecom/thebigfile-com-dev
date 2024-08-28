@@ -46,21 +46,19 @@ function InternetIdentityPage() {
               className="tw-heading-3 md:tw-heading-2 mb-2 md:mb-6 md:w-8/10"
               variants={transitions.item}
             >
-              A fully decentralized digital identity solution
+              A fully decentralized digital identity solution for the future.
             </motion.h1>
             <div className="relative  md:w-5/10">
               <motion.p
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                BIG Wallet redefines user experiences by removing
-                friction from the authentication journey and enabling data
-                sovereignty.
+                BIG Wallet redefines user experiences by eliminating friction in the authentication process and empowering data sovereignty.
               </motion.p>
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
                   className="link-white link-with-icon"
-                  href="/docs/current/references/ii-spec/"
+                  href="/docs/current/references/big-wallet-spec/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -103,8 +101,7 @@ function InternetIdentityPage() {
                 100% decentralized
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                BIG Wallet is fully decentralized because apps built on
-                BigFile store data entirely on-chain. It's more secure and fault tolerant than digital identity solutions hosted on protocols that rely on centralized cloud providers like Amazon Web Services.
+              BIG Wallet is fully decentralized, as apps built on BigFile store data entirely on-chain. This makes it more secure and fault-tolerant than digital identity solutions hosted on protocols that rely on centralized cloud providers like Amazon Web Services.
               </p>
             </TranslatedLayout>
             <TranslatedLayout imageUrl="/img/internet-identity/image-2.webp">
@@ -112,8 +109,7 @@ function InternetIdentityPage() {
                 User friendly
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                Instead of using passwords to sign in to apps, users simply
-                unlock their devices with FaceID, TouchID or passcodes to access their accounts. By unlocking their devices, users authorize the use of a passkey. Passkeys are built on standardized technology, making BIG Wallet more convenient than traditional authentication methods.
+              Instead of using passwords to sign in, users simply unlock their devices with FaceID, TouchID, or passcodes to access their accounts. By unlocking their devices, they authorize the use of a passkey. Built on standardized technology, passkeys make BIG Wallet more convenient than traditional authentication methods.
               </p>
             </TranslatedLayout>
             <TranslatedLayout
@@ -124,11 +120,7 @@ function InternetIdentityPage() {
                 Enhanced security
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                BIG Wallet removes the need for apps to store passwords
-                in a database. When a user creates an BIG Wallet, they're
-                automatically assigned a public and private key pair. The
-                private key is locked in a tamper-proof chip on the user's
-                device, so nobody can retrieve it.
+              BIG Wallet eliminates the need for apps to store passwords in a database. When a user creates a BIG Wallet, they are automatically assigned a public and private key pair. The private key is securely locked in a tamper-proof chip on the user's device, ensuring that it cannot be retrieved by anyone.
               </p>
             </TranslatedLayout>
 
@@ -137,27 +129,18 @@ function InternetIdentityPage() {
                 Strict privacy
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-                Every time a user creates an account with an app using BIG Wallet, a new key pair is generated and managed for that app.
-                This means users can interact with an app without worrying that it will share their data.
+              Each time a user creates an account with an app using BIG Wallet, a unique key pair is generated and managed specifically for that app. This ensures that users can interact with the app without worrying about their data being shared.
               </p>
             </TranslatedLayout>
-            <TranslatedLayout
-              imageUrl="/img/internet-identity/image-5.webp"
-              reverse={true}
+            
+            <TranslatedLayout imageUrl="/img/internet-identity/image-3.webp"
+            reverse={true}
             >
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">Multichain</h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-3">
-                Once BigFile completes its integration with the Ethereum Virtual Machine, decentralized apps built on the Ethereum protocol will be able to integrate BIG Wallet and offer users from both ecosystems a convenient, secure, and private way to log in and share verifiable credentials.
-              </p>
-            </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/internet-identity/image-3.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Easy integration
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-3 md:mb-6">
-                BIG Wallet seamlessly integrates with Web2 and Web3 apps.
-                It deploys cube smart contracts to request authentication
-                and verify user identities.
+              BIG Wallet seamlessly integrates with both Web2 and Web3 apps, deploying cube smart contracts to request authentication and verify user identities.
               </p>
               <p className="mb-0">
                 <Link
@@ -209,11 +192,7 @@ function InternetIdentityPage() {
                 </motion.h2>
                 <motion.div variants={transitions.item}>
                   <p className="mb-0 tw-lead-sm md:tw-lead text-white/80">
-                    BIG Wallet is built on WebAuthN, a global
-                    authentication standard and a key part of the FIDO
-                    framework. It removes the need for usernames and passwords
-                    and replaces them with passkeys: registered devices like
-                    smartphones or laptops and hardware wallets such as YubiKey or Ledger. To authenticate their identity, users simply connect with Internet Identity and unlock their device.
+                  BIG Wallet is built on WebAuthN, a global authentication standard. It eliminates the need for usernames and passwords by replacing them with passkeys—registered devices like smartphones, laptops, or hardware wallets such as YubiKey or Ledger. To authenticate their identity, users simply connect with BIG Wallet and unlock their device.
                   </p>
                 </motion.div>
               </div>
@@ -308,8 +287,7 @@ function InternetIdentityPage() {
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                Enhance the user experience by simplifying authentication and
-                credential sharing and reduce costs and cyberthreats by removing the need to store passwords.
+                Simplify authentication and credential sharing to enhance the user experience, while reducing costs and cyberthreats by eliminating the need to store passwords.
               </motion.p>
             </TranslatedCard>
             <TranslatedCard
@@ -326,8 +304,7 @@ function InternetIdentityPage() {
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                Add value when designing apps by integrating cutting-edge
-                authentication and credential verification tools into their tech stack.
+                Enhance your app's value by integrating advanced authentication and credential verification tools into your tech stack.
               </motion.p>
             </TranslatedCard>
             <TranslatedCard
@@ -344,7 +321,7 @@ function InternetIdentityPage() {
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                Ensure the integrity and accuracy of academic records by issuing digital copies of degrees, qualifications, and certificates
+                Guarantee the integrity and accuracy of academic records by issuing digital copies of degrees, qualifications, and certificates.
               </motion.p>
             </TranslatedCard>
             <TranslatedCard
@@ -361,7 +338,7 @@ function InternetIdentityPage() {
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                Provide citizens with a decentralized digital identity solution instead of putting their data in the hands of a private company that may host servers in a different country or jurisdiction.
+                Offer citizens a decentralized digital identity solution, avoiding the risks of placing their data in the hands of private companies that may host servers in different countries or jurisdictions.
               </motion.p>
             </TranslatedCard>
           </TranslatedCardList>
@@ -382,60 +359,41 @@ function InternetIdentityPage() {
               </div>
             }
           >
-            <Faq title="What's wrong with Web2 authentication?">
+            <Faq title="What’s the problem with Web2 authentication?">
               <p>
-                A website stores usernames and passwords in a database. When a
-                user logs in, their device sends their password to the website
-                which checks it against its records. However, databases are
-                increasingly vulnerable to breaches. And while encrypting
-                passwords offers an additional layer of security, storing them
-                as plaintext is bad practice.
+              Websites typically store usernames and passwords in a database. When a user logs in, their device sends the password to the website, which then checks it against its records. However, databases are increasingly vulnerable to breaches. While encrypting passwords adds an extra layer of security, storing them as plaintext is a poor practice.
               </p>
               <p>
-                To make matters worse, user-generated passwords are easily
-                hackable. Cybercriminals have a host of tools at their disposal, including spyware, phishing or brute force attacks where algorithms use trial and error to guess the right combination of letters, numbers and symbols.
+              To make matters worse, user-generated passwords are often easily hackable. Cybercriminals have an array of tools at their disposal, including spyware, phishing, and brute force attacks, where algorithms use trial and error to guess the correct combination of letters, numbers, and symbols.
               </p>
             </Faq>
-            <Faq title="What's wrong with Web3 authentication">
+            <Faq title="What are the challenges with Web3 authentication?">
               <p>
-                Web3 authentication may seem like progress, but users are still vulnerable because they're limited to a single authentication factor. For instance, keys are typically stored on the device used to install a crypto wallet. If someone steals the device or gains access to it, the user loses control of their wallet.
+              Web3 authentication may appear to be a step forward, but users remain vulnerable due to reliance on a single authentication factor. For example, keys are typically stored on the same device where the crypto wallet is installed. If someone steals or gains access to that device, the user loses control of their wallet.
               </p>
             </Faq>
-            <Faq title="What is public key cryptography?">
+            <Faq title="What exactly is public key cryptography?">
               <p>
-                Public key cryptography is an encryption technique that uses a
-                pair of keys to encrypt and decrypt messages between two
-                entities. The public key is similar to a username so it can be
-                shared, but the private key needs to be kept secret, like a
-                password.
+              Public key cryptography is an encryption method that utilizes a pair of keys to securely encrypt and decrypt messages between two parties. The public key functions like a username and can be shared openly, while the private key, much like a password, must be kept secret.
               </p>
               <p>
-                BIG Wallet leverages digital signatures, an application
-                of public key cryptography, for the login process. To start, an app sends an authentication request to the user's device. The device takes the request and creates a digital signature using their private key and a cryptographic algorithm. The app then verifies the signature using the user's public key and approves the request.
+              BIG Wallet leverages digital signatures, an application of public key cryptography, for the login process. To start, an app sends an authentication request to the user's device. The device takes the request and creates a digital signature using their private key and a cryptographic algorithm. The app then verifies the signature using the user's public key and approves the request.
               </p>
             </Faq>
-            <Faq title="What makes BIG Wallet secure?">
+            <Faq title="What ensures the security of BIG Wallet?">
               <p>
-                Most modern computing devices contain a TPM (Trusted Platform
-                Module) chip. One of the functions of a TPM chip is storing
-                sensitive information, which in BIG Wallet's case is a
-                copy of a user's private key. When BIG Wallet prompts the user to unlock their device, either by entering a PIN code or using biometrics such as fingerprint recognition, the TPM chip creates a new digital signature using their private key.
+              Most modern computing devices contain a TPM (Trusted Platform Module) chip. One of the functions of a TPM chip is storing sensitive information, which in BIG Wallet's case is a copy of a user's private key. When BIG Wallet prompts the user to unlock their device, either by entering a PIN code or using biometrics such as fingerprint  recognition, the TPM chip creates a new digital signature using their private key.
               </p>
               <p>
-                The user's private key is secure because the TPM chip is
-                virtually impenetrable. The chip is built into their device's
-                motherboard, and any attempt to tamper with it can cause
-                irreparable damage.
+              The user's private key is highly secure due to the virtually impenetrable TPM chip. This chip is embedded in the device's motherboard, and any attempt to tamper with it can result in irreparable damage.
               </p>
             </Faq>
             <Faq title="What makes BIG Wallet private?">
               <p>
-                A username for Web2 authentication generally links to an email
-                address which acts as a unique identifier used by big tech to
-                track a user's activity. In Web3's case, transparency may be one of the founding principles of blockchain technology, but it also means anyone can trace the transactions of an individual wallet address using a block explorer.
+              In Web2 authentication, a username is typically linked to an email address, which big tech companies use as a unique identifier to track a user's activity. While transparency is a core principle of blockchain technology in Web3, it also allows anyone to trace the transactions of an individual wallet address using a block explorer.
               </p>
               <p>
-                Cryptographic pseudonyms are digital identities which protect a user's privacy when online. They have a wide range of use cases, from messaging apps to social media platforms and Web3 dapps. BIG Wallet creates a pseudonym every time a user logs in, preventing apps from tracking their activity.
+              Cryptographic pseudonyms are digital identities that protect a user's privacy online. They have a wide range of applications, from messaging apps to social media platforms and Web3 dapps. With BIG Wallet, a new pseudonym is generated each time a user logs in, ensuring that apps cannot track their activity.
               </p>
             </Faq>
           </FaqSection>
