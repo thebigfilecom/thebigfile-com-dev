@@ -71,7 +71,7 @@ function InternetIdentityPage() {
           <div className="container-12 relative">
             <div className="text-center md:w-5/10 relative md:absolute top-0 sm:top-40 md:top-0 translate-y-24 sm:translate-y-10 md:-translate-y-1/2 right-0 -mt-30 md:-mt-30">
               <img
-                src="/img/internet-identity/big-wallet-hero.webp"
+                src="/img/big-wallet/big-wallet-hero.webp"
                 alt="Start building on BIG Wallet"
                 className="w-full max-w-sm sm:max-w-[720px] md:max-w-none"
                 loading="lazy"
@@ -94,7 +94,7 @@ function InternetIdentityPage() {
         <section className="container-12 pt-20 md:pt-30">
           <div className="flex flex-col gap-16 md:gap-40">
             <TranslatedLayout
-              imageUrl="/img/internet-identity/image-1.webp"
+              imageUrl="/img/big-wallet/image-1.webp"
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
@@ -104,7 +104,7 @@ function InternetIdentityPage() {
               BIG Wallet is fully decentralized, as apps built on BigFile store data entirely on-chain. This makes it more secure and fault-tolerant than digital identity solutions hosted on protocols that rely on centralized cloud providers like Amazon Web Services.
               </p>
             </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/internet-identity/image-2.webp">
+            <TranslatedLayout imageUrl="/img/big-wallet/image-2.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 User friendly
               </h3>
@@ -113,7 +113,7 @@ function InternetIdentityPage() {
               </p>
             </TranslatedLayout>
             <TranslatedLayout
-              imageUrl="/img/internet-identity/image-3.webp"
+              imageUrl="/img/big-wallet/image-3.webp"
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
@@ -124,7 +124,7 @@ function InternetIdentityPage() {
               </p>
             </TranslatedLayout>
 
-            <TranslatedLayout imageUrl="/img/internet-identity/image-4.webp">
+            <TranslatedLayout imageUrl="/img/big-wallet/image-4.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Strict privacy
               </h3>
@@ -133,7 +133,7 @@ function InternetIdentityPage() {
               </p>
             </TranslatedLayout>
             
-            <TranslatedLayout imageUrl="/img/internet-identity/image-3.webp"
+            <TranslatedLayout imageUrl="/img/big-wallet/image-3.webp"
             reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
@@ -177,7 +177,7 @@ function InternetIdentityPage() {
               >
                 <div className="blob blob-purple blob-md blob-x-2 blob-y-3 z-0 opacity-50"></div>
                 <img
-                  src="/img/internet-identity/seamless-authentication.webp"
+                  src="/img/big-wallet/seamless-authentication.webp"
                   alt="Seamless authentication"
                   className="relative"
                   loading="lazy"
@@ -209,7 +209,7 @@ function InternetIdentityPage() {
                 className="flex-1 rounded-3xl bg-white/90 backdrop-blur-2xl text-center p-5 md:p-10 flex flex-col gap-5 items-center"
               >
                 <img
-                  src="/img/internet-identity/icon-3.svg"
+                  src="/img/big-wallet/icon-3.svg"
                   alt="Age verification"
                   loading="lazy"
                 />
@@ -222,7 +222,7 @@ function InternetIdentityPage() {
                 className="flex-1 rounded-3xl bg-white/90 backdrop-blur-2xl text-center p-5 md:p-10 flex flex-col gap-5 items-center"
               >
                 <img
-                  src="/img/internet-identity/icon-4.svg"
+                  src="/img/big-wallet/icon-4.svg"
                   alt="Know your customer"
                   loading="lazy"
                 />
@@ -235,7 +235,7 @@ function InternetIdentityPage() {
                 className="flex-1 rounded-3xl bg-white/90 backdrop-blur-2xl text-center p-5 md:p-10 flex flex-col gap-5 items-center"
               >
                 <img
-                  src="/img/internet-identity/icon-1.svg"
+                  src="/img/big-wallet/icon-1.svg"
                   alt="Proof of humanity"
                   loading="lazy"
                 />
@@ -248,7 +248,7 @@ function InternetIdentityPage() {
                 className="flex-1 rounded-3xl bg-white/90 backdrop-blur-2xl text-center p-5 md:p-10 flex flex-col gap-5 items-center"
               >
                 <img
-                  src="/img/internet-identity/icon-2.svg"
+                  src="/img/big-wallet/icon-2.svg"
                   alt="Academic transcripts"
                   loading="lazy"
                 />
@@ -277,7 +277,7 @@ function InternetIdentityPage() {
               title="Enterprises"
               icon={
                 <img
-                  src="/img/internet-identity/icon-5.svg"
+                  src="/img/big-wallet/icon-5.svg"
                   loading="lazy"
                   aria-hidden="true"
                 />
@@ -294,7 +294,7 @@ function InternetIdentityPage() {
               title="Developers"
               icon={
                 <img
-                  src="/img/internet-identity/icon-6.svg"
+                  src="/img/big-wallet/icon-6.svg"
                   loading="lazy"
                   aria-hidden="true"
                 />
@@ -311,7 +311,7 @@ function InternetIdentityPage() {
               title="Education"
               icon={
                 <img
-                  src="/img/internet-identity/icon-7.svg"
+                  src="/img/big-wallet/icon-7.svg"
                   loading="lazy"
                   aria-hidden="true"
                 />
@@ -328,7 +328,7 @@ function InternetIdentityPage() {
               title="Governments"
               icon={
                 <img
-                  src="/img/internet-identity/icon-8.svg"
+                  src="/img/big-wallet/icon-8.svg"
                   loading="lazy"
                   aria-hidden="true"
                 />
