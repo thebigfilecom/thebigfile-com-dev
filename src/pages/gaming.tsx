@@ -251,8 +251,7 @@ function GamingPage() {
                 className="tw-lead-sm md:tw-lead-sm mb-12"
                 variants={transitions.item}
               >
-                Since BIG dapps can be 100% on-chain, DAOs on the BigFile can govern complete game worlds end-to-end, including a
-                web-based game client.
+                Since BIG dapps can operate entirely on-chain, DAOs on the BigFile can govern entire game worlds end-to-end, including the web-based game client.
               </motion.p>
             </div>
             <div className="md:w-6/10">
