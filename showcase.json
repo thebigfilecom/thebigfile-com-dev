@@ -3,7 +3,7 @@
     "id": "openchat",
     "name": "BIGChat",
     "oneLiner": "Decentralized alternative to WhatsApp",
-    "website": "/",
+    "website": "https://bigchat.thebigfile.com",
     "tags": [
       "SocialFi",
       "Bitcoin",
@@ -13,9 +13,9 @@
     "usesInternetIdentity": true,
     "display": "Large",
     "stats": "00,000+ users",
-    "logo": "/img/showcase/openchat_logo.webp",
+    "logo": "/img/showcase/bigchat_logo.webp",
     "screenshots": [
-      "/img/showcase/openchat-screenshot.webp"
+      "/img/showcase/bigchat-screenshot.webp"
     ]
   },
   
