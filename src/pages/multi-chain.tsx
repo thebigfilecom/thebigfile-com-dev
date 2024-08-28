@@ -157,7 +157,7 @@ function MultichainPage() {
 
   return (
     <Layout
-      title="Chain Fusion Technology"
+      title="Multi Chain Technology"
       description="BigFile enables direct interoperability with all major blockchains, including Bitcoin, Ethereum, other EVMs (and soon Solana), without relying on any trusted intermediary. Unique compared to other blockchains, BigFile smart contracts can read from 
       and write to different chains, enabling developers to write smart contracts spanning different chains. This is chain fusion."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
@@ -181,10 +181,10 @@ function MultichainPage() {
             <div className="blob blob-purple blob-xl md:blob-xl md:blob-x-8 md:blob-y-10 opacity-75"></div>
             <div className="md:w-7/10 relative">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-2 md:mb-6 animate-fade-up">
-                Chain Fusion Technology
+                Multi Chain Technology
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0 animate-fade-up animation-delay-200">
-                BigFile enables direct interoperability with all major blockchains, including Bitcoin, Ethereum, other EVMs (and soon Solana), without relying on any trusted intermediary. Unique compared to other blockchains, BigFile smart contracts can read from and write to different chains, enabling developers to write smart contracts spanning different chains. This is chain fusion.
+                BigFile enables direct interoperability with all major blockchains, including Bitcoin, Ethereum, other EVMs (and soon Solana), without relying on any trusted intermediary. Unique compared to other blockchains, BigFile smart contracts can read from and write to different chains, enabling developers to write smart contracts spanning different chains. This is multi chain.
               </p>
             </div>
           </div>

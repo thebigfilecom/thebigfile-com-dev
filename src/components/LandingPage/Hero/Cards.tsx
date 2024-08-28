@@ -36,12 +36,12 @@ export const CardsSection = () => {
       className="container-10 grid grid-cols-1 md:grid-cols-2 gap-2"
       variants={transitions.container}
     >
-      <CardWithImage href="/chainfusion" image="/img/home/bureaucracy.webp">
+      <CardWithImage href="/multi-chain" image="/img/home/bureaucracy.webp">
         <div className="tw-heading-7 md:tw-heading-6 mb-2">
           Native Multi-chain
         </div>
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">
-          Chain Fusion Technology
+          Multi Chain Technology
         </h2>
       </CardWithImage>
 
