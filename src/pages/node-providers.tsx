@@ -63,9 +63,7 @@ function NodeProvidersPage() {
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                The BigFile is hosted by a decentralized collection of
-                node machines — physical hardware devices run by independent
-                node providers distributed across data centers globally.
+                The BigFile is powered by a decentralized network of node machines — physical hardware devices operated by independent providers across global data centers.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -103,8 +101,7 @@ function NodeProvidersPage() {
               Decentralized computing{" "}
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-4 md:mb-6">
-              The BigFile blockchain runs on a network of nodes owned and operated by a growing community of independent, node providers
-              distributed across the globe. The node providers are selected and vetted by the NNS.{" "}
+            The BigFile blockchain operates on a network of nodes owned and managed by an expanding community of independent providers distributed worldwide. These node providers are carefully selected and vetted by the NNS.{" "}
             </p>
             <p className="mb-0">
               <Link
@@ -118,22 +115,7 @@ function NodeProvidersPage() {
               </Link>
             </p>
           </div>
-          <QueryClientProvider client={queryClient}>
-            <div className="rounded-3xl overflow-hidden relative">
-              {showMap ? (
-                <Suspense
-                  fallback={
-                    <div className="h-80 md:h-[480px] animate-pulse bg-black/10"></div>
-                  }
-                >
-                  <LazyMap />
-                </Suspense>
-              ) : (
-                <div className="h-80 md:h-[480px] animate-pulse bg-black/10"></div>
-              )}
-            </div>
-            <Stats />
-          </QueryClientProvider>
+          
         </section>
         <section className="mb-20 md:mb-40 container-12 flex flex-col gap-16 md:gap-40 mt-20 md:mt-40">
           <TranslatedLayout
@@ -144,14 +126,10 @@ function NodeProvidersPage() {
               Independent machines
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              Every node on the BigFile is a dedicated physical server
-              called a node machine. To provide true decentralization, each node machine is run by an independent node provider, typically in a data center. This network of nodes is sovereign, as there is no reliance on corporate cloud service providers. So they cannot be switched off or tampered with.
+            Each node on the BigFile is a dedicated physical server known as a node machine. To ensure true decentralization, each node machine is operated by an independent provider, typically within a data center. This network of nodes is sovereign, free from reliance on corporate cloud services, making it immune to being switched off or tampered with.
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              This is different to other blockchains where network nodes are
-              created using simple software that interacts with other nodes but are easy to spin up on centralized cloud. Node machines on the BigFile are also technically sovereign, built to
-              standardized public hardware specifications that support the
-              network when under load, and do not fall behind other nodes within the same subnet blockchain.
+            Unlike other blockchains, where nodes are simply software instances easily spun up on centralized cloud platforms, BigFile's node machines are technically sovereign. They are built to standardized public hardware specifications, designed to maintain performance under load, and ensure no lag within the same subnet blockchain.
             </p>
             <p className="mb-0">
               <Link
@@ -168,16 +146,10 @@ function NodeProvidersPage() {
           <TranslatedLayout imageUrl="/img/node-providers/node-providers-join.webp">
             <h2 className="md:tw-heading-60 md:mb-6">Node Providers</h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              To preserve the decentralization of the network, each node
-              provider is vetted and accepted by token-holders via the NNS, the DAO that governs the BigFile. Becoming a node provider
-              entails submitting a proposal along with a self-declaration
-              document that state provision of node machines, intent and proof
-              of identity. Based on this information, the community votes on the onboarding proposal.
+            To maintain the network's decentralization, each node provider is vetted and approved by token holders through the NNS, the DAO that governs the BigFile. Becoming a node provider requires submitting a proposal along with a self-declaration document detailing the provision of node machines, intent, and proof of identity. Based on this information, the community votes on the onboarding proposal.
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              If node providers are accepted into the community and their node
-              machines are up and running, they receive rewards for their
-              services. Rewards are set by the NNS DAO, which follows the 30-day average price of BIG, and are distributed on the 15th of every month. The NNS DAO issues rewards depending on three main factors: generation of hardware (Gen 1 or Gen2), geographic location, and total number of nodes operated.
+            Once accepted into the community and their node machines are operational, node providers receive rewards for their services. These rewards, determined by the NNS DAO, are based on the 30-day average price of BIG and are distributed on the 30th of each month. The NNS DAO calculates rewards based on three primary factors: hardware generation (Gen 1 or Gen 2), geographic location, and the total number of nodes operated.
             </p>
             <p className="mb-0">
               <Link
@@ -236,7 +208,7 @@ function NodeProvidersPage() {
                 <ul className="checklist space-y-3 tw-paragraph md:tw-lead-sm">
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.thebigfile.com/wiki/Introduction_to_ICP"
+                      href="https://wiki.thebigfile.com/wiki/Introduction_to_BigFile"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -254,7 +226,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.thebigfile.com/wiki/Governance_of_the_Internet_Computer"
+                      href="https://wiki.thebigfile.com/wiki/Governance_of_the_Big_File"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -278,9 +250,7 @@ function NodeProvidersPage() {
                   Onboarding checklist
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm">
-                  Now that you have a basic understanding of how the Internet
-                  Computer works, you can begin the onboarding process with the
-                  help of the following resources:
+                With a basic understanding of how the BigFile works, you're ready to start the onboarding process using the following resources:
                 </p>
                 <ul className="checklist space-y-3 tw-paragraph md:tw-lead-sm">
                   <li className="checklist-item pl-8">
@@ -298,8 +268,7 @@ function NodeProvidersPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Submit proposal and onboard your nodes to the Internet
-                      Computer
+                      Submit proposal and onboard your nodes to the BigFile
                     </Link>
                   </li>
                   <li className="checklist-item pl-8">

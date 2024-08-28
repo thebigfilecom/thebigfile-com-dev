@@ -8,7 +8,7 @@ import Layout from "@theme/Layout";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
-import IconIC from "../../static/img/social-media-dapps/ic.svg";
+import IconBIG from "../../static/img/social-media-dapps/big.svg";
 import IconTokenized from "../../static/img/social-media-dapps/tokenized.svg";
 import AnimateSpawn from "../components/Common/AnimateSpawn";
 import { CardWithDescription } from "../components/Common/Card";
@@ -125,7 +125,7 @@ function SocialMediaDappsPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  Take full ownership and control over your social media
+                  Take full ownership and control over your <br />social media
                   platforms.
                 </motion.p>
                 <motion.p className="" variants={transitions.item}>
@@ -172,7 +172,7 @@ function SocialMediaDappsPage() {
               className="tw-lead-sm md:tw-lead mb-8 md:mb-12 md:w-6/10"
               variants={transitions.item}
             >
-              We're entering a new era of social media. The success of the new wave of Web3 social media applications lies in decentralization. Today, it is the boards of tech giants that steer the direction of social media apps, often to exploit users for profit. Centralized apps have also been known to selectively suppress opinions. BigFile blockchain flips the script by enabling decentralized apps (dapps) to turn into DAOs that put the control in the hands of the community.
+              We're entering a new era of social media, where the success of Web3 applications hinges on decentralization. Today, tech giants' boards dictate the direction of social media platforms, often prioritizing profit over users. Centralized apps are also notorious for selectively suppressing opinions. The BigFile blockchain flips the script by empowering decentralized apps (dapps) to evolve into DAOs, putting control back into the hands of the community.
             </motion.p>
           </AnimateSpawn>
           <div className="relative z-[-1]">
@@ -207,26 +207,24 @@ function SocialMediaDappsPage() {
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                A social media DAO incentivizes users to contribute to the
-                success of its dapp by offering rewards in the form of
-                governance tokens. As a user you get free tokens just for using the service, while at the same time you have a say on what new features should be added.
+                A social media DAO incentivizes users to contribute to its dapp's success by offering governance tokens as rewards. As a user, you earn free tokens simply by using the service, and you also have a voice in deciding what new features should be added.
               </motion.p>
               <motion.p
                 className="mb-0 tw-paragraph"
                 variants={transitions.item}
               >
-                As a developer, you benefit from the tokenization of your dapp. Increased user engagement can organically fuel viral growth, while user contributions can significantly reduce costs of content moderation or even development and design.
+                As a developer, tokenizing your dapp brings significant advantages. Increased user engagement can naturally drive viral growth, while user contributions can substantially lower the costs of content moderation, development, and design.
               </motion.p>
             </ColumnCard>
             <ColumnCard
               title="Why switch to the BigFile?"
-              icon={<IconIC aria-hidden="true" />}
+              icon={<IconBIG aria-hidden="true" />}
             >
               <motion.p
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                Transitioning from Web2 to Web3 has never been easier. Not only does the BigFile enable true decentralization, it also offers an enhanced web3 user experience. No gas fees, non-trackable web authentication, served at web speed 100% on the blockchain - no centralized cloud required.
+                Transitioning from Web2 to Web3 has never been easier. The BigFile not only enables true decentralization but also elevates the Web3 user experience. With no gas fees, non-trackable web authentication, and web-speed performance fully hosted on the blockchain—no centralized cloud required.
               </motion.p>
             </ColumnCard>
           </div>
@@ -246,8 +244,7 @@ function SocialMediaDappsPage() {
               Top web3 social media platforms
             </motion.h2>
             <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
-              The BigFile is a true world computer. It hosts the
-              largest collection of Web3 social media services fully on-chain. Services like BIGChat, are already well on their way to mass adoption, with over 300,000 users combined.
+            The BigFile is a true world computer, hosting the largest collection of Web3 social media services entirely on-chain.
             </motion.p>
             <MotionLink
               className="link-external"
@@ -333,8 +330,7 @@ function SocialMediaDappsPage() {
               </motion.h2>
               <motion.div className="mt-3" variants={transitions.item}>
                 <p className="tw-paragraph md:tw-lead-sm mb-4">
-                  Distrupt the world of social media by coding your own. The BigFile blockchain provides the first complete tech
-                  stack for developers to build a new era of DAO-governed social media sevices to replace Big Tech.
+                Disrupt the world of social media by creating your own. The BigFile blockchain offers the first complete tech stack for developers to build a new era of DAO-governed social media services, transforming the future of online interaction.
                 </p>
 
                 <div className="">

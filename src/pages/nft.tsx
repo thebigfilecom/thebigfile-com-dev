@@ -242,33 +242,7 @@ function NftPage() {
             </p>
 
 
-            <div className="panel-gradient border border-solid border-white-30 rounded-xl py-12 px-8 flex flex-col gap-6 text-center md:flex-row">
-              <div className="flex flex-col items-center gap-2 md:flex-1">
-                <div>
-                  <span className="tw-heading-3 md:tw-heading-60">$32.5</span>{" "}
-                  <span className="tw-heading-6">/ week</span>
-                </div>
-                <p className="tw-paragraph md:tw-lead-sm mb-0">
-                  Total cost of storing all NFTs
-                </p>
-              </div>
-              <hr className="w-20 bg-white-20 self-center m-0 md:w-px md:h-20" />
-              <div className="flex flex-col items-center gap-2  md:flex-1">
-                <span className="tw-heading-3 md:tw-heading-60">306,000+</span>
-                <p className="tw-paragraph md:tw-lead-sm mb-0">
-                  Total transactions
-                </p>
-              </div>
-              <hr className="w-20 bg-white-20 self-center m-0 md:w-px md:h-20" />
-              <div className="flex flex-col items-center gap-2  md:flex-1">
-                <span className="tw-heading-3 md:tw-heading-60">&lt; $500</span>{" "}
-                <p className="tw-paragraph md:tw-lead-sm mb-0">
-                  Total transaction costs for all
-                  <br />
-                  transactions
-                </p>
-              </div>
-            </div>
+            
           </div>
         </section>
         

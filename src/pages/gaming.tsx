@@ -10,7 +10,6 @@ import LinkArrowRight from "../components/Common/Icons/LinkArrowRight";
 import LinkArrowUpRight from "../components/Common/Icons/LinkArrowUpRight";
 import ShareMeta from "../components/Common/ShareMeta";
 import TranslatedLayout from "../components/Common/TranslatedLayout/TranslatedLayout";
-import VideoCard from "../components/Common/VideoCard";
 import { useDarkHeaderInHero } from "../utils/use-dark-header-in-hero";
 
 function GamingPage() {
@@ -19,7 +18,7 @@ function GamingPage() {
 
   return (
     <Layout
-      title="Autonomous Worlds on ICP"
+      title="Autonomous Worlds on BigFile"
       description="Autonomous Worlds are a paradigm shift in Web3 gaming, allowing developers, and players to build infinitely extendable worlds together — 100% on-chain"
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
@@ -47,17 +46,13 @@ function GamingPage() {
                 className="tw-heading-3 md:tw-heading-2 mb-2 md:mb-6"
                 variants={transitions.item}
               >
-                Paradigm shift in Web3 gaming
+                Web3 Gaming
               </motion.h1>
               <motion.p
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                Enabled by smart contracts, Autonomous Worlds are a paradigm
-                shift in gaming, enabling developers, modders and players to
-                build composable, and permissionless game worlds that live on
-                the blockchain forever. Now possible on the BigFile —
-                100% on-chain.
+                Powered by smart contracts, Autonomous Worlds represent a paradigm shift in gaming, allowing developers, modders, and players to create composable and permissionless game worlds that exist on the blockchain indefinitely. Now made possible on BigFile — 100% on-chain.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -80,9 +75,7 @@ function GamingPage() {
             className="tw-heading-4 md:tw-heading-60 mb-0 text-gradient md:w-8/10 md:mx-auto"
             variants={transitions.item}
           >
-            Web2 gaming often prioritizes profits at the expense of player
-            enjoyment. Autonomous Worlds on the BigFile, prioritize
-            the player experience.
+            Web2 gaming often prioritizes profits over player enjoyment. In contrast, Autonomous Worlds on BigFile put the player experience first.
           </motion.h2>
         </AnimateSpawn>
 
@@ -115,9 +108,7 @@ function GamingPage() {
                   Incentives aligned
                 </h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                  Autonomous Worlds align the interest of developers, modders
-                  and players, so that they can collaboratively build rich game
-                  worlds together.
+                Autonomous Worlds align the interests of developers, modders, and players, enabling them to collaboratively create rich, immersive game worlds.
                 </p>
               </motion.div>
               <motion.div
@@ -126,12 +117,10 @@ function GamingPage() {
               >
                 <img src="/img/gaming/icon-2.svg" alt="" className="h-24" />
                 <h3 className="tw-lead my-3 md:tw-title-sm">
-                  Infinitely extendable
+                  Extendable
                 </h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                  Smart contracts are composable, which means they can serve as
-                  components to hierarchical structures. This allows Autonomous
-                  Worlds to extend endlessly.
+                Smart contracts are composable, meaning they can function as building blocks within hierarchical structures. This allows Autonomous Worlds to expand endlessly.
                 </p>
               </motion.div>
               <motion.div
@@ -140,12 +129,10 @@ function GamingPage() {
               >
                 <img src="/img/gaming/icon-3.svg" alt="" className="h-24" />
                 <h3 className="tw-lead my-3 md:tw-title-sm">
-                  Driven by the community
+                  Community
                 </h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                  Instead of the community being simply the receiver of game
-                  content, they can be deeply integrated in evolving it through
-                  governance, and content creation.
+                Rather than just consuming game content, the community can play a central role in shaping it through governance and content creation.
                 </p>
               </motion.div>
             </div>
@@ -162,12 +149,7 @@ function GamingPage() {
               Uncover new worlds
             </motion.h2>
             <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
-              Discover, and build new worlds on the BigFile! Utilizing
-              cube smart contracts, developers and players can build
-              large-scale, extendable game worlds hosted end-to-end on the
-              blockchain. Reverse gas model enables novel revenue models, and
-              lowers the barrier of entry for new players who don’t want to
-              setup a wallet just to interact with an on-chain game.
+            Discover and create new worlds on BigFile! With cube smart contracts, developers and players can build expansive, scalable game worlds fully hosted on the blockchain. The reverse gas model introduces innovative revenue opportunities and lowers the barrier to entry for new players, eliminating the need to set up a wallet just to engage with an on-chain game.
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
@@ -207,11 +189,7 @@ function GamingPage() {
               />
               <h3 className="tw-lead md:tw-title-sm mb-0">100% on-chain</h3>
               <p className="mb-0 tw-paragraph-sm text-black/60">
-                The BigFile enables these worlds to be hosted fully on
-                the blockchain. As cube smart contracts serve web,
-                developers can now get rid of the last centralized component,
-                and host even the game client on chain. This allows the creation
-                of DAOs that control all aspects of these worlds.
+              BigFile enables these worlds to be fully hosted on the blockchain. With cube smart contracts serving web content, developers can eliminate the last centralized component and even host the game client on-chain. This paves the way for DAOs to manage every aspect of these worlds.
               </p>
             </motion.div>
             <motion.div
@@ -224,13 +202,9 @@ function GamingPage() {
                 loading="lazy"
                 className="w-30"
               />
-              <h3 className="tw-lead md:tw-title-sm mb-0">300M TXs per day</h3>
+              <h3 className="tw-lead md:tw-title-sm mb-0">High TXs per day</h3>
               <p className="mb-0 tw-paragraph-sm text-black/60">
-                The BigFile processes close to 0.3B transactions a
-                day. Being the highest throughput blockchain, games hosted on
-                BIG can serve unparalleled numbers of players, and horizontally
-                scale out with new subnet blockchains with increased network
-                usage.
+              BigFile is preparing for high daily transaction volumes. Hosted on BIG, the blockchain with the highest throughput, games can accommodate an unprecedented number of players and scale horizontally with the addition of new subnet blockchains as network demand grows.
               </p>
             </motion.div>
             <motion.div
@@ -247,11 +221,7 @@ function GamingPage() {
                 0 gas fees for players
               </h3>
               <p className="mb-0 tw-paragraph-sm text-black/60">
-                The BigFile was designed with mass adoption in mind.
-                Cube smart contracts implement the reverse gas fee model,
-                which means that end-users can interact with canisters without
-                paying gas, or even creating a wallet. This enables novel
-                revenue models, and removes a high barrier of entry.
+              The BigFile is built for mass adoption. Cube smart contracts use a reverse gas fee model, allowing end-users to interact with canisters without paying gas fees or even needing a wallet. This opens up innovative revenue models and eliminates significant entry barriers.
               </p>
             </motion.div>
           </div>
@@ -281,8 +251,7 @@ function GamingPage() {
                 className="tw-lead-sm md:tw-lead-sm mb-12"
                 variants={transitions.item}
               >
-                Since BIG dapps can be 100% on-chain, DAOs on the BigFile can govern complete game worlds end-to-end, including a
-                web-based game client.
+                Since BIG dapps can operate entirely on-chain, DAOs on the BigFile can govern entire game worlds end-to-end, including the web-based game client.
               </motion.p>
             </div>
             <div className="md:w-6/10">
