@@ -112,7 +112,7 @@ function DefiPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  From fully on-chain order book DEXs, to bridgeless multi-chain swaps, the BigFile provides an unmatched tech stack for DEXs to thrive on and DeFi to flourish.
+                  From fully on-chain order book DEXs to bridgeless multi-chain swaps, the BigFile delivers an unparalleled tech stack for DEXs to thrive and DeFi to flourish.
                 </motion.p>
               </div>
             </div>
@@ -145,7 +145,7 @@ function DefiPage() {
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              The risks of trading and holding tokens on centralized exchanges is high. Even decentralized exchanges with frontends hosted on centralized cloud providers are not safe from hacks or rug pulls. Thanks to the web-serving capability of cube smart contracts on the BigFile, and their ability to host large amounts of data, DeFi platforms can exist 100% on the blockchain with no dependency on centralized components.
+              Trading and holding tokens on centralized exchanges carries significant risks. Even decentralized exchanges with frontends hosted on centralized cloud providers are vulnerable to hacks and rug pulls. With the BigFile's cube smart contracts, which can serve web content and host large amounts of data, DeFi platforms can operate entirely on the blockchain, eliminating reliance on centralized components.
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -170,22 +170,21 @@ function DefiPage() {
             <div className="md:container-10 px-8 pb-10 md:py-30 relative">
               <div className="md:w-1/2">
                 <h2 className="text-gradient tw-heading-4 md:tw-heading-60 md:mb-6">
-                  Multi-chain swaps
+                Multiple Blockchains
                 </h2>
                 <p className="tw-paragraph md:tw-lead text-black mb-8">
-                  Via Chain-Key Signatures, the BigFile has the
-                  ability to sign native transactions on other blockchains
-                  without using risky bridges. Today, users can  seamlessly swap between BTC/ETH in seconds for a few cents with 0 gas fees by using ckBTC, ckETH, and soon ckERC-20 tokens.{" "}
+                We use multiple blockchains so you can focus on building. BigFile enables access to multiple blockchains through parallel assets. It is creating ten parallel BigFile assets on other major blockchains, which will be interchangeable with the main BIG chain. This gives BigFile holders seamless access to all major DeFi platforms.
+                These ten parallel assets (KDA, ETH, BSC, SOL, TRX, AVAX, ERG, ALGO, MATIC, BASE) will be available to BigFile holders once integration is complete, with BTC being the final asset to be distributed upon completion. {" "}
                 </p>
                 <p className="mb-0 flex flex-col gap-6 items-start">
                   <Link
-                    href="https://support.dfinity.org/hc/en-us/articles/20708056282132-What-is-ckBTC-#h_01HE64A4QKANB6JX8VERRP5Y80"
+                    href="https://forum.thebigfile.com/t/multiple-blockchains/27"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-primary"
                   >
                     <LinkArrowRight />
-                    BTC &lt;&gt; BIG user guide
+                    Multi-chain user guide
                   </Link>
                   <Link
                     href="https://dashboard.thebigfile.com/bitcoin/transactions"
@@ -215,13 +214,13 @@ function DefiPage() {
                     className="tw-heading-4 md:tw-heading-60 text-white mb-6 md:mb-260"
                     variants={transitions.item}
                   >
-                    ckBTC/ckETH wallets
+                    Multiple Sign-In Solutions
                   </motion.h2>
                   <motion.p
                     className="md:tw-lead mb-6 md:mb-6"
                     variants={transitions.item}
                   >
-                    Multi-chain wallets already exist on the BigFile that allow users to store and transfer ckBTC, ckETH and more with ease.
+                    Multi-chain wallets on the BigFile already enable users to effortlessly store and transfer BIG and other assets.
                   </motion.p>
                   <motion.p className="mb-0" variants={transitions.item}>
                     <Link
@@ -237,25 +236,7 @@ function DefiPage() {
               <div className="container-12 flex flex-col md:flex-row gap-4">
                 <motion.div variants={transitions.item} className="flex-1">
                   <Link
-                    href="https://astrox.me/"
-                    className="block border border-solid border-white-30 rounded-xl p-10 items-center panel-gradient text-center text-white hover:text-white hover:-translate-y-2 transition-all hover:no-underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/img/defi/astroxme.webp"
-                      alt=""
-                      className="w-20"
-                    />
-                    <h3 className="tw-heading-5 mb-2 mt-4">AstroX ME</h3>
-                    <p className="text-white/60 tw-lead-sm mb-0">
-                      Secure assets such as ckBTC and ckETH across all your devices without the need for a seed phrase.
-                    </p>
-                  </Link>
-                </motion.div>
-                <motion.div variants={transitions.item} className="flex-1">
-                  <Link
-                    href="https://nns.ic0.app/"
+                    href="https://nns.thebigfile.com/"
                     className="block border border-solid border-white-30 rounded-xl p-10 items-center panel-gradient text-center text-white hover:text-white hover:-translate-y-2 transition-all hover:no-underline"
                     target="_blank"
                     rel="noopener noreferrer"
