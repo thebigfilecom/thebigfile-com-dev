@@ -15,7 +15,7 @@ const redirects = `
   /openchat /ois
   /howitworks /how-it-works
   /showcase /ecosystem
-  /multichain /chainfusion
+  /multichain /multi-chain
   /basics /what-is-the-big-file
   /docs/videos-tutorials /developers
   /docs /docs/current/home

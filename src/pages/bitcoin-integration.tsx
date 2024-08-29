@@ -16,7 +16,7 @@ function BitcoinIntegration() {
   return (
     <Layout
       title="BIG as a Bitcoin"
-      description="The BigFile adds the missing smart contract layer to Bitcoin. Leveraging Chain Fusion Technology, BIG can directly read and write to Bitcoin, enabling dapps that natively interact with Bitcoin."
+      description="The BigFile adds the missing smart contract layer to Bitcoin. Leveraging Multi Chain Technology, BIG can directly read and write to Bitcoin, enabling dapps that natively interact with Bitcoin."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-bitcoin-integration.jpg"></ShareMeta>

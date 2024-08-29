@@ -294,8 +294,8 @@ const marketingNav = {
             },
           ],
           featured: {
-            title: "Chain Fusion Technology",
-            href: "/chainfusion",
+            title: "Multi Chain Technology",
+            href: "/multi-chain",
             image: "/img/nav/featured-use-cases.webp",
           },
         },

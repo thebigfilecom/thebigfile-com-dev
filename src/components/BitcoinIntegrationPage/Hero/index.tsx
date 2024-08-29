@@ -27,9 +27,9 @@ const Hero = forwardRef<HTMLDivElement, {}>((_, ref) => {
             Bitcoin. Leveraging{" "}
             <Link
               className="text-white underline hover:no-underline hover:text-white hover:opacity-80 duration-200 ease-in-out"
-              href="/chainfusion"
+              href="/multi-chain"
             >
-              Chain Fusion Technology
+              Multi Chain Technology
             </Link>
             , BIG can directly read and write to Bitcoin, enabling dapps that
             natively interact with Bitcoin.
