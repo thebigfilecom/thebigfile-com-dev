@@ -23,9 +23,7 @@ function ReverseGasModelPage(): JSX.Element {
   return (
     <Layout
       title="Reverse Gas Model"
-      description="A browser is all you need to interact with smart contracts on
-      the BigFile. Developers pay for gas. End users access and
-      use dapps without tokens."
+      description="All you need to interact with smart contracts on the BigFile is a browser. Developers cover the gas fees, allowing end users to access and use dapps without needing tokens."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <main className="overflow-hidden">
@@ -48,9 +46,7 @@ function ReverseGasModelPage(): JSX.Element {
                 className="tw-lead-sm md:tw-lead mb-0 relative"
                 variants={transitions.item}
               >
-                A browser is all you need to interact with smart contracts on
-                the BigFile. Developers pay for gas. End users access
-                 and use dapps without tokens.
+                With just a browser, you can interact with smart contracts on the BigFile. Developers handle the gas fees, so end users can access and use dapps without needing tokens.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -81,22 +77,13 @@ function ReverseGasModelPage(): JSX.Element {
                 className="tw-heading-4 md:tw-heading-3 mb-6 text-gradient"
                 variants={transitions.item}
               >
-                Scaling Web3 to billions of users requires a great UX.
+                Scaling Web3 to billions of users demands an exceptional user experience.
               </motion.h2>
               <motion.p
                 className="tw-lead-sm text-black mb-0"
                 variants={transitions.item}
               >
-                Traditionally, when end users interact with a blockchain, they
-                must have a wallet set up with tokens to pay gas fees for every
-                on-chain interaction, even interactions as simple as liking a
-                post. Most blockchains get around this by hosting their data and
-                frontends on centralized cloud. Without compromising
-                decentralization, the BigFile removes this expensive
-                barrier to entry by allowing end users to seamlessly interact
-                with dapps on the blockchain gas-free. This “Gas Reverse Model”
-                also gives developers the flexibility to implement their own
-                tokenomics models aimed at mass adoption.
+                Traditionally, when end users interact with a blockchain, they need a wallet with tokens to cover gas fees for every on-chain action, even something as simple as liking a post. Most blockchains bypass this by hosting their data and frontends on centralized cloud services. The BigFile, however, eliminates this costly barrier without compromising decentralization, allowing end users to seamlessly interact with dapps on the blockchain without paying gas fees. This "Gas Reverse Model" also provides developers the flexibility to design their own tokenomics models, paving the way for mass adoption.
               </motion.p>
             </div>
           </div>
@@ -105,16 +92,13 @@ function ReverseGasModelPage(): JSX.Element {
         <section className="mb-20 md:mb-40 container-12 flex flex-col gap-16 md:gap-40">
           <TranslatedLayout
             reverse={true}
-            imageUrl="/img/features/icp-cycles.webp"
+            imageUrl="/img/features/big-cycles.webp"
           >
             <h2 className="tw-heading-4 md:tw-heading-60 md:mb-6">
-              Computation paid for by ICP smart contracts
+              Computation paid for by BIG smart contracts
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              Each canister smart contract has its own cycles wallet that
-              developers can top up with cycles — the gas on the Internet
-              Computer. These cycles are then burnt to pay for computation and
-              memory usage of the canister.
+            Each cube smart contract on the BigFile has its own cycles wallet, which developers can top up with cycles — the network’s gas. These cycles are then burned to cover the computation and memory costs of the cube.
             </p>
             <p className="mb-0">
               <Link
@@ -142,7 +126,7 @@ function ReverseGasModelPage(): JSX.Element {
                       <div className="flex-1 flex flex-col items-start">
                         <span className="tw-heading-4 md:tw-heading-3">1</span>
                         <span className="text-black/60 tw-paragraph-sm md:tw-lead-sm">
-                          ICP
+                          BIG
                         </span>
                       </div>
                     </div>
@@ -173,8 +157,7 @@ function ReverseGasModelPage(): JSX.Element {
                     </div>
                   </div>
                   <p className="text-left mt-9 mb-0 tw-paragraph-sm text-black/60 w-9/10">
-                    Burning ICP always converts at the rate of 1T cycles = 1
-                    SDR.
+                  Burning BIG always converts at the rate of 1T cycles = 1 SDR.
                   </p>
                 </div>
               </div>
@@ -184,19 +167,9 @@ function ReverseGasModelPage(): JSX.Element {
               How to get cycles
             </h2>
             <p className="text-black tw-lead-sm mb-6">
-              The BigFile protocol allows developers to burn ICP and
-              receive cycles. Cycles are priced in SDR, an international reserve
-              asset that is pegged to a bucket of fiat currencies. The protocol
-              guarantees a set conversion rate of 1T cycles for 1 SDR’s worth of
-              ICP. As costs are predictable and stable over time, regardless of
-              ICP price fluctuations, developers can easily work computation and
-              storage costs into their budgets.
+            The BigFile protocol allows developers to burn BIG and receive cycles. Cycles are priced in SDR, an international reserve asset that is pegged to a bucket of fiat currencies. The protocol guarantees a set conversion rate of 1T cycles for 1 SDR’s worth of BIG. As costs are predictable and stable over time, regardless of BIG price fluctuations, developers can easily work computation and storage costs into their budgets.
             </p>
-            <p className="text-black tw-lead-sm mb-6">
-              Several DEXs on the BigFile have liquidity pools that
-              offer cycles. Swapping ICP for cycles is currently cheaper than 1
-              SDR.
-            </p>
+            
             <p className="text-black tw-lead-sm mb-6 md:mb-10">
               Developers just starting out can get 10T free cycles from the{" "}
               <Link
@@ -206,26 +179,15 @@ function ReverseGasModelPage(): JSX.Element {
                 cycles faucet
               </Link>
               . Free cycles can only be used for computation and storage, and
-              cannot be converted back to ICP. Swap ICP for cycles on the NNS,
-              and in the ecosystem on{" "}
-              <Link href="https://app.sonic.ooo/swap" className="link-subtle">
-                Sonic
-              </Link>{" "}
-              or{" "}
-              <Link
-                href="https://3pbcj-viaaa-aaaah-qaajq-cai.raw.ic0.app/"
-                className="link-subtle"
-              >
-                ICPSwap
-              </Link>
+              cannot be converted back to BIG
               .{" "}
             </p>
             <p className="mb-0">
               <Link
-                href="https://nns.ic0.app/"
+                href="https://nns.thebigfile.app/"
                 className="link-primary link-with-icon"
               >
-                Swap ICP for cycles on the NNS
+                Swap BIG for cycles on the NNS
                 <LinkArrowUpRight />
               </Link>
             </p>
@@ -249,10 +211,7 @@ function ReverseGasModelPage(): JSX.Element {
                 Gas-free Web3
               </h3>
               <p className="tw-lead-sm mb-6 text-black/60">
-                The BigFile is home to a growing ecosystem of dapps,
-                all of which have smooth onboarding and don’t require a wallet
-                or tokens to access. Use your tokens instead for trading,
-                collecting NFTs or tipping friends.
+              The BigFile hosts a growing ecosystem of dapps, all designed for smooth onboarding without the need for a wallet or tokens to access them. Instead, use your tokens for trading, collecting NFTs, or tipping friends.
               </p>
               <p className="pb-[100%] sm:pb-0 mb-0">
                 <Link
