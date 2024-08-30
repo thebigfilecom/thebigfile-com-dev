@@ -10,39 +10,23 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 <MarkdownChipRow labels={["Beginner", "Getting started" ]} />
 
-The BigFile accepts and executes smart contracts in the [WebAssembly (Wasm)](https://thebigfile.com/capabilities/webassembly) binary format.
-In theory, developers could write valid smart contracts directly in the Wasm bytecode.
-Since that would be too tedious and time consuming, the standard practice is to write smart contract code in a higher-level language, such as JavaScript/TypeScript, Motoko, Python, or Rust, then compile it into Wasm.
+
+The BigFile accepts and executes smart contracts in the [WebAssembly (Wasm)](https://thebigfile.com/capabilities/webassembly) binary format. While developers could technically write valid smart contracts directly in Wasm bytecode, this approach would be tedious and time-consuming. Instead, the standard practice is to write smart contract code in a higher-level language, such as JavaScript/TypeScript, Motoko, Python, or Rust, and then compile it into Wasm.
+
+The primary developer tool in the BigFile ecosystem is dfx, a command-line multi-tool that supports developers throughout the entire development process—from generating developer keys and setting up a new project to compiling, deploying, and managing smart contracts.
 
 
-The primary developer tool in the BigFile ecosystem is `dfx`.
-It is a command line multi-tool that assists the developer throughout the entire development process, starting from the generation of developer keys and setting up a new project, to compiling, deploying, and managing smart contracts.
+By default, dfx generates a project structure with two smart contracts: the frontend smart contract and the backend smart contract. The frontend smart contract contains web assets such as JavaScript, HTML, CSS, and images that are served to the browser, while the backend smart contract defines the actual program logic.
 
 
-By default, `dfx` generates a project structure consisting of two smart contracts: the **frontend Smart contract** and the **backend Smart contract**.
-The frontend Smart contract contains web assets such as JavaScript, HTML, CSS, and images that are served to the browser.
-The actual program logic of the smart contract is defined in the backend Smart contract.
+Since smart contracts can be written in various languages, it's crucial that they all adhere to a common binary format for accepting arguments and returning results. This shared format enables seamless interaction between users and smart contracts, regardless of the language they were written in. In traditional programming, this concept is known as the [Application Binary Interface (ABI)](https://en.wikipedia.org/wiki/Application_binary_interface).
 
-:::info
-The configuration with a frontend and a backend Smart contract is just a convention.
-It is possible to write a single Smart contract that contains both the program logic and hosts the web assets.
-:::
+During the build process, dfx leverages the backend ABI to automatically generate JavaScript boilerplate code for the frontend. Behind the scenes, this boilerplate code uses a library called [agent-js](https://github.com/thebigfilecom/agent-js/tree/main) to encode Candid values and facilitate HTTP requests from the browser to the backend smart contract. This functionality is akin to web3.js in Ethereum.
 
-Since smart contracts can be written in different languages, it is important that they all agree on the binary format in which they accept their arguments and return results.
-This common format allows users and smart contracts to call other smart contracts regardless of the language they were written in.
-In traditional programming, this concept is known as [Application Binary Interface (ABI)](https://en.wikipedia.org/wiki/Application_binary_interface).
+The [Wasm standard](https://webassembly.org/) defines only the instructions and memory of the Wasm virtual machine; how a Wasm program interacts with other programs and users is determined by the host embedding the virtual machine. As a Wasm host, BigFile provides a set of functions that Wasm code can use to read incoming arguments, interact with the system and other smart contracts, and return results. These functions are collectively known as the System API. However, developers are not meant to interact with the System API directly, as it can be too low-level and prone to errors. Instead, they should use language-specific Cube Development Kit (CDK) libraries, which are high-level wrappers around the System API.
 
 
-During the build process, `dfx` uses the backend ABI to automatically generate JavaScript boilerplate code for the frontend.
-Under the hood, the boilerplate code uses a library called [agent-js](https://github.com/thebigfilecom/agent-js/tree/main) to encode Candid values and make HTTP requests from the browser to the backend Smart contract.
-This is similar to `web3.js` in Ethereum.
 
-The [Wasm standard](https://webassembly.org/) defines only the instructions and the memory of the Wasm virtual machine;
-how a Wasm program interacts with other programs and users is left up to the host that embeds the virtual machine.
-BigFile as a Wasm host provides a set of functions that Wasm code can use to read the incoming arguments, call the system and other smart contracts, and return results.
-Collectively these functions are referred to as the **System API**.
-Developers are not intended to use the System API directly because that would be too low-level and error-prone.
-Instead, developers should use language-specific Cube Development Kit (CDK) libraries that are high-level wrappers around the System API.
 
 ## Development environments
 

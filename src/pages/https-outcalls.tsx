@@ -15,9 +15,7 @@ function HTTPSOutcalls() {
   return (
     <Layout
       title="HTTPS Outcalls"
-      description="The power of HTTPS outcalls on the BigFile lies in
-      their ability to connect smart contracts directly to the Web 2.0
-      world, opening up a plethora of use cases."
+      description="The power of HTTPS outcalls on the BigFile lies in their ability to connect smart contracts directly to the Web 2.0 world, unlocking a wide range of use cases."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-https-outcalls.webp"></ShareMeta>
@@ -31,11 +29,7 @@ function HTTPSOutcalls() {
                 HTTPS outcalls
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The power of HTTPS outcalls on the BigFile lies in
-                their ability to connect smart contracts directly to the Web 2.0
-                world, opening up a plethora of use cases. Retrieve market data
-                from crypto exchanges, send emails, integrate with other
-                blockchains, and more.
+              The power of HTTPS outcalls on the BigFile lies in their ability to connect smart contracts directly to the Web 2.0 world, unlocking a multitude of use cases. Retrieve market data from crypto exchanges, send emails, integrate with other blockchains, and much more.
               </p>
             </div>
           </div>
@@ -50,7 +44,7 @@ function HTTPSOutcalls() {
         <section className="container-10 relative mb-20 flex flex-col sm:flex-row sm:gap-10 lg:gap-32">
           <div className="sm:order-2 sm:shrink-0 sm:flex-1 relative -top-10 md:-top-20 md:mb-10">
             <img
-              src="/img/https-outcalls/ic-http-graphic.png"
+              src="/img/https-outcalls/big-http-graphic.png"
               alt=""
               className="w-full block"
             />
@@ -66,38 +60,16 @@ function HTTPSOutcalls() {
           >
             <h2>How it works</h2>
             <p>
-              Today, the majority of the world's API-accessible data, such as
-              stock prices, football scores, IoT-related data, or crypto
-              exchange prices, is hosted on Web 2.0 services, which is outside
-              the secure on-chain walls of a blockchain. As smart contract
-              software often relies on external web 2-hosted data to implement
-              useful functionality, it is crucial that this data be accessible,
-              first to unfold the full potential of smart contracts, and second,
-              to pave the way for blockchain singularity, whereby the majority
-              of computations run on the blockchain.
+            Today, most of the world's API-accessible data—such as stock prices, football scores, IoT data, or crypto exchange rates—is hosted on Web 2.0 services, outside the secure confines of a blockchain. Since smart contracts often rely on external Web 2.0 data to deliver valuable functionality, ensuring access to this data is crucial. This not only unlocks the full potential of smart contracts but also lays the groundwork for blockchain singularity, where the majority of computations occur on-chain.
             </p>
             <h3>The oracle problem</h3>
             <p>
-              A common limitation of blockchain technology is that smart
-              contracts can receive messages, but cannot send them to the world
-              outside the blockchain. For example, typical smart contracts can
-              receive messages, but cannot send emails and SMS's, nor can they
-              query wikipedia or send HTTP requests to other services.
-              Historically, this has been a blocker to most software developers
-              diving into Web3. For this reason, obtaining off-chain data
-              requires that a smart contract interact with centralized oracle
-              services, which are in the hands of intermediaries, vulnerable to
-              hacking, and subject to service fees.
+            A common limitation of blockchain technology is that while smart contracts can receive messages, they cannot send them outside the blockchain. For example, typical smart contracts can receive messages, but they cannot send emails or SMS, query Wikipedia, or make HTTP requests to other services. This limitation has historically been a barrier for many software developers entering the Web3 space. As a result, obtaining off-chain data requires smart contracts to rely on centralized oracle services, which are controlled by intermediaries, vulnerable to hacking, and subject to service fees.
             </p>
 
             <h3>HTTPS outcalls replace oracles</h3>
             <p>
-              Cube HTTPS outcalls on the BigFile blockchain allow
-              direct interaction with Web 2.0 and other blockchains without
-              oracles. Cube smart contracts can make HTTPS outcalls to
-              specified URLs to directly obtain off-chain data, or to interact
-              with off-chain systems, such as Web 2.0 services or enterprise IT
-              infrastructure.
+            Cube HTTPS outcalls on the BigFile blockchain enable direct interaction with Web 2.0 and other blockchains without relying on oracles. Cube smart contracts can make HTTPS outcalls to specified URLs to directly access off-chain data or interact with off-chain systems, such as Web 2.0 services or enterprise IT infrastructure.
             </p>
             <p className="mb-3 mt-6">
               <Link
@@ -118,23 +90,14 @@ function HTTPSOutcalls() {
             imageUrl="/img/https-outcalls/outcalls.webp"
           >
             <h2 className="tw-heading-4 md:tw-heading-60 md:mb-6">
-              Exchange rate canister
+              Exchange rate cube
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              Powered by HTTPS outcalls, the exchange rate canister (XRC) on the
-              BigFile fetches data from Web 2.0 servers and lives
-              entirely on chain. It interacts with major cryptocurrency
-              exchanges using their public APIs to retrieve real-time or
-              historical pricing information. The XRC also periodically queries
-              public APIs of foreign exchange data providers around the world to
-              get forex rates. The XCR can be integrated in DEXs to compare
-              exchange rates against market rates and determine the value of
-              assets held under management in a cube smart contract, for
-              example, with respect to a fiat currency.
+            Powered by HTTPS outcalls, the exchange rate canister (XRC) on the BigFile fetches data from Web 2.0 servers and operates entirely on-chain. It interacts with major cryptocurrency exchanges using their public APIs to retrieve real-time or historical pricing information. The XRC also periodically queries public APIs from global foreign exchange data providers to obtain forex rates. This canister can be integrated into DEXs to compare exchange rates with market rates and determine the value of assets managed in a cube smart contract, for example, relative to a fiat currency.
             </p>
             <p className="mb-6">
               <Link
-                href="https://github.com/dfinity/exchange-rate-canister"
+                href="https://github.com/thebigfilecom/exchange-rate-canister"
                 className="link-primary link-with-icon"
               >
                 Power your dapp with the XRC
@@ -143,7 +106,7 @@ function HTTPSOutcalls() {
             </p>
             <p className="mb-0">
               <Link
-                href="https://medium.com/dfinity/exchange-rate-canister-a-smart-contract-with-oracle-capabilities-f30694753c89"
+                href="https://forum.thebigfile.com/t/a-smart-contract-with-oracle-capabilities/28"
                 className="link-primary link-with-icon"
               >
                 Read the blog
@@ -157,10 +120,7 @@ function HTTPSOutcalls() {
             Build with HTTPS outcalls
           </p>
           <p className="tw-lead-sm mb-2 text-center mx-auto md:mb-6 md:w-6/12">
-            Connect smart contracts directly with Web 2.0 to interact with other
-            blockchains or to fetch IoT-related data, stock exchange prices,
-            weather forecasts, etc. – all without introducing additional trust
-            assumptions.
+          Connect smart contracts directly to Web 2.0 to interact with other blockchains or fetch IoT data, stock prices, weather forecasts, and more—all without introducing additional trust assumptions.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8 md:mt-20">
             <CardWithDescription
@@ -170,12 +130,12 @@ function HTTPSOutcalls() {
             />
             <CardWithDescription
               title="Beyond oracles"
-              description="Read the Medium blog why HTTPS outcalls are  important for blockchains. "
-              href="https://bit.ly/3BQRBqI"
+              description="Read the BigFile Forum why HTTPS outcalls are  important for blockchains. "
+              href="https://forum.thebigfile.com/t/direct-https-outcalls-from-cube-smart-contracts-on-the-bigfile/29"
             />
             <CardWithBackground
               title="Sample Code"
-              description="Build a dapp with canister outgoing HTTPS outcalls"
+              description="Build a dapp with cube outgoing HTTPS outcalls"
               href="/samples?term=https+outcalls"
               bgImageClass={"bg-https-outcalls"}
             />

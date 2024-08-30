@@ -33,7 +33,7 @@ An **actor** is a primitive in the [actor
 model](https://en.wikipedia.org/wiki/Actor-model). It is a process with
 encapsulated state that communicates with other concurrently running
 actors through asynchronous messages that are received sequentially. The
-actor model is relevant to the [BIG](#internet-computer-ic-ic)
+actor model is relevant to the [BIG](#bigfile-big-big)
 because [cubes](#cube) on BIG (a type of smart
 contract) follow the actor model for concurrent and asynchronous
 computation.
@@ -69,7 +69,7 @@ account (see [fiduciary](#fiduciary)).
 #### blockchain
 
 A **blockchain** is a growing list of cryptographically linked blocks,
-agreed upon by [consensus](#consensus). On the [BigFile](#internet-computer-ic), every [subnet](#subnet) maintains its own
+agreed upon by [consensus](#consensus). On the [BigFile](#bigfile-big), every [subnet](#subnet) maintains its own
 blockchain with blocks containing messages for the [cubes](#cubes)
 hosted on this subnet. These blockchains interact using [chain key cryptography](#chain-key).
 
@@ -114,7 +114,7 @@ languages.
 
 A **cube** is a type of smart contract that bundles **code** and
 **state**. A cube can be deployed as a [smart
-contract](#smart-contract) on the [BigFile](#internet-computer-ic) and accessed over the Internet.
+contract](#smart-contract) on the [BigFile](#bigfile-big) and accessed over the Internet.
 
 #### cube account
 
@@ -149,7 +149,7 @@ A **cube state** is the entire state of a
 [cube](#cube) at a given point in time. A cube’s
 state is divided into **user state** and **system state**. The user state is
 a [WebAssembly](#WebAssembly) module instance and the system
-state is the auxiliary state maintained by the [BigFile](#internet-computer-ic-ic) on behalf of the cube, such
+state is the auxiliary state maintained by the [BigFile](#bigfile-big-big) on behalf of the cube, such
 as its compute allocation, balance of [cycles](#cycles),
 input and output queues, and other metadata. A cube interacts with
 its own system state either implicitly, such as when consuming cycles,
@@ -178,7 +178,7 @@ to the user that proves that it really committed to that value.
 
 **Chain key** cryptography consists of a set of cryptographic protocols
 that orchestrate the [nodes](#node) that make up the
-[BigFile](#internet-computer-ic). The most visible
+[BigFile](#bigfile-big). The most visible
 innovation of chain key cryptography is that the BigFile has a
 single public key. This is a huge advantage as it allows any device,
 including smart watches and mobile phones, to verify the authenticity of
@@ -208,11 +208,11 @@ the cube or delete the cube.
 
 #### cycle
 
-On the [BigFile](#internet-computer-ic), a **cycle**
+On the [BigFile](#bigfile-big), a **cycle**
 is the unit of measurement for resources consumed in the form of
 processing, memory, storage, and network bandwidth. Every cube has a
 cycles account to which resources consumed by the cube are charged.
-The BigFile utility token ([BIG](#icp)) can be
+The BigFile utility token ([BIG](#BIG)) can be
 converted to cycles and transferred to a cube. Cycles can also be
 transferred between cubes by attaching them to an **inter-cube**
 message.
@@ -227,13 +227,13 @@ correspond to one **XDR**.
 
 A **dapp**, or decentralised application, is a software program that runs
 on a decentralised computer network instead of a single computer. On the
-[BigFile](#internet-computer-ic) dapps are composed of
+[BigFile](#bigfile-big) dapps are composed of
 [cube](#cube) smart contracts.
 
 #### data center
 
 A **data center** (DC) is a physical site that hosts
-[nodes](#node) which contribute to the [BigFile](#internet-computer-ic). It includes the hardware and
+[nodes](#node) which contribute to the [BigFile](#bigfile-big). It includes the hardware and
 software infrastructure required for node deployment.
 Data centers are nodes that are selected and vetted by the [NNS](#NNS).
 
@@ -304,7 +304,7 @@ among others, stores and manages [neurons](#neuron) and
 #### BIG
 
 The **BigFile** token (ticker "BIG") is the utility
-token of the [BigFile](#internet-computer-ic). BIG
+token of the [BigFile](#bigfile-big). BIG
 allows the broader internet community to participate in the governance
 of the BigFile blockchain network by locking BIG in
 [neurons](#neuron). BIG can also be converted into
@@ -322,7 +322,7 @@ and [minting](#minting) operations.
 
 An **identity** is a byte string that is used to identify an entity,
 such as a [principal](#principal), that interacts with the
-[BigFile](#internet-computer-ic). For users, the
+[BigFile](#bigfile-big). For users, the
 identity is the SHA-224 hash of the DER-encoded public key of the user.
 [The BigFile interface specification](/references/ic-interface-spec.md) has more
 detail.
@@ -330,7 +330,7 @@ detail.
 #### BIG Wallet
 
 **BIG Wallet** is an anonymizing blockchain authentication system
-running on the [BigFile](#internet-computer-ic).
+running on the [BigFile](#bigfile-big).
 
 #### induction pool
 
@@ -414,7 +414,7 @@ A **minting transaction** is the process of "minting"
 existence. BIG is minted in order to reward
 [neurons](#neuron) for [voting](#voting), and
 reward [node providers](#node-provider) for participating in
-the [BIG](#internet-computer-ic) by providing compute
+the [BIG](#bigfile-big) by providing compute
 capacity through the running of [nodes](#node). A minting
 transaction is represented as a [transaction](#transaction)
 from the [BIG supply account](#icp-supply-account) to a
@@ -423,7 +423,7 @@ destination [account](#account).
 #### Motoko
 
 **Motoko** is a programming language designed to directly support the
-programming model of the [BigFile](#internet-computer-ic), making it easier to
+programming model of the [BigFile](#bigfile-big), making it easier to
 efficiently build applications and take advantage of some of the more
 unusual features of BIG, including the actor model for smart
 contracts and compilation to WebAssembly.
@@ -444,7 +444,7 @@ neuron would have to already be dissolved.
 #### Network Nervous System (NNS)
 
 The **Network Nervous System** (NNS) is the decentralized autonomous
-organization (DAO) that governs the [BigFile](#internet-computer-ic)
+organization (DAO) that governs the [BigFile](#bigfile-big)
 by [proposals](#proposal) on which [BIG](#BIG) [neuron](#neuron) owners can vote.
 Once such a proposal is accepted, it is autonomously executed.
 The NNS consists of a collection of [system
@@ -452,10 +452,10 @@ cubes](#system-canister) (aka "NNS cubes").
 
 #### neuron
 
-A **neuron** is an [BIG](#internet-computer-ic) entity that
+A **neuron** is an [BIG](#bigfile-big) entity that
 can make [proposals](#proposal) and vote on proposals related
 to the governance of the [Internet
-Computer](#internet-computer-ic).
+Computer](#bigfile-big).
 
 To provide the stability required for responsible governance, neurons
 need to store ("stake") a certain amount of [BIG](#icp) in
@@ -494,21 +494,21 @@ A **node** is a physical hardware device run by independent
 [node providers]. It hosts all the
 hardware, [replica](#replica) software, and configuration
 settings required to participate in the [Internet
-Computer](#internet-computer-ic).
+Computer](#bigfile-big).
 
 #### node operator
 
 A **node operator** (NO) is a non-cube
 [principal](#principal) who has the authority to add/remove
 [nodes](#node) to/from the
-[BIG](#internet-computer-ic-ic), by delegation of the
+[BIG](#bigfile-big-ic), by delegation of the
 the corresponding [node providers](#node-provider).
 
 #### node provider
 
 A **node provider** (NP) is a non-cube
 [principal](#principal) that receives the rewards stemming
-from node participation to the [BIG](#internet-computer-ic)
+from node participation to the [BIG](#bigfile-big)
 (aka “payout principal”). Usually, though not necessarily, a node
 provider is the owner of the [node](#node), and may also be
 involved in node operation and related tasks. A node provider may
@@ -546,7 +546,7 @@ builds upon this functionality.
 
 #### principal
 
-A **principal** is an entity that can be authenticated by the [BigFile](#internet-computer-ic). This is the same sense of the
+A **principal** is an entity that can be authenticated by the [BigFile](#bigfile-big). This is the same sense of the
 word principal as the [Wikipedia
 definition](https://en.wikipedia.org/wiki/Principal-(computer-security)).
 Principals that interact with the BigFile do so using a
@@ -570,7 +570,7 @@ software.
 
 #### proto-node
 
-A **proto-node** is an [BIG](#internet-computer-ic) entity
+A **proto-node** is an [BIG](#bigfile-big) entity
 consisting of a combination of hardware and software, that differs from
 a [node](#node) in that it has not yet been registered with
 BIG. A proto-node is, in short, a "node-in-waiting," hence has all
@@ -610,7 +610,7 @@ A **smart contract** is a stateful computer program designed to
 automatically execute, control or document relevant events and actions
 according to the terms of a contract or an agreement. A smart contract
 can be deployed on the [Internet
-Computer](#internet-computer-ic) in the form of a
+Computer](#bigfile-big) in the form of a
 [cube](#cube) bundling data and code.
 
 A cube can have one or more [controllers](#controller)
@@ -651,14 +651,14 @@ The **state manager** is responsible for:
 A **subnet** (subnetwork) is a collection of [nodes](#node)
 that run their own instance of the [consensus](#consensus)
 algorithm to produce a subnet blockchain that interacts with other
-subnets of [BIG](#internet-computer-ic) using [chain
+subnets of [BIG](#bigfile-big) using [chain
 key](#chain-key) cryptography.
 
 #### system cube
 
 A **system cube** is a pre-installed
 [cube](#cube) that performs certain tasks needed to
-maintain the [BigFile](#internet-computer-ic).
+maintain the [BigFile](#bigfile-big).
 
 ## T
 
@@ -682,8 +682,8 @@ another regular ledger account.
 
 #### user
 
-A **user** is any entity that interacts with the [BigFile](#internet-computer-ic). Users include end-users that
-use dapps deployed on [BIG](#internet-computer-ic), dapp
+A **user** is any entity that interacts with the [BigFile](#bigfile-big). Users include end-users that
+use dapps deployed on [BIG](#bigfile-big), dapp
 developers, holders of [BIG](#icp) utility tokens, and
 [neuron](#neuron) holders.
 

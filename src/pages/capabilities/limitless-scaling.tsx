@@ -22,13 +22,7 @@ function FeaturePage() {
                 Limitless Scaling
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The BigFile (BIG) can scale its capacity simply by
-                adding additional nodes to fuel new subnets. Nodes and subnets
-                are added via the Network Nervous System (NNS). In contrast,
-                most other blockchains have transaction limits baked into the
-                protocol (e.g. adding more servers to Bitcoin does not increase
-                its transaction volume) and need cumbersome layers to address
-                scaling.
+              The BigFile (BIG) effortlessly scales by adding additional nodes to power new subnets, all managed through the Network Nervous System (NNS). Unlike most blockchains, which have transaction limits hard-coded into their protocols (e.g., adding more servers to Bitcoin doesn’t increase its transaction capacity), BIG scales seamlessly without the need for cumbersome layers.
               </p>
             </div>
           </div>
@@ -72,25 +66,13 @@ function FeaturePage() {
             </p>
             <h3>Subnet Architecture</h3>
             <p>
-            The BigFile blockchain runs on a network of nodes owned and operated by a growing community of independent 
-            node providers distributed across the globe. The node providers are selected and vetted by the NNS neuron owners.
+            The BigFile blockchain operates on a global network of nodes owned and managed by an expanding community of independent providers. These node providers are carefully selected and vetted by the NNS neuron holders.
               <br />
               <br />
-              The BigFile's partitioning into subnet blockchains is
-              what allows the network to scale. Each subnet blockchain is
-              capable of processing update and query calls independently from
-              other subnets. This means that the entire network can easily be
-              scaled by simply adding more subnets to the network. For update
-              calls that need to be processed on every node, this method of
-              scaling the network can ensure that more update calls are
-              processed per second. The BigFile is capable of adding
-              hundreds of new subnets via the NNS.
+              The BigFile's scalability is driven by its partitioning into subnet blockchains, each of which processes update and query calls independently. This architecture allows the network to scale effortlessly by simply adding more subnets. For update calls that need to be processed on every node, this approach ensures higher throughput, enabling more updates per second. The BigFile can seamlessly add hundreds of new subnets through the NNS.
               <br />
               <br />
-              For query calls, however, scalability can simply be achieved by
-              adding more nodes to a subnet because these calls are processed
-              locally on one node. The addition of more nodes and subnets to the
-              network ensures web speed and infinite scalability.
+              For query calls, scalability is easily achieved by adding more nodes to a subnet, as these calls are processed locally on a single node. Expanding the network with additional nodes and subnets ensures both web-speed performance and virtually infinite scalability.
             </p>
 
             <p className="mb-3 mt-6">
@@ -124,11 +106,6 @@ function FeaturePage() {
               title="Build dapps with the language of your choice"
               description="Install SDKs to build dapps."
               href="/docs/current/developer-docs/smart-contracts/write/overview"
-            />
-            <CardWithDescription
-              title="Community Conversation"
-              description="Learn about performance and scalabilty of the BIG."
-              href="https://www.youtube.com/watch?v=XvE0ZsAYKiM"
             />
             <CardWithDescription
               title="'Limitless Scaling' article on the BIG Wiki"

@@ -22,24 +22,10 @@ function FeaturePage() {
                 Governance & Rapid Evolution
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The Network Nervous System (NNS) is the decentralized autonomous
-                organization (DAO) that governs the BigFile (BIG). It
-                is decentralized, runs fully on-chain and is, for instance,
-                responsible for making protocol level upgrades to continuously
-                improve the BigFile. BIG neuron holders vote on
-                proposals that uprade the BIG. Once such a proposal is accepted,
-                it is autonomously executed across the blockchain (no human
-                intervention).
+              The Network Nervous System (NNS) is the decentralized autonomous organization (DAO) that governs BigFile (BIG). Operating entirely on-chain, the NNS is responsible for tasks like making protocol upgrades to continually enhance the BigFile. BIG neuron holders vote on proposals to upgrade the network, and once a proposal is accepted, it is automatically executed across the blockchain without any human intervention.
                 <br />
                 <br />
-                While other blockchains take weeks or months to upgrade
-                (sometimes called hard fork) and typically require substantial
-                manual work and coordination to do so, the BIG upgrades itself on
-                a weekly basis.
-                <br />
-                <br />
-                The BIG's ability to upgrade and iterate quickly is a comparative
-                "superpower."
+                The ability to upgrade and iterate quickly is BIG's defining "superpower."
               </p>
             </div>
           </div>
@@ -67,33 +53,9 @@ function FeaturePage() {
           >
             <h2>How It Works</h2>
             <p>
-              The purpose of the NNS is to allow the BIG network to be governed
-              in an open, decentralized, and secure manner. It has complete
-              control over all aspects of the network. For example, it can
-              upgrade the protocol and software used by the node machines that
-              host the network; it can create new subnet blockchains to increase
-              network capacity; and many other things. The NNS works by
-              accepting proposals, and deciding to adopt or reject them based on
-              voting activity by “neurons” that network participants have
-              created.
+            The NNS enables the BIG network to be governed in an open, decentralized, and secure manner, with complete control over every aspect of the network. It can upgrade the protocol and software used by the node machines, create new subnet blockchains to expand network capacity, and much more. The NNS operates by accepting proposals, which are then either adopted or rejected based on voting by "neurons" created by network participants.
             </p>
 
-            <YoutubeVideoEmbed
-              videoId="mPjiO2bk2lI"
-              className="mt-10 md:mt-10"
-              altText="Inside the BigFile | Upgrades"
-            ></YoutubeVideoEmbed>
-
-            <h3>Proposals</h3>
-            <p>
-              Users submit NNS proposals to the NNS to update the code of the
-              BIG:{" "}
-              <Link href="https://dashboard.thebigfile.com/releases">
-                BIG Releases
-              </Link>{" "}
-              . Consequently, the BIG can update itself many times faster than
-              other blockchains.
-            </p>
           </div>
         </section>
 
@@ -106,9 +68,9 @@ function FeaturePage() {
             {/* add or remove CardWithDescription components on demand */}
 
             <CardWithDescription
-              title="Upgrading the BigFile Protocol"
+              title="Upgrading the BigFile"
               description="Medium blog post"
-              href="https://medium.com/dfinity/upgrading-the-internet-computer-protocol-45bf6424b268"
+              href="https://forum.thebigfile.com/t/upgrading-the-bigfile/30"
             />
             <CardWithDescription
               title="Diver deeper into the NNS"
