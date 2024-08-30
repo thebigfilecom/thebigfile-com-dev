@@ -22,9 +22,7 @@ function FeaturePage() {
                 Multi-block TXs
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The BigFile blockchain can stretch the execution of a
-                single transaction across multiple blocks. This allows very-long
-                running smart contract computations to be initiated.
+              The BigFile blockchain can extend the execution of a single transaction across multiple blocks, enabling the initiation of long-running smart contract computations.
               </p>
             </div>
           </div>
@@ -58,35 +56,21 @@ function FeaturePage() {
             prose-a:underline prose-a:text-infinite hover:prose-a:text-black hover:prose-a:no-underline
             "
           >
-            <h2>ICP's multi-block transaction capabilities are rare</h2>
+            <h2>BigFile multi-block transaction capabilities are rare</h2>
             <p>
-              Traditional blockchains that host smart contracts always need to
-              finish processing a transaction within a single block. In practice,
-              this means that when a smart contract function is invoked by a
-              transaction, it must complete execution within the per-block "gas
-              limit" (gas is the equivalent of cycles on the BigFile).
+            Traditional blockchains require smart contracts to complete transaction processing within a single block. This means that when a smart contract function is invoked, it must finish execution within the block's "gas limit" (analogous to cycles on the BigFile).
             </p>
 
             <p>
-              The BigFile is designed to allow any online system or
-              service to be built using smart contracts called canisters, to
-              support a "blockchain singularity." This means that when a
-              transaction invokes a smart contract, the computation involved
-              must be able to run for a very long time if required, and consume
-              as many computational cycles as needed.
+            The BigFile is designed to enable any online system or service to be built using smart contracts called cubes, supporting a "blockchain singularity." This means that when a transaction invokes a smart contract, the computation can run for an extended period and consume as many computational cycles as necessary.
             </p>
 
             <p>
-              This means that on the BigFile, a smart contract is
-              capable of performing complex AI calculations, or applying a
-              graphical filter to an image, say — although there is still a "max
-              cycles limit," it's just very high.
+            This means that on the BigFile, a smart contract can perform complex AI calculations or apply a graphical filter to an image, for example. While there is still a "max cycles limit," it is set very high.
             </p>
 
             <p>
-              Multi-block TXs are made possible by a broader aspect of the
-              BigFile's design, called Deterministic Time Slicing
-              (DTS).
+            Multi-block transactions are enabled by a key feature of the BigFile's design known as Deterministic Time Slicing (DTS).
             </p>
 
             <p className="mb-3 mt-6">
@@ -116,7 +100,7 @@ function FeaturePage() {
             <CardWithDescription
               title="Deterministic Time Slicing Discussion"
               description="Join the forum dicussion"
-              href="https://forum.dfinity.org/t/deterministic-time-slicing/10635"
+              href="https://forum.thebigfile.com/t/deterministic-time-slicing/31"
             />
           </div>
         </section>
