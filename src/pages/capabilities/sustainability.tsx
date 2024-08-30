@@ -101,9 +101,7 @@ function SustainabilityPage() {
                 className="tw-lead-sm md:tw-lead md:w-6/10"
                 variants={transitions.item}
               >
-                Blockchain technology catalyzes sustainability efforts by
-                enhancing transparency, traceability, and accountability in
-                business operations.
+                Blockchain technology drives sustainability initiatives by improving transparency, traceability, and accountability in business operations.
               </motion.p>
             </div>
           </div>
@@ -134,9 +132,7 @@ function SustainabilityPage() {
                 className="tw-heading-4 sm:tw-heading-3 md:tw-heading-60 mb-6 md:mb-10 text-gradient-green"
                 variants={transitions.item}
               >
-                Globally, the significance of sustainability is escalating,
-                driven by regulatory compliance, energy consumption, climate
-                change, and overall operational costs.
+                The global importance of sustainability is rising, fueled by regulatory demands, energy consumption concerns, climate change, and the need to reduce operational costs.
               </motion.p>
               <motion.p>
                 <button onClick={scrollToDownload} className="button-white">
@@ -154,12 +150,7 @@ function SustainabilityPage() {
         >
           <div className="flex-1 sm:order-2">
             <p className="tw-paragraph md:tw-lead mb-0">
-              The environmental footprint of an application is only one of the
-              many aspects of sustainability. Equally important are the cost of
-              operating, maintaining and scaling an application as well as its
-              longevity, security and privacy, resilience against attacks, and
-              business model - ultimately the economic sustainability of an
-              application once it is built and launched.
+            The environmental footprint of an application is only one of the many aspects of sustainability. Equally important are the cost of operating, maintaining and scaling an application as well as its longevity, security and privacy, resilience against attacks, and business model - ultimately the economic sustainability of an application once it is built and launched.
             </p>
           </div>
 
@@ -219,16 +210,14 @@ function SustainabilityPage() {
                 variants={transitions.item}
                 className="tw-lead-sm md:tw-lead mb-3 md:mb-8"
               >
-                The BigFile provides far better sustainability than
-                the traditional IT stack, as it takes a completely different
-                architectural approach that makes it more energy efficient.
+                The BigFile provides far better sustainability than the traditional IT stack, as it takes a completely different architectural approach that makes it more energy efficient.
               </motion.p>
               <ul className="list-none pl-0 space-y-4 md:space-y-8">
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  The Greenest Blockchain that provides efficiency at scale. The power consumption of a single transaction on the BIG is 0.003 Wh/tx
+                  The most sustainable blockchain, delivering efficiency at scale. Each transaction on the BIG consumes just 0.003 Wh, making it exceptionally energy-efficient.
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
@@ -279,11 +268,7 @@ function SustainabilityPage() {
               variants={transitions.item}
               className="tw-paragraph md:tw-lead mb-8"
             >
-              A sustainable future is important for your business, and the world
-              around you. This report, authored by the BigFile and
-              Inacta Venture, explores 10 unique business use cases where
-              blockchain's inherent traits of transparency, immutability, and
-              relative low cost work to improve existing practices.
+              A sustainable future is crucial for both your business and the world at large. This report, authored by BigFile, examines 10 distinct business use cases where blockchain's inherent qualities—transparency, immutability, and cost-efficiency—enhance current practices.
             </motion.p>
 
             <motion.img
@@ -337,7 +322,7 @@ function SustainabilityPage() {
                   className="mb-0 tw-paragraph"
                   variants={transitions.item}
                 >
-                  Bring reporting on chain. For example: GRI, CDP, B-Corp, EU CSRD enabling hashing of certifications.
+                  Integrate reporting on-chain, enabling the hashing of certifications like GRI, CDP, B-Corp, and EU CSRD.
                 </motion.p>
               </TranslatedCard>
               <TranslatedCard
@@ -373,7 +358,7 @@ function SustainabilityPage() {
                   className="mb-0 tw-paragraph"
                   variants={transitions.item}
                 >
-                  Enterprise token marketplace for carbon credits and carbon credit trading with NFTs.
+                  An enterprise token marketplace for carbon credits and carbon credit trading powered by NFTs.
                 </motion.p>
               </TranslatedCard>
             </TranslatedCardList>
@@ -396,13 +381,12 @@ function SustainabilityPage() {
             />
             <div className="md:w-1/2 md:min-w-5/10 md:order-1">
               <motion.h3 className="tw-heading-5 mt-4 mb-8 md:tw-heading-3">
-                Download now: Full report of all 10 sustainable business use
-                cases in detail
+              Download now: A comprehensive report detailing all 10 sustainable business use cases.
               </motion.h3>
               <form
                 className="md:mr-2/10 grid grid-cols-1 gap-3 md:grid-cols-2"
                 method="post"
-                action="https://dfinity.us16.list-manage.com/subscribe/post?u=33c727489e01ff5b6e1fb6cc6&id=726e1ebe92"
+                action="https://thebigfile.us14.list-manage.com/subscribe/post?u=c077aedaaac14cbbf2fb9522b&amp;id=38a1cc340f&amp;f_id=00647ae0f0"
               >
                 <input
                   placeholder="First name"
@@ -433,10 +417,7 @@ function SustainabilityPage() {
                 </button>
               </form>
               <p className="text-white/50 tw-caption mb-0 mt-6">
-                By providing the contact information required in this form, you agree to be contacted by the BigFile in order to
-                inform you about our products and services. Unsubscribe from
-                marketing email communications from BigFile by using
-                the unsubscribe link provided in the email.
+              By submitting your contact information in this form, you consent to being contacted by BigFile regarding our products and services. You can unsubscribe from marketing emails at any time by clicking the unsubscribe link provided in the email.
               </p>
             </div>
           </AnimateSpawn>
