@@ -110,10 +110,7 @@ function NewsPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  We love getting new impulses from the industry and sharing
-                  BigFile insights and our vision about the BigFile.
-                  Join us at an upcoming event or check out past events, news
-                  and presentations.
+                  We thrive on fresh industry insights and enjoy sharing our BigFile vision and expertise. Join us at an upcoming event, or explore past events, news, and presentations.
                 </motion.p>
               </div>
             </div>
@@ -202,12 +199,11 @@ function NewsPage() {
                 className="mb-4 tw-paragraph md:tw-lead-sm"
                 variants={transitions.item}
               >
-                Insights on the BigFile blockchain, spotlighting its
-                technology, applications, and community developments.
+                Insights into the BigFile blockchain, highlighting its technology, applications, and community advancements.
               </motion.p>
               <MotionLink
                 variants={transitions.item}
-                href="https://www.youtube.com/@BigFile"
+                href="https://www.youtube.com/@thebigfile"
                 className="link-primary link-with-icon"
               >
                 Explore more videos on YouTube <LinkArrowUpRight />
@@ -235,19 +231,19 @@ function NewsPage() {
           cards={[
             {
               label: "Subscribe to Medium for all our latest blog posts",
-              href: "https://medium.com/dfinity",
+              href: "https://bigfile.medium.com/",
             },
             {
               label: "Follow us on CoinMarketCap",
-              href: "https://coinmarketcap.com/currencies/internet-computer/",
+              href: "https://coinmarketcap.com/community/tr/profile/thebigfile/",
             },
             {
-              label: "Watch all the ICP videos on YouTube",
-              href: "https://www.youtube.com/@BigFile",
+              label: "Watch all the BigFile videos on YouTube",
+              href: "https://www.youtube.com/@thebigfile",
             },
             {
-              label: "Follow ICP on X",
-              href: "https://www.twitter.com/dfinity",
+              label: "Follow BigFile on X",
+              href: "https://www.twitter.com/thebigfile",
             },
           ]}
           className="mt-20 md:mt-30"
@@ -264,11 +260,11 @@ function NewsPage() {
           <ul className="list-none p-0 m-0 space-y-3">
             <li>
               <Link
-                href="mailto:comms@dfinity.org"
+                href="mailto:info@thebigfile.tech"
                 className="link-primary link-with-icon"
               >
                 <MailIcon />
-                comms@dfinity.org
+                info@thebigfile.tech
               </Link>
             </li>
             <li>
@@ -296,7 +292,7 @@ function NewsPage() {
           formUrl="https://thebigfile.us14.list-manage.com/subscribe/post?u=c077aedaaac14cbbf2fb9522b&amp;id=38a1cc340f&amp;f_id=00647ae0f0"
           className="mt-20 mb-20"
         >
-          Want to meet ICP enthusiasts IRL?{" "}
+          Want to meet BigFile enthusiasts IRL?{" "}
           <span className="text-white-60">
             Sign up for event updates to stay connected
           </span>
