@@ -24,22 +24,9 @@ const cards = [
 
   {
     logo: require("../../../../static/img/basics/openchat-logo.webp").default,
-    title: "OpenChat",
+    title: "BIGChat",
     oneLiner: "Decentralized alternative to WhatsApp",
     stats: "50,000+ users",
-  },
-  {
-    logo: require("../../../../static/img/basics/bioniq-logo.jpeg").default,
-    title: "Bioniq",
-    oneLiner: "Buy, sell, and trade with no gas fees, near-instant finality, and decentralized secure token bridging",
-    stats: "45,000+ users",
-  },
-
-  {
-    logo: require("../../../../static/img/basics/helix_logo.webp").default,
-    title: "Helix",
-    oneLiner: "Decentralized exchange that aims to bring true ownership and full transparency to crypto trading.",
-    stats: "2,000+ users",
   },
 ];
 
