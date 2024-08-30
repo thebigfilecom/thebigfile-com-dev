@@ -20,11 +20,7 @@ function FeaturePage() {
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Actor Model</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                A single cube smart contract has one thread of execution for
-                updates, but the BigFile can execute a massive number
-                of cubes in parallel. In addition, we make a distinction
-                between requests that need to update the state of a cube,
-                and queries, which cannot modify the state of a cube.
+              A single cube smart contract has one thread of execution for updates, but the BigFile can run a vast number of cubes in parallel. Additionally, we differentiate between requests that update a cube's state and queries, which cannot modify the state.
               </p>
             </div>
           </div>
@@ -60,72 +56,46 @@ function FeaturePage() {
           >
             <h2>How It Works</h2>
             <p>
-              The programming model of the BigFile consists of
-              memory-isolated cubes communicating by asynchronous message
-              passing of binary data encoding Candid values. A cube
-              processes its messages one-at-a-time, preventing race conditions.
-              A cube uses call-backs to register what needs to be done with
-              the result of any inter-cube messages it issues.
+            The BigFile's programming model is based on memory-isolated cubes that communicate through asynchronous message passing, using binary data to encode Candid values. Each cube processes its messages one at a time, preventing race conditions. When issuing inter-cube messages, a cube uses callbacks to handle the results.
             </p>
             <h3>Cubes as actors</h3>
             <p>
-              The actor model is a mathematical model of concurrent computation,
-              where, in response to a message, an actor can modify its state,
-              send messages, and create more actors.
+            The actor model is a mathematical framework for concurrent computation, where an actor, in response to a message, can modify its state, send messages, and create additional actors.
             </p>
 
             <p>
-              A canister is like an actor in many respects. For example, an
-              actor has:
+            In many ways, a cube functions similarly to an actor. For instance, an actor has:
             </p>
 
             <ul>
               <li>
-                a private state that can only be modified by the canister itself
+                a private state that can only be modified by the cube itself
               </li>
               <li>
                 a single thread of execution, so it does not need lock-based
                 synchronization
               </li>
               <li>
-                the ability to communicate with other canisters through
+                the ability to communicate with other cubes through
                 asynchronous messages
               </li>
-              <li>the ability to create new canisters</li>
+              <li>the ability to create new cubes</li>
             </ul>
 
             <p>
-              An important difference between traditional actors and canisters
-              is that canisters on the BigFile have bidirectional
-              message passing. Messages are divided into requests and responses,
-              where requests can be replied to and the BigFile keeps
-              track of the callback for responses.
+            A key distinction between traditional actors and cubes on the BigFile is that cubes support bidirectional message passing. Messages are categorized into requests and responses, with requests allowing for replies, and the BigFile tracking callbacks for the responses.
             </p>
 
             <p>
-              In actor terminology, each actor has a mailing address that is
-              used to receive messages. A canister also has a mailing address,
-              which happens to look similar to an IPv6 address.
+            In actor terminology, every actor has a mailing address for receiving messages. Similarly, a cube on the BigFile has its own mailing address, which resembles an IPv6 address.
             </p>
 
             <p>
-              While a canister's update throughput is limited by consensus of
-              the blockchain and the single thread of execution, a canister can
-              serve hundreds of queries concurrently, achieving throughput in
-              the order of thousands of queries per second, and latency measured
-              in milliseconds.
+            Although a cube's update throughput is limited by blockchain consensus and its single thread of execution, it can handle hundreds of queries concurrently, achieving throughput of thousands of queries per second with latency measured in milliseconds.
             </p>
 
             <p>
-              To complete this picture, it should be added that end users also
-              participate as actors in the model. This means that browsers and
-              mobile apps can directly perform update and query operations on
-              canisters.
-            </p>
-
-            <p>
-              In addition, the Motoko programming language, which is tailored to
-              the BigFile, is inspired by the actor model.
+            To complete the picture, it's important to note that end users also act as participants in this model. This means that browsers and mobile apps can directly perform update and query operations on cubes.
             </p>
 
             <p className="mb-3 mt-6">
