@@ -22,10 +22,7 @@ function FeaturePage() {
                 Multi-chain transactions
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                On the BigFile, you can create smart contracts that
-                directly interact with other blockchains, without trusted
-                centralized bridges that can get hacked and do rug pulls. This
-                has been made possible using Chain Key Cryptography.
+              On the BigFile, smart contracts can interact directly with other blockchains without relying on trusted centralized bridges vulnerable to hacks and rug pulls. This is achieved through Chain Key Cryptography.
               </p>
             </div>
           </div>
@@ -61,74 +58,20 @@ function FeaturePage() {
           >
             <h2>How It Works</h2>
             <p>
-              At the time of writing, there are no other blockchains in
-              existence that can create TX on other blockchains for their smart
-              contracts. Blockchains that talk about "native integrations" are
-              usually talking about a bridge run by the company that backs them.
+            As of now, no other blockchain can create transactions on other blockchains directly from their smart contracts. When blockchains mention "native integrations," they are typically referring to a bridge operated by the company behind them.
             </p>
             <h3>Service Composability</h3>
             <p>
-              The Web3 environment contains multiple blockchains that have
-              different characteristics and excel in different roles. A key web3
-              philosophy is service composability, in which different blockchain
-              services are composed to create new services and functionality.
-              Tokenized assets and liquidity must also be able to move between
-              services, whichever blockchain they are on. The BigFile
-              provides a means to fully support this paradigm in a multi-chain
-              environment without need for trusted bridges run by central
-              controllers such as companies.
+            The Web3 ecosystem comprises multiple blockchains, each with unique strengths and capabilities. A core principle of Web3 is service composability, where different blockchain services are combined to create new functionalities. To fully support this paradigm in a multi-chain environment, tokenized assets and liquidity must seamlessly move between services across various blockchains. The BigFile enables this without relying on centralized, trusted bridges operated by companies, ensuring a truly decentralized approach.
             </p>
 
             <p>
-              For example, when building a DeFi framework on the Ethereum
-              blockchain today, a means must be found to create the user
-              experience. Typically, this is built on centralized servers or
-              cloud services today, creating a serious security vulnerability,
-              and exposing the developers who pay for the servers or cloud
-              services to legal liabilities (since regulators can argue that the
-              service built using Ethereum is not running in the mode of a
-              decentralized protocol). Therefore, it would be better if the user
-              experience could be created on the BigFile using
-              canister smart contracts, which are controlled by a DAO. A means
-              has been provided to do this (please check developers docs to see
-              what is in production at any one time).
+            For example, when building a DeFi framework on the Ethereum blockchain, developers often rely on centralized servers or cloud services to create the user experience. This approach introduces significant security vulnerabilities and exposes developers to legal liabilities, as regulators may argue that the service is not truly decentralized. A more secure and decentralized alternative would be to build the user experience on the BigFile using cube smart contracts, which are governed by a DAO.
             </p>
 
             <h3>Threshold ECDSA</h3>
             <p>
-              The chain key cryptography protocol engine was extended so that
-              hosted smart contracts can maintain ECDSA public keys, and make
-              corresponding signatures, without need to store a private key on
-              the blockchain in a way that would allow it to be stolen.
-              Crucially, ECDSA is the signature scheme used to sign TX on other
-              blockchains, and allows smart contracts on the BigFile
-              to create TX that other blockchains directly execute.
-            </p>
-
-            <h3>Bitcoin Integration</h3>
-            <p>
-              One application has been the provision of special Bitcoin
-              capabilities to canister smart contracts. This allows them to
-              create bitcoin addresses, and send and receive bitcoin directly on
-              the Bitcoin ledger, without any need for insecure trusted
-              intermediaries such as bridges. Essentially, smart contracts on
-              the BigFile can process bitcoin almost as though they
-              are hosted by the Bitcoin network themselves.
-            </p>
-
-            <h3>Ethereum Integration</h3>
-            <p>
-              Another application is the signing of TX designed to invoke smart
-              contracts on other blockchains, such as Ethereum. For example, to
-              interact with Ethereum, an BigFile canister smart
-              contract would first create an ECDSA public key that functions as
-              an Ethereum Account (before use this should be charged with some
-              ETH to pay for gas). Thereafter, the smart contract can invoke
-              smart contract calls on the Ethereum blockchain, by creating and
-              signing appropriate Ethereum TX that will be executed by Ethereum
-              network. The smart contract can then determine the results of the
-              TX by using the HTTPS outcalls feature to interact with Ethereum
-              local nodes.
+            The chain-key cryptography protocol engine has been extended to enable hosted smart contracts to manage ECDSA public keys and generate corresponding signatures without storing private keys on the blockchain, preventing potential theft. Importantly, ECDSA is the signature scheme used to sign transactions on other blockchains, allowing smart contracts on the BigFile to create transactions that can be directly executed by those blockchains.
             </p>
 
             <p className="mb-3 mt-6">
@@ -148,12 +91,7 @@ function FeaturePage() {
             Build on the BIG
           </p>
           <p className="tw-lead-sm mb-2 text-center mx-auto md:mb-6 md:w-6/12">
-            Using the power of chain key cryptography, the BigFile can
-            thus be used as an orchestration blockchain, or meta blockchain,
-            upon which new services can be built that combine functionality and
-            assets provided by other blockchains in the Web3 universe - all
-            without the need to trust a central party, and without the
-            inconvenience and risk of using wrapping and bridges.
+          Using the power of chain key cryptography, the BigFile can thus be used as an orchestration blockchain, or meta blockchain, upon which new services can be built that combine functionality and assets provided by other blockchains in the Web3 universe - all without the need to trust a central party, and without the inconvenience and risk of using wrapping and bridges.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8 md:mt-20">
             {/* add or remove CardWithDescription components on demand */}
@@ -165,7 +103,7 @@ function FeaturePage() {
             />
             <CardWithDescription
               title="Build dapps with the language of your choice"
-              description="Learch about programming languages on the ICP."
+              description="Learch about programming languages on the BIG."
               href="/docs/current/developer-docs/smart-contracts/write/overview"
             />
             <CardWithDescription
