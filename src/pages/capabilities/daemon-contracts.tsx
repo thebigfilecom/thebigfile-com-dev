@@ -19,10 +19,7 @@ function FeaturePage() {
                 Daemon Contracts
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                On the BigFile blockchain, you can create canister
-                smart contracts that run like daemon processes — that is, you
-                can configure them so that they are automatically activated by
-                the network itself at specified block intervals.
+              On the BigFile blockchain, you can create cube smart contracts that function like daemon processes — configured to be automatically activated by the network at specified block intervals.
               </p>
             </div>
           </div>
@@ -58,30 +55,15 @@ function FeaturePage() {
           >
             <h2>How It Works</h2>
             <p>
-              When smart contracts are hosted on traditional blockchain
-              networks, computations can be only be invoked by submitting a new
-              transaction to their networks. This means that if, say, a DeFi
-              (decentralized finance) smart contract needs to periodically
-              perform some action, such as recording the latest asset prices
-              published by DEXs (decentralized exchanges), a traditional
-              off-chain system such as software running on a centralized cloud
-              service must be configured to periodically submit transactions.
+            On traditional blockchain networks, smart contracts can only be triggered by submitting a new transaction. This means that if a DeFi (decentralized finance) smart contract needs to periodically perform actions, like recording the latest asset prices from DEXs (decentralized exchanges), a traditional off-chain system—such as software running on a centralized cloud service—must be set up to periodically submit these transactions.
             </p>
 
             <p>
-              The approach that must be used with traditional blockchains is
-              complex, fault prone, and introduces several problems native to
-              centralization. For example, who will be responsible for running
-              the centralized infrastructure, and would such a person become a
-              de facto "controller" or "owner" of an otherwise decentralized
-              financial system in the eyes of financial regulator?
+            The traditional blockchain approach is complex, prone to faults, and introduces several issues inherent to centralization. For instance, who would be responsible for running the centralized infrastructure, and could this person be seen as a de facto "controller" or "owner" of an otherwise decentralized financial system by regulators?
             </p>
 
             <p>
-              The BigFile provides a means to avoid such problems, by
-              allowing canister smart contracts to be configured so that they
-              aer invoked by the blockchain itself, at some specified block
-              interval.
+            The BigFile addresses these issues by enabling cube smart contracts to be configured to run automatically at specified block intervals, triggered directly by the blockchain itself.
             </p>
           </div>
         </section>
