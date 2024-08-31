@@ -22,11 +22,7 @@ function FeaturePage() {
                 Sovereign Network
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-                The BigFile blockchain network is formed by special
-                node machines, which are hardware devices that are dedicated to
-                the task of running the BigFile Protocol (thus creating a sovereign network). This is
-                conceptually similar to how the Internet is formed by interconnected network
-                routing devices.
+              The BigFile blockchain network is powered by specialized node machines—dedicated hardware devices that run the BigFile Protocol, creating a sovereign and decentralized network. This is conceptually similar to how the Internet is built from interconnected network routing devices.
               </p>
             </div>
           </div>
@@ -62,50 +58,23 @@ function FeaturePage() {
           >
             <h2>How It Works</h2>
             <p>
-              Traditional blockchains are different. Their network nodes are
-              created using simple software, which interacts with other nodes
-              and maintains a copy of blockchain state. Today, software programs
-              are very easy to spin up on cloud computing "instances" using
-              services such as Amazon Web Services. A consequence has been that
-              the majority of their nodes are typically cloud computing
-              instances. Because these can be spun up in an instant the
-              investment required to create or destroy a node is minimal
-              (notwithstanding any cryptocurrency stake that might be required
-              to add a node to the network).
+            raditional blockchains operate differently. Their network nodes are often created using simple software that interacts with other nodes and maintains a copy of the blockchain state. Today, these software programs can be easily spun up on cloud computing "instances" using services like Amazon Web Services. As a result, most nodes on these blockchains are typically cloud-based. The minimal investment required to create or destroy a node (aside from any necessary cryptocurrency stake) means they can be deployed or removed almost instantly.
             </p>
             <h3>No reliance on cloud infrastructure</h3>
             <p>
-              A grave risk with these kinds of architectures is that control
-              over the blockchain network is handed to a small number of giant
-              corporations. These corporations might decide they must switch off
-              the nodes, owing to changes in regulation, or competitive threats,
-              or malicious insiders might use their access to the physical cloud
-              infrastructure to steal keys, or otherwise disrupt the networks.
+            A significant risk with these types of architectures is that control over the blockchain network can fall into the hands of a few large corporations. These corporations might choose to shut down nodes due to regulatory changes, competitive pressures, or malicious insiders who could exploit their access to the physical cloud infrastructure to steal keys or otherwise disrupt the network.
             </p>
 
             <p>
-              These issues do not exist with the BigFile, because it
-              runs on a sovereign network.
+            These issues are nonexistent with the BigFile, as it operates on a sovereign network.
             </p>
 
             <p>
-              Every node in the BigFile network is a dedicated
-              physical device, called a node machine, which is owned and run by an
-              independent node provider, typically from rack space in an
-              independent data center. The nodes cannot therefore be switched
-              off or tampered with by a small number of corporate cloud
-              computing service providers.
+            Each node in the BigFile network is a dedicated physical device, known as a node machine, owned and operated by an independent provider, typically housed in an independent data center. As a result, these nodes cannot be switched off or tampered with by a small number of corporate cloud computing providers.
             </p>
 
             <p>
-              While this is an important advantage, there are other technical
-              reasons that special node machines are required to participate in
-              the BigFile network. The node machines are built
-              to standardized public hardware specifications. This means that
-              when the network is under load, they do not fall behind other
-              nodes inside the same subnet blockchain and stay within the statistical
-              deviation that the network's decentralized governance DAO monitors,
-              and sanctions for.
+            While this is an important advantage, there are other technical reasons that special node machines are required to participate in the BigFile network. The node machines are built to standardized public hardware specifications. This means that when the network is under load, they do not fall behind other nodes inside the same subnet blockchain and stay within the statistical deviation that the network's decentralized governance DAO monitors, and sanctions for.
             </p>
 
             <p className="mb-3 mt-6">

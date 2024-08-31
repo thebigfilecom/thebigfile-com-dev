@@ -965,7 +965,7 @@ pub enum MultiGetLogsResult {
                     </Link>
                     <Link
                       className="link-primary"
-                      href="/bitcoin-integration/faq"
+                      href="/bitcoin-integration/"
                     >
                       <LinkArrowRight /> FAQ about BTC integration & ckBTC
                     </Link>
