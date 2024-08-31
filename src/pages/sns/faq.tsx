@@ -62,131 +62,72 @@ function SnsFaqPage() {
           >
             <Faq title="What is a DAO?">
               <p>
-                DAO stands for Decentralized Autonomous Organization. Simply
-                put, a DAO is an organization formed by smart contracts where
-                the members (typically token holders) collectively decide how
-                the organization or the product evolves. Example scenarios:
+              A DAO, or Decentralized Autonomous Organization, is an organization governed by smart contracts where members—typically token holders—collectively decide how the organization or product evolves. For example:
               </p>
               <ul>
                 <li>
-                  10'000 token holders each deposit crypto into a smart contract
-                  and vote on what to purchase with the total.
+                10,000 token holders each deposit crypto into a smart contract and vote on what to purchase with the pooled funds.
                 </li>
                 <li>
-                  1 million token holders control a decentralized version of
-                  Twitter where token holders propose and vote on feature
-                  updates.
+                1 million token holders control a decentralized version of Twitter, where they propose and vote on feature updates.
                 </li>
               </ul>
 
               <p>
-                A DAO can take the role of carrying out community-driven
-                decisions on when and how to update the code that shapes the
-                organization or product.
+              A DAO enables community-driven decisions on when and how to update the code that defines the organization or product.
               </p>
             </Faq>
 
             <Faq title="What is an SNS?">
               <p>
-                SNS stands for Service Nervous System. An SNS is a powerful form
-                of DAO that allows communities to govern smart contracts and
-                decentralized apps (dapps) running on the BigFile
-                (ICP) completely on chain. Main things to note about SNS:
+              SNS stands for Service Nervous System. It is a powerful type of DAO that allows communities to fully govern smart contracts and decentralized apps (dapps) running on BigFile (BIG), entirely on-chain. Key points about SNS:
               </p>
               <ul>
                 <li>
-                  The design of SNSs is similar to that of the{" "}
-                  <Link href="/nns">Network Nervous System (NNS)</Link>, which
-                  is the on-chain DAO that governs the whole ICP.
+                  The design of SNSs mirrors that of the {" "}
+                  <Link href="/nns">Network Nervous System (NNS)</Link>, the on-chain DAO governing the entire BigFile.
                 </li>
                 <li>
-                  A dapp controlled by an SNS DAO is governed by SNS token
-                  holders submitting and voting on on-chain proposals. No one
-                  developer or group of people controls the dapp, rather the
-                  dapp is controlled by voting via tokens.
+                A dapp controlled by an SNS DAO is managed by BIG token holders who submit and vote on on-chain proposals. No single developer or group controls the dapp; instead, it is governed through token-based voting.
                 </li>
                 <li>
-                  There can be many SNSs on ICP. Any developer can hand over the
-                  control of their dapp to an SNS DAO. Doing so gives control to
-                  DAO token holders.
+                Multiple SNSs can exist on BigFile. Any developer can transfer control of their dapp to an SNS DAO, thereby empowering DAO token holders with governance.
                 </li>
               </ul>
             </Faq>
 
             <Faq title="How unique are SNS DAOs in Web3?">
               <p>
-                DAOs are a growing form of organization for accomplishing goals.
-                For example, in the ETH ecosystem, Uniswap and MakerDAO are
-                popular DAOs with billions of dollars locked in their respective
-                smart contracts. However,{" "}
-                <strong>
-                  ICP is unique in that it can host fully-on chain dapps
-                </strong>{" "}
-                (frontend, backend application logic, and data), so SNS DAOs are
-                unique in that they can fully control (via voting) every aspect
-                of a dapp, since everything is on-chain. Having fully on-chain
-                DAOs is important because it enables all decisions to be
-                executed on the blockchain and thus facilitates true
-                decentralization. This is in contrast to existing DAOs
-                on other blockchains where voting takes place on-chain but the
-                execution of the results are often carried out by developers
-                off-chain.{" "}
+              DAOs are an increasingly popular organizational model for achieving various goals. For example, in the ETH ecosystem, Uniswap and MakerDAO are well-known DAOs with billions of dollars locked in their smart contracts. However,{" "} <strong>BigFile stands out because it can host fully on-chain dapps </strong>{" "}(including the frontend, backend logic, and data). This makes SNS DAOs unique, as they can fully control every aspect of a dapp through voting, with everything being on-chain. Fully on-chain DAOs are crucial because they ensure that all decisions are executed on the blockchain, enabling true decentralization. This contrasts with existing DAOs on other blockchains, where voting happens on-chain, but the execution is often handled by developers off-chain.{" "}
                 <p>
-                  Therefore, SNS DAOs serve as a vehicle to deliver fully
-                  decentralized online services that are owned and governed by
-                  their communities.{" "}
+                As a result, SNS DAOs provide a means to deliver fully decentralized online services that are owned and governed by their communities.{" "}
                 </p>
               </p>
             </Faq>
 
             <Faq title="What are the advantages of SNS DAOs? ">
               <p>
-                SNS DAOs facilitate a healthy exchange between developers,
-                entrepreneurs, end users and VC’s. Some advantages of turning
-                the control of your dapp over to a DAO include:{" "}
+              SNS DAOs foster a dynamic exchange between developers, entrepreneurs, government institutions, end users, and venture capitalists. Some advantages of handing control of your dapp over to a DAO include:{" "}
               </p>
               <ul>
                 <li>
-                  <strong>Community Engagement:</strong> as co-owners of the
-                  product, users become core contributors, developers deliver on
-                  value proposition.{" "}
+                 <strong>Community Engagement:</strong>As co-owners, users become core contributors, while developers focus on delivering the value proposition.{" "}
                 </li>
                 <li>
-                  <strong>Speedy User Adoption:</strong> As co-owners, users
-                  become the biggest advocates of the product.
+                  <strong>Accelerated User Adoption: </strong>Co-ownership turns users into the product's most enthusiastic advocates.
                 </li>
                 <li>
-                  <strong>Funding:</strong> projects are funded through a
-                  community-driven decentralization swap.
+                  <strong>Funding:</strong> Projects receive funding through community-driven decentralization swaps.
                 </li>
               </ul>
             </Faq>
 
             <Faq title="Are there existing SNS DAOs?">
-              The ICP community has expressed much interest and enthusiasm for
-              the launch of the SNS technology. OpenChat was the first dapp that
-              handed control over to an SNS DAO in Q1 of 2023. Since then, many
-              ecosystem projects have followed. Currently, there are 11 SNS DAOs
-              on the BigFile. Follow their progress on the{" "}
+            BIGChat will be launched on the BIG network in Q1 2025. It will act as the first dapp to hand over control to the SNS DAO. You can follow its progress on the {" "}
               <Link href="https://dashboard.thebigfile.com/sns">
                 SNS dashboard
               </Link>
               .
-            </Faq>
-
-            <Faq title="Were there any security audits on SNS?">
-              Yes, the SNS framework has undergone two security audits by{" "}
-              <Link href="https://www.trailofbits.com/">Trail of Bits</Link> in
-              2022, and 2023 with no severe issues found.
-              <p className="not-prose">
-                <Link
-                  href="https://medium.com/dfinity/taking-security-seriously-two-top-icp-features-assessed-by-trail-of-bits-4a0023ab1e68"
-                  className="link-primary link-with-icon"
-                >
-                  <LinkArrowRight></LinkArrowRight>
-                  Read more about these audits
-                </Link>
-              </p>
             </Faq>
           </FaqSection>
           <FaqSection
@@ -198,39 +139,22 @@ function SnsFaqPage() {
             }
           >
             <Faq title="What do I do once I am an SNS DAO member?">
-              The most important thing you can do as an SNS DAO member is to
-              participate in governance. On-chain governance is what
-              differentiates DAOs from traditional web applications, as members
-              play a key role in the DAO's success. DAO members can contribute
-              in many ways, from pushing code, to designing a logo or a UI, to
-              simply voting on SNS proposals that shape how the dapp evolves.
+            The most crucial action you can take as an SNS DAO member is to participate in governance. On-chain governance is what sets DAOs apart from traditional web applications, giving members a pivotal role in the DAO's success. As a DAO member, you can contribute in various ways—from pushing code and designing a logo or UI, to simply voting on SNS proposals that determine the dapp's evolution.
             </Faq>
             <Faq title="In what ways can I participate in an SNS DAO?">
-              There are many ways members can participate in an SNS DAO, both
-              on-chain and off-chain. Creating proposals requires coding skills.
-              Some examples include:
+            There are many ways members can participate in an SNS DAO, both on-chain and off-chain. Creating proposals requires coding skills. Some examples include:
               <ul>
                 <li>
-                  <strong>Vote on SNS proposals:</strong> You can vote on
-                  different types of proposals manually or follow other neurons
-                  that vote.
+                  <strong>Vote on SNS proposals:</strong> You can manually vote on different types of proposals or follow other neurons to vote on your behalf.
                 </li>
                 <li>
-                  <strong>Create upgrade proposals: </strong>
-                  Submit an upgrade proposal to update the code of the dapp that
-                  the SNS DAO controls. This allows anyone to contribute code to
-                  an SNS DAO.
+                  <strong>Create upgrade proposals:</strong> Submit an upgrade proposal to update the code of the dapp controlled by the SNS DAO. This enables anyone to contribute code to the DAO.
                 </li>
                 <li>
-                  <strong>Create motion proposals:</strong> Motion proposals
-                  don't upgrade the code of the dapp, instead they steer the
-                  direction of the DAO in terms of new features and dapp
-                  development.
+                  <strong>Create motion proposals:</strong> Motion proposals don’t update the dapp’s code; instead, they guide the DAO’s direction on new features and dapp development.
                 </li>
                 <li>
-                  <strong>Create SNS parameter update proposals: </strong>
-                  You can propose upgrades for many of the DAO's parameters such
-                  as maximum staking period, voting rewards and many more. See{" "}
+                  <strong>Create SNS parameter update proposals:</strong> Propose changes to the DAO’s parameters, such as the maximum staking period, voting rewards, and more. See available {" "}
                   <Link
                     href="/docs/current/developer-docs/daos/sns/managing/managing-nervous-system-parameters"
                     target="_blank"
@@ -243,20 +167,13 @@ function SnsFaqPage() {
               Non-governance related examples of contributing are:
               <ul>
                 <li>
-                  <strong>Content moderation: </strong> Many social media dapps
-                  may incorporate content moderation as they scale to millions
-                  of users. Moderators review and approve content based on the
-                  content policies of the DAO.
+                  <strong>Content moderation:</strong> As social media dapps scale to millions of users, content moderation becomes essential. Moderators review and approve content based on the DAO’s content policies.
                 </li>
                 <li>
-                  <strong>UI / UX design work: </strong> Users can contribute
-                  not only by coding, but designing different aspects of the
-                  dapp.
+                  <strong>UI/UX design work:</strong> Users can contribute not only by coding but also by designing various aspects of the dapp’s interface and user experience.
                 </li>
                 <li>
-                  <strong>Off-chain marketing / inviting friends: </strong>
-                  Members of the DAO can be advocates of the dapp and promote it
-                  in different ways.
+                  <strong>Off-chain marketing / inviting friends:</strong> DAO members can serve as advocates for the dapp, promoting it through various channels and inviting others to join.
                 </li>
               </ul>
             </Faq>
