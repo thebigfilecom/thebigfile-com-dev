@@ -178,22 +178,14 @@ function SnsFaqPage() {
               </ul>
             </Faq>
             <Faq title="How does voting in an SNS DAO work?">
-              Once you have acquired SNS tokens, you can lock them into SNS
-              neurons, which allows you to create a proposal, vote directly on one,
-              delegate voting to trusted parties that have more expertise in certain topics.
-              If a proposal gets adopted, the code of the SNS DAO or the dapp it controls is
-              upgraded. Depending on the SNS configuration, users who vote may
-              be rewarded with additional tokens for participating in
-              governance. If you want to get more deeply involved, you can also
-              suggest feature updates through proposals to improve the dapp
-              controlled by the DAO.
+            After acquiring BIG tokens, you can lock them into SNS neurons, enabling you to create proposals, vote directly on them, or delegate your voting power to trusted parties with more expertise on specific topics. If a proposal is adopted, the code of the SNS DAO or the dapp it controls is upgraded. Depending on the SNS configuration, users who vote may be rewarded with additional tokens for participating in governance. For those looking to get more involved, you can also propose feature updates to enhance the dapp controlled by the DAO.
             </Faq>
             <Faq
-              title="How can I get SNS Tokens?"
+              title="How can I get BIG Tokens?"
               id="how-do-you-get-sns-tokens"
             >
               <p>
-                Each SNS DAO has its own unique SNS token. For example, OpenChat
+                Each SNS DAO has its own unique BIG token. For example, BIGChat
                 has CHAT tokens.{" "}
               </p>
               <p>There are three main ways of acquiring SNS tokens:</p>
@@ -202,10 +194,10 @@ function SnsFaqPage() {
                   <strong>Participate in a decentralization swap:</strong> When
                   an SNS launches, it has to go through a decentralization swap.
                   You can participate on the NNS frontend dapp under the{" "}
-                  <Link href="https://nns.ic0.app/launchpad/">
+                  <Link href="https://nns.thebigfile.app/launchpad/">
                     Launchpad tab
                   </Link>
-                  . During the swap you can buy SNS tokens with ICP.
+                  . During the swap you can buy SNS tokens with BIG.
                 </li>
                 <li>
                   <strong>
@@ -213,7 +205,7 @@ function SnsFaqPage() {
                   </strong>{" "}
                   After a decentralization swap has concluded, liquid tokens
                   will typically be listed on multiple DEXs, where you can buy
-                  them using the ICP utility token or other tokens, depending on
+                  them using the BIG utility token or other tokens, depending on
                   what token pairs the DEX lists, e.g., also Bitcoin or
                   Ethereum. An SNS token in high demand may have a higher price
                   on a DEX than in its decentralization swap.{" "}
@@ -248,25 +240,25 @@ function SnsFaqPage() {
 
             <Faq title="What is the Neurons' fund?">
               <p>
-                From the ICP ecosystem's vantage point, the Neurons' fund aids
+                From the BIG ecosystem's vantage point, the Neurons' fund aids
                 in bootstrapping the SNS DAO ecosystem, thereby supporting the
                 continued growth of the ecosystem. The Neurons' fund itself is
                 controlled by a DAO (the NNS).
               </p>
               <p>
                 From a user's vantage point, the Neurons' fund is a way for
-                people who stake ICP in the NNS to use their maturity to fund
+                people who stake BIG in the NNS to use their maturity to fund
                 future SNSs. As the NNS decides how the Neuons' fund contributes to
-                SNSs, ICP stakers participating in them can leverage the broader community's
+                SNSs, BIG stakers participating in them can leverage the broader community's
                 "wisdom of crowds" to chose which SNS tokens to acquire. This allows
                 users to participate automatically in upcoming SNS launches.
               </p>
               <p>
-                ICP neuron holders can opt in or out of the Neurons' fund at
+                BIG neuron holders can opt in or out of the Neurons' fund at
                 any moment. Neurons will only participate in the
                 decentralization swap if they are opted in at the moment when
                 the proposal to initiate the SNS decentralization swap executes. The
-                propsoal executes immediately after it gets adopted by ICP neuron
+                propsoal executes immediately after it gets adopted by BIG neuron
                 holders.
               </p>
               More about the{" "}
@@ -275,18 +267,18 @@ function SnsFaqPage() {
               </Link>
               .
             </Faq>
-            <Faq title="If I am asked to send ICP to an address to participate in a decentralization swap, what should I do?">
+            <Faq title="If I am asked to send BIG to an address to participate in a decentralization swap, what should I do?">
               <p>
-                If you want to participate in the swap, do not send ICP directly
+                If you want to participate in the swap, do not send BIG directly
                 to addresses! An SNS swap will never initiate contact with you,
                 e.g. via chat or email. You will never be asked to manually
-                enter an ICP address to participate in a decentralization swap.
-                If you find yourself entering an ICP address to participate in
+                enter an BIG address to participate in a decentralization swap.
+                If you find yourself entering an BIG address to participate in
                 an SNS swap, then STOP. Your swap address is specific to your
                 identity, and you should only interact with that address when
                 participating in a swap through the{" "}
                 <Link href="https://nns.ic0.app/launchpad/">NNS</Link> or other
-                ICP based dapps that support the swap like{" "}
+                BIG based dapps that support the swap like{" "}
                 <Link href="https://avjzx-pyaaa-aaaaj-aadmq-cai.raw.ic0.app/icsns/launchpad">
                   ICLighthouse
                 </Link>
@@ -305,7 +297,7 @@ function SnsFaqPage() {
             <div className="blob blob-purple blob-md blob-top-right z-[-1]"></div>
             <Faq title="What is a decentralization swap?">
               A decentralization swap is the process by which an SNS DAO becomes
-              decentralized and where users can exchange ICP for SNS tokens by
+              decentralized and where users can exchange BIG for SNS tokens by
               participating. After the swap, each participant receives a basket
               of neurons. These neurons hold SNS tokens and therefore a share of
               the DAO's voting power. It is one of{" "}
@@ -330,19 +322,19 @@ function SnsFaqPage() {
               <ul>
                 <li>The amount of SNS tokens to be sold</li>
                 <li>
-                  The amount of ICP a decentralization swap must receive to be
+                  The amount of BIG a decentralization swap must receive to be
                   successful. If the goal is not reached, participants get their
-                  ICP refunded and the swap fails.
+                  BIG refunded and the swap fails.
                 </li>
                 <li>
-                  The maximum amount of ICP a decentralization swap can receive
-                  before it concludes. If the maximum ICP is reached, the swap
+                  The maximum amount of BIG a decentralization swap can receive
+                  before it concludes. If the maximum BIG is reached, the swap
                   is over and the control of the dapp is turned over to the
                   token holders. As the number of tokens to be sold is fixed, it
-                  is amount of ICP swapped that determines the initial price of
+                  is amount of BIG swapped that determines the initial price of
                   the SNS tokens.
                 </li>
-                <li>Minimum and maximum commitment of ICP per participant</li>
+                <li>Minimum and maximum commitment of BIG per participant</li>
                 <li></li>
               </ul>
             </Faq>
@@ -364,46 +356,46 @@ function SnsFaqPage() {
               </p>
               <p>
                 The number of SNS tokens you receive, and the price of for
-                each token, depends on the amount of ICP swapped.
-                The more ICP are swapped, the fewer SNS tokens you receive, 
+                each token, depends on the amount of BIG swapped.
+                The more BIG are swapped, the fewer SNS tokens you receive, 
                 however their price will be higher.
               </p>
             </Faq>
 
             <Faq title="How is the price of SNS tokens calculated?">
               <p>
-                SNS tokens can be exchanged for ICP during the decentralization
+                SNS tokens can be exchanged for BIG during the decentralization
                 swap. There is a fixed number of tokens distributed during the
-                swap, which means their price is determined by the amount of ICP
+                swap, which means their price is determined by the amount of BIG
                 swappend. You can calculate the token price by dividing the amount
-                of ICP swappend with the number of tokens distributed. Price = ICP
+                of BIG swappend with the number of tokens distributed. Price = BIG
                 swappend / number of tokens distributed. 
                 Note that the final price of SNS tokens
                 isn't known at the time of the decentralization swap, as it is
-                dependent on the total amount of ICP swapped.
+                dependent on the total amount of BIG swapped.
                 However, you can calculate the minimum and maximum price based
-                on the minimum and maximum ICP that the swap accepts, which you
+                on the minimum and maximum BIG that the swap accepts, which you
                 can verify in the swap proposal. A few examples:
               </p>
               <ul>
                 <li>
-                  The decentralization swap distributed 5000 tokens for 1000 ICP.
-                  You participated with 10 ICP. This means you will have
-                  50 SNS tokens, each worth 0.2 ICP.
+                  The decentralization swap distributed 5000 tokens for 1000 BIG.
+                  You participated with 10 BIG. This means you will have
+                  50 SNS tokens, each worth 0.2 BIG.
                 </li>
                 <li>
                   The decentralization swap distributed 1 million tokens for
-                  500,000 ICP. You participated with 200 ICP. This means you
-                  will have 400 SNS tokens, each worth 0.5 ICP.
+                  500,000 BIG. You participated with 200 BIG. This means you
+                  will have 400 SNS tokens, each worth 0.5 BIG.
                 </li>
                 <li>
-                  The decentralization swap distributed 100 tokens for 10,000 ICP.
-                  You participated with 5 ICP. This means you will have
-                  0.05 SNS tokens, where a full token would be worth 100 ICP.
+                  The decentralization swap distributed 100 tokens for 10,000 BIG.
+                  You participated with 5 BIG. This means you will have
+                  0.05 SNS tokens, where a full token would be worth 100 BIG.
                 </li>
               </ul>
               <p>
-                Visis the ICP Wiki for a more detailed overvire of{" "}
+                Visis the BIG Wiki for a more detailed overvire of{" "}
                 <Link href="https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration">
                   SNS tokenomics
                 </Link>
@@ -414,9 +406,9 @@ function SnsFaqPage() {
               <p>
                 You can participate in the decentralization swap in the{" "}
                 <Link href="https://nns.ic0.app/">NNS frontend dapp</Link>,
-                which requires ICP utility tokens. ICP tokens can be exchanged
+                which requires BIG utility tokens. BIG tokens can be exchanged
                 for SNS tokens during the decentralization swap. If you don’t
-                have ICP, go to any of the exchanges listed on{" "}
+                have BIG, go to any of the exchanges listed on{" "}
                 <Link href="https://coinmarketcap.com/currencies/internet-computer/markets/">
                   CoinMarketCap
                 </Link>
@@ -452,7 +444,7 @@ function SnsFaqPage() {
               </p>
               <p>
                 <strong>
-                  4. Type in the amount of ICP you want to participate with or
+                  4. Type in the amount of BIG you want to participate with or
                   click “max”, then click “Execute”.
                 </strong>
                 <img
@@ -464,7 +456,7 @@ function SnsFaqPage() {
               <p>
                 <strong>
                   5. You will be prompted to review your participation. If you
-                  see the correct amount of ICP, select the checkbox and click
+                  see the correct amount of BIG, select the checkbox and click
                   “Execute”.
                 </strong>
                 <img
@@ -475,7 +467,7 @@ function SnsFaqPage() {
               </p>
               <p>
                 <strong>
-                  6. On the last screen, you should see the amount of ICP you
+                  6. On the last screen, you should see the amount of BIG you
                   entered for participation. You can repeat this process if you
                   wish to contribute more.
                 </strong>
@@ -484,8 +476,8 @@ function SnsFaqPage() {
                 After the swap ends and is successful, you receive SNS tokens.
                 Note, that this may take a few hours after the swap has
                 concluded. The number of SNS tokens you receive, and the price
-                paid for each token, depends on the amount of ICP raised during
-                the swap as well as the amount of ICP spent. The more ICP
+                paid for each token, depends on the amount of BIG raised during
+                the swap as well as the amount of BIG spent. The more BIG
                 raised, the fewer SNS tokens you receive.
               </p>
               <p>
@@ -525,7 +517,7 @@ function SnsFaqPage() {
                 trust the developers will not change the dapp during the SNS
                 launch. Learn what you could verify and what to look out for on{" "}
                 <Link href="https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust">
-                  the ICP Wiki.
+                  the BIG Wiki.
                 </Link>
               </p>
             </Faq>
@@ -575,7 +567,7 @@ function SnsFaqPage() {
             }
           >
             <Faq title="What is the SNS treasury?">
-              After a decentralization swap successfully concludes, the ICP
+              After a decentralization swap successfully concludes, the BIG
               collected through the swap is allocated to the SNS DAO's treasury.
               Optionally, the DAO can allocate a number of SNS tokens to be in
               the DAO's treasury, which all SNSs so far have done. The SNS
@@ -595,12 +587,11 @@ function SnsFaqPage() {
                 </li>
                 <li>
                   Typically, after an SNS has launched it has an SNS token
-                  treasury and an ICP treasury (from the decentralization swap).
-                  An SNS can, however, also own other tokens on the Internet
-                  Computer.
+                  treasury and an BIG treasury (from the decentralization swap).
+                  An SNS can, however, also own other tokens on the BigFile.
                 </li>
                 <li>
-                  Typically, after an SNS has launched it has an SNS token treasury and an ICP
+                  Typically, after an SNS has launched it has an SNS token treasury and an BIG
                   treasury (from the decentralization swap). An SNS can, however, also own other
                   tokens on the BigFile.
                 </li>
@@ -612,21 +603,11 @@ function SnsFaqPage() {
             </Faq>
 
             <Faq title="Do I have a say in how the treasury funds are allocated?">
-              Yes, if you are a neuron holder of the respective SNS DAO, you can
-              actively exercise your voting power to decide on proposals that
-              allocate treasury funds.
+            Yes, as a neuron holder in the respective SNS DAO, you have the power to actively vote on proposals that allocate treasury funds.
             </Faq>
 
             <Faq title="Who has access to the treasury? ">
-              Without an adopted SNS proposal that specifies how to allocate funds,
-              no one can access the SNS treasury. The SNS DAO only grants access
-              when proposals are adopted through SNS community voting. While it can happen
-              that the original developer team possesses a meaningful portion of the voting
-              power, they alone cannot make decisions for the DAO without the approval of
-              SNS token holders. In particular, treasury proposals are considered to be
-              critical proposals, which have a higher bar to be adopted, including that
-              they require a higher voting participation and support of a supermajority of
-              the DAO voters.
+            Without an adopted SNS proposal specifying how to allocate funds, no one can access the SNS treasury. The SNS DAO grants access only when proposals are approved through community voting. While the original development team may hold a significant portion of the voting power, they cannot make decisions for the DAO without the consent of SNS token holders. Treasury proposals, in particular, are considered critical and require a higher threshold for adoption, including greater voting participation and the support of a supermajority of DAO voters.
             </Faq>
           </FaqSection>
 
@@ -644,7 +625,7 @@ function SnsFaqPage() {
                 on SNS proposals, which means voting could take place within the
                 dapp the SNS DAO controls, or in any other dapp that integrates
                 with the SNS backend. The{" "}
-                <Link href="https://nns.ic0.app/">NNS frontend dapp</Link> lists
+                <Link href="https://nns.thebigfile.app/">NNS frontend dapp</Link> lists
                 all SNS DAOs and their proposals. Other dapps that allow voting
                 on SNS proposals are{" "}
                 <Link href="https://iclight.io/icsns/proposals">
@@ -702,20 +683,10 @@ function SnsFaqPage() {
 
             <Faq title="What is neuron following?">
               <p>
-                Following neurons is a way to delegate votes both on the NNS and
-                in SNSs. Each SNS neuron can either manually vote on proposals
-                or follow another neuron’s voting decisions. Neurons are
-                followed based on various topics, such as making SNS treasury
-                transfers or upgrading the dapp. Neurons can be set to follow
-                other neurons on specific topics or to follow other neurons on
-                ‘All Topics’ – a catch-all which is applied for the proposal
-                without any specific following choice.
+              Following neurons is a way to delegate votes on both the NNS and in SNSs. Each SNS neuron can either vote manually on proposals or follow the voting decisions of another neuron. Neurons can be followed based on various topics, such as SNS treasury transfers or dapp upgrades. You can set neurons to follow others on specific topics or on 'All Topics'—a catch-all category applied to proposals without a specific following choice.
               </p>
               <p>
-                When you use following, you must trust that the neurons you’re following will make
-                decisions that align with your views. The advantages of neuron following
-                are that you don’t have to spend time manually voting on each proposal,
-                and you can rely on the expertise of other neuron holders for certain topics.
+              When you choose to follow neurons, you trust that the neurons you follow will make decisions aligned with your views. The benefits of neuron following include saving time by not having to vote manually on every proposal and relying on the expertise of other neuron holders for certain topics.
               </p>
             </Faq>
 
@@ -723,10 +694,6 @@ function SnsFaqPage() {
               If you would like to learn how to follow some neuron, for example
               the SNS developer team, on some topics, while manually voting on
               others, watch this short tutorial:
-              <YoutubeVideoEmbed
-                videoId="bgZ2VifhNcU"
-                altText="Neuron following on SNS treasury proposals"
-              />
             </Faq>
 
             <Faq title="Is it possible to transfer SNS tokens to another person?">
@@ -771,7 +738,7 @@ function SnsFaqPage() {
               <ul>
                 <li>
                   An SNS DAO can be set up to mint voting rewards for people who
-                  participate in governance (similar to ICP).
+                  participate in governance (similar to BIG).
                 </li>
                 <li>
                   An SNS DAO can mint tokens if voted on by SNS token holders.
@@ -835,16 +802,12 @@ function SnsFaqPage() {
             title="SNS DAO Basics"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="https://youtu.be/nZBWx6y070Y"
-            title="Video: Next Generation DAOs"
-          ></SmallCardWithDescription>
-          <SmallCardWithDescription
             href="https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c"
             title="SNS Blog"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
             href="/how-it-works"
-            title="Technical overview of ICP"
+            title="Technical overview of BIG"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
             href="https://wiki.thebigfile.com/wiki/Service_Nervous_System_(SNS)"
