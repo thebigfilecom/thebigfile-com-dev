@@ -24,7 +24,7 @@
     },
     "ic": {
       "providers": [
-        "https://mainnet.dfinity.network"
+        "https://mainnet.thebigfile.tech"
       ],
       "type": "persistent"
     }
