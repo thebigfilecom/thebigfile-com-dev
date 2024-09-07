@@ -85,7 +85,7 @@ function SnsFaqPage() {
               <ul>
                 <li>
                   The design of SNSs mirrors that of the {" "}
-                  <Link href="/nns">Network Nervous System (NNS)</Link>, the on-chain DAO governing the entire BigFile.
+                  <Link href="/nns">File Management System (FMS)</Link>, the on-chain DAO governing the entire BigFile.
                 </li>
                 <li>
                 A dapp controlled by an SNS DAO is managed by BIG token holders who submit and vote on on-chain proposals. No single developer or group controls the dapp; instead, it is governed through token-based voting.

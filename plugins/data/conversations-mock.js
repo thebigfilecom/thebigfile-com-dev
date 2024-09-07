@@ -484,7 +484,7 @@ module.exports = [
     speaker: "Lara Schmid",
     speakerTitle: "Researcher NNS",
     description:
-      '<p>Similarly to how the Network Nervous System (NNS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps.\nIn this talk, we explain a design proposal for a first version of an open governance canister that will then be used to realise the service nervous systems (SNSs).\nApart from this, the canister can also be (re-)used by anyone looking to implement another kind of DAO.\nA more detailed description of the proposal that we will present is explained and discussed in this <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224">forum entry</a>.</p>\n',
+      '<p>Similarly to how the File Management System (FMS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps.\nIn this talk, we explain a design proposal for a first version of an open governance canister that will then be used to realise the service nervous systems (SNSs).\nApart from this, the canister can also be (re-)used by anyone looking to implement another kind of DAO.\nA more detailed description of the proposal that we will present is explained and discussed in this <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224">forum entry</a>.</p>\n',
     startTimeUtc: 1642528800000,
     startTimePt: 1642496400000,
     startTimeEu: 1642528800000,
@@ -555,7 +555,7 @@ module.exports = [
     speaker: "Lara Schmid, Nicolas Zoghb",
     speakerTitle: "Researcher & Software Engineer",
     description:
-      "<p>Similarly to how the Network Nervous System (NNS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps. In this talk, we propose a design for how SNSs, consisting of a goverancne, a ledger and a root canister can be deployed and upgraded. A more detailed description of the proposal will be shared on the forum shortly.</p>\n",
+      "<p>Similarly to how the File Management System (FMS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps. In this talk, we propose a design for how SNSs, consisting of a goverancne, a ledger and a root canister can be deployed and upgraded. A more detailed description of the proposal will be shared on the forum shortly.</p>\n",
     startTimeUtc: 1644944400000,
     startTimePt: 1644912000000,
     startTimeEu: 1644944400000,

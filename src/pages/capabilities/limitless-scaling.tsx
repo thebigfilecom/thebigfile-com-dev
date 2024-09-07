@@ -22,7 +22,7 @@ function FeaturePage() {
                 Limitless Scaling
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-              The BigFile (BIG) effortlessly scales by adding additional nodes to power new subnets, all managed through the Network Nervous System (NNS). Unlike most blockchains, which have transaction limits hard-coded into their protocols (e.g., adding more servers to Bitcoin doesn’t increase its transaction capacity), BIG scales seamlessly without the need for cumbersome layers.
+              The BigFile (BIG) effortlessly scales by adding additional nodes to power new subnets, all managed through the File Management System (FMS). Unlike most blockchains, which have transaction limits hard-coded into their protocols (e.g., adding more servers to Bitcoin doesn’t increase its transaction capacity), BIG scales seamlessly without the need for cumbersome layers.
               </p>
             </div>
           </div>

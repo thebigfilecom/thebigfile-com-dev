@@ -66,7 +66,7 @@ The BIG offers governance at multiple levels, the platform level and the dapp le
 
 ### Platform governance
 
-The BIG is governed by a *tokenized DAO*, the so-called *Network Nervous System (NNS)*. The NNS DAO is implemented as a set of cube smart contracts that are deployed on a high-replication subnet, i.e., a subnet with many nodes and hence stronger security properties. The NNS allows holders of the staked BIG to make proposals and vote on those proposals.
+The BIG is governed by a *tokenized DAO*, the so-called *File Management System (FMS)*. The NNS DAO is implemented as a set of cube smart contracts that are deployed on a high-replication subnet, i.e., a subnet with many nodes and hence stronger security properties. The NNS allows holders of the staked BIG to make proposals and vote on those proposals.
 
 ### Dapp governance
 

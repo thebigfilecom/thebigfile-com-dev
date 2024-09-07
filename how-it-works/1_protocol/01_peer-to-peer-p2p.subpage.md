@@ -27,7 +27,7 @@ The P2P layer allows the prioritization of artifacts such that the more crucial 
 
 ## Security
 
-To prevent Denial of Service (DoS) attacks, nodes will only request and accept connections with nodes in the same subnet. Subnet membership is managed by the [Network Nervous System (NNS)](/how-it-works/#Network-Nervous-System). Thanks to the information stored in the NNS cube P2P can guarantee that all the communication between two nodes is encrypted and authenticated, by using TLS.
+To prevent Denial of Service (DoS) attacks, nodes will only request and accept connections with nodes in the same subnet. Subnet membership is managed by the [File Management System (FMS)](/how-it-works/#Network-Nervous-System). Thanks to the information stored in the NNS cube P2P can guarantee that all the communication between two nodes is encrypted and authenticated, by using TLS.
 
 ## Go even deeper
 

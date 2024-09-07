@@ -40,7 +40,7 @@ Once you added a passkey, you will be assigned an BIG Wallet number. You should 
 <img src="/img/how-it-works/ii-4.webp" alt="Internet Identity screen prompting the user to authorize access to Openchat" title="Internet Identity screen prompting the user to authorize access to Openchat" align="center" style="height:500px; width: auto" />
 </figure>
 
-As mentioned previously, it is also important to add a recovery phrase in case your device gets lost or stolen. Your BIG Wallet also allows you to login to the Network Nervous System (NNS) dapp. NNS is the DAO that governs the BigFile, and allows BIG token holders to participate in its governance by staking their tokens.
+As mentioned previously, it is also important to add a recovery phrase in case your device gets lost or stolen. Your BIG Wallet also allows you to login to the File Management System (FMS) dapp. NNS is the DAO that governs the BigFile, and allows BIG token holders to participate in its governance by staking their tokens.
 
 
 [BIG Wallet App](https://bigwallet.thebigfile.com/)
