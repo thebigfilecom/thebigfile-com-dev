@@ -232,7 +232,7 @@ function TokenHolders(): JSX.Element {
                 </p>
                 <p className="mb-0">
                   <Link
-                    href="/nns"
+                    href="/fms"
                     className="link-primary link-with-icon items-center"
                   >
                     <LinkArrowRight />

@@ -2,9 +2,9 @@ import Link from "@docusaurus/Link";
 import DarkHeroStyles from "@site/src/components/Common/DarkHeroStyles";
 import Layout from "@theme/Layout";
 import React from "react";
-import IconHowItWorks from "../../static/img/nns/how-it-works.svg";
-import IconGovern from "../../static/img/nns/govern.svg";
-import IconStake from "../../static/img/nns/stake.svg";
+import IconHowItWorks from "../../static/img/fms/how-it-works.svg";
+import IconGovern from "../../static/img/fms/govern.svg";
+import IconStake from "../../static/img/fms/stake.svg";
 import AnimateSpawn from "../components/Common/AnimateSpawn";
 import { motion } from "framer-motion";
 import BlobGradient from "@site/static/img/gradientBlurredCircle.webp";
@@ -17,7 +17,7 @@ import {
 
 const MotionLink = motion(Link);
 
-function NnsPage() {
+function FmsPage() {
   return (
     <Layout
       title="File Management System (FMS)"
@@ -80,7 +80,7 @@ function NnsPage() {
             variants={transitions.item}
           >
             <img
-              src="/img/nns/hero.svg"
+              src="/img/fms/hero.svg"
               alt=""
               loading="lazy"
               className="w-full max-w-md sm:w-auto sm:absolute pointer-events-none right-5 -translate-y-1/2 sm:-translate-y-2/3"
@@ -201,4 +201,4 @@ function NnsPage() {
   );
 }
 
-export default NnsPage;
+export default FmsPage;

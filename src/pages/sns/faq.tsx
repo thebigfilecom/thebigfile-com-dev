@@ -85,7 +85,7 @@ function SnsFaqPage() {
               <ul>
                 <li>
                   The design of SNSs mirrors that of the {" "}
-                  <Link href="/nns">Network Nervous System (NNS)</Link>, the on-chain DAO governing the entire BigFile.
+                  <Link href="/fms">Network Nervous System (NNS)</Link>, the on-chain DAO governing the entire BigFile.
                 </li>
                 <li>
                 A dapp controlled by an SNS DAO is managed by BIG token holders who submit and vote on on-chain proposals. No single developer or group controls the dapp; instead, it is governed through token-based voting.
@@ -194,7 +194,7 @@ function SnsFaqPage() {
                   <strong>Participate in a decentralization swap:</strong> When
                   an SNS launches, it has to go through a decentralization swap.
                   You can participate on the NNS frontend dapp under the{" "}
-                  <Link href="https://nns.thebigfile.app/launchpad/">
+                  <Link href="https://fms.thebigfile.app/launchpad/">
                     Launchpad tab
                   </Link>
                   . During the swap you can buy SNS tokens with BIG.
@@ -277,7 +277,7 @@ function SnsFaqPage() {
                 an SNS swap, then STOP. Your swap address is specific to your
                 identity, and you should only interact with that address when
                 participating in a swap through the{" "}
-                <Link href="https://nns.ic0.app/launchpad/">NNS</Link> or other
+                <Link href="https://fms.thebigfile.com/launchpad/">NNS</Link> or other
                 BIG based dapps that support the swap like{" "}
                 <Link href="https://avjzx-pyaaa-aaaaj-aadmq-cai.raw.ic0.app/icsns/launchpad">
                   ICLighthouse
