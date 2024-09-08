@@ -620,27 +620,8 @@ function SnsFaqPage() {
                 on SNS proposals, which means voting could take place within the
                 dapp the SNS DAO controls, or in any other dapp that integrates
                 with the SNS backend. The FMS frontend dapp lists
-                all SNS DAOs and their proposals. Other dapps that allow voting
-                on SNS proposals are{" "}
-                <Link href="https://iclight.io/icsns/proposals">
-                  ICLight.house
-                </Link>
-                ,{" "}
-                <Link href="https://oc.app/community/dgegb-daaaa-aaaar-arlhq-cai/channel/213879932851725513516678778767199309579">
-                  OpenChat
-                </Link>
-                , and partially <Link href="https://dscvr.one/">DSCVR</Link>.{" "}
-                Example on how SNS proposals appear on OpenChat:
-                <img src="/img/sns/openchat-1.webp" alt="" loading="lazy" />
-              </p>
-              <p className="not-prose">
-                <Link
-                  href="https://fms.thebigfile.com/proposals/"
-                  className="link-primary link-with-icon"
-                >
-                  <LinkArrowRight></LinkArrowRight>
-                  See SNS proposals and vote on the NNS dapp
-                </Link>
+                all SNS DAOs and their proposals.
+                
               </p>
             </Faq>
             <Faq title="How do I create a proposal for an SNS DAO?">
