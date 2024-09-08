@@ -194,7 +194,7 @@ function SnsFaqPage() {
                   <strong>Participate in a decentralization swap:</strong> When
                   an SNS launches, it has to go through a decentralization swap.
                   You can participate on the NNS frontend dapp under the{" "}
-                  <Link href="https://fms.thebigfile.app/launchpad/">
+                  <Link href="https://fms.thebigfile.com/launchpad/">
                     Launchpad tab
                   </Link>
                   . During the swap you can buy SNS tokens with BIG.
@@ -490,7 +490,7 @@ function SnsFaqPage() {
               </p>
               <p className="not-prose">
                 <Link
-                  href="https://nns.ic0.app/launchpad/"
+                  href="https://fms.thebigfile.com/launchpad/"
                   className="link-primary link-with-icon"
                 >
                   <LinkArrowRight></LinkArrowRight>
@@ -625,7 +625,7 @@ function SnsFaqPage() {
                 on SNS proposals, which means voting could take place within the
                 dapp the SNS DAO controls, or in any other dapp that integrates
                 with the SNS backend. The{" "}
-                <Link href="https://nns.thebigfile.app/">NNS frontend dapp</Link> lists
+                <Link href="https://nns.thebigfile.com/">NNS frontend dapp</Link> lists
                 all SNS DAOs and their proposals. Other dapps that allow voting
                 on SNS proposals are{" "}
                 <Link href="https://iclight.io/icsns/proposals">

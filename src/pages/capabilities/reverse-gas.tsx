@@ -184,7 +184,7 @@ function ReverseGasModelPage(): JSX.Element {
             </p>
             <p className="mb-0">
               <Link
-                href="https://fms.thebigfile.app/"
+                href="https://fms.thebigfile.com/"
                 className="link-primary link-with-icon"
               >
                 Swap BIG for cycles on the FMS
