@@ -742,28 +742,28 @@ const sidebars = {
           type: "category",
           label: "Network Nervous System (NNS)",
           items: [
-            "developer-docs/daos/nns/overview",
+            "developer-docs/daos/fms/overview",
             {
               type: "category",
-              label: "Using the NNS dapp",
+              label: "Using the FMS dapp",
               items: [
-              "developer-docs/daos/nns/nns-app-quickstart",
+              "developer-docs/daos/fms/fms-app-quickstart",
               ],
             },
             {
               type: "category",
               label: "Neurons",
               items: [
-              "developer-docs/daos/nns/neuron-management",
-              "developer-docs/daos/nns/staking-voting-rewards",
+              "developer-docs/daos/fms/neuron-management",
+              "developer-docs/daos/fms/staking-voting-rewards",
             ],
           },
-        "developer-docs/daos/nns/neurons-fund",
+        "developer-docs/daos/fms/neurons-fund",
         {
           type: "category",
           label: "Proposals",
           items: [
-            "developer-docs/daos/nns/proposal-requirements",
+            "developer-docs/daos/fms/proposal-requirements",
           ],
         },
 	],
