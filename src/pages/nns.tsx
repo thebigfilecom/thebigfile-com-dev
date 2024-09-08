@@ -188,7 +188,7 @@ function NnsPage() {
             <MotionLink
               variants={transitions.item}
               className="button-white"
-              href="https://nns.thebigfile.com"
+              href="https://fms.thebigfile.com"
               target="_blank"
               rel="noopener noreferrer"
             >
