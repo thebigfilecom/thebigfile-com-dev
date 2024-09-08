@@ -236,7 +236,7 @@ function DefiPage() {
               <div className="container-12 flex flex-col md:flex-row gap-4">
                 <motion.div variants={transitions.item} className="flex-1">
                   <Link
-                    href="https://fms.thebigfile.com/"
+                    href="https://nns.thebigfile.com/"
                     className="block border border-solid border-white-30 rounded-xl p-10 items-center panel-gradient text-center text-white hover:text-white hover:-translate-y-2 transition-all hover:no-underline"
                     target="_blank"
                     rel="noopener noreferrer"

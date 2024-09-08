@@ -17,7 +17,7 @@ import {
 
 const MotionLink = motion(Link);
 
-function FmsPage() {
+function NnsPage() {
   return (
     <Layout
       title="File Management System (FMS)"
@@ -188,7 +188,7 @@ function FmsPage() {
             <MotionLink
               variants={transitions.item}
               className="button-white"
-              href="https://fms.thebigfile.com"
+              href="https://nns.thebigfile.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -201,4 +201,4 @@ function FmsPage() {
   );
 }
 
-export default FmsPage;
+export default NnsPage;

@@ -225,7 +225,7 @@ const marketingNav = {
           name: "Create an BIG Wallet",
           href: "https://wallet.thebigfile.com/",
         },
-        { name: "FMS and Staking", href: "https://fms.thebigfile.com/" },
+        { name: "NNS and Staking", href: "https://nns.thebigfile.com/" },
       ],
 
       sections: [
@@ -244,7 +244,7 @@ const marketingNav = {
             },
             {
               name: "Staking and Governance",
-              href: "/fms",
+              href: "/nns",
               description: "Govern and get rewards",
             },
             {
@@ -264,7 +264,7 @@ const marketingNav = {
           items: [
             {
               name: "DAOs on BigFile",
-              href: "/fms",
+              href: "/sns",
               description: "Community-owned services",
             },
             {

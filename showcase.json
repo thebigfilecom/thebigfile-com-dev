@@ -40,17 +40,17 @@
   
   {
     "id": "nnsfront-enddapp",
-    "name": "FMS Dapp",
+    "name": "NNS Dapp",
     "oneLiner": "Dapp for Staking Neurons + Voting On-Chain",
-    "website": "https://fms.thebigfile.com",
-    "github": "https://github.com/thebigfilecom/fms-dapp",
+    "website": "https://nns.ic0.app",
+    "github": "https://github.com/dfinity/nns-dapp",
     "tags": [
       "Wallet",
       "Tools / Infrastructure",
       "Bitcoin",
       "Ethereum"
     ],
-    "description": "The FMS front-end dapp allows anyone to interact with the BigFile File Management System with a user-friendly UI. Served completely end-to-end through blockchain, this dapp allows you to manage BIG, stake neurons, participate in voting, and earn governance rewards.",
+    "description": "The NNS front-end dapp allows anyone to interact with the BigFile Network Nervous System with a user-friendly UI. Served completely end-to-end through blockchain, this dapp allows you to manage BIG, stake neurons, participate in voting, and earn governance rewards.",
     "usesInternetIdentity": true,
     "logo": "/img/showcase/nnsfront-enddapp_logo-dark.webp"
   },

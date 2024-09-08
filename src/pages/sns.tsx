@@ -24,7 +24,7 @@ import {
   openChatDao,
   snsData,
   sonicDao,
-} from "../data/fms";
+} from "../data/nns";
 import { useDarkHeaderInHero } from "../utils/use-dark-header-in-hero";
 
 /*

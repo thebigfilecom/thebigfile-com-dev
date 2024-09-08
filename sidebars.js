@@ -740,12 +740,12 @@ const sidebars = {
       items: [
         {
           type: "category",
-          label: "File Management System (FMS)",
+          label: "Network Nervous System (NNS)",
           items: [
             "developer-docs/daos/nns/overview",
             {
               type: "category",
-              label: "Using the FMS dapp",
+              label: "Using the NNS dapp",
               items: [
               "developer-docs/daos/nns/nns-app-quickstart",
               ],

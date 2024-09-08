@@ -186,7 +186,7 @@ The following proper nouns should always be capitalized:
 - Internet Identity
 - JavaScript
 - Motoko
-- File Management System
+- Network Nervous System
 - NodeJS
 - README
 - Rust
