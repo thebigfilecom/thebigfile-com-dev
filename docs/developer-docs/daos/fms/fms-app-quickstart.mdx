@@ -9,7 +9,7 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Beginner", "Governance", "Tutorial"]} />
 
 ## Overview
-All changes to the configuration and behavior of the BigFile are controlled by an algorithmic governance system called the Network Nervous System (NNS). The NNS controls all aspects of the BigFile blockchain configuration and is responsible for performing many network management operations. For example, the Network Nervous System (NNS) is responsible for:
+All changes to the configuration and behavior of the BigFile are controlled by an algorithmic governance system called the File Management System (FMS). The NNS controls all aspects of the BigFile blockchain configuration and is responsible for performing many network management operations. For example, the File Management System (FMS) is responsible for:
 
 -   Upgrading the protocol and guest operating system software used by the nodes machines.
 -   Inducting new node providers and machines into the network.
@@ -45,9 +45,9 @@ The dissolved neuron ceases to exist and the stake of BIG utility tokens that th
 
 ## Connect to the BigFile
 
-To connect to the BigFile using the Network Nervous System (NNS) dapp:
+To connect to the BigFile using the File Management System (FMS) dapp:
 
-- #### Step 1:  Open a browser and navigate to the [Network Nervous System (NNS)](https://nns.ic0.app) dapp.
+- #### Step 1:  Open a browser and navigate to the [File Management System (FMS)](https://fms.thebigfile.com) dapp.
 
 ![NNS dapp](../_attachments/nns1.png)
 
@@ -65,7 +65,7 @@ For more information about creating an Internet Identity, see [how to use Intern
 
 After you have registered, you can click **Login** to authenticate using your anchor and the authentication method—for example, a security key or fingerprint—you have registered.
 
-- #### Step 3:  Click **Proceed** to access to the Network Nervous System (NNS) dapp.
+- #### Step 3:  Click **Proceed** to access to the File Management System (FMS) dapp.
 
 ### Add an account
 
@@ -97,7 +97,7 @@ To add an account for managing BIG utility tokens:
 
 ### Using the CLI
 
-If you have selected self-custody for holding your BIG utility tokens and the tokens are associated with your developer identity instead of your registered Internet Identity, you need to transfer BIG utility tokens to your accounts if you want to manage them using the [Network Nervous System (NNS)](https://nns.ic0.app) dapp.
+If you have selected self-custody for holding your BIG utility tokens and the tokens are associated with your developer identity instead of your registered Internet Identity, you need to transfer BIG utility tokens to your accounts if you want to manage them using the [File Management System (FMS)](https://fms.thebigfile.com) dapp.
 
 To transfer BIG utility tokens controlled by your developer identity:
 
@@ -161,13 +161,13 @@ This example illustrates how to transfer BIG utility tokens to using a whole num
 -   Alternatively, you can use the `--amount` to specify the number of BIG utility tokens to transfer with fractional units up to 8 decimal places, for example, as `5.00000025`.
 :::
 
-The destination address can be an address in the ledger canister running on the BigFile network, an account you have added using the [Network Nervous System dapp](https://nns.ic0.app), or the address for a wallet you have on an exchange.
+The destination address can be an address in the ledger canister running on the BigFile network, an account you have added using the [File Management System dapp](https://fms.thebigfile.com), or the address for a wallet you have on an exchange.
 
-If you transfer the BIG utility tokens to an account in the [Network Nervous System dapp](https://nns.ic0.app), you might need to refresh the browser to see the transaction reflected.
+If you transfer the BIG utility tokens to an account in the [File Management System dapp](https://fms.thebigfile.com), you might need to refresh the browser to see the transaction reflected.
 
 For more information about using the `dfx ledger` command-line options, see [dfx ledger](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger).
 
-### Using the NNS dapp
+### Using the FMS dapp
 
 - #### Step 1: On the default 'Tokens' tab, assure that The BigFile token has been selected, then click **Send** on the bottom of the window.
 
@@ -230,13 +230,13 @@ After you create a neuron, you can increase the number of BIG utility tokens you
 
 To increase the stake in an existing neuron:
 
-- #### Step 1:  Follow the steps in [stake BIG utility tokens in a neuron](#stake-icp) to stake the original neuron using the [Network Nervous System (NNS)](https://nns.ic0.app) dapp.
+- #### Step 1:  Follow the steps in [stake BIG utility tokens in a neuron](#stake-icp) to stake the original neuron using the [File Management System (FMS)](https://nns.ic0.app) dapp.
 
 - #### Step 2:  Look up the transaction in the BigFile Association [transaction dashboard](https://dashboard.thebigfile.com/transactions) to get the neuron address.
 
 You can use the account identifier for your main BIG ledger account to search for your transactions.
 
-- #### Step 3:  Return to the [Network Nervous System (NNS)](https://nns.ic0.app) dapp, then from the 'My Neuron Staking' window, click **New Transaction**.
+- #### Step 3:  Return to the [File Management System (FMS)](https://nns.ic0.app) dapp, then from the 'My Neuron Staking' window, click **New Transaction**.
 
 - #### Step 4:  Paste the neuron address from the transaction dashboard into the **Destination** address field, then click **Continue**.
 
@@ -380,7 +380,7 @@ For more information about voting and voting rewards, see the following articles
 
 Currently, you can only submit proposals to the network nervous system by using the SDK command-line interface (`dfx`) using calls to the `governance` canister.
 
-A separate command-line tool (`icx-nns`) for working with the `governance` canister is in development and this functionality will also be available in the [Network Nervous System (NNS)](https://nns.ic0.app) dapp soon.
+A separate command-line tool (`icx-nns`) for working with the `governance` canister is in development and this functionality will also be available in the [File Management System (FMS)](https://nns.ic0.app) dapp soon.
 
 If you want to start submitting proposals right away, however, you can access a preliminary version of the `icx-nns` command-line tool by downloading a release from the [icx-nns](https://github.com/dfinity/icx-nns/releases) repository.
 
@@ -403,7 +403,7 @@ To view current and past SNS decentralization swaps from the NNS dapp:
 
 ## Deploying and managing canisters from the NNS dapp
 
-You must have **cycles** available to create and manage [canisters](/docs/current/concepts/glossary#canister), which are similar to smart contracts. The [Network Nervous System (NNS)](https://nns.ic0.app) dapp provides a convenient way for you to create and manage canisters by enabling you to convert BIG utility tokens into cycles and attach cycles to specific canister identifiers.
+You must have **cycles** available to create and manage [canisters](/docs/current/concepts/glossary#canister), which are similar to smart contracts. The [File Management System (FMS)](https://nns.ic0.app) dapp provides a convenient way for you to create and manage canisters by enabling you to convert BIG utility tokens into cycles and attach cycles to specific canister identifiers.
 
 To create a new canister:
 

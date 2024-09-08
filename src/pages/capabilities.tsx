@@ -129,7 +129,7 @@ const cardsData: CardData[] = [
     description:
       "The BigFile is governed by a fully on-chain, permissionless system that regularly upgrades the protocol according to the intentions of BIG token holders, as expressed through their votes.",
     image: "/img/features/nns-image.webp",
-    href: "/nns",
+    href: "/fms",
     refText: "Participate in BigFile governance",
     imageSide: "right",
   },

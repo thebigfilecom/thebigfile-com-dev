@@ -2,9 +2,9 @@ import Link from "@docusaurus/Link";
 import DarkHeroStyles from "@site/src/components/Common/DarkHeroStyles";
 import Layout from "@theme/Layout";
 import React from "react";
-import IconHowItWorks from "../../static/img/nns/how-it-works.svg";
-import IconGovern from "../../static/img/nns/govern.svg";
-import IconStake from "../../static/img/nns/stake.svg";
+import IconHowItWorks from "../../static/img/fms/how-it-works.svg";
+import IconGovern from "../../static/img/fms/govern.svg";
+import IconStake from "../../static/img/fms/stake.svg";
 import AnimateSpawn from "../components/Common/AnimateSpawn";
 import { motion } from "framer-motion";
 import BlobGradient from "@site/static/img/gradientBlurredCircle.webp";
@@ -17,12 +17,12 @@ import {
 
 const MotionLink = motion(Link);
 
-function NnsPage() {
+function FmsPage() {
   return (
     <Layout
-      title="Network Nervous System (NNS)"
+      title="File Management System (FMS)"
       // fill in meta description
-      description="The NNS is one of the world's largest DAOs that governs the BigFile."
+      description="The FMS is one of the world's largest DAOs that governs the BigFile."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <Head>
@@ -45,24 +45,24 @@ function NnsPage() {
                   className="tw-heading-3 md:tw-heading-2 mb-6"
                   variants={transitions.item}
                 >
-                  Network Nervous System (NNS)
+                  File Management System (FMS)
                 </motion.h1>
                 <motion.p
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  The NNS is one of the world's largest DAOs that governs the BigFile. It is a 100% on-chain, permissionless
+                  The FMS is one of the world's largest DAOs that governs the BigFile. It is a 100% on-chain, permissionless
                   system that continuously upgrades the BigFile based
                   on the voting of BIG token holders.
                 </motion.p>
                 <MotionLink
                   className="button-white"
-                  href="https://nns.thebigfile.com"
+                  href="https://fms.thebigfile.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   variants={transitions.item}
                 >
-                  Go to the NNS
+                  Go to the FMS
                 </MotionLink>
               </div>
             </div>
@@ -80,7 +80,7 @@ function NnsPage() {
             variants={transitions.item}
           >
             <img
-              src="/img/nns/hero.svg"
+              src="/img/fms/hero.svg"
               alt=""
               loading="lazy"
               className="w-full max-w-md sm:w-auto sm:absolute pointer-events-none right-5 -translate-y-1/2 sm:-translate-y-2/3"
@@ -100,7 +100,7 @@ function NnsPage() {
               >
                 The BigFile doesn’t require complicated forks to
                 upgrade its capacity. Anyone can submit a proposal to make
-                protocol level changes. Once approved by BIG token holders, these changes are automatically deployed by the NNS, seamlessly upgrading the network. For participating in governance, BIG token holders receive voting rewards.
+                protocol level changes. Once approved by BIG token holders, these changes are automatically deployed by the FMS, seamlessly upgrading the network. For participating in governance, BIG token holders receive voting rewards.
               </motion.p>
               <MotionLink
                 className="link-external"
@@ -120,7 +120,7 @@ function NnsPage() {
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                Anyone can participate in governance by simply sending BIG to the NNS and staking it in neurons. These neurons have to be locked for a specific time between 6 months and 8 years to be eligible for voting and earning voting rewards.
+                Anyone can participate in governance by simply sending BIG to the FMS and staking it in neurons. These neurons have to be locked for a specific time between 6 months and 8 years to be eligible for voting and earning voting rewards.
               </motion.p>
               <motion.p
                 className="mb-6 tw-paragraph"
@@ -130,12 +130,12 @@ function NnsPage() {
               </motion.p>
               <MotionLink
                 className="button-primary"
-                href="https://nns.thebigfile.com"
+                href="https://fms.thebigfile.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={transitions.item}
               >
-                Go to the NNS
+                Go to the FMS
               </MotionLink>
             </TranslatedCard>
             <TranslatedCard
@@ -147,7 +147,7 @@ function NnsPage() {
                 variants={transitions.item}
               >
                 Voting rewards are distributed among participants who have
-                locked BIG in neurons and are voting either manually or follow other neurons that vote. Rewards are distributed daily to voting neurons as maturity. This maturity is unrealized ICP that can be either staked or spawned. Staking maturity adds to the voting power of the neuron. Spawning mints the maturity into a neuron that becomes liquid after a week so that the ICP contained in the neuron can also be used outside of the NNS.
+                locked BIG in neurons and are voting either manually or follow other neurons that vote. Rewards are distributed daily to voting neurons as maturity. This maturity is unrealized BIG that can be either staked or spawned. Staking maturity adds to the voting power of the neuron. Spawning mints the maturity into a neuron that becomes liquid after a week so that the BIG contained in the neuron can also be used outside of the FMS.
               </motion.p>
               <MotionLink
                 className="link-external"
@@ -188,11 +188,11 @@ function NnsPage() {
             <MotionLink
               variants={transitions.item}
               className="button-white"
-              href="https://nns.thebigfile.com"
+              href="https://fms.thebigfile.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Go to the NNS
+              Go to the FMS
             </MotionLink>
           </AnimateSpawn>
         </section>
@@ -201,4 +201,4 @@ function NnsPage() {
   );
 }
 
-export default NnsPage;
+export default FmsPage;

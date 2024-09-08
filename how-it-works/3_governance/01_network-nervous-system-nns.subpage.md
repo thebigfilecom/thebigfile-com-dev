@@ -5,9 +5,9 @@ shareImage: /img/how-it-works/network-nervous-system.webp
 slug: network-nervous-system-nns
 ---
 
-# The Network Nervous System (NNS)
+# The File Management System (FMS)
 
-The Network Nervous System (NNS) is the DAO that governs the BigFile blockchain. It operates as an open, permissionless governance system where anyone can participate by staking BIG utility tokens in what are known as neurons. Decisions are made by voting on proposals, which can be submitted by any participant.
+The File Management System (FMS) is the DAO that governs the BigFile blockchain. It operates as an open, permissionless governance system where anyone can participate by staking BIG utility tokens in what are known as neurons. Decisions are made by voting on proposals, which can be submitted by any participant.
 
 ## Governance participation
 Governance participants are called neurons. Neurons are created by locking BIG utility tokens for a specified period of time. The NNS is a stake-based governance system, where a neuron's voting power depends on three main factors:

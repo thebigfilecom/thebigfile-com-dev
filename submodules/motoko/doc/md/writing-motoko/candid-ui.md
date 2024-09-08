@@ -10,7 +10,7 @@ The canister interface description language, often referred to as Candid or more
 
 Candid provides a unified way for you to interact with canister smart contracts that are written in different languages or accessed using different tools.
 For example, Candid provides a consistent view of a service whether the underlying program is native Rust, JavaScript, or any other programming language. 
-Candid also enables different tools, such as the `dfx` command-line interface and the Network Nervous System dapp, to share a common description for a service.
+Candid also enables different tools, such as the `dfx` command-line interface and the File Management System dapp, to share a common description for a service.
 
 Based on the type signature of the actor, Candid also provides a web interface that allows you to call canister functions for testing and debugging.
 

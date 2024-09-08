@@ -22,7 +22,7 @@ function FeaturePage() {
                 Governance & Rapid Evolution
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-              The Network Nervous System (NNS) is the decentralized autonomous organization (DAO) that governs BigFile (BIG). Operating entirely on-chain, the NNS is responsible for tasks like making protocol upgrades to continually enhance the BigFile. BIG neuron holders vote on proposals to upgrade the network, and once a proposal is accepted, it is automatically executed across the blockchain without any human intervention.
+              The File Management System (FMS) is the decentralized autonomous organization (DAO) that governs BigFile (BIG). Operating entirely on-chain, the NNS is responsible for tasks like making protocol upgrades to continually enhance the BigFile. BIG neuron holders vote on proposals to upgrade the network, and once a proposal is accepted, it is automatically executed across the blockchain without any human intervention.
                 <br />
                 <br />
                 The ability to upgrade and iterate quickly is BIG's defining "superpower."
