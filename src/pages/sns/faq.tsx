@@ -405,11 +405,11 @@ function SnsFaqPage() {
             <Faq title="How do I participate in a swap?">
               <p>
                 You can participate in the decentralization swap in the{" "}
-                <Link href="https://nns.ic0.app/">NNS frontend dapp</Link>,
+                <Link href="https://fms.thebigfile.com/">NNS frontend dapp</Link>,
                 which requires BIG utility tokens. BIG tokens can be exchanged
                 for SNS tokens during the decentralization swap. If you don’t
                 have BIG, go to any of the exchanges listed on{" "}
-                <Link href="https://coinmarketcap.com/currencies/internet-computer/markets/">
+                <Link href="https://coinmarketcap.com/currencies/">
                   CoinMarketCap
                 </Link>
                 .
@@ -625,7 +625,7 @@ function SnsFaqPage() {
                 on SNS proposals, which means voting could take place within the
                 dapp the SNS DAO controls, or in any other dapp that integrates
                 with the SNS backend. The{" "}
-                <Link href="https://nns.thebigfile.com/">NNS frontend dapp</Link> lists
+                <Link href="https://fms.thebigfile.com/">FMS frontend dapp</Link> lists
                 all SNS DAOs and their proposals. Other dapps that allow voting
                 on SNS proposals are{" "}
                 <Link href="https://iclight.io/icsns/proposals">
@@ -641,7 +641,7 @@ function SnsFaqPage() {
               </p>
               <p className="not-prose">
                 <Link
-                  href="https://nns.ic0.app/proposals/"
+                  href="https://fms.thebigfile.com/proposals/"
                   className="link-primary link-with-icon"
                 >
                   <LinkArrowRight></LinkArrowRight>
