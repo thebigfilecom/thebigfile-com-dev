@@ -619,8 +619,7 @@ function SnsFaqPage() {
                 Anyone can build a frontend that allows users to create or vote
                 on SNS proposals, which means voting could take place within the
                 dapp the SNS DAO controls, or in any other dapp that integrates
-                with the SNS backend. The{" "}
-                <Link href="https://fms.thebigfile.com/">FMS frontend dapp</Link> lists
+                with the SNS backend. The FMS frontend dapp lists
                 all SNS DAOs and their proposals. Other dapps that allow voting
                 on SNS proposals are{" "}
                 <Link href="https://iclight.io/icsns/proposals">
