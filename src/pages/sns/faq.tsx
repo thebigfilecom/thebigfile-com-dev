@@ -193,10 +193,6 @@ function SnsFaqPage() {
                 <li>
                   <strong>Participate in a decentralization swap:</strong> When
                   an SNS launches, it has to go through a decentralization swap.
-                  You can participate on the NNS frontend dapp under the{" "}
-                  <Link href="https://fms.thebigfile.com/launchpad/">
-                    Launchpad tab
-                  </Link>
                   . During the swap you can buy SNS tokens with BIG.
                 </li>
                 <li>
