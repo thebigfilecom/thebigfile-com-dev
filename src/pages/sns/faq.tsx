@@ -400,8 +400,7 @@ function SnsFaqPage() {
 
             <Faq title="How do I participate in a swap?">
               <p>
-                You can participate in the decentralization swap in the{" "}
-                <Link href="https://fms.thebigfile.com/">NNS frontend dapp</Link>,
+                You can participate in the decentralization swap in the NNS frontend dapp,
                 which requires BIG utility tokens. BIG tokens can be exchanged
                 for SNS tokens during the decentralization swap. If you don’t
                 have BIG, go to any of the exchanges listed on{" "}
@@ -486,7 +485,7 @@ function SnsFaqPage() {
               </p>
               <p className="not-prose">
                 <Link
-                  href="https://fms.thebigfile.com/launchpad/"
+                  href="https://fms.thebigfile.com/"
                   className="link-primary link-with-icon"
                 >
                   <LinkArrowRight></LinkArrowRight>
