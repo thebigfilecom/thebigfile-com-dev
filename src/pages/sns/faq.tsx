@@ -422,8 +422,7 @@ function SnsFaqPage() {
                 You can participate in the decentralization swap in the NNS frontend dapp,
                 which requires BIG utility tokens. BIG tokens can be exchanged
                 for SNS tokens during the decentralization swap. If you don’t
-                have BIG, go to any of the exchanges listed on{" "}
-                <Link href="https://coinmarketcap.com/currencies/">
+                have BIG, go to any of the exchanges listed
                 You can participate in the decentralization swap in the{" "}
                 <Link href="https://fms.thebigfile.com/">FMS frontend dapp</Link>,
                 which requires ICP utility tokens. ICP tokens can be exchanged
@@ -563,8 +562,7 @@ function SnsFaqPage() {
                   root canister is the canister that controls the other SNS
                   canisters within a given SNS DAO. You should verify that the
                   SNS root canister is the only canister controlling other SNS
-                  canisters within that SNS DAO. Verification is important for
-                  making sure there no backdoors built in.
+                  canisters within that SNS DAO. 
                 </li>
                 <li>
                   <strong>The dapp canister: </strong> You can verify that the
