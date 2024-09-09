@@ -22,7 +22,7 @@ function WhatIsBigPage() {
       description={`The BigFile adds autonomous serverless cloud functionality to the public Internet - making it possible to build almost any system or service entirely on a decentralized network using “canister software,” an evolution of smart contracts.`}
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
-      <ShareMeta image="/img/shareImages/share-what-is-the-ic.jpg"></ShareMeta>
+      <ShareMeta image="/img/shareImages/share-what-is-the-big.jpg"></ShareMeta>
 
       <main
         className="text-black relative overflow-hidden"
