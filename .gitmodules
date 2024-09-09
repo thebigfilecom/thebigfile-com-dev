@@ -9,7 +9,7 @@
 	url = https://github.com/thebigfilecom/quill.git
 [submodule "submodules/internetidentity"]
 	path = submodules/internetidentity
-	url = https://github.com/thebigfilecom/big-wallet.git
+	url = https://github.com/thebigfilecom/big-id.git
 	branch = main
 [submodule "submodules/interface-spec"]
 	path = submodules/interface-spec
