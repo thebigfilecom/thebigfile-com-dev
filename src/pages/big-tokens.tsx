@@ -88,7 +88,7 @@ function TokenHolders(): JSX.Element {
         editPath={`https://github.com/thebigfilecim/thebigfile-com-dev/edit/main/${__filename}`}
       >
         <main className="overflow-hidden">
-          <ShareMeta image="/img/shareImages/share-icp-tokens.jpg" />
+          <ShareMeta image="/img/shareImages/share-big-tokens.jpg" />
           {isDark && <DarkHeroStyles />}
           <section className="bg-infinite text-white overflow-hidden" ref={ref}>
             <AnimateSpawn

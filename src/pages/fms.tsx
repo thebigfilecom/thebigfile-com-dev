@@ -28,11 +28,11 @@ function FmsPage() {
       <Head>
         <meta
           property="og:image"
-          content={"https://thebigfile.com/img/shareImages/share-nns.jpg"}
+          content={"https://thebigfile.com/img/shareImages/share-fms.jpg"}
         />
         <meta
           name="twitter:image"
-          content={"https://thebigfile.com/img/shareImages/share-nns.jpg"}
+          content={"https://thebigfile.com/img/shareImages/share-fms.jpg"}
         />
       </Head>
       <main className="text-black relative overflow-hidden">
