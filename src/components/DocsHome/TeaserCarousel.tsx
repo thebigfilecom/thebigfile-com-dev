@@ -74,10 +74,10 @@ const CARDS: Array<CarouselCard> = [
   },
   {
     title: (
-      <h2 className={"text-white"}>Developer SNS - NNS</h2>
+      <h2 className={"text-white"}>Developer SPS - NNS</h2>
     ),
     subtitle: (
-      <p className={"text-white"}>SNS - NNS Developer</p>
+      <p className={"text-white"}>SPS - NNS Developer</p>
     ),
     backgroundImage: "/img/docs/teaser-cards/bg-3.svg",
     cta: (

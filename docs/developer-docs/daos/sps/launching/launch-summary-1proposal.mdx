@@ -1,0 +1,495 @@
+---
+keywords: [advanced, governance, concept, sns, launch stages, launch]
+---
+
+import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
+
+# Stages of an SPS launch
+
+<MarkdownChipRow labels={["Advanced", "Governance", "Tutorial"]} />
+
+## Overview
+During an SPS launch, a dapp is handed over to the NNS and the NNS both
+creates the SPS canisters and starts a decentralization swap to decentralize the SPS and
+thereby the dapp.
+
+## SPS launch Stages
+Handing over a dapp's control to a newly created SPS proceeds in the following high
+level stages.
+Note that only the first two stages require manual action from the dapp's developer
+team and the NNS community. All other stages are executed fully automatically.
+The NNS community's approval is relevant in Stage 3.
+
+### 1. Dapp developers choose the initial parameters of the SPS for a dapp.
+  These parameters define all the initial parameters of the SPS, including
+  * The token name, token symbol, ledger transaction fee.
+  * The tokenomics and how governance will work.
+  * The initial token distribution.
+  * The conditions for the decentralization swap, including the swap's start date and
+    how many BIG tokens should at least and at most be collected.
+
+  Therefore defining these parameters usually requires a lot of preparation and
+  community engagement already (see [here](../tokenomics/sps-checklist.mdx) for
+  more information).
+
+:::info
+These parameters also define the initial neurons with which the SPS governance canister will be installed.
+Before being fully launched, the SPS governance canister is in a pre-decentralization-swap mode and only few proposals are allowed (see Step 7).
+However, some SPS proposals might already be used during this time, for example upgrades to the dapp canister(s) while the launch is ongoing or
+registering custom proposals for that DAO.
+Note that such operations require submitting and adopting an SPS proposal during the launch process, and thus before the SPS is fully launched.
+Some frontends, for example the NNS frontend dapp, do not show neurons of SNSs that are not fully launched and thus neurons controlled by NNS
+frontend dapp principals will only be visible after a successful launch.
+Therefore, the initial neurons must be carefully setup in a way so that enough of them can be operated already during the launch process.
+:::
+
+  What you have at this stage:
+
+#### Table 1: Canisters
+
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td>dapp developer principal</td>
+    <td>operational</td>
+  </tr>
+</table>
+
+
+### 2. Dapp developers add NNS root as co-controller of dapp.
+Shortly before Step 3, the dapp developers hand over the dapp to the NNS by adding the NNS root canister as an additional controller for the dapp canister(s).
+This is necessary in order for the rest of the steps to work automatically.
+As any eligible NNS neuron can submit the proposal in Stage 3, this is an important step
+where the dapp developers explicitly express their intent to hand over their dapp to a DAO.
+
+In this step, the dapp developers also perform any other preparations for decentralization.
+For example, they remove themselves from the dapp's asset canisters as principals that may change the asset canisters' content without going through a vote.
+
+If successful, at the end of stage, the following has changed:
+
+#### Table 1: Canisters
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td class="light-orange-text">dapp developer principal, NNS root</td>
+    <td>operational</td>
+  </tr>
+</table>
+
+### 3. Submit NNS proposal to create SPS.
+
+This proposal presents all the initial parameters for the SPS as defined in the first Stage to the NNS community.
+It also defines which dapp canister(s) should be handed over to the SPS.
+
+:::info
+Note that there can only be one such proposal at a time in the NNS. This means that the time when this proposal can be submitted might depend on other SPS' launch.
+:::
+
+If successful, at the end of this stage, the following has changed:
+
+#### Table 1: Canisters
+
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td>dapp developer principal, NNS root</td>
+    <td>operational</td>
+  </tr>
+</table>
+
+#### Table 2: NNS Proposals
+ <table>
+  <tr>
+    <th>NNS Proposal</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td class="light-green-text">SPS creation proposal</td>
+    <td class="light-green-text">Open</td>
+  </tr>
+</table>
+
+
+### 4. The NNS proposal is decided.
+If the NNS proposal from Stage 3 is adopted,
+then the NNS automatically triggers the remaining stages and thus the creation of
+the SPS.
+
+If the proposal is rejected, then the dapp canister(s)' control is given back exclusively
+to the original dapp developers.
+
+For the proposal's execution to be successful, the following conditions must also be met:
+* NNS root has been added as a co-controller of the dapp to be decentralized (Stage 2
+was executed successfully)
+* The SPS-W canister has sufficient cycles.
+
+If these conditions are not met, the proposal will fail immediately and the control is
+given back exclusively to the original dapp developers.
+
+If successful, at the end of this stage the proposal is adopted and the conditions are met.
+This means that you are in the following situation:
+
+#### Table 2: NNS Proposals
+ <table>
+  <tr>
+    <th>NNS Proposal</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>SPS creation proposal</td>
+    <td class="light-orange-text">Adopted</td>
+  </tr>
+</table>
+
+
+### 5. (Automatically) SPS-W deploys SPS canisters.
+As a first step of the automatically triggered
+SPS creation, [SPS-W](../overview.mdx)
+creates SPS canisters on the SPS subnet.
+At this stage the SPS canisters are not yet initialized with any meaningful values.
+
+This results in the following situation:
+
+#### Table 1: Canisters
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td>dapp developer principal, NNS root</td>
+    <td>operational</td>
+  </tr>
+  <tr>
+    <td class="light-green-text">SPS swap</td>
+    <td class="light-green-text">SPS subnet</td>
+    <td class="light-green-text">NNS root</td>
+    <td class="light-green-text">not initialized</td>
+  </tr>
+ <tr>
+    <td class="light-green-text">SPS governance</td>
+    <td class="light-green-text">SPS subnet</td>
+    <td class="light-green-text">SPS root</td>
+    <td class="light-green-text">not initialized</td>
+  </tr>
+ <tr>
+    <td class="light-green-text">SPS ledger</td>
+    <td class="light-green-text">SPS subnet</td>
+    <td class="light-green-text">SPS root</td>
+    <td class="light-green-text">not initialized</td>
+  </tr>
+ <tr>
+    <td class="light-green-text">SPS root</td>
+    <td class="light-green-text">SPS subnet</td>
+    <td class="light-green-text">SPS governance</td>
+    <td class="light-green-text">not initialized</td>
+  </tr>
+</table>
+
+
+### 6. (Automatically) SPS-W sets SPS root as sole controller of dapp.
+Once the SPS canisters are deployed, [SPS-W](../overview.mdx)
+sets the SPS root as the sole controller of the dapp canister(s).
+
+For technical reasons, the NNS root canister was added as the co-controller of the dapp
+in Stage 2.
+Therefore, the SPS-W orchestrates the necessary updates involving NNS root for
+making the appropriate changes.
+
+In detail, this includes two steps:
+* First, SPS-W removes the original dapp developers from controlling the
+  dapp canister(s).
+  Next, SPS-W adds the newly created SPS root canister as the dapp canister(s)
+  controller.
+  This is done via a call to NNS root who is the co-controller of the dapp
+  canister(s) and thus has the necessary permissions.
+* If this transition worked successfully, SPS-W asks the NNS root canister to
+  remove itself as controller.
+
+A successful stage results in the following situation:
+
+#### Table 1: Canisters
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td class="light-orange-text">SPS root</td>
+    <td>operational</td>
+  </tr>
+  <tr>
+    <td>SPS swap</td>
+    <td>SPS subnet</td>
+    <td>NNS root</td>
+    <td>not initialized</td>
+  </tr>
+ <tr>
+    <td>SPS governance</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td>not initialized</td>
+  </tr>
+ <tr>
+    <td>SPS ledger</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td>not initialized</td>
+  </tr>
+ <tr>
+    <td>SPS root</td>
+    <td>SPS subnet</td>
+    <td>SPS governance</td>
+    <td>not initialized</td>
+  </tr>
+</table>
+
+### 7. (Automatically) SPS-W initializes SPS canisters according to settings from Step 1.
+Next, SPS-W initializes the SPS canisters with the appropriate initial payloads as proposed
+in Stage 3 and approved by the NNS community in Stage 4.
+
+**The SPS canisters are initialized in pre-decentralization-swap mode.**
+
+After the SPS canister creation, the canisters exist but are not yet fully functional
+- the SPS is in **pre-decentralization-swap mode**.
+
+At this point, the SPS ledger has two accounts:
+
+* The **treasury** that is owned by the SPS governance canister and which can be used in the future according
+  to the SPS community's wishes.
+* Some pre-allocated tokens to be used in the decentralization swap.
+
+To ensure that no one can transfer tokens and distribute them, or start token markets
+prematurely, all remaining initial tokens are locked in neurons.
+Moreover, in pre-decentralization-swap mode, the initial neurons cannot modify the
+SPS or transfer the treasury tokens.
+
+If successful, at the end of stage, the following has changed:
+#### Table 1: Canisters
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td>SPS root</td>
+    <td>operational</td>
+  </tr>
+ <tr>
+    <td>SPS swap</td>
+    <td>SPS subnet</td>
+    <td>NNS root</td>
+    <td class="light-orange-text">Waiting to be started</td>
+  </tr>
+ <tr>
+    <td>SPS governance</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td class="light-orange-text">pre-decentralization swap mode</td>
+  </tr>
+ <tr>
+    <td>SPS ledger</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td class="light-orange-text">pre-decentralization swap mode</td>
+  </tr>
+ <tr>
+    <td>SPS root</td>
+    <td>SPS subnet</td>
+    <td>SPS governance</td>
+    <td class="light-orange-text">pre-decentralization swap mode</td>
+  </tr>
+</table>
+
+At this point, the SPS canisters exist and the dapp canisters are under SPS DAO control. The initial SPS neurons can use SPS proposals to take the last steps to decentralize the dapp canisters, for example by giving certain permissions to the SPS governance canister stating that these functions can only be triggered by SPS DAO proposal. One example of this is the asset canister (see details [here](../managing/sps-asset-canister.mdx)).
+
+### 8. (Automatically) SPS swap starts.
+The swap was initialized with a defined start time.
+Once this start time is reached,
+the swap will automatically be started and is open for participation.
+
+End users can participate in the decentralization swap by transferring BIG tokens to the
+swap canister.
+
+This means, you will have the following situation:
+#### Table 1: Canisters
+
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td>SPS root</td>
+    <td>operational</td>
+  </tr>
+ <tr>
+    <td>SPS swap</td>
+    <td>SPS subnet</td>
+    <td>NNS root</td>
+    <td class="light-orange-text">Open</td>
+  </tr>
+ <tr>
+    <td>SPS governance</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td>pre-decentralization swap mode</td>
+  </tr>
+ <tr>
+    <td>SPS ledger</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td>pre-decentralization swap mode</td>
+  </tr>
+ <tr>
+    <td>SPS root</td>
+    <td>SPS subnet</td>
+    <td>SPS governance</td>
+    <td>pre-decentralization swap mode</td>
+  </tr>
+</table>
+
+### 9. (Automatically) SPS swap ends.
+The swap was also initialized with a defined end time.
+When this time is reached, the swap automatically ends.
+The swap can also end earlier if the maximum BIG participation is reached before the end
+time.
+
+This means, you will have the following situation:
+#### Table 1: Canisters
+
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td>SPS root</td>
+    <td>operational</td>
+  </tr>
+ <tr>
+    <td>SPS swap</td>
+    <td>SPS subnet</td>
+    <td>NNS root</td>
+    <td class="light-orange-text">Ended</td>
+  </tr>
+ <tr>
+    <td>SPS governance</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td>pre-decentralization swap mode</td>
+  </tr>
+ <tr>
+    <td>SPS ledger</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td>pre-decentralization swap mode</td>
+  </tr>
+ <tr>
+    <td>SPS root</td>
+    <td>SPS subnet</td>
+    <td>SPS governance</td>
+    <td>pre-decentralization swap mode</td>
+  </tr>
+</table>
+
+
+### 10. (Automatically) SPS swap finalizes.
+When the decentralization swap ends, it is first established whether
+it was successful, e.g., enough BIG have been collected.
+If the swap was successful,
+the exchange rate is determined and all SPS tokens are given to the swap participants in
+neurons.
+
+Once all neurons are created, the SPS should be under decentralized control
+and the pre-decentralization-swap mode is reverted.
+Thus, the governance canister is set to be fully functional.
+
+If the swap is not successful, the decentralization attempt failed and everything
+is reverted to the state before the SPS launch attempt, including that the dapp’s control
+is handed back to the original developers of the dapp, and the
+collected BIG are refunded to the swap participants.
+
+If successful, at the end of stage, you have:
+
+#### Table 1: Canisters
+
+<table>
+  <tr>
+    <th>Canisters</th>
+    <th>Subnet</th>
+    <th>Controlled by</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td>dapp canister(s)</td>
+    <td>application subnet</td>
+    <td>SPS root</td>
+    <td>operational</td>
+  </tr>
+ <tr>
+    <td>SPS swap</td>
+    <td>SPS subnet</td>
+    <td>NNS root</td>
+    <td class="light-orange-text">Finalized</td>
+  </tr>
+ <tr>
+    <td>SPS governance</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td class="light-orange-text">normal mode</td>
+  </tr>
+ <tr>
+    <td>SPS ledger</td>
+    <td>SPS subnet</td>
+    <td>SPS root</td>
+    <td class="light-orange-text">normal mode</td>
+  </tr>
+ <tr>
+    <td>SPS root</td>
+    <td>SPS subnet</td>
+    <td>SPS governance</td>
+    <td class="light-orange-text">normal mode</td>
+  </tr>
+</table>

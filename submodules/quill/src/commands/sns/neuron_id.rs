@@ -8,16 +8,16 @@ use ic_sns_governance::pb::v1::NeuronId;
 
 #[derive(Parser)]
 pub struct NeuronIdOpts {
-    /// Principal used when calculating the SNS Neuron Id.
+    /// Principal used when calculating the SPS Neuron Id.
     #[clap(long, required_unless_present = "auth")]
     principal_id: Option<Principal>,
 
-    /// Memo used when calculating the SNS Neuron Id.
+    /// Memo used when calculating the SPS Neuron Id.
     #[clap(long)]
     memo: u64,
 }
 
-/// Prints the SNS Neuron Id.
+/// Prints the SPS Neuron Id.
 pub fn exec(auth: &AuthInfo, opts: NeuronIdOpts) -> AnyhowResult {
     let principal_id = if let Some(principal_id) = opts.principal_id {
         principal_id
@@ -30,7 +30,7 @@ pub fn exec(auth: &AuthInfo, opts: NeuronIdOpts) -> AnyhowResult {
         opts.memo,
     ));
 
-    println!("SNS Neuron Id: {neuron_id}");
+    println!("SPS Neuron Id: {neuron_id}");
 
     Ok(())
 }

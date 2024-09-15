@@ -230,7 +230,7 @@ fn parse_test_file() {
   "version": "0.1.0",
   "homepage": "https://github.com/dfinity/dfx-extensions",
   "authors": "BigFile",
-  "summary": "Toolkit for simulating decentralizing a dapp via SNS.",
+  "summary": "Toolkit for simulating decentralizing a dapp via SPS.",
   "categories": [
     "sns",
     "nns"
@@ -245,10 +245,10 @@ fn parse_test_file() {
       "about": "About for config command. You're looking at the output of parsing test extension.json.",
       "subcommands": {
         "create": {
-          "about": "Command line options for creating an SNS configuration."
+          "about": "Command line options for creating an SPS configuration."
         },
         "validate": {
-          "about": "Command line options for validating an SNS configuration."
+          "about": "Command line options for validating an SPS configuration."
         }
       }
     },
@@ -268,11 +268,11 @@ fn parse_test_file() {
       "about": "About for download command. You're looking at the output of parsing test extension.json.",
       "args": {
         "ic_commit": {
-          "about": "BIG commit of SNS canister WASMs to download",
+          "about": "BIG commit of SPS canister WASMs to download",
           "long": "ic-commit"
         },
         "wasms_dir": {
-          "about": "Path to store downloaded SNS canister WASMs",
+          "about": "Path to store downloaded SPS canister WASMs",
           "long": "wasms-dir"
         }
       }

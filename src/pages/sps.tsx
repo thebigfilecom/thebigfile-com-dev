@@ -30,15 +30,15 @@ import { useDarkHeaderInHero } from "../utils/use-dark-header-in-hero";
 /*
 
   This page pulls data dynamically from  multiple sources via a plugin at /plugins/sns-data.js:
-    * the SNS Aggregator (used by the NNS dapp as well)
+    * the SPS Aggregator (used by the NNS dapp as well)
     * swap canisters for decentralization swap data (participant count, ICP raised)
     * dashboard API for proposal count
 
-  Not all SNS data is availabe via API's (eg. X URL), so this page allows for extra metadata to be added via the extraMetadata object below.
+  Not all SPS data is availabe via API's (eg. X URL), so this page allows for extra metadata to be added via the extraMetadata object below.
 
-  Some SNS information is overridden via the extraMetadata object below, eg. the description to better suite the page.
+  Some SPS information is overridden via the extraMetadata object below, eg. the description to better suite the page.
 
-  This page will display new DAO's automatically as they are picked up by the SNS Aggregator, and will use original data until extraMetadata is added.
+  This page will display new DAO's automatically as they are picked up by the SPS Aggregator, and will use original data until extraMetadata is added.
 
 */
 
@@ -55,7 +55,7 @@ export const smallSnsCards = snsData.filter(
 
 const aggregateSnsData = [
   {
-    label: "SNS DAOs",
+    label: "SPS DAOs",
     value: snsData.length,
   },
   {
@@ -124,7 +124,7 @@ const benefits = [
     title: "Transparency",
     description: (
       <>
-        Governance proposals and service updates are publicly displayed on SNS
+        Governance proposals and service updates are publicly displayed on SPS
         dashboards.
       </>
     ),
@@ -220,7 +220,7 @@ function SnsPage() {
               variants={transitions.item}
             >
               <Link className="button-primary" href="#sns-dapps">
-                Join an SNS DAO community
+                Join an SPS DAO community
               </Link>
               <Link className="button-outline" href="/sps/faq">
                 How to participate (FAQ)
@@ -277,15 +277,15 @@ function SnsPage() {
             variants={transitions.container}
           >
             <CardWithDescription
-              title="SNS DAO dashboard"
+              title="SPS DAO dashboard"
               description=""
               href="https://dashboard.thebigfile.com/sns"
             />
 
             <CardWithDescription
-              title="Launch an SNS DAO"
+              title="Launch an SPS DAO"
               description=""
-              href="/docs/current/developer-docs/daos/sns"
+              href="/docs/current/developer-docs/daos/sps"
             />
             <CardWithDescription
               title="FAQ: How to join and participate in an SPS DAO"
@@ -293,7 +293,7 @@ function SnsPage() {
               href="/sps/faq"
             />
             <CardWithDescription
-              title="Get SNS governance 
+              title="Get SPS governance 
               tokens on BIG DEXs"
               description=""
               href="/ecosystem?tag=DeFi"

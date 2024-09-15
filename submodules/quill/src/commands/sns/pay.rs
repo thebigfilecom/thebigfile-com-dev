@@ -41,7 +41,7 @@ pub struct PayOpts {
     #[clap(long)]
     notify_only: bool,
 
-    /// If a particular SNS requires confirmation text to participate in a sale, enter it using this flag.
+    /// If a particular SPS requires confirmation text to participate in a sale, enter it using this flag.
     #[clap(long)]
     confirmation_text: Option<String>,
 }

@@ -77,7 +77,7 @@ export const extraMetadata: Record<string, Partial<DaoCardProps>> = {
     twitter: "https://twitter.com/ICPCoins",
     description: (
       <>
-        Neutrinite SNS DAO for ICPCoins. This platform is dedicated to securely
+        Neutrinite SPS DAO for ICPCoins. This platform is dedicated to securely
         sourcing data from DEXes, DAOs, and other DeFi applications.
       </>
     ),

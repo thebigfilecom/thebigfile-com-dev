@@ -29,12 +29,12 @@ pub struct MakeProposalOpts {
     /// For example:
     /// '(
     ///     record {
-    ///         title="SNS Launch";
+    ///         title="SPS Launch";
     ///         url="https://dfinity.org";
-    ///         summary="A motion to start the SNS";
+    ///         summary="A motion to start the SPS";
     ///         action=opt variant {
     ///             Motion=record {
-    ///                 motion_text="I hereby raise the motion that the use of the SNS shall commence";
+    ///                 motion_text="I hereby raise the motion that the use of the SPS shall commence";
     ///             }
     ///         };
     ///     }

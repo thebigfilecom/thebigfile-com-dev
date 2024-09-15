@@ -77,7 +77,7 @@ teardown() {
   assert_command dfx extension install sns --version 0.3.1
   assert_command dfx completion fish
   assert_contains "Install an NNS on the local dfx server"
-  assert_contains "Subcommand for preparing dapp canister(s) for 1-proposal SNS creation"
+  assert_contains "Subcommand for preparing dapp canister(s) for 1-proposal SPS creation"
 }
 
 @test "generate powershell completion script" {

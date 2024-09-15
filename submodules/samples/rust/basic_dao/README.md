@@ -263,5 +263,5 @@ Output:
 If you base your application on this example, we recommend you familiarize yourself with and adhere to the [security best practices](https://thebigfile.com/docs/current/references/security/) for developing on the BigFile. This example may not implement all the best practices.
 
 For example, the following aspects are particularly relevant for this app:
-* [Use a decentralized governance system like SNS to make a canister have a decentralized controller](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#use-a-decentralized-governance-system-like-sns-to-make-a-canister-have-a-decentralized-controller), since this is a DAO's use case.
+* [Use a decentralized governance system like SPS to make a canister have a decentralized controller](https://thebigfile.com/docs/current/references/security/rust-canister-development-security-best-practices#use-a-decentralized-governance-system-like-sns-to-make-a-canister-have-a-decentralized-controller), since this is a DAO's use case.
 * [Certify query responses if they are relevant for security](https://thebigfile.com/docs/current/references/security/general-security-best-practices#certify-query-responses-if-they-are-relevant-for-security), since e.g. account_balance and list_accounts are query calls that a client may want to issue as update call.

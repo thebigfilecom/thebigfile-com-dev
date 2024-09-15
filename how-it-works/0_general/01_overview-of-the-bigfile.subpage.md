@@ -70,7 +70,7 @@ The BIG is governed by a *tokenized DAO*, the so-called *File Management System 
 
 ### Dapp governance
 
-dapps on the BIG can be governed by an out-of-the-box deployable governance system, the *Service Nervous System (SNS)*, which is similar to the platform's NNS, but tailored to govern dapps. Everyone controlling a dapp can hand over control over their dapp to a tokenized DAO by parameterizing and deploying an instance of the SNS. The SNS implements tokenized governance at the dapp level and can be used without the dapp engineers implementing a governance system themselves, which is revolutionary. Handing over control of a dapp to an instance of the SNS usually includes running a decentralization swap as an early step where funds can be raised through the swap of the dapp's governance tokens.
+dapps on the BIG can be governed by an out-of-the-box deployable governance system, the *Service Nervous System (SPS)*, which is similar to the platform's NNS, but tailored to govern dapps. Everyone controlling a dapp can hand over control over their dapp to a tokenized DAO by parameterizing and deploying an instance of the SPS. The SPS implements tokenized governance at the dapp level and can be used without the dapp engineers implementing a governance system themselves, which is revolutionary. Handing over control of a dapp to an instance of the SPS usually includes running a decentralization swap as an early step where funds can be raised through the swap of the dapp's governance tokens.
 
 ## Go even deeper
 

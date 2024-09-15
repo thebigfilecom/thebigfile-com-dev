@@ -16,15 +16,15 @@ use crate::{
 
 use super::{governance_account, ParsedSnsNeuron, SnsCanisterIds};
 
-/// Converts a fully-dissolved neuron into SNS utility tokens.
+/// Converts a fully-dissolved neuron into SPS utility tokens.
 #[derive(Parser)]
 pub struct DisburseOpts {
     /// The neuron to disburse.
     neuron_id: ParsedSnsNeuron,
-    /// The account to transfer the SNS utility tokens to. If unset, defaults to the caller.
+    /// The account to transfer the SPS utility tokens to. If unset, defaults to the caller.
     #[clap(long, required_unless_present = "auth")]
     to: Option<ParsedAccount>,
-    /// The subaccount to transfer the SNS utility tokens to.
+    /// The subaccount to transfer the SPS utility tokens to.
     #[clap(long)]
     subaccount: Option<ParsedSubaccount>,
     /// The number of tokens, in decimal form, to disburse. If unset, fully consumes the neuron.

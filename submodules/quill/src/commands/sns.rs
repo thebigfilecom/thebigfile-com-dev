@@ -51,7 +51,7 @@ mod transfer;
 /// }
 #[derive(Parser)]
 pub struct SnsOpts {
-    /// Path to a SNS canister JSON file (see `quill sns help`)
+    /// Path to a SPS canister JSON file (see `quill sns help`)
     #[clap(long, global = true, help_heading = "COMMON")]
     canister_ids_file: Option<PathBuf>,
     #[clap(subcommand)]
@@ -93,7 +93,7 @@ pub fn dispatch(auth: &AuthInfo, opts: SnsOpts, qr: bool, fetch_root_key: bool) 
         ), "Cannot use --ledger with this command. This version of Quill only supports transfers and certain neuron management operations with a Ledger device");
     }
     let canister_ids = opts.canister_ids_file
-        .context("Cannot sign message without knowing the SNS canister ids, did you forget `--canister-ids-file <json-file>`?")
+        .context("Cannot sign message without knowing the SPS canister ids, did you forget `--canister-ids-file <json-file>`?")
         .and_then(|file| Ok(serde_json::from_slice::<SnsCanisterIds>(&fs::read(file)?)?));
     match opts.subcommand {
         SnsCommand::Balance(opts) => {

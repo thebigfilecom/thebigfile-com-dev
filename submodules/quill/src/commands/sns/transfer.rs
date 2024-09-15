@@ -35,7 +35,7 @@ pub struct TransferOpts {
     pub memo: Option<u64>,
 
     /// The amount that the caller pays for the transaction, default is 0.0001 tokens. Specify this amount
-    /// when using an SNS that sets its own transaction fee
+    /// when using an SPS that sets its own transaction fee
     #[clap(long, value_parser = parse_tokens)]
     pub fee: Option<Tokens>,
 }

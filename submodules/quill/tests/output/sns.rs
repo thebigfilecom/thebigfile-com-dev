@@ -99,11 +99,11 @@ fn sns() {
 fn make_proposal() {
     let proposal = r#"
     ( record { 
-        title = "SNS Launch";
+        title = "SPS Launch";
         url = "https://dfinity.org";
-        summary = "A motion to start the SNS";
+        summary = "A motion to start the SPS";
         action = opt variant { Motion = record { 
-            motion_text = "I hereby raise the motion that the use of the SNS shall commence"; 
+            motion_text = "I hereby raise the motion that the use of the SPS shall commence"; 
         } };
     } )"#;
     quill_sns_send(&format!(
@@ -112,7 +112,7 @@ fn make_proposal() {
     .diff("sns/make_proposal/simple.txt");
     let proposal_with_blob = r#"
     ( record {
-        title = "Transfer ICP from SNS treasury.";
+        title = "Transfer ICP from SPS treasury.";
         url = "example.com";
         summary = "";
         action = opt variant { TransferSnsTreasuryFunds = record {
@@ -152,7 +152,7 @@ fn make_proposal() {
 fn neuron_id() {
     quill_authed("sns neuron-id --memo 0").diff("sns/neuron_id/memo0.txt");
     quill("sns neuron-id --memo 0 --principal-id 44mwt-bq3um-tqicz-bwhad-iipx4-6wzex-olvaj-z63bj-wkelv-xoua3-rqe")
-        .diff_s(b"SNS Neuron Id: 785d80b7abaf0d01fdadcef37ecd93cef68db3be7b2d66687bd1d64954c56c55");
+        .diff_s(b"SPS Neuron Id: 785d80b7abaf0d01fdadcef37ecd93cef68db3be7b2d66687bd1d64954c56c55");
 }
 
 #[test]

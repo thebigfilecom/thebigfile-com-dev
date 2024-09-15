@@ -19,7 +19,7 @@ Sending message with
             canister_upgrade_arg = null;
           }
         };
-        summary = "--This proposal upgrades the SNS-controlled canister.";
+        summary = "--This proposal upgrades the SPS-controlled canister.";
       }
     };
   },

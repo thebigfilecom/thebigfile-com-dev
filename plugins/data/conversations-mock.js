@@ -480,7 +480,7 @@ module.exports = [
       "https://www.youtube.com/watch?v=XvE0ZsAYKiM&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng&index=3&t=1s",
   },
   {
-    title: "Open governance canister for SNS",
+    title: "Open governance canister for SPS",
     speaker: "Lara Schmid",
     speakerTitle: "Researcher NNS",
     description:
@@ -551,7 +551,7 @@ module.exports = [
       "https://www.youtube.com/watch?v=n_LFCc0ws6o&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng",
   },
   {
-    title: "SNS deployment and upgrade",
+    title: "SPS deployment and upgrade",
     speaker: "Lara Schmid, Nicolas Zoghb",
     speakerTitle: "Researcher & Software Engineer",
     description:
@@ -649,11 +649,11 @@ module.exports = [
   },
   {
     title:
-      "Community Conversation - Design proposal for a simple SNS reward scheme",
+      "Community Conversation - Design proposal for a simple SPS reward scheme",
     speaker: "Lara Schmid & Björn Assmann ",
     speakerTitle: "Senior Researchers",
     description:
-      '<p>We would like to discuss a design proposal for a simple SNS reward scheme.\nService nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps on the BigFile. In this talk, we would like to discuss the design proposal for a first, simple SNS reward scheme.\nLink to discussion on forum: <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224/36">https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224/36</a></p>\n',
+      '<p>We would like to discuss a design proposal for a simple SPS reward scheme.\nService nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps on the BigFile. In this talk, we would like to discuss the design proposal for a first, simple SPS reward scheme.\nLink to discussion on forum: <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224/36">https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224/36</a></p>\n',
     startTimeUtc: 1652284800000,
     startTimePt: 1652252400000,
     startTimeEu: 1652284800000,
@@ -676,10 +676,10 @@ module.exports = [
       "https://www.youtube.com/watch?v=stHaou90XiM&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng&index=2",
   },
   {
-    title: "Community Conversation - SNS initial token swap",
+    title: "Community Conversation - SPS initial token swap",
     speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SNS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SNS.\nIn this talk we presents a design for a SNS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SNS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: 1654794000000,
     startTimePt: 1654761600000,
     startTimeEu: 1654794000000,
@@ -713,10 +713,10 @@ module.exports = [
   },
 
   {
-    title: "Community Conversation - SNS initial token swap",
+    title: "Community Conversation - SPS initial token swap",
     speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SNS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SNS.\nIn this talk we presents a design for a SNS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SNS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: new Date("2022-08-10T16:00Z").getTime(),
     startTimePt: new Date("2022-08-10T16:00Z").getTime(),
     startTimeEu: new Date("2022-08-10T16:00Z").getTime(),
@@ -724,10 +724,10 @@ module.exports = [
       "https://dfinity.zoom.us/webinar/register/WN_3qRfNIT7R42Gy7M1OEu28Q",
   },
   {
-    title: "Community Conversation - SNS initial token swap 2",
+    title: "Community Conversation - SPS initial token swap 2",
     // speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SNS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SNS.\nIn this talk we presents a design for a SNS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SNS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: new Date("2022-08-11T16:00Z").getTime(),
     startTimePt: new Date("2022-08-11T16:00Z").getTime(),
     startTimeEu: new Date("2022-08-11T16:00Z").getTime(),

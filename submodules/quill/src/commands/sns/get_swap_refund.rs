@@ -12,7 +12,7 @@ use crate::{
 
 use super::SnsCanisterIds;
 
-/// Signs a message to request a refund from the SNS swap canister.
+/// Signs a message to request a refund from the SPS swap canister.
 /// If the swap was aborted or failed, or some of your contributed ICP never made it into a neuron,
 /// this command can retrieve your unused ICP, minus transaction fees.
 #[derive(Parser)]
