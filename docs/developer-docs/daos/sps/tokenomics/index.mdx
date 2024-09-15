@@ -1,0 +1,41 @@
+---
+keywords: [advanced, governance, concept, sns, preparing for launch]
+---
+
+import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
+
+# Preparing an SPS launch
+
+<MarkdownChipRow labels={["Advanced", "Governance", "Concept"]} />
+
+## Overview
+Launching an SPS entails many non-technical and technical preparations steps.
+
+[The SPS launch checklist](sps-checklist.mdx) summarizes some of the most important preparation
+steps to be considered before handing over a dapp to an SPS.
+
+The subsequent pages provide more details on some of these preparations:
+* Before diving into the technical details, you may want to spend some time defining
+non-technical goals of the SPS and the dapp that will be controlled by it.
+To provide some tips on what considerations you should not forget, a few are listed on
+[this page](predeployment-considerations.mdx).
+
+* The SPS parameters allow each SPS to define unique settings for tokenomics and how the
+governance should work in detail.
+To choose initial parameters, it is advisable to understand how the
+[SPS tokenomics](tokenomics-intro.mdx) and the [SPS rewards](rewards.mdx) work.
+These pages also include a link to additional [tools](https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration)
+that allow you to try out different configurations and assess them.
+
+* In the end, the chosen configurations need to be translated to the parameters and
+[given as input to the SPS launch process](preparation.mdx).
+
+
+In addition, during the preparation phase you might want to prepare the [integration of the SPS
+with your dapp](../launching/integrating.mdx).
+Moreover, you should [test](../testing/testing-before-launch.mdx) your settings and confirm
+that the launched SPS will work successfully with your dapp.
+Integration and testing are topics that are not only relevant during the SPS launch but also
+later in the SPS lifecycle.
+Therefore, these two topics are discussed in separate sections below
+(see [SPS integration](../launching/integrating.mdx) and [SPS testing](../testing/testing-before-launch.mdx)).

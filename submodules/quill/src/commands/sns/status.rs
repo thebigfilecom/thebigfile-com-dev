@@ -9,7 +9,7 @@ use crate::{
 
 use super::SnsCanisterIds;
 
-/// Fetches the status of the canisters in the SNS. This includes their controller, running status, canister settings,
+/// Fetches the status of the canisters in the SPS. This includes their controller, running status, canister settings,
 /// cycle balance, memory size, daily cycle burn rate, and module hash, along with their principals.
 #[derive(Parser)]
 pub struct StatusOpts {

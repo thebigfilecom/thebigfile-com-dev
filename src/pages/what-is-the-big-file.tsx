@@ -323,7 +323,7 @@ function WhatIsBigPage() {
                 Decentralized Services and Voting System
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              Decentralized Services and Voting Systems are services that operate autonomously under the exclusive control of a decentralized governance system called a Service Nervous System (SNS), an evolution of DAO technology. This enables a Web3 service to be transparently managed by a community of thousands, allowing services to "founderize" users by granting them governance tokens, for example, for creating viral content, thereby inverting the traditional Big Tech model. Enterprises can leverage the same technology to distribute control over system updates and configurations, significantly enhancing security.
+              Decentralized Services and Voting Systems are services that operate autonomously under the exclusive control of a decentralized governance system called a Service Nervous System (SPS), an evolution of DAO technology. This enables a Web3 service to be transparently managed by a community of thousands, allowing services to "founderize" users by granting them governance tokens, for example, for creating viral content, thereby inverting the traditional Big Tech model. Enterprises can leverage the same technology to distribute control over system updates and configurations, significantly enhancing security.
               </p>
               <Link className="link-primary link-with-icon" href="/sps">
                 <LinkArrowRight /> User-run Web3

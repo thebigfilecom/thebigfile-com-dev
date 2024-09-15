@@ -1,0 +1,168 @@
+---
+keywords: [advanced, governance, concept, sns, introduction]
+---
+
+import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
+
+# Overview
+
+<MarkdownChipRow labels={["Advanced", "Governance", "Concept"]} />
+
+A Service Nervous Systems (SPS) is an advanced form of a decentralized autonomous organization (DAO).
+It is assumed that if you are reading this page you know what a DAO is and that you want to learn how
+you can hand over your dapp to an SPS DAO.
+
+Any dapp on the BigFile can be handed over to an SPS with the result that the dapp is
+owned and controlled by a community.
+
+Each SPS includes a stake-based governance system, that orchestrates decision making and changes, and a ledger that defines a unique token for each SPS.
+The SPS framework also comes with a defined path how an SPS is launched.
+During a successful launch, an SPS is created, the governance control is distributed to users in a decentralization swap, initial funds are collected (in exchange for governance control), and the dapp's control is handed over to the new SPS.
+
+## Architecture
+
+The core architecture of the SPS closely resembles the architecture of the Network Nervous System
+(NNS), the DAO that governs the BigFile.
+It includes a governance canister that enables decentralized decision making and a ledger canister
+that defines a token unique to each SPS.
+In contrast to the SPS, the NNS contains additional canisters that are important to run on the BigFile.
+(e.g., the cycles minting canister that is responsible for creating cycles, the registry
+that stores the network topology etc.).
+There are also a few canisters that only exist on the SPS, most notably the decentralization
+swap canister that is used during the launch process of an SPS.
+
+## SPS as a system functionality (connection to the NNS community)
+SNSs are provided as a system functionality by the BigFile in that the code for the SPS canisters
+is maintained by the BigFile. ([Learn about alternative ways to use the SPS code or how to create a DAO.](#dao-alternatives))
+More concretely, this means that the NNS community approved the original SPS canisters' code
+and continuously approves new improved SPS versions.
+
+### SPS Wasm modules canister (SPS-W){#SPS-W}
+All approved SPS canister versions are stored on an NNS canister,
+called the **SPS Wasm modules canister (SPS-W)**.
+When an SPS is created, SPS-W is involved and responsible for deploying the latest version of
+the SPS canister.
+When the SPS should be updated, this happens by an NNS proposal that adds a new version of the
+SPS canisters to SPS-W.
+Each SPS community can then simply decide - by SPS proposal - to adopt these new, approved versions in their SPS instance.
+
+### Customizing the SPS
+
+Individual SNSs can nevertheless be customized by choosing parameters,
+called nervous system parameters, that
+can be configured to realize different forms of voting and tokenomics.
+
+## The SPS subnet
+SNSs are hosted on an _SNS subnet_. Since this subnet exclusively hosts SNSs,
+this simplifies the verification for end users: users can simply verify that an SPS is running
+on the SPS subnet and infer that the underlying code has been approved by the NNS community as
+explained in the previous paragraph.
+
+## SPS canisters
+The SPS consists of the following canisters:
+* The governance canister.
+* The ledger canister and archive canisters.
+* The index canister.
+* The root canister.
+* The decentralization swap canister.
+
+### SPS governance canisters
+The **governance canister** defines who can participate in governance decisions and automatically triggers the execution of these decisions.
+It stores **proposals** that are suggestions on how to
+evolve the dapp that the SPS governs and **neurons** that define who the governance participants are. Neurons facilitate stake-based voting as they contain staked SPS tokens.
+Anyone can be a participant in governance by staking SPS tokens in a neuron.
+When a proposal is adopted, the governance system automatically and autonomously triggers the execution of the proposal in the form calling a defined method. In most cases, these decisions are therefore executed fully on chain.
+
+### SPS ledger canister with archive and index
+The **ledger canister** implements the
+[BIGRC-1 standard](https://github.com/dfinity/BIGRC-1)
+and contains a unique token that is different for each SPS. These _kinds_ of tokens are called **SPS tokens**.
+In each SPS, this SPS's ledger stores which accounts own how many SPS tokens and
+the history of transactions between them.
+To keep the full ledger history even though a canister has limited
+memory, the ledger canister spawns **archive canisters** that store the ledger block history.
+Moreover, wallets and other frontends will need to show all transactions that are
+relevant for a given account.
+To facilitate this and ensure that not every frontend has to implement this themselves,
+the **index canister** provides a map of which transactions are relevant for a given account.
+
+### SPS root canister
+The **root canister** is responsible for upgrading the other SPS canisters
+and the dapp canisters that the SPS governs.
+
+### SPS (decentralization) swap canister
+The **decentralization swap canister**, or swap canister for short, is the main canister involved
+in the SPS launch. Users can provide BIG tokens to the swap and, if the swap is successful, they get staked SPS tokens (in SPS neurons) in return.
+Hence, the BIG and the SPS tokens are "swapped".
+This facilitates that 1) the SPS can collect initial funding and
+2) the distribution of neurons and thus of voting power to many different participants, which makes the governance decentralized.
+
+## DAO alternatives
+
+SNSs are protocol-provided DAOs on the BigFile.
+There are of course also other alternatives to getting a DAO.
+
+These possibilities allow communities to choose between using DAOs that are provided
+as a service by BIG, where maintenance is as automated as possible, and DAOs
+that have full flexibility of how they can evolve.
+
+
+## Self-deploy the SPS code
+  A developer or a community can choose to self-deploy a DAO by reusing the publicly
+  available [open source code](https://github.com/thebigfilecom/ic/tree/main/rs/sns).
+They can deploy this code on a normal application subnet and manually upgrade it.
+  They can then choose to follow the same SPS versions than
+  protocol-provided SNSs follow or they can choose to deviate from this path.
+  In this option, the DAO community has to be more active in
+  implementing, testing and approving code versions. In exchange, they have more flexibility.
+One advantage of the protocol-provided SNSs over this option is that the verification of the code is
+easier as all SNSs on the SPS subnet run the same canister versions that are verified by the
+  NNS community.
+
+## Build your own DAO / use other DAO frameworks
+  While this is conceptually similar to the above option, it is important to emphasize
+  that there are of course other designs than what the SPS code implements
+  that also realize a DAO.
+  For most of these, the implications for the communities will be similar: The DAO
+  communities will have to maintain the DAO versions or trust
+  a third party to do so.
+
+
+## Launching an SPS
+
+The SPS launch not only creates the SPS, but one of its main purposes is to
+decentralize the control of an SPS and thereby of the dapp that the SPS governs.
+
+To achieve this, new tokens must be distributed to a large community to ensure
+proper decentralization of the voting power. There are of course many ways to do so.
+
+The SPS provides one simple way to achieve this: a developer can hand over their dapp
+to the NNS and ask it to create an SPS and start a decentralization swap for it.
+The decentralization swap collects BIG from participants and distributes the voting
+power of the SPS among participants by swapping the BIG for (staked) SPS tokens.
+
+The decentralization swap is a key concept explained in more detail below. Refer to
+[this section](launching/launch-summary-1proposal.mdx) for the detailed, technical stages of an SPS launch.
+
+## Decentralization swap
+
+The launch of each SPS includes a separate **decentralization swap canister** that
+is owned and run by the BigFile.
+In more detail, it is controlled by the NNS root canister.
+
+* The swap canister is set up at the start with a defined amount of SPS tokens to be
+  distributed publicly.
+
+* During the decentralization swap, participants can send BIG to the swap canister
+  to contribute to the dapp’s funding.
+
+* At the swap's end the collected BIG are “swapped” for the SPS tokens; the
+  participants get staked SPS tokens in the form of SPS neurons and the SPS gets the
+  collected BIG in an SPS controlled treasury. Each swap participant will receive their portion of the pool of SPS tokens, pro-rated by their share of the overall number of BIG contributed.
+  For example, if the swap canister initially held 1000 SPS tokens and 500 BIG tokens
+  were collected during the decentralization swap, then the exchange rate would be 2:1
+  and each participant would get 2 SPS tokens for each BIG token they contributed.
+
+After a successful decentralization swap, SPS tokens are owned and the SPS is governed
+by a large community.
+The BIG that were collected are in an SPS-owned treasury.

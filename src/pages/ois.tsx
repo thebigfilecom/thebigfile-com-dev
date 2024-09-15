@@ -89,7 +89,7 @@ function OpenChatPage() {
                   experience, compute and data on-chain, and must be
                   transparently configured, updated and instructed by an
                   advanced DAO: a public governance framework called a "service
-                  nervous system" (SNS).
+                  nervous system" (SPS).
                   <span style={{ display: "block", height: "0.6em" }}></span>
                   There are no backdoors for devs, corporations or CEOs. The
                   community is secure and sovereign, and its members become
@@ -151,7 +151,7 @@ function OpenChatPage() {
           <VideoCard
             label="Fully On-chain with BigFile"
             title="Next Generation DAOs"
-            description="Episode #2 | SNS"
+            description="Episode #2 | SPS"
             image={`https://i.ytimg.com/vi/WxRgm6JAGpQ/maxresdefault.jpg`}
             link="https://youtu.be/nZBWx6y070Y"
           />
@@ -183,7 +183,7 @@ function OpenChatPage() {
               </p>
 
               <p>
-                OpenChat is fully controlled by its "SNS" DAO, which takes over
+                OpenChat is fully controlled by its "SPS" DAO, which takes over
                 the traditional role of a company. Now, there is no CEO, board
                 of directors or developers in control, just thousands of
                 community members, whose wishes are mediated through digital
@@ -192,7 +192,7 @@ function OpenChatPage() {
 
               <p>
                 <Link href="/sps" className="link-primary link-with-icon">
-                  Learn about SNS DAOs <LinkArrowRight />
+                  Learn about SPS DAOs <LinkArrowRight />
                 </Link>
               </p>
               <p>
@@ -228,7 +228,7 @@ function OpenChatPage() {
               <h3>Founderizing users</h3>
               <p>
                 During the creation of an open internet service, an initial
-                "decentralization swap" exchanges the new SNS DAO's governance
+                "decentralization swap" exchanges the new SPS DAO's governance
                 tokens for ICP, which is then held in its treasury under the
                 decentralized control of its governance community. But they
                 aren't the only ones who can hold governance tokens: Open
@@ -270,7 +270,7 @@ function OpenChatPage() {
             <h2 className="md:tw-heading-60 md:mb-6">Community funding</h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
               The "decentralization swap" process exchanges governance tokens
-              for ICP tokens, held in the SNS DAO by a community of governance
+              for ICP tokens, held in the SPS DAO by a community of governance
               token holders. These tokens can be used to create bounties,
               incentivizing contributions to the service's development. This
               allows fully decentralized internet services to be created from
@@ -279,10 +279,10 @@ function OpenChatPage() {
             </p>
             <p className="mb-0">
               <Link
-                href="/docs/current/developer-docs/daos/sns/"
+                href="/docs/current/developer-docs/daos/sps/"
                 className="link-primary link-with-icon"
               >
-                SNS Technical Documentation <LinkArrowRight />
+                SPS Technical Documentation <LinkArrowRight />
               </Link>
             </p>
           </TranslatedLayout>
@@ -304,7 +304,7 @@ function OpenChatPage() {
               className="tw-heading-4 md:tw-heading-60 mb-3 md:mb-8"
               variants={transitions.item}
             >
-              Have an SNS transform your Web3 app into a true dapp
+              Have an SPS transform your Web3 app into a true dapp
             </motion.h2>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-8"
@@ -318,7 +318,7 @@ function OpenChatPage() {
             <MotionLink
               variants={transitions.fadeIn}
               className="button-outline-white"
-              href="/docs/current/developer-docs/daos/sns/launching/launch-steps-1proposal"
+              href="/docs/current/developer-docs/daos/sps/launching/launch-steps-1proposal"
             >
               Launch an SPS DAO
             </MotionLink>

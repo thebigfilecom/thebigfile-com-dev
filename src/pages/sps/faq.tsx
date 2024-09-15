@@ -15,7 +15,7 @@ import React from "react";
 function SnsFaqPage() {
   return (
     <Layout
-      title="SNS DAO FAQ"
+      title="SPS DAO FAQ"
       description="All you need to know about DAOs on the BigFile and how to participate in them."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
@@ -34,15 +34,15 @@ function SnsFaqPage() {
                 text: "SPS",
               },
               {
-                text: " What you need to know about SNS DAOs",
+                text: " What you need to know about SPS DAOs",
               },
             ]}
           ></Breadcrumbs>
           <motion.h1 className="tw-heading-3 md:tw-heading-2 mt-12 md:mt-32 md:w-8/10 mb-6">
-            What you need to know about SNS DAOs
+            What you need to know about SPS DAOs
           </motion.h1>
           <motion.p className="tw-lead-sm text-black/60 mb-0">
-            Disclaimer: Participation in any SNS is at your own risk
+            Disclaimer: Participation in any SPS is at your own risk
           </motion.p>
         </AnimateSpawn>
         <section className="container-12 flex flex-col gap-30 ">
@@ -78,9 +78,9 @@ function SnsFaqPage() {
               </p>
             </Faq>
 
-            <Faq title="What is an SNS?">
+            <Faq title="What is an SPS?">
               <p>
-              SNS stands for Service Nervous System. It is a powerful type of DAO that allows communities to fully govern smart contracts and decentralized apps (dapps) running on BigFile (BIG), entirely on-chain. Key points about SNS:
+              SPS stands for Service Nervous System. It is a powerful type of DAO that allows communities to fully govern smart contracts and decentralized apps (dapps) running on BigFile (BIG), entirely on-chain. Key points about SPS:
               </p>
               <ul>
                 <li>
@@ -88,26 +88,26 @@ function SnsFaqPage() {
                   <Link href="/fms">Network Nervous System (NNS)</Link>, the on-chain DAO governing the entire BigFile.
                 </li>
                 <li>
-                A dapp controlled by an SNS DAO is managed by BIG token holders who submit and vote on on-chain proposals. No single developer or group controls the dapp; instead, it is governed through token-based voting.
+                A dapp controlled by an SPS DAO is managed by BIG token holders who submit and vote on on-chain proposals. No single developer or group controls the dapp; instead, it is governed through token-based voting.
                 </li>
                 <li>
-                Multiple SNSs can exist on BigFile. Any developer can transfer control of their dapp to an SNS DAO, thereby empowering DAO token holders with governance.
+                Multiple SNSs can exist on BigFile. Any developer can transfer control of their dapp to an SPS DAO, thereby empowering DAO token holders with governance.
                 </li>
               </ul>
             </Faq>
 
-            <Faq title="How unique are SNS DAOs in Web3?">
+            <Faq title="How unique are SPS DAOs in Web3?">
               <p>
-              DAOs are an increasingly popular organizational model for achieving various goals. For example, in the ETH ecosystem, Uniswap and MakerDAO are well-known DAOs with billions of dollars locked in their smart contracts. However,{" "} <strong>BigFile stands out because it can host fully on-chain dapps </strong>{" "}(including the frontend, backend logic, and data). This makes SNS DAOs unique, as they can fully control every aspect of a dapp through voting, with everything being on-chain. Fully on-chain DAOs are crucial because they ensure that all decisions are executed on the blockchain, enabling true decentralization. This contrasts with existing DAOs on other blockchains, where voting happens on-chain, but the execution is often handled by developers off-chain.{" "}
+              DAOs are an increasingly popular organizational model for achieving various goals. For example, in the ETH ecosystem, Uniswap and MakerDAO are well-known DAOs with billions of dollars locked in their smart contracts. However,{" "} <strong>BigFile stands out because it can host fully on-chain dapps </strong>{" "}(including the frontend, backend logic, and data). This makes SPS DAOs unique, as they can fully control every aspect of a dapp through voting, with everything being on-chain. Fully on-chain DAOs are crucial because they ensure that all decisions are executed on the blockchain, enabling true decentralization. This contrasts with existing DAOs on other blockchains, where voting happens on-chain, but the execution is often handled by developers off-chain.{" "}
                 <p>
-                As a result, SNS DAOs provide a means to deliver fully decentralized online services that are owned and governed by their communities.{" "}
+                As a result, SPS DAOs provide a means to deliver fully decentralized online services that are owned and governed by their communities.{" "}
                 </p>
               </p>
             </Faq>
 
-            <Faq title="What are the advantages of SNS DAOs? ">
+            <Faq title="What are the advantages of SPS DAOs? ">
               <p>
-              SNS DAOs foster a dynamic exchange between developers, entrepreneurs, government institutions, end users, and venture capitalists. Some advantages of handing control of your dapp over to a DAO include:{" "}
+              SPS DAOs foster a dynamic exchange between developers, entrepreneurs, government institutions, end users, and venture capitalists. Some advantages of handing control of your dapp over to a DAO include:{" "}
               </p>
               <ul>
                 <li>
@@ -122,10 +122,10 @@ function SnsFaqPage() {
               </ul>
             </Faq>
 
-            <Faq title="Are there existing SNS DAOs?">
-            BIGChat will be launched on the BIG network in Q1 2025. It will act as the first dapp to hand over control to the SNS DAO. You can follow its progress on the {" "}
+            <Faq title="Are there existing SPS DAOs?">
+            BIGChat will be launched on the BIG network in Q1 2025. It will act as the first dapp to hand over control to the SPS DAO. You can follow its progress on the {" "}
               <Link href="https://dashboard.thebigfile.com/sns">
-                SNS dashboard
+                SPS dashboard
               </Link>
               .
             </Faq>
@@ -134,29 +134,29 @@ function SnsFaqPage() {
             id="participate"
             title={
               <h2 className="tw-heading-3 text-gradient mb-12 md:mb-0 md:tw-heading-60">
-                How to participate in an SNS DAO
+                How to participate in an SPS DAO
               </h2>
             }
           >
-            <Faq title="What do I do once I am an SNS DAO member?">
-            The most crucial action you can take as an SNS DAO member is to participate in governance. On-chain governance is what sets DAOs apart from traditional web applications, giving members a pivotal role in the DAO's success. As a DAO member, you can contribute in various ways—from pushing code and designing a logo or UI, to simply voting on SNS proposals that determine the dapp's evolution.
+            <Faq title="What do I do once I am an SPS DAO member?">
+            The most crucial action you can take as an SPS DAO member is to participate in governance. On-chain governance is what sets DAOs apart from traditional web applications, giving members a pivotal role in the DAO's success. As a DAO member, you can contribute in various ways—from pushing code and designing a logo or UI, to simply voting on SPS proposals that determine the dapp's evolution.
             </Faq>
-            <Faq title="In what ways can I participate in an SNS DAO?">
-            There are many ways members can participate in an SNS DAO, both on-chain and off-chain. Creating proposals requires coding skills. Some examples include:
+            <Faq title="In what ways can I participate in an SPS DAO?">
+            There are many ways members can participate in an SPS DAO, both on-chain and off-chain. Creating proposals requires coding skills. Some examples include:
               <ul>
                 <li>
-                  <strong>Vote on SNS proposals:</strong> You can manually vote on different types of proposals or follow other neurons to vote on your behalf.
+                  <strong>Vote on SPS proposals:</strong> You can manually vote on different types of proposals or follow other neurons to vote on your behalf.
                 </li>
                 <li>
-                  <strong>Create upgrade proposals:</strong> Submit an upgrade proposal to update the code of the dapp controlled by the SNS DAO. This enables anyone to contribute code to the DAO.
+                  <strong>Create upgrade proposals:</strong> Submit an upgrade proposal to update the code of the dapp controlled by the SPS DAO. This enables anyone to contribute code to the DAO.
                 </li>
                 <li>
                   <strong>Create motion proposals:</strong> Motion proposals don’t update the dapp’s code; instead, they guide the DAO’s direction on new features and dapp development.
                 </li>
                 <li>
-                  <strong>Create SNS parameter update proposals:</strong> Propose changes to the DAO’s parameters, such as the maximum staking period, voting rewards, and more. See available {" "}
+                  <strong>Create SPS parameter update proposals:</strong> Propose changes to the DAO’s parameters, such as the maximum staking period, voting rewards, and more. See available {" "}
                   <Link
-                    href="/docs/current/developer-docs/daos/sns/managing/managing-nervous-system-parameters"
+                    href="/docs/current/developer-docs/daos/sps/managing/managing-nervous-system-parameters"
                     target="_blank"
                   >
                     parameters
@@ -177,36 +177,36 @@ function SnsFaqPage() {
                 </li>
               </ul>
             </Faq>
-            <Faq title="How does voting in an SNS DAO work?">
-              Once you have acquired SNS tokens, you can lock them into SNS
+            <Faq title="How does voting in an SPS DAO work?">
+              Once you have acquired SPS tokens, you can lock them into SPS
               neurons, which allows you to create a proposal, vote directly on one,
               delegate voting to trusted parties that have more expertise in certain topics.
-              If a proposal gets adopted, the code of the SNS DAO or the dapp it controls is
-              upgraded. Depending on the SNS configuration, users who vote may
+              If a proposal gets adopted, the code of the SPS DAO or the dapp it controls is
+              upgraded. Depending on the SPS configuration, users who vote may
               be rewarded with additional tokens for participating in
               governance. If you want to get more deeply involved, you can also
               suggest feature updates through proposals to improve the dapp
               controlled by the DAO.
             </Faq>
             <Faq
-              title="How can I get SNS Tokens?"
+              title="How can I get SPS Tokens?"
               id="how-do-you-get-sns-tokens"
             >
               <p>
-                Each SNS DAO has its own unique SNS token. For example, OpenChat
+                Each SPS DAO has its own unique SPS token. For example, OpenChat
                 has CHAT tokens.{" "}
               </p>
-              <p>There are three main ways of acquiring SNS tokens:</p>
+              <p>There are three main ways of acquiring SPS tokens:</p>
               <ul>
                 <li>
                   <strong>Participate in a decentralization swap:</strong> When
-                  an SNS launches, it has to go through a decentralization swap.
-                  . During the swap you can buy SNS tokens with BIG.
+                  an SPS launches, it has to go through a decentralization swap.
+                  . During the swap you can buy SPS tokens with BIG.
                   You can participate on the NNS frontend dapp under the{" "}
                   <Link href="https://fms.thebigfile.com/launchpad/">
                     Launchpad tab
                   </Link>
-                  . During the swap you can buy SNS tokens with ICP.
+                  . During the swap you can buy SPS tokens with ICP.
 
                 </li>
                 <li>
@@ -217,15 +217,15 @@ function SnsFaqPage() {
                   will typically be listed on multiple DEXs, where you can buy
                   them using the ICP utility token or other tokens, depending on
                   what token pairs the DEX lists, e.g., also Bitcoin or
-                  Ethereum. An SNS token in high demand may have a higher price
+                  Ethereum. An SPS token in high demand may have a higher price
                   on a DEX than in its decentralization swap.{" "}
                   <Link href="http://icdex.io/">ICDex</Link>,{" "}
                   <Link href="https://sonic.ooo/">Sonic</Link> and{" "}
                   <Link href="https://icpswap.com/">ICPSwap</Link> already
-                  supports SNS tokens.
+                  supports SPS tokens.
                 </li>
                 <li>
-                  <strong>Airdrops:</strong> Besides buying SNS tokens, you can
+                  <strong>Airdrops:</strong> Besides buying SPS tokens, you can
                   obtain them by receiving airdrops or by engaging with the dapp
                   and thereby earning tokens as reward. In this scenario, tokens
                   are used as an incentive to encourage active engagement with
@@ -240,18 +240,18 @@ function SnsFaqPage() {
             </Faq>
 
             <Faq title="Do I get rewards for participating in governance?">
-              SNS works very similar to the NNS, however each SNS DAO can
+              SPS works very similar to the NNS, however each SPS DAO can
               configure their parameters differently. Once you have locked your
-              SNS governance tokens into SNS neurons for at least the minimum
+              SPS governance tokens into SPS neurons for at least the minimum
               required time, you can participate in voting. Depending on the
-              configuration voting may reward participants with SNS governance
+              configuration voting may reward participants with SPS governance
               tokens.
             </Faq>
 
             <Faq title="What is the Neurons' fund?">
               <p>
                 From the ICP ecosystem's vantage point, the Neurons' fund aids
-                in bootstrapping the SNS DAO ecosystem, thereby supporting the
+                in bootstrapping the SPS DAO ecosystem, thereby supporting the
                 continued growth of the ecosystem. The Neurons' fund itself is
                 controlled by a DAO (the NNS).
               </p>
@@ -260,14 +260,14 @@ function SnsFaqPage() {
                 people who stake ICP in the NNS to use their maturity to fund
                 future SNSs. As the NNS decides how the Neuons' fund contributes to
                 SNSs, ICP stakers participating in them can leverage the broader community's
-                "wisdom of crowds" to chose which SNS tokens to acquire. This allows
-                users to participate automatically in upcoming SNS launches.
+                "wisdom of crowds" to chose which SPS tokens to acquire. This allows
+                users to participate automatically in upcoming SPS launches.
               </p>
               <p>
                 ICP neuron holders can opt in or out of the Neurons' fund at
                 any moment. Neurons will only participate in the
                 decentralization swap if they are opted in at the moment when
-                the proposal to initiate the SNS decentralization swap executes. The
+                the proposal to initiate the SPS decentralization swap executes. The
                 propsoal executes immediately after it gets adopted by ICP neuron
                 holders.
               </p>
@@ -280,11 +280,11 @@ function SnsFaqPage() {
             <Faq title="If I am asked to send ICP to an address to participate in a decentralization swap, what should I do?">
               <p>
                 If you want to participate in the swap, do not send ICP directly
-                to addresses! An SNS swap will never initiate contact with you,
+                to addresses! An SPS swap will never initiate contact with you,
                 e.g. via chat or email. You will never be asked to manually
                 enter an ICP address to participate in a decentralization swap.
                 If you find yourself entering an ICP address to participate in
-                an SNS swap, then STOP. Your swap address is specific to your
+                an SPS swap, then STOP. Your swap address is specific to your
                 identity, and you should only interact with that address when
                 participating in a swap through the{" "}
 
@@ -310,13 +310,13 @@ function SnsFaqPage() {
           >
             <div className="blob blob-purple blob-md blob-top-right z-[-1]"></div>
             <Faq title="What is a decentralization swap?">
-              A decentralization swap is the process by which an SNS DAO becomes
-              decentralized and where users can exchange ICP for SNS tokens by
+              A decentralization swap is the process by which an SPS DAO becomes
+              decentralized and where users can exchange ICP for SPS tokens by
               participating. After the swap, each participant receives a basket
-              of neurons. These neurons hold SNS tokens and therefore a share of
+              of neurons. These neurons hold SPS tokens and therefore a share of
               the DAO's voting power. It is one of{" "}
               <Link href="#how-do-you-get-sns-tokens">multiple ways</Link> you
-              can get SNS tokens for a particular SNS DAO.
+              can get SPS tokens for a particular SPS DAO.
             </Faq>
 
             <Faq title="Where does a decentralization swap take place?">
@@ -325,7 +325,7 @@ function SnsFaqPage() {
                 initiated by the NNS. Through this approach, every aspect of the
                 swap, from its initiation to execution, is completely
                 decentralized and not controlled by any centralized entity. Even
-                the decision to create the SNS and its token is made by the NNS
+                the decision to create the SPS and its token is made by the NNS
                 (the DAO that controls the BigFile) and not the developer
                 in order to ensure complete decentralizion of the app.
               </p>
@@ -334,7 +334,7 @@ function SnsFaqPage() {
                 parameters:
               </p>
               <ul>
-                <li>The amount of SNS tokens to be sold</li>
+                <li>The amount of SPS tokens to be sold</li>
                 <li>
                   The amount of ICP a decentralization swap must receive to be
                   successful. If the goal is not reached, participants get their
@@ -346,7 +346,7 @@ function SnsFaqPage() {
                   is over and the control of the dapp is turned over to the
                   token holders. As the number of tokens to be sold is fixed, it
                   is amount of ICP swapped that determines the initial price of
-                  the SNS tokens.
+                  the SPS tokens.
                 </li>
                 <li>Minimum and maximum commitment of ICP per participant</li>
                 <li></li>
@@ -360,7 +360,7 @@ function SnsFaqPage() {
                 <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                   neurons
                 </Link>{" "}
-                that hold your SNS tokens. Depending on the SNS configuration,
+                that hold your SPS tokens. Depending on the SPS configuration,
                 the basket may contain multiple neurons, each with a different{" "}
                 <Link href="https://support.dfinity.org/hc/en-us/articles/4404298574612-What-is-dissolve-delay-#:~:text=The%20dissolve%20delay%20is%20a,or%20lock%20up%20your%20ICP.">
                   dissolve delay
@@ -369,22 +369,22 @@ function SnsFaqPage() {
                 neurons have dissolved, sell the liquid tokens on an exchange.
               </p>
               <p>
-                The number of SNS tokens you receive, and the price of for
+                The number of SPS tokens you receive, and the price of for
                 each token, depends on the amount of ICP swapped.
-                The more ICP are swapped, the fewer SNS tokens you receive, 
+                The more ICP are swapped, the fewer SPS tokens you receive, 
                 however their price will be higher.
               </p>
             </Faq>
 
-            <Faq title="How is the price of SNS tokens calculated?">
+            <Faq title="How is the price of SPS tokens calculated?">
               <p>
-                SNS tokens can be exchanged for ICP during the decentralization
+                SPS tokens can be exchanged for ICP during the decentralization
                 swap. There is a fixed number of tokens distributed during the
                 swap, which means their price is determined by the amount of ICP
                 swappend. You can calculate the token price by dividing the amount
                 of ICP swappend with the number of tokens distributed. Price = ICP
                 swappend / number of tokens distributed. 
-                Note that the final price of SNS tokens
+                Note that the final price of SPS tokens
                 isn't known at the time of the decentralization swap, as it is
                 dependent on the total amount of ICP swapped.
                 However, you can calculate the minimum and maximum price based
@@ -395,23 +395,23 @@ function SnsFaqPage() {
                 <li>
                   The decentralization swap distributed 5000 tokens for 1000 ICP.
                   You participated with 10 ICP. This means you will have
-                  50 SNS tokens, each worth 0.2 ICP.
+                  50 SPS tokens, each worth 0.2 ICP.
                 </li>
                 <li>
                   The decentralization swap distributed 1 million tokens for
                   500,000 ICP. You participated with 200 ICP. This means you
-                  will have 400 SNS tokens, each worth 0.5 ICP.
+                  will have 400 SPS tokens, each worth 0.5 ICP.
                 </li>
                 <li>
                   The decentralization swap distributed 100 tokens for 10,000 ICP.
                   You participated with 5 ICP. This means you will have
-                  0.05 SNS tokens, where a full token would be worth 100 ICP.
+                  0.05 SPS tokens, where a full token would be worth 100 ICP.
                 </li>
               </ul>
               <p>
                 Visis the ICP Wiki for a more detailed overvire of{" "}
                 <Link href="https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration">
-                  SNS tokenomics
+                  SPS tokenomics
                 </Link>
               </p>
             </Faq>
@@ -421,12 +421,12 @@ function SnsFaqPage() {
 
                 You can participate in the decentralization swap in the NNS frontend dapp,
                 which requires BIG utility tokens. BIG tokens can be exchanged
-                for SNS tokens during the decentralization swap. If you don’t
+                for SPS tokens during the decentralization swap. If you don’t
                 have BIG, go to any of the exchanges listed
                 You can participate in the decentralization swap in the{" "}
                 <Link href="https://fms.thebigfile.com/">FMS frontend dapp</Link>,
                 which requires ICP utility tokens. ICP tokens can be exchanged
-                for SNS tokens during the decentralization swap. If you don’t
+                for SPS tokens during the decentralization swap. If you don’t
                 have ICP, go to any of the exchanges listed on{" "}
                 <Link href="https://coinmarketcap.com/currencies/">
 
@@ -440,16 +440,16 @@ function SnsFaqPage() {
               <p>
                 <strong>
                   1. Go to the NNS frontend dapp and click on the “Launchpad” in
-                  the sidebar to see all ongoing SNS decentralization swap.
+                  the sidebar to see all ongoing SPS decentralization swap.
                 </strong>
               </p>
               <p>
                 <strong>
-                  2. Select the SNS Swap you’re interested in under “Current
+                  2. Select the SPS Swap you’re interested in under “Current
                   Launches” and click on the box.
                 </strong>
                 <img
-                  src="/img/sns/SNS-FAQ-participate-1.webp"
+                  src="/img/sns/SPS-FAQ-participate-1.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -457,7 +457,7 @@ function SnsFaqPage() {
               <p>
                 <strong>3. Click on “Participate”.</strong>
                 <img
-                  src="/img/sns/SNS-FAQ-participate-2.webp"
+                  src="/img/sns/SPS-FAQ-participate-2.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -468,7 +468,7 @@ function SnsFaqPage() {
                   click “max”, then click “Execute”.
                 </strong>
                 <img
-                  src="/img/sns/SNS-FAQ-participate-3.webp"
+                  src="/img/sns/SPS-FAQ-participate-3.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -480,7 +480,7 @@ function SnsFaqPage() {
                   “Execute”.
                 </strong>
                 <img
-                  src="/img/sns/SNS-FAQ-participate-4.webp"
+                  src="/img/sns/SPS-FAQ-participate-4.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -493,20 +493,20 @@ function SnsFaqPage() {
                 </strong>
               </p>
               <p>
-                After the swap ends and is successful, you receive SNS tokens.
+                After the swap ends and is successful, you receive SPS tokens.
                 Note, that this may take a few hours after the swap has
-                concluded. The number of SNS tokens you receive, and the price
+                concluded. The number of SPS tokens you receive, and the price
                 paid for each token, depends on the amount of ICP raised during
                 the swap as well as the amount of ICP spent. The more ICP
-                raised, the fewer SNS tokens you receive.
+                raised, the fewer SPS tokens you receive.
               </p>
               <p>
                 If the set goals of the decentralization swap are not reached,
                 participants will be refunded. The duration of a swap is
                 configurable and thus, depends on the configuration of each
-                individual SNS. A swap can only start after a 4 to 8-day NNS
+                individual SPS. A swap can only start after a 4 to 8-day NNS
                 voting period (unless 51% majority is reached sooner) on the
-                original proposal that initiates the launch the SNS.
+                original proposal that initiates the launch the SPS.
               </p>
               <p className="not-prose">
                 <Link
@@ -523,18 +523,18 @@ function SnsFaqPage() {
               The swap itself starts automatically once the NNS proposal is
               adopted.
             </Faq>
-            <Faq title="As a participant in the SNS decentralization swap, what do I need to trust?">
+            <Faq title="As a participant in the SPS decentralization swap, what do I need to trust?">
               <p>
-                Before participating in an SNS decentralization swap to get a
-                share of the SNS DAO’s voting power, it is highly recommended
+                Before participating in an SPS decentralization swap to get a
+                share of the SPS DAO’s voting power, it is highly recommended
                 that you do your due diligence on the dapp in question to make
-                sure the SNS DAO is trustworthy. Dapp developers are responsible
+                sure the SPS DAO is trustworthy. Dapp developers are responsible
                 for providing all the necessary information that allows you to
-                verify the dapp and its SNS configurations. Note that in
+                verify the dapp and its SPS configurations. Note that in
                 participating without doing due your diligence, you are
                 implicitly trusting the NNS community and the developers
                 decentralizing the dapp. In any case, it is crucial that you
-                trust the developers will not change the dapp during the SNS
+                trust the developers will not change the dapp during the SPS
                 launch. Learn what you could verify and what to look out for on{" "}
                 <Link href="https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust">
                   the ICP Wiki.
@@ -542,12 +542,12 @@ function SnsFaqPage() {
               </p>
             </Faq>
 
-            <Faq title="How can I verify the SNS decentralization swap proposal?">
+            <Faq title="How can I verify the SPS decentralization swap proposal?">
               <p>
                 There are multiple levels of verification you can do depending
-                on your level of technical understanding. SNS canisters can be
+                on your level of technical understanding. SPS canisters can be
                 verified at any time, even before the decentralization swap, but
-                after they have been installed on the SNS subnet. Here are some
+                after they have been installed on the SPS subnet. Here are some
                 ways to verify:
               </p>
               <ul>
@@ -557,16 +557,16 @@ function SnsFaqPage() {
                   or in the decentralization swap NNS proposal.
                 </li>
                 <li>
-                  <strong>SNS root canister: </strong> An SNS DAO is comprised
-                  of several SNS canisters that have different functions. The
-                  root canister is the canister that controls the other SNS
-                  canisters within a given SNS DAO. You should verify that the
-                  SNS root canister is the only canister controlling other SNS
-                  canisters within that SNS DAO. 
+                  <strong>SPS root canister: </strong> An SPS DAO is comprised
+                  of several SPS canisters that have different functions. The
+                  root canister is the canister that controls the other SPS
+                  canisters within a given SPS DAO. You should verify that the
+                  SPS root canister is the only canister controlling other SPS
+                  canisters within that SPS DAO. 
                 </li>
                 <li>
                   <strong>The dapp canister: </strong> You can verify that the
-                  canister id of the dapp controlled by the SNS DAO is the same
+                  canister id of the dapp controlled by the SPS DAO is the same
                   as the one you're interacting with.
                 </li>
                 See Wiki for more info on{" "}
@@ -581,38 +581,38 @@ function SnsFaqPage() {
             id="treasury"
             title={
               <h2 className="tw-heading-3 text-gradient mb-12 md:mb-0 md:tw-heading-60">
-                SNS DAO treasury
+                SPS DAO treasury
               </h2>
             }
           >
-            <Faq title="What is the SNS treasury?">
+            <Faq title="What is the SPS treasury?">
               After a decentralization swap successfully concludes, the ICP
-              collected through the swap is allocated to the SNS DAO's treasury.
-              Optionally, the DAO can allocate a number of SNS tokens to be in
-              the DAO's treasury, which all SNSs so far have done. The SNS
+              collected through the swap is allocated to the SPS DAO's treasury.
+              Optionally, the DAO can allocate a number of SPS tokens to be in
+              the DAO's treasury, which all SNSs so far have done. The SPS
               treasury is controlled by the DAO, and can only be transferred
-              using proposals that SNS token holders vote on. It is also
-              possible to mint new SNS tokens at any point after the SNS launch,
-              which can also only be done if the SNS DAO agrees to do so by
+              using proposals that SPS token holders vote on. It is also
+              possible to mint new SPS tokens at any point after the SPS launch,
+              which can also only be done if the SPS DAO agrees to do so by
               proposal vote.
             </Faq>
 
-            <Faq title="What is the purpose of the SNS treasury and how are the funds distributed?">
+            <Faq title="What is the purpose of the SPS treasury and how are the funds distributed?">
               <ul>
-                <li>The purpose of the treasury is decided by the SNS DAO.</li>
+                <li>The purpose of the treasury is decided by the SPS DAO.</li>
                 <li>
-                  A portion of the treasury can be sent to any address by an SNS
+                  A portion of the treasury can be sent to any address by an SPS
                   proposal.
                 </li>
                 <li>
-                  Typically, after an SNS has launched it has an SNS token
+                  Typically, after an SPS has launched it has an SPS token
                   treasury and an ICP treasury (from the decentralization swap).
-                  An SNS can, however, also own other tokens on the Internet
+                  An SPS can, however, also own other tokens on the Internet
                   Computer.
                 </li>
                 <li>
-                  Typically, after an SNS has launched it has an SNS token treasury and an ICP
-                  treasury (from the decentralization swap). An SNS can, however, also own other
+                  Typically, after an SPS has launched it has an SPS token treasury and an ICP
+                  treasury (from the decentralization swap). An SPS can, however, also own other
                   tokens on the BigFile.
                 </li>
                 <li>
@@ -623,18 +623,18 @@ function SnsFaqPage() {
             </Faq>
 
             <Faq title="Do I have a say in how the treasury funds are allocated?">
-              Yes, if you are a neuron holder of the respective SNS DAO, you can
+              Yes, if you are a neuron holder of the respective SPS DAO, you can
               actively exercise your voting power to decide on proposals that
               allocate treasury funds.
             </Faq>
 
             <Faq title="Who has access to the treasury? ">
-              Without an adopted SNS proposal that specifies how to allocate funds,
-              no one can access the SNS treasury. The SNS DAO only grants access
-              when proposals are adopted through SNS community voting. While it can happen
+              Without an adopted SPS proposal that specifies how to allocate funds,
+              no one can access the SPS treasury. The SPS DAO only grants access
+              when proposals are adopted through SPS community voting. While it can happen
               that the original developer team possesses a meaningful portion of the voting
               power, they alone cannot make decisions for the DAO without the approval of
-              SNS token holders. In particular, treasury proposals are considered to be
+              SPS token holders. In particular, treasury proposals are considered to be
               critical proposals, which have a higher bar to be adopted, including that
               they require a higher voting participation and support of a supermajority of
               the DAO voters.
@@ -649,23 +649,23 @@ function SnsFaqPage() {
               </h2>
             }
           >
-            <Faq title="How do I see and vote for SNS proposals?">
+            <Faq title="How do I see and vote for SPS proposals?">
               <p>
                 Anyone can build a frontend that allows users to create or vote
-                on SNS proposals, which means voting could take place within the
-                dapp the SNS DAO controls, or in any other dapp that integrates
-                with the SNS backend. The FMS frontend dapp lists
-                all SNS DAOs and their proposals.
+                on SPS proposals, which means voting could take place within the
+                dapp the SPS DAO controls, or in any other dapp that integrates
+                with the SPS backend. The FMS frontend dapp lists
+                all SPS DAOs and their proposals.
                 
 
-                with the SNS backend. The{" "}
+                with the SPS backend. The{" "}
                 <Link href="https://fms.thebigfile.com/">FMS frontend dapp</Link> lists
-                all SNS DAOs and their proposals. 
+                all SPS DAOs and their proposals. 
               </p>
             </Faq>
-            <Faq title="How do I create a proposal for an SNS DAO?">
+            <Faq title="How do I create a proposal for an SPS DAO?">
               <p>
-                Creating an SNS proposal requires knowledge of the command line
+                Creating an SPS proposal requires knowledge of the command line
                 tools <Link href="https://github.com/dfinity/sdk">dfx</Link> and{" "}
                 <Link href="https://github.com/dfinity/sns-quill">quill</Link>.
               </p>
@@ -681,7 +681,7 @@ function SnsFaqPage() {
             </Faq>
 
             <Faq title="What is voting power and how do I get it?">
-              SNS DAOs have a stake-based governance system. This means the more
+              SPS DAOs have a stake-based governance system. This means the more
               tokens participants stake in their{" "}
               <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                 neurons
@@ -691,16 +691,16 @@ function SnsFaqPage() {
               <Link href="https://wiki.thebigfile.com/wiki/Neurons_101">
                 dissolve delay
               </Link>{" "}
-              bonus and age bonus. Each SNS DAO decides these bonuses in its
+              bonus and age bonus. Each SPS DAO decides these bonuses in its
               parameters.
             </Faq>
 
             <Faq title="What is neuron following?">
               <p>
                 Following neurons is a way to delegate votes both on the NNS and
-                in SNSs. Each SNS neuron can either manually vote on proposals
+                in SNSs. Each SPS neuron can either manually vote on proposals
                 or follow another neuron’s voting decisions. Neurons are
-                followed based on various topics, such as making SNS treasury
+                followed based on various topics, such as making SPS treasury
                 transfers or upgrading the dapp. Neurons can be set to follow
                 other neurons on specific topics or to follow other neurons on
                 ‘All Topics’ – a catch-all which is applied for the proposal
@@ -714,25 +714,25 @@ function SnsFaqPage() {
               </p>
             </Faq>
 
-            <Faq title="How can I follow or unfollow a neuron on SNS treasury proposals?">
+            <Faq title="How can I follow or unfollow a neuron on SPS treasury proposals?">
               If you would like to learn how to follow some neuron, for example
-              the SNS developer team, on some topics, while manually voting on
+              the SPS developer team, on some topics, while manually voting on
               others, watch this short tutorial:
               <YoutubeVideoEmbed
                 videoId="bgZ2VifhNcU"
-                altText="Neuron following on SNS treasury proposals"
+                altText="Neuron following on SPS treasury proposals"
               />
             </Faq>
 
-            <Faq title="Is it possible to transfer SNS tokens to another person?">
+            <Faq title="Is it possible to transfer SPS tokens to another person?">
               <p>
-                Yes. SNS tokens are BIGRC-1 tokens and can be transferred between
+                Yes. SPS tokens are BIGRC-1 tokens and can be transferred between
                 any BigFile-based wallets that support BIGRC-1,
-                including your NNS wallet. Note that each SNS has its own
+                including your NNS wallet. Note that each SPS has its own
                 BIGRC-1-compliant ledger for keeping track of its tokens.
               </p>
               <p>
-                When receiving your SNS tokens in the form of neurons, the
+                When receiving your SPS tokens in the form of neurons, the
                 neurons may have{" "}
                 <Link href="https://support.dfinity.org/hc/en-us/articles/4404298574612-What-is-dissolve-delay-#:~:text=The%20dissolve%20delay%20is%20a,or%20lock%20up%20your%20ICP.">
                   dissolve delays
@@ -743,42 +743,42 @@ function SnsFaqPage() {
                 of the respective neuron.
               </p>
             </Faq>
-            <Faq title="Is it possible to sell SNS tokens to another person?">
+            <Faq title="Is it possible to sell SPS tokens to another person?">
               <p>
                 Yes. Because tokens can be sent to other people, they can
                 likewise be sent to exchanges and thus, swapped for other
-                tokens. The easiest way to sell SNS tokens is through a
+                tokens. The easiest way to sell SPS tokens is through a
                 decentralized exchange (DEX) that lists the token. You can
-                exchange SNS tokens for other tokens, depending on the token
+                exchange SPS tokens for other tokens, depending on the token
                 pairs available on any DEX.
               </p>
               <p>
-                Likewise, you can acquire SNS tokens on a DEX in exchange for
+                Likewise, you can acquire SPS tokens on a DEX in exchange for
                 other tokens.
               </p>
             </Faq>
-            <Faq title="Are SNS tokens inflationary or deflationary?">
+            <Faq title="Are SPS tokens inflationary or deflationary?">
               <p>
-                This depends on the specific SNS configuration. An SNS DAO can
+                This depends on the specific SPS configuration. An SPS DAO can
                 have both inflationary and deflationary pressures.
               </p>
               <p>Inflationary:</p>
               <ul>
                 <li>
-                  An SNS DAO can be set up to mint voting rewards for people who
+                  An SPS DAO can be set up to mint voting rewards for people who
                   participate in governance (similar to ICP).
                 </li>
                 <li>
-                  An SNS DAO can mint tokens if voted on by SNS token holders.
+                  An SPS DAO can mint tokens if voted on by SPS token holders.
                   For example: a game mints 2% of total supply each year and
                   distributes it among players.
                 </li>
               </ul>
               <p>Deflationary:</p>
               <ul>
-                <li>SNS tokens are burnt for every transaction.</li>
+                <li>SPS tokens are burnt for every transaction.</li>
                 <li>
-                  Locking SNS tokens into neurons removes them from circulation.
+                  Locking SPS tokens into neurons removes them from circulation.
                   While not technically deflation, it acts as a deflationary
                   pressure.
                 </li>
@@ -789,7 +789,7 @@ function SnsFaqPage() {
                   className="link-primary link-with-icon"
                 >
                   <LinkArrowRight></LinkArrowRight>
-                  More on SNS tokenomics
+                  More on SPS tokenomics
                 </Link>
               </p>
             </Faq>
@@ -815,7 +815,7 @@ function SnsFaqPage() {
                 className="tw-lead-sm md:tw-lead mb-6"
                 variants={transitions.item}
               >
-                Everything you need to become an SNS DAO ninja.
+                Everything you need to become an SPS DAO ninja.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -830,24 +830,20 @@ function SnsFaqPage() {
             title="SPS DAO Basics"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="https://youtu.be/nZBWx6y070Y"
-            title="Video: Next Generation DAOs"
-          ></SmallCardWithDescription>
-          <SmallCardWithDescription
             href="https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c"
-            title="SNS Blog"
+            title="SPS Blog"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
             href="/how-it-works"
             title="Technical overview of ICP"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="https://wiki.thebigfile.com/wiki/Service_Nervous_System_(SNS)"
-            title="SNS Wiki"
+            href="https://wiki.thebigfile.com/wiki/Service_Nervous_System_(SPS)"
+            title="SPS Wiki"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="/docs/current/developer-docs/daos/sns/"
-            title="SNS Docs"
+            href="/docs/current/developer-docs/daos/sps/"
+            title="SPS Docs"
           ></SmallCardWithDescription>
         </AnimateSpawn>
       </main>

@@ -16,7 +16,7 @@ This document contains canister development best practices for both Motoko and R
 
 ## Smart contracts canister control
 
-### Use a decentralized governance system like SNS to put dapps under decentralized control
+### Use a decentralized governance system like SPS to put dapps under decentralized control
 
 #### Security concerns
 
@@ -38,12 +38,12 @@ In the following list, we first provide recommendations for centralized dapp con
     - Require approval by several individuals or parties to perform any canister controller operations.
     - Also require approval by several individuals or parties for any security sensitive changes at the application level that are restricted to privileged principals, such as admin operations including  e.g. permissions management, minting new tokens, removing NFTs for digital rights violations, etc.
     - A helpful tool to achieve either of the above two points is the [threshold canister](https://github.com/dfinity/threshold). Individuals should manage their key material using hardware security modules, such as e.g. [YubyHSM](https://www.yubico.com/ch/store/yubihsm-2-series/) and physically protect these e.g. using safes at different geographical locations. Some of HSMs support threshold signature schemes, which can help to further secure the setup. To increase transparency about the changes made to a dapp, consider using a tool like [LaunchTrail](https://github.com/spinner-cash/launchtrail).
-3. **Full decentralization using a DAO**: The dapp is controlled by a decentralized governance system such as the BigFile's [Service Nervous System (SNS)](/docs/current/developer-docs/daos/sns), so that any security sensitive changes to the canisters are only executed if the SNS community approves them collectively through a proposal voting mechanism. If an SNS is used:
-   - Make sure voting power is distributed over many, independent entities such that there is not one single or a few entities that can decide by themselves how the DAO evolves, see [here](/docs/current/developer-docs/daos/sns/tokenomics/tokenomics-intro#voting-power-and-decentralization).
-   - Ensure all components of the dapp are under SNS control, including the canisters serving the web frontends, see [SNS asset canisters](/docs/current/developer-docs/daos/sns/managing/sns-asset-canister).
-   - Consider the [SNS preparation checklist](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist). Important points from a security perspective are e.g. [tokenomics](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#11-tokenomics-specification), [disclosing dependencies to off-chain components](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#13-disclosure-of-dependencies) and [performing security reviews](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist#21-security-review).
-   - Rather than [self-deploying the SNS code](/docs/current/developer-docs/daos/sns/introduction/dao-alternatives#self-deploy-the-sns-code) or [building your own DAO](/docs/current/developer-docs/daos/sns/introduction/dao-alternatives#build-your-own-dao--use-other-dao-frameworks), consider using the official SNS on the SNS subnet, as this guarantees that the SNS is running an NNS-blessed version and maintained as part of BIG.
-   - See also [Verification and trust in a (launched) SNS](https://wiki.thebigfile.com/wiki/Verification_and_trust_in_a_(launched)_SNS) and [SNS decentralization swap trust](https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust).
+3. **Full decentralization using a DAO**: The dapp is controlled by a decentralized governance system such as the BigFile's [Service Nervous System (SPS)](/docs/current/developer-docs/daos/sps), so that any security sensitive changes to the canisters are only executed if the SPS community approves them collectively through a proposal voting mechanism. If an SPS is used:
+   - Make sure voting power is distributed over many, independent entities such that there is not one single or a few entities that can decide by themselves how the DAO evolves, see [here](/docs/current/developer-docs/daos/sps/tokenomics/tokenomics-intro#voting-power-and-decentralization).
+   - Ensure all components of the dapp are under SPS control, including the canisters serving the web frontends, see [SPS asset canisters](/docs/current/developer-docs/daos/sps/managing/sps-asset-canister).
+   - Consider the [SPS preparation checklist](/docs/current/developer-docs/daos/sps/tokenomics/sps-checklist). Important points from a security perspective are e.g. [tokenomics](/docs/current/developer-docs/daos/sps/tokenomics/sps-checklist#11-tokenomics-specification), [disclosing dependencies to off-chain components](/docs/current/developer-docs/daos/sps/tokenomics/sps-checklist#13-disclosure-of-dependencies) and [performing security reviews](/docs/current/developer-docs/daos/sps/tokenomics/sps-checklist#21-security-review).
+   - Rather than [self-deploying the SPS code](/docs/current/developer-docs/daos/sps/introduction/dao-alternatives#self-deploy-the-sns-code) or [building your own DAO](/docs/current/developer-docs/daos/sps/introduction/dao-alternatives#build-your-own-dao--use-other-dao-frameworks), consider using the official SPS on the SPS subnet, as this guarantees that the SPS is running an NNS-blessed version and maintained as part of BIG.
+   - See also [Verification and trust in a (launched) SPS](https://wiki.thebigfile.com/wiki/Verification_and_trust_in_a_(launched)_SNS) and [SPS decentralization swap trust](https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust).
 
 An alternative to DAO control (3. above) would be to create an immutable canister smart contract by removing the canister controller completely. However, note that this implies that the canister cannot be upgraded, which may have severe implications in case e.g. a bug were found. The option to use a decentralized governance system and thus being able to upgrade smart contracts is a big advantage of the BigFile ecosystem compared to other blockchains.
 
@@ -63,7 +63,7 @@ If a dapp depends on a third-party canister smart contract (e.g. by making inter
 
 #### Recommendation
 
-If you interact with a canister that you require to be decentralized, make sure it is controlled by the NNS, a service nervous system (SNS) or a decentralized governance system, and review under what conditions and by whom the smart contract can be changed.
+If you interact with a canister that you require to be decentralized, make sure it is controlled by the NNS, a service nervous system (SPS) or a decentralized governance system, and review under what conditions and by whom the smart contract can be changed.
 
 ## Authentication
 

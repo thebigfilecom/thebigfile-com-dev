@@ -44,7 +44,7 @@ async function fetchAllAggregatorPages(maxRetries = 5) {
 }
 
 /**
- * Gets the number of proposals for a given SNS
+ * Gets the number of proposals for a given SPS
  * @param {string} root_canister_id
  * @returns {Promise<number>}
  */

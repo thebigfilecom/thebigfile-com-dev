@@ -21,7 +21,7 @@ use super::{ParsedSnsNeuron, SnsCanisterIds};
 pub struct SplitNeuronOpts {
     /// The neuron to split.
     neuron_id: ParsedSnsNeuron,
-    /// A number to identify this neuron. Must be unique among your neurons for this SNS.
+    /// A number to identify this neuron. Must be unique among your neurons for this SPS.
     #[clap(long)]
     memo: u64,
     /// The number of tokens, in decimal form, to split off.

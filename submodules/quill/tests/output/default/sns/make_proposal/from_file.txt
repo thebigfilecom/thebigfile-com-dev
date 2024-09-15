@@ -10,13 +10,13 @@ Sending message with
     command = opt variant {
       MakeProposal = record {
         url = "https://dfinity.org";
-        title = "SNS Launch";
+        title = "SPS Launch";
         action = opt variant {
           Motion = record {
-            motion_text = "I hereby raise the motion that the use of the SNS shall commence";
+            motion_text = "I hereby raise the motion that the use of the SPS shall commence";
           }
         };
-        summary = "A motion to start the SNS";
+        summary = "A motion to start the SPS";
       }
     };
   },

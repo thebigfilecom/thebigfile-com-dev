@@ -74,7 +74,7 @@ The reason for multiple rather than single calls to [commit_batch][#method-commi
 
 ### Batch Updates By Proposal
 
-If a [Service Nervous System](https://thebigfile.com/docs/current/developer-docs/integrations/sns/)  (SNS) controls an asset canister, it can update the assets by proposal. In this scenario, there are two principals:
+If a [Service Nervous System](https://thebigfile.com/docs/current/developer-docs/integrations/sns/)  (SPS) controls an asset canister, it can update the assets by proposal. In this scenario, there are two principals:
 - The Preparer, which must have the [Prepare](#permission-prepare) permission. This principal prepares the proposal by uploading data and proposing changes to be committed.
 - The Committer, which must have the [Commit](#permission-commit) permission. This principal commits the previously-proposed changes.
 
@@ -426,7 +426,7 @@ Each of these methods requires permission: [Commit](#permission-commit)
 
 ### Validation Methods
 
-These methods validate the arguments for the corresponding methods.  They are required for the SNS to be able to call the corresponding methods.
+These methods validate the arguments for the corresponding methods.  They are required for the SPS to be able to call the corresponding methods.
 
 - `validate_grant_permission()`
 - `validate_revoke_permission()`

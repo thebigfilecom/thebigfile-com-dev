@@ -144,7 +144,7 @@ function TokenHolders(): JSX.Element {
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                In addition to these core uses, BIG tokens can be used to participate in decentralization swaps to become a co-owner of an SNS DAO, as well as in various smart contract services built on the BigFile, such as registries, marketplaces, and exchanges.
+                In addition to these core uses, BIG tokens can be used to participate in decentralization swaps to become a co-owner of an SPS DAO, as well as in various smart contract services built on the BigFile, such as registries, marketplaces, and exchanges.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-0"
@@ -469,7 +469,7 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-lead-lg md:tw-title-sm mb-3">
-                  Participate in SNS DAOs
+                  Participate in SPS DAOs
                 </h3>
                 <p className="tw-paragraph-sm mb-3 text-black/60">
                   Own a piece of your favorite dapps on the BigFile,

@@ -216,7 +216,7 @@ The following is a list of common abbreviations that are capitalized within the 
 - NFT
 - NNS
 - SDK
-- SNS
+- SPS
 - XDR
 - UTXO
 

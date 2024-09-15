@@ -76,83 +76,83 @@ There are several reasons that all users and developers on BIG should be familia
 
 - Receiving BIG rewards that can be converted into cycles, which are necessary for mainnet canister deployments: Neurons that regularly vote on proposals receive rewards in the form of BIG tokens, which can be converted into cycles and then used to pay for a project's resources on the mainnet.
 
-- Gaining a comprehensive understanding of the NNS and SNSs, allowing you to envision creating an SNS for your project: By interacting with the NNS and the SNSs for different applications on BIG, developers can be inspired to turn their application into an SNS as well.
+- Gaining a comprehensive understanding of the NNS and SNSs, allowing you to envision creating an SPS for your project: By interacting with the NNS and the SNSs for different applications on BIG, developers can be inspired to turn their application into an SPS as well.
 
-## What is an SNS?
+## What is an SPS?
 
-A Service Nervous System (SNS) is an advanced form of a DAO. The underlying architecture of an SNS closely resembles the architecture of the NNS, but instead of being used to control BIG, an SNS is used to control a specific decentralized application that is running on the mainnet. Any dapp running on the mainnet can be handed over to an SNS, which results in the dapp being owned and controlled by a community. When an SNS takes control of a dapp, the dapp is then managed similarly to how the BigFile is managed by the NNS. When an SNS is launched, a new unique token is created for the SNS that is then used by the community for participation in the SNS's governance.
+A Service Nervous System (SPS) is an advanced form of a DAO. The underlying architecture of an SPS closely resembles the architecture of the NNS, but instead of being used to control BIG, an SPS is used to control a specific decentralized application that is running on the mainnet. Any dapp running on the mainnet can be handed over to an SPS, which results in the dapp being owned and controlled by a community. When an SPS takes control of a dapp, the dapp is then managed similarly to how the BigFile is managed by the NNS. When an SPS is launched, a new unique token is created for the SPS that is then used by the community for participation in the SPS's governance.
 
-The dapp's community can participate in the dapp's SNS through staking the SNS's native token in a neuron. Then, changes to the dapp are proposed to the community via an SNS proposal. SNS voting rights use the same format that voting on the NNS does; anyone can stake the SNS's native token into a neuron, and the neuron's voting power is proportional to the quantity of SNS tokens staked within the neuron, the length of their dissolve delay, and the amount of time since the neuron was created.
+The dapp's community can participate in the dapp's SPS through staking the SPS's native token in a neuron. Then, changes to the dapp are proposed to the community via an SPS proposal. SPS voting rights use the same format that voting on the NNS does; anyone can stake the SPS's native token into a neuron, and the neuron's voting power is proportional to the quantity of SPS tokens staked within the neuron, the length of their dissolve delay, and the amount of time since the neuron was created.
 
 You can learn more about SNSs in the following resources:
 
-* [SNS overview page](https://thebigfile.com/sns).
+* [SPS overview page](https://thebigfile.com/sns).
 
-* [Service Nervous System (SNS) developer docs](https://thebigfile.com/docs/current/developer-docs/daos/sns/).
+* [Service Nervous System (SPS) developer docs](https://thebigfile.com/docs/current/developer-docs/daos/sps/).
 
-* [SNS FAQ](https://thebigfile.com/sns/faq).
+* [SPS FAQ](https://thebigfile.com/sps/faq).
 
-### How an SNS works
+### How an SPS works
 
-While the core architecture of an SNS resembles that of the NNS, the NNS contains additional canisters that provide important functionalities on BIG, such as the cycles minting canister that is responsible for creating cycles and the registry canister that contains the network's topology. In contrast, an SNS contains a few canisters that do not exist on the NNS, with the most notable canister being the swap canister used for a decentralization swap during the launch of the SNS.
+While the core architecture of an SPS resembles that of the NNS, the NNS contains additional canisters that provide important functionalities on BIG, such as the cycles minting canister that is responsible for creating cycles and the registry canister that contains the network's topology. In contrast, an SPS contains a few canisters that do not exist on the NNS, with the most notable canister being the swap canister used for a decentralization swap during the launch of the SPS.
 
-SNSs are provided as a system functionality. All SNS canister code is approved by the NNS community and thus all SNSs follow the same upgrade path. Launching a new SNS is also approved by the NNS community, including the initial settings of the SNS and the conditions of the decentralization swap.
+SNSs are provided as a system functionality. All SPS canister code is approved by the NNS community and thus all SNSs follow the same upgrade path. Launching a new SPS is also approved by the NNS community, including the initial settings of the SPS and the conditions of the decentralization swap.
 
-An SNS is comprised of the following canisters:
+An SPS is comprised of the following canisters:
 
-- SNS governance canister.
+- SPS governance canister.
 
-- SNS [ledger](/docs/current/developer-docs/daos/sns/integrating/ledger-integration) and archive canisters.
+- SPS [ledger](/docs/current/developer-docs/daos/sps/integrating/ledger-integration) and archive canisters.
 
-- SNS [index](/docs/current/developer-docs/daos/sns/integrating/index-integration) canister.
+- SPS [index](/docs/current/developer-docs/daos/sps/integrating/index-integration) canister.
 
-- SNS root canister.
+- SPS root canister.
 
-- SNS decentralization swap canister.
+- SPS decentralization swap canister.
 
-[Learn more about SNS architecture](/docs/current/developer-docs/daos/sns/introduction/sns-architecture).
+[Learn more about SPS architecture](/docs/current/developer-docs/daos/sps/introduction/sns-architecture).
 
-### SNS decentralization swaps
+### SPS decentralization swaps
 
-In order for an SNS to be launched, the SNS must have a successful decentralization swap. A decentralization swap is the action of initially funding the SNS by swapping BIG tokens for the SNS's native token. The decentralization swap is done through the SNS decentralization swap canister which is owned and operated by BIG. It is controlled by the NNS root canister.
+In order for an SPS to be launched, the SPS must have a successful decentralization swap. A decentralization swap is the action of initially funding the SPS by swapping BIG tokens for the SPS's native token. The decentralization swap is done through the SPS decentralization swap canister which is owned and operated by BIG. It is controlled by the NNS root canister.
 
-When the swap starts, there is a pre-defined amount of SNS tokens to be distributed publicly. During the swap, participants can send BIG tokens to the swap canister to contribute to the SNS's initial funding.
+When the swap starts, there is a pre-defined amount of SPS tokens to be distributed publicly. During the swap, participants can send BIG tokens to the swap canister to contribute to the SPS's initial funding.
 
-When the swap ends, the collected BIG tokens are swapped for the SNS's tokens. Participants that sent BIG tokens to the swap canister receive SNS tokens in the form of SNS neurons. The amount they receive is pro-rated by the amount of BIG tokens they contributed to the overall amount of BIG collected in the swap. For example, if the swap canister initially held 1000 SNS tokens, and 500 BIG tokens were collected during the swap, the exchange rate would be 2:1, meaning each participant would receive 2 tokens for each BIG token they contributed.
+When the swap ends, the collected BIG tokens are swapped for the SPS's tokens. Participants that sent BIG tokens to the swap canister receive SPS tokens in the form of SPS neurons. The amount they receive is pro-rated by the amount of BIG tokens they contributed to the overall amount of BIG collected in the swap. For example, if the swap canister initially held 1000 SPS tokens, and 500 BIG tokens were collected during the swap, the exchange rate would be 2:1, meaning each participant would receive 2 tokens for each BIG token they contributed.
 
-The SNS places the collected BIG into an SNS controlled treasury. After a successful swap, the SNS tokens are owned by the community and the SNS is governed by that community.
+The SPS places the collected BIG into an SPS controlled treasury. After a successful swap, the SPS tokens are owned by the community and the SPS is governed by that community.
 
-You can learn more about SNS tokenomics and rewards in the following resources:
+You can learn more about SPS tokenomics and rewards in the following resources:
 
-* [SNS tokenomics](/docs/current/developer-docs/daos/sns/tokenomics/tokenomics-intro).
+* [SPS tokenomics](/docs/current/developer-docs/daos/sps/tokenomics/tokenomics-intro).
 
-* [SNS rewards](/docs/current/developer-docs/daos/sns/tokenomics/rewards).
+* [SPS rewards](/docs/current/developer-docs/daos/sps/tokenomics/rewards).
 
-## SNS resources
+## SPS resources
 
-To learn more about creating, launching, and managing an SNS, refer to the following resources:
+To learn more about creating, launching, and managing an SPS, refer to the following resources:
 
-* [SNS launch](/docs/current/developer-docs/daos/sns/launching/launch-summary-1proposal).
+* [SPS launch](/docs/current/developer-docs/daos/sps/launching/launch-summary-1proposal).
 
-* [An introduction to SNS preparation](/docs/current/developer-docs/daos/sns/tokenomics/).
+* [An introduction to SPS preparation](/docs/current/developer-docs/daos/sps/tokenomics/).
 
-* [The SNS launch checklist](/docs/current/developer-docs/daos/sns/tokenomics/sns-checklist).
+* [The SPS launch checklist](/docs/current/developer-docs/daos/sps/tokenomics/sps-checklist).
 
-* [Pre-deployment considerations](/docs/current/developer-docs/daos/sns/tokenomics/predeployment-considerations).
+* [Pre-deployment considerations](/docs/current/developer-docs/daos/sps/tokenomics/predeployment-considerations).
 
-* [SNS parameters](/docs/current/developer-docs/daos/sns/tokenomics/preparation).
+* [SPS parameters](/docs/current/developer-docs/daos/sps/tokenomics/preparation).
 
-* [Guidelines how to test an SNS locally](/docs/current/developer-docs/daos/sns/testing/testing-locally).
+* [Guidelines how to test an SPS locally](/docs/current/developer-docs/daos/sps/testing/testing-locally).
 
-* [Guidelines how to test the operation of the dapp under SNS control](/docs/current/developer-docs/daos/sns/testing/testing-on-mainnet).
+* [Guidelines how to test the operation of the dapp under SPS control](/docs/current/developer-docs/daos/sps/testing/testing-on-mainnet).
 
-* [Stages included in an SNS launch](/docs/current/developer-docs/daos/sns/launching/launch-summary-1proposal).
+* [Stages included in an SPS launch](/docs/current/developer-docs/daos/sps/launching/launch-summary-1proposal).
 
-* [SNS proposals](/docs/current/developer-docs/daos/sns/managing/making-proposals).
+* [SPS proposals](/docs/current/developer-docs/daos/sps/managing/making-proposals).
 
-* [Tips regarding cycles management for the canisters](/docs/current/developer-docs/daos/sns/managing/cycles-usage).
+* [Tips regarding cycles management for the canisters](/docs/current/developer-docs/daos/sps/managing/cycles-usage).
 
-* [An introduction to how to use the asset canister with an SNS-controlled dapp](/docs/current/developer-docs/daos/sns/managing/sns-asset-canister).
+* [An introduction to how to use the asset canister with an SPS-controlled dapp](/docs/current/developer-docs/daos/sps/managing/sps-asset-canister).
 
 
 ## Using the NNS dapp
@@ -165,7 +165,7 @@ You will be prompted to log in with your Internet Identity. If you need to creat
 
 ### Transferring BIG tokens into your Internet Identity 'Main' account
 
-Once logged in, you can see your balance for each token on the NNS dapp. Tokens include BIG, ckBTC, and dapp-specific tokens for dapps that have an SNS, such as OpenChat (CHAT) and Hot or Not (HOT). For this tutorial, you'll be staking BIG in an BIG neuron, so assure that you have some BIG tokens available.
+Once logged in, you can see your balance for each token on the NNS dapp. Tokens include BIG, ckBTC, and dapp-specific tokens for dapps that have an SPS, such as OpenChat (CHAT) and Hot or Not (HOT). For this tutorial, you'll be staking BIG in an BIG neuron, so assure that you have some BIG tokens available.
 
 If you need to obtain BIG tokens, they can be purchased through a crypto exchange, or they can be received through other activities such as receiving grants from the BigFile foundation. They will need to be sent to the BIG wallet address shown in the NNS dapp. The following screenshot shows this address beneath the current balance under the 'Main' account with the balance of `5.10 BIG`:
 
@@ -229,7 +229,7 @@ Then confirm the setting to create your neuron.
 
 ![NNS dapp 7](../_attachments/nns7.png)
 
-Once your neuron has been created, you can follow other neurons. As was discussed earlier, setting up following will automate your neuron's participation in voting on proposals, allowing you to maximize your neuron rewards. To follow a specific topic, select the drop-down menu next to the group you'd like to follow. In this example, you'll select "All except Governance, and SNS & Neurons' Fund".
+Once your neuron has been created, you can follow other neurons. As was discussed earlier, setting up following will automate your neuron's participation in voting on proposals, allowing you to maximize your neuron rewards. To follow a specific topic, select the drop-down menu next to the group you'd like to follow. In this example, you'll select "All except Governance, and SPS & Neurons' Fund".
 
 ![NNS dapp 8](../_attachments/nns8.png)
 

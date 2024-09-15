@@ -59,7 +59,7 @@ export const dfinityToolingItems = [
     title: "sns-quill",
     tags: ["CLI"],
     description:
-      "Cold wallet toolkit for interacting with the ledger and governance canister of a service nervous system (SNS).",
+      "Cold wallet toolkit for interacting with the ledger and governance canister of a service nervous system (SPS).",
     links: { github: "https://github.com/dfinity/sns-quill" },
   },
   {

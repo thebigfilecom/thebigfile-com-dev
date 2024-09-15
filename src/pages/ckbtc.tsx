@@ -157,7 +157,7 @@ function CkbtcPage(): JSX.Element {
                 around satoshis with ease, and at the speed of a chat message.
               </p>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-                OpenChat is controlled an SNS DAO, making owners of its CHAT
+                OpenChat is controlled an SPS DAO, making owners of its CHAT
                 governance token the custodians of the OpenChat networks future.
               </p>
               <Link
@@ -320,7 +320,7 @@ function CkbtcPage(): JSX.Element {
                   <h3 className="tw-heading-5 mb-2 mt-8">ICP.Swap</h3>
                   <p className="tw-lead-sm mb-0 text-black/60">
                     Offers the largest number of tokens on the Internet
-                    Computer. Trade meme coins or SNS DAO tokens.
+                    Computer. Trade meme coins or SPS DAO tokens.
                   </p>
                 </Link>
               </motion.div>

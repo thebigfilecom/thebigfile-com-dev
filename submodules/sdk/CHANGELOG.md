@@ -1099,12 +1099,12 @@ Configurable limits:
 
 Added methods:
 - `configure()` to set limits
-- `validate_configure()`: companion method for SNS
+- `validate_configure()`: companion method for SPS
 - `get_configuration()`: to view limits
 
 Suggestions for configured limits:
-- dapps controlled by SNS: max_batches=1; max_chunks and max_bytes based on asset composition.
-- dapps not controlled by SNS: unlimited (which is the default)
+- dapps controlled by SPS: max_batches=1; max_chunks and max_bytes based on asset composition.
+- dapps not controlled by SPS: unlimited (which is the default)
 
 Note that as always, if `dfx deploy` does not completely upload and commit a batch, the asset canister will retain the batch until 5 minutes have passed since the last chunk was uploaded.  If you have configured limits and the combination of an unsuccessful deployment and a subsequent attempt would exceed those limits, you can either wait 5 minutes before running `dfx deploy` again, or delete the incomplete batch with `delete_batch()`.
 
@@ -1419,11 +1419,11 @@ Before it was possible that a user could send 2 ledger transfers with the same a
 
 ### feat: `dfx deploy <frontend canister name> --by-proposal`
 
-This supports asset updates through SNS proposal.
+This supports asset updates through SPS proposal.
 
 Uploads asset changes to an asset canister (propose_commit_batch()), but does not commit them.
 
-The SNS will call `commit_proposed_batch()` to commit the changes.  If the proposal fails, the caller of `dfx deploy --by-proposal` should call `delete_batch()`.
+The SPS will call `commit_proposed_batch()` to commit the changes.  If the proposal fails, the caller of `dfx deploy --by-proposal` should call `delete_batch()`.
 
 ### feat: `dfx deploy <frontend canister name> --compute-evidence`
 
@@ -1433,7 +1433,7 @@ No permissions are required to compute evidence, so this can be called with `--i
 
 ## Asset Cube
 
-Added `validate_take_ownership()` method so that an SNS is able to add a custom call to `take_ownership()`.
+Added `validate_take_ownership()` method so that an SPS is able to add a custom call to `take_ownership()`.
 
 Added `is_aliased` field to `get_asset_properties` and `set_asset_properties`.
 
@@ -1446,7 +1446,7 @@ Added partial support for proposal-based asset updates:
   - `delete_batch()` deletes a batch, intended for use after compute_evidence if cancellation needed
   - `compute_evidence()` computes a hash ("evidence") over the proposed batch arguments. Once evidence computation is complete, batch will not expire.
   - `commit_proposed_batch()` commits batch previously proposed (must have evidence computed)
-  - `validate_commit_proposed_batch()` required validation method for SNS
+  - `validate_commit_proposed_batch()` required validation method for SPS
 
 Added `api_version` endpoint. With upcoming changes we will introduce breaking changes to asset canister's batch upload process. New endpoint will help `ic-asset` with differentiation between API version, and allow it to support all versions of the asset canister.
 
@@ -1504,7 +1504,7 @@ Started bundling ic-btc-canister, release 2023-03-31
 
 ## Asset Cube
 
-Added validate_grant_permission() and validate_revoke_permission() methods per SNS requirements.
+Added validate_grant_permission() and validate_revoke_permission() methods per SPS requirements.
 
 ## Dependencies
 
@@ -1519,7 +1519,7 @@ Added validate_grant_permission() and validate_revoke_permission() methods per S
 
 ### feat: Add dfx sns download
 
-This allows users to download SNS canister WASMs.
+This allows users to download SPS canister WASMs.
 
 ### fix: fixed error text
 - `dfx nns install` had the wrong instructions for setting up the local replica type
@@ -1725,9 +1725,9 @@ This change will trigger the update process for frontend canister (new module ha
 
 ### feat: warn if an unencrypted identity is used on mainnet
 
-### fix: Save SNS canister IDs
+### fix: Save SPS canister IDs
 
-SNS canister IDs were not being parsed reliably.  Now the candid file is being specified explicitly, which resolves the issue in at least some cases.
+SPS canister IDs were not being parsed reliably.  Now the candid file is being specified explicitly, which resolves the issue in at least some cases.
 
 ### feat: NNS usability improvements
 
@@ -1826,7 +1826,7 @@ Hyphens are not valid in shell environment variables, but do occur in canister n
 
 ### feat: Add dfx sns deploy
 
-This allows users to deploy a set of SNS canisters.
+This allows users to deploy a set of SPS canisters.
 
 ### fix: `cargo run -p dfx -- --version` prints correct version
 
@@ -1840,7 +1840,7 @@ When using `dfx canister install`, you can now pass `auto` for the `--mode` flag
 
 ### feat: sns config validate
 
-There is a new command that verifies that an SNS initialization config is valid.
+There is a new command that verifies that an SPS initialization config is valid.
 
 ### feat: sns config create
 
@@ -1850,7 +1850,7 @@ There is a new command that creates an sns config template.
 
 The wasms dir path had a $ which is unwanted and now gone.
 
-### fix: Correct wasm for the SNS swap canister
+### fix: Correct wasm for the SPS swap canister
 
 Previously the incorrect wasm canister was installed.
 

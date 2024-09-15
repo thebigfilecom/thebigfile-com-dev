@@ -17,7 +17,7 @@ use super::{ParsedSnsNeuron, SnsCanisterIds};
 /// followed neurons do.
 ///
 /// Follow relationships are granular by the purpose of a proposal, e.g. you can follow a neuron
-/// only for votes on transferring SNS treasury funds. There are several built-in proposal
+/// only for votes on transferring SPS treasury funds. There are several built-in proposal
 /// functions which this command accepts by name, but new ones can be added at any time via
 /// AddGenericNervousSystemFunction proposals and those must be addressed by integer ID.
 #[derive(Parser)]

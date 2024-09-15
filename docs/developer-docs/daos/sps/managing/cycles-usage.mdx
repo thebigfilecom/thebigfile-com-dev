@@ -1,0 +1,116 @@
+---
+keywords: [advanced, governance, concept, sns, cycles management]
+---
+
+import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
+
+# SPS cycle management
+
+<MarkdownChipRow labels={["Advanced", "Governance", "Concept"]} />
+
+## Overview
+:::caution
+An SPS community must ensure that all SPS and dapp canisters
+have sufficient cycles by manually sending cycles when necessary to
+**each individual SPS canister**.
+
+
+- **Manually** means that someone has to monitor the cycles of the
+   canisters and actively make calls to send additional cycles to them
+   when the canisters' cycles balance get low.
+
+- This process has to be repeated for **each individual SPS canister**
+and also for **each dapp canister**.
+
+
+
+At least the latter is not new to developers who built a dapp on BIG.
+Nevertheless, it should be underlined the importance of this in the context
+of an SPS: **if the SPS governance or SPS ledger canister run out of cycles
+and get deleted, this is of course critical as users lose their
+liquid and staked tokens and as the dapp canisters cannot be governed
+anymore.**
+Also, as the SPS canisters are owned by a community, some
+coordination might be needed to ensure that some individuals
+feel responsible for these steps.
+
+:::
+
+## Cycles in the archive canisters
+The SPS community should be aware of most SPS and associated dapp
+canisters are either installed when the SPS is initiated or they are
+explicitly added to the SPS by a proposal.
+One exception are the **archive canisters** of the ledger canister.
+Due to limited storage, the ledger cannot keep all blocks forever and
+thus it spawns separate archive canisters to do so.
+The ledger spawning a new archive affects the cycles as follows:
+The ledger takes a predefined number *X* of cycles from its current
+cycle balance and creates the archive with these *X* cycles as the
+initial balance. The number *X* is set when the SPS ledger canister is
+first initialized.
+
+This specifically means that SPS communities should be aware of the
+following:
+:::caution
+The SPS ledger canister automatically spawns new archive
+canisters.
+When this happens, the cycles balance of these new canisters has
+to be managed. The ledger's cycles balance decreases by a
+significant amount if a new archive is spawned.
+If an archive canister runs out of cycles,
+ledger blocks might be lost.
+:::
+
+To help SPS communities manage cycles, the SPS is initiated as follows:
+* SPS canisters are started with already a large number of cycles,
+  namely 180T
+* the SPS ledger is started with 60T (2*30T) cycles such
+  that when the first archive is spawn,
+  both should have roughly 30T cycles (as have all other SPS
+  canisters when they are installed).
+
+
+## How to observe and manage the canisters' cycles
+Next, it is described in more detail how you can monitor and manage the
+cycles of the SPS and dapp canisters.
+
+### Step 1: Find all SPS and governed dapp canisters and their cycle balance.
+SPS root knows about all these canisters and their cycles.
+You can get all the SPS and associated dapp canisters' status,
+which includes the cycles, by using the SPS root canister's method
+`get_sns_canisters_summary`.
+<!-- dfx, dashboard?-->
+
+### Step 2: Send new cycles to a given canister.
+If the first step shows that one of SPS or dapp canisters runs
+low on cycles, you can top up the canister's cycles.
+
+To do this, you need a wallet with sufficient cycles.
+In an SPS, can look for people who donate cycles in this way.
+You can find [here](/docs/current/developer-docs/production/topping-up-canister/#option-2-if-you-have-cycles-on-your-cycles-wallet) how to transfer cycles from a wallet to any other canister (which can be a dapp or SPS canister).
+
+Otherwise, you can make a proposal that transfers some BIG
+from the SPS treasury to an individual who is trusted to convert these to cycles and make such payments.
+You can find [here](./making-proposals.mdx) how to make such a proposal.
+
+<!--## Helpful community tools
+- Is referring to community tools sth that we do? (think it would be nice)
+Ask authors of tools for permission
+-->
+
+## The (possible) future of cycles management
+As this page shows, the current management of cycles is
+quite some work.
+Therefore the community is thinking about some enhancements
+might be added in the future. Some examples are:
+
+- **Cube groups**: canister groups would allow to manage
+   the cycles for groups of canisters rather than for
+   individual canisters. If all SPS and SPS-governed dapp
+   canister could be in the same group, this might considerably
+   simplify SPS cycles management.
+
+- **SPS enhancements to automate some cycle management**: it is
+conceivable that the task of taking BIG from the SPS's treasury,
+   converting them to cycles, and sending those cycles to the
+   SPS canisters can be automated at least to some extent.

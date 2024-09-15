@@ -194,11 +194,11 @@ Should be one of:
 - Registry: {registry}
 - ckBTC minter: {ckbtc_minter}
 - ckBTC ledger: {ckbtc}
-- SNS-WASM: {sns_wasm}
-- SNS Governance
-- SNS Ledger
-- SNS Root
-- SNS Swap",
+- SPS-WASM: {sns_wasm}
+- SPS Governance
+- SPS Ledger
+- SPS Root
+- SPS Swap",
             ledger = ledger_canister_id(),
             governance = governance_canister_id(),
             genesis = genesis_token_canister_id(),

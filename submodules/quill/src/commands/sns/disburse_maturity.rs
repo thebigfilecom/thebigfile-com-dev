@@ -15,15 +15,15 @@ use crate::{
 
 use super::{governance_account, ParsedSnsNeuron, SnsCanisterIds};
 
-/// Converts the maturity from a neuron into SNS utility tokens.
+/// Converts the maturity from a neuron into SPS utility tokens.
 #[derive(Parser)]
 pub struct DisburseMaturityOpts {
     /// The neuron ID to disburse maturity from.
     neuron_id: ParsedSnsNeuron,
-    /// The account to transfer the SNS utility tokens to. If not provided, defaults to the caller.
+    /// The account to transfer the SPS utility tokens to. If not provided, defaults to the caller.
     #[clap(long, required_unless_present = "auth")]
     to: Option<ParsedAccount>,
-    /// The subaccount to transfer the SNS utility tokens to.
+    /// The subaccount to transfer the SPS utility tokens to.
     #[clap(long)]
     subaccount: Option<ParsedSubaccount>,
     /// The percentage, as a number from 1 to 100, of the maturity to disburse.
