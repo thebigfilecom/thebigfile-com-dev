@@ -15,8 +15,8 @@ import {
   MediumDaoCard,
   MediumDaoCardContainer,
   SmallDaoCard,
-} from "../components/SnsPage/DaoCard";
-import OpenChatCard from "../components/SnsPage/OpenChatCard";
+} from "../components/SpsPage/DaoCard";
+import OpenChatCard from "../components/SpsPage/OpenChatCard";
 import {
   dashboardUrlFromRootCanisterId,
   extraMetadata,
@@ -222,7 +222,7 @@ function SnsPage() {
               <Link className="button-primary" href="#sns-dapps">
                 Join an SNS DAO community
               </Link>
-              <Link className="button-outline" href="/sns/faq">
+              <Link className="button-outline" href="/sps/faq">
                 How to participate (FAQ)
               </Link>
             </motion.p>
@@ -234,7 +234,7 @@ function SnsPage() {
         <section className="container-10 pt-20 md:pt-30">
           <AnimateSpawn className="text-center" variants={transitions.item}>
             <h2 className="tw-heading-4 md:tw-heading-60 mb-0 max-w-[660px] md:mx-auto">
-              Why join an SNS DAO community?
+              Why join an SPS DAO community?
             </h2>
           </AnimateSpawn>
 
@@ -288,9 +288,9 @@ function SnsPage() {
               href="/docs/current/developer-docs/daos/sns"
             />
             <CardWithDescription
-              title="FAQ: How to join and participate in an SNS DAO"
+              title="FAQ: How to join and participate in an SPS DAO"
               description=""
-              href="/sns/faq"
+              href="/sps/faq"
             />
             <CardWithDescription
               title="Get SNS governance 

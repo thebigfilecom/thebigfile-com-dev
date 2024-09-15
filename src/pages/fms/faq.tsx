@@ -30,8 +30,8 @@ function SnsFaqPage() {
           <Breadcrumbs
             links={[
               {
-                href: "/sns",
-                text: "SNS",
+                href: "/sps",
+                text: "SPS",
               },
               {
                 text: " What you need to know about SNS DAOs",
@@ -798,8 +798,8 @@ function SnsFaqPage() {
           el={motion.section}
         >
           <SmallCardWithDescription
-            href="/sns"
-            title="SNS DAO Basics"
+            href="/sps"
+            title="SPS DAO Basics"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
             href="https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c"

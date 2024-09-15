@@ -264,7 +264,7 @@ const marketingNav = {
           items: [
             {
               name: "DAOs on BigFile",
-              href: "/sns",
+              href: "/sps",
               description: "Community-owned services",
             },
             {

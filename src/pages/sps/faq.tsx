@@ -30,8 +30,8 @@ function SnsFaqPage() {
           <Breadcrumbs
             links={[
               {
-                href: "/sns",
-                text: "SNS",
+                href: "/sps",
+                text: "SPS",
               },
               {
                 text: " What you need to know about SNS DAOs",
@@ -826,8 +826,8 @@ function SnsFaqPage() {
           el={motion.section}
         >
           <SmallCardWithDescription
-            href="/sns"
-            title="SNS DAO Basics"
+            href="/sps"
+            title="SPS DAO Basics"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
             href="https://youtu.be/nZBWx6y070Y"

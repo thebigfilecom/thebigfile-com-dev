@@ -1,6 +1,6 @@
 import snsDataJson from "@site/.docusaurus/sns-data/default/sns-data.json";
 import React from "react";
-import { DaoCardProps } from "../components/SnsPage/DaoCard";
+import { DaoCardProps } from "../components/SpsPage/DaoCard";
 
 export const snsData = snsDataJson as any as {
   name: string;
