@@ -138,7 +138,7 @@ const cardsData: CardData[] = [
     description:
       "The BigFile allows developers to turn their dapps into a DAO to achieve full decentralization — 100% on-chain",
     image: "/img/features/sns-image.webp",
-    href: "/sns",
+    href: "/sps",
     refText: "Overview of BigFile DAOs",
     imageSide: "left",
   },

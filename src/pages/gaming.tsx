@@ -259,7 +259,7 @@ function GamingPage() {
                 className="flex flex-col sm:flex-row items-start md:items-center gap-6 md:gap-8 mb-0"
                 variants={transitions.item}
               >
-                <Link className="link-primary link-with-icon" href="/sns">
+                <Link className="link-primary link-with-icon" href="/sps">
                   <LinkArrowRight />
                   More on BIG DAOs
                 </Link>
