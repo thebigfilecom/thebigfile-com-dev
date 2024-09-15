@@ -253,7 +253,7 @@ const Search: FC<{ onClose: () => void }> = ({ onClose }) => {
               <div className="flex flex-col px-4 pt-6 pb-14 shadow-[inset_0px_4px_4px_rgba(51,51,51,0.07)]">
                 <div className="flex flex-col gap-6 items-center py-20">
                   <img
-                    src="/img/astronaut-no-result.png"
+                    src="/img/big-search.png"
                     alt=""
                     className="w-24"
                   />
