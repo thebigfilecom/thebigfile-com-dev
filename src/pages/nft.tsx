@@ -97,7 +97,7 @@ function NftPage() {
   return (
     <Layout
       title="NFTs"
-      description={`The BigFile is the only blockchain storing all components of an NFT on the blockchain, including assets. This opens up capabilities for ICP NFTs that go way beyond "overpriced links to JPGs".`}
+      description={`The BigFile is the only blockchain storing all components of an NFT on the blockchain, including assets. This opens up capabilities for BIG NFTs that go way beyond "overpriced links to JPGs".`}
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <Head>

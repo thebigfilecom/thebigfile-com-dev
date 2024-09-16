@@ -67,7 +67,7 @@ const InternetIdentity = () => {
             Unlock authentication with your device via FaceID, fingerprint
             sensor or use a YubiKey. This provides strong security, as the
             cryptographic key never leaves your device. No passwords are used to
-            authenticate on ICP.
+            authenticate on BIG.
           </p>
         </motion.div>
 

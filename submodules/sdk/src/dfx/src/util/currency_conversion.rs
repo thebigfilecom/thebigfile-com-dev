@@ -7,12 +7,12 @@ use fn_error_context::context;
 use ic_agent::{agent::http_transport::ReqwestTransport, Agent};
 use rust_decimal::Decimal;
 
-/// How many cycles you get per XDR when converting ICP to cycles
+/// How many cycles you get per XDR when converting BIG to cycles
 const CYCLES_PER_XDR: u128 = 1_000_000_000_000;
 
-/// This returns how many cycles the amount of ICP/e8s is currently worth.
+/// This returns how many cycles the amount of BIG/e8s is currently worth.
 /// Fetches the exchange rate from the (hardcoded) BIG network.
-#[context("Encountered a problem while fetching the exchange rate between ICP and cycles. If this issue continues to happen, please specify an amount in cycles directly.")]
+#[context("Encountered a problem while fetching the exchange rate between BIG and cycles. If this issue continues to happen, please specify an amount in cycles directly.")]
 pub async fn as_cycles_with_current_exchange_rate(icpts: &ICPTs) -> DfxResult<u128> {
     let agent = Agent::builder()
         .with_transport(

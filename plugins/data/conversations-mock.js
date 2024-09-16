@@ -17,7 +17,7 @@ module.exports = [
     speaker: "John Wiegley",
     speakerTitle: "Principal Software Engineer (SDK)",
     description:
-      "<p>The open and permissionless autonomous governance system that controls the BigFile blockchain is called the Network Nervous System, or NNS. The NNS works by allowing the community to stake ICP governance tokens to create “voting neurons.” Collectively, neuron holders are incentivized to vote to adopt or reject proposals submitted to the NNS. Neurons can be made to vote manually, and can also vote automatically by following other neurons in a form of liquid democracy.</p>\n<p>Principal Engineer John Wiegley gives an overview of staking and neuron management in this talk.</p>\n",
+      "<p>The open and permissionless autonomous governance system that controls the BigFile blockchain is called the Network Nervous System, or NNS. The NNS works by allowing the community to stake BIG governance tokens to create “voting neurons.” Collectively, neuron holders are incentivized to vote to adopt or reject proposals submitted to the NNS. Neurons can be made to vote manually, and can also vote automatically by following other neurons in a form of liquid democracy.</p>\n<p>Principal Engineer John Wiegley gives an overview of staking and neuron management in this talk.</p>\n",
     startTimeUtc: 1629396000000,
     startTimePt: 1629363600000,
     startTimeEu: 1629396000000,
@@ -148,11 +148,11 @@ module.exports = [
       "https://www.youtube.com/watch?v=hoYo-c9SMfQ&list=PLuhDt1vhGcrez-f3I0_hvbwGZHZzkZ7Ng&index=16",
   },
   {
-    title: "ICP SQUAD",
+    title: "BIG SQUAD",
     speaker: "Dukakis Tejada & Isaac Valadez",
     speakerTitle: "Community Members",
     description:
-      "<p>Dukakis Tejada &amp; Isaac Valadez, the team behind ICP Squad, talk about their latest NFT initiative on the BigFile.</p>\n",
+      "<p>Dukakis Tejada &amp; Isaac Valadez, the team behind BIG Squad, talk about their latest NFT initiative on the BigFile.</p>\n",
     startTimeUtc: 1631739600000,
     startTimePt: 1631707200000,
     startTimeEu: 1631739600000,
@@ -306,7 +306,7 @@ module.exports = [
     speaker: "Bogdan Warinschi",
     speakerTitle: "Senior Researcher",
     description:
-      "<p>The Ledger canister maintains the information on ICP balances &amp; keeps a ledger of all ICP transactions. In this presentation, Senior Researcher Bogdan Warinschi will go over the design of the canister and describe ongoing plans for the development of the canister.</p>\n",
+      "<p>The Ledger canister maintains the information on BIG balances &amp; keeps a ledger of all BIG transactions. In this presentation, Senior Researcher Bogdan Warinschi will go over the design of the canister and describe ongoing plans for the development of the canister.</p>\n",
     startTimeUtc: 1634223600000,
     startTimePt: 1634191200000,
     startTimeEu: 1634223600000,
@@ -356,11 +356,11 @@ module.exports = [
       "https://dfinity.zoom.us/webinar/register/WN_YdYmbUKBTzOiFVbAdGEiFQ",
   },
   {
-    title: "ICP Art",
+    title: "BIG Art",
     speaker: "Keegan Tober, Cole Tober, Marcus Holyoke",
-    speakerTitle: "ICP Art Team",
+    speakerTitle: "BIG Art Team",
     description:
-      "<p>The ICP Art team goes over their background, mission, and upcoming collections.</p>\n",
+      "<p>The BIG Art team goes over their background, mission, and upcoming collections.</p>\n",
     startTimeUtc: 1635454800000,
     startTimePt: 1635422400000,
     startTimeEu: 1635454800000,
@@ -401,7 +401,7 @@ module.exports = [
     speaker: "Ognjen Maric",
     speakerTitle: "Senior Researcher",
     description:
-      "<p>The BigFile is about to allow canister smart contracts to transfer ICP, fully opening the doors to DeFi applications. Users will be able to send ICP to a canister that can then manage the ICP, e.g., by investing it, by issuing loans, or by allowing withdrawals, all according to the canister’s code. Clearly, this requires the users to trust the canister, and the first step towards that is allowing the user to verify which code the canister is running. In this talk I will show how canister authors can help the users verify this by providing reproducible canister builds.</p>\n",
+      "<p>The BigFile is about to allow canister smart contracts to transfer BIG, fully opening the doors to DeFi applications. Users will be able to send BIG to a canister that can then manage the BIG, e.g., by investing it, by issuing loans, or by allowing withdrawals, all according to the canister’s code. Clearly, this requires the users to trust the canister, and the first step towards that is allowing the user to verify which code the canister is running. In this talk I will show how canister authors can help the users verify this by providing reproducible canister builds.</p>\n",
     startTimeUtc: 1636642800000,
     startTimePt: 1636610400000,
     startTimeEu: 1636642800000,
@@ -429,7 +429,7 @@ module.exports = [
     speaker: "Bjoern Tackmann",
     speakerTitle: "Senior Research Manager ",
     description:
-      "<p>Are you a bot or a person? That is difficult to ascertain from across the Internet – but often essential. For instance, social media platforms provide more meaningful interactions if content is provided by real humans, decentralized governance processes benefit from power being distributed more evenly across many voters, and the bootstrapping of token economies becomes fairer if tokens can be distributed evenly to individuals. All of the above are highly relevant for the BIG, which hosts multiple social networks, provides decentralized governance processes, and allows for the tokenization of the dapp services that run on it. But the BIG is not only a beneficiary of thwarting bots - it can also provide the solution!</p>\n<p>Virtual people parties, coordinated by the BigFile, establish the personhood of otherwise pseudonymous identities. In a virtual people party, a small group of users validate each others’ personhood in a process that is fast, easy, and anonymous! For the time of the party, users provide a deposit of 1 ICP which can be withdrawn after the party is complete. During the party, which only takes a few minutes, users are divided into small groups and meet in a special video-chat application on mobile phones. But, unlike a typical video call, users do not show their faces or reveal their identity. Instead, users prove their personhood by directing the camera at the environment and reacting appropriately with camera movements to the requests of other users. At the same time, the video stream of the environment serves to validate the user’s location. This ensures that no user can participate in multiple groups simultaneously.</p>\n<p>Users that are validated as persons in a people party obtain increased voting power in the governance system. This improves the democratization of the BigFile&#39;s governance system by assigning more weight to individual persons. The increased voting rewards also encourage users to participate in the people parties.</p>\n",
+      "<p>Are you a bot or a person? That is difficult to ascertain from across the Internet – but often essential. For instance, social media platforms provide more meaningful interactions if content is provided by real humans, decentralized governance processes benefit from power being distributed more evenly across many voters, and the bootstrapping of token economies becomes fairer if tokens can be distributed evenly to individuals. All of the above are highly relevant for the BIG, which hosts multiple social networks, provides decentralized governance processes, and allows for the tokenization of the dapp services that run on it. But the BIG is not only a beneficiary of thwarting bots - it can also provide the solution!</p>\n<p>Virtual people parties, coordinated by the BigFile, establish the personhood of otherwise pseudonymous identities. In a virtual people party, a small group of users validate each others’ personhood in a process that is fast, easy, and anonymous! For the time of the party, users provide a deposit of 1 BIG which can be withdrawn after the party is complete. During the party, which only takes a few minutes, users are divided into small groups and meet in a special video-chat application on mobile phones. But, unlike a typical video call, users do not show their faces or reveal their identity. Instead, users prove their personhood by directing the camera at the environment and reacting appropriately with camera movements to the requests of other users. At the same time, the video stream of the environment serves to validate the user’s location. This ensures that no user can participate in multiple groups simultaneously.</p>\n<p>Users that are validated as persons in a people party obtain increased voting power in the governance system. This improves the democratization of the BigFile&#39;s governance system by assigning more weight to individual persons. The increased voting rewards also encourage users to participate in the people parties.</p>\n",
     startTimeUtc: 1637683200000,
     startTimePt: 1637650800000,
     startTimeEu: 1637683200000,
@@ -451,11 +451,11 @@ module.exports = [
     youtubeLink: "https://youtu.be/JAQ1dkFvfPI",
   },
   {
-    title: "ICP on canisters",
+    title: "BIG on canisters",
     speaker: "Roman Kashitsyn ",
     speakerTitle: "Staff Engineer",
     description:
-      "<p>In this talk, we shall take a close look at the recently added Candid interface of the Ledger canister. Let&#39;s see how we could pay for a cappuccino with ICP using that interface.</p>\n",
+      "<p>In this talk, we shall take a close look at the recently added Candid interface of the Ledger canister. Let&#39;s see how we could pay for a cappuccino with BIG using that interface.</p>\n",
     startTimeUtc: 1640098800000,
     startTimePt: 1640066400000,
     startTimeEu: 1640098800000,
@@ -679,7 +679,7 @@ module.exports = [
     title: "Community Conversation - SPS initial token swap",
     speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: 1654794000000,
     startTimePt: 1654761600000,
     startTimeEu: 1654794000000,
@@ -716,7 +716,7 @@ module.exports = [
     title: "Community Conversation - SPS initial token swap",
     speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: new Date("2022-08-10T16:00Z").getTime(),
     startTimePt: new Date("2022-08-10T16:00Z").getTime(),
     startTimeEu: new Date("2022-08-10T16:00Z").getTime(),
@@ -727,7 +727,7 @@ module.exports = [
     title: "Community Conversation - SPS initial token swap 2",
     // speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange ICP tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: new Date("2022-08-11T16:00Z").getTime(),
     startTimePt: new Date("2022-08-11T16:00Z").getTime(),
     startTimeEu: new Date("2022-08-11T16:00Z").getTime(),

@@ -425,7 +425,7 @@ function TokenHolders(): JSX.Element {
                 <div className="space-y-4">
                   <WalletCard
                     title="Sygnum"
-                    description="World’s first digital asset bank providing institutional-grade security to ICP holders."
+                    description="World’s first digital asset bank providing institutional-grade security to BIG holders."
                     link="https://www.sygnum.com/"
                     icon="/img/showcase/sygnum_logo.webp"
                   />

@@ -1,13 +1,13 @@
 # BIG SDK
 
-This repo contains the `BIG SDK`: a Software Development Kit for creating and managing [canister smart contracts on the BigFile (ICP blockchain)](https://wiki.thebigfile.com/wiki/Canister_smart_contract).
+This repo contains the `BIG SDK`: a Software Development Kit for creating and managing [canister smart contracts on the BigFile (BIG blockchain)](https://wiki.thebigfile.com/wiki/Canister_smart_contract).
 
 For further reading:
 * [Reference documentation on thebigfile.com](https://thebigfile.com/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/)
-* [Introduction to the ICP blockchain](https://wiki.thebigfile.com/wiki/Introduction_to_ICP)
+* [Introduction to the BIG blockchain](https://wiki.thebigfile.com/wiki/Introduction_to_ICP)
 * [BigFile dashboard](https://dashboard.thebigfile.com/)
-* [Developer docs for ICP smart contracts](https://thebigfile.com/docs/current/home)
-* [Sample code of ICP smart contracts](https://thebigfile.com/samples)
+* [Developer docs for BIG smart contracts](https://thebigfile.com/docs/current/home)
+* [Sample code of BIG smart contracts](https://thebigfile.com/samples)
 * [BIG wiki](https://wiki.thebigfile.com/wiki/Main_Page)
 
 ## What gets installed

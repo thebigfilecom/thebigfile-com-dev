@@ -33,7 +33,7 @@ const MotionLink = motion(Link);
             className="tw-paragraph md:tw-lead mb-6 md:mb-10"
             variants={transitions.item}
           >
-            The ICP community is currently active in around 30 countries and
+            The BIG community is currently active in around 30 countries and
             collaborates with up to 50 well-known crypto organizations and 32
             universities. Haven't joined yet? What are you waiting for?
           </motion.p>

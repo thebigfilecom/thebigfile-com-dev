@@ -15,7 +15,7 @@ use slog::info;
 const DEFAULT_CYCLES_TO_FABRICATE: u128 = 10_000_000_000_000_u128;
 
 /// Local development only: Fabricate cycles out of thin air and deposit them into the specified canister(s).
-/// Can specify a number of ICP/e8s (which will be converted to cycles using the current exchange rate) or a number of cycles.
+/// Can specify a number of BIG/e8s (which will be converted to cycles using the current exchange rate) or a number of cycles.
 /// If no amount is specified, 10T cycles are added.
 #[derive(Parser)]
 pub struct FabricateCyclesOpts {
@@ -30,7 +30,7 @@ pub struct FabricateCyclesOpts {
     )]
     cycles: Option<u128>,
 
-    /// ICP to mint into cycles and deposit into destination canister
+    /// BIG to mint into cycles and deposit into destination canister
     /// Can be specified as a Decimal with the fractional portion up to 8 decimal places
     /// i.e. 100.012
     #[arg(
@@ -42,7 +42,7 @@ pub struct FabricateCyclesOpts {
     )]
     amount: Option<ICPTs>,
 
-    /// Specify ICP as a whole number, helpful for use in conjunction with `--e8s`
+    /// Specify BIG as a whole number, helpful for use in conjunction with `--e8s`
     #[arg(
         long,
         value_parser = e8s_parser,

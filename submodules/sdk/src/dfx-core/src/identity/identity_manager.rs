@@ -729,7 +729,7 @@ fn initialize(
     slog::info!(
         logger,
         r#"Creating the "default" identity.
-WARNING: The "default" identity is not stored securely. Do not use it to control a lot of cycles/ICP.
+WARNING: The "default" identity is not stored securely. Do not use it to control a lot of cycles/BIG.
 To create a more secure identity, create and use an identity that is protected by a password using the following commands:
     dfx identity new <my-secure-identity-name> # creates a password protected identity
     dfx identity use <my-secure-identity-name> # uses this identity by default

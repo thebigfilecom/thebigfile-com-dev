@@ -112,7 +112,7 @@ fn make_proposal() {
     .diff("sns/make_proposal/simple.txt");
     let proposal_with_blob = r#"
     ( record {
-        title = "Transfer ICP from SPS treasury.";
+        title = "Transfer BIG from SPS treasury.";
         url = "example.com";
         summary = "";
         action = opt variant { TransferSnsTreasuryFunds = record {

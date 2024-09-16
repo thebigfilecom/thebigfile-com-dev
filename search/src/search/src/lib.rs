@@ -401,7 +401,7 @@ mod test {
 
     #[test]
     fn test_tokenize() {
-        let input = "World Computer is our future / Blockchain Singularity\nBlockchain Singularity Today, Web3 really runs on Big Tech's cloud. Blockchains can host tokens, but only tiny amounts of data and compute, and no web. Tomorrow, blockchains will host it all, and fully decentralize everything, from simple dApps, to billion-user social networks, the metaverse, streaming, games, orderbook exchanges, and enterprise systems. It's already happening at scale on the first true World Computer: BigFile #ICP Join the movement. BigFile basics BigFile capabilties Wiki history of the BigFile.";
+        let input = "World Computer is our future / Blockchain Singularity\nBlockchain Singularity Today, Web3 really runs on Big Tech's cloud. Blockchains can host tokens, but only tiny amounts of data and compute, and no web. Tomorrow, blockchains will host it all, and fully decentralize everything, from simple dApps, to billion-user social networks, the metaverse, streaming, games, orderbook exchanges, and enterprise systems. It's already happening at scale on the first true World Computer: BigFile #BIG Join the movement. BigFile basics BigFile capabilties Wiki history of the BigFile.";
 
         let index = Index::with_stop_words(&["a".to_owned(), "the".to_owned(), "is".to_owned()]);
         let tokens = index.tokenize(input);
@@ -412,7 +412,7 @@ mod test {
 
     #[test]
     fn test_token_positions() {
-        let input = "World Computer is our future / Blockchain Singularity\nBlockchain Singularity Today, Web3 really runs on Big Tech's cloud. Blockchains can host tokens, but only tiny amounts of data and compute, and no web. Tomorrow, blockchains will host it all, and fully decentralize everything, from simple dApps, to billion-user social networks, the metaverse, streaming, games, orderbook exchanges, and enterprise systems. It's already happening at scale on the first true World Computer: BigFile #ICP Join the movement. BigFile basics BigFile capabilties Wiki history of the BigFile.";
+        let input = "World Computer is our future / Blockchain Singularity\nBlockchain Singularity Today, Web3 really runs on Big Tech's cloud. Blockchains can host tokens, but only tiny amounts of data and compute, and no web. Tomorrow, blockchains will host it all, and fully decentralize everything, from simple dApps, to billion-user social networks, the metaverse, streaming, games, orderbook exchanges, and enterprise systems. It's already happening at scale on the first true World Computer: BigFile #BIG Join the movement. BigFile basics BigFile capabilties Wiki history of the BigFile.";
         let index = Index::with_stop_words(&[]);
 
         let tokens = index.tokenize(input);
@@ -423,7 +423,7 @@ mod test {
 
     #[test]
     fn test_get_token_positions() {
-        let input = "World Computer is our future / Blockchain Singularity\nBlockchain Singularity Today, Web3 really runs on Big Tech's cloud. Blockchains can host tokens, but only tiny amounts of data and compute, and no web. Tomorrow, blockchains will host it all, and fully decentralize everything, from simple dApps, to billion-user social networks, the metaverse, streaming, games, orderbook exchanges, and enterprise systems. It's already happening at scale on the first true World Computer: BigFile #ICP Join the movement. BigFile basics BigFile capabilties Wiki history of the BigFile.";
+        let input = "World Computer is our future / Blockchain Singularity\nBlockchain Singularity Today, Web3 really runs on Big Tech's cloud. Blockchains can host tokens, but only tiny amounts of data and compute, and no web. Tomorrow, blockchains will host it all, and fully decentralize everything, from simple dApps, to billion-user social networks, the metaverse, streaming, games, orderbook exchanges, and enterprise systems. It's already happening at scale on the first true World Computer: BigFile #BIG Join the movement. BigFile basics BigFile capabilties Wiki history of the BigFile.";
 
         let positions = Index::get_token_positions(input);
 

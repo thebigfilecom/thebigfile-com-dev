@@ -24,7 +24,7 @@ const HeroGraphic: React.FC<{ className?: string }> = ({ className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>{`Stake your ICP and earn voting rewards, ${highestVotingReward} annualized.`}</title>
+      <title>{`Stake your BIG and earn voting rewards, ${highestVotingReward} annualized.`}</title>
       <rect
         x="43.7158"
         y="190.257"
@@ -256,7 +256,7 @@ const HeroGraphic: React.FC<{ className?: string }> = ({ className }) => {
       </g>
       <text fill="#181818" fontSize="21.4086" fontWeight="bold">
         <tspan x="250.366" y="437.36">
-          Stake your ICP and earn&#10;
+          Stake your BIG and earn&#10;
         </tspan>
         <tspan x="250.366" y="465.459">
           voting rewards

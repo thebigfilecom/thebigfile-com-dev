@@ -163,7 +163,7 @@ const Highlights: React.FC = () => {
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />
-                  More ICP capabilities
+                  More BIG capabilities
                 </Link>
               </p>
             </div>
@@ -202,7 +202,7 @@ const Highlights: React.FC = () => {
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />
-                  Ethereum on ICP
+                  Ethereum on BIG
                 </Link>
               </p>
             </div>

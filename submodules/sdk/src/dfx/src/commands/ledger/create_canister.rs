@@ -16,7 +16,7 @@ use clap::Parser;
 
 pub const MEMO_CREATE_CANISTER: u64 = 1095062083_u64;
 
-/// Create a canister from ICP
+/// Create a canister from BIG
 #[derive(Parser)]
 pub struct CreateCanisterOpts {
     /// Specify the controller of the new canister
@@ -26,13 +26,13 @@ pub struct CreateCanisterOpts {
     #[arg(long)]
     from_subaccount: Option<Subaccount>,
 
-    /// ICP to mint into cycles and deposit into destination canister
+    /// BIG to mint into cycles and deposit into destination canister
     /// Can be specified as a Decimal with the fractional portion up to 8 decimal places
     /// i.e. 100.012
     #[arg(long)]
     amount: Option<ICPTs>,
 
-    /// Specify ICP as a whole number, helpful for use in conjunction with `--e8s`
+    /// Specify BIG as a whole number, helpful for use in conjunction with `--e8s`
     #[arg(long, value_parser = e8s_parser, conflicts_with("amount"))]
     icp: Option<u64>,
 

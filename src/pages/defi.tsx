@@ -52,7 +52,7 @@ function Stats() {
     ],
     [
       {
-        title: "ICP TX fee",
+        title: "BIG TX fee",
         value: cryptoPrices.icp * 0.0001,
         format: (v) => `$${v.toFixed(4)}`,
       },

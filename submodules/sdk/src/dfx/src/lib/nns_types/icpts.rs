@@ -50,7 +50,7 @@ impl ICPTs {
     /// This function will not allow you use more than 1 ICPTs worth of e8s.
     pub fn new(icpt: u64, e8s: u64) -> Result<Self, String> {
         static CONSTRUCTION_FAILED: &str =
-            "Constructing ICP failed because the underlying u64 overflowed";
+            "Constructing BIG failed because the underlying u64 overflowed";
 
         let icp_part = icpt
             .checked_mul(ICP_SUBDIVIDABLE_BY)
@@ -78,7 +78,7 @@ impl ICPTs {
         Self::new(icp, 0)
     }
 
-    /// Construct ICPTs from e8s, 10E8 e8s == 1 ICP
+    /// Construct ICPTs from e8s, 10E8 e8s == 1 BIG
     /// ```
     /// # use ledger_canister::ICPTs;
     /// let icpt = ICPTs::from_e8s(1200000200);
@@ -109,7 +109,7 @@ impl ICPTs {
     }
 
     /// Gets the total number of e8s not part of a whole ICPT
-    /// The returned amount is always in the half-open interval [0, 1 ICP).
+    /// The returned amount is always in the half-open interval [0, 1 BIG).
     /// ```
     /// # use ledger_canister::ICPTs;
     /// let icpt = ICPTs::new(12, 200).unwrap();
@@ -144,12 +144,12 @@ impl Add for ICPTs {
     type Output = Result<Self, String>;
 
     /// This returns a result, in normal operation this should always return Ok
-    /// because of the cap in the total number of ICP, but when dealing with
+    /// because of the cap in the total number of BIG, but when dealing with
     /// money it's better to be safe than sorry
     fn add(self, other: Self) -> Self::Output {
         let e8s = self.e8s.checked_add(other.e8s).ok_or_else(|| {
             format!(
-                "Add ICP {} + {} failed because the underlying u64 overflowed",
+                "Add BIG {} + {} failed because the underlying u64 overflowed",
                 self.e8s, other.e8s
             )
         })?;
@@ -169,7 +169,7 @@ impl Sub for ICPTs {
     fn sub(self, other: Self) -> Self::Output {
         let e8s = self.e8s.checked_sub(other.e8s).ok_or_else(|| {
             format!(
-                "Subtracting ICP {} - {} failed because the underlying u64 underflowed",
+                "Subtracting BIG {} - {} failed because the underlying u64 underflowed",
                 self.e8s, other.e8s
             )
         })?;
@@ -187,13 +187,13 @@ impl SubAssign for ICPTs {
 /// # use ledger_canister::ICPTs;
 /// let icpt = ICPTs::new(12, 200).unwrap();
 /// let s = format!("{}", icpt);
-/// assert_eq!(&s[..], "12.00000200 ICP")
+/// assert_eq!(&s[..], "12.00000200 BIG")
 /// ```
 impl fmt::Display for ICPTs {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(
             f,
-            "{}.{:08} ICP",
+            "{}.{:08} BIG",
             self.get_icpts(),
             self.get_remainder_e8s()
         )

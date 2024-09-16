@@ -77,7 +77,7 @@ pub struct ManageOpts {
     #[clap(long)]
     spawn: bool,
 
-    /// Split off the given number of ICP from a neuron.
+    /// Split off the given number of BIG from a neuron.
     #[clap(long)]
     split: Option<u64>,
 

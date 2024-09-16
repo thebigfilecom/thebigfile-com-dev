@@ -518,7 +518,7 @@ current_time_nanoseconds() {
   deploy_cycles_ledger
 
   assert_command dfx ledger balance --identity cycle-giver
-  assert_eq "1000000000.00000000 ICP"
+  assert_eq "1000000000.00000000 BIG"
 
   assert_command dfx canister status depositor
   assert_contains "Balance: 10_000_000_000_000 Cycles"
@@ -890,9 +890,9 @@ current_time_nanoseconds() {
 
   dfx identity use alice
   assert_command dfx ledger balance
-  assert_eq "100.00000000 ICP"
+  assert_eq "100.00000000 BIG"
   assert_command dfx ledger balance --subaccount "$ALICE_SUBACCT1"
-  assert_eq "100.00000000 ICP"
+  assert_eq "100.00000000 BIG"
   assert_command dfx cycles balance --precise
   assert_eq "0 cycles."
 
@@ -902,7 +902,7 @@ current_time_nanoseconds() {
   assert_command dfx cycles convert --amount 12.5
   assert_contains "Account was topped up with 1_543_208_750_000_000 cycles!"
   assert_command dfx ledger balance
-  assert_eq "87.49990000 ICP"
+  assert_eq "87.49990000 BIG"
   assert_command dfx cycles balance --precise
   assert_eq "1543208750000000 cycles."
 
@@ -910,7 +910,7 @@ current_time_nanoseconds() {
   assert_command dfx cycles convert --amount 10 --from-subaccount "$ALICE_SUBACCT1" --to-subaccount "$ALICE_SUBACCT2"
   assert_contains "Account was topped up with 1_234_567_000_000_000 cycles!"
   assert_command dfx ledger balance --subaccount "$ALICE_SUBACCT1"
-  assert_eq "89.99990000 ICP"
+  assert_eq "89.99990000 BIG"
   assert_command dfx cycles balance --precise --subaccount "$ALICE_SUBACCT2"
   assert_eq "1234567000000000 cycles."
 

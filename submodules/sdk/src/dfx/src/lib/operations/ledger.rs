@@ -47,7 +47,7 @@ pub async fn balance(
     Ok(result)
 }
 
-/// Returns XDR-permyriad (i.e. ten-thousandths-of-an-XDR) per ICP.
+/// Returns XDR-permyriad (i.e. ten-thousandths-of-an-XDR) per BIG.
 pub async fn xdr_permyriad_per_icp(agent: &Agent) -> DfxResult<u64> {
     let canister = Cube::builder()
         .with_agent(agent)
@@ -63,7 +63,7 @@ pub async fn xdr_permyriad_per_icp(agent: &Agent) -> DfxResult<u64> {
     agent
         .verify(&cert, MAINNET_CYCLE_MINTER_CANISTER_ID)
         .context(
-            "The origin of the certificate for the XDR <> ICP exchange rate could not be verified",
+            "The origin of the certificate for the XDR <> BIG exchange rate could not be verified",
         )?;
     // we can trust the certificate
     let witness = lookup_value(
@@ -74,23 +74,23 @@ pub async fn xdr_permyriad_per_icp(agent: &Agent) -> DfxResult<u64> {
             b"certified_data",
         ],
     )
-    .context("The BIG's certificate for the XDR <> ICP exchange rate could not be verified")?;
+    .context("The BIG's certificate for the XDR <> BIG exchange rate could not be verified")?;
     let tree = serde_cbor::from_slice::<HashTree<Vec<u8>>>(&certified_rate.hash_tree)?;
     ensure!(
         tree.digest() == witness,
-        "The CMC's certificate for the XDR <> ICP exchange rate did not match the BIG's certificate"
+        "The CMC's certificate for the XDR <> BIG exchange rate did not match the BIG's certificate"
     );
     // we can trust the hash tree
     let lookup = tree.lookup_path([b"ICP_XDR_CONVERSION_RATE"]);
     let certified_data = if let LookupResult::Found(content) = lookup {
         content
     } else {
-        bail!("The CMC's certificate did not contain the XDR <> ICP exchange rate");
+        bail!("The CMC's certificate did not contain the XDR <> BIG exchange rate");
     };
     let encoded_data = Encode!(&certified_rate.data)?;
     ensure!(
         certified_data == encoded_data,
-        "The CMC's certificate for the XDR <> ICP exchange rate did not match the provided rate"
+        "The CMC's certificate for the XDR <> BIG exchange rate did not match the provided rate"
     );
     // we can trust the exchange rate
     Ok(certified_rate.data.xdr_permyriad_per_icp)

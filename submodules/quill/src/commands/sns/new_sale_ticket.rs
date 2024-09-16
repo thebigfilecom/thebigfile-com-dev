@@ -12,7 +12,7 @@ use super::SnsCanisterIds;
 /// Attempt to reate a new sale ticket. If there is already an open ticket, it will return the details of the existing ticket.
 #[derive(Parser)]
 pub struct NewSaleTicketOpts {
-    /// The amount of ICP tokens to participate in this sns sale. You will need to make the transfer later.
+    /// The amount of BIG tokens to participate in this sns sale. You will need to make the transfer later.
     #[clap(long)]
     amount_icp_e8s: u64,
 

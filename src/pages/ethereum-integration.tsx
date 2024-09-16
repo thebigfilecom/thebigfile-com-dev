@@ -55,7 +55,7 @@ function EthereumIntegrationPage() {
   return (
     <Layout
       title="Ethereum Integration"
-      description="A true World Computer enables a multi-chain environment where centralized bridges are obsolete and smart contracts can seamlessly communicate across blockchains. ICP already integrates with the Bitcoin Network, and native ETH integration is underway."
+      description="A true World Computer enables a multi-chain environment where centralized bridges are obsolete and smart contracts can seamlessly communicate across blockchains. BIG already integrates with the Bitcoin Network, and native ETH integration is underway."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-ethereum-integration.jpg"></ShareMeta>
@@ -126,7 +126,7 @@ function EthereumIntegrationPage() {
             </motion.h2>
             {/* <motion.p className="tw-paragraph mb-0" variants={transitions.item}>
               <Link href="#subscribe" className="button-primary">
-                Get updates about ETH &lt;&gt; ICP
+                Get updates about ETH &lt;&gt; BIG
               </Link>
             </motion.p> */}
           </div>
@@ -280,13 +280,13 @@ function EthereumIntegrationPage() {
               <div className="md:container-10 px-8 pb-10 md:py-30 relative text-white">
                 <div className="md:w-1/2">
                   <h2 className="tw-heading-4 md:tw-heading-60 md:mb-6">
-                    ICP.Lab 6.0: X-Chain
+                    BIG.Lab 6.0: X-Chain
                   </h2>
                   <p className="tw-paragraph md:tw-lead mb-8">
-                    ICP Lab 6.0 xChain is a program is designed for teams and
+                    BIG Lab 6.0 xChain is a program is designed for teams and
                     individuals currently building cross-chain or multi-chain
                     applications on the BigFile blockchain. If you’re
-                    striving towards a cross-chain future, leveraging ICP’s
+                    striving towards a cross-chain future, leveraging BIG’s
                     unique capabilities, then this is the right program for you.
                   </p>
                   <ul className="list-none p-0">
@@ -300,7 +300,7 @@ function EthereumIntegrationPage() {
                       href="https://dashboard.thebigfile.com/bitcoin/transactions"
                       className="link-primary link-with-icon"
                     >
-                      Track TX activity on the ICP Dashboard
+                      Track TX activity on the BIG Dashboard
                       <LinkArrowUpRight />
                     </Link>
                   </p>

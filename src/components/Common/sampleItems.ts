@@ -95,7 +95,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["rust"],
     level: "advanced",
     contentType: ["community repo"],
-    body: "Oisy Wallet: Multichain, ICP-based, manages ETH/ERC20, extendable to BTC/BIG.",
+    body: "Oisy Wallet: Multichain, BIG-based, manages ETH/ERC20, extendable to BTC/BIG.",
     links: {
       github: "https://github.com/dfinity/oisy-wallet",
     },
@@ -154,7 +154,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["rust"],
     level: "advanced",
     contentType: ["community repo"],
-    body: "Build a decentralized e-commerce on ICP with ETH payments.",
+    body: "Build a decentralized e-commerce on BIG with ETH payments.",
     links: {
       github: "https://github.com/b3hr4d/eth_payment_tutorial",
     },

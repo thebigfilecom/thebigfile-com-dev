@@ -136,7 +136,7 @@ function AIPage() {
   return (
     <Layout
       title="Decentralized AI on BigFile - Secure and Trustworthy AI Solutions"
-      description="Explore how the BigFile leverages blockchain technology to offer decentralized AI solutions, ensuring model integrity, data confidentiality, and resilience against disruptions. Discover how AI smart contracts on ICP can transform trust and security in artificial intelligence."
+      description="Explore how the BigFile leverages blockchain technology to offer decentralized AI solutions, ensuring model integrity, data confidentiality, and resilience against disruptions. Discover how AI smart contracts on BIG can transform trust and security in artificial intelligence."
     >
       <ShareMeta image="/img/shareImages/share-ai.jpg"></ShareMeta>
 

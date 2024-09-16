@@ -46,29 +46,29 @@ current_time_nanoseconds() {
   assert_eq 345f723e9e619934daac6ae0f4be13a7b0ba57d6a608e511a00fd0ded5866752
 
   assert_command dfx ledger balance
-  assert_eq "1000000000.00000000 ICP"
+  assert_eq "1000000000.00000000 BIG"
 
   assert_command dfx ledger transfer --amount 100 --memo 1 22ca7edac648b814e81d7946e8bacea99280e07c5f51a04ba7a38009d8ad8e89 # to bob
   assert_contains "Transfer sent at block height"
 
-  # The sender(alice) paid transaction fee which is 0.0001 ICP
+  # The sender(alice) paid transaction fee which is 0.0001 BIG
   assert_command dfx ledger balance
-  assert_eq "999999899.99990000 ICP"
+  assert_eq "999999899.99990000 BIG"
 
   dfx identity use bob
   assert_command dfx ledger account-id
   assert_eq 22ca7edac648b814e81d7946e8bacea99280e07c5f51a04ba7a38009d8ad8e89
 
   assert_command dfx ledger balance
-  assert_eq "1000000100.00000000 ICP"
+  assert_eq "1000000100.00000000 BIG"
 
   assert_command dfx ledger transfer --icp 100 --e8s 1 --memo 2 345f723e9e619934daac6ae0f4be13a7b0ba57d6a608e511a00fd0ded5866752 # to alice
   assert_contains "Transfer sent at block height"
 
-  # The sender(bob) paid transaction fee which is 0.0001 ICP
+  # The sender(bob) paid transaction fee which is 0.0001 BIG
   # 10100 - 100 - 0.0001 - 0.00000001 = 9999.99989999
   assert_command dfx ledger balance
-  assert_eq "999999999.99989999 ICP"
+  assert_eq "999999999.99989999 BIG"
 
   # Transaction Deduplication
   t=$(current_time_nanoseconds)
@@ -105,26 +105,26 @@ current_time_nanoseconds() {
 
   dfx identity use alice
   assert_command dfx ledger balance
-  assert_match "1000000000.00000000 ICP"
+  assert_match "1000000000.00000000 BIG"
   assert_command dfx ledger transfer --amount 100 --memo 1 5a94fe181e9d411c58726cb87cbf2d016241b6c350bc3330e4869ca76e54ecbc # to bob+subacct
   assert_match "Transfer sent at block height"
   assert_command dfx ledger balance
-  assert_match "999999899.99990000 ICP"
+  assert_match "999999899.99990000 BIG"
 
   dfx identity use bob
   assert_command dfx ledger balance
-  assert_match "1000000000.00000000 ICP"
+  assert_match "1000000000.00000000 BIG"
   assert_command dfx ledger balance --subaccount "$subacct"
-  assert_match "1000000100.00000000 ICP"
+  assert_match "1000000100.00000000 BIG"
 
   assert_command dfx ledger transfer --amount 100 --memo 2 345f723e9e619934daac6ae0f4be13a7b0ba57d6a608e511a00fd0ded5866752 --from-subaccount "$subacct" # to alice
   assert_match "Transfer sent at block height"
   assert_command dfx ledger balance
-  assert_match "1000000000.00000000 ICP"
+  assert_match "1000000000.00000000 BIG"
   assert_command dfx ledger balance --subaccount "$subacct"
-  assert_match "999999999.99990000 ICP"
+  assert_match "999999999.99990000 BIG"
   assert_command dfx ledger balance --identity alice
-  assert_match "999999999.99990000 ICP"
+  assert_match "999999999.99990000 BIG"
 }
 tc_to_num() {
   if [[ $1 =~ T ]]; then
@@ -137,7 +137,7 @@ tc_to_num() {
 @test "ledger top-up" {
   dfx identity use alice
   assert_command dfx ledger balance
-  assert_match "1000000000.00000000 ICP"
+  assert_match "1000000000.00000000 BIG"
 
   wallet=$(dfx identity get-wallet)
   balance=$(tc_to_num "$(dfx wallet balance)")

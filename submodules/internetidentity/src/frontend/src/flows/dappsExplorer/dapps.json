@@ -227,7 +227,7 @@
     "logo": "aedile_logo.webp"
   },
   {
-    "name": "Uniswap Frontend on ICP",
+    "name": "Uniswap Frontend on BIG",
     "website": "https://yrog5-xqaaa-aaaap-qa5za-cai.ic0.app/#/swap",
     "oneLiner": "Front-End On-Chain",
     "logo": "uniswapfrontendontheic_logo.webp"
@@ -314,8 +314,8 @@
     "oneLiner": "Collaborative Product Design Innovation Hub"
   },
   {
-    "name": "Metaforo ICP deployment",
-    "oneLiner": "Deploy the frontend of a web3 forum system - metaforo.io on ICP",
+    "name": "Metaforo BIG deployment",
+    "oneLiner": "Deploy the frontend of a web3 forum system - metaforo.io on BIG",
     "website": "https://can1.metaforo.io/",
     "logo": "metaforo-icp_logo.png"
   },
@@ -323,7 +323,7 @@
     "name": "Rakeoff",
     "website": "https://rakeoff.io/",
     "logo": "rakeoff_logo.webp",
-    "oneLiner": "Rakeoff is a cryptocurrency staking rewards application built on the ICP blockchain."
+    "oneLiner": "Rakeoff is a cryptocurrency staking rewards application built on the BIG blockchain."
   },
   {
     "name": "Tswaanda",
@@ -384,7 +384,7 @@
     "name": "FishVerse",
     "website": "https://thefishverse.com/",
     "logo": "fishverse_logo.webp",
-    "oneLiner": "FishVerse is a W2E fishing game that is built on ICP technology"
+    "oneLiner": "FishVerse is a W2E fishing game that is built on BIG technology"
   },
   {
     "name": "dFlow",
@@ -438,7 +438,7 @@
     "name": "Ping",
     "website": "https://h7jna-pqaaa-aaaak-afgiq-cai.icp0.io/",
     "logo": "ping_logo.webp",
-    "oneLiner": "Stay updated on ICP dapps with Ping!"
+    "oneLiner": "Stay updated on BIG dapps with Ping!"
   },
   {
     "name": "EA Kazi",
@@ -459,8 +459,8 @@
     "oneLiner": "Migrating all the World's Books to NFT-form for use in domain-specific AI"
   },
   {
-    "name": "ICP Governor",
-    "oneLiner": "ICP Governor is an application used to manage a single DAO: create proposals, vote, timelock and execute them.",
+    "name": "BIG Governor",
+    "oneLiner": "BIG Governor is an application used to manage a single DAO: create proposals, vote, timelock and execute them.",
     "website": "https://b4umt-saaaa-aaaak-afnpa-cai.icp0.io/",
     "logo": "redsteep_logo.png"
   },
@@ -526,7 +526,7 @@
   },
   {
     "name": "ICPEx",
-    "oneLiner": "Decentralized exchange built entirely on the chain based on the ICP.",
+    "oneLiner": "Decentralized exchange built entirely on the chain based on the BIG.",
     "website": "https://icpex.org/",
     "logo": "icpex_logo.png"
   },

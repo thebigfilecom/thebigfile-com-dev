@@ -13,11 +13,11 @@ use crate::{
 use super::SnsCanisterIds;
 
 /// Signs a message to request a refund from the SPS swap canister.
-/// If the swap was aborted or failed, or some of your contributed ICP never made it into a neuron,
-/// this command can retrieve your unused ICP, minus transaction fees.
+/// If the swap was aborted or failed, or some of your contributed BIG never made it into a neuron,
+/// this command can retrieve your unused BIG, minus transaction fees.
 #[derive(Parser)]
 pub struct GetSwapRefundOpts {
-    /// The principal that made the ICP contribution and should be refunded. The ICP will be
+    /// The principal that made the BIG contribution and should be refunded. The BIG will be
     /// refunded to the main account of this Principal irrespective of the caller.
     #[clap(long)]
     principal: Option<Principal>,
