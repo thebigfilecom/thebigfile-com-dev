@@ -296,7 +296,7 @@ function FeaturesPage() {
                 variants={transitions.item}
                 className="tw-heading-4 md:tw-heading-3 mb-4 "
               >
-                BIG Wallet — Web3 auth using WebAuthn
+                BIG ID — Web3 auth using WebAuthn
               </motion.h3>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm  mb-6 text-white-80"
@@ -306,7 +306,7 @@ function FeaturesPage() {
               </motion.p>
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
-                  href="/big-wallet"
+                  href="/big-id"
                   className="tw-heading-6 flex gap-2 items-center text-white hover:text-white-60 hover:no-underline"
                 >
                   <RightPointer className="w-6 h-6"></RightPointer>

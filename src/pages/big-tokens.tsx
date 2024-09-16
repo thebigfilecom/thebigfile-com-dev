@@ -357,7 +357,7 @@ function TokenHolders(): JSX.Element {
               <motion.div className="" variants={transitions.item}>
                 <h3 className="tw-heading-5 mb-6">Web Wallets</h3>
                 <p className="tw-paragraph text-black/60 mb-8">
-                  Web-based dapps that are easily accessible with the creation of an BIG Wallet. Great for daily use and small amount
+                  Web-based dapps that are easily accessible with the creation of an BIG ID. Great for daily use and small amount
                   transfers.
                 </p>
                 <div className="space-y-4">

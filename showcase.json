@@ -58,14 +58,14 @@
   
   {
     "id": "internetidentity",
-    "name": "BIG Wallet",
+    "name": "BIG ID",
     "oneLiner": "Decentralized Anonymous Blockchain Authentication",
-    "website": "https://bigwallet.thebigfile.com/",
+    "website": "https://big-id.thebigfile.com/",
     "tags": [
       "Tools / Infrastructure"
     ],
-    "description": "BIG Wallet is a privacy-enhancing authentication framework for applications on the BigFile. It provides users with a easy-to-use and secure anonymizing login to Web3 services running on BIG without being tracked across dapps.",
-    "github": "https://github.com/thebigfilecom/big-wallet",
+    "description": "BIG ID is a privacy-enhancing authentication framework for applications on the BigFile. It provides users with a easy-to-use and secure anonymizing login to Web3 services running on BIG without being tracked across dapps.",
+    "github": "https://github.com/thebigfilecom/big-id",
     "usesInternetIdentity": true,
     "stats": "0,000,000+ users",
     "logo": "/img/showcase/nnsfront-enddapp_logo-dark.webp",

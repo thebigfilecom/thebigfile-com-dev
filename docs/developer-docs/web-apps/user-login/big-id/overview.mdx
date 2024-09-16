@@ -1,0 +1,33 @@
+---
+keywords: [intermediate, concept, user sign in, user login, big wallet]
+---
+
+import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
+
+# Overview
+
+<MarkdownChipRow labels={["Intermediate", "Concept"]} />
+
+BIG ID is the BIG's native form of identity used for authenticating with BIG dapps.
+
+BIG ID doesn't use usernames and passwords. Instead, users utilize a **passkey** to register and authenticate with websites and applications. Passkeys are a unique cryptographic public/private key pair. BIG ID issues a new identity for each dapp that a user authenticates with, and the identity cannot be linked back to the user. No personal data is shared with dapps or the BIG ID application itself, and no software downloads are required.
+
+BIG ID uses a form of WebAuthn API running in a single canister that serves both the BIG ID frontend and backend code. When a user sends a request to the frontend code, the backend authentication service issues a delegation on the user's behalf. This delegation is then signed with the user's passkey.
+
+BIG ID can be integrated into your dapp for users to authenticate with as a form of user sign-up and login.
+
+## Creating an BIG ID
+
+Check out [how to create an BIG ID](creating-big-id.mdx).
+
+## Integrating BIG ID into your dapp
+
+Check out [how to integrate BIG ID into your dapp](integrate-big-id.mdx).
+
+## Resources
+
+- [BIG ID dashboard](https://big-id.thebigfile.com/).
+- [BIG ID specification](/docs/current/references/big-id-spec).
+- [BIG ID GitHub repository](https://github.com/thebigfilecom/big-id).
+- [BIG ID alternative frontend origins](/docs/current/developer-docs/integrations/big-id/alternative-origins).
+- [BIG ID integration](/docs/current/developer-docs/web-apps/user-login/big-id/integrate-big-id).

@@ -24,7 +24,7 @@ Cube smart contracts are more powerful than the smart contracts on other blockch
 * Cubes can hold gigabytes of memory for a low fee.
 * A web browser can directly interact with a cube smart contract, without involving any public cloud for serving the web interface and assets. This is in stark contrast to the UI being served from the public cloud as is the case for other blockchains.
 * Cubes can be updated and evolve, much like regular software. DAO-based governance schemes can make this upgrade process secure and decentralized.
-* Using BIG Wallet, cubes can authenticate users based on private keys contained in secure hardware modules using the [*Web Authentication (WebAuthn)* protocol](https://www.w3.org/TR/webauthn-2/). This secure authentication service, called *BIG Wallet*, is implemented as a smart contract as well and provides its services to other smart contracts.
+* Using BIG ID, cubes can authenticate users based on private keys contained in secure hardware modules using the [*Web Authentication (WebAuthn)* protocol](https://www.w3.org/TR/webauthn-2/). This secure authentication service, called *BIG ID*, is implemented as a smart contract as well and provides its services to other smart contracts.
 
 See more on [cube smart contracts](https://wiki.thebigfile.com/wiki/Cube_smart_contract) on the BIG wiki.
 

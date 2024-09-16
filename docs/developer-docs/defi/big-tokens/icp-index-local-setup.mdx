@@ -9,15 +9,15 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Intermediate" , "Tutorial"]} />
 
 ## Overview
-This guide will show you how to deploy an BIG index canister locally, how to connect it to your local BIG ledger, and how to interact with the BIG index canister.
+This guide will show you how to deploy an BIG index cube locally, how to connect it to your local BIG ledger, and how to interact with the BIG index cube.
 
-If you are working in a local development environment, i.e with a local replica instead of the public BigFile, you can't access the BIG ledger nor the BIG index canister. If your application is using the BIG index canister and you want to test it, you can setup the BIG index and BIG ledger locally. Neither of the two canisters will have any information about the state of the BIG ledger on the mainnet. You will have to create your own transactions on the BIG ledger so that the BIG index can serve them through its endpoints.
+If you are working in a local development environment, i.e with a local replica instead of the public BigFile, you can't access the BIG ledger nor the BIG index cube. If your application is using the BIG index cube and you want to test it, you can setup the BIG index and BIG ledger locally. Neither of the two cubes will have any information about the state of the BIG ledger on the mainnet. You will have to create your own transactions on the BIG ledger so that the BIG index can serve them through its endpoints.
 
 ### Step 1: Read the guide on deploying a local BIG ledger.
-If you have not done so already, read this guide to [setup an BIG ledger](./ledger-local-setup.mdx) and then continue with this guide. It is assumed that you have read the steps described in the guide on setting up a local BIG ledger and that all prerequisites are fulfilled. For this guide most steps will assume that there is an BIG ledger running with ledger ID ´ryjl3-tyaaa-aaaaa-aaaba-cai´. If you followed the guide on [setting up an BIG ledger](./ledger-local-setup.mdx) and chose a different canister ID you will have to replace the ledger ID with that which you received upon deployment.
+If you have not done so already, read this guide to [setup an BIG ledger](./ledger-local-setup.mdx) and then continue with this guide. It is assumed that you have read the steps described in the guide on setting up a local BIG ledger and that all prerequisites are fulfilled. For this guide most steps will assume that there is an BIG ledger running with ledger ID ´ryjl3-tyaaa-aaaaa-aaaba-cai´. If you followed the guide on [setting up an BIG ledger](./ledger-local-setup.mdx) and chose a different cube ID you will have to replace the ledger ID with that which you received upon deployment.
 
 ### Step 2 [Optional]: Create a new project folder.
-It is advised you use the same project folder that you created during the local ledger setup. Alternatively, you can create a new one for the BIG index canister using the following command:
+It is advised you use the same project folder that you created during the local ledger setup. Alternatively, you can create a new one for the BIG index cube using the following command:
 
 ```
 dfx new icp_index_canister
@@ -25,27 +25,27 @@ cd icp_index_canister
 ```
 
 **OPTIONAL:**
-If you created a new project folder, you will either have to make sure the `dfx.json` file contains the correct data on the BIG ledger (as described in the [local ledger setup guide](./ledger-local-setup.mdx)) or you communicate with the BIG ledger from its project folder that contains the correct `dfx.json` file. If you try to communicate with the BIG ledger from a new project folder where the `dfx.json` file does not contain information on the BIG ledger canister, you will not be able to create transactions.
+If you created a new project folder, you will either have to make sure the `dfx.json` file contains the correct data on the BIG ledger (as described in the [local ledger setup guide](./ledger-local-setup.mdx)) or you communicate with the BIG ledger from its project folder that contains the correct `dfx.json` file. If you try to communicate with the BIG ledger from a new project folder where the `dfx.json` file does not contain information on the BIG ledger cube, you will not be able to create transactions.
 
 
 ### Step 3:  Fetch the BIG index Wasm and Candid files.
 
 Go to the [releases overview](https://dashboard.thebigfile.com/releases) and copy the latest replica binary revision (IC_VERSION). At the time of writing, this is `d87954601e4b22972899e9957e800406a0a6b929`.
 
-The URL for the BIG index Wasm module is `curl -o index.wasm.gz "https://download.dfinity.systems/ic/$IC_VERSION/canisters/ic-icp-index-canister.wasm.gz"`, so with the above revision it would be `https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ic-icp-index-canister.wasm.gz`.
+The URL for the BIG index Wasm module is `curl -o index.wasm.gz "https://download.dfinity.systems/ic/$IC_VERSION/cubes/ic-icp-index-cube.wasm.gz"`, so with the above revision it would be `https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/cubes/ic-icp-index-cube.wasm.gz`.
 
 The URL for the BIG index .did file is `curl -o index.did "https://raw.githubusercontent.com/dfinity/ic/$IC_VERSION/rs/rosetta-api/icp_ledger/index/index.did"`, so with the above revision it would be `curl -o index.did "https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icp_ledger/index/index.did"`.
 
 ### Step 4: Configuring the `dfx.json` file.
-Open the `dfx.json` file in your project's directory. Add the `icp_index_canister` canister data and insert the canister data for your BIG ledger. If you followed the guide on local ledger setup and you used the same project folder for both the BIG ledger and BIG index, your `dfx.json` file should look like this:
+Open the `dfx.json` file in your project's directory. Add the `icp_index_canister` cube data and insert the cube data for your BIG ledger. If you followed the guide on local ledger setup and you used the same project folder for both the BIG ledger and BIG index, your `dfx.json` file should look like this:
 
 ``` json
 {
-  "canisters": {
+  "cubes": {
     "icp_index_canister": {
       "type": "custom",
       "candid": "https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icp_ledger/index/index.did",
-      "wasm": "https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ic-icp-index-canister.wasm.gz",
+      "wasm": "https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/cubes/ic-icp-index-cube.wasm.gz",
             "remote": {
         "id": {
           "ic": "qhbym-qaaaa-aaaaa-aaafq-cai"
@@ -55,7 +55,7 @@ Open the `dfx.json` file in your project's directory. Add the `icp_index_caniste
     "icp_ledger_canister": {
       "type": "custom",
       "candid": "https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icp_ledger/ledger.did",
-      "wasm": "https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ledger-canister.wasm.gz",
+      "wasm": "https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/cubes/ledger-cube.wasm.gz",
       "remote": {
         "id": {
           "ic": "ryjl3-tyaaa-aaaaa-aaaba-cai"
@@ -68,7 +68,7 @@ Open the `dfx.json` file in your project's directory. Add the `icp_index_caniste
 }
 ```
 
-In an existing project you would only need to add the `icp_index_canister` and `icp_ledger_canister` canisters to the `canisters` section.
+In an existing project you would only need to add the `icp_index_canister` and `icp_ledger_canister` cubes to the `cubes` section.
 
 ### Step 5 [Optional]: Start a local replica.
 This step can be skipped if you already have a local replica up and running.
@@ -77,24 +77,24 @@ This step can be skipped if you already have a local replica up and running.
 dfx start --clean --background
 ```
 
-### Step 6: Deploy the BIG index canister:
-Here it is assumed that the canister ID of your local BIG ledger is `ryjl3-tyaaa-aaaaa-aaaba-cai`, otherwise replace it with your BIG ledger canister ID.
+### Step 6: Deploy the BIG index cube:
+Here it is assumed that the cube ID of your local BIG ledger is `ryjl3-tyaaa-aaaaa-aaaba-cai`, otherwise replace it with your BIG ledger cube ID.
 
 ```
 dfx deploy icp_index_canister --specified-id qhbym-qaaaa-aaaaa-aaafq-cai --argument '(record {ledger_id = principal "ryjl3-tyaaa-aaaaa-aaaba-cai"})'
 ```
 
-The BIG index canister will start synching right away and will automatically try to fetch new blocks from the BIG ledger every few seconds.
+The BIG index cube will start synching right away and will automatically try to fetch new blocks from the BIG ledger every few seconds.
 
-### Step 7: Check the status and BIG ledger id on the BIG index canister.
+### Step 7: Check the status and BIG ledger id on the BIG index cube.
 
 You can check that the correct ledger ID was set but running the following command.
 
 ```
-dfx canister call qhbym-qaaaa-aaaaa-aaafq-cai ledger_id '()'
+dfx cube call qhbym-qaaaa-aaaaa-aaafq-cai ledger_id '()'
 ```
 
-The result is the ledger canister ID that the index canister is using to sync.
+The result is the ledger cube ID that the index cube is using to sync.
 
 ```
 (principal "ryjl3-tyaaa-aaaaa-aaaba-cai")
@@ -102,7 +102,7 @@ The result is the ledger canister ID that the index canister is using to sync.
 
 To check how many blocks have been synched call:
 ```
-dfx canister call qhbym-qaaaa-aaaaa-aaafq-cai status '()'
+dfx cube call qhbym-qaaaa-aaaaa-aaafq-cai status '()'
 ```
 
 It should return something like this:
@@ -119,26 +119,26 @@ If you followed the guide on setting up an BIG ledger locally your default ident
 Send some BIG to any principal with the command:
 
 ```
-dfx canister call ryjl3-tyaaa-aaaaa-aaaba-cai icrc1_transfer '(record { to = record { owner = principal "npki3-wdfh4-siaeq-orwh4-bh5of-r7mxr-i35lm-6f2eh-rtmwp-dmzmn-tae";};  amount = 100000:nat;})'
+dfx cube call ryjl3-tyaaa-aaaaa-aaaba-cai icrc1_transfer '(record { to = record { owner = principal "npki3-wdfh4-siaeq-orwh4-bh5of-r7mxr-i35lm-6f2eh-rtmwp-dmzmn-tae";};  amount = 100000:nat;})'
 ```
 
 Then, check the status with the command:
 ```
-dfx canister call qhbym-qaaaa-aaaaa-aaafq-cai status '()'
+dfx cube call qhbym-qaaaa-aaaaa-aaafq-cai status '()'
 ```
 
-It should now indicate that an additional block was synced compared to the last time you called the status endpoint. You may have to wait a couple of seconds for the index canister to sync.
+It should now indicate that an additional block was synced compared to the last time you called the status endpoint. You may have to wait a couple of seconds for the index cube to sync.
 ```
 (record { num_blocks_synced = 2 : nat64 })
 ```
 
 ### Step 9: Fetch some blocks.
 
-You can use the BIG index canister to fetch blocks like so.
+You can use the BIG index cube to fetch blocks like so.
 You have to specify the block at which you want to start fetching from (i.e. the lowest index you want to fetch). If you want to start from the beginning you have to set `start` to 0. Similarly, the `length` parameter indicates the number of blocks you would like to fetch. Since the last status call indicated that there are two blocks that were synced, you can set this to 2. Note that if you specify more than 2 blocks it will simply return the maximum number of blocks the index contains (the limit of blocks per call is usually set to 2000 blocks).
 
 ```
-dfx canister call qhbym-qaaaa-aaaaa-aaafq-cai get_blocks '(record{start=0:nat;length=2:nat})'
+dfx cube call qhbym-qaaaa-aaaaa-aaafq-cai get_blocks '(record{start=0:nat;length=2:nat})'
 ```
 
 Which will return a vector the encoded blocks:
@@ -170,7 +170,7 @@ hdq6b-ncywm-yajd5-4inc6-hgpzp-55xnp-py7d5-uqt6o-cv5c6-rrhwa-zqe
 Then you can query the transactions for this principal with the default subaccount set by calling:
 
 ```
-dfx canister call qhbym-qaaaa-aaaaa-aaafq-cai get_account_transactions '(record{account=record {owner = principal "hdq6b-ncywm-yajd5-4inc6-hgpzp-55xnp-py7d5-uqt6o-cv5c6-rrhwa-zqe"}; max_results=2:nat})'
+dfx cube call qhbym-qaaaa-aaaaa-aaafq-cai get_account_transactions '(record{account=record {owner = principal "hdq6b-ncywm-yajd5-4inc6-hgpzp-55xnp-py7d5-uqt6o-cv5c6-rrhwa-zqe"}; max_results=2:nat})'
 ```
 
 The result will include the initial mint operation as well as the transfer that you made.
@@ -243,7 +243,7 @@ bd719f30834fe34f420904cde95a2cef6404ef7a8489cde57056b4daddab28b1
 
 You can also always check the current balance of an account by calling:
 ```
-dfx canister call qhbym-qaaaa-aaaaa-aaafq-cai icrc1_balance_of '(record{owner = principal "hdq6b-ncywm-yajd5-4inc6-hgpzp-55xnp-py7d5-uqt6o-cv5c6-rrhwa-zqe"})'
+dfx cube call qhbym-qaaaa-aaaaa-aaafq-cai icrc1_balance_of '(record{owner = principal "hdq6b-ncywm-yajd5-4inc6-hgpzp-55xnp-py7d5-uqt6o-cv5c6-rrhwa-zqe"})'
 ```
 ```
 (99_999_890_000 : nat64)

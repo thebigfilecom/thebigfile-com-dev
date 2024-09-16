@@ -211,8 +211,8 @@ const marketingNav = {
             
           ],
           featured: {
-            title: "Connect BIG Wallet",
-            href: "/big-wallet",
+            title: "Connect BIG ID",
+            href: "/big-id",
             image: "/img/nav/featured-capabilities.webp",
           },
         },
@@ -222,8 +222,8 @@ const marketingNav = {
       name: "Use",
       auxItems: [
         {
-          name: "Create an BIG Wallet",
-          href: "https://wallet.thebigfile.com/",
+          name: "Create an BIG ID",
+          href: "https://big-id.thebigfile.com/",
         },
         { name: "FMS and Staking", href: "https://fms.thebigfile.com/" },
       ],
@@ -248,8 +248,8 @@ const marketingNav = {
               description: "Govern and get rewards",
             },
             {
-              name: "BIG Wallet",
-              href: "/big-wallet",
+              name: "BIG ID",
+              href: "/big-id",
               description: "Web3 authentication",
             },
           ],
