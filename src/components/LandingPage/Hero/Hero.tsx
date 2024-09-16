@@ -4,24 +4,21 @@ import transitions from "@site/static/transitions.json";
 import React, { useRef } from "react";
 import AnimateSpawn from "../../Common/AnimateSpawn";
 import DarkHeroStyles from "../../Common/DarkHeroStyles";
-import { ChatWidget } from "./ChatWidget";
 import ParticleAnimation from "./ParticleAnimation";
 import {
-  EthEquivalentTxRate,
   LiveStats,
   SmartContractMemory,
-  TotalBlocks,
 } from "./Stats";
 
 import { QueryClient, QueryClientProvider } from "react-query";
 const queryClient = new QueryClient();
 
 const Hero: React.FC<{
-  aiPlaceholders: string[];
+  
   headline: React.ReactNode;
   // headlines: string[];
   children?: React.ReactNode;
-}> = ({ aiPlaceholders, headline, children }) => {
+}> = ({ headline, children }) => {
   const fontLoaded = useFontsLoaded();
 
   const darkRef = useRef<HTMLDivElement>(null);
@@ -52,12 +49,7 @@ const Hero: React.FC<{
             >
               {headline}
             </h1>
-            <div className="w-full md:w-[550px] mt-4 md:mt-8">
-              <ChatWidget
-                aiPlaceholders={aiPlaceholders}
-                fontLoaded={fontLoaded}
-              />
-            </div>
+
           </div>
         </div>
         <div className="container-12 w-full col-start-1 row-start-1 md:flex justify-end mt-8 md:mt-0">

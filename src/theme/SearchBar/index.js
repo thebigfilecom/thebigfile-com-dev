@@ -1,7 +1,7 @@
 import SearchOverlay from "@site/src/components/Common/Search/Search";
 import React, { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { AskAIWidget } from "@site/src/components/DocsHome/AskAIWidget";
+
 
 const Search = () => {
   const [metaKey, setMetaKey] = useState(null);
@@ -47,7 +47,6 @@ const Search = () => {
 
   return (
     <>
-      <AskAIWidget />
       <button
         className="
           navbar__search-button group
