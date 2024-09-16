@@ -102,12 +102,12 @@ const IntroCards: React.FC = () => {
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
               Web2 relies on usernames and passwords for authentication –{" "}
               <strong>
-                BIG Wallet is the most secure authentification for Web2
+                BIG ID is the most secure authentification for Web2
                 and Web3.{" "}
               </strong>{" "}
             </p>
             <p className="mb-0">
-              <Link className="button-outline" href="/big-wallet">
+              <Link className="button-outline" href="/big-id">
                 One ID for all services
               </Link>
             </p>

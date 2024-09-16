@@ -707,7 +707,7 @@ pub enum MultiGetLogsResult {
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     Chain key makes it possible to create purely web-based
-                    wallets, backed by a cube smart contract that maintains the crypto. Authentication to such wallets can involve BIG Wallet, Google SSO, or usernames and passwords as required. These can be opened using a web browser tab in Incognito mode, which leaves no trace of the wallet when closed.
+                    wallets, backed by a cube smart contract that maintains the crypto. Authentication to such wallets can involve BIG ID, Google SSO, or usernames and passwords as required. These can be opened using a web browser tab in Incognito mode, which leaves no trace of the wallet when closed.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     The{" "}

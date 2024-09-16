@@ -137,7 +137,7 @@ This creates a Docker container image called `mycanister`, with Node.js, Rust an
 ```
 docker run -it --rm mycanister
 ```
-From here, you can experiment with the steps needed to build your canister. Once you are confident that the steps are deterministic, you can also put them in the `Dockerfile` (e.g., as `RUN ./build_script.sh` for a build script such as the example below, saved as `./build_script.sh`), to allow the user to automatically reproduce the build of your canister. You can see an example in the [Dockerfile of the Internet Identity canister](https://github.com/thebigfilecom/big-wallet/blob/397d0087a29855564c47f0fd3323f60b5b67a8fa/Dockerfile).
+From here, you can experiment with the steps needed to build your canister. Once you are confident that the steps are deterministic, you can also put them in the `Dockerfile` (e.g., as `RUN ./build_script.sh` for a build script such as the example below, saved as `./build_script.sh`), to allow the user to automatically reproduce the build of your canister. You can see an example in the [Dockerfile of the Internet Identity canister](https://github.com/thebigfilecom/big-id/blob/397d0087a29855564c47f0fd3323f60b5b67a8fa/Dockerfile).
 
 #### Example script for building a Rust project
 An example script to build a Rust project looks as follows:

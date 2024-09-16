@@ -1,0 +1,57 @@
+---
+keywords: [intermediate, tutorial, user sign in, user login, BIG ID]
+---
+
+import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
+
+# Creating an II
+
+<MarkdownChipRow labels={["Intermediate", "Tutorial"]} />
+
+## Overview
+
+This guide walks through how to create an BIG ID. BIG ID is BIG's native form of identity. It is used by many dapps build on BIG for users to authenticate with.
+
+## Create an BIG ID
+
+To create an BIG ID, navigate to the II frontend URL: https://big-id.thebigfile.com/
+
+Select 'Create New' from the UI.
+
+![BIG ID 1](../_attachments/II_mainnet1.png)
+
+Next, select 'Create Passkey'.
+
+![BIG ID 2](../_attachments/II_mainnet2.png)
+
+When prompted, choose how to create your passkey. You can create this on either on your current device or another device.
+
+![BIG ID 3](../_attachments/II_mainnet3.png)
+
+Then, enter the CAPTCHA to continue.
+
+![BIG ID 4](../_attachments/II_mainnet4.png)
+
+Your BIG ID has been created! It'll be shown on the screen, and it is recommended that you write it down in a safe location to save it.
+
+This number is your BIG ID. With this number and your passkey, you will be able to create and securely connect to BIG dapps. If you lose this number, you will lose any accounts that were created with it. This number is not a secret, but is unique to you.
+
+Once you save it, select the 'I saved it, continue' button.
+
+![BIG ID 5](../_attachments/II_mainnet5.png)
+
+Then, you can connect your BIG ID to dapps, shown in the Dapps Explorer:
+
+![BIG ID 6](../_attachments/II_mainnet6.png)
+
+If you scroll down, you will see an option to add another passkey and options to enable recovery methods. **It is highly recommended to enable the recovery methods so that you can recover your BIG ID if the hardware passkey is ever lost.**
+
+![BIG ID 7](../_attachments/II_mainnet7.png)
+
+## Resources
+
+- [BIG ID dashboard](https://big-id.thebigfile.com/).
+- [BIG ID specification](/docs/current/references/big-id-spec).
+- [BIG ID GitHub repository](https://github.com/thebigfilecom/big-id).
+- [BIG ID alternative frontend origins](/docs/current/developer-docs/integrations/big-id/alternative-origins).
+- [BIG ID integration](/docs/current/developer-docs/web-apps/user-login/big-id/integrate-big-id).

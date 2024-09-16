@@ -39,4 +39,4 @@ The BigFile Project will be developed based on the [BigFile(BIG)](https://github
 
 The BIG Network has been renamed to BIG Network.
 Cube Smart Contract has been renamed to Cube Smart Contract.
-Internet Identidy has been renamed to BIG Wallet.
+Internet Identidy has been renamed to BIG ID.

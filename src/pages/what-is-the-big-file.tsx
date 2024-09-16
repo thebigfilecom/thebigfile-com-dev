@@ -303,14 +303,14 @@ function WhatIsBigPage() {
           <div className="flex flex-col gap-16 md:gap-40">
             <TranslatedLayout imageUrl="/img/what-is-the-big-file/big-wallet.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                BIG Wallet
+                BIG ID
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              BIG Wallet allows users to quickly and securely authenticate to online systems and services using their devices, such as a laptop fingerprint sensor or FaceID on their phone. Behind the scenes, the framework leverages TPM chips within modern hardware to securely manage keys and signing, the WebAuthn protocol to connect code inside the web browser to these TPMs, and advanced chain-key cryptography running on the BIG network.
+              BIG ID allows users to quickly and securely authenticate to online systems and services using their devices, such as a laptop fingerprint sensor or FaceID on their phone. Behind the scenes, the framework leverages TPM chips within modern hardware to securely manage keys and signing, the WebAuthn protocol to connect code inside the web browser to these TPMs, and advanced chain-key cryptography running on the BIG network.
               </p>
               <Link
                 className="link-primary link-with-icon"
-                href="/big-wallet"
+                href="/big-id"
               >
                 <LinkArrowRight /> Wallet on BIG
               </Link>

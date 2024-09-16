@@ -169,15 +169,15 @@ function EnterprisePage() {
                 Built-in digital identity
               </h2>
               <p className="tw-lead-sm mb-6 md:mb-10">
-              There's no need to build proprietary identity solutions or rely on for-profit companies to keep user data safe and private. BIG Wallet is a privacy-enhancing authentication framework native to BigFile. Following W3C open standards, BIG Wallet uses secure passkeys and WebAuthn, which can be seamlessly integrated with any service running on BigFile. Zero-knowledge proofs enable users to privately share sensitive data.
+              There's no need to build proprietary identity solutions or rely on for-profit companies to keep user data safe and private. BIG ID is a privacy-enhancing authentication framework native to BigFile. Following W3C open standards, BIG ID uses secure passkeys and WebAuthn, which can be seamlessly integrated with any service running on BigFile. Zero-knowledge proofs enable users to privately share sensitive data.
               </p>
               <p className="mb-0">
                 <Link
-                  href="/big-wallet"
+                  href="/big-id"
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />
-                  More on BIG Wallet
+                  More on BIG ID
                 </Link>
               </p>
             </TranslatedLayout>

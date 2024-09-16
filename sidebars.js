@@ -517,12 +517,12 @@ const sidebars = {
           items: [
             {
               type: "category",
-              label: "Internet Identity (II)",
+              label: "BIG ID (BIG ID)",
               items: [
-                "developer-docs/web-apps/user-login/big-wallet/overview",
-                "developer-docs/web-apps/user-login/big-wallet/creating-ii",
-                "developer-docs/web-apps/user-login/big-wallet/integrate-big-wallet",
-                "developer-docs/web-apps/user-login/big-wallet/alternative-origins",
+                "developer-docs/web-apps/user-login/big-id/overview",
+                "developer-docs/web-apps/user-login/big-id/creating-big-id",
+                "developer-docs/web-apps/user-login/big-id/integrate-big-id",
+                "developer-docs/web-apps/user-login/big-id/alternative-origins",
               ],
             },
             "developer-docs/web-apps/user-login/nfid",
@@ -1140,8 +1140,8 @@ const sidebars = {
             },
             {
               type: "doc",
-              label: "BIG Wallet",
-              id: "references/big-wallet-spec",
+              label: "BIG ID",
+              id: "references/big-id-spec",
             },
             {
               type: "doc",

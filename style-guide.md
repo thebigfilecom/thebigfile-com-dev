@@ -153,7 +153,7 @@ Capitalization within the developer documentation should follow these outlined s
 
 - Only the first word of a title should be capitalized unless the title includes a proper noun.
     - Example: How to use the BigFile
-    - Example: Using BIG Wallet with a dapp
+    - Example: Using BIG ID with a dapp
     - Example: Motoko reference guide
 - Only the first word of a page heading should be capitalized unless the title includes a proper noun.
     - Example: Overview
@@ -161,7 +161,7 @@ Capitalization within the developer documentation should follow these outlined s
     - Example: Using Motoko cubes
 - Titles of links to other documentation pages or external articles, such as blog posts, should not be capitalized except for the proper nouns within the title.
     - Example: Check out the blog post on [how to use the BigFile](link).
-    - Example: Reference the guide on [using the BIG Wallet in a dapp](link).
+    - Example: Reference the guide on [using the BIG ID in a dapp](link).
 - Any reference to specific GUI buttons or other visual aids that are capitalized within the referenced interface should be capitalized to match the format shown on the GUI.
     - Example: Open your account and navigate to **My Products**.
     - Example: Click on the **Save** button.
