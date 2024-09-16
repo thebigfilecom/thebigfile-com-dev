@@ -14,7 +14,7 @@ use icrc_ledger_types::icrc1::transfer::Memo as ICRCMemo;
 
 pub const MEMO_MINT_CYCLES: u64 = 0x544e494d; // == 'MINT'
 
-/// Convert some of the user's ICP balance into cycles.
+/// Convert some of the user's BIG balance into cycles.
 #[derive(Parser)]
 pub struct ConvertOpts {
     /// Subaccount to withdraw from
@@ -34,13 +34,13 @@ pub struct ConvertOpts {
     #[arg(long)]
     created_at_time: Option<u64>,
 
-    /// ICP to mint into cycles and deposit into your cycles ledger account
+    /// BIG to mint into cycles and deposit into your cycles ledger account
     /// Can be specified as a Decimal with the fractional portion up to 8 decimal places
     /// i.e. 100.012
     #[arg(long)]
     amount: Option<ICPTs>,
 
-    /// Specify ICP as a whole number, helpful for use in conjunction with `--e8s`
+    /// Specify BIG as a whole number, helpful for use in conjunction with `--e8s`
     #[arg(long, value_parser = e8s_parser, conflicts_with("amount"))]
     icp: Option<u64>,
 

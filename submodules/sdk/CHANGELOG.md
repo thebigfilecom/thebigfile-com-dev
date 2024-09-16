@@ -422,7 +422,7 @@ It is now possible to redeem faucet coupons to cycles ledger accounts.
 
 ### feat: `dfx cycles convert`
 
-It is now possible to turn ICP into cycles that are stored on the cycles ledger using `dfx cycles convert --amount <amount of ICP>`
+It is now possible to turn BIG into cycles that are stored on the cycles ledger using `dfx cycles convert --amount <amount of BIG>`
 
 ### feat: specified_id in dfx.json
 
@@ -944,7 +944,7 @@ Early break out from actors starting procedure.
 It's now possible to suppress warnings of this form:
 
 ```
-WARN: The <identity> identity is not stored securely. Do not use it to control a lot of cycles/ICP. Create a new identity with `dfx identity new` and use it in mainnet-facing commands with the `--identity` flag
+WARN: The <identity> identity is not stored securely. Do not use it to control a lot of cycles/BIG. Create a new identity with `dfx identity new` and use it in mainnet-facing commands with the `--identity` flag
 ```
 
 To do so, export the environment variable `DFX_WARNING` with the value `-mainnet_plaintext_identity`.
@@ -1772,7 +1772,7 @@ Removes misleading panics when running `dfx stop`.
 
 ### feat: Initialise the nns with an account controlled by a secp256k1 key
 
-This enables easy access to toy ICP using command line tools and this key:
+This enables easy access to toy BIG using command line tools and this key:
 ```
 -----BEGIN EC PRIVATE KEY-----
 MHQCAQEEICJxApEbuZznKFpV+VKACRK30i6+7u5Z13/DOl18cIC+oAcGBSuBBAAK
@@ -2986,7 +2986,7 @@ The three canister types that use a custom build tool - `assets`, `rust`, and `c
 
 ### feat: Support for local ledger calls
 
-If you have an installation of the ICP Ledger (see [Ledger Installation Guide](https://github.com/dfinity/ic/tree/master/rs/rosetta-api/ledger_canister#deploying-locally)), `dfx ledger balance` and `dfx ledger transfer` now support
+If you have an installation of the BIG Ledger (see [Ledger Installation Guide](https://github.com/dfinity/ic/tree/master/rs/rosetta-api/ledger_canister#deploying-locally)), `dfx ledger balance` and `dfx ledger transfer` now support
 `--ledger-canister-id` parameter.
 
 Some examples:
@@ -2995,7 +2995,7 @@ $ dfx ledger \
   --network local \
   balance \
   --ledger-canister-id  rrkah-fqaaa-aaaaa-aaaaq-cai
-1000.00000000 ICP
+1000.00000000 BIG
 
 $ dfx ledger \
   --network local \
@@ -3070,7 +3070,7 @@ The "candid" field, if set within the remote object, specifies the candid file t
 building other canisters on a network for which the canister is remote.  This definition can differ
 from the candid definitions for local builds.
 
-For example, if have an installation of the ICP Ledger (see [Ledger Installation Guide](https://github.com/dfinity/ic/tree/master/rs/rosetta-api/ledger_canister#deploying-locally))
+For example, if have an installation of the BIG Ledger (see [Ledger Installation Guide](https://github.com/dfinity/ic/tree/master/rs/rosetta-api/ledger_canister#deploying-locally))
 in your dfx.json, you could configure the canister ID of the Ledger canister on the ic network as below.  In this case,
 the private interfaces would be available for local builds, but only the public interfaces would be available
 when building for `--network ic`.
@@ -3625,8 +3625,8 @@ This fixes an error which occurred when starting a replica right after stopping 
 dfx now supports a dedicated `dfx ledger` subcommand. This allows you to interact with the ledger
 canister installed on the BigFile. Example commands include `dfx ledger account-id` which
 prints the Account Identifier associated with your selected identity, `dfx ledger transfer` which
-allows you to transfer ICP from your ledger account to another, and `dfx ledger create-canister` which
-allows you to create a canister from ICP.
+allows you to transfer BIG from your ledger account to another, and `dfx ledger create-canister` which
+allows you to create a canister from BIG.
 
 ### feat: update to 0.17.0 of the Interface Spec
 

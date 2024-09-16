@@ -35,12 +35,12 @@ index 2c02d80dc..5a6072dc7 100644
 +++ b/rs/nns/cmc/src/main.rs
 @@ -188,7 +188,10 @@ impl Default for State {
                  timestamp_seconds: 1620633600,    // 10 May 2021 10:00:00 AM CEST
-                 xdr_permyriad_per_icp: 1_000_000, // 100 XDR = 1 ICP
+                 xdr_permyriad_per_icp: 1_000_000, // 100 XDR = 1 BIG
              }),
 -            average_icp_xdr_conversion_rate: None,
 +            average_icp_xdr_conversion_rate: Some(IcpXdrConversionRate {
 +                timestamp_seconds: 1620633600,    // 10 May 2021 10:00:00 AM CEST
-+                xdr_permyriad_per_icp: 1_000_000, // 100 XDR = 1 ICP
++                xdr_permyriad_per_icp: 1_000_000, // 100 XDR = 1 BIG
 +            }),
              recent_icp_xdr_rates: Some(vec![
                  IcpXdrConversionRate::default();

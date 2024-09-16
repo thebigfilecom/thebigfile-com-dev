@@ -15,11 +15,11 @@ use super::SnsCanisterIds;
 
 /// Signs messages to pay for an open sale ticket that you can create using `quill sns new-sale-ticket`.
 /// This operation consists of two messages:
-/// First, transfer ICP to the sale canister on the NNS ledger, under the subaccount for your principal.
+/// First, transfer BIG to the sale canister on the NNS ledger, under the subaccount for your principal.
 /// Second, the sale canister is notified that the transfer has been made.
 #[derive(Parser)]
 pub struct PayOpts {
-    /// The amount of ICP to transfer. This should be the same as the "amount_icp_e8s" of the sale ticket.
+    /// The amount of BIG to transfer. This should be the same as the "amount_icp_e8s" of the sale ticket.
     /// Please note that a 10000 e8s transaction fee will be charged on top of this amount.
     #[clap(long, required_unless_present("notify-only"))]
     amount_icp_e8s: Option<u64>,

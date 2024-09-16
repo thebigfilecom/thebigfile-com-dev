@@ -13,7 +13,7 @@ export const CollapsedVisionSection: React.FC<{
   const handleButtonClick = () => {
     
     try {
-      trackEvent('Pitch', 'Expand', 'ICP Pitch');
+      trackEvent('Pitch', 'Expand', 'BIG Pitch');
     } catch {};
 
     // Change the open state of the collapsible
@@ -53,7 +53,7 @@ export const CollapsedVisionSection: React.FC<{
             fill="currentColor"
           />
         </svg>
-        Read more about the ICP Pitch
+        Read more about the BIG Pitch
       </button>
       <div
         ref={collapsible.ref}

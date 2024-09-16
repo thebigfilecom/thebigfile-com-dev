@@ -12,7 +12,7 @@ use candid::Principal;
 use clap::Parser;
 use std::str::FromStr;
 
-/// Transfer ICP from the user to the destination account identifier.
+/// Transfer BIG from the user to the destination account identifier.
 #[derive(Parser)]
 pub struct TransferOpts {
     /// AccountIdentifier of transfer destination.
@@ -28,7 +28,7 @@ pub struct TransferOpts {
     #[arg(long)]
     amount: Option<ICPTs>,
 
-    /// Specify ICP as a whole number, helpful for use in conjunction with `--e8s`
+    /// Specify BIG as a whole number, helpful for use in conjunction with `--e8s`
     #[arg(long, value_parser = e8s_parser, conflicts_with("amount"))]
     icp: Option<u64>,
 

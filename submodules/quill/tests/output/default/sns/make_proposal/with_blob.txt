@@ -10,7 +10,7 @@ Sending message with
     command = opt variant {
       MakeProposal = record {
         url = "example.com";
-        title = "Transfer ICP from SPS treasury.";
+        title = "Transfer BIG from SPS treasury.";
         action = opt variant {
           TransferSnsTreasuryFunds = record {
             from_treasury = 1 : int32;

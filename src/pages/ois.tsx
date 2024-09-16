@@ -174,7 +174,7 @@ function OpenChatPage() {
                   href="https://twitter.com/search?q=%23ICP"
                   target="_blank"
                 >
-                  #ICP
+                  #BIG
                 </a>
                 , which store and process all its data, and serve the user
                 experience into web browsers. Because it runs fully on-chain,
@@ -229,7 +229,7 @@ function OpenChatPage() {
               <p>
                 During the creation of an open internet service, an initial
                 "decentralization swap" exchanges the new SPS DAO's governance
-                tokens for ICP, which is then held in its treasury under the
+                tokens for BIG, which is then held in its treasury under the
                 decentralized control of its governance community. But they
                 aren't the only ones who can hold governance tokens: Open
                 internet services will often founderize their users, by granting
@@ -270,7 +270,7 @@ function OpenChatPage() {
             <h2 className="md:tw-heading-60 md:mb-6">Community funding</h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
               The "decentralization swap" process exchanges governance tokens
-              for ICP tokens, held in the SPS DAO by a community of governance
+              for BIG tokens, held in the SPS DAO by a community of governance
               token holders. These tokens can be used to create bounties,
               incentivizing contributions to the service's development. This
               allows fully decentralized internet services to be created from

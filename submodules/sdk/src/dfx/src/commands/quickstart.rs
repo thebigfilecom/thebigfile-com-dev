@@ -37,7 +37,7 @@ use tokio::runtime::Runtime;
 
 /// Use the `dfx quickstart` command to perform initial one time setup for your identity and/or wallet. This command
 /// can be run anytime to repeat the setup process or to be used as an informational command, printing
-/// information about your ICP balance, current ICP to XDR conversion rate, and more.
+/// information about your BIG balance, current BIG to XDR conversion rate, and more.
 ///
 /// If setup tasks remain, this command is equivalent to running `dfx identity set-wallet` (for importing) or
 /// `dfx ledger create-canister` followed by `dfx identity deploy-wallet` (for creating), though more steps may
@@ -56,11 +56,11 @@ pub fn exec(env: &dyn Environment, _: QuickstartOpts) -> DfxResult {
     let runtime = Runtime::new().expect("Unable to create a runtime");
     runtime.block_on(async {
         let balance = balance(agent, &acct, None).await?;
-        eprintln!("Your ICP balance: {balance}");
+        eprintln!("Your BIG balance: {balance}");
         let xdr_conversion_rate = xdr_permyriad_per_icp(agent).await?;
         let xdr_per_icp = Decimal::from_i128_with_scale(xdr_conversion_rate as i128, 4);
         let icp_per_tc = xdr_per_icp.inv();
-        eprintln!("Conversion rate: 1 ICP <> {xdr_per_icp} XDR");
+        eprintln!("Conversion rate: 1 BIG <> {xdr_per_icp} XDR");
         let wallet = wallet_canister_id(env.get_network_descriptor(), ident)?;
         if let Some(wallet) = wallet {
             step_print_wallet(agent, wallet).await?;
@@ -146,7 +146,7 @@ async fn step_deploy_wallet(
     let rounded = to_spend.round_dp(8);
     if !Confirm::new()
         .with_prompt(format!(
-            "Spend {rounded:.8} ICP to create a new wallet with 10 TC?"
+            "Spend {rounded:.8} BIG to create a new wallet with 10 TC?"
         ))
         .interact()?
     {
@@ -166,7 +166,7 @@ async fn step_interact_ledger(
 ) -> DfxResult<Principal> {
     let send_spinner = ProgressBar::new_spinner();
     send_spinner.set_message(format!(
-        "Sending {to_spend:.8} ICP to the cycles minting canister..."
+        "Sending {to_spend:.8} BIG to the cycles minting canister..."
     ));
     send_spinner.enable_steady_tick(100);
     let icpts = ICPTs::from_decimal(to_spend)?;
@@ -237,10 +237,10 @@ async fn step_finish_wallet(
 }
 
 fn step_explain_deploy(acct: AccountIdentifier, needed_icp: Decimal) {
-    eprintln!("\nYou need {needed_icp:.8} more ICP to deploy a 10 TC wallet canister on mainnet.");
-    eprintln!("Deposit at least {needed_icp:.8} ICP into the address {acct}, and then run this command again, to deploy a mainnet wallet.");
+    eprintln!("\nYou need {needed_icp:.8} more BIG to deploy a 10 TC wallet canister on mainnet.");
+    eprintln!("Deposit at least {needed_icp:.8} BIG into the address {acct}, and then run this command again, to deploy a mainnet wallet.");
     eprintln!("\nAlternatively:");
-    eprintln!("- If you have ICP in an NNS account, you can create a new canister through the NNS interface");
+    eprintln!("- If you have BIG in an NNS account, you can create a new canister through the NNS interface");
     eprintln!("- If you have a Discord account, you can request free cycles at https://faucet.dfinity.org");
     eprintln!("Either of these options will ask for your DFX user principal, listed above.");
     eprintln!("And either of these options will hand you back a wallet canister principal; when you run the command again, select the 'import an existing wallet' option.");

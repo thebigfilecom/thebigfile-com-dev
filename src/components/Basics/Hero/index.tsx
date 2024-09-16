@@ -25,9 +25,9 @@ const Hero = () => {
           variants={transitions.item}
           className="tw-paragraph md:tw-lead m-0"
         >
-          The BigFile (ICP) allows Web3 services to run 100% on-chain,
+          The BigFile (BIG) allows Web3 services to run 100% on-chain,
           being the only protocol on top of which developers can build and users can
-          enjoy fully decentralized applications. ICP ditches corporate cloud,
+          enjoy fully decentralized applications. BIG ditches corporate cloud,
           insecure bridges and expensive oracles.
         </motion.p>
       </AnimateSpawn>

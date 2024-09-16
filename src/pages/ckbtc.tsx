@@ -82,7 +82,7 @@ function CkbtcPage(): JSX.Element {
                   chain-key cryptography and BigFile smart contracts
                   that directly hold raw bitcoin. Send and receive ckBTC with
                   1-2 second finality and negligible fees. Only possible because
-                  ICP smart contracts can call into the Bitcoin network.
+                  BIG smart contracts can call into the Bitcoin network.
                 </motion.p>
               </div>
             </AnimateSpawn>
@@ -300,7 +300,7 @@ function CkbtcPage(): JSX.Element {
                   <h3 className="tw-heading-5 mb-2 mt-8">ICDex</h3>
                   <p className="tw-lead-sm mb-0 text-black/60">
                     First orderbook-based DEX running fully on-chain. Bypass
-                    CEXs and get ICP or CHAT tokens for your BTC.{" "}
+                    CEXs and get BIG or CHAT tokens for your BTC.{" "}
                   </p>
                 </Link>
               </motion.div>
@@ -317,7 +317,7 @@ function CkbtcPage(): JSX.Element {
                     alt=""
                     className="w-20 h-20 object-center object-contain"
                   ></img>
-                  <h3 className="tw-heading-5 mb-2 mt-8">ICP.Swap</h3>
+                  <h3 className="tw-heading-5 mb-2 mt-8">BIG.Swap</h3>
                   <p className="tw-lead-sm mb-0 text-black/60">
                     Offers the largest number of tokens on the Internet
                     Computer. Trade meme coins or SPS DAO tokens.
@@ -478,14 +478,14 @@ function CkbtcPage(): JSX.Element {
                     <Link href="/docs/current/developer-docs/integrations/t-ecdsa/t-ecdsa-how-it-works">
                       chain-key ECDSA signing
                     </Link>{" "}
-                    — advanced threshold cryptography integrated with ICP. In
+                    — advanced threshold cryptography integrated with BIG. In
                     short, chain-key ECDSA is a set of cryptographic protocols
                     that allow BigFile nodes to cooperatively create
                     ECDSA signatures, which can be used to sign bitcoin
                     transactions, using a highly fault-tolerant, decentralized
                     network that is resilient to attacks by malicious nodes. The
                     secret key is never stored in one place, instead it is
-                    broken down into key shares held by ICP nodes that are
+                    broken down into key shares held by BIG nodes that are
                     re-shared periodically. When requested, nodes use their key
                     shares to collectively sign BTC transactions without
                     recreating the original secret key.
@@ -520,7 +520,7 @@ function CkbtcPage(): JSX.Element {
                       href="https://support.dfinity.org/hc/en-us/articles/20708056282132-What-is-ckBTC-#h_01HE64A4QKANB6JX8VERRP5Y80"
                     >
                       <LinkArrowRight />
-                      ckBTC &lt;&gt; ICP user guide
+                      ckBTC &lt;&gt; BIG user guide
                     </Link>
                   </p>
                 </div>

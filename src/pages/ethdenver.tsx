@@ -38,7 +38,7 @@ const projects: {
   {
     name: "Hot or Not",
     logo: "/img/ethdenver/hotornot.webp",
-    description: "Monetise Time on Social Media. Video platform in ICP.",
+    description: "Monetise Time on Social Media. Video platform in BIG.",
     agenda: ["Mar 2 - 5, 2023"],
   },
   {
@@ -70,7 +70,7 @@ const projects: {
     name: "Itoka",
     logo: "/img/ethdenver/itoka-logo.webp",
     description:
-      "Become a musician smooth and simple with AI and Web3 technology. Only on ICP.",
+      "Become a musician smooth and simple with AI and Web3 technology. Only on BIG.",
     agenda: ["Mar 3 / 4, 2023", "5:00pm - 6:00pm MST"],
   },
 
@@ -298,7 +298,7 @@ function EthDenverPage() {
                   then perform the upgrade of the frontend.
                 </p>
                 <p className="tw-lead text-gradient-base text-gradient-denver inline-block mb-0">
-                  $5,000 in ICP
+                  $5,000 in BIG
                 </p>
               </motion.div>
               <motion.div
@@ -385,13 +385,13 @@ function EthDenverPage() {
                 className="tw-heading-4 md:tw-heading-60 md:mb-8"
                 variants={transitions.item}
               >
-                Meet ICP Folks
+                Meet BIG Folks
                 <br />@ ETHDenver 2023
               </motion.h2>
               <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
                 Join us for an electrifying ETH Denver experience filled with
                 hands-on workshops, inspiring keynote speeches, interactive Q&A
-                sessions, and live demos of ICP Ecosystem dapps at our booth!
+                sessions, and live demos of BIG Ecosystem dapps at our booth!
               </motion.p>
 
               <MotionLink
@@ -594,7 +594,7 @@ function EthDenverPage() {
             >
               <div className="flex-1 bg-white flex flex-col justify-center items-start p-6 md:px-12 md:py-8 order-2 md:order-1">
                 <h3 className="md:tw-heading-4 mb-3">
-                  Come by for a Chat @ICP Booth
+                  Come by for a Chat @BIG Booth
                 </h3>
                 <ul className="tw-title-navigation mb-3 list-none p-0 flex flex-col md:flex-row md:flex-wrap gap-1 md:gap-x-4 md:gap-y-3">
                   <li>Mar 2-5, 2023</li>
@@ -607,7 +607,7 @@ function EthDenverPage() {
                 </ul>
 
                 <p className="tw-paragraph md:tw-lead-sm text-black-60 mb-6">
-                  The ICP Community would love to meet you! Hang with teams from
+                  The BIG Community would love to meet you! Hang with teams from
                   the ecosystem, see demos, learn how to create an Internet
                   Identity to try out some of our coolest dapps.
                 </p>
@@ -694,11 +694,11 @@ function EthDenverPage() {
                   Try some Dapps
                   <br />
                   <span className="inline-block text-gradient-base text-gradient-denver">
-                    @ ICP Booth
+                    @ BIG Booth
                   </span>
                 </h2>
                 <p className="tw-lead-sm md:tw-lead text-black-60 mb-6 md:w-6/10">
-                  Step into the exciting world of ICP with us as your guide!
+                  Step into the exciting world of BIG with us as your guide!
                   Take a look at the Web3 projects currently reinventing the
                   internet on the BigFile blockchain.
                 </p>
@@ -914,7 +914,7 @@ function EthDenverPage() {
                   variants={transitions.item}
                 >
                   <Link className="button-primary" href="/capabilities">
-                    ICP CAPabilities
+                    BIG CAPabilities
                   </Link>
                   <Link className="link-primary link-with-icon" href="/">
                     <LinkArrowRight />

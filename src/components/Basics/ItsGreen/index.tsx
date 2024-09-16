@@ -12,7 +12,7 @@ import ExternalLinkIcon from "../../../../static/img/external-link.svg";
 
 const comparison = [
   {
-    projectName: "ICP",
+    projectName: "BIG",
     logo: "/img/basics/logos/logo-big.svg",
     value: 0.008,
   },
@@ -165,7 +165,7 @@ const ItsGreen: React.FC<{ id?: string }> = ({ id }) => {
             href="https://assets.carboncrowd.io/reports/ICF.pdf"
             className="button-outline-white mb-6"
           >
-            ICP Sustainability report
+            BIG Sustainability report
           </Link>
           <Link
             href="https://medium.com/dfinity/internet-computer-footprint-assessing-ic-energy-consumption-and-sustainability-4a4dcf10707a"

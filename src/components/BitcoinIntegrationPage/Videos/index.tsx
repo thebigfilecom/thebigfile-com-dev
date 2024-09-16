@@ -33,7 +33,7 @@ function Index() {
         <div className="md:pr-2/10">
           <p className="tw-lead-sm">
             From concept to coding — learn all about the Bitcoin Integration
-            feature on ICP through these videos.
+            feature on BIG through these videos.
           </p>
           <a
             href="/videos"

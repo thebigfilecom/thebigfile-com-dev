@@ -143,7 +143,7 @@ export const EthEquivalentTxRate = () => {
           <Info>
             <h3 className="tw-button-xs mb-1">ETH-equivalent Transactions</h3>
             <p className="tw-caption text-white/50 mb-0">
-              Not all Transactions are equal. ICP performs ~80x the amount of
+              Not all Transactions are equal. BIG performs ~80x the amount of
               computational work of Ethereum per transaction.{" "}
               <Link
                 className="text-white hover:underline hover:text-white"

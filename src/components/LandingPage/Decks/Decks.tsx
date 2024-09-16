@@ -92,7 +92,7 @@ const Decks = ({ className = "" }: { className?: string }) => {
 
         <CardImage
           src="/img/home/deck-astronaut.webp"
-          alt="ICP Pitch Presenation"
+          alt="BIG Pitch Presenation"
           className="-right-px -bottom-10"
         />
       </Card>

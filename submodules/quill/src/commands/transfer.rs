@@ -13,7 +13,7 @@ use clap::Parser;
 use icp_ledger::{Tokens, DEFAULT_TRANSFER_FEE};
 use icrc_ledger_types::icrc1::transfer::TransferArg;
 
-/// Signs an ICP transfer transaction.
+/// Signs an BIG transfer transaction.
 #[derive(Parser)]
 pub struct TransferOpts {
     /// Destination account.
@@ -27,7 +27,7 @@ pub struct TransferOpts {
     #[clap(long)]
     pub memo: Option<u64>,
 
-    /// Transaction fee, default is 0.0001 ICP.
+    /// Transaction fee, default is 0.0001 BIG.
     #[clap(long, value_parser = parse_tokens)]
     pub fee: Option<Tokens>,
 

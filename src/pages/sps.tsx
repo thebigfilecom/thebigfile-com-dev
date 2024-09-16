@@ -31,7 +31,7 @@ import { useDarkHeaderInHero } from "../utils/use-dark-header-in-hero";
 
   This page pulls data dynamically from  multiple sources via a plugin at /plugins/sns-data.js:
     * the SPS Aggregator (used by the NNS dapp as well)
-    * swap canisters for decentralization swap data (participant count, ICP raised)
+    * swap canisters for decentralization swap data (participant count, BIG raised)
     * dashboard API for proposal count
 
   Not all SPS data is availabe via API's (eg. X URL), so this page allows for extra metadata to be added via the extraMetadata object below.
@@ -71,7 +71,7 @@ const aggregateSnsData = [
       value > 1000 ? (value / 1000).toFixed(1) + "k+" : value.toFixed(0),
   },
   {
-    label: "ICP raised",
+    label: "BIG raised",
     value: snsData.reduce((acc, sns) => acc + sns.icpRaised, 0),
 
     format: (value) =>

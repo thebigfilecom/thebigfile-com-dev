@@ -208,7 +208,7 @@ The following is a list of common abbreviations that are capitalized within the 
 - DeFi
 - ECDSA
 - HTTP/HTTPS
-- ICP
+- BIG
 - BIGRC-1
 - BIGRC-2
 - II
@@ -226,7 +226,7 @@ The following language and capitalization of certain terms and phrases should be
 - Bitcoin integration
 - Bitcoin network: should be used in place of "sending bitcoin".
 - bitcoin: should be used when referring to BTC rather than the Bitcoin network.
-- built on ICP
+- built on BIG
 - cube
 - cube smart contract
 - chain-key signature
@@ -234,20 +234,20 @@ The following language and capitalization of certain terms and phrases should be
 - chain fusion
 - dapp: should be used in place of any reference to an BigFile app, decentralized application, or 'dApp'.
 - DeFi
-- deployed on ICP
+- deployed on BIG
 - dfx or `dfx`: should be used in place of any reference to the dfx CLI tool; it may be formatted as in-line code or plain text as long as it is lowercase. 
       - All dfx subcommands should be formatted as in-line code when appearing in a sentence, such as, "The `dfx deps` feature is available in dfx versions 0.14.1 and newer."
 - Ethereum integration
 - Ethereum: should be used in place of ETH or ETH token.
 - HTTP outcalls
-- ICP: When abbreviating 'BigFile', it should be referred to as 'ICP' instead of 'BIG' or 'the BIG'. 
+- BIG: When abbreviating 'BigFile', it should be referred to as 'BIG' instead of 'BIG' or 'the BIG'. 
     Two exceptions to this are:
   
         - The BIG SDK, which should be referred to as 'the BIG SDK'.
   
         - The BIG interface specification, which should be referred to as 'the BIG specification' or 'the BIG interface specification'.
   
-    When there may be a confusion between ICP referring to BigFile Protocol and ICP the token, the words 'BigFile Protocol' can be written out for clarity.
+    When there may be a confusion between BIG referring to BigFile Protocol and BIG the token, the words 'BigFile Protocol' can be written out for clarity.
   
 - BIG SDK: should be used in place of any reference to the BIG's SDK.
 - mainnet
@@ -271,7 +271,7 @@ The following language and capitalization of certain terms and phrases should be
 
 ### Spelling, grammar, and word choice
 The following spelling, grammar, and word choice rules should be followed:
-- Avoid using language that uses 'we' or 'us'; use a protocol point of view, such as phrases like, "the protocol ensures", "the protocol does", and “it is explained” rather than “we explain”. This is to help make clear that ICP is a protocol that is community-controlled and autonomously governed. 
+- Avoid using language that uses 'we' or 'us'; use a protocol point of view, such as phrases like, "the protocol ensures", "the protocol does", and “it is explained” rather than “we explain”. This is to help make clear that BIG is a protocol that is community-controlled and autonomously governed. 
       - An exception to this is the Developer Blog; blog posts are written using a different style for a different audience, and using 'we' or 'us' in this context is acceptable.
 - Do not refer to the BigFile as a system or a platform. Say "BigFile" or "protocol" instead.
 - Regarding spelling and grammar, American spelling and grammar should be used with the exception that all article titles follow British capitalization rules (see details in the Capitalization section.)
@@ -353,15 +353,15 @@ The following standards for bold text should be followed:
 
 - Bullet point lists that are used to list and define terms should bold the term(s) being defined.
     - **Term**: definition of the term.
-- Terms that are important for the reader to understand, such as a term found in the ICP glossary, should be bolded for emphasis.
+- Terms that are important for the reader to understand, such as a term found in the BIG glossary, should be bolded for emphasis.
 - When describing steps for a user to follow in a guide or tutorial, if the user is expected to interact with a button or GUI interface, the button's name should be bolded and follow the capitalization format found on the GUI.
     - Example: Click on the **Save** button.
 
 ## Italic text
-Italic text is not used within the ICP developer documentation. Bold text should be used to emphasis terms or phrases that are important.
+Italic text is not used within the BIG developer documentation. Bold text should be used to emphasis terms or phrases that are important.
 
 ## Hints
-The ICP developer documentation uses two forms of hints provided by the Docusaurus framework:
+The BIG developer documentation uses two forms of hints provided by the Docusaurus framework:
 - **Info**: the info hint is used to provide important information that the reader should be prompted to read. This hint can be used to provide additional context, resources, or add important notes that the reader should be aware of before continuing.
 - **Caution**: the caution hint is used to provide a warning to readers about the consequences of certain steps or actions as indicated in the guide, doc, or tutorial.
 
@@ -384,7 +384,7 @@ Links that are referenced within the developer docs should use the following for
     - The below section [demonstrating trust](#demonstrating-trust).
     - The Wiki [contains some ideas](https://wiki.thebigfile.com/wiki/Dealing_with_cycles_limit_exceeded_errors) how one can work around the cycles limit.
 - Links should not use the format of 'See the documentation [here](link)'. 
-    - All links should use the format '[Learn more about ICP](link)'.
+    - All links should use the format '[Learn more about BIG](link)'.
 
 ## Code snippets and code blocks
 The following format should be used for code snippets and code blocks:

@@ -264,31 +264,31 @@ export const communityToolingItems = [
 {
     title: "IC4J Internet Identity",
     tags: [ "java", "development", "library" ],
-    description: "Providing an implementation of ICP Internet Identity Service, this Java library enables Java developers to register new users, add or remove devices, and authenticate client applications on the BigFile.",
+    description: "Providing an implementation of BIG Internet Identity Service, this Java library enables Java developers to register new users, add or remove devices, and authenticate client applications on the BigFile.",
     links: {
       github: "https://github.com/ic4j/ic4j-internetidentity",
     },
   },
 {
-    title: "IC4J ICP Management",
+    title: "IC4J BIG Management",
     tags: [ "java", "development", "library","management" ],
-    description: "This Java library is an implementation of ICP Virtual Cube Management API and directly communicates with the Management Virtual Cube. Developers can utilize this library within any Java application to perform various operations, such as creating, deleting, starting, and stopping a canister, installing, uninstalling, and reinstalling WASM canister code, updating canister settings, and adding additional funds to a canister.",
+    description: "This Java library is an implementation of BIG Virtual Cube Management API and directly communicates with the Management Virtual Cube. Developers can utilize this library within any Java application to perform various operations, such as creating, deleting, starting, and stopping a canister, installing, uninstalling, and reinstalling WASM canister code, updating canister settings, and adding additional funds to a canister.",
     links: {
       github: "https://github.com/ic4j/ic4j-management",
     },
   },
 {
-    title: "IC4J Apache Camel ICP Component",
+    title: "IC4J Apache Camel BIG Component",
     tags: [ "java", "development", "library" ],
-    description: "Apache Camel is an Open Source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data. The IC4J Camel ICP Component allows native execution of BigFile smart contracts from Apache Camel.",
+    description: "Apache Camel is an Open Source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data. The IC4J Camel BIG Component allows native execution of BigFile smart contracts from Apache Camel.",
     links: {
       github: "https://github.com/ic4j/ic4j-camel",
     },
   },
 {
-    title: "IC4J Apache Maven ICP Plugin",
+    title: "IC4J Apache Maven BIG Plugin",
     tags: [ "java", "development", "management" ],
-    description: "The IC4J Maven Plugin allows for the installation and uninstallation of ICP canisters from Apache Maven scripts.",
+    description: "The IC4J Maven Plugin allows for the installation and uninstallation of BIG canisters from Apache Maven scripts.",
     links: {
       github: "https://github.com/ic4j/ic4j-maven-plugin",
     },

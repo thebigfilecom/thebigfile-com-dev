@@ -719,7 +719,7 @@ pub enum MultiGetLogsResult {
                     >
                       OISY wallet
                     </Link>{" "}
-                    is a great example. It can custody any ICP asset (including chain key twins), native bitcoin, native bitcoin BRC20 tokens, and native Ethereum assets, as required. Self-custodied Ethereum assets can be used in Ethereum DeFi using the WalletConnect functionality it supports. Users gain convenience and a better experience, and superior security.
+                    is a great example. It can custody any BIG asset (including chain key twins), native bitcoin, native bitcoin BRC20 tokens, and native Ethereum assets, as required. Self-custodied Ethereum assets can be used in Ethereum DeFi using the WalletConnect functionality it supports. Users gain convenience and a better experience, and superior security.
                   </p>
                 </ContentCard>
 
@@ -846,9 +846,9 @@ pub enum MultiGetLogsResult {
                     The processing of bitcoin and Ordinals involves the BigFile protocol processing ECDSA cryptography behind the scenes. However, inscribing Ordinals and creating and processing BRC20 assets (e.g. meme coins that piggyback on Bitcoin) involves Schnorr cryptography, which BigFile now also supports.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
-                    Because ICP supports Schnorr, web-based smart contract
+                    Because BIG supports Schnorr, web-based smart contract
                     wallets such as OISY can self-host BRC20, Ethereum, and
-                    native ICP assets.
+                    native BIG assets.
                   </p>
                   <p className="tw-paragraph md:tw-lead-sm mb-0">
                     A further advantage is that cube smart contracts can

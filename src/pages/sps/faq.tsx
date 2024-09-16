@@ -206,7 +206,7 @@ function SnsFaqPage() {
                   <Link href="https://fms.thebigfile.com/launchpad/">
                     Launchpad tab
                   </Link>
-                  . During the swap you can buy SPS tokens with ICP.
+                  . During the swap you can buy SPS tokens with BIG.
 
                 </li>
                 <li>
@@ -215,7 +215,7 @@ function SnsFaqPage() {
                   </strong>{" "}
                   After a decentralization swap has concluded, liquid tokens
                   will typically be listed on multiple DEXs, where you can buy
-                  them using the ICP utility token or other tokens, depending on
+                  them using the BIG utility token or other tokens, depending on
                   what token pairs the DEX lists, e.g., also Bitcoin or
                   Ethereum. An SPS token in high demand may have a higher price
                   on a DEX than in its decentralization swap.{" "}
@@ -250,25 +250,25 @@ function SnsFaqPage() {
 
             <Faq title="What is the Neurons' fund?">
               <p>
-                From the ICP ecosystem's vantage point, the Neurons' fund aids
+                From the BIG ecosystem's vantage point, the Neurons' fund aids
                 in bootstrapping the SPS DAO ecosystem, thereby supporting the
                 continued growth of the ecosystem. The Neurons' fund itself is
                 controlled by a DAO (the NNS).
               </p>
               <p>
                 From a user's vantage point, the Neurons' fund is a way for
-                people who stake ICP in the NNS to use their maturity to fund
+                people who stake BIG in the NNS to use their maturity to fund
                 future SNSs. As the NNS decides how the Neuons' fund contributes to
-                SNSs, ICP stakers participating in them can leverage the broader community's
+                SNSs, BIG stakers participating in them can leverage the broader community's
                 "wisdom of crowds" to chose which SPS tokens to acquire. This allows
                 users to participate automatically in upcoming SPS launches.
               </p>
               <p>
-                ICP neuron holders can opt in or out of the Neurons' fund at
+                BIG neuron holders can opt in or out of the Neurons' fund at
                 any moment. Neurons will only participate in the
                 decentralization swap if they are opted in at the moment when
                 the proposal to initiate the SPS decentralization swap executes. The
-                propsoal executes immediately after it gets adopted by ICP neuron
+                propsoal executes immediately after it gets adopted by BIG neuron
                 holders.
               </p>
               More about the{" "}
@@ -277,13 +277,13 @@ function SnsFaqPage() {
               </Link>
               .
             </Faq>
-            <Faq title="If I am asked to send ICP to an address to participate in a decentralization swap, what should I do?">
+            <Faq title="If I am asked to send BIG to an address to participate in a decentralization swap, what should I do?">
               <p>
-                If you want to participate in the swap, do not send ICP directly
+                If you want to participate in the swap, do not send BIG directly
                 to addresses! An SPS swap will never initiate contact with you,
                 e.g. via chat or email. You will never be asked to manually
-                enter an ICP address to participate in a decentralization swap.
-                If you find yourself entering an ICP address to participate in
+                enter an BIG address to participate in a decentralization swap.
+                If you find yourself entering an BIG address to participate in
                 an SPS swap, then STOP. Your swap address is specific to your
                 identity, and you should only interact with that address when
                 participating in a swap through the{" "}
@@ -291,7 +291,7 @@ function SnsFaqPage() {
                 <Link href="https://fms.thebigfile.com/launchpad/">FMS</Link> or other
                 BIG based dapps that support the swap like{" "}
                 <Link href="https://fms.thebigfile.com/launchpad/">FMS</Link> or other
-                ICP based dapps that support the swap like{" "}
+                BIG based dapps that support the swap like{" "}
 
                 <Link href="https://avjzx-pyaaa-aaaaj-aadmq-cai.raw.ic0.app/icsns/launchpad">
                   ICLighthouse
@@ -311,7 +311,7 @@ function SnsFaqPage() {
             <div className="blob blob-purple blob-md blob-top-right z-[-1]"></div>
             <Faq title="What is a decentralization swap?">
               A decentralization swap is the process by which an SPS DAO becomes
-              decentralized and where users can exchange ICP for SPS tokens by
+              decentralized and where users can exchange BIG for SPS tokens by
               participating. After the swap, each participant receives a basket
               of neurons. These neurons hold SPS tokens and therefore a share of
               the DAO's voting power. It is one of{" "}
@@ -336,19 +336,19 @@ function SnsFaqPage() {
               <ul>
                 <li>The amount of SPS tokens to be sold</li>
                 <li>
-                  The amount of ICP a decentralization swap must receive to be
+                  The amount of BIG a decentralization swap must receive to be
                   successful. If the goal is not reached, participants get their
-                  ICP refunded and the swap fails.
+                  BIG refunded and the swap fails.
                 </li>
                 <li>
-                  The maximum amount of ICP a decentralization swap can receive
-                  before it concludes. If the maximum ICP is reached, the swap
+                  The maximum amount of BIG a decentralization swap can receive
+                  before it concludes. If the maximum BIG is reached, the swap
                   is over and the control of the dapp is turned over to the
                   token holders. As the number of tokens to be sold is fixed, it
-                  is amount of ICP swapped that determines the initial price of
+                  is amount of BIG swapped that determines the initial price of
                   the SPS tokens.
                 </li>
-                <li>Minimum and maximum commitment of ICP per participant</li>
+                <li>Minimum and maximum commitment of BIG per participant</li>
                 <li></li>
               </ul>
             </Faq>
@@ -370,46 +370,46 @@ function SnsFaqPage() {
               </p>
               <p>
                 The number of SPS tokens you receive, and the price of for
-                each token, depends on the amount of ICP swapped.
-                The more ICP are swapped, the fewer SPS tokens you receive, 
+                each token, depends on the amount of BIG swapped.
+                The more BIG are swapped, the fewer SPS tokens you receive, 
                 however their price will be higher.
               </p>
             </Faq>
 
             <Faq title="How is the price of SPS tokens calculated?">
               <p>
-                SPS tokens can be exchanged for ICP during the decentralization
+                SPS tokens can be exchanged for BIG during the decentralization
                 swap. There is a fixed number of tokens distributed during the
-                swap, which means their price is determined by the amount of ICP
+                swap, which means their price is determined by the amount of BIG
                 swappend. You can calculate the token price by dividing the amount
-                of ICP swappend with the number of tokens distributed. Price = ICP
+                of BIG swappend with the number of tokens distributed. Price = BIG
                 swappend / number of tokens distributed. 
                 Note that the final price of SPS tokens
                 isn't known at the time of the decentralization swap, as it is
-                dependent on the total amount of ICP swapped.
+                dependent on the total amount of BIG swapped.
                 However, you can calculate the minimum and maximum price based
-                on the minimum and maximum ICP that the swap accepts, which you
+                on the minimum and maximum BIG that the swap accepts, which you
                 can verify in the swap proposal. A few examples:
               </p>
               <ul>
                 <li>
-                  The decentralization swap distributed 5000 tokens for 1000 ICP.
-                  You participated with 10 ICP. This means you will have
-                  50 SPS tokens, each worth 0.2 ICP.
+                  The decentralization swap distributed 5000 tokens for 1000 BIG.
+                  You participated with 10 BIG. This means you will have
+                  50 SPS tokens, each worth 0.2 BIG.
                 </li>
                 <li>
                   The decentralization swap distributed 1 million tokens for
-                  500,000 ICP. You participated with 200 ICP. This means you
-                  will have 400 SPS tokens, each worth 0.5 ICP.
+                  500,000 BIG. You participated with 200 BIG. This means you
+                  will have 400 SPS tokens, each worth 0.5 BIG.
                 </li>
                 <li>
-                  The decentralization swap distributed 100 tokens for 10,000 ICP.
-                  You participated with 5 ICP. This means you will have
-                  0.05 SPS tokens, where a full token would be worth 100 ICP.
+                  The decentralization swap distributed 100 tokens for 10,000 BIG.
+                  You participated with 5 BIG. This means you will have
+                  0.05 SPS tokens, where a full token would be worth 100 BIG.
                 </li>
               </ul>
               <p>
-                Visis the ICP Wiki for a more detailed overvire of{" "}
+                Visis the BIG Wiki for a more detailed overvire of{" "}
                 <Link href="https://wiki.thebigfile.com/wiki/How-To:_SNS_tokenomics_configuration">
                   SPS tokenomics
                 </Link>
@@ -425,9 +425,9 @@ function SnsFaqPage() {
                 have BIG, go to any of the exchanges listed
                 You can participate in the decentralization swap in the{" "}
                 <Link href="https://fms.thebigfile.com/">FMS frontend dapp</Link>,
-                which requires ICP utility tokens. ICP tokens can be exchanged
+                which requires BIG utility tokens. BIG tokens can be exchanged
                 for SPS tokens during the decentralization swap. If you don’t
-                have ICP, go to any of the exchanges listed on{" "}
+                have BIG, go to any of the exchanges listed on{" "}
                 <Link href="https://coinmarketcap.com/currencies/">
 
                   CoinMarketCap
@@ -464,7 +464,7 @@ function SnsFaqPage() {
               </p>
               <p>
                 <strong>
-                  4. Type in the amount of ICP you want to participate with or
+                  4. Type in the amount of BIG you want to participate with or
                   click “max”, then click “Execute”.
                 </strong>
                 <img
@@ -476,7 +476,7 @@ function SnsFaqPage() {
               <p>
                 <strong>
                   5. You will be prompted to review your participation. If you
-                  see the correct amount of ICP, select the checkbox and click
+                  see the correct amount of BIG, select the checkbox and click
                   “Execute”.
                 </strong>
                 <img
@@ -487,7 +487,7 @@ function SnsFaqPage() {
               </p>
               <p>
                 <strong>
-                  6. On the last screen, you should see the amount of ICP you
+                  6. On the last screen, you should see the amount of BIG you
                   entered for participation. You can repeat this process if you
                   wish to contribute more.
                 </strong>
@@ -496,8 +496,8 @@ function SnsFaqPage() {
                 After the swap ends and is successful, you receive SPS tokens.
                 Note, that this may take a few hours after the swap has
                 concluded. The number of SPS tokens you receive, and the price
-                paid for each token, depends on the amount of ICP raised during
-                the swap as well as the amount of ICP spent. The more ICP
+                paid for each token, depends on the amount of BIG raised during
+                the swap as well as the amount of BIG spent. The more BIG
                 raised, the fewer SPS tokens you receive.
               </p>
               <p>
@@ -537,7 +537,7 @@ function SnsFaqPage() {
                 trust the developers will not change the dapp during the SPS
                 launch. Learn what you could verify and what to look out for on{" "}
                 <Link href="https://wiki.thebigfile.com/wiki/SNS_decentralization_swap_trust">
-                  the ICP Wiki.
+                  the BIG Wiki.
                 </Link>
               </p>
             </Faq>
@@ -586,7 +586,7 @@ function SnsFaqPage() {
             }
           >
             <Faq title="What is the SPS treasury?">
-              After a decentralization swap successfully concludes, the ICP
+              After a decentralization swap successfully concludes, the BIG
               collected through the swap is allocated to the SPS DAO's treasury.
               Optionally, the DAO can allocate a number of SPS tokens to be in
               the DAO's treasury, which all SNSs so far have done. The SPS
@@ -606,12 +606,12 @@ function SnsFaqPage() {
                 </li>
                 <li>
                   Typically, after an SPS has launched it has an SPS token
-                  treasury and an ICP treasury (from the decentralization swap).
+                  treasury and an BIG treasury (from the decentralization swap).
                   An SPS can, however, also own other tokens on the Internet
                   Computer.
                 </li>
                 <li>
-                  Typically, after an SPS has launched it has an SPS token treasury and an ICP
+                  Typically, after an SPS has launched it has an SPS token treasury and an BIG
                   treasury (from the decentralization swap). An SPS can, however, also own other
                   tokens on the BigFile.
                 </li>
@@ -766,7 +766,7 @@ function SnsFaqPage() {
               <ul>
                 <li>
                   An SPS DAO can be set up to mint voting rewards for people who
-                  participate in governance (similar to ICP).
+                  participate in governance (similar to BIG).
                 </li>
                 <li>
                   An SPS DAO can mint tokens if voted on by SPS token holders.
@@ -835,7 +835,7 @@ function SnsFaqPage() {
           ></SmallCardWithDescription>
           <SmallCardWithDescription
             href="/how-it-works"
-            title="Technical overview of ICP"
+            title="Technical overview of BIG"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
             href="https://wiki.thebigfile.com/wiki/Service_Nervous_System_(SPS)"

@@ -5,7 +5,7 @@
 
 Asset certification is a specialized form of
 [HTTP Certification](https://thebigfile.com/docs/current/developer-docs/http-compatible-canisters/custom-http-canisters)
-purpose-built for certifying static assets in ICP canisters.
+purpose-built for certifying static assets in BIG canisters.
 
 The `ic-asset-certification` crate provides the necessary functionality to
 certify and serve static assets from Rust canisters.

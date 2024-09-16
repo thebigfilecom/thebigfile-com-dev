@@ -29,7 +29,7 @@ pub struct StakeOpts {
     #[clap(long, value_parser = parse_tokens, conflicts_with = "already-transferred", required_unless_present = "already-transferred")]
     amount: Option<Tokens>,
 
-    /// Skips signing the transfer of ICP, signing only the staking request.
+    /// Skips signing the transfer of BIG, signing only the staking request.
     #[clap(long)]
     already_transferred: bool,
 
@@ -46,7 +46,7 @@ pub struct StakeOpts {
     #[clap(long)]
     nonce: Option<u64>,
 
-    /// Transaction fee, default is 0.0001 ICP.
+    /// Transaction fee, default is 0.0001 BIG.
     #[clap(long, value_parser = parse_tokens)]
     fee: Option<Tokens>,
 

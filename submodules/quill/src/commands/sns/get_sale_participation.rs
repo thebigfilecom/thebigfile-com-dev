@@ -9,7 +9,7 @@ use crate::{
 
 use super::SnsCanisterIds;
 
-/// Queries for how much ICP a user has contributed to a token sale.
+/// Queries for how much BIG a user has contributed to a token sale.
 #[derive(Parser)]
 pub struct GetSaleParticipationOpts {
     /// The principal to query. If unspecified, the caller will be used.
