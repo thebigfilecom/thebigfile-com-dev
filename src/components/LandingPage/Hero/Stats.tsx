@@ -160,7 +160,7 @@ export const EthEquivalentTxRate = () => {
 };
 */
 
-export const SmartContractMemory = () => {
+ export const SmartContractMemory = () => {
   return (
     <motion.div
       className="backdrop-blur-lg rounded-xl text-white tw-lead-lg py-3 px-6  hidden md:block"
@@ -182,6 +182,7 @@ export const SmartContractMemory = () => {
     </motion.div>
   );
 };
+
 
 export const LiveStats = () => {
   return (
