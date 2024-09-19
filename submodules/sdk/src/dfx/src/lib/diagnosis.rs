@@ -139,7 +139,7 @@ One or both of the following are a likely explanation:
             }),
     2. Delete all files from the dist/ directory."
 
-See also release notes: https://forum.dfinity.org/t/dfx-0-11-0-is-promoted-with-breaking-changes/14327"#;
+See also release notes: https://forum.thebigfile.com/t/dfx-0-11-0-is-promoted-with-breaking-changes/14327"#;
 
     (Some(explanation.to_string()), Some(suggestion.to_string()))
 }

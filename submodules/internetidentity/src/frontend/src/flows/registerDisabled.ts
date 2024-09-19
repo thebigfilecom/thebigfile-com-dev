@@ -20,7 +20,7 @@ const pageContent = (onCancel: () => void) => {
             developers. Read more about this security measure
             <a
               class="t-link"
-              href="https://forum.dfinity.org/t/internet-identity-proposal-to-deprecate-account-creation-on-all-origins-other-than-https-identity-ic0-app/9760"
+              href="https://forum.thebigfile.com/t/internet-identity-proposal-to-deprecate-account-creation-on-all-origins-other-than-https-identity-ic0-app/9760"
               >here</a
             >.
           </p>`,

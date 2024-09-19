@@ -51,9 +51,9 @@ const airtablePlugin = async function () {
         do {
           const res = await loadRecords({
             apiKey: AIRTABLE_KEY,
-            baseId: "appBKNYn6DaFccnno",
-            tableName: "tblCZBZ26gbGvPf7j",
-            viewId: "viwx1BHC1Cj8RVG7q",
+            baseId: "",
+            tableName: "",
+            viewId: "",
             offset,
           });
           offset = res.offset;

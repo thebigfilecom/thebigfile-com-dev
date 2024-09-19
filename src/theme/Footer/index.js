@@ -138,7 +138,7 @@ function Footer({ editPath }) {
               <div className={styles.legalLink}>
                 <Link
                   style={{ color: "white", fontWeight: "bold" }}
-                  to={"https://dfinity.org/privacy-policy"}
+                  to={"https://thebigfile.tech/privacy-policy"}
                 >
                   Privacy Policy
                 </Link>
@@ -146,7 +146,7 @@ function Footer({ editPath }) {
               <div className={styles.legalLink}>
                 <Link
                   style={{ color: "white", fontWeight: "bold" }}
-                  to={"https://dfinity.org/terms-of-use"}
+                  to={"https://thebigfile.tech/terms-of-use"}
                 >
                   Terms of Use
                 </Link>

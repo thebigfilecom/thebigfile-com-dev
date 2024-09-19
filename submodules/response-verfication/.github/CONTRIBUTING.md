@@ -16,7 +16,7 @@ The contributor guidelines are intended to make the contribution process easy an
 Before contributing, consider the following:
 
 - If you want to report an issue, click [issues](https://github.com/dfinity/response-verification/issues).
-- If you have more general questions related to this package and its use, post a message to the [community forum](https://forum.dfinity.org/).
+- If you have more general questions related to this package and its use, post a message to the [community forum](https://forum.thebigfile.com/).
 - If you are reporting a bug, provide as much information about the problem as possible.
 - If you want to contribute directly to this repository, typical fixes might include any of the following:
   - Fixes to resolve bugs or documentation errors

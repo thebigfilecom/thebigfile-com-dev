@@ -484,7 +484,7 @@ module.exports = [
     speaker: "Lara Schmid",
     speakerTitle: "Researcher NNS",
     description:
-      '<p>Similarly to how the File Management System (FMS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps.\nIn this talk, we explain a design proposal for a first version of an open governance canister that will then be used to realise the service nervous systems (SNSs).\nApart from this, the canister can also be (re-)used by anyone looking to implement another kind of DAO.\nA more detailed description of the proposal that we will present is explained and discussed in this <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224">forum entry</a>.</p>\n',
+      '<p>Similarly to how the File Management System (FMS) is the open tokenized governance system that controls the BigFile blockchain (BIG), service nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps.\nIn this talk, we explain a design proposal for a first version of an open governance canister that will then be used to realise the service nervous systems (SNSs).\nApart from this, the canister can also be (re-)used by anyone looking to implement another kind of DAO.\nA more detailed description of the proposal that we will present is explained and discussed in this <a href="https://forum.thebigfile.com/t/open-governance-canister-for-sns-design-proposal/10224">forum entry</a>.</p>\n',
     startTimeUtc: 1642528800000,
     startTimePt: 1642496400000,
     startTimeEu: 1642528800000,
@@ -609,7 +609,7 @@ module.exports = [
     title: "Chain Key Bitcoin Ledger on the BigFile",
     speaker: "Mario Pastorelli & Thomas Locher ",
     description:
-      '<p>Senior Software Engineer Mario Pastorelli and Senior Researcher Thomas Locher discuss the upcoming vote to build a Bitcoin ledger on the BigFile, which will leverage chain key technology and the Bitcoin integration functionality to offer fast and cheap Bitcoin transactions. Unlike standard &quot;wrapped&quot; Bitcoin solutions, the proposed architecture does not depend on any third party, making it more secure.\nForum link: <a href="https://forum.dfinity.org/t/feedback-wanted-wrapped-bitcoin-ledger-on-the-internet-computer/10681">https://forum.dfinity.org/t/feedback-wanted-wrapped-bitcoin-ledger-on-the-internet-computer/10681</a></p>\n',
+      '<p>Senior Software Engineer Mario Pastorelli and Senior Researcher Thomas Locher discuss the upcoming vote to build a Bitcoin ledger on the BigFile, which will leverage chain key technology and the Bitcoin integration functionality to offer fast and cheap Bitcoin transactions. Unlike standard &quot;wrapped&quot; Bitcoin solutions, the proposed architecture does not depend on any third party, making it more secure.\nForum link: <a href="https://forum.thebigfile.com/t/feedback-wanted-wrapped-bitcoin-ledger-on-the-internet-computer/10681">https://forum.thebigfile.com/t/feedback-wanted-wrapped-bitcoin-ledger-on-the-internet-computer/10681</a></p>\n',
     startTimeUtc: 1647450000000,
     startTimePt: 1647421200000,
     startTimeEu: 1647450000000,
@@ -653,7 +653,7 @@ module.exports = [
     speaker: "Lara Schmid & Björn Assmann ",
     speakerTitle: "Senior Researchers",
     description:
-      '<p>We would like to discuss a design proposal for a simple SPS reward scheme.\nService nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps on the BigFile. In this talk, we would like to discuss the design proposal for a first, simple SPS reward scheme.\nLink to discussion on forum: <a href="https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224/36">https://forum.dfinity.org/t/open-governance-canister-for-sns-design-proposal/10224/36</a></p>\n',
+      '<p>We would like to discuss a design proposal for a simple SPS reward scheme.\nService nervous systems (SNSs) are algorithmic DAOs that will allow developers to create decentralized, token-based governance systems for their dapps on the BigFile. In this talk, we would like to discuss the design proposal for a first, simple SPS reward scheme.\nLink to discussion on forum: <a href="https://forum.thebigfile.com/t/open-governance-canister-for-sns-design-proposal/10224/36">https://forum.thebigfile.com/t/open-governance-canister-for-sns-design-proposal/10224/36</a></p>\n',
     startTimeUtc: 1652284800000,
     startTimePt: 1652252400000,
     startTimeEu: 1652284800000,
@@ -666,7 +666,7 @@ module.exports = [
     title: "Threshold ECDSA ",
     speaker: "Andrea Cerulli & Dieter Sommer",
     description:
-      '<p>The threshold ECDSA feature will allow canisters to request ECDSA signatures, which will enable them, among other things, to perform BTC and ETH transactions. Signatures are securely generated by a distributed protocol run by the nodes of a subnet. In this talk we’ll take a closer look at how the threshold ECDSA protocol is integrated in the BIG and how we plan to roll out this feature.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/threshold-ecdsa-signatures/6152/163">here</a>. </p>\n',
+      '<p>The threshold ECDSA feature will allow canisters to request ECDSA signatures, which will enable them, among other things, to perform BTC and ETH transactions. Signatures are securely generated by a distributed protocol run by the nodes of a subnet. In this talk we’ll take a closer look at how the threshold ECDSA protocol is integrated in the BIG and how we plan to roll out this feature.\nJoin discussion on forum <a href="https://forum.thebigfile.com/t/threshold-ecdsa-signatures/6152/163">here</a>. </p>\n',
     startTimeUtc: 1653408000000,
     startTimePt: 1653375600000,
     startTimeEu: 1653408000000,
@@ -679,7 +679,7 @@ module.exports = [
     title: "Community Conversation - SPS initial token swap",
     speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.thebigfile.com/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: 1654794000000,
     startTimePt: 1654761600000,
     startTimeEu: 1654794000000,
@@ -692,13 +692,13 @@ module.exports = [
     title: "Test upcoming event",
     tbdMonth: "2023-01",
     description:
-      '<p>Join discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>Join discussion on forum <a href="https://forum.thebigfile.com/t/sns-initial-token-swap/13591">here</a></p>\n',
   },
   {
     title: "Test upcoming event 2",
     tbdMonth: "2023-01",
     description:
-      '<p>Join discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>Join discussion on forum <a href="https://forum.thebigfile.com/t/sns-initial-token-swap/13591">here</a></p>\n',
   },
   {
     title:
@@ -716,7 +716,7 @@ module.exports = [
     title: "Community Conversation - SPS initial token swap",
     speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.thebigfile.com/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: new Date("2022-08-10T16:00Z").getTime(),
     startTimePt: new Date("2022-08-10T16:00Z").getTime(),
     startTimeEu: new Date("2022-08-10T16:00Z").getTime(),
@@ -727,7 +727,7 @@ module.exports = [
     title: "Community Conversation - SPS initial token swap 2",
     // speaker: "Lara Schmid & Peter Lidwell ",
     description:
-      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.dfinity.org/t/sns-initial-token-swap/13591">here</a></p>\n',
+      '<p>An SPS must be decentralised from the beginning, before any tokens can be transferred. We thus require a mechanism by which the developers can, in one step, hand over the control of their dapp to an already decentralized SPS.\nIn this talk we presents a design for a SPS launchpad that can be used for this purpose. Initially, the launchpad consists of an initial token swap where participants can exchange BIG tokens for SPS tokens to provide funding for a dapp.\nJoin discussion on forum <a href="https://forum.thebigfile.com/t/sns-initial-token-swap/13591">here</a></p>\n',
     startTimeUtc: new Date("2022-08-11T16:00Z").getTime(),
     startTimePt: new Date("2022-08-11T16:00Z").getTime(),
     startTimeEu: new Date("2022-08-11T16:00Z").getTime(),

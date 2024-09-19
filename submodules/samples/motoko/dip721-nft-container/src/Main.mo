@@ -19,7 +19,7 @@ shared actor class Dip721NFT(custodian: Principal, init : Types.Dip721NonFungibl
   stable var symbol : Text = init.symbol;
   stable var maxLimit : Nat16 = init.maxLimit;
 
-  // https://forum.dfinity.org/t/is-there-any-address-0-equivalent-at-dfinity-motoko/5445/3
+  // https://forum.thebigfile.com/t/is-there-any-address-0-equivalent-at-dfinity-motoko/5445/3
   let null_address : Principal = Principal.fromText("aaaaa-aa");
 
   public query func balanceOfDip721(user: Principal) : async Nat64 {
