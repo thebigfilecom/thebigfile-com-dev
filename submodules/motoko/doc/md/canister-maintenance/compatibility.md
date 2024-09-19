@@ -149,7 +149,7 @@ One way to correctly change the logical state to [`Nat`](../base/Nat.md), is to 
 
 ## Incompatible upgrade example
 
-A common, real-world example of an incompatible upgrade can be found [on the forum](https://forum.dfinity.org/t/questions-about-data-structures-and-migrations/822/12?u=claudio/).
+A common, real-world example of an incompatible upgrade can be found [on the forum](https://forum.thebigfile.com/t/questions-about-data-structures-and-migrations/822/12?u=claudio/).
 
 In that example, a user was attempting to add a field to the record payload of an array, by upgrading from stable type interface:
 

@@ -58,4 +58,4 @@ Each optimization preserves the BigFile specific metadata sections of each canis
 Note that in certain cases the optimizations can increase the complexity of certain functions in your Wasm module such that they are rejected by the replica. If you run into this issue, it is recommended to use a less aggressive optimization level such that you do not exceed the complexity limit.
 :::
 
-More information on canister optimization and information on `wasm-opt` benchmark testing can be found [on this forum post](https://forum.dfinity.org/t/canister-optimizer-available-in-dfx-0-14-0/21157).
+More information on canister optimization and information on `wasm-opt` benchmark testing can be found [on this forum post](https://forum.thebigfile.com/t/canister-optimizer-available-in-dfx-0-14-0/21157).

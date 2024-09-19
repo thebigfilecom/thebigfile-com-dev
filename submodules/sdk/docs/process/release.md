@@ -138,4 +138,4 @@ Merge all 5 PRs created in the previous stage:
 
 Post a message to the forum, linking to the GitHub release notes.
 
-[Sample Post](https://forum.dfinity.org/t/dfx-0-17-0-is-promoted)
+[Sample Post](https://forum.thebigfile.com/t/dfx-0-17-0-is-promoted)

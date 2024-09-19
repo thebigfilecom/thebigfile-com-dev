@@ -1922,7 +1922,7 @@ When creating a new identity with `dfx identity new`, whereas previously it woul
 
 ### breaking change: dfx canister update-settings --compute-allocation always fails
 
-See https://forum.dfinity.org/t/fixing-incorrect-compute-allocation-fee/14830
+See https://forum.thebigfile.com/t/fixing-incorrect-compute-allocation-fee/14830
 
 Until the rollout is complete, `dfx canister update-settings --compute-allocation <N>`
 will fail with an error from the replica such as the following:
@@ -2190,7 +2190,7 @@ Previously, dfx only accepted canister aliases and produced an error message tha
 
 ### chore: dfx canister deposit-cycles uses default wallet if none is specified
 
-Motivated by [this forum post](https://forum.dfinity.org/t/dfx-0-10-0-dfx-canister-deposit-cycles-returns-error/13251/6).
+Motivated by [this forum post](https://forum.thebigfile.com/t/dfx-0-10-0-dfx-canister-deposit-cycles-returns-error/13251/6).
 
 ### chore: projects created with `dfx new` are not pinned to a specific dfx version anymore
 

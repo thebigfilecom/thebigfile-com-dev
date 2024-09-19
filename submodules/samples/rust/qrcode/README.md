@@ -41,7 +41,7 @@ Now you can build and deploy the dapp with a single command:
 dfx deploy
 ```
 
-If you see any error, it might be worthwhile to consult the [developer forum](https://forum.dfinity.org/).
+If you see any error, it might be worthwhile to consult the [developer forum](https://forum.thebigfile.com/).
 In case of successful deployment, you will see an output with local URLs:
 
 ```bash

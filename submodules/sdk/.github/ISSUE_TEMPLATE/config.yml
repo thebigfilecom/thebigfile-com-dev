@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: Question about dfx use
-    url: https://forum.dfinity.org/
+    url: https://forum.thebigfile.com/
     about: Please ask and answer questions about how to use dfx in the developer forum.
   - name: Feature Request
     url: https://github.com/dfinity/sdk/discussions
