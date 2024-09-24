@@ -30,8 +30,6 @@ see [CONTRIBUTING.md][contributing]. Contributors must agree to a [CLA][cla].
 
 ## License
 
-Copyright 2023 BigFile Stiftung [sdk@dfinity.org](mailto:sdk@dfinity.org).
-
 dfxvm is licensed under the [Apache 2.0 License][license].
 
 ## Acknowledgements
