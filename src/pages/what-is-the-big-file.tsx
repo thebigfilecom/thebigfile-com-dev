@@ -205,7 +205,7 @@ function WhatIsBigPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">File AI</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">ErisAI</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
                 BigFile is currently adding support for Web3 and Web2 "AI Models." AI will run on the network, supporting native Web3 integrations, smart contract creation processes, bureaucratic operations, and trustless combinations of models and data.
                 </p>

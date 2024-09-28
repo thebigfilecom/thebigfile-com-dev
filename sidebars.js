@@ -591,7 +591,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "FileAI",
+      label: "ErisAI",
       items: [
         "developer-docs/ai/overview",
         "developer-docs/ai/ai-on-chain",

@@ -64,8 +64,8 @@ export default function Home(): JSX.Element {
                 link: "/samples",
               },
               {
-                title: "File AI",
-                body: "File AI Complet Solutions Blockchain AI.",
+                title: "ErisAI",
+                body: "ErisAI Complet Solutions Blockchain AI.",
                 link: "/ai",
               },
             ]}
