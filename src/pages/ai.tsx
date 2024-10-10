@@ -311,7 +311,7 @@ function AIPage() {
                     Decentralized AI
                   </motion.h3>
                   <motion.p className="text-2xl mb-0 ">
-                    <motion.span className="font-bold">FileAI </motion.span>
+                    <motion.span className="font-bold">ErisAI </motion.span>
                     involves running AI training and inference as smart
                     contracts onchain, which addresses AI’s trust issues. Users
                     can verify the inputs to the models they utilize, reducing
@@ -413,7 +413,7 @@ function AIPage() {
                     href="/docs/current/developer-docs/ai/ai-on-chain"
                     className="mt-6 md:mt-0 link-primary link-with-icon items-center ml-0 md:ml-6"
                   >
-                    More about FileAI in the Dev docs <LinkArrowRight />
+                    More about ErisAI in the Dev docs <LinkArrowRight />
                   </Link>
                 </p>
               </div>
@@ -488,11 +488,11 @@ let result = model.run(tvec!
           title="Explore AI on BigFile"
           cards={[
             {
-              label: "Apply to FileAI Grants",
+              label: "Apply to ErisAI Grants",
               href: "https://thebigfile.com/grants",
             },
             {
-              label: "Start building FileAI",
+              label: "Start building ErisAI",
               href: "/docs/current/developer-docs/ai/overview",
             },
             {
@@ -500,7 +500,7 @@ let result = model.run(tvec!
               href: "/",
             },
             {
-              label: "Join the FileAI working group",
+              label: "Join the ErisAI working group",
               href: "https://forum.thebigfile.com/",
             },
           ]}
