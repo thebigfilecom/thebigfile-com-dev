@@ -20,7 +20,7 @@ const redirects = `
   /docs/videos-tutorials /developers
   /docs /docs/current/home
   /docs/current/ /docs/current/home
-  /docs/current/concepts/bitcoin-integration /bitcoin-integration
+  /docs/current/concepts/file-storage /file-storage
   /docs/current/developer-docs/ic-overview /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/production/computation-and-storage-costs /docs/current/developer-docs/gas-cost
   /docs/current/developer-docs/deploy/computation-and-storage-costs /docs/current/developer-docs/gas-cost
@@ -90,7 +90,7 @@ const redirects = `
   /docs/developers-guide/ /docs/current/motoko/main/getting-started/motoko-introduction
   /docs/developers-guide/about-this-guide /docs/current/motoko/main/getting-started/motoko-introduction
   /docs/developers-guide/basic-syntax-rules /docs/current/motoko/main/reference/language-manual
-  /docs/developers-guide/concepts/bitcoin-integration /bitcoin-integration
+  /docs/developers-guide/concepts/file-storage /file-storage
   /docs/developers-guide/concepts/concepts-intro /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/developers-guide/customize-projects /docs/current/developer-docs/smart-contracts/compile
   /docs/developers-guide/default-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet

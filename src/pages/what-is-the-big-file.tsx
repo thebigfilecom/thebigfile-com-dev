@@ -372,17 +372,17 @@ function WhatIsBigPage() {
               <p className="mb-3">
                 <Link
                   className="link-primary link-with-icon"
-                  href="/bitcoin-integration"
+                  href="/file-storage"
                 >
-                  <LinkArrowRight /> Bitcoin
+                  <LinkArrowRight /> File Storage
                 </Link>
               </p>
               <p className="mb-3">
                 <Link
                   className="link-primary link-with-icon"
-                  href="/ethereum-integration"
+                  href="/decentralized-ai"
                 >
-                  <LinkArrowRight /> Ethereum
+                  <LinkArrowRight /> Decentralized AI
                 </Link>
               </p>
             </TranslatedLayout>

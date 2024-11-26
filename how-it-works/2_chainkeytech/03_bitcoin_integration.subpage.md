@@ -1,8 +1,8 @@
 ---
-title: Bitcoin Integration
+title: File Storage
 abstract:
 shareImage: /img/how-it-works/btc-content.600x300.jpg
-slug: bitcoin-integration
+slug: file-storage
 ---
 
 # Bitcoin Integration

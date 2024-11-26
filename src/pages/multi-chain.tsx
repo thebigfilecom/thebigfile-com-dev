@@ -960,12 +960,11 @@ pub enum MultiGetLogsResult {
                       className="link-primary"
                       href="/ecosystem?tag=Ethereum"
                     >
-                      <LinkArrowRight /> Open source projects with Ethereum
-                      integration
+                      <LinkArrowRight /> File Storage
                     </Link>
                     <Link
                       className="link-primary"
-                      href="/bitcoin-integration/"
+                      href="/file-storage/"
                     >
                       <LinkArrowRight /> FAQ about BTC integration & ckBTC
                     </Link>
@@ -1052,15 +1051,15 @@ pub enum MultiGetLogsResult {
             variants={transitions.container}
           >
             <CardWithDescription
-              title="BigFile as a Bitcoin"
+              title="File Storage"
               description=""
-              href="/bitcoin-integration"
+              href="/file-storage"
             />
 
             <CardWithDescription
-              title="BigFile as an Ethereum sidechain"
+              title="Decentralized AI"
               description=""
-              href="/ethereum-integration"
+              href="/decentralized-ai"
             />
             <CardWithDescription
               title="Use ETH and BTC in the Ecosystem"
