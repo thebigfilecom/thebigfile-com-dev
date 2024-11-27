@@ -3,7 +3,7 @@ import transitions from "@site/static/transitions.json";
 import AnimateSpawn from "@site/src/components/Common/AnimateSpawn";
 import ExternalLinkIcon from "@site/static/img/external-link.svg";
 import PlaySVG from "@site/static/img/svgIcons/play.svg";
-import BTCInterviewThumb from "@site/static/img/bitcoin-integration/BTCInterviewThumb.webp";
+import BTCInterviewThumb from "@site/static/img/file-storage/BTCInterviewThumb.webp";
 
 const videos = [
   {

@@ -49,7 +49,7 @@ const AnimatedProse: React.FC<{
   </motion.div>
 );
 
-function EthereumIntegrationPage() {
+function DecentralizedAIPage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const isDark = useDarkHeaderInHero(heroRef);
   return (
@@ -377,4 +377,4 @@ function EthereumIntegrationPage() {
   );
 }
 
-export default EthereumIntegrationPage;
+export default DecentralizedAIPage;

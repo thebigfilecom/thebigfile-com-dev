@@ -1,3 +1,3 @@
 ---
-title: Core BIG
+title: BigFile Node
 ---

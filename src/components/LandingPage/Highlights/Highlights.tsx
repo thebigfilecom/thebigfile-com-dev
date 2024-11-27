@@ -190,19 +190,19 @@ const Highlights: React.FC = () => {
               </p>
               <p className="mb-0">
                 <Link
-                  href="/bitcoin-integration"
+                  href="/file-storage"
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />
-                  Bitcoin on BIG
+                  File Storage
                 </Link>
                 &nbsp;
                 <Link
-                  href="/ethereum-integration"
+                  href="/decentralized-ai"
                   className="link-white link-with-icon"
                 >
                   <LinkArrowRight />
-                  Ethereum on BIG
+                  Decentralized AI
                 </Link>
               </p>
             </div>

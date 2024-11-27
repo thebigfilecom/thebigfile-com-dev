@@ -199,14 +199,14 @@ const marketingNav = {
               description: "Transforming the Cloud & Document",
             },
             {
-              name: "BigFile as a Bitcoin",
-              href: "/bitcoin-integration",
-              description: "Bringing smart contracts to Bitcoin",
+              name: "File Storage",
+              href: "/file-storage",
+              description: "Scalability and Cost Savings",
             },
             {
-              name: "BigFile as a Ethereum",
-              href: "/ethereum-integration",
-              description: "Native ETH on BigFile",
+              name: "Decentralized AI",
+              href: "/decentralized-ai",
+              description: "Data for training, analysis, and execution",
             },
             
           ],

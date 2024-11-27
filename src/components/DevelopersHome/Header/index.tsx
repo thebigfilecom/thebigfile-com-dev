@@ -25,8 +25,8 @@ function Index() {
         className={styles.container}
       >
         <AnnouncementBar
-          text={"Direct integration with the Bitcoin network"}
-          link={"/bitcoin-integration"}
+          text={"File Storage Scalability and Cost Savings"}
+          link={"/file-storage"}
         />
         <img className={styles.BGShape} src={BGCircle} alt="" />
         <motion.p variants={transitions.item} className={styles.Title}>

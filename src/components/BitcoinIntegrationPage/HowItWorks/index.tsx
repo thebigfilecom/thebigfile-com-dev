@@ -1,5 +1,5 @@
 import AnimateSpawn from "@site/src/components/Common/AnimateSpawn";
-import HowItWorks from "@site/static/img/bitcoin-integration/howItWorks.webp";
+import HowItWorks from "@site/static/img/file-storage/howItWorks.webp";
 import transitions from "@site/static/transitions.json";
 import { motion } from "framer-motion";
 import React from "react";

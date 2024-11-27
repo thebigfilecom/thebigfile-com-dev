@@ -9,7 +9,7 @@ import ShareMeta from "../components/Common/ShareMeta";
 import DarkHeroStyles from "../components/Common/DarkHeroStyles";
 import Content from "../components/BitcoinIntegrationPage/Content";
 
-function BitcoinIntegration() {
+function FileStorage() {
   const ref = useRef<HTMLDivElement>(null);
   const isDark = useDarkHeaderInHero(ref);
 
@@ -39,4 +39,4 @@ function BitcoinIntegration() {
   );
 }
 
-export default BitcoinIntegration;
+export default FileStorage;
