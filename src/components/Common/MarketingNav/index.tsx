@@ -2,7 +2,7 @@ import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { isLinkExternal } from "@site/plugins/utils/links";
-import Search from "@site/src/theme/SearchBar";
+
 import { useCollapsible } from "@site/src/utils/use-collapsible";
 import clsx from "clsx";
 import React, { useEffect } from "react";
@@ -414,7 +414,7 @@ const MarketingNav = () => {
 
           {/* right side items: search and hamburger on mobile */}
           <div className="flex gap-4 items-center">
-            <Search />
+            
             <button
               className="md:hidden flex flex-col gap-[6px] border-none bg-transparent px-[4px] h-8 w-8 p-0 justify-center"
               onClick={toggleNav}

@@ -36,18 +36,18 @@ export const CardsSection = () => {
       className="container-10 grid grid-cols-1 md:grid-cols-2 gap-2"
       variants={transitions.container}
     >
-      <CardWithImage href="/multi-chain" image="/img/home/bureaucracy.webp">
+      <CardWithImage href="/file-storage" image="/img/home/bureaucracy.webp">
         <div className="tw-heading-7 md:tw-heading-6 mb-2">
-          Native Multi-chain
+         Scalability and Cost Savings
         </div>
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">
-          Multi Chain Technology
+          File Storage
         </h2>
       </CardWithImage>
 
       <CardWithImage href="/ai" image="/img/home/ai.webp">
         <div className="tw-heading-7 md:tw-heading-6 mb-2 whitespace-nowrap">
-          AI models as smart contracts
+          Data for training, analysis, execution
         </div>
         <h2 className="tw-heading-5 md:tw-heading-4 mb-0">Decentralized AI</h2>
       </CardWithImage>
