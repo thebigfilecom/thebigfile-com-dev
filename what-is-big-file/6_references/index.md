@@ -1,6 +1,6 @@
 ---
 title: References and further information
-card: /img/what-is-the-ic/features.webp
+card: /img/what-is-bigfile/features.webp
 cardImageFit: cover
 ---
 

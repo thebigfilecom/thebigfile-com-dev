@@ -1,6 +1,6 @@
 ---
 title: The File Management System governs the BIG
-card: /img/what-is-the-ic/nns.webp
+card: /img/what-is-bigfile/nns.webp
 cardImageFit: cover
 ---
 

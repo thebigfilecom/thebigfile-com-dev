@@ -72,10 +72,6 @@ const subnavItems = [
     items: [
       { label: "Rust", href: "/docs/current/developer-docs/backend/rust/" },
       {
-        label: "Motoko",
-        href: "/docs/current/motoko/main/getting-started/motoko-introduction",
-      },
-      {
         label: "TypeScript",
         href: "/docs/current/developer-docs/backend/typescript/",
       },
@@ -83,17 +79,6 @@ const subnavItems = [
       {
         label: "Solidity",
         href: "/docs/current/developer-docs/backend/solidity/",
-      },
-    ],
-  },
-  {
-    type: "dropdown",
-    position: "left",
-    label: "Frameworks",
-    items: [
-      {
-        label: "Juno",
-        href: "/docs/current/developer-docs/web-apps/frameworks/juno",
       },
     ],
   },
@@ -291,7 +276,7 @@ const marketingNav = {
           ],
           featured: {
             title: "Multi Chain Technology",
-            href: "/multi-chain",
+            href: "/",
             image: "/img/nav/featured-use-cases.webp",
           },
         },

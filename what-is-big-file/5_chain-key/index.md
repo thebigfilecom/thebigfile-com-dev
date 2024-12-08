@@ -1,6 +1,6 @@
 ---
 title: Chain-key cryptography underpins the BIG security architecture
-card: /img/what-is-the-ic/chainkey.webp
+card: /img/what-is-bigfile/chainkey.webp
 cardImageFit: cover
 ---
 

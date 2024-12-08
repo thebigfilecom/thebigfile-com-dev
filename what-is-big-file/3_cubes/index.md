@@ -1,6 +1,6 @@
 ---
 title: Cubes — next evolution smart contracts
-card: /img/what-is-the-ic/canister.webp
+card: /img/what-is-bigfile/canister.webp
 cardImageFit: cover
 ---
 

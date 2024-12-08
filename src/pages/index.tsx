@@ -30,8 +30,7 @@ export default function Home(): JSX.Element {
         <CardsSection />
         
         <VisionSection>
-        BigFile is an all-in-one infrastructure platform that is secure, flexible, easy to use, and highly scalable. 
-        Our blockchain integrates seamlessly with our built-in service layers that enable businesses, infrastructures, and applications to be optimized.
+          BigFile is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. 
         </VisionSection>
         <IntroCards />
       </Hero>

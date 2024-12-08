@@ -34,29 +34,10 @@ function WhatIsBigPage() {
 
         <section className=" bg-infinite text-white pt-20" ref={heroRef}>
           <AnimateSpawn
-            className="container-10 pt-20 pb-14 md:pb-24 md:pt-36 relative"
+            className="container-10 pt-10 pb-14 md:pb-24 md:pt-36 relative"
             variants={transitions.container}
           >
-            <div className="blob blob-white blob-md blob-x-4 blob-y-8 md:blob-xl md:blob-x-8 md:blob-y-10 opacity-100"></div>
-            <div
-              className="
-              -mt-30 md:-mt-24
-              w-[700px] sm:w-[900px] md:w-[1600px]
-              absolute
-              -left-16 sm:left-auto
-              bottom-0
-              translate-y-2/3 md:translate-y-[55%]
-
-              sm:right-0
-              sm:translate-x-3/10
-            "
-            >
-              <img
-                src="/img/what-is-big-file/hero.svg"
-                alt=""
-                className="w-full max-w-none"
-              />
-            </div>
+        
             <div className="sm:w-8/10 md:w-6/10 relative">
               <motion.h1
                 className="tw-heading-3 md:tw-heading-2 mb-8 md:mb-6"
@@ -69,7 +50,7 @@ function WhatIsBigPage() {
                 className="pb-[15%] sm:pb-0 tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                BigFile (BIG) is an open and secure AI-powered blockchain network capable of hosting programs, files, data, and Big Data in the form of smart contracts. It securely performs computations on smart contracts and offers infinite scalability.
+                BigFile is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -85,9 +66,9 @@ function WhatIsBigPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-8 md:mb-10 text-gradient"
               variants={transitions.item}
             >
-              Web3 services and enterprise systems can be built directly on BigFile—a public, decentralized network that scales.
+              BigFile (BIG) is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. 
               <br />
-              Host social networks, media streaming platforms, and more that support Web3 functionality, are tamperproof, and can trustlessly interact with the outside world.
+              BigFile offers a revolutionary approach to decentralized data management, enabling individuals and businesses to create an open, borderless digital future free from centralized control.
             </motion.h2>
 
             <motion.p
@@ -135,9 +116,9 @@ function WhatIsBigPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">Tamperproof</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">File Storage</h3>
                 <p className="tw-paragraph-sm text-black/60 md:tw-paragraph mb-0">
-                Cube software is tamperproof, does not require firewall protection, and cannot be infected with ransomware. Because BigFile is built on advanced mathematics, it has no backdoors.
+                BigFile offers unmatched solutions for long-term data storage, ensuring security, scalability, and immutability. This reduces fees and improves scalability for businesses requiring large-scale storage.
                 </p>
               </motion.div>
               <motion.div
@@ -149,9 +130,9 @@ function WhatIsBigPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">Autonomous</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">Social Platforms</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                A Cube can be made unmodifiable, establishing permanent logic on the network, or placed under the control of autonomous governance—empowering communities to run Web3 applications or securing an enterprise.
+                Social platforms share IP addresses of users with governments. Privacy-focused social apps have centralized servers. In an era where data ownership and censorship are growing concerns, it’s time for social apps to benefit from the immutable, censorship-resistant nature of the permaweb.
                 </p>
               </motion.div>
               <motion.div
@@ -163,9 +144,9 @@ function WhatIsBigPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">Simple</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">Decentralized AI</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                Global spending on IT personnel now exceeds $1.8 trillion. Cube software significantly simplifies the development and maintenance of online systems and services, leading to cost savings and faster time to market.
+                Artificial Intelligence (AI) thrives on vast amounts of data. BigFile addresses the challenges of secure data management, immutability, and provenance, which are critical for AI systems. 
                 </p>
               </motion.div>
               <motion.div
@@ -177,9 +158,9 @@ function WhatIsBigPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">Sovereign</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">Gaming & NFTs</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                If your enterprise, government, or Web3 service relies on centralized traditional IT, there are kill switches and backdoors that compromise your true sovereignty. Instead, build on a decentralized network.
+                In the world of NFTs and gaming, creators and players require lasting solutions. Whether you're developing an NFT marketplace, minting atomic assets, or building immersive gaming worlds, BigFile serves as the foundation for tamper-proof, monetized, and easily accessible digital creations.
                 </p>
               </motion.div>
               <motion.div
@@ -191,9 +172,9 @@ function WhatIsBigPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">Web3 + BIG</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">Bureaucracy</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                Smart contracts support more advanced tokenization models, driving the evolution of Web3. 
+                Verifying, managing, and transmitting complex and time-consuming bureaucratic processes and documents through the BigFile network ensures 100% security while effectively addressing issues of fraud.
                 </p>
               </motion.div>
               <motion.div
@@ -205,9 +186,9 @@ function WhatIsBigPage() {
                   alt=""
                   className="h-24"
                 />
-                <h3 className="tw-lead my-3 md:tw-title-sm">ErisAI</h3>
+                <h3 className="tw-lead my-3 md:tw-title-sm">Blockchain Data</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                BigFile is currently adding support for Web3 and Web2 "AI Models." AI will run on the network, supporting native Web3 integrations, smart contract creation processes, bureaucratic operations, and trustless combinations of models and data.
+                Blockchain applications and oracle services must be able to trust that the data they rely on will remain permanently accessible. BigFile indexes and retrieves permanent data storage on BigFile blockchain, ensuring that data such as transaction histories, price feeds, and oracle inputs are archived and served forever.
                 </p>
               </motion.div>
             </AnimateSpawn>
@@ -220,7 +201,7 @@ function WhatIsBigPage() {
               className="tw-heading-3 md:tw-heading-60 text-center mb-0"
               variants={transitions.item}
             >
-              How is the BigFile created through a specific protocol?
+              Use Cases BigFile
             </motion.h2>
           </div>
           <div className=" container-12 flex flex-col gap-16 md:gap-40 relative pt-20">
@@ -262,23 +243,7 @@ function WhatIsBigPage() {
                 </Link>
               </p>
             </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/what-is-big-file/smart-contracts.webp">
-              <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
-                Cube smart contracts
-              </h2>
-              <p className="tw-lead-sm">
-              Smart contracts are a new form of software that runs on blockchain networks. They are tamperproof, unstoppable, optionally autonomous, can process tokens, and are easily composable. Cubes are a high-performance form of smart contracts that can be used to build almost anything. They interact with HTTP to deliver user experiences, can integrate with Web2, and can natively interact with external blockchains. Because they scale, a social network or complex enterprise system can run directly from the network, simplifying development and paving the way for a future without firewalls and trust. They offer a compelling alternative to building on centralized traditional IT.
-              </p>
-              <p>
-                <Link
-                  href="https://forum.thebigfile.com/t/webassembly-on-the-bigfile/24"
-                  className="link-white link-with-icon"
-                >
-                  <LinkArrowUpRight />
-                  WebAssembly smart contracts
-                </Link>
-              </p>
-            </TranslatedLayout>
+            
           </div>
         </section>
         <AnimateSpawn
@@ -306,7 +271,7 @@ function WhatIsBigPage() {
                 BIG ID
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              BIG ID allows users to quickly and securely authenticate to online systems and services using their devices, such as a laptop fingerprint sensor or FaceID on their phone. Behind the scenes, the framework leverages TPM chips within modern hardware to securely manage keys and signing, the WebAuthn protocol to connect code inside the web browser to these TPMs, and advanced chain-key cryptography running on the BIG network.
+              BIG ID allows users to quickly and securely authenticate to online systems and services using their devices, such as a laptop fingerprint sensor or FaceID on their phone. 
               </p>
               <Link
                 className="link-primary link-with-icon"
@@ -315,26 +280,12 @@ function WhatIsBigPage() {
                 <LinkArrowRight /> Wallet on BIG
               </Link>
             </TranslatedLayout>
-            <TranslatedLayout
-              imageUrl="/img/what-is-big-file/open-internet-services.webp"
-              reverse={true}
-            >
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Decentralized Services and Voting System
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              Decentralized Services and Voting Systems are services that operate autonomously under the exclusive control of a decentralized governance system called a Service Nervous System (SPS), an evolution of DAO technology. This enables a Web3 service to be transparently managed by a community of thousands, allowing services to "founderize" users by granting them governance tokens, for example, for creating viral content, thereby inverting the traditional Big Tech model. Enterprises can leverage the same technology to distribute control over system updates and configurations, significantly enhancing security.
-              </p>
-              <Link className="link-primary link-with-icon" href="/sps">
-                <LinkArrowRight /> User-run Web3
-              </Link>
-            </TranslatedLayout>
             <TranslatedLayout imageUrl="/img/what-is-big-file/sovereign-infrastructure.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Sovereign infrastructure
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              When the systems and services that power society are built on centralized traditional IT infrastructure—such as cloud services, closed-source software, and security hardware—they inherently include backdoors for spying and kill switches. With no alternatives, governments have been forced to surrender sovereignty over the digital foundations that society relies on. Now, BigFile is introducing specialized localized sovereign subnets designed for governments, NGOs, and enterprises with unique needs: an unstoppable, secure, and transparent sovereign platform infrastructure.
+              Traditional IT infrastructure—relying on centralized cloud services, closed-source software, and proprietary security hardware—comes with inherent vulnerabilities, such as backdoors for surveillance and kill switches. As a result, governments have often been compelled to compromise their sovereignty over critical digital infrastructure. BigFile addresses this challenge with specialized localized sovereign subnets, tailored for governments, NGOs, and enterprises with unique requirements. This innovative solution provides an unstoppable, secure, and transparent sovereign platform infrastructure, empowering organizations to regain control over the digital foundations of society.
               </p>
               <Link
                 className="link-primary link-with-icon"
@@ -344,30 +295,12 @@ function WhatIsBigPage() {
               </Link>
             </TranslatedLayout>
 
-            <TranslatedLayout
-              imageUrl="/img/what-is-big-file/reverse-gas-model.webp"
-              reverse={true}
-            >
-              <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
-                Reverse gas model
-              </h3>
-              <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              Unlike most EVM-compatible blockchains, BigFile uses a reverse gas model. This allows end users to interact with smart contracts without needing to set up a wallet or hold tokens—a standard web browser is all they need. Developers charge their smart contracts with "cycles," the gas on BigFile, which are then burned to pay for computation and memory usage. This model simplifies user entry into Web3 and gives developers the flexibility to create custom tokenomics models that align with mass adoption strategies.
-              </p>
-              <Link
-                className="link-primary link-with-icon"
-                href="/capabilities/reverse-gas"
-              >
-                <LinkArrowRight /> Gas-free Web3
-              </Link>
-            </TranslatedLayout>
-
             <TranslatedLayout imageUrl="/img/what-is-big-file/multi-chain.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Native multi-chain
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              Cube smart contracts on the BigFile are the glue between the world’s most important blockchains. BigFile Bitcoin Network, and native ETH integration is underway. Inter-chain communication and innovations such as chain-key ECDSA allow Cube smart contracts to directly hold, receive and send BTC and ETH seamlessly across chains, creating a trustless multi-chain environment that allows end users to transfer crypto assets at the speed of a chat message without bridges or third-party intermediaries.
+              BigFile is actively working on integrating the Bitcoin Network and native Ethereum. Innovations like cross-chain communication enable the BigFile network to seamlessly transfer, receive, and send BTC and ETH directly across chains, fostering a trustless multi-chain environment. This approach allows end users to transfer crypto assets as effortlessly and quickly as sending a chat message, without relying on bridges or third-party intermediaries.
               </p>
               <p className="mb-3">
                 <Link

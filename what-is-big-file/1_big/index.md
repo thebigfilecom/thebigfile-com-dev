@@ -1,6 +1,6 @@
 ---
 title: The architecture of the BIG
-card: /img/what-is-the-ic/built.webp
+card: /img/what-is-bigfile/built.webp
 cardImageFit: center
 ---
 
