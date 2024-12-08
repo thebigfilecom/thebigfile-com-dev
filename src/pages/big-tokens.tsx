@@ -132,25 +132,31 @@ function TokenHolders(): JSX.Element {
                 className="tw-heading-4 md:tw-heading-3 mb-6 text-gradient"
                 variants={transitions.item}
               >
-                It empowers computation, staking, voting, governance, and ownership.{" "}
+                BIG Token plays multiple essential roles within the BigFile ecosystem:{" "}
               </motion.h2>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                The BIG token serves multiple roles on the BigFile. Firstly, as a governance token, it can be staked to exercise governance rights. As a utility token, it can be burned to obtain "cycles," which serve as gas for computation and storage in Cube smart contracts. Additionally, BIG tokens can be minted to reward node machine providers for supplying compute and storage resources.
+                Permanent Data Storage: Users pay with BIG Token to store their data permanently on the BigFile network. The "pay once, store forever" model ensures that, once the storage fee is paid, the data remains permanently stored on the network.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                In addition to these core uses, BIG tokens can be used to participate in decentralization swaps to become a co-owner of an SPS DAO, as well as in various smart contract services built on the BigFile, such as registries, marketplaces, and exchanges.
+                Versioning: When users want to add new versions to the data they have permanently uploaded, they make payments using BIG Token.
               </motion.p>
               <motion.p
-                className="tw-paragraph md:tw-lead-sm text-black/60 mb-0"
+                className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                The BIG token implements the BIGRC-20 standard.
+                Network Participation and Incentives: Miners earn BIG Token by contributing storage capacity and ensuring the network operates smoothly. This incentive mechanism helps maintain the security and sustainability of the network.
+              </motion.p>
+              <motion.p
+                className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
+                variants={transitions.item}
+              >
+                Ecosystem Development: dApps and projects running on BigFile pay transaction fees using BIG Token. Project owners and developers leverage BIG Token to run their applications, raise funds, and support the growth of the ecosystem.
               </motion.p>
             </div>
             <div className="flex flex-col gap-5 md:flex-row md:w-8/10">
@@ -225,10 +231,10 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-heading-5 md:tw-heading-4 mb-6">
-                  Participate in governance
+                  Permanent Data Storage
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                The BigFile is governed by the NNS, the largest DAO. BIG token holders can participate in network governance by staking tokens in neurons and locking them with a specified dissolve delay (the time required to unlock). A neuron with a dissolve delay greater than 6 months can vote on governance proposals and earn rewards. Additionally, BIG neuron holders can submit proposals to make changes to the protocol.
+                  Users pay with BIG Token to store their data permanently on the BigFile network. The "pay once, store forever" model ensures that, once the storage fee is paid, the data remains permanently stored on the network. When users want to add new versions to the data they have permanently uploaded, they make payments using BIG Token.
                 </p>
                 <p className="mb-0">
                   <Link
@@ -245,11 +251,10 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-heading-5 md:tw-heading-4 mb-6">
-                  Burn for cycles
+                  Network Participation and Incentives
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                  Unlike other smart contract blockchains, the BigFile
-                  runs on a “Reverse Gas Model”. This means computation and storage costs are paid for by developers, and developers are responsible topping up smart contracts with cycles to fuel the compute power and storage of their dapps. The Reverse Gas Model allows users to interact with dapps on the BigFile without tokens, and as seamlessly as they would on any Web2 application.
+                  Miners earn BIG Token by contributing storage capacity and ensuring the network operates smoothly. This incentive mechanism helps maintain the security and sustainability of the network.
                 </p>
                 <p className="mb-0">
                   <Link
@@ -257,7 +262,7 @@ function TokenHolders(): JSX.Element {
                     className="link-primary link-with-icon items-center"
                   >
                     <LinkArrowRight />
-                    More on the Reverse Gas Model
+                    More on the Network Participation and Incentives
                   </Link>
                 </p>
               </AnimateSpawn>
@@ -275,10 +280,10 @@ function TokenHolders(): JSX.Element {
               >
                 <div className="sm:w-6/10 lg:w-4/10">
                   <h3 className="tw-heading-5 md:tw-heading-4 mb-6">
-                    Use BIG in the ecosystem
+                    Ecosystem Development
                   </h3>
                   <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
-                    Store BIG in wallets, swap it on DEXs, collect NFTs or tip friends while chatting. The BigFile is home to a growing ecosystem of dapps, many of which use BIG.
+                  dApps and projects running on BigFile pay transaction fees using BIG Token. Project owners and developers leverage BIG Token to run their applications, raise funds, and support the growth of the ecosystem.
                   </p>
                   <p className="pb-[100%] sm:pb-0 mb-0">
                     <Link
@@ -310,11 +315,11 @@ function TokenHolders(): JSX.Element {
               Where to get BIG{" "}
             </motion.h2>
             <motion.p className="tw-lead mb-8" variants={transitions.item}>
-              The BIG token is widely available on centralized exchanges.
+            Once the BIG Token Mainnet is launched, it will be available for purchase through various platforms. Details about different versions of BIG Token issued on multiple blockchain networks will be provided.
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
-                href="https://coinmarketcap.com/currencies/"
+                href="https://coinmarketcap.com/community/profile/thebigfile/"
                 className="button-outline-white"
               >
                 Complete list on CoinMarketCap

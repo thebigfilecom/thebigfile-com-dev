@@ -19,7 +19,7 @@ const customWebpack = require("./plugins/custom-webpack");
 const roadmapDataPlugin = require("./plugins/roadmap-data");
 const blogPostsPlugin = require("./plugins/blog-posts");
 const externalRedirectsPlugin = require("./plugins/external-redirects");
-const whatIsIcpDataPlugin = require("./plugins/what-is-the-big-file-cards");
+const whatIsIcpDataPlugin = require("./plugins/what-is-big-file-cards");
 const howItWorksCardsPlugin = require("./plugins/howitworks-cards");
 const howItWorksArticlesPlugin = require("./plugins/howitworks-articles");
 const math = require("remark-math");
@@ -165,7 +165,7 @@ const marketingNav = {
             // },
             {
               name: "What is BigFile",
-              href: "/what-is-the-big-file",
+              href: "/what-is-big-file",
               description: "Get to know ",
             },
             {

@@ -194,7 +194,7 @@ function EnterprisePage() {
               </p>
             </TranslatedLayout>
             <TranslatedLayout
-              imageUrl="/img/what-is-the-big-file/open-internet-services.webp"
+              imageUrl="/img/what-is-big-file/open-internet-services.webp"
               reverse={true}
             >
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">

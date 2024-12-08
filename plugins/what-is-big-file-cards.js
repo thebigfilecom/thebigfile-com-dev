@@ -60,13 +60,13 @@ let cache;
 /** @type {import('@docusaurus/types').PluginModule} */
 const whatIsIcpDataPlugin = async function () {
   return {
-    name: "what-is-the-big-file-data",
+    name: "what-is-big-file-data",
     async loadContent() {
       if (!cache) {
         const domains = [];
 
         const dirs = fs
-          .readdirSync(path.resolve(__dirname, "..", "what-is-the-big-file"), {
+          .readdirSync(path.resolve(__dirname, "..", "what-is-big-file"), {
             withFileTypes: true,
           })
           .filter((d) => d.isDirectory());
@@ -75,14 +75,14 @@ const whatIsIcpDataPlugin = async function () {
           const indexPath = path.resolve(
             __dirname,
             "..",
-            "what-is-the-big-file",
+            "what-is-big-file",
             dir.name,
             "index.md"
           );
 
           if (!fs.existsSync(indexPath)) {
             logger.warn(
-              `Warning: no index.md file for what-is-the-big-file topic "${dir.name}"`
+              `Warning: no index.md file for what-is-big-file topic "${dir.name}"`
             );
             continue;
           }
@@ -94,7 +94,7 @@ const whatIsIcpDataPlugin = async function () {
           const baseDir = path.resolve(
             __dirname,
             "..",
-            "what-is-the-big-file",
+            "what-is-big-file",
             dir.name
           );
 
@@ -115,7 +115,7 @@ const whatIsIcpDataPlugin = async function () {
     },
     async contentLoaded({ content, actions }) {
       const { createData } = actions;
-      createData("what-is-the-big-file.json", JSON.stringify(content, null, 2));
+      createData("what-is-big-file.json", JSON.stringify(content, null, 2));
     },
   };
 };

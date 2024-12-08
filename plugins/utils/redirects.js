@@ -16,7 +16,7 @@ const redirects = `
   /howitworks /how-it-works
   /showcase /ecosystem
   /multichain /multi-chain
-  /basics /what-is-the-big-file
+  /basics /what-is-big-file
   /docs/videos-tutorials /developers
   /docs /docs/current/home
   /docs/current/ /docs/current/home

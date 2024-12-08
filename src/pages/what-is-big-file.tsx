@@ -52,7 +52,7 @@ function WhatIsBigPage() {
             "
             >
               <img
-                src="/img/what-is-the-big-file/hero.svg"
+                src="/img/what-is-big-file/hero.svg"
                 alt=""
                 className="w-full max-w-none"
               />
@@ -131,7 +131,7 @@ function WhatIsBigPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-big-file/icon-tamperproof.svg"
+                  src="/img/what-is-big-file/icon-tamperproof.svg"
                   alt=""
                   className="h-24"
                 />
@@ -145,7 +145,7 @@ function WhatIsBigPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-big-file/icon-autonomous.svg"
+                  src="/img/what-is-big-file/icon-autonomous.svg"
                   alt=""
                   className="h-24"
                 />
@@ -159,7 +159,7 @@ function WhatIsBigPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-big-file/icon-simple.svg"
+                  src="/img/what-is-big-file/icon-simple.svg"
                   alt=""
                   className="h-24"
                 />
@@ -173,7 +173,7 @@ function WhatIsBigPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-big-file/icon-sovereign.svg"
+                  src="/img/what-is-big-file/icon-sovereign.svg"
                   alt=""
                   className="h-24"
                 />
@@ -187,7 +187,7 @@ function WhatIsBigPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-big-file/icon-web3-ois.svg"
+                  src="/img/what-is-big-file/icon-web3-ois.svg"
                   alt=""
                   className="h-24"
                 />
@@ -201,7 +201,7 @@ function WhatIsBigPage() {
                 variants={transitions.item}
               >
                 <img
-                  src="/img/what-is-the-big-file/icon-next-gen-ai.svg"
+                  src="/img/what-is-big-file/icon-next-gen-ai.svg"
                   alt=""
                   className="h-24"
                 />
@@ -224,7 +224,7 @@ function WhatIsBigPage() {
             </motion.h2>
           </div>
           <div className=" container-12 flex flex-col gap-16 md:gap-40 relative pt-20">
-            <TranslatedLayout imageUrl="/img/what-is-the-big-file/node-providers.webp">
+            <TranslatedLayout imageUrl="/img/what-is-big-file/node-providers.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
                 Node providers
               </h2>
@@ -243,7 +243,7 @@ function WhatIsBigPage() {
               </p>
             </TranslatedLayout>
             <TranslatedLayout
-              imageUrl="/img/what-is-the-big-file/subnet-blockchains.webp"
+              imageUrl="/img/what-is-big-file/subnet-blockchains.webp"
               reverse={true}
             >
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
@@ -262,7 +262,7 @@ function WhatIsBigPage() {
                 </Link>
               </p>
             </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/what-is-the-big-file/smart-contracts.webp">
+            <TranslatedLayout imageUrl="/img/what-is-big-file/smart-contracts.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
                 Cube smart contracts
               </h2>
@@ -301,7 +301,7 @@ function WhatIsBigPage() {
           </div>
 
           <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout imageUrl="/img/what-is-the-big-file/big-wallet.webp">
+            <TranslatedLayout imageUrl="/img/what-is-big-file/big-wallet.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 BIG ID
               </h3>
@@ -316,7 +316,7 @@ function WhatIsBigPage() {
               </Link>
             </TranslatedLayout>
             <TranslatedLayout
-              imageUrl="/img/what-is-the-big-file/open-internet-services.webp"
+              imageUrl="/img/what-is-big-file/open-internet-services.webp"
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
@@ -329,7 +329,7 @@ function WhatIsBigPage() {
                 <LinkArrowRight /> User-run Web3
               </Link>
             </TranslatedLayout>
-            <TranslatedLayout imageUrl="/img/what-is-the-big-file/sovereign-infrastructure.webp">
+            <TranslatedLayout imageUrl="/img/what-is-big-file/sovereign-infrastructure.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Sovereign infrastructure
               </h3>
@@ -345,7 +345,7 @@ function WhatIsBigPage() {
             </TranslatedLayout>
 
             <TranslatedLayout
-              imageUrl="/img/what-is-the-big-file/reverse-gas-model.webp"
+              imageUrl="/img/what-is-big-file/reverse-gas-model.webp"
               reverse={true}
             >
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
@@ -362,7 +362,7 @@ function WhatIsBigPage() {
               </Link>
             </TranslatedLayout>
 
-            <TranslatedLayout imageUrl="/img/what-is-the-big-file/multi-chain.webp">
+            <TranslatedLayout imageUrl="/img/what-is-big-file/multi-chain.webp">
               <h3 className="tw-heading-4 md:tw-heading-60 mb-6">
                 Native multi-chain
               </h3>
