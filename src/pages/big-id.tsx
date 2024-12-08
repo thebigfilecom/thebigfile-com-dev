@@ -58,7 +58,7 @@ function InternetIdentityPage() {
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
                   className="link-white link-with-icon"
-                  href="/docs/current/references/big-id-spec/"
+                  href="https://bigid.thebigfile.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

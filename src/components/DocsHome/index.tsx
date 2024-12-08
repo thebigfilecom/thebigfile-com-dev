@@ -84,7 +84,7 @@ const DocsHomePage: FC = () => {
                 Whether you're new to coding or an experienced developer, our
                 documentation portal has everything you need. We provide
                 easy-to-follow guides, tutorials, code samples, and API
-                references for multiple languages like Rust, Motoko, TypeScript, Python.
+                references for multiple languages like Rust, TypeScript, Python.
               </p>
               <p className="mb-0">
                 <Link
@@ -97,32 +97,6 @@ const DocsHomePage: FC = () => {
             </div>
           </div>
           <div className="snap-x flex sm:contents overflow-auto scroll-m-10 pb-5 border-0  border-solid border-black/10 docs-home-languages-scrollbar">
-            <div className="snap-center min-w-[80vw] sm:min-w-0 border-0 border-r sm:border-t md:border-t-0 border-solid border-black/10 px-6 sm:pl-0 sm:pr-8 md:px-6 pt-10 sm:pb-10 md:pb-0 md:pt-0 flex flex-col">
-              <div className="mb-16 md:mb-0 md:h-[200px]">
-                <img
-                  src="/img/docs/motoko.png"
-                  alt="Motoko docs"
-                  className="w-10 h-10"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex-1 flex flex-col">
-                <h4 className="tw-heading-5 mb-6">Motoko</h4>
-                <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Get started with a high level programming language designed
-                  specifically for the BigFile
-                </p>
-                <p className="mb-0">
-                  <Link
-                    href="/docs/current/motoko/main/getting-started/motoko-introduction"
-                    className="link-primary"
-                    title="Go to Motoko docs"
-                  >
-                    <LinkArrowRight />
-                  </Link>
-                </p>
-              </div>
-            </div>
 
             <div className="snap-center min-w-[80vw] sm:min-w-0 border-0 border-r sm:border-r-0 md:border-r sm:border-t md:border-t-0 border-solid border-black/10 px-6 sm:pl-8 sm:pr-0 md:px-6 pt-10 sm:pb-10 md:pb-0 md:pt-0 flex flex-col">
               <div className="mb-16 md:mb-0 md:h-[200px]">
@@ -232,67 +206,7 @@ const DocsHomePage: FC = () => {
         </div>
       </section>
 
-      <section className="mt-10">
-        <div
-          className="
-          py-8 sm:p-10 border border-white border-solid rounded-lg bg-white/70
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          md:grid-cols-6
-          px-0
-          pb-5 sm:pb-10
-        "
-        >
-         <div className="border-0 border-b sm:border-b-0 md:border-r border-solid border-black/10 mx-6 sm:mx-0 md:pr-8 flex flex-col sm:flex-row md:flex-col sm:col-span-2 md:col-span-1 pb-10 sm:pb-10 md:pb-0">
-            <div className="h-[100px] md:h-[200px] flex-1">
-              <h3 className="tw-heading-6 mb-10 sm:mb-0">
-                Frameworks
-              </h3>
-            </div>
-            <div className="flex-1 flex flex-col">
-              <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                Get started developing on the BigFile using frameworks such as Juno, which make deploying cubes on BigFile simple and easy using a UI interface.
-              </p>
-              <p className="mb-0">
-                <Link
-                  href="/docs/current/developer-docs/web-apps/frameworks/juno"
-                  className="link-primary link-with-icon"
-                >
-                  View all <LinkArrowRight />
-                </Link>
-              </p>
-            </div>
-          </div>
-          <div className="snap-x flex sm:contents overflow-auto scroll-m-10 pb-5 border-0  border-solid border-black/10 docs-home-languages-scrollbar">
-            <div className="snap-center min-w-[80vw] sm:min-w-0 border-0 border-r sm:border-t md:border-t-0 border-solid border-black/10 px-6 sm:pl-0 sm:pr-8 md:px-6 pt-10 sm:pb-10 md:pb-0 md:pt-0 flex flex-col">
-              <div className="mb-16 md:mb-0 md:h-[200px]">
-                <img
-                  src="/img/docs/juno.svg"
-                  alt="Juno"
-                  className="h-10"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex-1 flex flex-col">
-                <h4 className="tw-heading-5 mb-6">Juno</h4>
-                <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                Juno is a cutting-edge blockchain-as-a-service platform designed to enable developers to create decentralized applications at lightning speed.
-                </p>
-                <p className="mb-0">
-                  <Link
-                    href="/docs/current/developer-docs/web-apps/frameworks/juno"
-                    className="link-primary"
-                    title="Juno"
-                  >
-                    <LinkArrowRight />
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <section className="mt-10">
         <div
@@ -355,31 +269,7 @@ const DocsHomePage: FC = () => {
                 </p>
               </div>
               </div>
-              <div className="snap-center min-w-[80vw] sm:min-w-0  sm:border-r md:border-r-0 border-0 sm:border-t md:border-t-0 border-solid border-black/10 px-6 sm:pl-0 sm:pr-8 md:px-6 pt-10 sm:pb-10 md:pb-0 md:pt-0 flex flex-col">
-              <div className="mb-16 md:mb-0 md:h-[200px]">
-                <img
-                  src="/img/docs/juno.svg"
-                  alt="Juno quickstart"
-                  className="h-10"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex-1 flex flex-col">
-                <h4 className="tw-heading-5 mb-6">Juno</h4>
-                <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Get started with Juno, a blockchain-as-a-service platform.
-                </p>
-                <p className="mb-0">
-                  <Link
-                    href="/docs/current/developer-docs/getting-started/quickstart/juno-quickstart"
-                    className="link-primary"
-                    title="Go to Juno quickstart"
-                  >
-                    <LinkArrowRight />
-                  </Link>
-                </p>
-              </div>
-            </div>
+              
             </div>
             </div>
       </section>

@@ -127,5 +127,4 @@ BigFile is not just a blockchain network; it’s a movement to redefine how data
 
 
 [BigFile for Geeks – White Paper](https://thebigfile.com/whitepaper.pdf)
-[BigFile Dashboard](https://dashboard.thebigfile.com/)
 [BigFile Source Code](https://github.com/thebigfilecom/bigfile)

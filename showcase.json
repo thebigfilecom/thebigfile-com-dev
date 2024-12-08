@@ -38,22 +38,7 @@
     ]
   },
   
-  {
-    "id": "fmsfront-enddapp",
-    "name": "FMS Dapp",
-    "oneLiner": "Dapp for Staking Neurons + Voting On-Chain",
-    "website": "https://fms.thebigfile.com",
-    "github": "https://github.com/thebigfilecom/fms-dapp",
-    "tags": [
-      "Wallet",
-      "Tools / Infrastructure",
-      "Bitcoin",
-      "Ethereum"
-    ],
-    "description": "The FMS front-end dapp allows anyone to interact with the BigFile Network Nervous System with a user-friendly UI. Served completely end-to-end through blockchain, this dapp allows you to manage BIG, stake neurons, participate in voting, and earn governance rewards.",
-    "usesInternetIdentity": true,
-    "logo": "/img/showcase/nnsfront-enddapp_logo-dark.webp"
-  },
+  
   
   
   {
@@ -109,41 +94,6 @@
       "/img/showcase/icdrive_screenshot_0.webp",
       "/img/showcase/icdrive_screenshot_1.webp"
     ]
-  },
-  
-  {
-    "id": "icpexplorer",
-    "name": "BIG Explorer",
-    "website": "https://explorer.thebigfile.com/#/datacenters",
-    "tags": [
-      "Tools / Infrastructure"
-    ],
-    "description": "BIG Explorer, a project started in 2018, is an open-source, community-built dashboard and explorer for the BigFile, providing live information and statistics about the network, governance, and the BIG utility token, including account and transaction information.",
-    "logo": "/img/showcase/icpexplorer_logo.webp",
-    "video": "/img/showcase/icpexplorer_video.mp4",
-    "videoContentType": "video/mp4",
-    "screenshots": [
-      "/img/showcase/icpexplorer_screenshot_0.webp"
-    ]
-  },
-  
-
-  
-  
-
-  
-  {
-    "id": "icadashboard",
-    "name": "BigFile Dashboard",
-    "website": "https://dashboard.thebigfile.com/",
-    "tags": [
-      "Tools / Infrastructure"
-    ],
-    "description": "The BigFile Association maintains a public dashboard where anyone can track the latest statistics for the BigFile blockchain. Tracking everything from blocks per second, to NNS proposals and their information and voting record, as well the latest state of the network, and transaction data. ",
-    "oneLiner": "BigFile Official Dashboard",
-    "display": "Normal",
-    "logo": "/img/showcase/bigdashboard_logo.webp",
-    "screenshots": []
   },
   {
     "id": "internetcomputerorgwebsite",

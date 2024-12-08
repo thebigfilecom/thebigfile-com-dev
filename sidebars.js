@@ -1140,11 +1140,6 @@ const sidebars = {
             },
             {
               type: "doc",
-              label: "BIG ID",
-              id: "references/big-id-spec",
-            },
-            {
-              type: "doc",
               label: "Ledger canister",
               id: "references/ledger",
             },

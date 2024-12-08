@@ -17,22 +17,13 @@ const Hero = forwardRef<HTMLDivElement, {}>((_, ref) => {
             variants={transitions.item}
             className="tw-heading-3 mb-2 w-5/6 md:tw-heading-2 md:mb-6 md:w-7/12"
           >
-            BIG as a Bitcoin
+            File Storage
           </motion.h1>
           <motion.p
             variants={transitions.item}
             className="tw-lead-sm md:tw-lead md:w-7/12 mb-0"
           >
-            The BigFile adds the missing smart contract layer to
-            Bitcoin. Leveraging{" "}
-            <Link
-              className="text-white underline hover:no-underline hover:text-white hover:opacity-80 duration-200 ease-in-out"
-              href="/multi-chain"
-            >
-              Multi Chain Technology
-            </Link>
-            , BIG can directly read and write to Bitcoin, enabling dapps that
-            natively interact with Bitcoin.
+            Permanent data storage on the BigFile blockchain guarantees that public and private documents, media, and other digital assets remain undeletable. This makes it an ideal solution for preserving legal, medical, historical records, or any data that must never be lost.
           </motion.p>
         </AnimateSpawn>
       </div>
