@@ -54,8 +54,8 @@ function DecentralizedAIPage() {
   const isDark = useDarkHeaderInHero(heroRef);
   return (
     <Layout
-      title="Ethereum Integration"
-      description="A true World Computer enables a multi-chain environment where centralized bridges are obsolete and smart contracts can seamlessly communicate across blockchains. BIG already integrates with the Bitcoin Network, and native ETH integration is underway."
+      title="Decentralized AI"
+      description="Many innovative companies within the ecosystem are leveraging BigFile to unlock new AI capabilities and drive smarter solutions."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/share-ethereum-integration.jpg"></ShareMeta>
@@ -82,17 +82,13 @@ function DecentralizedAIPage() {
                 className="tw-heading-3 md:tw-heading-2 mb-2 md:mb-6"
                 variants={transitions.item}
               >
-                BigFile as an Ethereum sidechain
+                Decentralized AI
               </motion.h1>
               <motion.p
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                Because BigFile smart contracts can call into Ethereum smart contracts, 
-                it enables a true in a multi-chain environment smart contracts can
-                seamlessly communicate across blockchains. BigFile already
-                integrates with the Bitcoin Network, and native ETH integration
-                is underway.
+                Artificial Intelligence relies on vast amounts of data for training, analysis, and execution. Managing this data efficiently and securely is a critical challenge, especially when immutability and comprehensive audit trails are essential.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -104,11 +100,7 @@ function DecentralizedAIPage() {
           variants={transitions.fadeIn}
         >
           <div className="text-center md:w-5/10 relative md:absolute top-30 sm:top-40 md:top-36 -translate-y-1/2 right-0 -mt-30 md:-mt-24">
-            <img
-              src="/img/ethereum-integration/hero.webp"
-              alt=""
-              className="w-full max-w-sm sm:max-w-lg md:max-w-none"
-            />
+            
           </div>
         </AnimateSpawn>
         <AnimateSpawn
@@ -121,8 +113,7 @@ function DecentralizedAIPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-0  text-gradient"
               variants={transitions.item}
             >
-              Cube smart contracts on BigFile are the glue between blockchains
-              and the gateway to multi-chain advantages.
+              Numerous forward-thinking blockchain companies within the ecosystem are already harnessing the power of BigFile to enhance their AI capabilities. By integrating our technology, they safeguard their data assets and gain a competitive edge through decentralized solutions built to stand the test of time.
             </motion.h2>
             {/* <motion.p className="tw-paragraph mb-0" variants={transitions.item}>
               <Link href="#subscribe" className="button-primary">
@@ -141,17 +132,13 @@ function DecentralizedAIPage() {
               className="tw-heading-3 sm:tw-heading-60 mb-6 sm:mb-10"
               variants={transitions.item}
             >
-              Extend Ethereum with BigFile capabilities
+              BigFile Decentralized AI capabilities
             </motion.h2>
             <motion.p
               className="mb-0 tw-paragraph md:tw-lead-sm"
               variants={transitions.item}
             >
-              Ethereum is the world’s top blockchain for DeFi with TVL in the
-              billions. Integrating with BigFile offers multi-chain benefits such as
-              increased asset liquidity, expanded market access, improved
-              scalability and throughput. Plus, access to BigFile unique
-              capabilities:
+              The integrity of data in AI models is crucial to achieving accurate outcomes. With BigFile's immutable storage, your data remains unaltered once stored, ensuring a trustworthy foundation for building reliable AI models.:
               {/* <Link
                 className="link-primary link-with-icon"
                 href="https://wiki.thebigfile.com/wiki/Trustless_multi-chain_web3_using_the_IC"
@@ -174,10 +161,9 @@ function DecentralizedAIPage() {
                 alt=""
                 className="mb-6"
               ></img>
-              <h3 className="sm:tw-heading-5 mb-2">100% on-chain Web3</h3>
+              <h3 className="sm:tw-heading-5 mb-2">Permanent Data Storage</h3>
               <p className="tw-paragraph mb-0">
-                Decentralize your Ethereum dapp by hosting frontend and backend
-                data on the BigFile.
+              The innovative economic model of BigFile guarantees that a single upfront payment secures data storage and accessibility for eternity, completely eliminating recurring costs and subscription fees.
               </p>
             </motion.div>
             <motion.div
@@ -189,10 +175,9 @@ function DecentralizedAIPage() {
                 alt=""
                 className="mb-6"
               ></img>
-              <h3 className="sm:tw-heading-5 mb-2">Gasless token swaps</h3>
+              <h3 className="sm:tw-heading-5 mb-2">Scalable and Accessible</h3>
               <p className="tw-paragraph mb-0">
-                Using ckETH and ckERC-20 tokens, users can swap tokens for a few
-                cents with 0 gas fees.
+              As AI technologies continue to advance, the need for scalable and accessible solutions becomes paramount. BigFile Gateways optimize data read and write operations on the BigFile network, empowering AI systems to scale seamlessly without sacrificing speed or accessibility.
               </p>
             </motion.div>
             <motion.div
@@ -204,10 +189,9 @@ function DecentralizedAIPage() {
                 alt=""
                 className="mb-6"
               ></img>
-              <h3 className="sm:tw-heading-5 mb-2">Web2 integration</h3>
+              <h3 className="sm:tw-heading-5 mb-2">Data Provenance</h3>
               <p className="tw-paragraph mb-0">
-                Connect smart contracts to the world outside blockchain. Fetch
-                real-time price data and more from Web2.
+              With growing scrutiny on data sources and provenance in AI, BigFile’s robust capabilities ensure that every piece of data is accompanied by a clear and immutable history.
               </p>
             </motion.div>
           </AnimateSpawn>
@@ -216,27 +200,22 @@ function DecentralizedAIPage() {
         <section className="container-12 flex flex-col gap-16 md:gap-40 mt-30 md:mt-60">
           <TranslatedLayout imageUrl="/img/ethereum-integration/image-3.webp">
             <h2 className="md:tw-heading-60 md:mb-6">
-              EVM on the BigFile
+             Centralized AI vs. Decentralized AI
             </h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-              An Ethereum Virtual Machine (EVM) is coming to the BigFile built by BVM — a team of developers from the BigFile
-              community. BVM is delivering a turn-key solution for
-              developers to operate their ETH dapps on the BigFile
-              using Solidity, which brings BigFile 1-2s finality, and near 0
-              transaction fees to established Ethereum dapps, providing an
-              incredibly efficient Ethereum scaling solution.
+             Artificial intelligence is reshaping business and culture, with impacts poised to rival those of the industrial revolution. As a transformative force, AI already generates stories, articles, images, videos, and software code in mere seconds. However, the challenges of building better AI models often remain hidden. Early AI systems relied heavily on publicly available internet data, absorbing a mix of truths, misinformation, and biases. To develop AI that truly benefits society, models must be trained on high-quality, reliable, and permissionless data.
             </p>
             <p className="mb-0">
               <Link
-                href="https://thebigfile.tech/"
+                href="https://erisai.io/"
                 className="link-primary link-with-icon"
               >
-                Check out BVM <LinkArrowUpRight />
+                Check out ERIS AI <LinkArrowUpRight />
               </Link>
             </p>
           </TranslatedLayout>
 
-          <TranslatedLayout
+          {/* <TranslatedLayout
             imageUrl="/img/ethereum-integration/image-4.webp"
             reverse
           >
@@ -259,7 +238,7 @@ function DecentralizedAIPage() {
                 Join the Ethereum Integration discussion <LinkArrowUpRight />
               </Link>
             </p>
-          </TranslatedLayout>
+          </TranslatedLayout>*/}
         </section>
         {/* <AnimateSpawn
           className="mt-6 md:mt-10 bg-infinite"
