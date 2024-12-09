@@ -1,9 +1,2 @@
-cube=A smart contract on BIG.
-cubes=A smart contract on BIG.
 cycles=Currency unit used to pay for BIG gas fees.
-principal=An entity that can be authenticated by BIG - user, cube, etc.
-principals=An entity that can be authenticated by BIG - user, cube, etc.
-replica=The BIG software used to run a node.
-subnet=A collection of nodes that run their own instance of the BIG consensus algorithm.
-subnets=A collection of nodes that run their own instance of the BIG consensus algorithm.
-FMS=The DAO that governs BIG.
+bigfile=The BIG software used to run a node.
