@@ -9,7 +9,6 @@ Behind the scenes, BIG utilizes a Verifiable Random Function (VRF) to generate r
 
 During each round, the VRF is evaluated with the current input being the number of the round. This process produces a fresh set of random bytes.
 
-These bytes become the seed for a pseudorandom number generator (PRNG) called random tape. The random tape is built using [chain-key cryptography](https://thebigfile.com/how-it-works/chain-key-technology) and is used to create unique random values for each canister that requested randomness in the previous round.
 
 `raw_rand` calls only use the random tape from the next round. This ensures that no one can exploit knowledge of the current round's randomness to predict future outputs. To learn more about the execution layer of BIG, refer to the [execution layer documentation](https://thebigfile.com/how-it-works/execution-layer/).
 

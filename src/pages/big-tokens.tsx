@@ -367,16 +367,9 @@ function TokenHolders(): JSX.Element {
                 </p>
                 <div className="space-y-4">
                   <WalletCard
-                    title="NNS Dapp"
-                    description="Store and stake BIG, participate in governance."
-                    link="https://nns.thebigfile.tech/"
-                    icon="/img/showcase/nnsfront-enddapp_logo.webp"
-                  />
-                  
-                  <WalletCard
                     title="BIGID"
                     description="Web3 Identity. Every new account creates an untraceable hardware wallet."
-                    link="https://nfid.one/"
+                    link="https://bigid.thebigfile.com/"
                     icon="/img/showcase/nfid_logo.webp"
                   />
                 </div>
@@ -474,16 +467,15 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-lead-lg md:tw-title-sm mb-3">
-                  Participate in SPS DAOs
+                  Exchanges BIG Token
                 </h3>
                 <p className="tw-paragraph-sm mb-3 text-black/60">
-                  Own a piece of your favorite dapps on the BigFile,
-                  and shape their development by participating in governance.
+                 The native token of the BigFile network is BIG. BIG will be available for purchase during the Mainnet Period.
                 </p>
                 <p className="mb-0">
                   <Link href="/" className="link-primary link-with-icon">
                     <LinkArrowRight />
-                    About SPS DAOs
+                    Exchanges BIG
                   </Link>
                 </p>
               </motion.div>
