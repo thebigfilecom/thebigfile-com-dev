@@ -244,11 +244,6 @@ const marketingNav = {
           name: "Use cases",
           items: [
             {
-              name: "DAOs on BigFile",
-              href: "/",
-              description: "Community-owned services",
-            },
-            {
               name: "Enterprise Cloud 3.0",
               href: "/enterprise",
               description: "Extend Web2 software with blockchain",

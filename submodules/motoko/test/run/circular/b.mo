@@ -1,3 +1,0 @@
-import _ = "a"
-
-module {}

@@ -619,16 +619,6 @@ const sidebars = {
           ],
         },
         {
-          type: "category",
-          label: "BIGRC-1 tokens",
-          items: [
-            "developer-docs/defi/bigrc-1/token-quickstart",
-            "developer-docs/defi/bigrc-1/bigrc1-ledger-setup",
-            "developer-docs/defi/bigrc-1/using-bigrc1-ledger",
-            "developer-docs/defi/bigrc-1/bigrc1-index-setup",
-          ],
-        },
-        {
           type: "doc",
           label: "Exchange rate canister",
           id: "developer-docs/defi/exchange-rate-canister",
@@ -660,77 +650,6 @@ const sidebars = {
           type: "category",
           label: "NFTs",
           items: ["developer-docs/defi/nfts/considerations-for-nft-devs"],
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Chain fusion",
-      items: [
-        "developer-docs/multi-chain/overview",
-        {
-          type: "category",
-          label: "Bitcoin",
-          items: [
-            "developer-docs/multi-chain/bitcoin/overview",
-            {
-              type: "category",
-              label: "Using the integration",
-              items: [
-                "developer-docs/multi-chain/bitcoin/using-btc/read-state",
-                "developer-docs/multi-chain/bitcoin/using-btc/generate-addresses",
-                "developer-docs/multi-chain/bitcoin/using-btc/sign-transactions",
-                "developer-docs/multi-chain/bitcoin/using-btc/submit-transactions",
-                "developer-docs/multi-chain/bitcoin/using-btc/local-development",
-              ],
-            },
-            {
-              type: "category",
-              label: "ckBTC",
-              items: [
-                "developer-docs/multi-chain/bitcoin/ckbtc/overview",
-                "developer-docs/multi-chain/bitcoin/ckbtc/making-transactions",
-                "developer-docs/multi-chain/bitcoin/ckbtc/using-ckbtc-in-dapps",
-              ],
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "Ethereum",
-          items: [
-            "developer-docs/multi-chain/ethereum/overview",
-            {
-              type: "category",
-              label: "Using the integration",
-              items: [
-                "developer-docs/multi-chain/ethereum/using-eth/generating-addresses",
-                "developer-docs/multi-chain/ethereum/using-eth/signing-transactions",
-                "developer-docs/multi-chain/ethereum/using-eth/submit-transactions",
-                "developer-docs/multi-chain/ethereum/using-eth/siwe",
-              ],
-            },
-            {
-              type: "category",
-              label: "EVM RPC canister",
-              items: [
-                "developer-docs/multi-chain/ethereum/evm-rpc/overview",
-                "developer-docs/multi-chain/ethereum/evm-rpc/how-it-works",
-                "developer-docs/multi-chain/ethereum/evm-rpc/evm-rpc-canister",
-                "developer-docs/multi-chain/ethereum/evm-rpc/costs",
-                "developer-docs/multi-chain/ethereum/evm-rpc/samples",
-              ],
-            },
-            {
-              type: "category",
-              label: "ckETH",
-              items: [
-                "developer-docs/multi-chain/ethereum/cketh/overview",
-                "developer-docs/multi-chain/ethereum/cketh/making-transactions",
-                "developer-docs/multi-chain/ethereum/cketh/using-cketh-in-dapps",
-              ],
-            },
-          ],
         },
       ],
     },
@@ -1049,13 +968,8 @@ const sidebars = {
             "references/candid-ref",
             {
               type: "link",
-              label: "Motoko base library",
-              href: "/docs/current/motoko/main/base/",
-            },
-            {
-              type: "link",
               label: "Rust CDK references",
-              href: "https://docs.rs/ic-cdk/",
+              href: "/",
             },
           ],
         },
@@ -1092,17 +1006,6 @@ const sidebars = {
             "references/supported-signatures",
           ],
         },
-        {
-          type: "category",
-          label: "FAQs",
-          items: [
-            "developer-docs/multi-chain/faq/user-faq",
-            "developer-docs/multi-chain/faq/ckbtc-faq",
-            "developer-docs/multi-chain/faq/cketh-faq",
-            "developer-docs/multi-chain/faq/ckerc20-faq",
-            "developer-docs/multi-chain/faq/signatures-faq",
-          ],
-        },
       ],
     },
   ],
@@ -1133,49 +1036,6 @@ const sidebars = {
         "developer-docs/backend/rust/generating-candid",
         "developer-docs/backend/rust/message-inspect",
       ],
-    },
-  ],
-  motoko: [
-    "motoko/tutorial",
-      {
-        type: "category",
-        label: "Motoko language book",
-        items: [
-        {
-        type: "link",
-        label: "1. Introduction",
-        href: "https://motoko-book.dev/introduction.html",
-        },
-        {
-          type: "link",
-          label: "2. Common programming concepts",
-          href: "https://motoko-book.dev/common-programming-concepts.html",
-        },
-        {
-          type: "link",
-          label: "3. BigFile programming concepts",
-          href: "https://motoko-book.dev/internet-computer-programming-concepts.html",
-        },
-        {
-          type: "link",
-          label: "4. Advanced types",
-          href: "https://motoko-book.dev/advanced-types.html",
-        },
-        {
-          type: "link",
-          label: "5. The base library",
-          href: "https://motoko-book.dev/base-library.html",
-        },
-        {
-          type: "link",
-          label: "6. Advanced concepts",
-          href: "https://motoko-book.dev/advanced-concepts.html",
-        },
-      ],
-    },
-    {
-        type: 'autogenerated',
-        dirName: "motoko/main",
     },
   ],
   solidity: [

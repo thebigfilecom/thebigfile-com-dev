@@ -14,8 +14,6 @@ This tutorial will walk you through how to deploy a sample [canister smart contr
 This example internally leverages the [ECDSA API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key)
 and [Bitcoin API](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-bitcoin-api) of the BigFile.
 
-For a deeper understanding of the BIG < > BTC integration, see the [Bitcoin integration documentation](/docs/current/developer-docs/multi-chain/bitcoin/overview).
-
 ## Prerequisites
 
 * [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/index.mdx).
@@ -158,7 +156,7 @@ In this tutorial, you were able to:
 This example is extensively documented in the following tutorials:
 
 * [Deploying your first Bitcoin dapp](https://thebigfile.com/docs/current/samples/deploying-your-first-bitcoin-dapp).
-* [Developing Bitcoin dapps locally](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/local-development).
+* 
 
 ## Security considerations and best practices
 

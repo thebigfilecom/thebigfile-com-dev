@@ -1,3 +1,0 @@
-service : () -> {
-  "cq": () -> () composite_query;
-}

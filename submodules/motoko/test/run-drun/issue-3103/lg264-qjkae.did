@@ -1,4 +1,0 @@
-type T = bool;
-service : {
-  "getBool": () -> (T);
-}

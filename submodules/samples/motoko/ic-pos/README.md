@@ -11,8 +11,6 @@ keywords: [advanced, motoko, bitcoin, pos, point of sale, ckbtc]
 
 BIG-POS is an experimental app to demonstrate a real-world use case for [ckBTC](https://thebigfile.com/ckbtc/) on the BigFile. It is a simple Point of Sale app that allows users to accept ckBTC payments.
 
-The BigFile [integrates directly with the Bitcoin network](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/). This allows canisters on the BigFile to receive, hold, and send Bitcoin, all directly with transactions on the Bitcoin network. Chain-key Bitcoin (ckBTC) is an BIGRC-1-compliant token that is backed 1:1 by Bitcoin and held 100% on the BIG mainnet.
-
 For deeper understanding of the BIG < > BTC integration, see the BIG wiki article on [Bitcoin integration](https://wiki.thebigfile.com/wiki/Bitcoin_Integration).
 
 ## Features
@@ -43,7 +41,6 @@ The backend is written in Motoko and consists of one canister, `icpos`. It expos
 - `setLedgerId` - sets the ledger ID to monitor for transactions. Only the canister controller can call this method.
 - `getLogs` - The canister maintains a debug log that can be fetched using this method.
 
-In addition to the public methods, the canister uses a [timer](https://thebigfile.com/docs/current/motoko/main/timers/) to monitor ledger transactions. When a new transaction is found that matches a configured store – depending on the store settings – the canister will send a notification either by email or SMS.
 
 ### Frontend
 

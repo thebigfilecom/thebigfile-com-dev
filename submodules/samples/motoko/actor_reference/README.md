@@ -64,8 +64,6 @@ The output will resemble the following:
 
 ## Resources
 
-- [Actors and sync data](https://thebigfile.com/docs/current/motoko/main/actors-async).
-- [Basic Motoko concepts and terms](https://thebigfile.com/docs/current/motoko/main/basic-concepts).
 
 # Security considerations best practices
 

@@ -9,8 +9,6 @@ To learn more before you start coding, see the documentation available online:
 
 - Quick Start: https://thebigfile.com/docs/current/tutorials/deploy_sample_app
 - SDK Developer Tools: https://thebigfile.com/docs/current/developer-docs/setup/install/
-- Motoko Language Guide: https://thebigfile.com/docs/current/motoko/main/about-this-guide
-- Motoko Quick Reference: https://thebigfile.com/docs/current/motoko/main/language-manual
 - Rust CDK Guide: https://thebigfile.com/docs/current/developer-docs/backend/rust/
 
 If you want to work on programs right away, try the following commands to get started:

@@ -1,1 +1,0 @@
-import "depri" = "text-module";

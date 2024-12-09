@@ -57,7 +57,6 @@ shared({ caller = initializer }) actor class() {
 
     // Define private fields
     // Stable actor fields are automatically retained across canister upgrades. 
-    // See https://thebigfile.com/docs/current/motoko/main/upgrades/
 
     // Design choice: Use globally unique note identifiers for all users.
     //
@@ -156,7 +155,7 @@ shared({ caller = initializer }) actor class() {
     // Shared functions, i.e., those specified with [shared], are 
     // accessible to remote callers. 
     // The extra parameter [caller] is the caller's principal
-    // See https://thebigfile.com/docs/current/motoko/main/actors-async
+
 
     // Add new note for this [caller]. Note: this function may be called only by 
     // those users that have at least one device registered via [register_device].
@@ -498,7 +497,7 @@ shared({ caller = initializer }) actor class() {
     };
 
     // Below, we implement the upgrade hooks for our canister.
-    // See https://thebigfile.com/docs/current/motoko/main/upgrades/
+
 
     // The work required before a canister upgrade begins.
     // See [nextNoteId], [stable_notesByUser], [stable_users]

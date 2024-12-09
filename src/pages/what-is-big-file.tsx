@@ -207,11 +207,11 @@ function WhatIsBigPage() {
           <div className=" container-12 flex flex-col gap-16 md:gap-40 relative pt-20">
             <TranslatedLayout imageUrl="/img/what-is-big-file/node-providers.webp">
               <h2 className="tw-heading-4 md:tw-heading-3 md:mb-6">
-                Node providers
+              BigFile Mining
               </h2>
 
               <p className="tw-lead-sm">
-              Standardized hardware devices called node machines are operated by independent parties known as node providers, who are located in various data centers, geographies, and jurisdictions around the world. These node providers run their hardware to earn tokenized rewards, similar to how independent ISPs and backbone providers operate routing devices to earn peering fees.
+              BigFile mining is a process that enhances the network’s security by providing storage capacity. This system is based on the Storage Proof of Random Access (SPoRA) model, which relies not only on computational power but also on the secure storage of data. BigFile miners provide the necessary physical hardware (such as disk storage capacity) to store data on the network and earn BIG Token rewards in return. The mining process involves not only creating new blocks but also ensuring the integrity and accessibility of existing data, for which miners are regularly rewarded.
               </p>
               <p>
                 <Link
@@ -335,7 +335,7 @@ function WhatIsBigPage() {
               className="tw-heading-3 text-center mb-2 w-full mx-auto md:tw-heading-60 md:mb-6 lg:w-6/12"
               variants={transitions.item}
             >
-              Get familiar with the BigFile
+              Get with the BigFile
             </motion.h2>
           </AnimateSpawn>
 
@@ -350,7 +350,7 @@ function WhatIsBigPage() {
             />
 
             <CardWithDescription
-              title="BigFile community events"
+              title="BigFile community"
               description=""
               href="https://thebigfile.com/community"
             />

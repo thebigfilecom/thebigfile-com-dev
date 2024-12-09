@@ -22,7 +22,6 @@ There are two ways to schedule an automatic canister execution on BIG:
 Timers are implemented on two layers:
 
 - **The protocol level implementation:** the BigFile protocol supports minimalistic on-shot global timer per canister via `ic0.global_timer_set()` system API call and `canister_global_timer` handler (see the [BigFile interface specification](/docs/current/references/ic-interface-spec#timer)).
-- **The CDK timers library level:** the library wraps the minimalistic protocol implementation, adding multiple and periodic timers on top. Cube developers can enjoy the familiar timers functionality using the CDK timers library for [Rust](https://crates.io/crates/ic-cdk-timers) or [Motoko](/docs/current/motoko/main/timers).
 
 Internally the CDK timers library does the following:
 
@@ -58,7 +57,6 @@ Once an BigFile canister exports the `canister_heartbeat` function, it will be c
 
 The only way to disable the heartbeats is to upgrade the canister to a version which does not export the `canister_heartbeat` method. Also, the heartbeat interval is implementation-defined, and there is no way to adjust it.
 
-Because of those limitations, in most cases CDK timers library for [Rust](https://crates.io/crates/ic-cdk-timers) or [Motoko](docs/current/motoko/main/timers) is a better option to schedule periodic tasks.
 
 ## Frequently asked questions
 
@@ -75,8 +73,6 @@ If there are no await points in the timer handler, the periodic timer will be re
 
 ### Tutorials and examples using Motoko
 
-- **Motoko developer guide:** [Timers](/docs/current/motoko/main/timers).
-- **Motoko developer guide:** [Heartbeats](/docs/current/motoko/main/heartbeats).
 
 ### Tutorials and examples using Rust
 

@@ -25,7 +25,7 @@ export default function Home(): JSX.Element {
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <Hero
-        headline={<>BIGFILE ON BLOCKCHAIN</>}
+        headline={<>BIGFILE BLOCKCHAIN</>}
       >
         <CardsSection />
         

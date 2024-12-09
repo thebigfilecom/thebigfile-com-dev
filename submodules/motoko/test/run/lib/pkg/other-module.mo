@@ -1,3 +1,0 @@
-module {
-  public func bar() = ();
-}

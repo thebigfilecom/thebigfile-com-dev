@@ -7,7 +7,6 @@ keywords: [advanced, rust, bitcoin, btc, integration, bitcoin integration]
 [View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/rust/basic_bitcoin)
 
 ## Overview 
-This tutorial will walk you through how to deploy a sample [canister smart contract](/docs/current/developer-docs/multi-chain/bitcoin/overview) **that can send and receive Bitcoin** on the BigFile.
 
 ## Architecture
 
@@ -161,7 +160,7 @@ In this tutorial, you were able to:
 This example is extensively documented in the following tutorials:
 
 * [Deploying your first Bitcoin dapp](https://thebigfile.com/docs/current/samples/deploying-your-first-bitcoin-dapp).
-* [Developing Bitcoin dapps locally](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/local-development).
+* 
 
 ## Security considerations and best practices
 

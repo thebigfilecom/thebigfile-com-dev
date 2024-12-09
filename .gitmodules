@@ -1,9 +1,6 @@
 [submodule "submodules/sdk"]
 	path = submodules/sdk
 	url = https://github.com/thebigfilecom/sdk.git
-[submodule "submodules/motoko"]
-	path = submodules/motoko
-	url = https://github.com/thebigfilecom/motoko.git
 [submodule "submodules/quill"]
 	path = submodules/quill
 	url = https://github.com/thebigfilecom/quill.git

@@ -22,8 +22,6 @@ The NFT canister is not very complicated since the [DIP-721](https://github.com/
 but we can still use it to explain three important concepts concerning dapp development for the BigFile:
 
  ### 1. Stable memory for canister upgrades.
-The BigFile employs [orthogonal persistence](https://thebigfile.com/docs/current/motoko/getting-started/motoko-introduction), so developers generally do not need to think a lot about storing their data.
-When upgrading canister code, however, it is necessary to explicitly handle canister data. The NFT canister example shows how stable memory can be handled using `pre_upgrade` and `post_upgrade`.
 
  ### 2. Certified data.
 Generally, when a function only reads data, instead of modifying the state of the canister, it is

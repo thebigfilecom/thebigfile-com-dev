@@ -4,7 +4,7 @@ card: /img/what-is-bigfile/chainkey.webp
 cardImageFit: cover
 ---
 
-The correct operation of subnets (and inter-subnet communication) relies on a suite of novel cryptographic protocols, collectively referred to as [*chain-key cryptography*](/how-it-works/chain-key-technology/). Chain-key cryptography makes it possible for subnets to authenticate
+The correct operation of subnets (and inter-subnet communication) relies on a suite of novel cryptographic protocols, collectively referred to as Chain-key cryptography makes it possible for subnets to authenticate
 * responses to user requests,
 * the subnet state, and
 * inter-subnet messages

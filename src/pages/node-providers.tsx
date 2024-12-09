@@ -101,7 +101,7 @@ function NodeProvidersPage() {
               Decentralized computing{" "}
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-4 md:mb-6">
-            The BigFile blockchain operates on a network of nodes owned and managed by an expanding community of independent providers distributed worldwide. These node providers are carefully selected and vetted by the NNS.{" "}
+            The BigFile blockchain operates on a network of nodes owned and managed by an expanding community of independent providers distributed worldwide.{" "}
             </p>
             <p className="mb-0">
               <Link
@@ -133,7 +133,7 @@ function NodeProvidersPage() {
             </p>
             <p className="mb-0">
               <Link
-                href="https://wiki.thebigfile.com/wiki/Sovereign_Network"
+                href="https://wiki.thebigfile.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-primary link-with-icon"
@@ -144,12 +144,12 @@ function NodeProvidersPage() {
             </p>
           </TranslatedLayout>
           <TranslatedLayout imageUrl="/img/node-providers/node-providers-join.webp">
-            <h2 className="md:tw-heading-60 md:mb-6">Node Providers</h2>
+            <h2 className="md:tw-heading-60 md:mb-6">BigFile Mining</h2>
             <p className="tw-lead-sm mb-6 md:mb-10">
-            To maintain the network's decentralization, each node provider is vetted and approved by token holders through the NNS, the DAO that governs the BigFile. Becoming a node provider requires submitting a proposal along with a self-declaration document detailing the provision of node machines, intent, and proof of identity. Based on this information, the community votes on the onboarding proposal.
+            BigFile mining is a process that enhances the network’s security by providing storage capacity. This system is based on the Storage Proof of Random Access (SPoRA) model, which relies not only on computational power but also on the secure storage of data. BigFile miners provide the necessary physical hardware (such as disk storage capacity) to store data on the network and earn BIG Token rewards in return. The mining process involves not only creating new blocks but also ensuring the integrity and accessibility of existing data, for which miners are regularly rewarded.
             </p>
             <p className="tw-lead-sm mb-6 md:mb-10">
-            Once accepted into the community and their node machines are operational, node providers receive rewards for their services. These rewards, determined by the NNS DAO, are based on the 30-day average price of BIG and are distributed on the 30th of each month. The NNS DAO calculates rewards based on three primary factors: hardware generation (Gen 1 or Gen 2), geographic location, and the total number of nodes operated.
+            The mining process is designed to validate the required data, optimize the use of storage capacities, and ensure the continuous operation of the network. Miners are incentivized with BIG Token rewards for their critical contributions. BigFile and BIG Token set a new standard for decentralized storage and computation, offering users exceptional data security, seamless accessibility, and long-term sustainability. This innovative system provides a reliable and lasting solution for both individual users and businesses.
             </p>
             <p className="mb-0">
               <Link
@@ -208,7 +208,7 @@ function NodeProvidersPage() {
                 <ul className="checklist space-y-3 tw-paragraph md:tw-lead-sm">
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.thebigfile.com/wiki/Introduction_to_BigFile"
+                      href="https://wiki.thebigfile.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -217,7 +217,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.thebigfile.com/wiki/Sovereign_Network"
+                      href="https://wiki.thebigfile.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -226,7 +226,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.thebigfile.com/wiki/Governance_of_the_Big_File"
+                      href="https://wiki.thebigfile.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -235,7 +235,7 @@ function NodeProvidersPage() {
                   </li>
                   <li className="checklist-item pl-8">
                     <Link
-                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
+                      href="https://wiki.thebigfile.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -252,56 +252,9 @@ function NodeProvidersPage() {
                 <p className="tw-paragraph md:tw-lead-sm">
                 With a basic understanding of how the BigFile works, you're ready to start the onboarding process using the following resources:
                 </p>
-                <ul className="checklist space-y-3 tw-paragraph md:tw-lead-sm">
-                  <li className="checklist-item pl-8">
-                    <Link
-                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Fill out self-declaration form
-                    </Link>
-                  </li>
-                  <li className="checklist-item pl-8">
-                    <Link
-                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Onboarding"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Submit proposal and onboard your nodes to the BigFile
-                    </Link>
-                  </li>
-                  <li className="checklist-item pl-8">
-                    <Link
-                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Matrix_channel"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Join the node provider matrix channel
-                    </Link>
-                  </li>
-                  <li className="checklist-item pl-8">
-                    <Link
-                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Machine_Hardware_Guide"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Choose and purchase hardware
-                    </Link>
-                  </li>
-                  <li className="checklist-item pl-8">
-                    <Link
-                      href="https://wiki.thebigfile.com/wiki/Node_Provider_Onboarding"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Set up servers in a data center
-                    </Link>
-                  </li>
-                </ul>
                 <p className="">
                   <Link
-                    href="https://wiki.thebigfile.com/wiki/Node_Provider_Documentation"
+                    href="https://wiki.thebigfile.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button-primary"

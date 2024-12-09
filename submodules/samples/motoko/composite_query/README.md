@@ -104,9 +104,6 @@ dfx canister call --query Map get '(15)'
 
 ## Resources
 
-- [Actor classes](https://thebigfile.com/docs/current/motoko/main/actor-classes).
-- [Managing cycles](https://thebigfile.com/docs/current/motoko/main/cycles).
-- [Composite queries](https://thebigfile.com/docs/current/motoko/main/actors-async#composite-query-functions).
 
 ## Security considerations and best practices
 
