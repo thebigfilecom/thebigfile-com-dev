@@ -31,3 +31,6 @@ npm start -- --locale <locale>
 ```
 
 The BigFile Blockchain Project is a project initiated with the vision of 'A World Without Documents'. The project was launched with the name 'Digital Bureaucracy' and later rebranded as 'BigFile'.
+
+#####
+BigFile Developer Portal Website basic outline taken from [Internet Computer] (https://github.com/dfinity/portal).

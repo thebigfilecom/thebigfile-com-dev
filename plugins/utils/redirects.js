@@ -12,11 +12,10 @@ const redirects = `
   /docs/current/references/motoko-ref/* /docs/current/motoko/main/base/:splat
   /features/green /capabilities/sustainability
   /features /capabilities
-  /openchat /ois
+
   /howitworks /how-it-works
   /showcase /ecosystem
-  /multichain /multi-chain
-  /basics /what-is-the-big-file
+  /basics /what-is-big-file
   /docs/videos-tutorials /developers
   /docs /docs/current/home
   /docs/current/ /docs/current/home
@@ -41,10 +40,9 @@ const redirects = `
   /docs/samples/* /samples
   /docs/security-best-practices/introduction /docs/current/developer-docs/security/general-security-best-practices
   /docs/current/developer-docs/setup/default-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
-  /docs/current/tokenomics/sps/tokenomics /docs/current/developer-docs/daos/sps/tokenomics/
+
   /docs/current/developer-docs/integrations/http_requests/http_requests-how-it-works /docs/current/references/https-outcalls-how-it-works
-  /docs/current/developer-docs/daos/sps/tokenomics/sns-intro-tokens /docs/current/developer-docs/daos/sps/tokenomics/
-  /docs/current/developer-docs/integrations/sps/tokenomics/tokenomics /docs/current/developer-docs/daos/sps/tokenomics/tokenomics-intro
+  
   /docs/rust-guide/rust-intro /docs/current/developer-docs/backend/rust/
   /docs/languages/languages-overview /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/smart-contracts/write/choosing-language /docs/current/developer-docs/smart-contracts/write/overview
@@ -137,7 +135,6 @@ const redirects = `
   /docs/current/developer-docs/deploy/* /docs/current/developer-docs/production/:splat
   /docs/current/references/security/* /docs/current/developer-docs/security/general-security-best-practices
   /docs/current/tokenomics/nns/community-fund /docs/current/developer-docs/daos/fms/neurons-fund
-  /docs/current/tokenomics/sps/* /docs/current/developer-docs/daos/sps/tokenomics/:splat
   /docs/developers-guide/cli-reference/* /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/:splat
   /docs/developers-guide/concepts/* /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/developers-guide/tutorials/* /docs/current/motoko/main/getting-started/motoko-introduction
@@ -177,8 +174,6 @@ const redirects = `
   /docs/current/concepts/data-centers /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/build/languages/rust/rust-intro /docs/current/developer-docs/backend/rust/
   /docs/current/developer-docs/build/languages/motoko /docs/current/motoko/main/getting-started/motoko-introduction
-  /docs/current/developer-docs/integrations/sps/launching/launch-summary /docs/current/developer-docs/daos/sps/launching/launch-summary-1proposal
-  /docs/current/developer-docs/integrations/sps/launching/launch-steps /docs/current/developer-docs/daos/sps/launching/launch-steps-1proposal
   /docs/current/developer-docs/frontend/javascript-frontend /docs/current/developer-docs/web-apps/application-frontends/overview
   /docs/current/developer-docs/frontend/react-frontend /docs/current/developer-docs/web-apps/application-frontends/overview
   /docs/current/developer-docs/frontend/svelte-frontend /docs/current/developer-docs/web-apps/application-frontends/overview
@@ -369,31 +364,6 @@ const redirects = `
   /docs/current/tokenomics/token-holders/custody-options-intro /docs/current/developer-docs/defi/asset-custody/custody-options
   /docs/current/tokenomics/token-holders/self-custody-quickstart /docs/current/developer-docs/defi/asset-custody/self-custody-quickstart
   /docs/current/developer-docs/use-cases/considerations-for-nft-devs /docs/current/developer-docs/defi/nfts/considerations-for-nft-devs
-  /docs/current/developer-docs/integrations/sps/introduction/sns-intro-high-level /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/integrations/sps/introduction/sns-architecture /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/integrations/sps/introduction/sns-launch /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/integrations/sps/introduction/dao-alternatives /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/integrations/sps/tokenomics/ /docs/current/developer-docs/daos/sps/tokenomics/
-  /docs/current/developer-docs/integrations/sps/tokenomics/sns-checklist /docs/current/developer-docs/daos/sps/tokenomics/sps-checklist
-  /docs/current/developer-docs/integrations/sps/tokenomics/predeployment-considerations  /docs/current/developer-docs/daos/sps/tokenomics/predeployment-considerations
-  /docs/current/developer-docs/integrations/sps/tokenomics/tokenomics-intro  /docs/current/developer-docs/daos/sps/tokenomics/tokenomics-intro
-  /docs/current/developer-docs/integrations/sps/tokenomics/rewards /docs/current/developer-docs/daos/sps/tokenomics/rewards
-  /docs/current/developer-docs/integrations/sps/tokenomics/preparation /docs/current/developer-docs/daos/sps/tokenomics/preparation
-  /docs/current/developer-docs/integrations/sps/integrating/ /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/integrations/sps/integrating/ledger-integration /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/integrations/sps/integrating/index-integration /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/integrations/sps/integrating/frontend-integration /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/integrations/sps/testing/testing-before-launch /docs/current/developer-docs/daos/sps/testing/testing-before-launch
-  /docs/current/developer-docs/integrations/sps/testing/testing-locally /docs/current/developer-docs/daos/sps/testing/testing-locally
-  /docs/current/developer-docs/integrations/sps/testing/testing-on-mainnet /docs/current/developer-docs/daos/sps/testing/testing-on-mainnet
-  /docs/current/developer-docs/integrations/sps/launching/ /docs/current/developer-docs/daos/sps/launching/
-  /docs/current/developer-docs/integrations/sps/launching/launch-summary-1proposal  /docs/current/developer-docs/daos/sps/launching/launch-summary-1proposal
-  /docs/current/developer-docs/integrations/sps/launching/launch-steps-1proposal /docs/current/developer-docs/daos/sps/launching/launch-steps-1proposal
-  /docs/current/developer-docs/integrations/sps/managing/manage-sps-intro /docs/current/developer-docs/daos/sps/managing/manage-sps-intro
-  /docs/current/developer-docs/integrations/sps/managing/making-proposals /docs/current/developer-docs/daos/sps/managing/making-proposals
-  /docs/current/developer-docs/integrations/sps/managing/cycles-usage /docs/current/developer-docs/daos/sps/managing/cycles-usage
-  /docs/current/developer-docs/integrations/sps/managing/sns-asset-canister /docs/current/developer-docs/daos/sps/managing/sps-asset-canister
-  /docs/current/developer-docs/integrations/sps/managing/managing-nervous-system-parameters /docs/current/developer-docs/daos/sps/managing/managing-nervous-system-parameters
   /docs/current/tokenomics/nns/nns-intro /docs/current/developer-docs/daos/fms/overview
   /docs/current/tokenomics/token-holders/nns-app-quickstart /docs/current/developer-docs/daos/fms/fms-app-quickstart
   /docs/current/tokenomics/nns/neurons-fund /docs/current/developer-docs/daos/fms/neurons-fund
@@ -498,15 +468,6 @@ const redirects = `
   /docs/current/motoko/main/upgrades /docs/current/motoko/main/canister-maintenance/upgrades
   /docs/current/motoko/main/compiler-ref /docs/current/motoko/main/reference/compiler-ref
   /docs/current/motoko/main/motoko-grammar /docs/current/motoko/main/reference/motoko-grammar
-  /docs/current/developer-docs/daos/sps/introduction/sns-intro-high-level /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/daos/sps/introduction/sns-architecture /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/daos/sps/introduction/sns-launch /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/daos/sps/introduction/dao-alternatives /docs/current/developer-docs/daos/sps/overview
-  /docs/current/developer-docs/daos/sps/integrating/index /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/daos/sps/integrating/ledger-integration /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/daos/sps/integrating/index-integration /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/daos/sps/integrating/frontend-integration /docs/current/developer-docs/daos/sps/launching/integrating
-  /docs/current/developer-docs/integrations/sps/ /docs/current/developer-docs/daos/sps/overview
   `
   .split(/[\r\n]+/)
   .map((line) => line.trim().replace(/^#.*$/, "").trim())

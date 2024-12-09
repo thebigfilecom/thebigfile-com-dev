@@ -30,7 +30,7 @@ function SnsFaqPage() {
           <Breadcrumbs
             links={[
               {
-                href: "/sps",
+                href: "/",
                 text: "SPS",
               },
               {
@@ -156,7 +156,7 @@ function SnsFaqPage() {
                 <li>
                   <strong>Create SPS parameter update proposals:</strong> Propose changes to the DAO’s parameters, such as the maximum staking period, voting rewards, and more. See available {" "}
                   <Link
-                    href="/docs/current/developer-docs/daos/sps/managing/managing-nervous-system-parameters"
+                    href="/"
                     target="_blank"
                   >
                     parameters
@@ -798,11 +798,11 @@ function SnsFaqPage() {
           el={motion.section}
         >
           <SmallCardWithDescription
-            href="/sps"
+            href="/"
             title="SPS DAO Basics"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="https://medium.com/dfinity/how-the-service-nervous-system-sns-will-bring-tokenized-governance-to-on-chain-dapps-b74fb8364a5c"
+            href="https://medium.com/"
             title="SPS Blog"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
@@ -810,11 +810,11 @@ function SnsFaqPage() {
             title="Technical overview of BIG"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="https://wiki.thebigfile.com/wiki/Service_Nervous_System_(SPS)"
+            href="https://wiki.thebigfile.com/wiki/"
             title="SPS Wiki"
           ></SmallCardWithDescription>
           <SmallCardWithDescription
-            href="/docs/current/developer-docs/daos/sps/"
+            href="/"
             title="SPS Docs"
           ></SmallCardWithDescription>
         </AnimateSpawn>

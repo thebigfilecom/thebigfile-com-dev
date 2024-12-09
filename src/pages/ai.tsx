@@ -475,7 +475,7 @@ let result = model.run(tvec!
             "
             >
               <img
-                src="/img/what-is-the-ic/hero.svg"
+                src="/img/what-is-the-bigfile/hero.svg"
                 alt=""
                 className="w-full max-w-none"
               />

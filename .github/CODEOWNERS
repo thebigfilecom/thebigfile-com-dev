@@ -6,6 +6,5 @@ docs/developer-docs/build/agents @thebigfilecom
 docs/developer-docs/build/cdks @thebigfilecom
 docs/developer-docs/integrations/rosetta @thebigfilecom
 docs/developer-docs/security @thebigfilecom
-docs/references/execution-errors.mdx @thebigfilecom
 
 # Each piece of documentation must be owned by the respective teams

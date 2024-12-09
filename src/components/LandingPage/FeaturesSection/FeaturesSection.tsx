@@ -30,7 +30,7 @@ const FeaturesSection = () => {
           variants={transitions.item}
         >
           <img
-            src="/img/what-is-the-ic/icon-sovereign.svg"
+            src="/img/what-is-bigfile/icon-sovereign.svg"
             alt=""
             loading="lazy"
             className="w-30"
@@ -53,7 +53,7 @@ const FeaturesSection = () => {
           variants={transitions.item}
         >
           <img
-            src="/img/what-is-the-ic/icon-web3-ois.svg"
+            src="/img/what-is-bigfile/icon-web3-ois.svg"
             alt=""
             loading="lazy"
             className="w-30"
@@ -74,7 +74,7 @@ const FeaturesSection = () => {
           variants={transitions.item}
         >
           <img
-            src="/img/what-is-the-ic/icon-next-gen-ai.svg"
+            src="/img/what-is-bigfile/icon-next-gen-ai.svg"
             alt=""
             loading="lazy"
             className="w-30"
@@ -102,7 +102,7 @@ const FeaturesSection = () => {
           variants={transitions.item}
         >
           <img
-            src="/img/what-is-the-ic/icon-tamperproof.svg"
+            src="/img/what-is-bigfile/icon-tamperproof.svg"
             alt=""
             loading="lazy"
             className="w-30"
@@ -129,7 +129,7 @@ const FeaturesSection = () => {
           variants={transitions.item}
         >
           <img
-            src="/img/what-is-the-ic/icon-autonomous.svg"
+            src="/img/what-is-bigfile/icon-autonomous.svg"
             alt=""
             loading="lazy"
             className="w-30"
@@ -152,7 +152,7 @@ const FeaturesSection = () => {
           variants={transitions.item}
         >
           <img
-            src="/img/what-is-the-ic/icon-simple.svg"
+            src="/img/what-is-bigfile/icon-simple.svg"
             alt=""
             loading="lazy"
             className="w-30"

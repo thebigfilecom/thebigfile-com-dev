@@ -19,7 +19,7 @@ const customWebpack = require("./plugins/custom-webpack");
 const roadmapDataPlugin = require("./plugins/roadmap-data");
 const blogPostsPlugin = require("./plugins/blog-posts");
 const externalRedirectsPlugin = require("./plugins/external-redirects");
-const whatIsIcpDataPlugin = require("./plugins/what-is-the-big-file-cards");
+const whatIsIcpDataPlugin = require("./plugins/what-is-big-file-cards");
 const howItWorksCardsPlugin = require("./plugins/howitworks-cards");
 const howItWorksArticlesPlugin = require("./plugins/howitworks-articles");
 const math = require("remark-math");
@@ -72,10 +72,6 @@ const subnavItems = [
     items: [
       { label: "Rust", href: "/docs/current/developer-docs/backend/rust/" },
       {
-        label: "Motoko",
-        href: "/docs/current/motoko/main/getting-started/motoko-introduction",
-      },
-      {
         label: "TypeScript",
         href: "/docs/current/developer-docs/backend/typescript/",
       },
@@ -89,35 +85,20 @@ const subnavItems = [
   {
     type: "dropdown",
     position: "left",
-    label: "Frameworks",
-    items: [
-      {
-        label: "Juno",
-        href: "/docs/current/developer-docs/web-apps/frameworks/juno",
-      },
-    ],
-  },
-  {
-    type: "dropdown",
-    position: "left",
     label: "Additional Resources",
     items: [
       {
         label: "Awesome BigFile",
         href: "https://github.com/thebigfilecom/awesome-big-file#readme",
       },
-      { label: "Sample Code", to: "/samples" },
       {
         label: "SDK Release Notes",
         type: "doc",
         docId: "other/updates/release-notes/release-notes",
       },
+      { label: "Sample Code", to: "/samples" },
       { label: "Developer Tools", to: "/tooling" },
       { label: "Developer Grants", href: "https://thebigfile.com/grants" },
-      {
-        label: "Motoko Playground",
-        href: "https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/",
-      },
       {
         label: "Dev Forum",
         href: "https://forum.thebigfile.com/",
@@ -169,7 +150,7 @@ const marketingNav = {
             // },
             {
               name: "What is BigFile",
-              href: "/what-is-the-big-file",
+              href: "/what-is-big-file",
               description: "Get to know ",
             },
             {
@@ -264,7 +245,7 @@ const marketingNav = {
           items: [
             {
               name: "DAOs on BigFile",
-              href: "/sps",
+              href: "/",
               description: "Community-owned services",
             },
             {
@@ -295,7 +276,7 @@ const marketingNav = {
           ],
           featured: {
             title: "Multi Chain Technology",
-            href: "/multi-chain",
+            href: "/",
             image: "/img/nav/featured-use-cases.webp",
           },
         },

@@ -125,7 +125,7 @@ function DefiPage() {
           variants={transitions.fadeIn}
         >
           <div className="md:w-6/12 md:absolute top-10 md:-translate-y-1/2 right-0 -mt-30 md:mt-0">
-            <img src="/img/what-is-the-big-file/multi-chain.webp" alt="" className="w-full" />
+            <img src="/img/what-is-big-file/multi-chain.webp" alt="" className="w-full" />
           </div>
         </AnimateSpawn>
         <AnimateSpawn
