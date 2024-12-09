@@ -481,7 +481,7 @@ function TokenHolders(): JSX.Element {
                   and shape their development by participating in governance.
                 </p>
                 <p className="mb-0">
-                  <Link href="/sps" className="link-primary link-with-icon">
+                  <Link href="/" className="link-primary link-with-icon">
                     <LinkArrowRight />
                     About SPS DAOs
                   </Link>

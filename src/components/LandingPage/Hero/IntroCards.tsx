@@ -89,7 +89,7 @@ const IntroCards: React.FC = () => {
               <strong>Create your first DAO on true Web 3.0.</strong>
             </p>
             <p className="mb-0">
-              <Link className="button-outline" href="/ois">
+              <Link className="button-outline" href="/">
                 Explore DAOs on BigFile
               </Link>
             </p>
