@@ -99,8 +99,7 @@ actor {
     //3. ADD CYCLES TO PAY FOR HTTP REQUEST
 
     //BIG management canister will make the HTTP request so it needs cycles
-    //See: https://thebigfile.com/docs/current/motoko/main/cycles
-    
+  
     //The way Cycles.add() works is that it adds those cycles to the next asynchronous call
     //See: https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-http_request
     Cycles.add(230_850_258_000);

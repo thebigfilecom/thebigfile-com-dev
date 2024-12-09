@@ -54,7 +54,6 @@ shared ({ caller = initializer }) actor class () {
 
     // Define private fields
     // Stable actor fields are automatically retained across canister upgrades.
-    // See https://thebigfile.com/docs/current/motoko/main/upgrades/
 
     // Design choice: Use globally unique note identifiers for all users.
     //
@@ -102,7 +101,7 @@ shared ({ caller = initializer }) actor class () {
     // Shared functions, i.e., those specified with [shared], are
     // accessible to remote callers.
     // The extra parameter [caller] is the caller's principal
-    // See https://thebigfile.com/docs/current/motoko/main/actors-async
+
 
     // Add new empty note for this [caller].
     //
@@ -368,7 +367,7 @@ shared ({ caller = initializer }) actor class () {
     };
 
     // Below, we implement the upgrade hooks for our canister.
-    // See https://thebigfile.com/docs/current/motoko/main/upgrades/
+
 
     // The work required before a canister upgrade begins.
     system func preupgrade() {

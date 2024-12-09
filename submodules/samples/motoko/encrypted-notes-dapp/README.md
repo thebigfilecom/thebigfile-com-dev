@@ -41,7 +41,6 @@ We wanted to build an example of a simple (but not too simple) dapp running pure
 1. Client-side **end-to-end encryption**. 
 2. **Multi-user** and **multi-device** support.
 
-To demonstrate the potential of the BIG as a platform for developing such dapps, we implemented this example using two distinct canister development kits (CDKs). The Motoko CDK allows developers to implement actor-based dapps using the [Motoko](https://thebigfile.com/docs/current/motoko/getting-started/motoko-introduction) language. The Rust CDK allows implementing dapps in [Rust](https://thebigfile.com/docs/current/developer-docs/backend/rust/index). In both cases, canisters are compiled into WebAssembly files that are then deployed onto the BIG.
 
 ## Architecture
 

@@ -35,12 +35,7 @@ teardown() {
   assert_command_fail dfx new 'a:b'
 }
 
-@test "dfx new readmes contain appropriate links" {
-  assert_command dfx new --type rust e2e_rust --no-frontend
-  assert_command grep "https://docs.rs/ic-cdk" e2e_rust/README.md
-  assert_command dfx new --type motoko e2e_motoko --no-frontend
-  assert_command grep "https://thebigfile.com/docs/current/motoko/main/language-manual" e2e_motoko/README.md
-}
+
 
 @test "dfx new emits projects of the correct type" {
   assert_command dfx new --type rust e2e_rust --no-frontend

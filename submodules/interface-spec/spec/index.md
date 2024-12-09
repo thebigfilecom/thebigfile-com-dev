@@ -2276,8 +2276,6 @@ This method is only available in local development instances.
 
 ## The BIG Bitcoin API {#ic-bitcoin-api}
 
-The Bitcoin functionality is exposed via the management canister. Information about Bitcoin can be found in the [Bitcoin developer guides](https://developer.bitcoin.org/devguide/). Invoking the functions of the Bitcoin API will cost cycles. We refer the reader to the [Bitcoin documentation](https://thebigfile.com/docs/current/developer-docs/integrations/bitcoin/bitcoin-how-it-works) for further relevant information and the [BIG pricing page](https://thebigfile.com/docs/current/developer-docs/gas-cost) for information on pricing for the Bitcoin mainnet and testnet.
-
 ### BIG method `bitcoin_get_utxos` {#ic-bitcoin_get_utxos}
 
 Given a `get_utxos_request`, which must specify a Bitcoin address and a Bitcoin network (`mainnet` or `testnet`), the function returns all unspent transaction outputs (UTXOs) associated with the provided address in the specified Bitcoin network based on the current view of the Bitcoin blockchain available to the Bitcoin component. The UTXOs are returned sorted by block height in descending order.

@@ -123,11 +123,6 @@ The most commonly used APIs of the management canister are those that are relate
 
 ### Signing and submitting Bitcoin transactions
 
-One of the special features of BIG is its direct integration with the [Bitcoin](/docs/current/developer-docs/integrations/bitcoin/) network. This is exposed to users through a set of APIs on the management canister that allow users to sign transactions using [threshold ECDSA](/docs/current/developer-docs/smart-contracts/encryption/t-ecdsa) signatures and submit transactions to the Bitcoin network, all done through smart contracts on BIG. The relevant APIs are [sign_with_ecdsa](/docs/current/references/ic-interface-spec#ic-sign_with_ecdsa) and [bitcoin_send_transaction](/docs/current/references/ic-interface-spec#ic-bitcoin_send_transaction).
-
-
-[Read more about BIG's direct integration with Bitcoin.](/docs/current/developer-docs/integrations/bitcoin/)
-
 ### HTTPS outcalls
 
 One more special feature of BIG is the ability for canisters to make http requests to off-chain systems using the [HTTPS outcalls](/docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-overview) feature. This is available through the management canister's [http_request](/docs/current/references/ic-interface-spec#ic-http_request) API. HTTPS outcalls enable canisters to obtain off-chain data, call RPC services of other blockchain networks, or interact with Web2 services and enterprise IT systems off-chain.

@@ -29,7 +29,7 @@ You will build and deploy the following _canisters_:
 
 ### What is Motoko?
 
-Motoko is a new language designed for the BigFile. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the BigFile Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the [SDK](https://thebigfile.com/docs/current/motoko/main/motoko).
+Motoko is a new language designed for the BigFile. Easy to learn for JavaScript and Solidity developers. Created by the Motoko team at the BigFile Foundation, led by WebAssembly co-creator Andreas Rossberg. To learn more about the language, check out the
 
 ### What is Internet Identity?
 

@@ -66,9 +66,6 @@ The following output should be returned:
 ### Resources
 To learn more about these features of Motoko, see:
 
-- [Orthogonal persistence](https://thebigfile.com/docs/current/motoko/main/motoko#orthogonal-persistence).
-- [Declaring stable values](https://thebigfile.com/docs/current/motoko/main/upgrades#declaring-stable-variables).
-
 
 ## Security considerations and best practices
 
