@@ -1,1 +1,0 @@
-ignore (func (_) {})

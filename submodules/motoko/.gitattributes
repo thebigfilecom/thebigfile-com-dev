@@ -1,2 +1,0 @@
-# .gitattributes file which reclassifies `.mo` files as Swift:
-*.mo linguist-language=Swift

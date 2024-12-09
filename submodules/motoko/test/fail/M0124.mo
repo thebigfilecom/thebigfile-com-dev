@@ -1,3 +1,0 @@
-actor {
-  public let foo = ()
-}

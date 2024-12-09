@@ -1,3 +1,0 @@
-files/unstable.most:2.10-2.11: type error [M0131], variable x is declared stable but has non-stable type
-  () -> ()
-FALSE
