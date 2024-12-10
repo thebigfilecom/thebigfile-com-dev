@@ -16,41 +16,11 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-This document aims to provide examples of passing different argument types to a <GlossaryTooltip>canister</GlossaryTooltip>.
 
 ## Arrays
 
-An `array` is a collection of items of the same data type.
-
-The following example defines an array of numbers and a function that returns the array.
 
 <AdornedTabs groupId="language">
-<TabItem value="motoko" label="Motoko">
-
-Motoko differentiates between immutable arrays, which cannot be altered, and mutable arrays, which can be modified.
-
-To declare an immutable array (default):
-
-```motoko
-let a : [Nat] = [0, 1, 2, 3];
-```
-
-To declare a mutable array, the `[var _]` syntax is used:
-
-```
-let a : [var Nat] = [var 0, 1, 2, 3] ;
-```
-
-To declare a function that returns an array:
-
-```
-public func get_numbers(a: [Nat]) : [Nat] {
-    return a;
-}
-```
-
-
-</TabItem>
 
 <TabItem value="rust" label="Rust">
 
@@ -68,7 +38,7 @@ fn get_numbers(numbers: Vec<u32>) -> Vec<u32> {
 
 <AdornedTab value={"typescript"} label="TypeScript" endAdornment={<BetaChip />}>
 
-Azle refers to the `Vec` type to represent the equivalent of an `array` in Typescript. This is because `Vec` aligns with the [Candid](/docs/current/developer-docs/backend/candid/candid-concepts) type.
+Azle refers to the `Vec` type to represent the equivalent of an `array` in Typescript.
 
 ```typescript
 import { Cube, int32, Vec, query } from 'azle';
@@ -123,33 +93,7 @@ For additional examples, refer to [type `vec` in the Candid Reference](/docs/cur
 
 ## Variants
 
-A `variant` type represents a value that is from exactly one of the given cases, or **tags**. Similar to enums, they let you differentiate between different types within the same variable.
-
-The following example defines a `Day` type representing a day of the week. It utilizes a switch statement to match the input `Day` with one of its variants, returning the corresponding full name of the day.
-
 <AdornedTabs groupId="language">
-<TabItem value="motoko" label="Motoko" default>
-
-```motoko
-type Day = {#sun; #mon; #tue; #wed; #thu; #fri; #sat};
-
-public query func get_text(d : Day) : Text {
-  switch d {
-     case (#sun) "Sunday";
-     case (#mon) "Monday";
-     case (#tue) "Tuesday";
-     case (#wed) "Wednesday";
-     case (#thu) "Thursday";
-     case (#fri) "Friday";
-     case (#sat) "Saturday";
-   };
-};
-```
-
-
-To learn more about variants in Motoko, refer to Kai Peacock's blog on [using Motoko variants](https://kyle-peacock.com/blog/motoko/using-variants/#:~:text=Motoko%20variants%20are%20a%20cool,storing%2C%20similar%20to%20an%20enum.).
-
-</TabItem>
 
 <TabItem value="rust" label="Rust">
 

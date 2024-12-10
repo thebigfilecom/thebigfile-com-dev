@@ -11,51 +11,24 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-Cubes contain both code and state. Once you have written the code for a <GlossaryTooltip>cube</GlossaryTooltip>, the cube doesn't exist until it is registered with BigFile, either locally or the mainnet.
+## Creating Smart Contract
 
-A cube can be created without first compiling any code. When cubes are created with [`dfx canister create`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#dfx-canister-create), they are empty and do not contain program code. The code must be compiled into Wasm and installed into the empty cube before it can be deployed.
 
-## Creating cubes 
-
-When a cube is created, either locally or on the mainnet, the following steps happen:
-
-- The cube ID is registered with the local replica or the mainnet for each cube in the project's `dfx.json` file.
-
-- The following cube components are created:
-      - List of controllers.
-      - Cycles balance.
-      - Reserved cycles balance.
-      - Cube status.
-      - Resource reservations.
-
-- The cube's ID is returned in the command line.
-
-To create a cube locally, the `dfx canister create` command can be used:
-
-```
-dfx canister create hello_world // Create a cube locally
-dfx canister create hello_world --network ic // Create a cube on the mainnet
-dfx canister create --all --network ic // Create all cubes in the project's dfx.json file
-```
 
 :::caution 
 Creating a cube on the mainnet will cost [cycles](/docs/current/developer-docs/getting-started/cycles/cycles-faucet)
 :::
 
-At this step, settings can be configured for the cube using the optional flags. [View the full list of settings that can be configured](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#options-1).
-
-Once your cube has been created, it is ready to be compiled.
-
 ## Next steps
 
-- [Compile cube code](/docs/current/developer-docs/smart-contracts/compile)
+- [Compile Smart Contracts](/docs/current/developer-docs/smart-contracts/compile)
 
-- [Delete cubes](/docs/current/developer-docs/smart-contracts/maintain/delete)
+- [Delete Smart Contracts](/docs/current/developer-docs/smart-contracts/maintain/delete)
 
-- [Cube history](/docs/current/developer-docs/smart-contracts/maintain/history)
+- [Smart Contracts history](/docs/current/developer-docs/smart-contracts/maintain/history)
 
-- [Import cube](/docs/current/developer-docs/smart-contracts/maintain/import)
+- [Import Smart Contracts](/docs/current/developer-docs/smart-contracts/maintain/import)
 
-- [Recover cubes](/docs/current/developer-docs/smart-contracts/maintain/recovery)
+- [Recover Smart Contracts](/docs/current/developer-docs/smart-contracts/maintain/recovery)
 
-- [Cube settings](/docs/current/developer-docs/smart-contracts/maintain/settings)
+- [Smart Contracts settings](/docs/current/developer-docs/smart-contracts/maintain/settings)

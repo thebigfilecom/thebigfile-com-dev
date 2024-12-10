@@ -234,7 +234,7 @@ const DocsHomePage: FC = () => {
               </p>
               <p className="mb-0">
                 <Link
-                  href="/docs/current/developer-docs/getting-started/quickstart/react-quickstart"
+                  href="/"
                   className="link-primary link-with-icon"
                 >
                   View all <LinkArrowRight />
@@ -260,9 +260,9 @@ const DocsHomePage: FC = () => {
                 </p>
                 <p className="mb-0">
                   <Link
-                    href="/docs/current/developer-docs/getting-started/quickstart/react-quickstart"
+                    href="/"
                     className="link-primary"
-                    title="Go to Quickstart for React Devs"
+                    title="Go to React Devs"
                   >
                     <LinkArrowRight />
                   </Link>

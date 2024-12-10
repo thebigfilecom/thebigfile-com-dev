@@ -88,17 +88,12 @@ const subnavItems = [
     label: "Additional Resources",
     items: [
       {
-        label: "Awesome BigFile",
-        href: "https://github.com/thebigfilecom/awesome-big-file#readme",
-      },
-      {
         label: "SDK Release Notes",
         type: "doc",
         docId: "other/updates/release-notes/release-notes",
       },
       { label: "Sample Code", to: "/samples" },
       { label: "Developer Tools", to: "/tooling" },
-      { label: "Developer Grants", href: "https://thebigfile.com/grants" },
       {
         label: "Dev Forum",
         href: "https://forum.thebigfile.com/",

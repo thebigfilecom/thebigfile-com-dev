@@ -63,22 +63,6 @@ const sidebars = {
             },
           ],
         },
-        {
-          type: "category",
-          label: "Quickstart guides",
-          items: [
-            {
-              type: "doc",
-              label: "Quickstart for React developers",
-              id: "developer-docs/getting-started/quickstart/react-quickstart",
-            },
-            {
-              type: "doc",
-              label: "Juno quickstart",
-              id: "developer-docs/getting-started/quickstart/juno-quickstart",
-            },
-          ],
-        },
       ],
     },
     {
@@ -139,15 +123,6 @@ const sidebars = {
               type: "doc",
               label: "Passing in arguments",
               id: "developer-docs/smart-contracts/call/arguments",
-            },
-            {
-              type: "category",
-              label: "Candid",
-              items: [
-                "developer-docs/smart-contracts/candid/candid-concepts",
-                "developer-docs/smart-contracts/candid/candid-howto",
-                "developer-docs/smart-contracts/candid/candid-tools",
-              ],
             },
           ],
         },
@@ -613,7 +588,6 @@ const sidebars = {
             "developer-docs/defi/big-tokens/overview",
             "developer-docs/defi/big-tokens/ledger-local-setup",
             "developer-docs/defi/big-tokens/using-the-ledger",
-            "developer-docs/defi/big-tokens/icp-index-local-setup",
             "developer-docs/defi/big-tokens/account-trimming",
           ],
         },
@@ -885,7 +859,6 @@ const sidebars = {
         "concepts/nodes-subnets",
         "concepts/subnet-types",
         "concepts/tokens-cycles",
-        "concepts/trust-in-canisters",
         "concepts/glossary",
       ],
     },

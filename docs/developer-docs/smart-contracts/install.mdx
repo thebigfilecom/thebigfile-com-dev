@@ -11,42 +11,22 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 ## Overview
 
-When a <GlossaryTooltip>cube</GlossaryTooltip> has been initially created, it is empty and does not contain code or state. It only contains information such as the settings, cube ID, cycles balance, and controllers. You can learn more about creating a cube [in the creation documentation](/docs/current/developer-docs/smart-contracts/create). 
-
-When a cube's code is installed, the following components are created:
-
-- The cube's code in the form of a cube module.
-
-- The cube's state, including the cube's memory and global values.
-
-- Additional BIG-specific information, such as the cube's input and output queues. 
-
-## Installing cube code
-
-Code must be installed into the canister using the [`dfx canister install`](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#dfx-canister-install) command:
-
-```
-dfx canister install canister_name // install canister code locally
-dfx canister install canister_name --network ic // install canister code on the mainnet
-dfx canister install --all // install all canisters in the project's dfx.json file
-```
+## Installing Smart Contracts code
 
 :::caution 
-Creating a cube on the mainnet will cost [cycles](/docs/current/developer-docs/getting-started/cycles/cycles-faucet)
+Creating a Smart Contracts on the mainnet will cost [cycles](/docs/current/developer-docs/getting-started/cycles/cycles-faucet)
 :::
-
-At this step, settings can be configured for the cube using the optional flags. [View the full list of settings that can be configured](/docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister#options-1).
 
 ## Next steps
 
-- [Create cubes](/docs/current/developer-docs/smart-contracts/create)
+- [Create Smart Contracts](/docs/current/developer-docs/smart-contracts/create)
 
-- [Delete cubes](/docs/current/developer-docs/smart-contracts/maintain/delete)
+- [Delete Smart Contracts](/docs/current/developer-docs/smart-contracts/maintain/delete)
 
-- [Cube history](/docs/current/developer-docs/smart-contracts/maintain/history)
+- [Smart Contracts history](/docs/current/developer-docs/smart-contracts/maintain/history)
 
-- [Import cubes](//docs/current/developer-docs/smart-contracts/maintain/import)
+- [Import Smart Contracts](//docs/current/developer-docs/smart-contracts/maintain/import)
 
-- [Recover cubes](/docs/current/developer-docs/smart-contracts/maintain/recovery)
+- [Recover Smart Contracts](/docs/current/developer-docs/smart-contracts/maintain/recovery)
 
-- [Cube settings](/docs/current/developer-docs/smart-contracts/maintain/settings)
+- [Smart Contracts settings](/docs/current/developer-docs/smart-contracts/maintain/settings)
