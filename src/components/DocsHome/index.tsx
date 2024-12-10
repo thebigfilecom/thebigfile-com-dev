@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 const links = [
   {
     label: "Events & News",
-    href: "https://thebigfile.com/events-and-news/",
+    href: "https://bigfile.medium.com/",
   },
   {
     label: "Technical Working Groups",
@@ -23,9 +23,9 @@ const links = [
   { label: "Dev Discord Office Hours", href: "https://discord.gg/bgjhB2WF" },
   {
     label: "Developer Grants and Bounties",
-    href: "https://thebigfile.com/grants/",
+    href: "/",
   },
-  { label: "Bug Bounty Program", href: "https://thebigfile.com/bug-bounty/" },
+  { label: "Bug Bounty Program", href: "/" },
 ];
 
 const DocsHomePage: FC = () => {
@@ -108,7 +108,7 @@ const DocsHomePage: FC = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col">
-                <h4 className="tw-heading-5 mb-6">Rust</h4>
+                <h4 className="tw-heading-5 mb-6">Rust(Q2-2026)</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
                   Use Rust - a high performance and safe programming language to build high efficiency apps on BigFile
                 </p>
@@ -133,10 +133,9 @@ const DocsHomePage: FC = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col">
-                <h4 className="tw-heading-5 mb-6">TypeScript</h4>
+                <h4 className="tw-heading-5 mb-6">TypeScript(Q2-2025)</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Azle allows you to build BigFile apps using
-                  TypeScript and JavaScript, the languages of the web
+                  BigFile apps using TypeScript and JavaScript, the languages of the web
                 </p>
                 <p className="mb-0">
                   <Link
@@ -160,9 +159,9 @@ const DocsHomePage: FC = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col">
-                <h4 className="tw-heading-5 mb-6">Python</h4>
+                <h4 className="tw-heading-5 mb-6">Python(Q4-2025)</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  Kybra allows you to build BigFile apps using Python, one of the most popular languages in the world
+                  Build BigFile apps using Python, one of the most popular languages in the world
                 </p>
                 <p className="mb-0">
                   <Link
@@ -186,9 +185,9 @@ const DocsHomePage: FC = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col">
-                <h4 className="tw-heading-5 mb-6">Solidity</h4>
+                <h4 className="tw-heading-5 mb-6">Solidity(Q3-2025)</h4>
                 <p className="tw-paragraph text-black/80 mb-6 flex-1">
-                  BVM allows you to deploy smart contracts on the BigFile written in Solidity, a popular language for DeFi
+                  Deploy smart contracts on the BigFile written in Solidity, a popular language for DeFi
                   applications.
                 </p>
                 <p className="mb-0">

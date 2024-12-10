@@ -203,8 +203,8 @@ function NftPage() {
                 <h3 className="tw-heading-7-caps mb-0">BigFile</h3>
                 <img src="/img/nft/big-logo.webp" alt="" className="w-20" />
                 <div>
-                  <span className="tw-heading-3">$3</span>{" "}
-                  <span className="tw-heading-5">/ year</span>
+                  <span className="tw-heading-3">$25</span>{" "}
+                  <span className="tw-heading-5">/Forever</span>
                 </div>
               </div>
 

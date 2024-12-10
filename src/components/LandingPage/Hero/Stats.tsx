@@ -167,14 +167,13 @@ export const EthEquivalentTxRate = () => {
       variants={transitions.fadeIn}
     >
       <figure className="m-0">
-        $3 <span className="tw-lead-sm">/GB/year</span>
+        $30 <span className="tw-lead-sm">/GB / Forever</span>
         <figcaption className="tw-paragraph text-white/50 flex items-center gap-1">
-          Smart Contract Memory
+          Pay Once, Enjoy Forever
           <Info>
-            <h3 className="tw-button-xs mb-1">Memory is $3/GB/year</h3>
+            <h3 className="tw-button-xs mb-1">Memory is $30/GB / Forever</h3>
             <p className="tw-caption text-white/50 mb-0">
-              Each cube smart contract running on BIG can make 400 GiB of
-              persistent memory pages available to its bytecode (orthogonal persistence allows data structures to be used like databases).
+            BigDrive provides permanent, secure data storage for a simple one-time fee. Easily top up with BIG tokens to add storage credits. Plus, downloading your data or sharing your files is always free.
             </p>
           </Info>
         </figcaption>

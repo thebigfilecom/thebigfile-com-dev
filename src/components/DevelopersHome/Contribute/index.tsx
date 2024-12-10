@@ -26,12 +26,12 @@ const cardsContent = [
   {
     title: "BigFile developer grants and bounties",
     body: "Kickstart your idea or get paid to build on BigFile",
-    link: "https://dfinity.org/grants/",
+    link: "/",
   },
   {
     title: "Bug bounty program",
     body: "Report potential security vulnerabilities and get rewards",
-    link: "https://dfinity.org/bug-bounty/",
+    link: "/",
   },
 ];
 

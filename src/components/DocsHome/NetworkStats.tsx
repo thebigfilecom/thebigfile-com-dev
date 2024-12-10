@@ -49,14 +49,14 @@ export const NetworkStats = () => {
         <figcaption className="tw-paragraph-sm font-medium text-black/60 inline-flex gap-2 items-center mb-2">
           Storage Costs
           <Tooltip
-            tooltip="Cost of storing 1 GB for a year in a cube smart contract"
+            tooltip="Cost of storing 1 GB for Forever"
             className="w-52 whitespace-normal"
             wrapperClassName="inline-flex items-center"
           >
             <InfoIcon />
           </Tooltip>
         </figcaption>
-        <div className="tw-heading-6">$3 / GB / Year</div>
+        <div className="tw-heading-6">$30 / GB / Forever</div>
       </figure>
       <Divider />
       <figure className="m-0">

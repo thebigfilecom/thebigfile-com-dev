@@ -7,7 +7,7 @@ slug: smart-contracts-serve-the-web
 
 # Smart Contracts serve the web
 
-BigFile is the blockchain capable of hosting a full dapp—frontend, backend, and data. Any user can deploy their dapp as a cube (smart contract) on BigFile. Cubes are computational units that bundle together code and state. They can store data, deliver HTML, CSS, and JavaScript pages, and respond to API requests. Cubes are incredibly fast, capable of delivering webpages within 200ms. Additionally, cubes can store up to 400 GB of data at an extremely low cost ($3 per GB per year). Browsing dapps hosted on BigFile is as seamless as browsing Web2 apps hosted on the cloud. These factors enable developers to deploy even large-scale social media applications entirely on-chain without the need for any cloud services. Try out a few [dapps deployed on the BigFile](https://thebigfile.com/ecosystem/).
+BigFile is the blockchain capable of hosting a full dapp—frontend, backend, and data. Any user can deploy their dapp as a cube (smart contract) on BigFile. Cubes are computational units that bundle together code and state. They can store data, deliver HTML, CSS, and JavaScript pages, and respond to API requests. Cubes are incredibly fast, capable of delivering webpages within 200ms. Additionally, cubes can store up to 400 GB of data at an extremely low cost ($30 per GB Forever). Browsing dapps hosted on BigFile is as seamless as browsing Web2 apps hosted on the cloud. These factors enable developers to deploy even large-scale social media applications entirely on-chain without the need for any cloud services. Try out a few [dapps deployed on the BigFile](https://thebigfile.com/ecosystem/).
 
 ## Workflow
 

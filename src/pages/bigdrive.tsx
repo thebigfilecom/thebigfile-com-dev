@@ -15,41 +15,41 @@ const layoutData = [
   {
     id: 1,
     image: "img/accelerator/image_1.webp",
-    title: "Inclusive",
+    title: "Unlimited Storage",
     description:
-      "While traditional accelerators limit interactions among stakeholders, OLYMPUS empowers founders, investors, mentors and talents to communicate and collaborate directly within the platform.",
+      "Every account provides unlimited data storage, allowing you to upload as much or as little as you want. With no risk of account inactivity, every file you upload is securely stored and ready for access whenever you return.",
     reverse: true,
   },
   {
     id: 2,
     image: "img/accelerator/image_2.webp",
-    title: "Transparent",
+    title: "Easy File Management",
     description:
-      "Metrics and reputation are key factors to make informed decisions. OLYMPUS infrastructure provides on-chain growth data for projects and multi-party rating tools to ensure verifiable reputation at all levels. Startups are publicly rated on a range of parameters including team, product, value proposition, business model, and technology.",
+      "Easily rename, move, and organize files and drives to fit your personal or business filing system. Choose whether to keep files private, share them selectively, or make them publicly accessible to everyone.",
     reverse: false,
   },
   {
     id: 3,
     image: "img/accelerator/image_3.webp",
-    title: "Global + Local",
+    title: "Totally Private",
     description:
-      "OLYMPUS provides global outreach and visibility, leveraging communities of investors, mentors, founders and talents across 40+ countries.",
+      "Like you, we prioritize data privacy above all else. We never collect personal information, and your account is accessible only to you. With BigDrive, your data truly belongs to you and no one else.",
     reverse: true,
   },
   {
     id: 4,
     image: "img/accelerator/image_4.webp",
-    title: "Multichain",
+    title: "No Inactive Accounts",
     description:
-      "OLYMPUS is open to all Web3 ecosystems and stakeholders, offering founders the opportunity to accelerate faster, access mentorship and talent pools, and connect with capital.",
+      "At BigDrive, you never have to worry about inactive accounts. Whether you use it daily or return after years, your account remains active, and your files are always ready for access.",
     reverse: false,
   },
   {
     id: 5,
     image: "img/accelerator/image_5.webp",
-    title: "Sustainable",
+    title: "Version Tracking",
     description:
-      "OLYMPUS challenges the mainstream acceleration model of perpetual funding and replaces it with a self-sustaining roadmap for both Web3 founders and the platform itself.",
+      "Documents evolve through interactions and changes. With BigDrive, you can track every modification, review the history of saved versions, and access any previously uploaded document effortlessly.",
     reverse: true,
   },
 ];
@@ -58,34 +58,34 @@ const cardsData = [
   {
     id: 1,
     imageSrc: "img/accelerator/icon_1.svg",
-    title: "Founders",
+    title: "A one-stop storage",
     subtitle: "Think outside the box",
     description:
-      "Look beyond the benefits of a legacy accelerator. Scale sustainably thanks to a collaborative ecosystem of mentors, talents, investors, users.",
+      "Safely keep and organize your most important personal and business files, ensuring they are never lost or deleted.",
   },
   {
     id: 2,
     imageSrc: "img/accelerator/icon_2.svg",
-    title: "Talents",
+    title: "Creator's Paradise",
     subtitle: "Start your journey as Web3 pro",
     description:
-      "Access opportunities at early-stage projects and build a solid Web3 network.",
+      "Harness the power of BigDrive to bring your digital creations to life. Discover essential tips and tricks for managing metadata, manifests, and NFTs effortlessly.",
   },
   {
     id: 3,
     imageSrc: "img/accelerator/icon_3.svg",
-    title: "Mentors",
+    title: "Built for Developers",
     subtitle: "Echo your expertise in the field",
     description:
-      "Share your valuable knowledge with the best founders, and get involved in the next potential killer app.",
+      "Bring your next project to life on the permaweb. Use BigDrive to create a permanent website or launch a forever-running app with ease.",
   },
   {
     id: 4,
     imageSrc: "img/accelerator/icon_4.svg",
-    title: "Investors",
-    subtitle: "Lead with the right tools",
+    title: "Blockchain for Everyone",
+    subtitle: "A Blockchain for Everyone",
     description:
-      "Access globally vetted deals involving innovative Web3 projects and leverage verified data and ratings for your decisions.",
+      "Like the internet, but built to last for generations. Preserve websites, news articles, and files in a permanent digital time capsule.",
   },
 ];
 
@@ -219,14 +219,9 @@ function AcceleratorPage() {
             </div>
             <aside className="container-10 md:mt-40 md:flex md:items-center	">
               <div className="pt-24 md:w-1/3">
-                <motion.h3 className="tw-heading-4">Rating Loop</motion.h3>
+                <motion.h3 className="tw-heading-4">Secure your data with the power of a global network.</motion.h3>
                 <motion.p className="text-2xl mb-0 ">
-                  OLYMPUS participants are in a perpetual feedback loop: users
-                  rate projects, projects rate investors, and investors rate
-                  mentors. Reputation is stored on the blockchain, making it
-                  consistent and easily accessible. Furthermore, all OLYMPUS
-                  users must pass a proof of personhood test to ensure each
-                  rating comes from a verifiable source.
+                 BigDrive offers unmatched security compared to traditional data storage. By leveraging BigFile's decentralized blockchain network, your data is replicated globally, continuously verified for accuracy, and securely stored in multiple physical locations worldwide.
                 </motion.p>
               </div>
               <div className="md:w-2/3 relative mt-6 md:mt-64 md:mb-64">
