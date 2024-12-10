@@ -24,12 +24,9 @@ but we can still use it to explain three important concepts concerning dapp deve
  ### 1. Stable memory for canister upgrades.
 
  ### 2. Certified data.
-Generally, when a function only reads data, instead of modifying the state of the canister, it is
-beneficial to use a [query call instead of an update call](https://thebigfile.com/docs/current/concepts/canisters-code.md#query-and-update-methods).
-But, since query calls do not go through consensus, [certified responses](https://thebigfile.com/docs/current/developer-docs/security/general-security-best-practices)
-should be used wherever possible. The HTTP interface of the Rust implementation shows how certified data can be handled.
 
- ### 3. Delegating control over assets.
+
+ ### 3. Delegating control over assets
 For a multitude of reasons, users may want to give control over their assets to other identities, or even delete (burn) an item.
 The NFT canister example contains all those cases and shows how it can be done.
 

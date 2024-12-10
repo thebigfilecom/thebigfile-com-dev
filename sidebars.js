@@ -517,43 +517,6 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Security",
-      items: [
-        {
-          type: "category",
-          label: "Security best practices",
-          items: [
-            {
-              type: "doc",
-              label: "General",
-              id: "developer-docs/security/general-security-best-practices",
-            },
-            {
-              type: "doc",
-              label: "Rust",
-              id: "developer-docs/security/rust-canister-development-security-best-practices",
-            },
-            {
-              type: "doc",
-              label: "Web apps",
-              id: "developer-docs/security/web-app-development-security-best-practices",
-            },
-            {
-              type: "doc",
-              label: "Important resources",
-              id: "developer-docs/security/security-best-practices-references",
-            },
-          ],
-        },
-        {
-          type: "doc",
-          label: "Formal verification",
-          id: "developer-docs/security/formal-verification",
-        },
-      ],
-    },
-    {
-      type: "category",
       label: "ErisAI",
       items: [
         "developer-docs/ai/overview",
@@ -687,15 +650,6 @@ const sidebars = {
             "references/samples/native-apps/unity_ii_applink/README",
             "references/samples/native-apps/unity_ii_deeplink/README",
             "references/samples/native-apps/unity_ii_deeplink/ii_integration_dapp/README",
-          ],
-        },
-        {
-          type: "category",
-          label: "Svelte",
-          items: [
-            "references/samples/svelte/svelte-motoko-starter/README",
-            "references/samples/svelte/svelte-starter/README",
-            "references/samples/svelte/sveltekit-starter/README",
           ],
         },
       ],
@@ -884,8 +838,8 @@ const sidebars = {
             },
             {
               type: "doc",
-              label: "BIGRC-1 token standard",
-              id: "references/bigrc1-standard",
+              label: "BIG token standard",
+              id: "references/big-token-standard",
             },
             {
               type: "doc",
@@ -898,11 +852,8 @@ const sidebars = {
           type: "category",
           label: "Feature references",
           items: [
-            "references/bitcoin-how-it-works",
-            "references/ckbtc-reference",
             "references/https-outcalls-how-it-works",
             "references/t-ecdsa-how-it-works",
-            "references/vetkeys-overview",
             "references/supported-signatures",
           ],
         },

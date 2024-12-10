@@ -97,8 +97,8 @@ function AcceleratorPage() {
 
   return (
     <Layout
-      title="OLYMPUS | The On-chain Acceleration Platform"
-      description="OLYMPUS is the first on-chain Web3 acceleration platform connecting founders, investors, mentors and talents across different ecosystems."
+      title="BigDrive | The On-chain Permanent File Storage"
+      description="Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, store-forever model."
     >
       <ShareMeta image="/img/shareImages/share-olympus.jpg"></ShareMeta>
 
@@ -123,23 +123,21 @@ function AcceleratorPage() {
                 className="tw-heading-3 md:tw-heading-2 mb-1 md:mb-3"
                 variants={transitions.item}
               >
-                OLYMPUS
+                BigDrive
               </motion.h1>
               <motion.h2 className="tw-heading-4 md:tw-heading-3 mb-2 md:mb-6">
-                The On-Chain Acceleration Platform
+                The On-chain Permanent File Storage
               </motion.h2>
               <div className="relative  md:w-5/10">
                 <motion.p
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  OLYMPUS is the first on-chain Web3 acceleration platform
-                  connecting founders, investors, mentors and talents across
-                  different ecosystems.
+                  Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, store-forever model.
                 </motion.p>
               </div>
               <MotionLink
-                href="https://airtable.com/app5kkXNk5jTbPn4A/shrTV2c1swnQe7DXt"
+                href="https://bigdrive.thebigfile.com"
                 className="button-white"
                 variants={transitions.item}
               >
@@ -169,8 +167,7 @@ function AcceleratorPage() {
               className="text-gradient tw-heading-4 md:tw-heading-60 mb-0 md:max-w-9/12"
               variants={transitions.item}
             >
-              A new framework designed to address Web3 adoption challenges and
-              accelerate the next set of unicorns.
+              Rethink your approach to cloud storage—because true permanence demands a new way forward.
             </motion.h2>
           </AnimateSpawn>
         </section>
@@ -262,11 +259,11 @@ function AcceleratorPage() {
               className="tw-heading-3 text-center mb-6 w-full mx-auto md:tw-heading-60 md:mb-12 lg:w-8/12"
               variants={transitions.item}
             >
-              Find out how OLYMPUS can help You accelerate
+              Find out how BigDrive can help You accelerate
             </motion.h2>
             <div>
               <MotionLink
-                href="https://airtable.com/app5kkXNk5jTbPn4A/shrTV2c1swnQe7DXt"
+                href="https://bigdrive.thebigfile.com"
                 className="button-white"
                 variants={transitions.item}
               >
