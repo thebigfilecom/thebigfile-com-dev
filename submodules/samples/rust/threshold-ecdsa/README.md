@@ -66,8 +66,6 @@ To deploy this canister the mainnet, one needs to do two things:
 
 #### Acquire cycles to deploy
 
-Deploying to the BigFile requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
-
 #### Update source code with the right key ID
 
 To deploy the sample code, the canister needs the right key ID for the right environment. Specifically, one needs to replace the value of the `key_id` in the `src/ecdsa_example_rust/main.mo` file of the sample code. Before deploying to mainnet, one should modify the code to use the right name of the `key_id`.

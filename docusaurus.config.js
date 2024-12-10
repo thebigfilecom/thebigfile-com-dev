@@ -293,11 +293,6 @@ const marketingNav = {
           name: "Feedback Board",
           href: "https://dx.thebigfile.com/",
         },
-        
-        {
-          name: "Free Cycles",
-          href: "/docs/current/developer-docs/getting-started/cycles/cycles-faucet",
-        },
       ],
 
       sections: [

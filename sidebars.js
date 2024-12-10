@@ -33,16 +33,6 @@ const sidebars = {
           id: "developer-docs/getting-started/accounts",
         },
         {
-          type: "category",
-          label: "Cycles",
-          items: [
-            "developer-docs/getting-started/cycles/cycles-faucet",
-	    "developer-docs/getting-started/cycles/cycles-ledger",
-            "developer-docs/getting-started/cycles/cycles-wallet",
-            "developer-docs/getting-started/cycles/converting_big_tokens_into_cycles",
-          ],
-        },
-        {
           type: "doc",
           label: "Default project template",
           id: "developer-docs/getting-started/default-template",

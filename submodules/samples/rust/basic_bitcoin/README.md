@@ -39,8 +39,6 @@ git submodule update --init --recursive
 
 ### Acquire cycles to deploy
 
-Deploying to the BigFile requires [cycles](https://thebigfile.com/docs/current/developer-docs/setup/cycles) (the equivalent of "gas" in other blockchains). You can get free cycles from the [cycles faucet](https://thebigfile.com/docs/current/developer-docs/setup/cycles/cycles-faucet.md).
-
 ### Deploy the smart contract to the BigFile
 
 ```bash
