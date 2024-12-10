@@ -373,9 +373,9 @@ function SocialMediaDappsPage() {
                         alt=""
                         className="mr-4 w-11 h-11"
                       />
-                      <span className="tw-heading-3">$3</span>
+                      <span className="tw-heading-3">$30</span>
                       <span className="tw-heading-6 pl-2 relative top-2">
-                        / GB per year
+                        / GB Forever
                       </span>
                     </li>
                     <li className="flex items-center">

@@ -139,8 +139,6 @@ Special features have different costs since they use special infrastructure to p
 
 - **HTTPS outcalls**: The cost for an HTTPS outcall is calculated using the formula `(3_000_000 + 60_000 * n) * n` for the base fee and `400 * n` each request byte and `800 * n` for each response byte, where `n` is the number of nodes in the subnet. These costs are included in the chart found below.
 
-- **Bitcoin API**: Pricing for the **Bitcoin API** is available in the [Bitcoin API documentation](/docs/current/references/bitcoin-how-it-works).
-
 - **Chain-key signing API**: Pricing for the **Chain-key signing API** is available in the [Chain-key signing / threshold ECDSA documentation](/docs/current/references/t-ecdsa-how-it-works).
 
 
@@ -184,7 +182,7 @@ The following table shows the calculated storage cost per GiB for a 30-day month
 
 
 Monitoring cycles usage
-   - [Check your cube's cycles balance](/docs/current/developer-docs/getting-started/cycles/cycles-wallet#check-the-cycle-balance).
+   
    - [Monitor your cube's cycles usage](/docs/current/developer-docs/getting-started/cycles/cycles_management_services).
    - [Motoko cycles management library](https://github.com/CycleOperators/cycles-manager).
 

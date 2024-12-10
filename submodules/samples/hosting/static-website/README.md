@@ -4,20 +4,17 @@ keywords: [static website, basic website, html, host a website, beginner]
 
 # Static website
 
-[View this sample's code on GitHub](https://github.com/dfinity/examples/tree/master/hosting/static-website)
+[View this sample's code on GitHub](https://github.com/thebigfilecom/examples/)
 
 ## Overview
-The example shows how to deploy a simple, static website on the BIG in an asset canister. The website is very simple, it just shows the BigFile logo and has a basic styling of the logo. 
+The example shows how to deploy a simple, static website on the BIG in an asset Smart Contracts
 
-![Website](README_images/website.png)
-
-The purpose of this example is to show how to deploy a static website in an asset canister. While the website in this example is very simple, the method would be the same for a more advanced static website, e.g. based on popular static site generators.
+The purpose of this example is to show how to deploy a static website in an asset Smart Contracts. While the website in this example is very simple, the method would be the same for a more advanced static website, e.g. based on popular static site generators.
 
 This example covers:
 
 - Build a very simple HTML website
-- Create the dfx.json file
-- Deploy the canister smart contract locally
+- Deploy the smart contract locally
 - Test the frontend in browser 
 
 ## Prerequisites
@@ -26,18 +23,17 @@ This example requires an installation of:
 
 - [x] Install the [BIG SDK](https://thebigfile.com/docs/current/developer-docs/setup/install/).
 
-- [x] Download and install [git](https://git-scm.com/downloads).
+- [x] Download and install
 
 ### Install
 Install the example dapp project:
 
 ```bash
-git clone https://github.com/dfinity/examples
+git clone https://github.com/thebigfilecom/examples
 cd examples/hosting/static-website
 ```
 
 ## Documentation
-There are two parts in this dapp. One is the website and the other is `dfx.json`. Since there's no backend, there is not any benefit of using the `dfx new project_name` command to set up a template. The `dfx.json` file is all that is needed.
 
 ### Website
 The website is simple. It consists of an HTML file, a CSS file and a PNG file. The content of the HTML file looks like this:
@@ -69,65 +65,12 @@ img {
 }
 ```
 
-The project folder will then look like this:
-
-![Project Files](README_images/project_files.png)
-
-### dfx.json
-The `dfx.json` file is a configuration file which specifies the canister used for the dapp. In this case only one canister is needed, and besides the canister configuration, `dfx.json` also includes information about DFX version, build settings and network settings.
-
-```json
-{
-    "canisters": {
-        "www": {
-            "frontend": {
-                "entrypoint": "assets/src/index.html"
-            },
-            "source": [
-                "assets/assets",
-                "assets/src"
-            ],
-            "type": "assets"
-        }
-    },
-    "defaults": {
-        "build": {
-            "args": "",
-            "packtool": ""
-        }
-    },
-    "networks": {
-        "local": {
-            "bind": "127.0.0.1:8000",
-            "type": "ephemeral"
-        }
-    },
-    "version": 1
-}
-```
-
-This is all needed for creating a canister smart contract for hosting a static website on the BIG.
+### bigfile.json
 
 ## Deployment
-The local replica is started by running:
-
-```bash
-dfx start --background
-```
-
-When the local replica is up and running, run this command to deploy the canisters:
-
-```bash
-dfx deploy
-```
 
 
 ## Testing
-The URL for the frontend depends on the canister ID.  Local canister IDs can be obtained using `dfx canister id`, in this case `dfx canister id www`. When deployed, the URL will look like this:
-
-**http://\{ui_canister_id\}.localhost:8000**
-
-![Candid UI](README_images/website.png)
 
 ## License
 This project is licensed under the Apache 2.0 license, see `LICENSE.md` for details. See `CONTRIBUTE.md` for details about how to contribute to this project. 

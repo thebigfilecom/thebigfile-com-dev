@@ -29,12 +29,11 @@ Before starting the guide, verify the following:
 - [x]   You have downloaded and installed the BIG SDK package as described in the [download and install](/docs/current/developer-docs/getting-started/install/) page.
 
 :::info
-This guide requires you to use the BIG SDK version `0.8.0` or later.
+This guide requires you to use the BIG SDK version `0.0.0` or later.
 :::
 
-- [x]   You have installed the Visual Studio Code plugin for Motoko as described in [VS Code extensions for BIG development](/docs/current/developer-docs/developer-tools/ide/vs-code) if you are using Visual Studio Code as your IDE.
 
-- [x]   You have started `dfx` with the command `dfx start --clean --background`.
+- [x]   You have started `bigfile` with the command `start code`.
 
 
 ## Create a new project
@@ -49,57 +48,6 @@ To create a new project directory for your custom frontend dapp:
 
 - #### Step 4:  Create a new project by running the following command:
 
-
-<AdornedTabs groupId="version">
-<TabItem value="0-17-0" label="dfx v0.17.0 or newer" default>
-
-Use `dfx new <project_name>` to create a new project:
-
-```
-dfx new contacts
-```
-
-You will be prompted to select the language that your backend canister will use:
-
-```
-? Select a backend language: ›
-❯ Motoko
-  Rust
-  TypeScript (Azle)
-  Python (Kybra)
-```
-
-Then, select a frontend framework for your frontend canister. Select 'React':
-
-```
-  ? Select a frontend framework: ›
-  SvelteKit
-❯ React
-  Vue
-  Vanilla JS
-  No JS template
-  No frontend canister
-```
-
-Lastly, you can include extra features to be added to your project:
-
-```
-  ? Add extra features (space to select, enter to confirm) ›
-⬚ Internet Identity
-⬚ Bitcoin (Regtest)
-⬚ Frontend tests
-```
-
-</TabItem>
-
-<TabItem value="0-16-1" label="dfx v0.16.1 or older" default>
-
-```bash
-dfx new contacts
-```
-
-</TabItem>
-</AdornedTabs>
 
 - #### Step 5:  Change to your project directory by running the following command:
 
@@ -439,29 +387,17 @@ To start the environment locally:
 
 - #### Step 2:  Start the local canister execution environment on your local computer by running the following command:
 ```
-dfx start --clean --background
+big start --clean --background
 ```
 After the environment completes its startup operations, you can continue to the next step.
 
-## Register, build, and deploy the dapp
 
-After you connect to the local canister execution environment in your development environment, you can register, build, and deploy your dapp for testing.
 
-To deploy the dapp:
+Keep in mind that because you are running the Smart Contacts execution environment locally, the identifiers displayed when you run the `big deploy` command are only valid on your machine.
 
-- #### Step 1:  Check that you are still in the root directory for your project, if needed.
-
-- #### Step 2:  Register, build, and deploy your dapp by running the following command:
+To deploy Smart Contracts on BIG, you must specify that you are deploying to the BigFile and not your local environment by using the `--network` command-line option:
 ```
-dfx deploy
-```
-The `dfx deploy` command output displays information about the operations it performs.
-
-Keep in mind that because you are running the canister execution environment locally, the identifiers displayed when you run the `dfx deploy` command are only valid on your machine.
-
-To deploy canisters on BIG, you must specify that you are deploying to the BigFile and not your local environment by using the `--network` command-line option:
-```
-dfx deploy --network=ic
+big deploy --network=mainnet
 ```
 - #### Step 3:  Start the Webpack development server:
 ```
@@ -474,7 +410,7 @@ You can now access the frontend for the `contacts` dapp.
 
 To view the frontend:
 
-- #### Step 1:  Open a browser and navigate to the `http://localhost:4943`.
+- #### Step 1:  Open a browser and navigate to the `http://localhost:9980`.
 
 - #### Step 2:  Verify that you are prompted with a "My Contacts" form.
 
@@ -487,38 +423,3 @@ To view the frontend:
 - #### Step 4:  Clear the form fields and type a contact name in the Lookup name field, then click **Lookup** to see the stored contact information.
 
     Keep in mind that the **Lookup name** you type must be an exact match for the name of a contact you added.
-
-## Modify the stylesheet and test your changes
-
-After viewing the Contacts dapp, you might want to make some changes.
-
-To change stylesheet properties:
-
-- #### Step 1:  Open the `src/contacts_assets/assets/mycontacts.css` file in a text editor and modify its style settings.
-
-    For example, you might want to change the background color or style the input form.
-
-    You should see the changes update immediately in your open browser window.
-
-## Modify the frontend or backend code
-
-If you want to explore further, you might want to experiment with modifying the frontend or backend code for this guide. For example, you might want try modifying the guide to do the following:
-
--   Change the frontend code to clear the input fields after adding a new contact, for example, as part of an `onClick` event.
-
--   Change the Motoko program functions to do partial instead of exact string matching on the `Name` field. (You will need to run `dfx deploy` to test your changes on the local environment).
-
--   Change the Motoko program to allow lookups based on a different field.
-
-## Stop the local canister execution environment
-
-After you finish experimenting with your program, you can stop the local environment so that it doesn’t continue running in the background.
-
-To stop the local development environment:
-
-- #### Step 1:  In the terminal that displays your webpack dev server, press Control-C to interrupt the development server.
-
-- #### Step 2:  Stop the BigFile network by running the following command:
-```
-dfx stop
-```

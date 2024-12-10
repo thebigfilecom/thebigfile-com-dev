@@ -173,7 +173,7 @@ function ReverseGasModelPage(): JSX.Element {
             <p className="text-black tw-lead-sm mb-6 md:mb-10">
               Developers just starting out can get 10T free cycles from the{" "}
               <Link
-                href="/docs/current/developer-docs/setup/cycles/cycles-faucet"
+                href="/"
                 className="link-subtle"
               >
                 cycles faucet

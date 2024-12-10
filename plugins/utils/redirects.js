@@ -37,8 +37,6 @@ const redirects = `
   /docs/samples/codelabs/simple-nft /samples
   /docs/samples/codelabs/static-website /samples
   /docs/samples/* /samples
-  /docs/security-best-practices/introduction /docs/current/developer-docs/security/general-security-best-practices
-  /docs/current/developer-docs/setup/default-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
 
   /docs/current/developer-docs/integrations/http_requests/http_requests-how-it-works /docs/current/references/https-outcalls-how-it-works
   
@@ -66,7 +64,6 @@ const redirects = `
   /docs/current/developer-docs/build/frontend/webpack-config /docs/current/developer-docs/web-apps/application-frontends/overview#modifying-the-webpack-configuration
   /docs/current/developer-docs/build/install-upgrade-remove /docs/current/developer-docs/getting-started/install/
   /docs/current/developer-docs/build/languages/rust/* /docs/current/developer-docs/backend/rust/
-  /docs/current/developer-docs/build/project-setup/cycles-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
   /docs/current/developer-docs/build/project-setup/manage-canisters /docs/current/developer-docs/smart-contracts/maintain/settings
   /docs/current/developer-docs/build/project-setup/design-dapps /docs/current/developer-docs/web-apps/design-dapps
   /docs/current/developer-docs/build/troubleshooting /docs/current/developer-docs/smart-contracts/test/troubleshooting
@@ -84,7 +81,6 @@ const redirects = `
   /docs/developers-guide/concepts/file-storage /file-storage
   /docs/developers-guide/concepts/concepts-intro /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/developers-guide/customize-projects /docs/current/developer-docs/smart-contracts/compile
-  /docs/developers-guide/default-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
   /docs/developers-guide/design-apps /docs/current/developer-docs/web-apps/design-dapps
   /docs/developers-guide/glossary /docs/current/concepts/glossary
   /docs/developers-guide/install-upgrade-remove /docs/current/developer-docs/getting-started/install/
@@ -106,14 +102,12 @@ const redirects = `
   /docs/quickstart/4-2-convert-icp-to-cycles /docs/current/tutorials/developer-journey/
   /docs/quickstart/4-quickstart /docs/current/tutorials/developer-journey/
   /docs/quickstart/5-quickstart /docs/current/tutorials/developer-journey/
-  /docs/quickstart/cycles-faucet /docs/current/developer-docs/getting-started/cycles/cycles-faucet
   /docs/quickstart/local-quickstart /docs/current/developer-docs/getting-started/deploy/local
   /docs/quickstart/network-quickstart /docs/current/developer-docs/getting-started/deploy/mainnet
   /docs/quickstart/quickstart-intro /docs/current/tutorials/developer-journey/
   /docs/quickstart/newcomers /docs/current/home
   /docs/current/developer-docs/quickstart/* /docs/current/tutorials/developer-journey/
   /developers-guide/quickstart /docs/current/tutorials/developer-journey/
-  /docs/current/developer-docs/quickstart/cycles-faucet /docs/current/developer-docs/getting-started/cycles/cycles-faucet
   /docs/current/developer-docs/quickstart/windows-wsl /docs/current/developer-docs/getting-started/install/windows-wsl
   /docs/current/developer-docs/quickstart/hello10mins/ /docs/current/tutorials/developer-journey/
 
@@ -125,7 +119,6 @@ const redirects = `
 
   /docs/current/developer-docs/best-practices/* /docs/current/developer-docs/use-cases/:splat
   /docs/current/developer-docs/deploy/* /docs/current/developer-docs/production/:splat
-  /docs/current/references/security/* /docs/current/developer-docs/security/general-security-best-practices
   /docs/current/tokenomics/nns/community-fund /docs/current/developer-docs/daos/fms/neurons-fund
   /docs/developers-guide/cli-reference/* /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/:splat
   /docs/developers-guide/concepts/* /docs/current/developer-docs/getting-started/overview-of-bigfile
@@ -135,7 +128,6 @@ const redirects = `
   /docs/release-notes/* /docs/current/other/updates/release-notes/:splat
   /docs/rosetta-api/* /docs/current/developer-docs/integrations/rosetta/:splat
   /docs/rust-guide/* /docs/current/developer-docs/backend/rust/:splat
-  /docs/security-best-practices/* /docs/current/developer-docs/security/general-security-best-practices
   /docs/token-holders/* /docs/current/tokenomics/token-holders/:splat
   /features/* /capabilities/:splat
   /howitworks/* /how-it-works/:splat
@@ -167,14 +159,10 @@ const redirects = `
   /docs/current/developer-docs/frontend/react-frontend /docs/current/developer-docs/web-apps/application-frontends/overview
   /docs/current/developer-docs/frontend/svelte-frontend /docs/current/developer-docs/web-apps/application-frontends/overview
   /docs/current/developer-docs/frontend/vue-frontend /docs/current/developer-docs/web-apps/application-frontends/overview
-  /docs/current/developer-docs/setup/cycles/index /docs/current/developer-docs/getting-started/cycles/cycles-wallet
-  /docs/current/developer-docs/setup/cycles /docs/current/developer-docs/getting-started/cycles/cycles-wallet
   /docs/current/concepts/index /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/concepts /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/integrations/https-outcalls/index /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-how-to-use
   /docs/current/developer-docs/integrations/https-outcalls /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-how-to-use
-  /docs/current/developer-docs/security/index /docs/current/developer-docs/security/general-security-best-practices
-  /docs/current/developer-docs/security /docs/current/developer-docs/security/general-security-best-practices
   /docs/current/developer-docs/integrations/index /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/integrations /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/setup/index /docs/current/developer-docs/getting-started/install/
@@ -193,9 +181,6 @@ const redirects = `
   /docs/current/developer-docs/setup/hello-world /docs/current/developer-docs/getting-started/hello-world
   /docs/current/developer-docs/setup/install/ /docs/current/developer-docs/getting-started/install/
   /docs/current/developer-docs/setup/accounts /docs/current/developer-docs/getting-started/accounts
-  /docs/current/developer-docs/setup/cycles/cycles-faucet /docs/current/developer-docs/getting-started/cycles/cycles-faucet
-  /docs/current/developer-docs/setup/cycles/cycles-wallet /docs/current/developer-docs/getting-started/cycles/cycles-wallet
-  /docs/current/developer-docs/setup/cycles/converting_big_tokens_into_cycles /docs/current/developer-docs/getting-started/cycles/converting_big_tokens_into_cycles
   /docs/current/developer-docs/setup/first-canister /docs/current/developer-docs/getting-started/default-template
   /docs/current/developer-docs/setup/deploy-locally /docs/current/developer-docs/getting-started/deploy/local
   /docs/current/developer-docs/setup/deploy-mainnet /docs/current/developer-docs/getting-started/deploy/mainnet
@@ -349,7 +334,6 @@ const redirects = `
   /docs/current/tokenomics/ /docs/current/developer-docs/daos/overview
   /docs/current/developer-docs/integrations/https-outcalls/https-outcalls-how-it-works /docs/current/references/https-outcalls-how-it-works
   /docs/current/developer-docs/integrations/t-ecdsa/t-ecdsa-how-it-works /docs/current/references/t-ecdsa-how-it-works
-  /docs/current/developer-docs/integrations/vetkeys/technology-overview /docs/current/references/vetkeys-overview
   /docs/current/developer-docs/developer-tools/cli-tools/networks-json /docs/current/developer-docs/developer-tools/cli-tools/advanced-dfx/networks-json
   /docs/current/developer-docs/production/system-canisters /docs/current/developer-docs/smart-contracts/advanced-features/system-canisters
   /docs/current/developer-docs/backend/arguments /docs/current/developer-docs/smart-contracts/call/arguments
@@ -362,11 +346,6 @@ const redirects = `
   /docs/current/developer-docs/backend/subnet-types /docs/current/concepts/subnet-types
   /docs/current/references/glossary /docs/current/concepts/glossary
   /docs/current/samples/host-a-website /docs/current/references/samples/hosting/static-website/
-  /docs/current/samples/host-a-webgame /docs/current/references/samples/hosting/unity-webgl-template/
-  /docs/current/references/security/general-security-best-practices/ /docs/current/developer-docs/security/general-security-best-practices
-  /docs/current/references/security/rust-canister-development-security-best-practices /docs/current/developer-docs/security/rust-canister-development-security-best-practices
-  /docs/current/references/security/web-app-development-security-best-practices /docs/current/developer-docs/security/web-app-development-security-best-practices
-  /docs/current/references/security/ /docs/current/developer-docs/security/general-security-best-practices
   /docs/current/developer-docs/smart-contracts/overview/development-cycle /docs/current/developer-docs/smart-contracts/overview/cube-lifecycle
   /docs/current/developer-docs/web-apps/user-login/big-id/integrate-identity /docs/current/developer-docs/web-apps/user-login/big-id/integrate-big-id
   `

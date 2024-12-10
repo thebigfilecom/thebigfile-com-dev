@@ -15,10 +15,6 @@ function Index() {
       href: "/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key",
     },
     {
-      title: "Native Bitcoin Docs",
-      href: "/docs/current/references/bitcoin-how-it-works",
-    },
-    {
       title: "Chain-Key ECDSA Docs",
       href: "/docs/current/references/t-ecdsa-how-it-works",
     },
