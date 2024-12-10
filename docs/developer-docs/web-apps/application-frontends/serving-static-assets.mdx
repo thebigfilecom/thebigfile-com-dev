@@ -10,12 +10,6 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-When a dapp is deployed to BIG and has a frontend configured, the frontend assets will be displayed via a URL that contains the canister's ID. For local deployments, canisters are accessible through local URLs such as `http://127.0.0.1:4943/?canisterId=<canister-id>`. The port `4943` is the default local deployment port, though this can be changed via the `dfx` configuration or using a `dfx` flag. [Learn more about custom local networks](/docs/current/developer-docs/developer-tools/cli-tools/advanced-dfx/networks-json).
-
-For canisters deployed to the mainnet, the canister can be accessed in a web browser using the canister's ID followed by `.ic0.app`. For example, the [Motoko Playground](https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/) is an application with a frontend user interface that can be used to deploy canisters in a temporary, sandbox environment. This dapp can be accessed via the URL `https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/`. 
-
-Dapps may have complex frontends that serve dynamic, interactive interfaces, or they can serve simple, static webpages such as HTML and CSS pages. This guide will walkthrough how to display static assets using a frontend canister. 
-
 ## Types of assets
 
 Assets can come in many forms, such as:
@@ -38,28 +32,6 @@ Assets can come in many forms, such as:
 
 This guide will focus on static assets using HTML and CSS. For more information on using other asset types, follow the [custom frontend](custom-frontend.mdx) guide or the [existing frontend](existing-frontend.mdx) guide.
 
-## Configuring `dfx.json`
-
-First, you will need a `dfx` project. One can be created using `dfx new` in the command line. [Learn more about `dfx` and `dfx new`](docs/current/developer-docs/getting-started/hello-world).
-
-Once you have a project, you can configure the frontend canister in the `dfx.json` file such as:
-
-```json
-  "canisters": {
-    "hello_world_frontend": {
-      "source": [
-        "src/hello_world_frontend/"
-      ],
-      "type": "assets",
-      "workspace": "hello_world_frontend"
-    },
- }
-```
-
-In this configuration, the canister named `hello_world_frontend` is configured to use the source files found in `src/hello_world_frontend/`, and is configured as `type: "assets"` to indicate that it is hosting assets. 
-
-The `src/hello_world_front/` folder contains the static assets that the canister is hosting. This file path can be changed to any of your project's subdirectories that contain your asset files. The most basic example of a static asset is an `index.html` webpage. 
-
 ## Creating a static `index.html` page
 
 In your project's asset subdirectory, create an `index.html` file that contains some HTML code, such as:
@@ -68,13 +40,13 @@ In your project's asset subdirectory, create an `index.html` file that contains 
 <!DOCTYPE html> 
 <html> 
 <head> 
-<title>Static BIG webpage</title> 
+<title>Static BigFile webpage</title> 
 <meta charset="UTF-8"> 
 <meta name="description" content="This is a static webpage hosted on BIG using a frontend canister."> 
 </head> 
 <body> 
-<h1>Welcome to my BIG-hosted webpage</h1> 
-<p>This showcases how static assets can be hosted within an BIG canister.</p>
+<h1>Welcome to my BigFile-hosted webpage</h1> 
+<p>This showcases how static assets can be hosted within an BIG Smart Contract.</p>
 <img src="testpic.jpg" alt="This is a test image" height="420" width="420">
 <table> 
 <tr> 
@@ -121,7 +93,7 @@ To make customize the visualization of HTML webpages, you can use CSS by editing
 
 ## Deploy your webpage
 
-Once your static website is ready to deploy, you can deploy it to the mainnet with the `dfx deploy --network ic` command.
+Once your static website is ready to deploy, you can deploy it to the mainnet with the `Mainnet` command.
 
 :::caution 
 
@@ -132,17 +104,6 @@ Deploying to the mainnet will cost [cycles](/docs/current/developer-docs/gas-cos
 
 Once deployed, your webpage will be served at a URL such as:
 
-
-```
-Deployed canisters.
-URLs:
-  Frontend canister via browser
-    hello_world_frontend: https://qessr-fqaaa-aaaak-afoga-cai.icp0.io/
-```
-
-Opening this webpage in a web browser will display your static website:
-
-![Static website](./_attachments/static_website.png)
 
 ## Next steps 
 
