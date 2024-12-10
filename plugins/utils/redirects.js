@@ -213,7 +213,6 @@ const redirects = `
   /docs/current/developer-docs/agents/nodejs /docs/current/developer-docs/developer-tools/off-chain/agents/nodejs
   /docs/current/developer-docs/agents/ic-agent-dfinity /docs/current/developer-docs/developer-tools/off-chain/agents/rust-agent
   /docs/current/references/gitpod /docs/current/developer-docs/developer-tools/ide/gitpod
-  /docs/current/developer-docs/setup/playground /docs/current/developer-docs/developer-tools/ide/playground
   /docs/current/developer-docs/setup/vs-code /docs/current/developer-docs/developer-tools/ide/vs-code
   /docs/current/developer-docs/setup/react-quickstart /docs/current/developer-docs/getting-started/quickstart/react-quickstart
   /docs/current/references/cli-reference/ /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/
@@ -342,7 +341,6 @@ const redirects = `
   /docs/current/developer-docs/integrations/ledger/interact-with-ledger  /docs/current/developer-docs/defi/big-tokens/using-the-ledger
   /docs/current/developer-docs/integrations/ledger/icp-index-local-setup /docs/current/developer-docs/defi/big-tokens/icp-index-local-setup
   /docs/current/developer-docs/integrations/ledger/collecting-dust /docs/current/developer-docs/defi/big-tokens/account-trimming
-  /docs/current/developer-docs/integrations/exchange-rate/exchange-rate-canister /docs/current/developer-docs/defi/exchange-rate-canister
   /docs/current/developer-docs/integrations/rosetta/index  /docs/current/developer-docs/defi/rosetta/overview
   /docs/current/developer-docs/integrations/rosetta/  /docs/current/developer-docs/defi/rosetta/overview
   /docs/current/developer-docs/integrations/rosetta/hotkeys /docs/current/developer-docs/defi/rosetta/hotkeys
