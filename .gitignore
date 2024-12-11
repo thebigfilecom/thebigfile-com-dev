@@ -30,3 +30,4 @@ stats.py
 unlighthouse.config.ts
 # Local Netlify folder
 .netlify
+build.zip

@@ -98,26 +98,26 @@ const stats: {
 }[][] = [
   [
     { title: "Active Countries", value: "5", fallbackValue: "" },
-    { title: "Grants Awarded", value: "76", fallbackValue: "" },
-    { title: "Events Launched", value: "20", fallbackValue: "" },
-    { title: "Official BIG.Hubs", value: "2", fallbackValue: "" },
+    { title: "Grants Awarded", value: "1", fallbackValue: "" },
+    { title: "Events Launched", value: "0", fallbackValue: "" },
+    { title: "Official BIG.Hubs", value: "1", fallbackValue: "" },
   ],
 
   [
     { title: "University Collaborations", value: "0", fallbackValue: "" },
-    { title: "Network Entrepreneurs", value: "50", fallbackValue: "" },
-    { title: "New Users Accounts", value: "500", fallbackValue: "" },
+    { title: "Network Entrepreneurs", value: "1", fallbackValue: "" },
+    { title: "New Users Accounts", value: "50", fallbackValue: "" },
   ],
 
   [
-    { title: "Ecosystem Partnerships", value: "1", fallbackValue: "" },
-    { title: "Conference Appearances", value: "15", fallbackValue: "" },
-    { title: "Incubated Projects", value: "2", fallbackValue: "" },
+    { title: "Ecosystem Partnerships", value: "0", fallbackValue: "" },
+    { title: "Conference Appearances", value: "0", fallbackValue: "" },
+    { title: "Incubated Projects", value: "0", fallbackValue: "" },
   ],
   [
-    { title: "Hackathons Held", value: "5", fallbackValue: "" },
-    { title: "Education Courses", value: "4", fallbackValue: "" },
-    { title: "Devs Trained", value: "10", fallbackValue: "" },
+    { title: "Hackathons Held", value: "0", fallbackValue: "" },
+    { title: "Education Courses", value: "0", fallbackValue: "" },
+    { title: "Devs Trained", value: "2", fallbackValue: "" },
   ],
 ];
 
@@ -346,13 +346,13 @@ function CommunityPage() {
               loading="lazy"
               className="w-30"
             />
-            <h3 className="tw-lead md:tw-title-sm mb-0">BIG.Hubs</h3>
+            <h3 className="tw-lead md:tw-title-sm mb-0">BigFile Official</h3>
             <p className="mb-0 tw-paragraph-sm text-black/60">
-              BigFile. Hubs are flourishing worldwide. With 15 hubs already established and more in the pipeline, a thriving community is actively promoting awareness and adoption, encompassing evangelism, education, strategic partnerships, and project acceleration.
+              BigFile Official are flourishing worldwide. With 15 hubs already established and more in the pipeline, a thriving community is actively promoting awareness and adoption, encompassing evangelism, education, strategic partnerships, and project acceleration.
             </p>
             <p className="mb-0">
               <Link className="link-primary link-with-icon" href="#hubs">
-                Find BIG.Hubs near you
+                Find BigFile near you
                 <LinkArrowDown />
               </Link>
             </p>
@@ -374,7 +374,7 @@ function CommunityPage() {
             <p className="mb-0">
               <Link
                 className="link-primary link-with-icon"
-                href="https://thebigfile.com/events-and-news/"
+                href="https://bigfile.medium.com/"
               >
                 Discover upcoming events
                 <LinkArrowUpRight />

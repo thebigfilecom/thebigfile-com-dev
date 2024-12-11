@@ -66,7 +66,7 @@ export const sampleItems: SampleItem[] = [
     languages: ["rust", "javascript"],
     level: "beginner",
     contentType: ["code samples", "documentation", "live demos"],
-    body: "Deploy a dead simple dapp using two canisters serving a web page.",
+    body: "Deploy a dead simple dapp using two Smart Contracts serving a web page.",
     links: {
       action: {
         text: "Get code",

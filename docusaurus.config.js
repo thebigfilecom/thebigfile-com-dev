@@ -220,7 +220,7 @@ const marketingNav = {
             },
             {
               name: "Staking and Governance",
-              href: "/fms",
+              href: "/",
               description: "Govern and get rewards",
             },
             {

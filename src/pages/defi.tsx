@@ -370,21 +370,10 @@ function DefiPage() {
               description=""
               href="/docs/current/tutorials/developer-journey/level-5/5.1-BIG-ETH-tutorial"
             />
-
-            <CardWithDescription
-              title="Code ckETH"
-              description=""
-              href="https://github.com/thebigfilecom/ic/tree/main/rs/ethereum/cketh"
-            />
             <CardWithDescription
               title="DeFi sample code"
               description=""
               href="/samples?selectedDomains=Asynchronous+DeFi"
-            />
-            <CardWithDescription
-              title="Code ckBTC"
-              description=""
-              href="/"
             />
           </AnimateSpawn>
         </section>

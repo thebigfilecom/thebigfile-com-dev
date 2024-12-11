@@ -238,7 +238,7 @@ function TokenHolders(): JSX.Element {
                 </p>
                 <p className="mb-0">
                   <Link
-                    href="/fms"
+                    href="/"
                     className="link-primary link-with-icon items-center"
                   >
                     <LinkArrowRight />

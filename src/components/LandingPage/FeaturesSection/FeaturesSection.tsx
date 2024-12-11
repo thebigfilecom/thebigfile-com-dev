@@ -141,7 +141,7 @@ const FeaturesSection = () => {
             empowering communities to run Web3, or securing an enterprise
           </p>
           <p className="mb-0">
-            <Link className="link-primary" href="/fms">
+            <Link className="link-primary" href="/">
               <LinkArrowRight />
               Staking & Governance
             </Link>

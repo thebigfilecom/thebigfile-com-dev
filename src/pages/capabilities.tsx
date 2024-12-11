@@ -129,7 +129,7 @@ const cardsData: CardData[] = [
     description:
       "The BigFile is governed by a fully on-chain, permissionless system that regularly upgrades the protocol according to the intentions of BIG token holders, as expressed through their votes.",
     image: "/img/features/nns-image.webp",
-    href: "/fms",
+    href: "/",
     refText: "Participate in BigFile governance",
     imageSide: "right",
   },
@@ -211,7 +211,7 @@ function FeaturesPage() {
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                BigFile (BIG) is an open and secure AI-powered blockchain network capable of hosting programs, files, data, and Big Data in the form of smart contracts. It securely performs computations on smart contracts and offers infinite scalability.
+                BigFile (BIG) is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
               </motion.p>
             </div>
           </div>

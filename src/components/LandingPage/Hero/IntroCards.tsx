@@ -25,7 +25,7 @@ const IntroCards: React.FC = () => {
                 What is the BigFile
               </h2>
               <p className="tw-paragraph-sm md:tw-lead mb-6 text-white/60">
-              BigFile (BIG) is an open and secure AI-powered blockchain network that can host programs, files, data, and Big Data in the form of smart contracts, perform computations on smart contracts securely, and scale infinitely.
+              BigFile (BIG) is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
               </p>
               <p className="mb-0 self-stretch sm:self-auto">
                 <Link
@@ -81,7 +81,7 @@ const IntroCards: React.FC = () => {
             variants={transitions.item}
           >
             <h2 className="tw-heading-4 md:tw-heading-3 mb-0">
-              BigFile Services
+              BigFile Mining
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
               Now BigFile communities take full and exclusive control and
@@ -90,7 +90,7 @@ const IntroCards: React.FC = () => {
             </p>
             <p className="mb-0">
               <Link className="button-outline" href="/">
-                Explore DAOs on BigFile
+                Explore BigFile Gateway
               </Link>
             </p>
           </motion.div>
@@ -98,7 +98,7 @@ const IntroCards: React.FC = () => {
             className="rounded-3xl bg-white px-6 py-8 md:p-15 flex flex-col gap-4 md:gap-6"
             variants={transitions.item}
           >
-            <h2 className="tw-heading-4 md:tw-heading-3 mb-0">Your Web3 ID</h2>
+            <h2 className="tw-heading-4 md:tw-heading-3 mb-0">Your BIG ID</h2>
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
               Web2 relies on usernames and passwords for authentication –{" "}
               <strong>
