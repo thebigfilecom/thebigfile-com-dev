@@ -119,14 +119,13 @@ function SocialMediaDappsPage() {
                   className="tw-heading-3 md:tw-heading-2 mb-6"
                   variants={transitions.item}
                 >
-                  Social media decentralized
+                  Social Media Decentralized
                 </motion.h1>
                 <motion.p
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  Take full ownership and control over your <br />social media
-                  platforms.
+                  As a blockchain, BigFile inherently provides censorship-resistant storage. Once data is uploaded, it becomes immutable and tamper-proof, ensuring that social platforms can offer users true self-sovereign data access—free from third-party control or government censorship.
                 </motion.p>
                 <motion.p className="" variants={transitions.item}>
                   <Link href="#web3-dapps" className="button-white">
@@ -166,13 +165,13 @@ function SocialMediaDappsPage() {
               className="tw-heading-4 sm:tw-heading-3 md:tw-heading-2 mb-8 md:mb-10 md:w-8/10 text-transparent bg-clip-text gradient-text"
               variants={transitions.item}
             >
-              Reclaim social media
+              Developer-Friendly Infrastructure
             </motion.p>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-8 md:mb-12 md:w-6/10"
               variants={transitions.item}
             >
-              We're entering a new era of social media, where the success of Web3 applications hinges on decentralization. Today, tech giants' boards dictate the direction of social media platforms, often prioritizing profit over users. Centralized apps are also notorious for selectively suppressing opinions. The BigFile blockchain flips the script by empowering decentralized apps (dapps) to evolve into DAOs, putting control back into the hands of the community.
+              BigFile gateways revolutionize decentralized app (dApp) development by offering a developer-friendly interface. By eliminating the need for direct interaction with BigFile nodes, developers can accelerate the creation and deployment of cutting-edge social platforms.
             </motion.p>
           </AnimateSpawn>
           <div className="relative z-[-1]">
@@ -200,31 +199,25 @@ function SocialMediaDappsPage() {
           "
           >
             <ColumnCard
-              title="Social media incentivized"
+              title="Immutable and Unstoppable Data"
               icon={<IconTokenized aria-hidden="true" />}
             >
               <motion.p
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                A social media DAO incentivizes users to contribute to its dapp's success by offering governance tokens as rewards. As a user, you earn free tokens simply by using the service, and you also have a voice in deciding what new features should be added.
-              </motion.p>
-              <motion.p
-                className="mb-0 tw-paragraph"
-                variants={transitions.item}
-              >
-                As a developer, tokenizing your dapp brings significant advantages. Increased user engagement can naturally drive viral growth, while user contributions can substantially lower the costs of content moderation, development, and design.
+                With BigFile, once data is uploaded, it becomes immutable and tamper-proof. This ensures that social platforms can offer users genuine self-sovereign data access, free from the influence of third parties or government censorship.
               </motion.p>
             </ColumnCard>
             <ColumnCard
-              title="Why switch to the BigFile?"
+              title="Creator-Owned Content"
               icon={<IconBIG aria-hidden="true" />}
             >
               <motion.p
                 className="mb-6 tw-paragraph"
                 variants={transitions.item}
               >
-                Transitioning from Web2 to Web3 has never been easier. The BigFile not only enables true decentralization but also elevates the Web3 user experience. With no gas fees, non-trackable web authentication, and web-speed performance fully hosted on the blockchain—no centralized cloud required.
+                BigFile empowers true data ownership, enabling creators to monetize their work directly without intermediaries. This gives them complete control over their media and income. Social platforms can leverage BigFile's infrastructure to build innovative business models, rewarding users for their contributions and fostering a more equitable digital ecosystem.
               </motion.p>
             </ColumnCard>
           </div>
@@ -241,10 +234,10 @@ function SocialMediaDappsPage() {
               className="tw-heading-3 md:tw-heading-60 mb-8 md:w-9/10"
               variants={transitions.item}
             >
-              Top web3 social media platforms
+              Best Decentralized web3 Social Media Platforms
             </motion.h2>
             <motion.p className="tw-lead-sm mb-8" variants={transitions.item}>
-            The BigFile is a true world computer, hosting the largest collection of Web3 social media services entirely on-chain.
+             BigFile is a blockchain network designed to host a suite of Web3 Social Media services on a fully decentralized platform.
             </motion.p>
             <MotionLink
               className="link-external"
@@ -398,47 +391,6 @@ function SocialMediaDappsPage() {
                       <span className="tw-heading-5">$79,000,000</span>
                       <span className="tw-heading-7 pl-2 relative top-[2px]">
                         / GB
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
-              <motion.div className="mt-12" variants={transitions.item}>
-                <h3 className="tw-heading-7-caps mb-3 uppercase">
-                  Speed efficiency
-                </h3>
-                <div className="bg-white-50 rounded-xl border border-white border-solid p-6">
-                  <ul className="list-none pl-0 mb-0 space-y-3">
-                    <li>
-                      <span className="tw-heading-6 block">
-                        ~200ms (web speed)
-                      </span>
-                      <span className="tw-title-navigation-on-page text-black-60 block">
-                        GET Query calls
-                      </span>
-                    </li>
-                    <li>
-                      <span className="tw-heading-6 block">
-                        ~1-2s to reach finality
-                      </span>
-                      <span className="tw-title-navigation-on-page text-black-60 block">
-                        POST update calls
-                      </span>
-                    </li>
-                    <li>
-                      <span className="tw-heading-6 block">
-                        ~20,800 update calls/s
-                      </span>
-                      <span className="tw-title-navigation-on-page text-black-60 block">
-                        Update call speed
-                      </span>
-                    </li>
-                    <li>
-                      <span className="tw-heading-6 block">
-                        ~1,100,000 query calls/s
-                      </span>
-                      <span className="tw-title-navigation-on-page text-black-60 block">
-                        Query call speed
                       </span>
                     </li>
                   </ul>

@@ -64,15 +64,14 @@ const IntroCards: React.FC = () => {
             variants={transitions.item}
           >
             <h2 className="tw-heading-4 md:tw-heading-3 mb-0">
-              Blockchain as a service
+             BigDrive - File Storage
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
-              The future of cloud & document is serverless: for enterprise, government and
-              Web3 applications – <strong>Build with Cloud 3.0.</strong>
+            Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its <strong>Pay Once, Enjoy Forever</strong> model.
             </p>
             <p className="mb-0">
-              <Link className="button-outline" href="/enterprise">
-                Learn about Cloud 3.0
+              <Link className="button-outline" href="/bigdrive">
+               Get Started BigDrive
               </Link>
             </p>
           </motion.div>
@@ -84,9 +83,7 @@ const IntroCards: React.FC = () => {
               BigFile Mining
             </h2>
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
-              Now BigFile communities take full and exclusive control and
-              ownership of entire BigFile services –{" "}
-              <strong>Create your first DAO on true Web 3.0.</strong>
+            The BigFile network's mining process is optimized to maximize the replication of datasets, ensuring enhanced redundancy and data availability.
             </p>
             <p className="mb-0">
               <Link className="button-outline" href="/">
@@ -100,11 +97,7 @@ const IntroCards: React.FC = () => {
           >
             <h2 className="tw-heading-4 md:tw-heading-3 mb-0">Your BIG ID</h2>
             <p className="tw-paragraph md:tw-lead-sm mb-0 flex-1">
-              Web2 relies on usernames and passwords for authentication –{" "}
-              <strong>
-                BIG ID is the most secure authentification for Web2
-                and Web3.{" "}
-              </strong>{" "}
+            BIG ID is a platform enabling users to securely store and manage their data on the BigFile network. It offers the ability to permanently store files in a decentralized and reliable manner.
             </p>
             <p className="mb-0">
               <Link className="button-outline" href="/big-id">

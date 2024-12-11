@@ -46,14 +46,14 @@ function InternetIdentityPage() {
               className="tw-heading-3 md:tw-heading-2 mb-2 md:mb-6 md:w-8/10"
               variants={transitions.item}
             >
-              A fully decentralized digital identity solution for the future.
+              Decentralized BIG ID.
             </motion.h1>
             <div className="relative  md:w-5/10">
               <motion.p
                 className="tw-lead-sm md:tw-lead mb-8"
                 variants={transitions.item}
               >
-                BIG ID redefines user experiences by eliminating friction in the authentication process and empowering data sovereignty.
+                BIG ID is a platform enabling users to securely store and manage their data on the BigFile network. It offers the ability to permanently store files in a decentralized and reliable manner.
               </motion.p>
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
@@ -86,7 +86,7 @@ function InternetIdentityPage() {
               className="tw-heading-4 text-gradient md:tw-heading-60 mb-0"
               variants={transitions.item}
             >
-              Harness the full potential of digital identity
+              Harness the full potential of BIG ID
             </motion.h2>
           </AnimateSpawn>
         </section>
@@ -109,7 +109,7 @@ function InternetIdentityPage() {
                 User friendly
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-0">
-              Instead of using passwords to sign in, users simply unlock their devices with FaceID, TouchID, or passcodes to access their accounts. By unlocking their devices, they authorize the use of a passkey. Built on standardized technology, passkeys make BIG ID more convenient than traditional authentication methods.
+              Log in securely using a password. Future updates will introduce support for FaceID, TouchID, and passwords, offering users flexible options to access their accounts. Built on centralized technology, passwords make BIG ID more user-friendly compared to traditional authentication methods.
               </p>
             </TranslatedLayout>
             <TranslatedLayout
@@ -140,7 +140,7 @@ function InternetIdentityPage() {
                 Easy integration
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-3 md:mb-6">
-              BIG ID seamlessly integrates with both Web2 and Web3 apps, deploying cube smart contracts to request authentication and verify user identities.
+               A local-first, self-custodial wallet with comprehensive features: create, import, or export wallets using passphrase or key files, enjoy seamless Ledger support, send and receive BIG tokens, upload permanent data (text, files, folders, or deploy static websites), and easily view transactions and data.
               </p>
               <p className="mb-0">
                 <Link
@@ -163,7 +163,7 @@ function InternetIdentityPage() {
               variants={transitions.item}
             >
               <h2 className="tw-heading-3 md:tw-heading-60">
-                Identity solutions for a new era
+               BIG ID for a new era
               </h2>
             </AnimateSpawn>
 
@@ -359,41 +359,21 @@ function InternetIdentityPage() {
               </div>
             }
           >
-            <Faq title="What’s the problem with Web2 authentication?">
+            <Faq title="Why is it recommended to use an BIG ID wallet?">
               <p>
-              Websites typically store usernames and passwords in a database. When a user logs in, their device sends the password to the website, which then checks it against its records. However, databases are increasingly vulnerable to breaches. While encrypting passwords adds an extra layer of security, storing them as plaintext is a poor practice.
-              </p>
-              <p>
-              To make matters worse, user-generated passwords are often easily hackable. Cybercriminals have an array of tools at their disposal, including spyware, phishing, and brute force attacks, where algorithms use trial and error to guess the correct combination of letters, numbers, and symbols.
+              Using a BIG ID wallet is highly recommended as it securely stores your private keys and serves as a trusted interface for dApps. With your explicit approval, the wallet signs transactions and other data, ensuring that your BIG tokens remain protected from malicious applications attempting unauthorized access or transactions.
               </p>
             </Faq>
-            <Faq title="What are the challenges with Web3 authentication?">
+            <Faq title="Can I use these wallets as a cold wallet?">
               <p>
-              Web3 authentication may appear to be a step forward, but users remain vulnerable due to reliance on a single authentication factor. For example, keys are typically stored on the same device where the crypto wallet is installed. If someone steals or gains access to that device, the user loses control of their wallet.
+              Yes, you can use most of the wallets available for BigFile to generate cold wallets. You can find a step by step guide for this here.
               </p>
+              <p>* Please make sure to keep multiple copies of your wallet key file in secure locations, as we cannot help you to recover your wallet if you lose it *</p>
+              
             </Faq>
-            <Faq title="What exactly is public key cryptography?">
+            <Faq title="Can I send BIG tokens to MyEtherWallet/another third party wallet or an ETH address?">
               <p>
-              Public key cryptography is an encryption method that utilizes a pair of keys to securely encrypt and decrypt messages between two parties. The public key functions like a username and can be shared openly, while the private key, much like a password, must be kept secret.
-              </p>
-              <p>
-              BIG ID leverages digital signatures, an application of public key cryptography, for the login process. To start, an app sends an authentication request to the user's device. The device takes the request and creates a digital signature using their private key and a cryptographic algorithm. The app then verifies the signature using the user's public key and approves the request.
-              </p>
-            </Faq>
-            <Faq title="What ensures the security of BIG ID?">
-              <p>
-              Most modern computing devices contain a TPM (Trusted Platform Module) chip. One of the functions of a TPM chip is storing sensitive information, which in BIG ID's case is a copy of a user's private key. When BIG ID prompts the user to unlock their device, either by entering a PIN code or using biometrics such as fingerprint  recognition, the TPM chip creates a new digital signature using their private key.
-              </p>
-              <p>
-              The user's private key is highly secure due to the virtually impenetrable TPM chip. This chip is embedded in the device's motherboard, and any attempt to tamper with it can result in irreparable damage.
-              </p>
-            </Faq>
-            <Faq title="What makes BIG ID private?">
-              <p>
-              In Web2 authentication, a username is typically linked to an email address, which big tech companies use as a unique identifier to track a user's activity. While transparency is a core principle of blockchain technology in Web3, it also allows anyone to trace the transactions of an individual wallet address using a block explorer.
-              </p>
-              <p>
-              Cryptographic pseudonyms are digital identities that protect a user's privacy online. They have a wide range of applications, from messaging apps to social media platforms and Web3 dapps. With BIG ID, a new pseudonym is generated each time a user logs in, ensuring that apps cannot track their activity.
+              No, BIG tokens are fundamentally incompatible with MyEtherWallet, third-party wallets, or Ethereum addresses. Sending your BIG tokens to addresses or wallets on other blockchains will result in their permanent loss. Always ensure you are using a wallet compatible with the BigFile network.
               </p>
             </Faq>
           </FaqSection>
@@ -408,7 +388,7 @@ function InternetIdentityPage() {
               href: "https://bigfile.medium.com/",
             },
             {
-              label: "BigFile community events",
+              label: "BigFile Community",
               href: "/community",
             },
             {
