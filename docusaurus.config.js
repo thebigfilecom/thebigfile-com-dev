@@ -219,11 +219,6 @@ const marketingNav = {
               description: "Use native utility token",
             },
             {
-              name: "Staking and Governance",
-              href: "/",
-              description: "Govern and get rewards",
-            },
-            {
               name: "BIG ID",
               href: "/big-id",
               description: "Web3 authentication",

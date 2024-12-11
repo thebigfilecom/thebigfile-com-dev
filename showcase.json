@@ -19,8 +19,8 @@
     ]
   }, 
   {
-    "id": "bitfinity-evm",
-    "name": "BIG EVM",
+    "id": "bigfile-evm",
+    "name": "BigFile EVM",
     "website": "https://thebigfile.tech/",
     "tags": [
       "DeFi",
@@ -39,55 +39,31 @@
   },
   
   
-  
-  
   {
-    "id": "internetidentity",
+    "id": "bigid",
     "name": "BIG ID",
     "oneLiner": "Decentralized Anonymous Blockchain Authentication",
     "website": "https://big-id.thebigfile.com/",
     "tags": [
       "Tools / Infrastructure"
     ],
-    "description": "BIG ID is a privacy-enhancing authentication framework for applications on the BigFile. It provides users with a easy-to-use and secure anonymizing login to Web3 services running on BIG without being tracked across dapps.",
+    "description": "The Official Wallet App of the BigFile Network offers a simple and intuitive interface for uploading and managing data on the network. With its easy-to-use and secure anonymous login, users can access the app locally without the risk of being tracked across dApps.",
     "github": "https://github.com/thebigfilecom/big-id",
     "usesInternetIdentity": true,
     "stats": "0,000,000+ users",
-    "logo": "/img/showcase/nnsfront-enddapp_logo-dark.webp",
+    "logo": "/img/showcase/bigid_ddapp_logo.webp",
     "screenshots": [
       "/img/showcase/internetidentity_screenshot_0.gif"
     ]
   },
-  
   {
-    "name": "Signals",
-    "description": "Signals is a location based chat app for making connections, creating communities, and discovering events. ",
-    "website": "https://signalsicp.com/",
-    "logo": "/img/showcase/signals_logo.webp",
-    "screenshots": [
-      "/img/showcase/signals_screenshot.webp"
-    ],
-    "display": "Normal",
-    "id": "signals",
-    "oneLiner": "A location based app for empowering local communities",
-    "stats": "5,000+ users",
-    "tags": [
-      "SocialFi"
-    ],
-    "usesInternetIdentity": true,
-    "twitter": "https://twitter.com/signalsicp",
-    "submittableId": "35639473"
-  },
- 
-  
-  {
-    "id": "icdrive",
-    "name": "BIG Drive",
-    "website": "https://drive.thebigfile.com/",
+    "id": "bigdrive",
+    "name": "BigDrive",
+    "website": "https://bigdrive.thebigfile.com/",
     "tags": [
       "Tools / Infrastructure"
     ],
-    "description": "A decentralized private file storage dapp built on the BigFile. Store and securely share any type from anywhere in the world with this decentralized version of Box, or Google Drive. ",
+    "description": "Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, store-forever model.",
     "usesInternetIdentity": true,
     "logo": "/img/showcase/icdrive_logo.webp",
     "screenshots": [
@@ -95,6 +71,28 @@
       "/img/showcase/icdrive_screenshot_1.webp"
     ]
   },
+  {
+    "name": "Signals",
+    "description": "An Open Source Signal Implementation powered by the BigFile Network — a decentralized, tamper-proof chat application designed for seamless communication, building communities, and discovering events. ",
+    "website": "https://signal.thebigfile.com/",
+    "logo": "/img/showcase/signals_logo.webp",
+    "screenshots": [
+      "/img/showcase/signals_screenshot.webp"
+    ],
+    "display": "Normal",
+    "id": "signals",
+    "oneLiner": "A location based app for empowering local communities",
+    "stats": "0,000+ users",
+    "tags": [
+      "SocialFi"
+    ],
+    "usesInternetIdentity": true,
+    "twitter": "https://twitter.com/",
+    "submittableId": "35639473"
+  },
+ 
+  
+  
   {
     "id": "internetcomputerorgwebsite",
     "name": "BigFile website",
