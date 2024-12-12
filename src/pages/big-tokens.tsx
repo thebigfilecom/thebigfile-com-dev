@@ -238,7 +238,7 @@ function TokenHolders(): JSX.Element {
                 </p>
                 <p className="mb-0">
                   <Link
-                    href="/fms"
+                    href="/"
                     className="link-primary link-with-icon items-center"
                   >
                     <LinkArrowRight />
@@ -502,17 +502,17 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-lead-lg md:tw-title-sm mb-3">
-                  Join the BIGRC conversation
+                  Join BigFile Community
                 </h3>
                 <p className="tw-paragraph-sm mb-3 text-black/60">
-                  Community discussions around extending the BIGRC token standard for all ledgers to optimize functionality is ongoing.
+                  Community discussions around extending the BIG token standard for all ledgers to optimize functionality is ongoing.
                 </p>
                 <p className="mb-0">
                   <Link
-                    href="https://forum.thebigfile.com"
+                    href="/community"
                     className="link-primary link-with-icon"
                   >
-                    Share your ideas on the Forum
+                    BigFile Community
                     <LinkArrowUpRight />
                   </Link>
                 </p>

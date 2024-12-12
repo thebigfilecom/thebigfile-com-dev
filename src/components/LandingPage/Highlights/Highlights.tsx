@@ -127,9 +127,9 @@ const Highlights: React.FC = () => {
                 The BigFile is updated by a fully automated DAO
               </p>
               <p className="mb-0">
-                <Link href="/fms" className="link-white link-with-icon">
+                <Link href="/" className="link-white link-with-icon">
                   <LinkArrowRight />
-                  What is the FMS DAO
+                  What is the BIG DAO
                 </Link>
               </p>
             </div>

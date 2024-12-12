@@ -271,7 +271,7 @@ function WhatIsBigPage() {
                 BIG ID
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-6 md:mb-10">
-              BIG ID allows users to quickly and securely authenticate to online systems and services using their devices, such as a laptop fingerprint sensor or FaceID on their phone. 
+              BIG ID is a platform enabling users to securely store and manage their data on the BigFile network. It offers the ability to permanently store files in a decentralized and reliable manner.
               </p>
               <Link
                 className="link-primary link-with-icon"

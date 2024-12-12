@@ -219,11 +219,6 @@ const marketingNav = {
               description: "Use native utility token",
             },
             {
-              name: "Staking and Governance",
-              href: "/fms",
-              description: "Govern and get rewards",
-            },
-            {
               name: "BIG ID",
               href: "/big-id",
               description: "Web3 authentication",
@@ -249,9 +244,9 @@ const marketingNav = {
               description: "Paradigm shift in Web3 gaming",
             },
             {
-              name: "SoFi",
-              href: "/social-media-dapps",
-              description: "Reclaim social media",
+              name: "Social Platforms",
+              href: "/social-platforms",
+              description: "Decentralized Social Media",
             },
             {
               name: "DeFi",

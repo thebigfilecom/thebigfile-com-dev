@@ -6,8 +6,8 @@ const communityProjects: SampleItem[] = [
     title: "BIG metamask",
     body: "BIG metamask",
     links: {
-      github: "https://github.com/aewc/ic-signer/tree/supernova",
-      external: "https://supernova.devpost.com/submissions/328278-ic-metamask",
+      github: "https://github.com/",
+      external: "/",
       otherLinks: [],
     },
     domains: ["Public Good / Social Impact"],
@@ -23,7 +23,7 @@ const communityProjects: SampleItem[] = [
     body: "An example on how to use internet identity to authenticate and send emails via courier",
     image: "/img/community-projects/emailer.png",
     links: {
-      github: "https://github.com/ArgonStudiosXYZ/ic-emailer",
+      github: "/",
       otherLinks: [],
     },
     domains: ["Website"],

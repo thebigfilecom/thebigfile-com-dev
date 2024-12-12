@@ -35,16 +35,14 @@ const FeaturesSection = () => {
             loading="lazy"
             className="w-30"
           />
-          <h3 className="tw-lead md:tw-title-sm mb-0">Sovereign network</h3>
+          <h3 className="tw-lead md:tw-title-sm mb-0">Decentralized AI</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            If your enterprise, government or Web3 service builds on centralized
-            traditional IT, there are kill switches and backdoors, which deny
-            you true sovereignty. Build on the network instead.
+          Artificial Intelligence relies on vast amounts of data for training, analysis, and execution. Managing this data efficiently and securely is a critical challenge, especially when immutability and comprehensive audit trails are essential.
           </p>
           <p className="mb-0 -mx-3">
-            <Link className="link-primary " href="/node-providers">
+            <Link className="link-primary " href="/decentralized-ai">
               <LinkArrowRight />
-              Become a Node Provider
+              Decentralized AI Details
             </Link>
           </p>
         </motion.div>
@@ -58,9 +56,9 @@ const FeaturesSection = () => {
             loading="lazy"
             className="w-30"
           />
-          <h3 className="tw-lead md:tw-title-sm mb-0">Web2 compatible</h3>
+          <h3 className="tw-lead md:tw-title-sm mb-0">Sites and Apps</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            Googleable Web experiences served by Smart contracts. True BigFile capabilities with Web2 APIs validated by consensus.
+          Web apps and static sites can be deployed on BigFile, ensuring they remain permanently accessible and unaltered, all for a low, one-time hosting fee. This makes it an ideal solution for decentralized apps, archival websites, educational resources, and legacy projects that require long-term availability without ongoing maintenance costs.
           </p>
           <p className="mb-0  -mx-3">
             <Link className="link-primary" href="/capabilities">
@@ -79,21 +77,18 @@ const FeaturesSection = () => {
             loading="lazy"
             className="w-30"
           />
-          <h3 className="tw-lead md:tw-title-sm mb-0">Multi-Chain</h3>
+          <h3 className="tw-lead md:tw-title-sm mb-0">File Storage</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            The BigFile is currently adding support for Web3 “AI
-            compute units.” AI will also run on the network, supporting native
-            web3 integrations, and trustlessness combinations of models and
-            data.
+          Permanent data storage on the BigFile blockchain guarantees that public and private documents, media, and other digital assets remain undeletable. This makes it an ideal solution for preserving legal, medical, historical records, or any data that must never be lost.
           </p>
           <p className="mb-0 -mx-3 flex flex-col gap-3 items-center">
             <Link className="link-primary" href="/file-storage">
               <LinkArrowRight />
-              Bitcoin on BigFile
+              BigDrive on BigFile
             </Link>
-            <Link className="link-primary" href="/decentralized-ai">
+            <Link className="link-primary" href="/ecosystem">
               <LinkArrowRight />
-              Ethereum on BigFile
+              BigFile Ecosystem
             </Link>
           </p>
         </motion.div>
@@ -107,20 +102,17 @@ const FeaturesSection = () => {
             loading="lazy"
             className="w-30"
           />
-          <h3 className="tw-lead md:tw-title-sm mb-0">Tamperproof</h3>
+          <h3 className="tw-lead md:tw-title-sm mb-0">Oracle and Blockchain Data</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            Cube software is tamperproof through Chain-Key Cryptography. It
-            doesn’t need to be protected by a firewall, and can’t be infected
-            with ransomware. Because the BigFile is created by
-            advanced math, there are no backdoors.
+           Blockchain applications and oracle services must be able to trust that the data they rely on will remain permanently accessible. BigFile indexes and retrieves permanent data storage on BigFile blockchain, ensuring that data such as transaction histories, price feeds, and oracle inputs are archived and served forever.
           </p>
           <p className="mb-0 -mx-3">
             <Link
               className="link-primary"
-              href="/how-it-works#Chain-key-technology"
+              href="/how-it-works"
             >
               <LinkArrowRight />
-              What's Chain-Key Cryptography
+              Oracle and Blockchain Data
             </Link>
           </p>
         </motion.div>
@@ -134,16 +126,14 @@ const FeaturesSection = () => {
             loading="lazy"
             className="w-30"
           />
-          <h3 className="tw-lead md:tw-title-sm mb-0">Autonomous</h3>
+          <h3 className="tw-lead md:tw-title-sm mb-0">Social Platforms</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            Cubes can be made unmodifiable, creating permanent logic on the
-            network, or placed under the control of autonomous governance –
-            empowering communities to run Web3, or securing an enterprise
+           Social platforms share IP addresses of users with governments. Privacy-focused social apps have centralized servers. In an era where data ownership and censorship are growing concerns, it’s time for social apps to benefit from the immutable, censorship-resistant nature of the decentralized web.
           </p>
           <p className="mb-0">
-            <Link className="link-primary" href="/fms">
+            <Link className="link-primary" href="/ecosystem">
               <LinkArrowRight />
-              Staking & Governance
+              BigFile Ecosystem
             </Link>
           </p>
         </motion.div>
@@ -159,9 +149,7 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Cost effective</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-            Cube software greatly simplifies the development and maintenance of
-            online systems and services, driving cost savings, and making you
-            faster to market
+           While the monthly costs of traditional cloud providers remain constant, the cost of storing 1 GB of data is calculated over time. BigDrive may have higher initial costs, but it offers significantly lower prices in the long term.
           </p>
           <p className="mb-0">
             <span className="tw-heading-5">$30 / GB / Forever</span>
