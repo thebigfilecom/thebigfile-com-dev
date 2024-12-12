@@ -244,9 +244,9 @@ const marketingNav = {
               description: "Paradigm shift in Web3 gaming",
             },
             {
-              name: "SoFi",
-              href: "/social-media-dapps",
-              description: "Reclaim social media",
+              name: "Social Platforms",
+              href: "/social-platforms",
+              description: "Decentralized Social Media",
             },
             {
               name: "DeFi",

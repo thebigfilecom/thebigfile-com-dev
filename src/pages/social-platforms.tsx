@@ -8,8 +8,8 @@ import Layout from "@theme/Layout";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
-import IconBIG from "../../static/img/social-media-dapps/big.svg";
-import IconTokenized from "../../static/img/social-media-dapps/tokenized.svg";
+import IconBIG from "../../static/img/social-platforms/big.svg";
+import IconTokenized from "../../static/img/social-platforms/tokenized.svg";
 import AnimateSpawn from "../components/Common/AnimateSpawn";
 import { CardWithDescription } from "../components/Common/Card";
 import { useElementSize } from "../utils/use-element-size";
@@ -82,7 +82,7 @@ const projects: {
   {
     title: "BIGChat",
     body: "BIGChat is the first instant messaging service running 100% on the blockchain. This web3 dapp is backed by the security of chain-key cryptography. Plus users can easily send crypto to friends via messages, or vote on BIG governance proposals without leaving the dapp.",
-    imageUrl: "/img/social-media-dapps/BigChat.webp",
+    imageUrl: "/img/social-platforms/BigChat.webp",
   },
 ];
 
@@ -149,7 +149,7 @@ function SocialMediaDappsPage() {
           >
             <div className="max-w-[660px] sm:absolute pointer-events-none right-5 -translate-y-[187px] sm:-translate-y-[279px] md:-translate-y-[382px] text-center">
               <img
-                src="/img/social-media-dapps/hero.webp"
+                src="/img/social-platforms/hero.webp"
                 className="w-80 sm:w-[480px] md:w-auto max-w-full"
                 alt="Social media dapps"
               />
