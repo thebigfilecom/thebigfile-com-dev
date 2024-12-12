@@ -101,7 +101,7 @@ function SustainabilityPage() {
                 className="tw-lead-sm md:tw-lead md:w-6/10"
                 variants={transitions.item}
               >
-                Blockchain technology drives sustainability initiatives by improving transparency, traceability, and accountability in business operations.
+                Blockchain technology enhances sustainability by improving transparency, traceability, and accountability in business operations.
               </motion.p>
             </div>
           </div>
