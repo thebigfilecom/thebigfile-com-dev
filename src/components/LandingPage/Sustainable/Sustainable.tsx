@@ -32,8 +32,7 @@ const Sustainable: React.FC<{ id?: string }> = ({ id }) => {
               Blockchain Based AI Models
             </h2>
             <p className="tw-lead-sm mb-6">
-              Scalability and utility with low carbon cost — the BigFile is committed to building green tech, not just making
-              claims about it.{" "}
+            Scalability and utility with a low carbon footprint — BigFile addresses the growing energy demands in AI by operating AI language models and processes on a decentralized, distributed network. By collaborating as a community, it strives to advance green technology.{" "}
             </p>
             <p className="mb-0">
               <Link

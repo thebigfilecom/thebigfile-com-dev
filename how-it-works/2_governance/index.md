@@ -1,3 +1,3 @@
 ---
-title: Tokenomics & Governance
+title: Tokenomics
 ---

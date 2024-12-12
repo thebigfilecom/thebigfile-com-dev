@@ -58,7 +58,7 @@ function DecentralizedAIPage() {
       description="Many innovative companies within the ecosystem are leveraging BigFile to unlock new AI capabilities and drive smarter solutions."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
-      <ShareMeta image="/img/shareImages/share-ethereum-integration.jpg"></ShareMeta>
+      <ShareMeta image="/img/shareImages/share-ai.jpg"></ShareMeta>
 
       <main
         className="text-black relative overflow-hidden"
@@ -295,26 +295,15 @@ function DecentralizedAIPage() {
             variants={transitions.container}
           >
             <CardWithDescription
-              title="ETH starter tutorial"
+              title="AI starter tutorial"
               description=""
-              href="/docs/current/tutorials/developer-journey/level-5/5.1-BIG-ETH-tutorial"
-            />
-
-            <CardWithDescription
-              title="Code ckETH"
-              description=""
-              href="https://github.com/thebigfilecom/big/tree/main/rs/ethereum/cketh"
+              href="/docs/current/tutorials/developer-journey"
             />
             <CardWithDescription
               title="DeFi sample code"
               description=""
               href="/samples?selectedDomains=Asynchronous+DeFi"
-            />
-            <CardWithDescription
-              title="Get inspired by ETH projects on BigFile"
-              description=""
-              href="/ecosystem?tag=Ethereum"
-            />
+            /> 
             <motion.div
               className="blob blob-purple blob-md blob-x-5 blob-y-7 z-[-1] md:blob-lg"
               variants={transitions.fadeIn}

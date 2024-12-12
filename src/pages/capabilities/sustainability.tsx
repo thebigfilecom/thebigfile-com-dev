@@ -132,7 +132,7 @@ function SustainabilityPage() {
                 className="tw-heading-4 sm:tw-heading-3 md:tw-heading-60 mb-6 md:mb-10 text-gradient-green"
                 variants={transitions.item}
               >
-                The global importance of sustainability is rising, fueled by regulatory demands, energy consumption concerns, climate change, and the need to reduce operational costs.
+                Sustainability is gaining global importance, driven by regulatory pressures, energy consumption challenges, climate change, and the demand for cost-efficient operations.
               </motion.p>
               <motion.p>
                 <button onClick={scrollToDownload} className="button-white">
@@ -150,7 +150,7 @@ function SustainabilityPage() {
         >
           <div className="flex-1 sm:order-2">
             <p className="tw-paragraph md:tw-lead mb-0">
-            The environmental footprint of an application is only one of the many aspects of sustainability. Equally important are the cost of operating, maintaining and scaling an application as well as its longevity, security and privacy, resilience against attacks, and business model - ultimately the economic sustainability of an application once it is built and launched.
+            The environmental footprint of an application is just one aspect of sustainability. Equally crucial are factors like operational costs, scalability, longevity, security, privacy, resilience against attacks, and a sustainable business model—ensuring the application remains economically viable after its launch.
             </p>
           </div>
 
@@ -204,26 +204,26 @@ function SustainabilityPage() {
                 variants={transitions.item}
                 className="tw-heading-5 md:tw-heading-3 mb-3 md:mb-6"
               >
-                Why BigFile is the best blockchain for sustainability use cases
+                Why BigFile stands out as a model blockchain for sustainability applications.
               </motion.h2>
               <motion.p
                 variants={transitions.item}
                 className="tw-lead-sm md:tw-lead mb-3 md:mb-8"
               >
-                The BigFile provides far better sustainability than the traditional IT stack, as it takes a completely different architectural approach that makes it more energy efficient.
+                BigFile offers significantly greater sustainability compared to traditional IT stacks, thanks to its innovative architectural approach that enhances energy efficiency.
               </motion.p>
               <ul className="list-none pl-0 space-y-4 md:space-y-8">
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  The most sustainable blockchain, delivering efficiency at scale. Each transaction on the BIG consumes just 0.003 Wh, making it exceptionally energy-efficient.
+                  The most sustainable blockchain, delivering efficiency at scale. Each transaction on BIG consumes minimal energy, measured in low watt-hours, making it exceptionally energy efficient.
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  Transparent reporting, the  power consumption of all node machines on the BigFile blockchain is reported on a public dashboard 
+                  Transparent reporting: The power consumption of all node machines on the BigFile blockchain is publicly available on a dedicated dashboard.
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
@@ -268,7 +268,7 @@ function SustainabilityPage() {
               variants={transitions.item}
               className="tw-paragraph md:tw-lead mb-8"
             >
-              A sustainable future is crucial for both your business and the world at large. This report, authored by BigFile, examines 10 distinct business use cases where blockchain's inherent qualities—transparency, immutability, and cost-efficiency—enhance current practices.
+              A sustainable future is essential for both businesses and the planet. This report by BigFile explores 10 innovative business use cases where blockchain’s core strengths—transparency, immutability, and cost-efficiency—enhance traditional practices.
             </motion.p>
 
             <motion.img

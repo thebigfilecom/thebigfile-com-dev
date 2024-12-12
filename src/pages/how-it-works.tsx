@@ -116,10 +116,10 @@ function HowItWorks() {
           <div className="container-10 pt-12 mb-30 md:mb-40 md:pt-36 relative">
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">
-                Realizing the vision of the BigFile
+               Bringing the BigFile Vision to Life
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-              Discover how the BigFile blockchain realizes the vision of a No-Document World. Explore its technology through open-source repositories, in-depth video academy sessions, white papers, publications, and detailed technology articles.
+              BigFile is an AI-powered, decentralized blockchain network designed to deliver permanent, immutable, and scalable data storage solutions. Dive into its cutting-edge technology through open-source repositories, comprehensive video academy sessions, white papers, publications, and detailed technical articles.
               </p>
             </div>
           </div>
