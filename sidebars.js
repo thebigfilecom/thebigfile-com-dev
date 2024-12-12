@@ -308,21 +308,6 @@ const sidebars = {
             },
             {
               type: "category",
-              label: "dfxvm",
-              items: [
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfx/dfx",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm/dfxvm-default",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm/dfxvm-install",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm-init/dfxvm-init",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm/dfxvm-list",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm/dfxvm-self-uninstall",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm/dfxvm-self-update",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm/dfxvm-uninstall",
-                "developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfxvm/dfxvm-update",
-              ],
-            },
-            {
-              type: "category",
               label: "quill",
               link: {
                 type: "doc",
@@ -393,7 +378,7 @@ const sidebars = {
                 "developer-docs/developer-tools/cli-tools/quill-cli-reference/quill-update-node-provider",
               ],
             },
-            "developer-docs/developer-tools/cli-tools/ic-admin",
+            "developer-docs/developer-tools/cli-tools/big-admin",
           ],
         },
         {

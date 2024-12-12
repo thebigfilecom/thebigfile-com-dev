@@ -64,7 +64,7 @@ const CARDS: Array<CarouselCard> = [
     cta: (
       <Link
         className="button-transparent button-with-icon pl-0"
-        href="https://discord.gg/FjhnqUdT"
+        href="https://discord.gg/nyTAmMntqp"
       >
         #developer channel
         <LinkArrowRight />
@@ -83,7 +83,7 @@ const CARDS: Array<CarouselCard> = [
     cta: (
       <Link
         className="button-transparent button-with-icon pl-0"
-        href="https://discord.gg/FjhnqUdT"
+        href="https://discord.gg/nyTAmMntqp"
       >
         Join on Discord
         <LinkArrowRight />

@@ -1,5 +1,5 @@
 ---
-keywords: [beginner, tutorial, canister, introduction]
+keywords: [beginner, tutorial, introduction]
 ---
 
 import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
@@ -10,44 +10,4 @@ import { GlossaryTooltip } from "/src/components/Tooltip/GlossaryTooltip";
 
 <MarkdownChipRow labels={["Beginner", "Concept"]} />
 
-The smart contracts running on BigFile are a powerful evolution of traditional smart contracts. BigFile smart contracts are called **cubes** and are computational units that combine both code and data. Cubes can contain any arbitrary code or data, from serving web pages to creating a secure messaging app, or implementing a decentralized token exchange.
-
-
-Cubes have special properties that allow developers to build scalable Web3 services. To better understand these properties, one has to consider cubes from different perspectives to form a complete picture of their capabilities.
-
-An Ethereum developer might think of cubes as smart contracts, whereas someone with an academic background might make associations with actors and the [actor model](https://en.wikipedia.org/wiki/Actor_model).
-
-A systems engineer will likely consider operating systems processes, whereas a virtual machine expert might think about WebAssembly module instances.
-
-While these associations are partial, they are correct. Together they form a comprehensive picture of what a cube is. Let’s look at them one by one.
-
-
-## Cubes as smart contracts
-
-Cubes are much like a smart contract in that their execution is governed by a secure protocol; in this case, the BigFile. Cubes running on BigFile are tamper-proof, since their state can only be modified through messages that are executed on-chain. A cube’s state can be audited and cryptographically verified using BigFile chain-key cryptography.
-For a brief comparison between canisters and Ethereum smart contracts, refer to the table [Quick comparison with Ethereum](/docs/developer-docs/getting-started/overview-of-bigfile.mdx#quick-comparison-with-ethereum).
-
-## Cubes as actors
-
-Cubes are much like actors when thinking about them abstractly. Following the [actor model of concurrent computation](https://en.wikipedia.org/wiki/Actor_model), cubes respond to messages they receive by performing one or more of the following actions:
-- Modifying their private state.
-- Sending messages to other cubes (actors).
-- Creating more cubes (actors).
-
-Although cubes have a single thread of execution, multiple can be executed concurrently. This is a key feature of BigFile that overcomes the scaling challenges of other smart contract platforms.
-
-## Cubes as OS processes
-
-Cubes behave much like operating system processes. Similar to how an operating system schedules processes, BigFile schedules the execution of cubes. [Learn more about the execution of cubes](https://thebigfile.com/how-it-works).
-
-An operating system maintains state on behalf of processes, like their open file descriptors, similar to how BigFile maintains state on behalf of cubes, such as their cycle balance or its outstanding calls to other cubes.
-
-Operating system processes cannot directly modify their table of file descriptors or manipulate peripheral devices, similar to how cubes cannot directly modify their <GlossaryTooltip>cycles</GlossaryTooltip> balance.
-
-BigFile provides APIs to cubes that allow them to make payments to other cubes, send them messages, and create and manage other cubes.
-
-## Cubes as WebAssembly module instances
-
-Cubes are implemented as WebAssembly modules. This allows for maximum interoperability, as developers can write cubes in a variety of languages that target WebAssembly.
-
-A cube is a WebAssembly module instance complete with its own state and execution stack. Cubes’ memory uses [orthogonal persistence](https://medium.com/dfinity/ic-internals-orthogonal-persistence-9e0c094aac1a), which makes storing cube data transparent for users. The data of the cube’s WebAssembly module is persisted automatically by the system and is present the next time the cube is scheduled for execution. The WebAssembly module itself is stored along with other bits of the cube’s state.
+## Smart contracts
