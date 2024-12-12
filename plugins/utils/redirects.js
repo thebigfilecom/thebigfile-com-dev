@@ -44,8 +44,6 @@ const redirects = `
   /docs/languages/languages-overview /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/smart-contracts/write/choosing-language /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/frontend/my-contacts /docs/current/developer-docs/web-apps/application-frontends/add-stylesheet
-  /docs/ic-interface-spec /docs/current/references/ic-interface-spec
-  /docs/interface-spec /docs/current/references/ic-interface-spec
   /docs/current/developer-docs/updates/computation-and-storage-costs /docs/current/developer-docs/gas-cost
   /docs/current/developer-docs/updates/release-notes/ /docs/current/other/updates/release-notes/
   /docs/current/developer-docs/quickstart/local-quickstart /docs/current/developer-docs/getting-started/install/
@@ -82,7 +80,6 @@ const redirects = `
   /docs/developers-guide/concepts/concepts-intro /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/developers-guide/customize-projects /docs/current/developer-docs/smart-contracts/compile
   /docs/developers-guide/design-apps /docs/current/developer-docs/web-apps/design-dapps
-  /docs/developers-guide/glossary /docs/current/concepts/glossary
   /docs/developers-guide/install-upgrade-remove /docs/current/developer-docs/getting-started/install/
   /docs/developers-guide/lang-service-ide /docs/current/developer-docs/developer-tools/ide/vs-code
   /docs/developers-guide/reinstalling-dfx /docs/current/developer-docs/getting-started/install/
@@ -344,7 +341,6 @@ const redirects = `
   /docs/current/developer-docs/integrations/https-outcalls/https-outcalls-post /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-post
   /docs/current/developer-docs/setup/ic-admin /docs/current/developer-docs/developer-tools/cli-tools/ic-admin
   /docs/current/developer-docs/backend/subnet-types /docs/current/concepts/subnet-types
-  /docs/current/references/glossary /docs/current/concepts/glossary
   /docs/current/samples/host-a-website /docs/current/references/samples/hosting/static-website/
   /docs/current/developer-docs/smart-contracts/overview/development-cycle /docs/current/developer-docs/smart-contracts/overview/cube-lifecycle
   /docs/current/developer-docs/web-apps/user-login/big-id/integrate-identity /docs/current/developer-docs/web-apps/user-login/big-id/integrate-big-id

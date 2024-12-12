@@ -22,28 +22,6 @@ flag. For example, to see usage information for `dfx canister call`, you can run
 dfx canister call --help
 ```
 
-For reference information and examples that illustrate using `dfx canister` commands, select an appropriate command.
-
-| Command                                            | Description                                                                                                                                            |
-|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`call`](#dfx-canister-call)                       | Calls a specified method on a deployed canister.                                                                                                       |
-| [`create`](#dfx-canister-create)                   | Creates an empty canister and associates the assigned Cube ID to the canister name.                                                                |
-| [`delete`](#dfx-canister-delete)                   | Deletes a currently stopped canister.                                                                                                                  |
-| [`deposit-cycles`](#dfx-canister-deposit-cycles)   | Deposit cycles into the specified canister.                                                                                                            |
-| `help`                                             | Displays usage information message for a specified subcommand.                                                                                         |
-| [`id`](#dfx-canister-id)                           | Displays the identifier of a canister.                                                                                                                 |
-| [`info`](#dfx-canister-info)                       | Get the hash of a canister’s WASM module and its current controller.                                                                                   |
-| [`install`](#dfx-canister-install)                 | Installs compiled code in a canister.                                                                                                                  |
-| [`logs`](#dfx-canister-logs)                       | Returns the logs from a canister.                                                                                                                      |
-| [`metadata`](#dfx-canister-metadata)               | Displays metadata in a canister.                                                                                                                       |
-| [`request-status`](#dfx-canister-request-status)   | Requests the status of a call to a canister.                                                                                                           |
-| [`send`](#dfx-canister-send)                       | Send a previously-signed message.                                                                                                                      |
-| [`sign`](#dfx-canister-send)                       | Sign a canister call and generate message file.                                                                                                        |
-| [`start`](#dfx-canister-start)                     | Starts a stopped canister.                                                                                                                             |
-| [`status`](#dfx-canister-status)                   | Returns the current status of a canister as defined [here](https://thebigfile.com/docs/current/references/ic-interface-spec#ic-canister_status). |
-| [`stop`](#dfx-canister-stop)                       | Stops a currently running canister.                                                                                                                    |
-| [`uninstall-code`](#dfx-canister-uninstall-code)   | Uninstalls a canister, removing its code and state. Does not delete the canister.                                                                      |
-| [`update-settings`](#dfx-canister-update-settings) | Update one or more of a canister's settings (i.e its controller, compute allocation, or memory allocation.).                                           |
 
 ## Overriding the default deployment environment
 
@@ -976,20 +954,6 @@ dfx canister update-settings [options] [canister_name | --all]
 
 ### Options
 
-You can specify the following options for the `dfx canister update-settings` command.
-
-| Option                                    | Description                                                                                                                                                                                                                                                                                                                                                                              |
-|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--add-controller <principal>`            | Add a principal to the list of controllers of the canister.                                                                                                                                                                                                                                                                                                                              |
-| `-c`, `--compute-allocation <allocation>` | Specifies the canister's compute allocation. This should be a percent in the range [0..100].                                                                                                                                                                                                                                                                                             |
-| `--confirm-very-long-freezing-threshold`  | Freezing thresholds above ~1.5 years require this option as confirmation.                                                                                                                                                                                                                                                                                                                |
-| `--set-controller <principal>`            | Specifies the identity name or the principal of the new controller. Can be specified more than once, indicating the canister will have multiple controllers. If any controllers are set with this parameter, any other controllers will be removed.                                                                                                                                      |
-| `--memory-allocation <allocation>`        | Specifies how much memory the canister is allowed to use in total. This should be a value in the range [0..12 GiB]. A setting of 0 means the canister will have access to memory on a “best-effort” basis: It will only be charged for the memory it uses, but at any point in time may stop running if it tries to allocate more memory when there isn’t space available on the subnet. |
-| `--reserved-cycles-limit <limit>`         | Specifies the upper limit of the canister's reserved cycles.                                                                                                                                                                                                                                                                                                                             |
-| `--wasm-memory-limit <limit>`             | Specifies a soft upper limit for the canister's heap memory.                                                                                                                                                                                                                                                                                                                             |
-| `--remove-controller <principal>`         | Removes a principal from the list of controllers of the canister.                                                                                                                                                                                                                                                                                                                        |
-| `--freezing-threshold <seconds>`          | Set the [freezing threshold](https://thebigfile.com/docs/current/references/ic-interface-spec/#ic-create_canister) in seconds for a canister. This should be a value in the range [0..2^64^-1]. Very long thresholds require the `--confirm-very-long-freezing-threshold` option.                                                                                                  |
-| `-y`, `--yes`                             | Skips yes/no checks by answering 'yes'. Such checks can result in loss of control, so this is not recommended outside of CI.                                                                                                                                                                                                                                                             |
 
 ### Arguments
 

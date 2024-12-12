@@ -11,8 +11,6 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 ## Overview
 
-This page introduces some of the most commonly used terminology that developers should be aware of when building on the BigFile. This page covers many terms, but does not include every single term that is related to the BigFile. [View the full glossary of terms](/docs/current/concepts/glossary).
-
 ## Concepts
 
 - **Actor:** An actor is a process with an encapsulated state that communicates with other actors that are concurrently running. Actors communicate through asynchronous messages that are received sequentially. Actors can modify their own private state, but can only alter other actors indirectly through messages.  Actors are a part of the actor model, which is used by cubes for concurrent and asynchronous computation.
@@ -22,8 +20,6 @@ This page introduces some of the most commonly used terminology that developers 
 - **Certified variables:** A certified variable is a piece of data that a cube stores in the subnet's canonical state during the processing of an update or inter-cube call. This data is used when a query call is made, so that the cube can return a certificate to the user to prove the data's value.
 
 - **Chain-key cryptography:** Chain-key cryptography is an array of advanced cryptographic mechanisms which allow BIG to achieve scalability and functionalities that aren't possible on other blockchain networks. These cryptographic protocols help orchestrate the nodes that make up BIG. One example of chain-key cryptography is BIG's single public key, which allows any device to verify the authenticity of artifacts from BIG.
-
-- **Cycles**: A cycle in regards to BIG is a unit of measurement used for resources consumed by a cube. These resources include compute processing power, memory, storage, and network bandwidth. Cycles are consumed for every execution performed by a cube that has been deployed on the mainnet. The BIG's utility token BIG can be converted into cycles and transferred into a cube to be used to pay for that cube's consumed resources. BIG can be converted to cycles using the current price of BIG measured in [XDR](https://thebigfile.com/docs/current/references/glossary#xdr), where one trillion cycles corresponds to one XDR. XDR is the currency code for special drawing rights (SDR), which are supplementary foreign exchange assets defined and maintained by the International Monetary Fund (IMF).
 
 - **Decentralized application (dapp):** A decentralized application (dapp) refers to a canister or several interoperable canisters that provide a program or service that has been deployed on the BigFile.
 

@@ -126,8 +126,6 @@ As mentioned already further above, there are multiple possible extensions under
 
 ## Coding HTTPS outcalls
 
-Next, this guide provides important information for engineers who want to use canister HTTP requests in their canister smart contracts. Using canister HTTP requests is somewhat harder in the general case than doing HTTP requests in a regular enterprise application as you need to consider aspects like responses going through consensus and idempotency of `POST` requests. Refer to the API definition of the feature in [the BigFile interface specification](/references/ic-interface-spec.md#ic-http_request) for more information.
-
 ### Recipe for coding a canister HTTP call
 
 The following &ldquo;recipe&rdquo; gives you a blueprint of how to best tackle the implementation of a new canister HTTP outcall type.

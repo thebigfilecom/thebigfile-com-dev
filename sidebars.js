@@ -794,7 +794,6 @@ const sidebars = {
         "concepts/nodes-subnets",
         "concepts/subnet-types",
         "concepts/tokens-cycles",
-        "concepts/glossary",
       ],
     },
     {
@@ -806,7 +805,7 @@ const sidebars = {
           label: "BigFile specification",
           items: [
             "references/http-gateway-protocol-spec",
-            "references/ic-interface-spec",
+            "references/big-interface-spec",
             "references/id-encoding-spec",
           ],
         },

@@ -7,15 +7,15 @@ import { CardWithDescription } from "@site/src/components/Common/Card";
 function Index() {
   const links = [
     {
-      title: "Native Bitcoin API",
-      href: "/docs/current/references/ic-interface-spec/#ic-bitcoin-api",
+      title: "BigDrive APP",
+      href: "https://bigdrive.thebigfile.com",
     },
     {
-      title: "Chain-Key ECDSA API",
-      href: "/docs/current/references/ic-interface-spec/#ic-ecdsa_public_key",
+      title: "BigDrive API",
+      href: "https://bigdrive.thebigfile.com/api",
     },
     {
-      title: "Chain-Key ECDSA Docs",
+      title: "BigDrive Docs",
       href: "/docs/current/references/t-ecdsa-how-it-works",
     },
     {
@@ -32,13 +32,13 @@ function Index() {
         variants={transitions.item}
         className="tw-heading-4 md:tw-heading-60 text-center mb-2 w-full mx-auto md:mb-6 md:w-8/12"
       >
-        Code Bitcoin
+        Code BigDrive
       </motion.p>
       <motion.p
         variants={transitions.item}
         className="tw-lead-sm md:tw-lead mb-2 text-center w-5/6 mx-auto md:mb-6 md:w-6/12"
       >
-        Directly process bitcoin on the Bitcoin ledger using BIG smart contracts. Add bitcoin to your BIG Web3 services or create native Bitcoin DeFi.
+        BigDrive offers unmatched security compared to traditional data storage. By leveraging BigFile's decentralized blockchain network, your data is replicated globally, continuously verified for accuracy, and securely stored in multiple physical locations worldwide.
       </motion.p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8 md:mt-20">
         {links.map((card) => (

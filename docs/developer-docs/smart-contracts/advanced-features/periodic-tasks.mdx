@@ -21,7 +21,6 @@ There are two ways to schedule an automatic canister execution on BIG:
 
 Timers are implemented on two layers:
 
-- **The protocol level implementation:** the BigFile protocol supports minimalistic on-shot global timer per canister via `ic0.global_timer_set()` system API call and `canister_global_timer` handler (see the [BigFile interface specification](/docs/current/references/ic-interface-spec#timer)).
 
 Internally the CDK timers library does the following:
 
@@ -53,7 +52,6 @@ Despite its superiority over the heartbeats, the CDK timers library has a few kn
 
 ## Heartbeats
 
-Once an BigFile canister exports the `canister_heartbeat` function, it will be called every subnet heartbeat interval (see the [BigFile interface specification](/docs/current/references/ic-interface-spec#heartbeat)).
 
 The only way to disable the heartbeats is to upgrade the canister to a version which does not export the `canister_heartbeat` method. Also, the heartbeat interval is implementation-defined, and there is no way to adjust it.
 

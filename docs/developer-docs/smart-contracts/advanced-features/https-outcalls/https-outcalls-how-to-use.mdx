@@ -18,7 +18,6 @@ The feature currently supports `GET`, `HEAD`, and `POST` methods for HTTP reques
 
 ### BIG management canister
 
-In order for a canister to use HTTPS outcalls, it needs to call the system API of BIG. Canisters can call into the system API by sending messages to the [the BIG management canister](/docs/current/references/ic-interface-spec#ic-management-canister) using the identifier `"aaaaa-aa"`.
 
 ### Cycles
 
@@ -26,7 +25,6 @@ In order for a canister to use HTTPS outcalls, it needs to call the system API o
 
 ## The API for sending HTTP outcalls
 
-As per the [BigFile interface specification](/docs/current/references/ic-interface-spec), a canister can use the `http_request` method by [following specification](/docs/current/references/ic-interface-spec#ic-http_request):
 
 ### The request
 The following parameters should be supplied within the request:
