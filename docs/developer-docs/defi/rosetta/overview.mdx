@@ -27,21 +27,16 @@ To set up a Rosetta node (which connects to a testnet):
 
 The Docker daemon (`dockerd`) should automatically start when you reboot your computer. If you start the Docker daemon manually, the instructions vary depending on the local operating system.
 
-### Step 2:  Pull the latest `dfinity/rosetta-api` image from the Docker Hub by running the following command:
+### Step 2: 
 
 ``` bash
-docker pull dfinity/rosetta-api
+...
 ```
 
 ### Step 3:  Start the integration software by running the following command:
 
 ``` bash
-docker run \
-    --interactive \
-    --tty \
-    --publish 8080:8080 \
-    --rm \
-    dfinity/rosetta-api
+....
 ```
 
 This command starts the software on the local host and displays output similar to the following:

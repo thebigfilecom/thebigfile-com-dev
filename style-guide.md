@@ -178,15 +178,12 @@ Capitalization within the developer documentation should follow these outlined s
 
 The following proper nouns should always be capitalized:
 - Blockchain Singularity
-- Candid
 - BigFile
 - BigFile Foundation
 - BigFile
 - BigFile Protocol
-- Internet Identity
+- BIG ID
 - JavaScript
-- Motoko
-- Network Nervous System
 - NodeJS
 - README
 - Rust
@@ -194,7 +191,6 @@ The following proper nouns should always be capitalized:
 - TypeScript
 - WebAssembly (Wasm)
 - Wiki
-- World Computer
 - YouTube
 
 This is not an exhaustive list, and other proper nouns such as tool names, company names, or project names should be capitalized. Examples of these are Unity, Godot, Namecheap, GoDaddy, and GitHub.
@@ -202,43 +198,24 @@ This is not an exhaustive list, and other proper nouns such as tool names, compa
 ### Abbreviations and acronyms
 The following is a list of common abbreviations that are capitalized within the developer docs:
 - BTC
-- CDK
-- ckBTC
+- SDK
 - DAO
 - DeFi
 - ECDSA
 - HTTP/HTTPS
 - BIG
-- BIGRC-1
-- BIGRC-2
-- II
-- IOS
 - NFT
-- NNS
-- SDK
-- SPS
-- XDR
-- UTXO
 
 ## Language
 The following language and capitalization of certain terms and phrases should be used across the BigFile developer documentation:
 - Big Tech
-- Bitcoin integration
-- Bitcoin network: should be used in place of "sending bitcoin".
-- bitcoin: should be used when referring to BTC rather than the Bitcoin network.
 - built on BIG
-- cube
-- cube smart contract
+- smart contract
 - chain-key signature
 - chain-key cryptography
-- chain fusion
 - dapp: should be used in place of any reference to an BigFile app, decentralized application, or 'dApp'.
 - DeFi
 - deployed on BIG
-- dfx or `dfx`: should be used in place of any reference to the dfx CLI tool; it may be formatted as in-line code or plain text as long as it is lowercase. 
-      - All dfx subcommands should be formatted as in-line code when appearing in a sentence, such as, "The `dfx deps` feature is available in dfx versions 0.14.1 and newer."
-- Ethereum integration
-- Ethereum: should be used in place of ETH or ETH token.
 - HTTP outcalls
 - BIG: When abbreviating 'BigFile', it should be referred to as 'BIG' instead of 'BIG' or 'the BIG'. 
     Two exceptions to this are:
@@ -256,16 +233,12 @@ The following language and capitalization of certain terms and phrases should be
         - `The dapp has been deployed to the mainnet.`
         - `Before deploying on to the mainnet...`
     Additionally, mentions of the Bitcoin mainnet should use the same structure (prefaced with the word `the`.)
-- maturity
-- Motoko playground
 - multi-chain
 - neuron
 - node provider
-- open internet service
 - reverse gas model
 - Sybil resistance
 - Sybil attack
-- vetKeys
 - Web3
 - World Wide Web
 
@@ -399,36 +372,6 @@ The following format should be used for code snippets and code blocks:
   ```
             npm install --save react react-dom
   ```
-- Code blocks should be prefaced with the language used within the code block where applicable. For example:
-
-```bash
-cd motoko/threshold_ecdsa
-dfx start --background
-npm install
-dfx deploy
-```
-
-## Command line syntax
-
-For all CLI command examples for `dfx`, flags should always be at the end of the command, such as:
-
-```
-dfx wallet balance --network ic
-```
-
-Additional examples:
-
-```
-dfx deploy --background
-```
-
-```
-dfx identity new Alice --disable-encryption
-```
-
-```
-dfx deploy internet_identity --argument '(null)'
-```
 
 ## FAQ sections
 
