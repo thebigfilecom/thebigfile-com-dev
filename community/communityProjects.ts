@@ -14,7 +14,7 @@ const communityProjects: SampleItem[] = [
     level: "advanced",
     languages: ["rust"],
     contentType: ["code samples", "community repo"],
-    image: "/img/community-projects/ic-metamask.gif",
+    image: "/img/community-projects/big-metamask.gif",
   },
   
   {

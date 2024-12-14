@@ -11,9 +11,6 @@
 [submodule "submodules/samples"]
 	path = submodules/samples
 	url = https://github.com/thebigfilecom/examples.git
-[submodule "submodules/dfxvm"]
-	path = submodules/dfxvm
-	url = https://github.com/thebigfilecom/dfxvm.git
 [submodule "submodules/response-verfication"]
 	path = submodules/response-verfication
 	url = https://github.com/thebigfilecom/response-verification

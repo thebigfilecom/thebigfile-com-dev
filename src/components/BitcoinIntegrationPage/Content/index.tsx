@@ -32,7 +32,7 @@ const Content: React.FC = () => {
               href="/how-it-works/"
             >
               <LinkArrowRight></LinkArrowRight>
-              What is chain-key cryptography
+              What is BigFile CLI
             </Link>
           </p>
         </motion.div>

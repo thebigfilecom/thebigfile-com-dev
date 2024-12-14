@@ -10,7 +10,6 @@ The purpose of this dapp is to give developers a small (backend) dapp that uses 
 
 You can find a detailed description of its methods in the form of doc comments in the source code.
 
-Please also refer to the [Interface Specification](https://thebigfile.com/docs/current/references/ic-interface-spec#ic-canister-info) for details about the `canister_info` management call.
 
 ## Security considerations and best practices
 

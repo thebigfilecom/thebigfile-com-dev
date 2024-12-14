@@ -256,8 +256,6 @@ An account with non-default subaccounts consists of the following parts:
 <principal>-<checksum>.<compressed-subaccount>
 ```
 
-- The textual encoding of the owner's principal (as described in the [BIG interface specification](https://thebigfile.com/docs/current/references/ic-interface-spec#textual-ids)).
-
 - A dash character `-` that separates the principal from the checksum.
 
 - The CRC-32 checksum, containing the concatenated bytes of the principal and the subaccount encoded in [Base 32 encoding](https://datatracker.ietf.org/doc/html/rfc4648#section-6), without padding, and using lower-case letters.

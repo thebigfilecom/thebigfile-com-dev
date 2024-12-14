@@ -77,7 +77,7 @@ The NFT example canister keeps access control in these three levels very simple:
 - If a user is not authorized to call a certain function an error is returned.
 
 Burning an NFT is a special case. To burn an NFT means to either delete the NFT (not intended in DIP-721) or to set ownership to `null` (or a similar value).
-On the BigFile, this non-existing principal is called the [management canister](https://thebigfile.com/docs/current/references/ic-interface-spec.md#the-ic-management-canister).
+
 > "The BIG management canister is just a facade; it does not exist as a canister (with isolated state, Wasm code, etc.)," and its address is `aaaaa-aa`.
 Using this management canister address, we can construct its principal and set the management canister as the owner of a burned NFT.
 

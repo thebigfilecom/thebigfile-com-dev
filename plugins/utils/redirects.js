@@ -3,7 +3,6 @@ const redirects = `
   # external redirects (/from -> https://.../to/)
   /docs/token-holders/seed-donations.html https://wiki.thebigfile.com/wiki/How-To:_Claim_neurons_for_seed_participants
   /deck-main https://deck.thebigfile.com
-  /live-sessions https://dfinity.org94-and-news/#videos-live-sessions
 
   # .html file internal redirects (/../from.html -> to)
   /docs/developers-guide/working-with-canisters.html /docs/current/developer-docs/smart-contracts/maintain/settings
@@ -44,8 +43,6 @@ const redirects = `
   /docs/languages/languages-overview /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/smart-contracts/write/choosing-language /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/frontend/my-contacts /docs/current/developer-docs/web-apps/application-frontends/add-stylesheet
-  /docs/ic-interface-spec /docs/current/references/ic-interface-spec
-  /docs/interface-spec /docs/current/references/ic-interface-spec
   /docs/current/developer-docs/updates/computation-and-storage-costs /docs/current/developer-docs/gas-cost
   /docs/current/developer-docs/updates/release-notes/ /docs/current/other/updates/release-notes/
   /docs/current/developer-docs/quickstart/local-quickstart /docs/current/developer-docs/getting-started/install/
@@ -82,7 +79,6 @@ const redirects = `
   /docs/developers-guide/concepts/concepts-intro /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/developers-guide/customize-projects /docs/current/developer-docs/smart-contracts/compile
   /docs/developers-guide/design-apps /docs/current/developer-docs/web-apps/design-dapps
-  /docs/developers-guide/glossary /docs/current/concepts/glossary
   /docs/developers-guide/install-upgrade-remove /docs/current/developer-docs/getting-started/install/
   /docs/developers-guide/lang-service-ide /docs/current/developer-docs/developer-tools/ide/vs-code
   /docs/developers-guide/reinstalling-dfx /docs/current/developer-docs/getting-started/install/
@@ -194,31 +190,27 @@ const redirects = `
   /docs/current/references/gitpod /docs/current/developer-docs/developer-tools/ide/gitpod
   /docs/current/developer-docs/setup/vs-code /docs/current/developer-docs/developer-tools/ide/vs-code
   /docs/current/references/cli-reference/ /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/
-  /docs/current/references/cli-reference/dfx-parent /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-parent
-  /docs/current/references/cli-reference/dfx-bootstrap /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-bootstrap
-  /docs/current/references/cli-reference/dfx-build /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-build
-  /docs/current/references/cli-reference/dfx-cache /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-cache
-  /docs/current/references/cli-reference/dfx-canister /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister
-  /docs/current/references/cli-reference/dfx-deploy /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-deploy
-  /docs/current/references/cli-reference/dfx-generate /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-generate
-  /docs/current/references/cli-reference/dfx-help /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-help
-  /docs/current/references/cli-reference/dfx-identity /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-identity
-  /docs/current/references/cli-reference/dfx-info /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-info
-  /docs/current/references/cli-reference/dfx-ledger /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger
-  /docs/current/references/cli-reference/dfx-new /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-new
-  /docs/current/references/cli-reference/dfx-nns /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-nns
-  /docs/current/references/cli-reference/dfx-ping /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ping
-  /docs/current/references/cli-reference/dfx-quickstart /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-quickstart
-  /docs/current/references/cli-reference/dfx-replica /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-replica
-  /docs/current/references/cli-reference/dfx-schema /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-schema
-  /docs/current/references/cli-reference/dfx-sns /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-sns
-  /docs/current/references/cli-reference/dfx-start /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-start
-  /docs/current/references/cli-reference/dfx-stop /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-stop
-  /docs/current/references/cli-reference/dfx-upgrade /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-upgrade
-  /docs/current/references/cli-reference/dfx-wallet /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet
-  /docs/current/references/cli-reference/dfx-envars /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-envars
+  /docs/current/references/cli-reference/big-parent /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-parent
+  /docs/current/references/cli-reference/big-bootstrap /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-bootstrap
+  /docs/current/references/cli-reference/big-build /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-build
+  /docs/current/references/cli-reference/big-cache /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-cache
+  /docs/current/references/cli-reference/big-canister /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-canister
+  /docs/current/references/cli-reference/big-deploy /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-deploy
+  /docs/current/references/cli-reference/big-generate /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-generate
+  /docs/current/references/cli-reference/big-help /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-help
+  /docs/current/references/cli-reference/big-identity /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-identity
+  /docs/current/references/cli-reference/big-info /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-info
+  /docs/current/references/cli-reference/big-ledger /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-ledger
+  /docs/current/references/cli-reference/big-new /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-new
+  /docs/current/references/cli-reference/big-ping /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-ping
+  /docs/current/references/cli-reference/big-quickstart /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-quickstart
+  /docs/current/references/cli-reference/big-schema /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-schema
+  /docs/current/references/cli-reference/big-start /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-start
+  /docs/current/references/cli-reference/big-stop /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-stop
+  /docs/current/references/cli-reference/big-upgrade /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-upgrade
+  /docs/current/references/cli-reference/big-wallet /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-wallet
+  /docs/current/references/cli-reference/big-envars /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-envars
   /docs/current/references/cli-reference/dfx-json-reference /docs/current/developer-docs/developer-tools/cli-tools/dfx-json-reference
-  /docs/current/references/dfxvm/ /docs/current/developer-docs/developer-tools/cli-tools/dfxvm/docs/cli-reference/dfx/
   /docs/current/references/quill-cli-reference/ /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/quill-parent
   /docs/current/references/quill-cli-reference/quill-account-balance /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/quill-account-balance
   /docs/current/references/quill-cli-reference/ckbtc/quill-ckbtc /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/ckbtc/quill-ckbtc
@@ -280,13 +272,9 @@ const redirects = `
   /docs/current/developer-docs/setup/manage-projects /docs/current/developer-docs/smart-contracts/compile
   /docs/current/developer-docs/production/topping-up-canister /docs/current/developer-docs/smart-contracts/topping-up/topping-up-canister
   /docs/current/developer-docs/getting-started/cycles/cycles_management_services /docs/current/developer-docs/smart-contracts/topping-up/cycles_management_services
-  /docs/current/developer-docs/setup/pocket-ic /docs/current/developer-docs/smart-contracts/test/pocket-ic
   /docs/current/developer-docs/production/staging-environment /docs/current/developer-docs/smart-contracts/test/staging-environment
   /docs/current/developer-docs/backend/reproducible-builds /docs/current/developer-docs/smart-contracts/test/reproducible-builds
   /docs/current/developer-docs/backend/troubleshooting /docs/current/developer-docs/smart-contracts/test/troubleshooting
-  /docs/current/developer-docs/integrations/t-ecdsa /docs/current/developer-docs/smart-contracts/encryption/t-ecdsa
-  /docs/current/developer-docs/integrations/vetkeys/ /docs/current/developer-docs/smart-contracts/encryption/vetkeys
-  /docs/current/developer-docs/integrations/vetkeys/using-vetkeys /docs/current/developer-docs/smart-contracts/encryption/using-vetkeys
   /docs/current/developer-docs/integrations/composite-query /docs/current/developer-docs/smart-contracts/advanced-features/composite-query
   /docs/current/developer-docs/backend/periodic-tasks /docs/current/developer-docs/smart-contracts/advanced-features/periodic-tasks
   /docs/current/developer-docs/setup/best-practices/architecture /docs/current/developer-docs/smart-contracts/write/overview
@@ -342,9 +330,8 @@ const redirects = `
   /docs/current/developer-docs/integrations/https-outcalls/https-outcalls-how-to-use /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-how-to-use
   /docs/current/developer-docs/integrations/https-outcalls/https-outcalls-overview /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-overview
   /docs/current/developer-docs/integrations/https-outcalls/https-outcalls-post /docs/current/developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-post
-  /docs/current/developer-docs/setup/ic-admin /docs/current/developer-docs/developer-tools/cli-tools/ic-admin
+  /docs/current/developer-docs/setup/big-admin /docs/current/developer-docs/developer-tools/cli-tools/big-admin
   /docs/current/developer-docs/backend/subnet-types /docs/current/concepts/subnet-types
-  /docs/current/references/glossary /docs/current/concepts/glossary
   /docs/current/samples/host-a-website /docs/current/references/samples/hosting/static-website/
   /docs/current/developer-docs/smart-contracts/overview/development-cycle /docs/current/developer-docs/smart-contracts/overview/cube-lifecycle
   /docs/current/developer-docs/web-apps/user-login/big-id/integrate-identity /docs/current/developer-docs/web-apps/user-login/big-id/integrate-big-id

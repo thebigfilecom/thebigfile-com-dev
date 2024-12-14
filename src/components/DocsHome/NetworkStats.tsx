@@ -63,7 +63,7 @@ export const NetworkStats = () => {
         <figcaption className="tw-paragraph-sm font-medium text-black/60 inline-flex gap-2 items-center mb-2">
           Cost per Instruction
           <Tooltip
-            tooltip="Cost per instruction when executing cube smart contact code"
+            tooltip="Cost per instruction when executing smart contact code"
             className="w-52 whitespace-normal"
             wrapperClassName="inline-flex items-center"
           >
@@ -75,18 +75,16 @@ export const NetworkStats = () => {
       <Divider />
       <figure className="m-0">
         <figcaption className="tw-paragraph-sm font-medium text-black/60 inline-flex gap-2 items-center mb-2">
-          Cubes
+           Data Storage
           <Tooltip
-            tooltip="Number of running cube smart contracts"
+            tooltip="Number of running smart contracts"
             className="w-52 whitespace-normal"
             wrapperClassName="inline-flex items-center"
           >
             <InfoIcon />
           </Tooltip>
         </figcaption>
-        <div className="tw-heading-6">
-          {canisterCount.isSuccess && formatNumber(canisterCount.data)}
-        </div>
+        <div className="tw-heading-6">0 / GB</div>
       </figure>
     </div>
   );

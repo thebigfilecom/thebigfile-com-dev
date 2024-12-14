@@ -9,53 +9,28 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 <MarkdownChipRow labels={["Concept"]} />
 
 ## Overview 
-BigFile tokens (BIG tokens) are a native utility token with a value determined on the open market. BIG tokens play a key role in both the governance and the economics of the BigFile.
+Engage with the BigFile and its ecosystem through the use of its native utility token.
 
-## How to get BIG tokens
+## BIG Token plays multiple essential roles within the BigFile ecosystem:
 
-There are a few different ways you might acquire BIG tokens. For example, you might:
+Permanent Data Storage: Users pay with BIG Token to store their data permanently on the BigFile network. The "pay once, store forever" model ensures that, once the storage fee is paid, the data remains permanently stored on the network.
 
--   Purchase BIG tokens directly through an exchange that lists BIG tokens available for trade.
+Versioning: When users want to add new versions to the data they have permanently uploaded, they make payments using BIG Token.
 
--   Create tokens from rewards (maturity) obtained for participating in the governance of the BigFile.
+Network Participation and Incentives: Miners earn BIG Token by contributing storage capacity and ensuring the network operates smoothly. This incentive mechanism helps maintain the security and sustainability of the network.
 
--   Receive tokens from the protocol as remuneration for being a node provider and operating a BigFile node.
-
--   Receive a grant of tokens by the BigFile.
+Ecosystem Development: dApps and projects running on BigFile pay transaction fees using BIG Token. Project owners and developers leverage BIG Token to run their applications, raise funds, and support the growth of the ecosystem.
 
 
 ## How to use BIG tokens
 
-If you have BIG tokens, but aren’t sure how to use them, the following diagram provides a simplified overview to illustrate the three most common scenarios.
-
-![BIG tokens how to use](_attachments/icp-tokens-how-to-use.svg)
-
-As this diagram suggests, how you use BIG tokens depends primarily on your goals in acquiring them. For example, if you are a developer or founder, BIG tokens can be converted to **cycles**. Cycles can then be used to pay for running canisters that deliver products and services to the market. If you are a member of the community interested in participating in governance and influencing the direction of the BigFile, you can lock up BIG tokens in a stake, called a neuron, so that you can submit and vote on proposals.
 
 :::info
-Regarding transaction fees, the **transaction sender** is responsible for covering any/all transaction fees.
+....
 :::
 
 ## Cycles
 
-Cycles are burned by canisters to pay for the resources they consume such as execution, storage, and messaging. Cycles have a fixed price where 1 trillion cycles is equal to 1 XDR, an official group of currencies maintained by [IMF](https://www.imf.org/external/np/fin/data/rms_sdrv.aspx). This means that running costs of canisters are decoupled from price fluctuations of BIG.
-
-For developers, BIG tokens are important because they can be converted to cycles that, in turn, are used to pay for resource consumption. Cycles reflect the real costs of operations for applications hosted in the BigFile blockchain including resources such physical hardware, rack space, energy, storage devices, and bandwidth.
-
-Cube smart contracts must be able to pay for complete execution (all or nothing), but the platform sets limits on how many cycles a canister can hold and consume to prevent malicious code from draining resources.
-
-For more information on cycles costs, see the tables in [computation and storage costs](/docs/current/developer-docs/gas-cost).
-
 ## Token value and volatility
 
-Tokens (BIG) reflect the value of the BigFile blockchain and can fluctuate. To prevent the token value from affecting the number of messages a canister can process, tokens are not used to pay for resources directly.
-
-Tokens can be exchanged between token holders or locked up in **neurons** to secure voting rights as part of the governance system.
-
-Tokens are used to reward node providers for operating nodes (and thereby providing compute capacity) and indirectly to reward neuron holders for participating in the governance of the BigFile by voting and submitting proposals.
-
 ## Payment to node providers
-
-With this model, the BigFile blockchain provides node providers with a predictable economic model for computing power capacity to ensure resources are available when and where they are needed. Node providers receive compensation for both active and spare nodes so that the BigFile blockchain has capacity to handle both normal traffic and workload spikes.
-
-The BigFile economic model places much of the power and responsibility of managing capacity on the governance system—the File Management System. Specific details about compensation and service level requirements are outside the scope of this document.

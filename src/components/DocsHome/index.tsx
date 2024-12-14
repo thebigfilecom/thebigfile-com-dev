@@ -20,7 +20,7 @@ const links = [
     href: "https://forum.thebigfile.com/",
   },
   { label: "Join the Dev Forum", href: "https://forum.thebigfile.com" },
-  { label: "Dev Discord Office Hours", href: "https://discord.gg/bgjhB2WF" },
+  { label: "Dev Discord Office Hours", href: "https://discord.gg/nyTAmMntqp" },
   {
     label: "Developer Grants and Bounties",
     href: "/",

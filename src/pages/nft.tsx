@@ -139,10 +139,7 @@ function NftPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  The BigFile is the only blockchain that stores 100% 
-                  of the <abbr title="non-fungible tokens">NFT</abbr> on the blockchain, 
-                  including all assets. This opens up capabilities for <abbr title="BigFile">BIG</abbr> <abbr title="non-fungible tokens">NFT</abbr>s that go way beyond than just 
-                  “overpriced links to <abbr title="Joint Photographic Experts Group">JPG</abbr>s”. 
+                  BigFile is a blockchain that ensures 100% of the NFT, including all associated assets, is stored directly on-chain. This transformative approach unlocks possibilities for NFTs far beyond mere 'expensive links to JPEGs,' paving the way for a more robust and enduring digital ownership experience. 
                 </motion.p>
               </div>
             </div>
@@ -160,7 +157,7 @@ function NftPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-3 md:mb-6 text-gradient"
               variants={transitions.item}
             >
-              Buying an <abbr title="non-fungible token">NFT</abbr> on other chains is often a link that points to an untraceable source. The BigFile ensures true ownership — no intermediaries or central entities.
+              On other blockchains, purchasing an NFT often means owning a link to an unverifiable source. BigFile ensures genuine ownership by eliminating intermediaries and central entities, giving you complete control over your digital assets.
             </motion.h2>
           </div>
         </AnimateSpawn>
@@ -177,11 +174,11 @@ function NftPage() {
               Make the most out of <abbr title="non-fungible tokens">NFT</abbr>s
             </h2>
             <p className="tw-lead-sm md:mb-6">
-              The BigFile enables a wide variety of unique <abbr title="non-fungible tokens">NFT</abbr>s. Since cube smart contracts can store over 100GB of data, every part of an BIG <abbr title="non-fungible tokens">NFT</abbr> can be hosted on the blockchain giving complete ownership to collectors. All data and code being on-chain allows developers to make any digital object, even full websites, or chat groups into <abbr title="non-fungible tokens">NFT</abbr>s.
+            BigFile offers a diverse range of NFT services, enabling every component of an NFT to be fully hosted on the blockchain, granting collectors true ownership. With all data and code stored on-chain, developers can transform any digital object — from entire websites to chat groups — into NFTs.
             </p>
             <p className="mb-0">
               <Link
-                href="https://thebigfile.com/docs/current/developer-docs/use-cases/considerations-for-nft-devs#nfts-on-the-internet-computer"
+                href="https://thebigfile.com/docs/current/developer-docs/use-cases/considerations-for-nft-devs"
                 className="button-outline"
               >
                 Create your own
@@ -203,7 +200,7 @@ function NftPage() {
                 <h3 className="tw-heading-7-caps mb-0">BigFile</h3>
                 <img src="/img/nft/big-logo.webp" alt="" className="w-20" />
                 <div>
-                  <span className="tw-heading-3">$25</span>{" "}
+                  <span className="tw-heading-3">$30</span>{" "}
                   <span className="tw-heading-5">/Forever</span>
                 </div>
               </div>
@@ -231,14 +228,12 @@ function NftPage() {
             </div>
 
             <p className="tw-lead-sm md:tw-lead md:w-8/12 md:mx-auto mb-16 md:mb-20">
-              The BigFile offers unparalleled efficiency that leaves
-              other blockchains orders of magnitudes behind with regards to many
-              metrics, making it the ideal chain to launch complex NFT
-              collections and games. BIG uses the reverse gas model, which means
-              end users can mint and trade NFTs with 0 gas fees.
+             BigFile delivers unmatched efficiency, outperforming other blockchains by orders of magnitude across various metrics,
+             making it the ideal platform for launching sophisticated NFT collections and games.
+             
 
 
-              <a href="https://thebigfile.com/docs/current/developer-docs/use-cases/considerations-for-nft-devs#nfts-on-the-internet-computer"  className="button-outline-white mt-6">Build your own</a>
+              <a href="https://thebigfile.com/docs/current/developer-docs/use-cases/considerations-for-nft-devs"  className="button-outline-white mt-6">Build your own</a>
             </p>
 
 

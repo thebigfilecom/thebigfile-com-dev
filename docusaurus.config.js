@@ -126,11 +126,11 @@ const marketingNav = {
         { name: "BigFile Wiki", href: "https://wiki.thebigfile.com/" },
         {
           name: "Whitepaper",
-          href: "https://thebigfile.com/white.pdf",
+          href: "https://thebigfile.com/",
         },
         {
           name: "History of BigFile",
-          href: "https://wiki.thebigfile.com/wiki/History",
+          href: "https://wiki.thebigfile.com/",
         },
       ],
 
@@ -409,7 +409,7 @@ const config = {
   tagline:
     "Step into the era of blockchain as a limitless smart contract cloud that hosts everything on-chain: data, content, computations, and user experiences.",
   url: isDeployPreview
-    ? `https://${process.env.PREVIEW_CANISTER_ID}.icp0.io`
+    ? `https://${process.env.PREVIEW_CANISTER_ID}.thebigfile.com`
     : "https://thebigfile.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -418,7 +418,7 @@ const config = {
   organizationName: "BigFile",
   projectName: "thebigfile-com-dev",
   customFields: {
-    searchCanisterId: "5qden-jqaaa-aaaam-abfpa-cai",
+    searchCanisterId: "",
     marketingNav,
   },
   scripts: [],

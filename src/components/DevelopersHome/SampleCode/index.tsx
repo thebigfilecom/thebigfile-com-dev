@@ -61,23 +61,22 @@ function Index() {
             <div className={styles.bodyContainer}>
               <p className={styles.informationTitle}>SDK Installation</p>
               <p className={styles.informationBody}>
-                Download and install the latest version of the BIG SDK: an SDK for cube smart contracts.
+                Download and install the latest version of the BIG SDK: an SDK for smart contracts.
               </p>
             </div>
             <RightArrowSVG className={styles.informationIcon} />
           </motion.a>
           <motion.a
             variants={transitions.item}
-            href={"https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/"}
+            href={"https://github.com/thebigfilecom/"}
             className={clsx(styles.card, styles.cardHover)}
           >
             <div className={styles.bodyContainer}>
-              <p className={styles.informationTitle}>Motoko Playground</p>
+              <p className={styles.informationTitle}>Open Source Codes</p>
               <p className={styles.informationBody}>
-                Explore Motoko, the native language of the BigFile, right in the browser without having to download the SDK
+              BigFile is a community-driven, open-source blockchain protocol designed to empower decentralized innovation.
               </p>
             </div>
-            <img className={styles.motokoBackground} src={motokoBG} alt="" />
             <RightArrowSVG className={styles.informationIcon} />
           </motion.a>
         </div>

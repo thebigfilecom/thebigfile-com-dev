@@ -2,7 +2,6 @@
 
 **A preview of the latest `master` branch can be found [here](https://khsfq-wqaaa-aaaak-qckvq-cai.icp0.io/docs).**
 
-**The latest *released* version can be found [here](https://thebigfile.com/docs/current/references/ic-interface-spec).**
 
 This repository contains the source files of the Interface Spec, which describes the externally visible behaviour of the BigFile.
 The language-independent description of this BIG interface is available in [ic.did](./spec/_attachments/ic.did).
