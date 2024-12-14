@@ -95,13 +95,13 @@ function SustainabilityPage() {
                 className="tw-heading-3 md:tw-heading-2 mb-6 md:w-8/10"
                 variants={transitions.item}
               >
-                Blockchain for Sustainable Business
+                Blockchain for a Sustainable Future
               </motion.h1>
               <motion.p
                 className="tw-lead-sm md:tw-lead md:w-6/10"
                 variants={transitions.item}
               >
-                Blockchain technology enhances sustainability by improving transparency, traceability, and accountability in business operations.
+                Empowering sustainable business, blockchain technology redefines transparency, strengthens traceability, and ensures accountability, paving the way for more ethical and efficient operations.
               </motion.p>
             </div>
           </div>
@@ -132,7 +132,7 @@ function SustainabilityPage() {
                 className="tw-heading-4 sm:tw-heading-3 md:tw-heading-60 mb-6 md:mb-10 text-gradient-green"
                 variants={transitions.item}
               >
-                Sustainability is gaining global importance, driven by regulatory pressures, energy consumption challenges, climate change, and the demand for cost-efficient operations.
+                Sustainability is becoming a global priority, fueled by regulatory pressures, energy consumption challenges, climate change concerns, and the growing need for cost-efficient operations.
               </motion.p>
               <motion.p>
                 <button onClick={scrollToDownload} className="button-white">
@@ -150,7 +150,7 @@ function SustainabilityPage() {
         >
           <div className="flex-1 sm:order-2">
             <p className="tw-paragraph md:tw-lead mb-0">
-            The environmental footprint of an application is just one aspect of sustainability. Equally crucial are factors like operational costs, scalability, longevity, security, privacy, resilience against attacks, and a sustainable business model—ensuring the application remains economically viable after its launch.
+            An application's environmental footprint is just one dimension of sustainability. Equally important are factors such as operational costs, scalability, longevity, security, privacy, resilience against attacks, and a sustainable business model—ensuring long-term economic viability after launch.
             </p>
           </div>
 
@@ -217,19 +217,13 @@ function SustainabilityPage() {
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
-                  The most sustainable blockchain, delivering efficiency at scale. Each transaction on BIG consumes minimal energy, measured in low watt-hours, making it exceptionally energy efficient.
+                  The most sustainable blockchain, delivering efficiency at scale. Each transaction on BigFile consumes minimal energy, measured in low watt-hours, making it exceptionally energy efficient.
                 </motion.li>
                 <motion.li
                   className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
                   variants={transitions.item}
                 >
                   Transparent reporting: The power consumption of all node machines on the BigFile blockchain is publicly available on a dedicated dashboard.
-                </motion.li>
-                <motion.li
-                  className="tw-heading-6 md:tw-heading-5 pl-8 md:pl-16 relative bg-[url(/img/features/sustainability/icon-check-mobile.svg)] md:bg-[url(/img/features/sustainability/icon-check.svg)] bg-left-top bg-no-repeat min-h-6 md:min-h-16"
-                  variants={transitions.item}
-                >
-                  Existing industry use cases like the blockchain-powered recycling incentive standard initiative built with Roland Berger
                 </motion.li>
               </ul>
             </div>
@@ -242,128 +236,8 @@ function SustainabilityPage() {
             />
           </div>
         </section>
-        <AnimateSpawn
-          className="container-10 relative"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <img
-            src="/img/features/blob-bg-hero.webp"
-            alt=""
-            className="absolute left-1/2 -translate-x-7/12 -top-[40vmax] w-[260vmax] max-w-none md:max-w-[300vmin] z-[-1]"
-          />
 
-          <motion.div
-            variants={transitions.container}
-            className="text-white md:w-7/10 mt-64 md:mt-80 mb-20 md:mb-40 relative"
-          >
-            <motion.h2
-              variants={transitions.item}
-              className="tw-heading-4 md:tw-heading-60 mb-6"
-            >
-              The Blockchain for Sustainable Use Cases Report
-            </motion.h2>
 
-            <motion.p
-              variants={transitions.item}
-              className="tw-paragraph md:tw-lead mb-8"
-            >
-              A sustainable future is essential for both businesses and the planet. This report by BigFile explores 10 innovative business use cases where blockchain’s core strengths—transparency, immutability, and cost-efficiency—enhance traditional practices.
-            </motion.p>
-
-            <motion.img
-              variants={transitions.fadeIn}
-              src="/img/basics/icon-db.svg"
-              aria-hidden
-              className="absolute -z-1 w-30 md:w-40 top-[-150px] right-[130px] md:top-[-160px] md:right-[20px]"
-            />
-            <motion.img
-              variants={transitions.fadeIn}
-              src="/img/basics/icon-iot.svg"
-              aria-hidden
-              className="absolute -z-1 w-30 md:w-40 top-[-220px] right-0 md:top-[-240px] md:right-[-240px]"
-            />
-            <motion.img
-              variants={transitions.fadeIn}
-              src="/img/basics/icon-plant.svg"
-              aria-hidden
-              className="absolute -z-1 w-30 md:w-40 -top-30 right-[-30px] md:top-[70px] md:right-[-180px]"
-            />
-          </motion.div>
-        </AnimateSpawn>
-
-        <section className="bg-page pt-20 md:pt-30">
-          <AnimateSpawn
-            variants={transitions.container}
-            className="container-10"
-          >
-            <div className="md:w-8/10">
-              <motion.h2
-                variants={transitions.item}
-                className="tw-heading-4 sm:tw-heading-3 md:tw-heading-60 mb-6 md:mb-12 text-gradient-green"
-              >
-                Report sneak peek into the sustainable business use cases
-              </motion.h2>
-            </div>
-
-            <TranslatedCardList className="">
-              <TranslatedCard
-                title="Reporting & certifications"
-                icon={
-                  <img
-                    src="/img/features/sustainability/icon-5.webp"
-                    loading="lazy"
-                    aria-hidden="true"
-                    className="aspect-square "
-                  />
-                }
-              >
-                <motion.p
-                  className="mb-0 tw-paragraph"
-                  variants={transitions.item}
-                >
-                  Integrate reporting on-chain, enabling the hashing of certifications like GRI, CDP, B-Corp, and EU CSRD.
-                </motion.p>
-              </TranslatedCard>
-              <TranslatedCard
-                title="Crypto donation platform"
-                icon={
-                  <img
-                    src="/img/features/sustainability/icon-6.webp"
-                    loading="lazy"
-                    aria-hidden="true"
-                    className="aspect-square"
-                  />
-                }
-              >
-                <motion.p
-                  className="mb-0 tw-paragraph"
-                  variants={transitions.item}
-                >
-                  A crypto donation solution, which provides an ecosystem for nonprofits and charities to fundraise Bitcoin and other cryptocurrencies, be found by crypto donors, and receive funds instantly.
-                </motion.p>
-              </TranslatedCard>
-              <TranslatedCard
-                title="Token-based carbon credit trading platform"
-                icon={
-                  <img
-                    src="/img/features/sustainability/icon-7.webp"
-                    loading="lazy"
-                    aria-hidden="true"
-                    className="aspect-square"
-                  />
-                }
-              >
-                <motion.p
-                  className="mb-0 tw-paragraph"
-                  variants={transitions.item}
-                >
-                  An enterprise token marketplace for carbon credits and carbon credit trading powered by NFTs.
-                </motion.p>
-              </TranslatedCard>
-            </TranslatedCardList>
-          </AnimateSpawn>
-        </section>
 
         <section
           id="get-report"

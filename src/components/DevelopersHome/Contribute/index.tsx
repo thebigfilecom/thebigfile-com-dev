@@ -10,7 +10,7 @@ import contribute from "@site/static/img/developers/contribute.webp";
 const cardsContent = [
   {
     title: "Technical working groups",
-    body: "Help shape BIG development ",
+    body: "Help shape BigFile development ",
     link: "https://forum.thebigfile.com/",
   },
   {
@@ -96,39 +96,7 @@ function Index() {
           </motion.a>
         ))}
       </div>
-      <div className={styles.contributionContainer}>
-        <div className={styles.leftContainer}>
-          <motion.p
-            variants={transitions.item}
-            className={styles.callToActionTitle}
-          >
-            Help us make the docs better
-          </motion.p>
-          <motion.p
-            variants={transitions.item}
-            className={styles.callToActionText}
-          >
-            These docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunities to help BigFile developers.
-          </motion.p>
-          <motion.div
-            variants={transitions.item}
-            className={styles.actionContainer}
-          >
-            <Link
-              className={styles.actionButton}
-              to="https://github.com/thebigfilecim/thebigfile-com-dev"
-            >
-              CONTRIBUTE
-            </Link>
-          </motion.div>
-        </div>
-        <motion.div
-          variants={transitions.item}
-          className={styles.rightContainer}
-        >
-          <img className={styles.contributeGraphic} src={contribute} alt="" />
-        </motion.div>
-      </div>
+
       <motion.div variants={transitions.item} className={styles.mobileGraphic}>
         <img
           className={styles.mobileContributeGraphic}
