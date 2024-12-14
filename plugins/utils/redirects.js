@@ -190,29 +190,26 @@ const redirects = `
   /docs/current/references/gitpod /docs/current/developer-docs/developer-tools/ide/gitpod
   /docs/current/developer-docs/setup/vs-code /docs/current/developer-docs/developer-tools/ide/vs-code
   /docs/current/references/cli-reference/ /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/
-  /docs/current/references/cli-reference/dfx-parent /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-parent
-  /docs/current/references/cli-reference/dfx-bootstrap /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-bootstrap
-  /docs/current/references/cli-reference/dfx-build /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-build
-  /docs/current/references/cli-reference/dfx-cache /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-cache
-  /docs/current/references/cli-reference/dfx-canister /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-canister
-  /docs/current/references/cli-reference/dfx-deploy /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-deploy
-  /docs/current/references/cli-reference/dfx-generate /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-generate
-  /docs/current/references/cli-reference/dfx-help /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-help
-  /docs/current/references/cli-reference/dfx-identity /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-identity
-  /docs/current/references/cli-reference/dfx-info /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-info
-  /docs/current/references/cli-reference/dfx-ledger /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ledger
-  /docs/current/references/cli-reference/dfx-new /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-new
-  /docs/current/references/cli-reference/dfx-nns /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-nns
-  /docs/current/references/cli-reference/dfx-ping /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-ping
-  /docs/current/references/cli-reference/dfx-quickstart /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-quickstart
-  /docs/current/references/cli-reference/dfx-replica /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-replica
-  /docs/current/references/cli-reference/dfx-schema /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-schema
-  /docs/current/references/cli-reference/dfx-sns /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-sns
-  /docs/current/references/cli-reference/dfx-start /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-start
-  /docs/current/references/cli-reference/dfx-stop /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-stop
-  /docs/current/references/cli-reference/dfx-upgrade /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-upgrade
-  /docs/current/references/cli-reference/dfx-wallet /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-wallet
-  /docs/current/references/cli-reference/dfx-envars /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/dfx-envars
+  /docs/current/references/cli-reference/big-parent /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-parent
+  /docs/current/references/cli-reference/big-bootstrap /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-bootstrap
+  /docs/current/references/cli-reference/big-build /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-build
+  /docs/current/references/cli-reference/big-cache /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-cache
+  /docs/current/references/cli-reference/big-canister /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-canister
+  /docs/current/references/cli-reference/big-deploy /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-deploy
+  /docs/current/references/cli-reference/big-generate /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-generate
+  /docs/current/references/cli-reference/big-help /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-help
+  /docs/current/references/cli-reference/big-identity /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-identity
+  /docs/current/references/cli-reference/big-info /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-info
+  /docs/current/references/cli-reference/big-ledger /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-ledger
+  /docs/current/references/cli-reference/big-new /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-new
+  /docs/current/references/cli-reference/big-ping /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-ping
+  /docs/current/references/cli-reference/big-quickstart /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-quickstart
+  /docs/current/references/cli-reference/big-schema /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-schema
+  /docs/current/references/cli-reference/big-start /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-start
+  /docs/current/references/cli-reference/big-stop /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-stop
+  /docs/current/references/cli-reference/big-upgrade /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-upgrade
+  /docs/current/references/cli-reference/big-wallet /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-wallet
+  /docs/current/references/cli-reference/big-envars /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-envars
   /docs/current/references/cli-reference/dfx-json-reference /docs/current/developer-docs/developer-tools/cli-tools/dfx-json-reference
   /docs/current/references/quill-cli-reference/ /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/quill-parent
   /docs/current/references/quill-cli-reference/quill-account-balance /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/quill-account-balance
