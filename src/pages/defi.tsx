@@ -145,7 +145,7 @@ function DefiPage() {
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              Trading and holding tokens on centralized exchanges carries significant risks. Even decentralized exchanges with frontends hosted on centralized cloud providers are vulnerable to hacks and rug pulls. With the BigFile's cube smart contracts, which can serve web content and host large amounts of data, DeFi platforms can operate entirely on the blockchain, eliminating reliance on centralized components.
+              Trading and holding tokens on centralized exchanges comes with significant risks, and even decentralized exchanges relying on centralized cloud-hosted frontends remain vulnerable to hacks and rug pulls. BigFile's smart contracts, capable of serving web content and hosting large datasets, empower DeFi platforms to operate entirely on the blockchain, eliminating the need for centralized components.
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -173,8 +173,7 @@ function DefiPage() {
                 Multiple Blockchains
                 </h2>
                 <p className="tw-paragraph md:tw-lead text-black mb-8">
-                We use multiple blockchains so you can focus on building. BigFile enables access to multiple blockchains through parallel assets. It is creating ten parallel BigFile assets on other major blockchains, which will be interchangeable with the main BIG chain. This gives BigFile holders seamless access to all major DeFi platforms.
-                These ten parallel assets (KDA, ETH, BSC, SOL, TRX, AVAX, ERG, ALGO, MATIC, BASE) will be available to BigFile holders once integration is complete, with BTC being the final asset to be distributed upon completion. {" "}
+                BigFile connects you to multiple blockchains so you can focus on building. By introducing parallel assets, BigFile ensures seamless interoperability across the blockchain ecosystem. Four parallel BigFile assets—ETH, BSC, SOL, TRX, and AVAX—are being created, fully interchangeable with the main BigFile network. Once integration is complete, these assets will grant BIG holders easy access to leading DeFi platforms. {" "}
                 </p>
                 <p className="mb-0 flex flex-col gap-6 items-start">
                   <Link
@@ -187,7 +186,7 @@ function DefiPage() {
                     Multi-chain user guide
                   </Link>
                   <Link
-                    href="https://dashboard.thebigfile.com/bitcoin/transactions"
+                    href="https://dashboard.thebigfile.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button-primary"
@@ -236,30 +235,29 @@ function DefiPage() {
               <div className="container-12 flex flex-col md:flex-row gap-4">
                 <motion.div variants={transitions.item} className="flex-1">
                   <Link
-                    href="https://nns.thebigfile.com/"
+                    href="https://thebigfile.com/big-id"
                     className="block border border-solid border-white-30 rounded-xl p-10 items-center panel-gradient text-center text-white hover:text-white hover:-translate-y-2 transition-all hover:no-underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src="/img/defi/nns.webp" alt="" className="w-20" />
-                    <h3 className="tw-heading-5 mb-2 mt-4">NNS </h3>
+                    <img src="/img/defi/bigid.webp" alt="" className="w-20" />
+                    <h3 className="tw-heading-5 mb-2 mt-4">BIG ID</h3>
                     <p className="text-white/60 tw-lead-sm mb-0">
-                      Chose your ckBTC account to send and receive BTC from the Bitcoin network. Full ETH functionality coming soon.
+                    BIG ID is a platform enabling users to securely store and manage their data on the BigFile network. It offers the ability to permanently store files in a decentralized and reliable manner.
                     </p>
                   </Link>
                 </motion.div>
                 <motion.div variants={transitions.item} className="flex-1">
                   <Link
-                    href="https://plugwallet.ooo/"
+                    href="https://thebigfile.com/bigdrive"
                     className="block border border-solid border-white-30 rounded-xl p-10 items-center panel-gradient text-center text-white hover:text-white hover:-translate-y-2 transition-all hover:no-underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src="/img/defi/plug.webp" alt="" className="w-20" />
-                    <h3 className="tw-heading-5 mb-2 mt-4">Plug</h3>
+                    <img src="/img/defi/bigid.webp" alt="" className="w-20" />
+                    <h3 className="tw-heading-5 mb-2 mt-4">BigDrive</h3>
                     <p className="text-white/60 tw-lead-sm mb-0">
-                      Store, swap and manage digital assets, inlcuding ckBTC and
-                      ckETH on a simple mobile app or use your favorite browser.
+                    Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, store-forever model.
                     </p>
                   </Link>
                 </motion.div>
@@ -267,76 +265,7 @@ function DefiPage() {
             </AnimateSpawn>
           </section>
         </BackgroundPanel>
-        <section className="container-12 py-30 md:py-48">
-          <div className="mb-16 md:mb-30 md:w-7/10 md:mx-auto">
-            <AnimateSpawn className="" variants={transitions.container}>
-              <motion.h2
-                className="tw-heading-3 md:tw-heading-2 text-gradient text-center mb-4"
-                variants={transitions.item}
-              >
-                Build multi-chain DeFi
-              </motion.h2>
 
-              <motion.p
-                className="tw-paragraph md:tw-lead text-black mb-0 text-center max-w-[500px] mx-auto"
-                variants={transitions.item}
-              >
-                The BigFile offers an array of innovative features to
-                build next-gen DeFi.
-              </motion.p>
-            </AnimateSpawn>
-          </div>
-          <div className="flex flex-col gap-16 md:gap-40">
-            <TranslatedLayout imageUrl="/img/defi/image-2.webp">
-              <h2 className="md:tw-heading-60 md:mb-6">
-                Bringing ERC-20 tokens to BIG
-              </h2>
-              <p className="tw-lead-sm mb-6 md:mb-10">
-                Building on Chain-Key Signatures and HTTPS outcalls, Oisy, a
-                browser-based Ethereum wallet secured by the BigFile,
-                can already natively support a plethora of ERC-20 tokens.
-                Plugging into services such as Infura and the like, BIG smart
-                contracts sign transactions for any ERC-20 token without relying
-                on insecure bridges.
-              </p>
-              <p className="mb-0">
-                <Link
-                  href="https://oisy.com/"
-                  className="link-primary link-with-icon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Build a fully on-chain ETH wallet
-                  <LinkArrowUpRight />
-                </Link>
-              </p>
-            </TranslatedLayout>
-            <TranslatedLayout
-              imageUrl="/img/defi/https-outcalls.webp"
-              reverse={true}
-            >
-              <h2 className="md:tw-heading-60 md:mb-6">
-                Access Web2 without Oracles
-              </h2>
-              <p className="tw-lead-sm mb-6 md:mb-10">
-                Blockchains today have to rely on oracles if they want to access
-                price data from Web2 APIs. Using HTTPS outcalls, the BigFile can query up-to-date prices from any traditional Web2
-                API without oracles, which reduces costs and increases speed.
-                Making calls to the Exchange Rate Cube, you can already
-                query price data.
-              </p>
-              <p className="mb-0">
-                <Link
-                  href="/https-outcalls"
-                  className="link-primary link-with-icon"
-                >
-                  <LinkArrowRight />
-                  More on HTTPS Outcalls
-                </Link>
-              </p>
-            </TranslatedLayout>
-          </div>
-        </section>
 
         <section className="max-w-page relative mx-auto mb-20 px-6 md:mb-40 md:px-15 md:mt-20">
           <AnimateSpawn
@@ -366,7 +295,7 @@ function DefiPage() {
             variants={transitions.container}
           >
             <CardWithDescription
-              title="ETH starter tutorial"
+              title="Defi starter tutorial"
               description=""
               href="/docs/current/tutorials/developer-journey/level-5/5.1-BIG-ETH-tutorial"
             />

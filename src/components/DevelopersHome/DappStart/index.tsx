@@ -32,7 +32,7 @@ function Index() {
         <div className={styles.cards}>
           <motion.a
             variants={transitions.item}
-            href={"https://dfinity.org/grants/"}
+            href={"https://thebigfile.com/grants/"}
             className={clsx(
               styles.card,
               styles.cardContainer,
@@ -49,7 +49,7 @@ function Index() {
           </motion.a>
           <motion.a
             variants={transitions.item}
-            href={"https://dfn.typeform.com/to/Px1Mout9"}
+            href={"https://thebigfile.com"}
             target="_blank"
             className={clsx(
               styles.card,
@@ -58,16 +58,16 @@ function Index() {
             )}
           >
             <div className={styles.bodyContainer}>
-              <p className={styles.informationTitle}>Beacon fund</p>
+              <p className={styles.informationTitle}>BIGFund</p>
               <p className={styles.informationBody}>
-                Beacon invests early in strong teams who can launch and grow the open internet services and decentralized financial systems of the future.
+              The BIG Fund was established to support visionary teams in developing and scaling the decentralized bureaucracy and decentralized finance systems that will shape the future.
               </p>
             </div>
             <RightArrowSVG className={styles.informationIcon} />
           </motion.a>
           <motion.a
             variants={transitions.item}
-            href={"https://faucet.dfinity.org/"}
+            href={"https://faucet.thebigfile.com/"}
             className={clsx(
               styles.card,
               styles.cyclesContainer,
