@@ -640,9 +640,9 @@ const sidebars = {
                 "tutorials/developer-journey/level-0/big-overview",
                 "tutorials/developer-journey/level-0/big-terms",
                 "tutorials/developer-journey/level-0/dev-env",
-                "tutorials/developer-journey/level-0/intro-cubes",
+                "tutorials/developer-journey/level-0/intro-smartcontracts",
                 "tutorials/developer-journey/level-0/intro-languages",
-                "tutorials/developer-journey/level-0/intro-dfx",
+                "tutorials/developer-journey/level-0/intro-big",
               ],
             },
             {
@@ -654,11 +654,10 @@ const sidebars = {
               },
               items: [
                 "tutorials/developer-journey/level-1/1.1-live-demo",
-                "tutorials/developer-journey/level-1/1.2-motoko-lvl1",
                 "tutorials/developer-journey/level-1/1.3-first-dapp",
                 "tutorials/developer-journey/level-1/1.4-using-cycles",
-                "tutorials/developer-journey/level-1/1.5-deploying-cubes",
-                "tutorials/developer-journey/level-1/1.6-managing-cubes",
+                "tutorials/developer-journey/level-1/1.5-deploying-smartcontracts",
+                "tutorials/developer-journey/level-1/1.6-managing-smartcontracts",
               ],
             },
             {
@@ -670,11 +669,10 @@ const sidebars = {
               },
               items: [
                 "tutorials/developer-journey/level-2/2.1-storage-persistence",
-                "tutorials/developer-journey/level-2/2.2-advanced-cube-calls",
-                "tutorials/developer-journey/level-2/2.3-third-party-cubes",
+                "tutorials/developer-journey/level-2/2.2-advanced-smartcontracts-calls",
+                "tutorials/developer-journey/level-2/2.3-third-party-smartcontracts",
                 "tutorials/developer-journey/level-2/2.4-intro-candid",
                 "tutorials/developer-journey/level-2/2.5-unit-testing",
-                "tutorials/developer-journey/level-2/2.6-motoko-lvl2",
               ],
             },
             {
@@ -690,7 +688,6 @@ const sidebars = {
                 "tutorials/developer-journey/level-3/3.3-certified-data",
                 "tutorials/developer-journey/level-3/3.4-intro-to-agents",
                 "tutorials/developer-journey/level-3/3.5-identities-and-auth",
-                "tutorials/developer-journey/level-3/3.6-motoko-lvl3",
               ],
             },
             {
@@ -702,11 +699,8 @@ const sidebars = {
               },
               items: [
                 "tutorials/developer-journey/level-4/4.1-big-ledger",
-                "tutorials/developer-journey/level-4/4.2-bigrc-tokens",
-                "tutorials/developer-journey/level-4/4.3-ckbtc-and-bitcoin",
                 "tutorials/developer-journey/level-4/4.4-nns-governance",
                 "tutorials/developer-journey/level-4/4.5-using-quill",
-                "tutorials/developer-journey/level-4/4.6-motoko-lvl4",
               ],
             },
             {
