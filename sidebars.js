@@ -154,7 +154,6 @@ const sidebars = {
           label: "Test",
           items: [
             "developer-docs/smart-contracts/test/benchmarking",
-            "developer-docs/smart-contracts/test/pocket-ic",
             "developer-docs/smart-contracts/test/staging-environment",
             "developer-docs/smart-contracts/test/reproducible-builds",
             "developer-docs/smart-contracts/test/troubleshooting",
@@ -198,22 +197,6 @@ const sidebars = {
                 "developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-how-to-use",
                 "developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-get",
                 "developer-docs/smart-contracts/advanced-features/https-outcalls/https-outcalls-post",
-              ],
-            },
-            {
-              type: "category",
-              label: "On-chain signatures: Threshold ECDSA",
-              items: [
-                "developer-docs/smart-contracts/encryption/t-ecdsa",
-                "developer-docs/smart-contracts/encryption/signing-transactions",
-              ],
-            },
-            {
-              type: "category",
-              label: "On-chain encryption: vetKeys",
-              items: [
-                "developer-docs/smart-contracts/encryption/vetkeys",
-                "developer-docs/smart-contracts/encryption/using-vetkeys",
               ],
             },
             {
