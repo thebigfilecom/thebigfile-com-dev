@@ -1,5 +1,5 @@
 ---
-title: Governance
+title: Decentralized Web
 card: /img/roadmap/governance.card.jpg
 overlay: /img/roadmap/governance.overlay.jpg
 ---

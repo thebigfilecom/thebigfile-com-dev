@@ -1,5 +1,5 @@
 ---
-title: Boundary 
+title: Gateways
 card: /img/roadmap/boundary-nodes.card.jpg
 overlay: /img/roadmap/boundary-nodes.overlay.jpg
 ---
