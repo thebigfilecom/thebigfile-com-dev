@@ -1,7 +1,7 @@
 ---
-title: BigFile Node BigFile Testnet
+title: BigFile Private Testnet
 links:
-  Forum Link: https://forum.thebigfile.com/t/bigfile-node-bigfile-testnet/35
+  Forum Link: https://forum.thebigfile.com/t/bigfile-testnet/35
   BIG Wiki: https://wiki.thebigfile.com/wiki/
   Documentation: https://thebigfile.com/docs/current/home
 eta: Q2 2025
