@@ -1,5 +1,5 @@
 ---
-title: BigFile JS
+title: bigfile-js
 links:
   Forum Post:
   Proposal:

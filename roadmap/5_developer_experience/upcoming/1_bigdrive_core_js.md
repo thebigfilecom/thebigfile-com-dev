@@ -1,5 +1,5 @@
 ---
-title: BigDrive Core JS
+title: bigdrive-core-js
 links:
   Forum Post:
   Proposal:

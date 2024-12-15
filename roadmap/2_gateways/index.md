@@ -4,4 +4,4 @@ card: /img/roadmap/boundary-nodes.card.jpg
 overlay: /img/roadmap/boundary-nodes.overlay.jpg
 ---
 
-The team is developing features related to edge infrastructure, including search engine optimization (SEO), edge nodes, streaming support, and custom URLs.
+Gateways serve as the interface for users to access content on the decentralized web, enabling them to use their standard web browsers to view content locally by pointing to a transaction ID on the BigFile network.
