@@ -29,7 +29,7 @@ function InternetIdentityPage() {
       title="BIG ID"
       description="BIG ID on BigFile redefines user experiences by removing friction from the authentication journey and enabling data sovereignty."
     >
-      <ShareMeta image="/img/shareImages/share-internet-identity.jpg"></ShareMeta>
+      <ShareMeta image="/img/shareImages/share-bigid.jpg"></ShareMeta>
 
       <main
         className="text-black relative overflow-hidden"

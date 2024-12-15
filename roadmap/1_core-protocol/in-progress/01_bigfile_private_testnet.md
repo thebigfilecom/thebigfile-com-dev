@@ -2,7 +2,6 @@
 title: BigFile Private Testnet
 links:
   Forum Link: https://forum.thebigfile.com/t/bigfile-private-testnet/37
-  BIG Wiki: https://wiki.thebigfile.com/wiki/
   Documentation: https://thebigfile.com/docs/current/home
 eta: Q1 2025
 is_community: true

@@ -1,5 +1,5 @@
 ---
-title: BigFile Wallet BID ID
+title: BIG Token Presale
 links:
   Forum Link: https://forum.thebigfile.com/
   Proposal: https://dashboard.thebigfile.com/
