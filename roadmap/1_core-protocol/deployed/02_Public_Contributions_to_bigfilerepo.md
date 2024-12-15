@@ -2,7 +2,7 @@
 title: Public Contributions to BigFile repository
 links:
   Forum Post:
-  Proposal:
+  Proposal: https://github.com/thebigfilecom
 eta:
 is_community: true
 ---

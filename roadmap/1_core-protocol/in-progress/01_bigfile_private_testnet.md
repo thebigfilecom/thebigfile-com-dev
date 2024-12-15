@@ -5,7 +5,7 @@ links:
   Documentation: https://thebigfile.com/docs/current/home
 eta: Q1 2025
 is_community: true
-in_beta: true
+in_beta: false
 ---
 
-The BigFile Project operates as a limited-access development network ahead of the beta testnet release. Detailed updates, announcements, and explanations will be regularly shared on our Forum page. We welcome community contributions and encourage interested developers to contact us for access.
+BigFile is currently operating as a limited-access development network ahead of the beta testnet release. Regular updates, announcements, and clarifications will be shared on our Forum page. We welcome contributions from the community and encourage interested developers to reach out for access.
