@@ -239,11 +239,6 @@ const marketingNav = {
               description: "Extend Web2 software with blockchain",
             },
             {
-              name: "Gaming",
-              href: "/gaming",
-              description: "Paradigm shift in Web3 gaming",
-            },
-            {
               name: "Social Platforms",
               href: "/social-platforms",
               description: "Decentralized Social Media",

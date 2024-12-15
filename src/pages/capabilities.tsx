@@ -111,7 +111,7 @@ const cardsData: CardData[] = [
     description:
       "Until now, blockchains had to rely on expensive and slow oracles to read from off-chain data sources. BigFile smart contracts can directly connect to Web2 APIs, rendering oracles obsolete. This opens up countless possibilities, such as sending emails, push notifications, fetching digital asset or fiat prices, and much more—directly from the blockchain.",
     image: "/img/features/no-oracles-image.webp",
-    href: "/https-outcalls",
+    href: "/",
     refText: "About HTTPS outcalls",
     imageSide: "left",
   },
