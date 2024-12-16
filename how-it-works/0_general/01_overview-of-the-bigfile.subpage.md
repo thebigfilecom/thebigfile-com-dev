@@ -19,7 +19,7 @@ BigFile is supported by a decentralized ecosystem of nodes operated by miners. T
 ### Decentralized AI: A New Era of Data Management
 Artificial Intelligence (AI) thrives on vast amounts of data. BigFile addresses the challenges of secure data management, immutability, and provenance, which are critical for AI systems. Here's how BigFile empowers decentralized AI:
 
-- Permanent Data Storage
+- Decentralized Data Storage
 BigFile offers a pay-once storage model that guarantees data availability forever, eliminating recurring expenses. This makes it an ideal solution for scaling AI operations, which require predictable long-term storage costs.
 
 - Immutable Data Integrity

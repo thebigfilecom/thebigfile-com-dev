@@ -98,30 +98,30 @@ const SmallCard: React.FC<{
 
 const cardsData: CardData[] = [
   {
-    title: "Permanent Data Storage",
+    title: "Decentralized Data Storage",
     description:
-      "BigFile is a blockchain with Cube smart contracts that can provide web services by processing HTTP requests. This enables 100% of online services to be run directly from the blockchain, ensuring full decentralization.",
+      "BigFile offers the perfect solution for permanent, secure, and scalable file storage. With immutable data, bundling for efficient uploads, and self-sovereignty through decentralized gateways, BigFile provides a long-term answer to your file storage needs—whether for business, personal use, or critical data preservation.",
     image: "/img/features/serve-web.webp",
     href: null,
     refText: null,
     imageSide: "right",
   },
   {
-    title: "Connect Web2 and Web3 without oracles",
+    title: "Oracle and Blockchain Data",
     description:
-      "Until now, blockchains had to rely on expensive and slow oracles to read from off-chain data sources. BigFile smart contracts can directly connect to Web2 APIs, rendering oracles obsolete. This opens up countless possibilities, such as sending emails, push notifications, fetching digital asset or fiat prices, and much more—directly from the blockchain.",
+      "Cross-Chain and Modular Integration: As blockchain ecosystems become more interconnected, BigFile provides robust cross-chain functionality, enabling oracles and DeFi applications to seamlessly exchange data with Ethereum, Solana, and other major chains. Its modular design ensures smooth integration with diverse blockchain systems, granting access to BigFile’s data while delivering top-tier performance and security.",
     image: "/img/features/no-oracles-image.webp",
     href: "/",
-    refText: "About HTTPS outcalls",
+    refText: null,
     imageSide: "left",
   },
   {
-    title: "Googleable smart contracts.",
+    title: "Sites and Apps",
     description:
-      "Search engines like Google can’t index smart contracts running on other blockchains. Developers are often forced to use centralized cloud providers to host frontends, making them at least somewhat searchable—a compromise. BigFile, however, hosts smart contracts that can be directly indexed by all popular search engines. No need for frontends on public clouds. This is how true Web3 works.",
+      "Web applications and static sites can be seamlessly deployed to the permaweb, ensuring they remain accessible and unaltered indefinitely for a low, one-time hosting fee. This solution is ideal for decentralized applications, archive websites, educational resources, and legacy projects, offering long-term availability without the burden of ongoing maintenance costs.",
     image: "/img/features/seo-image.webp",
-    href: "https://forum.thebigfile.com/t/seo-support-for-fully-on-chain-websites-built-on-bigfile/25",
-    refText: "Read the blog",
+    href: "https://forum.thebigfile.com/t/sites-and-apps-management-in-bigfile-blockchain-network/42",
+    refText: "Read the Forum",
     imageSide: "right",
   },
   {
@@ -148,37 +148,35 @@ const cardsData: CardData[] = [
 
 const smallCardsData = [
   {
-    title: "Chain-Key Cryptography",
+    title: "Permanent Data Storage",
     description:
-      "BigFile employs a suite of advanced cryptographic mechanisms, collectively known as chain-key cryptography, enabling BIG to achieve functionalities and scalability that are unattainable on other blockchains.",
+      "BigFile introduces a pay once, enjoy forever model, enabling users to securely store data permanently without recurring fees. This decentralized and permanent storage solution eliminates the need for subscriptions or renewals, making it ideal for archiving data, safeguarding legal documents, preserving academic research, and storing personal or corporate files long-term.",
     href: "/how-it-works#Chain-key-technology",
   },
   {
-    title: "Concurrent Execution",
-    description: `Powered by BIG's asynchronous communication, "actor" smart contracts run in parallel, enabling horizontal scaling and preventing reentrancy attacks, such as the infamous DAO attack.`,
-    href: "/capabilities/actor-model",
+    title: "Blockweave Structure",
+    description: `BigFile leverages the innovative Blockweave structure, a distributed data storage mechanism inherited and further enhanced from Arweave. Unlike traditional blockchain architectures that require nodes to verify the entire chain, Blockweave optimizes this process by requiring nodes to validate only specific parts of the network. This approach significantly reduces resource consumption and improves the efficiency of data storage and retrieval processes.`,
+    href: "",
   },
   {
-    title: "Heartbeats",
-    description: `On other blockchain networks, smart contract computations can only be triggered by submitting a new transaction. In contrast, BigFile allows cube smart contracts to be configured for automatic invocation by the blockchain itself at specified block intervals.`,
-    href: "/capabilities/daemon-contracts",
+    title: "Proof of Access (PoA)",
+    description: `Proof of Access (PoA) is the core consensus mechanism that powers the BigFile network. Designed to ensure data integrity and security, PoA validates the storage and accessibility of data across the network. Unlike traditional Proof of Work (PoW) systems that prioritize computational power for mining new blocks, PoA requires miners to prove they can access specific data from previous blocks in the network, thus guaranteeing the continuity and integrity of the stored data.`,
+    href: "",
   },
   {
-    title: "Multi-block Transactions",
-    description: `Smart contract calls (TXs) can be long-running and span multiple blocks, eliminating the tedious "round gas limit" present on most blockchains. This simplification of smart contract programming unlocks new use cases.`,
-    href: "/capabilities/multi-block-transactions",
+    title: "Gateway Architecture",
+    description: `BigFile’s Gatewsay Architecture introduces a new paradigm for scalability and specialization in decentralized networks. Inspired by traditional cloud computing’s horizontal scaling model, subnets allow the network to grow by creating smaller, specialized blockchains within the broader BigFile ecosystem. Each gateway operates semi-independently, while still being interconnected with the main BigFile chain, enabling tailored use cases and optimized performance.`,
+    href: "",
   },
   {
-    title: "WebAssembly (Wasm)",
-    description: `Write cube smart contracts in any language that compiles to Wasm. SDKs are available for Motoko, Rust, TypeScript, Python, and C++, but you can also use any other language that compiles to Wasm.`,
-    href: "/capabilities/webassembly",
+    title: "Neural Mining",
+    description: `BigFile's innovative Neural Mining mechanism combines artificial intelligence (AI) and blockchain technology to create an advanced ecosystem that goes beyond traditional data storage and verification. Neural Mining leverages GPU-based mining infrastructure to provide high computational power for AI applications and the operation of large language models (LLMs) in a decentralized framework.`,
+    href: "/decentralized-ai",
   },
   {
-    title: "Subnets & infinite scalability",
-    description: `The BigFile incorporates a novel subnet architecture
-  that enables infinite scalability, making 100% on-chain
-  mass-market Web3 services possible. No cloud servers needed.`,
-    href: "/capabilities/limitless-scaling",
+    title: "Energy Efficiency & Sustainability",
+    description: `BigFile adopts an eco-conscious approach by integrating energy-optimized technologies and sustainable infrastructure. Building upon the energy-efficient Blockweave structure inherited from Arweave, BigFile enables both individuals and businesses to minimize their environmental impact.`,
+    href: "/capabilities/sustainability",
   },
 ];
 
@@ -236,13 +234,13 @@ function FeaturesPage() {
               className="tw-heading-3 md:tw-heading-60 mb-3 md:mb-6"
               variants={transitions.item}
             >
-              Web experience
+              Permanent and Decentralized
             </motion.h2>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-0"
               variants={transitions.item}
             >
-              The BigFile integrates several innovations to deliver web experiences that are often indistinguishable from Web2 — all powered directly by the blockchain.{" "}
+              BigFile integrates cutting-edge innovations to revolutionize web experiences with the power of blockchain and AI.
             </motion.p>
           </div>
         </AnimateSpawn>
@@ -296,21 +294,21 @@ function FeaturesPage() {
                 variants={transitions.item}
                 className="tw-heading-4 md:tw-heading-3 mb-4 "
               >
-                BIG ID — Web3 auth using WebAuthn
+                BigDrive — The On-chain Permanent File Storage
               </motion.h3>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm  mb-6 text-white-80"
                 variants={transitions.item}
               >
-                The BigFile blockchain has replaced the traditional username and password model with a more advanced and secure method of cryptographic authentication. This approach is not only more convenient but also works seamlessly across all of a user's devices and enhances privacy. It is based on the W3C's Web Authentication (WebAuthn) standard, utilizing hardware-based key protection for users.
+                Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, enjoy-forever model. Rethink your approach to cloud storage—because true decentralized demands a new way forward.
               </motion.p>
               <motion.p className="mb-0" variants={transitions.item}>
                 <Link
-                  href="/big-id"
+                  href="/bigdrive"
                   className="tw-heading-6 flex gap-2 items-center text-white hover:text-white-60 hover:no-underline"
                 >
                   <RightPointer className="w-6 h-6"></RightPointer>
-                  Wallet on BigFile
+                  Get Started
                 </Link>
               </motion.p>
             </div>
@@ -320,13 +318,13 @@ function FeaturesPage() {
               variants={transitions.item}
               className="tw-heading-4 md:tw-heading-3 mb-4 "
             >
-              Breakthrough performance
+              Decentralized Social Platforms
             </motion.h3>
             <motion.p
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-12"
               variants={transitions.item}
             >
-              Low latency and high throughput are the two most important metrics for measuring performance, and BigFile excels in both. Unlike most blockchains, BIG has no theoretical maximum for transactions per second (TX/s). Throughput scales horizontally with each added subnet, similar to how cloud computing scales with added machines. Smart contracts on different subnets can always communicate with each other, without being bottlenecked by the growing number of subnets.
+              Most social platforms share users' IP addresses with governments, privacy-focused apps rely on centralized servers, and few grant users full ownership of their data or the freedom to transfer it elsewhere. In an age where data ownership and censorship are critical concerns, it's time for social applications to harness the immutable and censorship-resistant power of decentralized technology.
             </motion.p>
 
             
@@ -369,13 +367,13 @@ function FeaturesPage() {
               variants={transitions.item}
               className="tw-heading-4 md:tw-heading-3 mb-4 "
             >
-              100% On-Chain: No Cloud Required
+              Fully On-Chain: Say Goodbye to the Cloud
             </motion.h3>
             <motion.p
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-0"
               variants={transitions.item}
             >
-              The BigFile offers a comprehensive tech stack for developers to build on. It can host online services and games entirely on-chain, without ever relying on centralized cloud providers. This ensures complete decentralization and eliminates single points of failure.
+              BigFile delivers a full-stack solution for developers to build decentralized online services and games. By operating entirely on-chain without any reliance on centralized cloud providers, BigFile ensures true decentralization, enhanced security, and resilience against single points of failure.
             </motion.p>
           </SingleCard>
 
@@ -384,22 +382,22 @@ function FeaturesPage() {
               variants={transitions.item}
               className="tw-heading-4 md:tw-heading-3 mb-4 "
             >
-              Reverse Gas Model
+              Web3 Gaming and NFTs
             </motion.h3>
             <motion.p
               className="tw-paragraph md:tw-lead-sm text-black-60 mb-4"
               variants={transitions.item}
             >
-              One of the major hurdles to blockchain adoption for end users is having to buy and hold tokens to interact with the blockchain to pay for gas fees. Developers charge up their smart contracts with cycles (the BIG analogue to gas), so users don’t have to pay when interacting with the smart contracts. This removes a major barrier of entry for end users.
+              In the world of NFTs and gaming, creators and players demand permanence and reliability. BigFile provides the foundation for unruggable digital assets, offering unparalleled solutions for NFT storage and gaming infrastructure. Whether you're building an NFT marketplace, minting atomic assets, or creating immersive gaming worlds, BigFile ensures tamper-proof, cost-effective, and accessible digital creations.
             </motion.p>
 
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
-                href="/capabilities/reverse-gas"
+                href="/nft"
                 className="tw-heading-6 flex gap-2 items-center"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
-                More on the Reverse Gas Model
+                More on the Web3 & NFTs
               </Link>
             </motion.p>
           </SingleCard>
@@ -466,7 +464,7 @@ function FeaturesPage() {
             </motion.p>
             <motion.p className="mb-0" variants={transitions.item}>
               <Link
-                href="https://forum.thebigfile.com/t/streamlining-bureaucracy-with-bigfile/26"
+                href="https://forum.thebigfile.com/t/streamlining-bureaucracy-with-bigfile/41"
                 className="tw-heading-6 flex gap-2 items-center text-white hover:text-white-60 hover:no-underline"
               >
                 <RightPointer className="w-6 h-6"></RightPointer>
@@ -474,87 +472,6 @@ function FeaturesPage() {
               </Link>
             </motion.p>
           </SplitCard>
-        </section>
-
-        <AnimateSpawn
-          className="container-10 text-white relative mb-15 mt-48 md:mt-56"
-          el={motion.section}
-          variants={transitions.container}
-        >
-          <motion.div
-            variants={transitions.fadeIn}
-            className="
-              z-[-1]
-              blob
-              blob-purple 
-              blob-md md:blob-lg
-              blob-center
-            "
-          ></motion.div>
-          <div className="md:w-6/10 mx-auto text-center">
-            <motion.h2
-              className="tw-heading-3 md:tw-heading-60 mb-3 md:mb-6"
-              variants={transitions.item}
-            >
-              Democracy on the blockchain
-            </motion.h2>
-            <motion.p
-              className="tw-lead-sm md:tw-lead mb-0"
-              variants={transitions.item}
-            >
-              DAOs are the future of the digital economy and a fundamental component of BigFile.
-            </motion.p>
-          </div>
-        </AnimateSpawn>
-        <section className="container-12 grid md:grid-cols-2 gap-5">
-          {cardsData.slice(3, 5).map((card, index) => (
-            <SplitCard
-              className="md:col-span-2"
-              key={index}
-              imageSide={card.imageSide}
-              imageSideClassName={
-                card.image === "/img/features/sns-image.webp"
-                  ? "relative w-full min-h-[50vw] sm:min-h-[20vh] md:min-h-0 md:h-full overflow-hidden"
-                  : null
-              }
-              image={
-                <img
-                  className={
-                    card.image === "/img/features/sns-image.webp"
-                      ? "px-6 w-[550px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                      : null
-                  }
-                  src={card.image}
-                  alt=""
-                  loading="lazy"
-                ></img>
-              }
-            >
-              <motion.h3
-                className="tw-heading-4 md:tw-heading-3 mb-4"
-                variants={transitions.item}
-              >
-                {card.title}
-              </motion.h3>
-              <motion.p
-                className="tw-paragraph md:tw-lead-sm mb-0 text-black-60 mb-6"
-                variants={transitions.item}
-              >
-                {card.description}
-              </motion.p>
-              {card.refText && card.href && (
-                <motion.p className="mb-0" variants={transitions.item}>
-                  <Link
-                    href={card.href}
-                    className="tw-heading-6 flex gap-2 items-center"
-                  >
-                    <RightPointer className="w-6 h-6"></RightPointer>
-                    {card.refText}
-                  </Link>
-                </motion.p>
-              )}
-            </SplitCard>
-          ))}
         </section>
 
         <AnimateSpawn
@@ -630,13 +547,13 @@ function FeaturesPage() {
               className="tw-heading-3 md:tw-heading-60 mb-3 md:mb-6"
               variants={transitions.item}
             >
-              Take a tech dive
+              Explore the Blockchain of Tomorrow
             </motion.h2>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-6"
               variants={transitions.item}
             >
-              Discover the inner workings of the BigFile blockchain through easy-to-read tech articles covering the core protocol, governance, chain-key cryptography, chain-key signatures, and more. Explore open-source repositories, in-depth white papers, and additional resources.
+              Gain a deeper understanding of the BigFile blockchain with comprehensive technical articles detailing the BigFile Protocol and its groundbreaking features. Explore open-source repositories, in-depth technical documentation, and a vast array of resources to empower your development journey.
             </motion.p>
             <motion.p
               className="tw-lead-sm md:tw-lead mb-0"

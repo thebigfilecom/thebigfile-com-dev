@@ -161,7 +161,7 @@ function DecentralizedAIPage() {
                 alt=""
                 className="mb-6"
               ></img>
-              <h3 className="sm:tw-heading-5 mb-2">Permanent Data Storage</h3>
+              <h3 className="sm:tw-heading-5 mb-2">Decentralized Data Storage</h3>
               <p className="tw-paragraph mb-0">
               The innovative economic model of BigFile guarantees that a single upfront payment secures data storage and accessibility for eternity, completely eliminating recurring costs and subscription fees.
               </p>

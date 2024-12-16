@@ -10,6 +10,5 @@ Cubes can be executed concurrently and are capable of communicating within and a
 - serve a user interface directly to any web browser,
 - hold gigabytes of memory for a low fee,
 - perform substantial amounts of computation at a low cost, and
-- pay for their own computation ([reverse gas model](/capabilities/reverse-gas/)).
 
 Cubes can be implemented in any language that compiles to WebAssembly. See selection of cube development kits ([CDKs])(https://thebigfile.com/docs/current/developer-docs/smart-contracts/write/overview).

@@ -39,7 +39,7 @@ const Content: React.FC = () => {
         <motion.div className="flex-[5] space-y-5" variants={transitions.item}>
           <div className="bg-white rounded-xl p-6 md:p-8">
             <h3 className="tw-heading-6 md:tw-heading-4 mb-4">
-              Permanent Data Storage
+             Decentralized Data Storage
             </h3>
             <p className="tw-paragraph mb-0">
               Most people rely on cloud storage apps, social media platforms, and personal hard drives to store their digital files, but these options are not built to last. Hard drives fail, social media policies shift unpredictably, and cloud storage demands ongoing subscriptions. BigDrive provides a lasting alternative: pay once, store forever. With BigDrive's decentralized data storage, your files remain secure for generations—no subscriptions required.
