@@ -15,7 +15,7 @@ function FileStorage() {
   return (
     <Layout
       title="File Storage"
-      description="From legal contracts to digital collections, BigFile guarantees that your permanent data will remain secure and accessible for generations to come."
+      description="From legal contracts to digital collections, BigFile guarantees that your decentralized data will remain secure and accessible for generations to come."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <ShareMeta image="/img/shareImages/file-storage.jpg"></ShareMeta>

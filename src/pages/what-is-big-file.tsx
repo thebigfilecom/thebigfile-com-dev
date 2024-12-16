@@ -50,7 +50,7 @@ function WhatIsBigPage() {
                 className="pb-[15%] sm:pb-0 tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                BigFile is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
+                BigFile is an AI-powered decentralized blockchain network engineered to provide decentralized, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
               </motion.p>
             </div>
           </AnimateSpawn>
@@ -66,7 +66,7 @@ function WhatIsBigPage() {
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-8 md:mb-10 text-gradient"
               variants={transitions.item}
             >
-              BigFile (BIG) is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. 
+              BigFile is an AI-powered decentralized blockchain network engineered to provide decentralized, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. 
               <br />
               BigFile offers a revolutionary approach to decentralized data management, enabling individuals and businesses to create an open, borderless digital future free from centralized control.
             </motion.h2>
@@ -188,7 +188,7 @@ function WhatIsBigPage() {
                 />
                 <h3 className="tw-lead my-3 md:tw-title-sm">Blockchain Data</h3>
                 <p className="tw-paragraph-sm text-black/60  mb-0">
-                Blockchain applications and oracle services must be able to trust that the data they rely on will remain permanently accessible. BigFile indexes and retrieves permanent data storage on BigFile blockchain, ensuring that data such as transaction histories, price feeds, and oracle inputs are archived and served forever.
+                Blockchain applications and oracle services must be able to trust that the data they rely on will remain permanently accessible. BigFile indexes and retrieves decentralized data storage on BigFile blockchain, ensuring that data such as transaction histories, price feeds, and oracle inputs are archived and served forever.
                 </p>
               </motion.div>
             </AnimateSpawn>

@@ -9,7 +9,7 @@ slug: architecture-of-the-bigfile
 
 BigFile: Redefining Decentralized Blockchain for the Future
 
-BigFile (BIG) is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. BigFile offers a revolutionary approach to decentralized data management, enabling individuals and businesses to create an open, borderless digital future free from centralized control.
+BigFile is an AI-powered decentralized blockchain network engineered to provide decentralized, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. BigFile offers a revolutionary approach to decentralized data management, enabling individuals and businesses to create an open, borderless digital future free from centralized control.
 
 ## Key Features of BigFile
 
@@ -39,7 +39,7 @@ BigFile's decentralized infrastructure offers transformative benefits for web ap
 BigFile’s pay-once, store-forever model ensures websites and applications remain accessible indefinitely without ongoing hosting fees.
 
 - Link Rot Prevention
-BigFile combats link rot by assigning immutable, permanent links to every piece of content. This guarantees that websites and resources remain accessible without risk of data loss.
+BigFile combats link rot by assigning immutable, decentralized links to every piece of content. This guarantees that websites and resources remain accessible without risk of data loss.
 
 - Freedom from Centralized Censorship
 BigFile’s decentralized network protects web applications from censorship, ensuring uncensorable hosting resistant to interference from governments or corporations.
@@ -93,7 +93,7 @@ BigFile guarantees that every NFT and digital asset remains tamper-proof and tra
 BigFile nodes provide high-performance, scalable storage for gaming assets, ensuring seamless integration with complex gaming ecosystems.
 
 - Transition from IPFS
-BigFile simplifies the migration of NFT platforms from IPFS to its permanent storage solution, providing a more reliable and cost-effective alternative.
+BigFile simplifies the migration of NFT platforms from IPFS to its decentralized storage solution, providing a more reliable and cost-effective alternative.
 
 
 ### Developer-Friendly Infrastructure

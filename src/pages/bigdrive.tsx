@@ -77,7 +77,7 @@ const cardsData = [
     title: "Built for Developers",
     subtitle: "Echo your expertise in the field",
     description:
-      "Bring your next project to life on the permaweb. Use BigDrive to create a permanent website or launch a forever-running app with ease.",
+      "Bring your next project to life on the permaweb. Use BigDrive to create a decentralized website or launch a forever-running app with ease.",
   },
   {
     id: 4,
@@ -85,7 +85,7 @@ const cardsData = [
     title: "Blockchain for Everyone",
     subtitle: "A Blockchain for Everyone",
     description:
-      "Like the internet, but built to last for generations. Preserve websites, news articles, and files in a permanent digital time capsule.",
+      "Like the internet, but built to last for generations. Preserve websites, news articles, and files in a decentralized digital time capsule.",
   },
 ];
 

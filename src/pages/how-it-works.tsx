@@ -119,7 +119,7 @@ function HowItWorks() {
                Bringing the BigFile Vision to Life
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-              BigFile is an AI-powered, decentralized blockchain network designed to deliver permanent, immutable, and scalable data storage solutions. Dive into its cutting-edge technology through open-source repositories, comprehensive video academy sessions, white papers, publications, and detailed technical articles.
+              BigFile is an AI-powered, decentralized blockchain network designed to deliver decentralized, immutable, and scalable data storage solutions. Dive into its cutting-edge technology through open-source repositories, comprehensive video academy sessions, white papers, publications, and detailed technical articles.
               </p>
             </div>
           </div>

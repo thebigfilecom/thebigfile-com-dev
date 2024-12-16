@@ -98,7 +98,7 @@ const SmallCard: React.FC<{
 
 const cardsData: CardData[] = [
   {
-    title: "Serve the web directly from smart contracts.",
+    title: "Permanent Data Storage",
     description:
       "BigFile is a blockchain with Cube smart contracts that can provide web services by processing HTTP requests. This enables 100% of online services to be run directly from the blockchain, ensuring full decentralization.",
     image: "/img/features/serve-web.webp",
@@ -211,7 +211,7 @@ function FeaturesPage() {
                 className="tw-lead-sm md:tw-lead mb-0"
                 variants={transitions.item}
               >
-                BigFile (BIG) is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
+                BigFile is an AI-powered decentralized blockchain network engineered to provide decentralized, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
               </motion.p>
             </div>
           </div>

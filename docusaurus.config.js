@@ -172,7 +172,7 @@ const marketingNav = {
             {
               name: "Capabilities",
               href: "/capabilities",
-              description: "Transforming the Cloud & Document",
+              description: "Transforming the AI & Document",
             },
             {
               name: "File Storage",

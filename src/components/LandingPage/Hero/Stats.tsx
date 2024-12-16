@@ -173,7 +173,7 @@ export const EthEquivalentTxRate = () => {
           <Info>
             <h3 className="tw-button-xs mb-1">Memory is $30/GB / Forever</h3>
             <p className="tw-caption text-white/50 mb-0">
-            BigDrive provides permanent, secure data storage for a simple one-time fee. Easily top up with BIG tokens to add storage credits. Plus, downloading your data or sharing your files is always free.
+            BigDrive provides decentralized, secure data storage for a simple one-time fee. Easily top up with BIG tokens to add storage credits. Plus, downloading your data or sharing your files is always free.
             </p>
           </Info>
         </figcaption>

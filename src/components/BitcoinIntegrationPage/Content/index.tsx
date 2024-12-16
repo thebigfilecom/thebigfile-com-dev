@@ -42,7 +42,7 @@ const Content: React.FC = () => {
               Permanent Data Storage
             </h3>
             <p className="tw-paragraph mb-0">
-              Most people rely on cloud storage apps, social media platforms, and personal hard drives to store their digital files, but these options are not built to last. Hard drives fail, social media policies shift unpredictably, and cloud storage demands ongoing subscriptions. BigDrive provides a lasting alternative: pay once, store forever. With BigDrive's permanent data storage, your files remain secure for generations—no subscriptions required.
+              Most people rely on cloud storage apps, social media platforms, and personal hard drives to store their digital files, but these options are not built to last. Hard drives fail, social media policies shift unpredictably, and cloud storage demands ongoing subscriptions. BigDrive provides a lasting alternative: pay once, store forever. With BigDrive's decentralized data storage, your files remain secure for generations—no subscriptions required.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 md:p-8">
