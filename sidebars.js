@@ -699,13 +699,13 @@ const sidebars = {
               },
               items: [
                 "tutorials/developer-journey/level-4/4.1-big-ledger",
-                "tutorials/developer-journey/level-4/4.4-nns-governance",
+                "tutorials/developer-journey/level-4/4.4-bigdrive-governance",
                 "tutorials/developer-journey/level-4/4.5-using-quill",
               ],
             },
             {
               type: "category",
-              label: "Level 5: BigFile astronaut",
+              label: "Level 5: BigFile",
               link: {
                 type: "doc",
                 id: "tutorials/developer-journey/level-5/index",
