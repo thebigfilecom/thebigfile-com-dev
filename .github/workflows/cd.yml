@@ -11,15 +11,13 @@ on:
     types: redeploy
 
 jobs:
-  deploy-ic:
-    name: "Deploy to BIG"
+  deploy:
+    name: "Deploy"
     runs-on: ubuntu-latest
-    concurrency:
-      group: "website update"
-      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 18
       - run: npm install
+      - run: npm run build

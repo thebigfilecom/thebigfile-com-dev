@@ -1,5 +1,5 @@
 import Link from "@docusaurus/Link";
-import DarkHeroStyles from "@site/src/components/Common/DarkHeroStyles";
+import DarkHeroStyles from "../components/Common/DarkHeroStyles";
 import transitions from "@site/static/transitions.json";
 import Layout from "@theme/Layout";
 import { motion } from "framer-motion";

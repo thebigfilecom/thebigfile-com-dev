@@ -14,7 +14,8 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "analyze": "NODE_OPTIONS=--max_old_space_size=24000 docusaurus build --bundle-analyzer",
-    "postbuild": "sh download-redirected-files.sh"
+    "postbuild": "sh download-redirected-files.sh",
+    "prebuild": "ts-node scripts/generate-search-index.ts"
   },
   "dependencies": {
     "@dfinity/candid": "^0.15.4",

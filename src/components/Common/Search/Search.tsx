@@ -1,11 +1,9 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { createActor } from "./actor";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { PageSearchResult } from "@site/search/src/declarations/search/search.did";
+import { searchContent, SearchResult, PageSearchResult } from '../../../utils/search';
 import { createFocusTrap } from "focus-trap";
 import Link from "@docusaurus/Link";
-import { trackEvent } from "@site/src/utils/matomo";
 import useLockBodyScroll from "../../../utils/use-lock-body-scroll";
 
 let initialTerm = "";
@@ -17,7 +15,6 @@ const Search: FC<{ onClose: () => void }> = ({ onClose }) => {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext();
-  const actorRefPromise = useRef<Promise<ReturnType<typeof createActor>>>(null);
   const [term, setTerm] = useState<string>(initialTerm);
   const [results, setResults] = useState<PageSearchResult[] | null>(
     initialResults
@@ -30,11 +27,6 @@ const Search: FC<{ onClose: () => void }> = ({ onClose }) => {
   useLockBodyScroll();
 
   useEffect(() => {
-    actorRefPromise.current = import("./actor").then(({ createActor }) => {
-      console.log("search module loaded");
-      return createActor(customFields["searchCanisterId"] as string);
-    });
-
     // hack part 2 to make sure the input is focused on ios and the keyboard opens
     const tmpInput = document.querySelector(
       "#ios-tmp-input"
@@ -72,11 +64,7 @@ const Search: FC<{ onClose: () => void }> = ({ onClose }) => {
 
     setLoading(true);
 
-    actorRefPromise.current.then(async (actor) => {
-      initialTerm = term;
-
-      const results = await actor.query(term);
-
+    handleSearch(term).then((results) => {
       if (!unmounted) {
         setLoading(false);
         initialResults = results;
@@ -88,6 +76,15 @@ const Search: FC<{ onClose: () => void }> = ({ onClose }) => {
     };
   }, [term, setLoading]);
 
+  const handleSearch = async (query: string): Promise<PageSearchResult[]> => {
+    try {
+      return await searchContent(query);
+    } catch (error) {
+      console.error('Search error:', error);
+      return [];
+    }
+  };
+
   function handleResultClick(
     e: React.MouseEvent<HTMLAnchorElement>,
     term: string,
@@ -96,10 +93,6 @@ const Search: FC<{ onClose: () => void }> = ({ onClose }) => {
     if (!e.metaKey && !e.ctrlKey) {
       onClose();
     }
-
-    try {
-      trackEvent("Search", term, title);
-    } catch {}
   }
 
   return (
@@ -206,22 +199,22 @@ const Search: FC<{ onClose: () => void }> = ({ onClose }) => {
                           )
                         : result.results
                       ).map((pageSection) => (
-                        <div className="" key={pageSection.doc.id.toString()}>
+                        <div className="" key={pageSection.id}>
                           <Link
                             className="tw-heading-7 text-infinite hover:no-underline hover:text-black"
-                            href={pageSection.doc.url}
+                            href={pageSection.url}
                             onClick={(e) =>
                               handleResultClick(
                                 e,
                                 term,
-                                result.title + " / " + pageSection.doc.title
+                                result.title + " / " + pageSection.title
                               )
                             }
                           >
-                            {pageSection.doc.title}
+                            {pageSection.title}
                           </Link>
                           <p className="tw-paragraph text-black-60 whitespace-nowrap text-ellipsis overflow-hidden mb-0">
-                            {pageSection.doc.excerpt}
+                            {pageSection.excerpt}
                           </p>
                         </div>
                       ))}
