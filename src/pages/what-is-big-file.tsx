@@ -57,10 +57,10 @@ function WhatIsBigPage() {
         </section>
 
         <AnimateSpawn
-          className="container-8 mt-80 md:mt-[540px] relative"
-          el={motion.section}
-          variants={transitions.container}
-        >
+  className="container-8 mt-20 md:mt-[120px] relative"
+  el={motion.section}
+  variants={transitions.container}
+>
           <div className="">
             <motion.h2
               className="tw-heading-5 sm:tw-heading-4 md:tw-heading-3 mb-8 md:mb-10 text-gradient"
