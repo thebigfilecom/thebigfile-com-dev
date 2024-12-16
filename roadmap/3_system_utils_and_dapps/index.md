@@ -4,4 +4,4 @@ card: /img/roadmap/system-utility.card.jpg
 overlay: /img/roadmap/system-utility.overlay.jpg
 ---
 
-This section encompasses system utilities created by the BigFile team, along with essential tools for dApp development. It includes components such as the front-end dApp framework, BIG ID authentication, and token standards.
+This section features system utilities developed by the BigFile team, along with essential dApp tools that facilitate core functionalities for the BigFile network. It also includes network management utilities, such as BIG Token operations and BIG ID authentication.

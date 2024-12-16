@@ -4,9 +4,10 @@ links:
   Forum Link: https://forum.thebigfile.com/t/bigfile-mainnet/36
   BIG Wiki: https://wiki.thebigfile.com/wiki/
   Documentation: https://thebigfile.com/docs/current/home
-eta: Q1 2026
+eta: Q2 2026
 is_community: true
-in_beta: true
+in_beta: false
 ---
 
-BigFile is being developed as a fork of the Arweave blockchain network. The client and replica software, operated by nodes, has been rebranded as 'bigfile' within the BigFile Project, and development is actively underway under this new identity. Designed to operate at web speed, BigFile aims to deliver a blockchain network capable of continuous scalability. Detailed updates, explanations, and announcements will be regularly shared on the Forum and Wiki.
+BigFile Mainnet: Target Launch Date – August 30, 2026.
+This is the projected timeline for the Mainnet launch, contingent on the successful completion of both the Beta Testnet and Testnet phases. Regular updates, detailed explanations, and key announcements will be shared on our Forum Page to keep the community informed throughout the process.
