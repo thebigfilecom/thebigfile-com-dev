@@ -26,7 +26,7 @@ function Index() {
       >
         <div className={styles.leftContainer}>
           <motion.p variants={transitions.item} className={styles.Title}>
-            Canisters & cycles
+            Smart Contracts & cycles
           </motion.p>
           <motion.p variants={transitions.item} className={styles.Text}>
             The BIG is composed of canisters that require cycles to perform
@@ -39,7 +39,7 @@ function Index() {
           >
             <Link
               className={styles.actionButton}
-              to="/docs/current/concepts/canisters-code"
+              to="/docs/current/concepts/smartcontracts-code"
             >
               CONCEPTS
             </Link>

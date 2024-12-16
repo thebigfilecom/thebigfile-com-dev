@@ -167,7 +167,6 @@ const redirects = `
   /docs/current/tutorials/index /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/tutorials/ /docs/current/developer-docs/getting-started/overview-of-bigfile
   /docs/current/developer-docs/backend/eu-subnets /docs/current/concepts/subnet-types
-  /docs/current/samples/* /docs/current/samples/overview
   /docs/current/developer-docs/backend/choosing-language /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/production/deploying-and-upgrading /docs/current/developer-docs/smart-contracts/deploy/overview
   /docs/current/developer-docs/index /docs/current/developer-docs/getting-started/overview-of-bigfile
@@ -290,14 +289,10 @@ const redirects = `
   /docs/current/developer-docs/production/custom-domain/ /docs/current/developer-docs/web-apps/custom-domains/using-custom-domains
   /docs/current/developer-docs/production/custom-domain/dns-setup /docs/current/developer-docs/web-apps/custom-domains/dns-setup
   /docs/current/developer-docs/backend/design-dapps /docs/current/developer-docs/web-apps/design-dapps
-  /docs/current/developer-docs/integrations/independently-verifying-ic-signatures /docs/current/developer-docs/web-apps/independently-verifying-ic-signatures
   /docs/current/developer-docs/integrations/big-id/overview  /docs/current/developer-docs/web-apps/user-login/big-id/overview
   /docs/current/developer-docs/integrations/big-id/creating-big-id /docs/current/developer-docs/web-apps/user-login/big-id/creating-big-id
   /docs/current/developer-docs/integrations/big-id/integrate-identity /docs/current/developer-docs/web-apps/user-login/big-id/integrate-big-id
-  /docs/current/developer-docs/integrations/big-id/alternative-origins /docs/current/developer-docs/web-apps/user-login/big-id/alternative-origins
-  /docs/current/developer-docs/http-compatible-canisters/custom-http-canisters /docs/current/developer-docs/web-apps/http-compatible-canisters/custom-http-canisters
-  /docs/current/developer-docs/http-compatible-canisters/serving-json-over-http /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-json-over-http
-  /docs/current/developer-docs/http-compatible-canisters/serving-static-assets-over-http  /docs/current/developer-docs/web-apps/http-compatible-canisters/serving-static-assets-over-http
+  /docs/current/developer-docs/integrations/big-id/alternative-origins /docs/current/developer-docs/web-apps/user-login/big-id/alternative-origins  
   /docs/current/developer-docs/integrations/ledger/introduction_and_overview /docs/current/developer-docs/defi/overview
   /docs/current/developer-docs/integrations/ledger/  /docs/current/developer-docs/defi/big-tokens/overview
   /docs/current/developer-docs/integrations/ledger/ledger-local-setup  /docs/current/developer-docs/defi/big-tokens/ledger-local-setup

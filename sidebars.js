@@ -424,11 +424,6 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "Frameworks",
-          items: ["developer-docs/web-apps/frameworks/juno"],
-        },
-        {
-          type: "category",
           label: "Custom domains",
           items: [
             "developer-docs/web-apps/custom-domains/using-custom-domains",
@@ -436,8 +431,6 @@ const sidebars = {
           ],
         },
         "developer-docs/web-apps/design-dapps",
-        "developer-docs/web-apps/independently-verifying-ic-signatures",
-        "developer-docs/web-apps/obtain-verify-ic-pubkey",
         {
           type: "category",
           label: "User sign-up and login",
@@ -453,27 +446,6 @@ const sidebars = {
               ],
             },
             "developer-docs/web-apps/user-login/email-password",
-          ],
-        },
-        {
-          type: "category",
-          label: "Using HTTP certification",
-          items: [
-            {
-              type: "doc",
-              id: "developer-docs/web-apps/http-compatible-canisters/custom-http-canisters",
-              label: "Custom HTTP canisters",
-            },
-            {
-              type: "doc",
-              id: "developer-docs/web-apps/http-compatible-canisters/serving-json-over-http",
-              label: "Serving JSON over HTTP",
-            },
-            {
-              type: "doc",
-              id: "developer-docs/web-apps/http-compatible-canisters/serving-static-assets-over-http",
-              label: "Serving static assets over HTTP",
-            },
           ],
         },
       ],
@@ -572,51 +544,7 @@ const sidebars = {
         },
       ],
     },
-    {
-      type: "category",
-      label: "Sample apps",
-      items: [
-        "samples/overview",
-        {
-          type: "category",
-          label: "Hosting",
-          items: [
-            "references/samples/hosting/godot-html5-template/README",
-            "references/samples/hosting/photo-storage/README",
-            "references/samples/hosting/static-website/README",
-          ],
-        },
-        {
-          type: "category",
-          label: "Rust",
-          items: [
-            "references/samples/rust/basic_dao/README",
-            "references/samples/rust/canister-info/README",
-            "references/samples/rust/composite_query/README",
-            "references/samples/rust/counter/README",
-            "references/samples/rust/defi/src/frontend/README",
-            "references/samples/rust/dip721-nft-container/README",
-            "references/samples/rust/encrypted-notes-dapp/README",
-            "references/samples/rust/icp_transfer/README",
-            "references/samples/rust/nft-wallet/README",
-            "references/samples/rust/performance_counters/README",
-            "references/samples/rust/periodic_tasks/README",
-            "references/samples/rust/qrcode/README",
-            "references/samples/rust/token_transfer/README",
-            "references/samples/rust/token_transfer_from/README",
-          ],
-        },
-        {
-          type: "category",
-          label: "Native dapps",
-          items: [
-            "references/samples/native-apps/unity_ii_applink/README",
-            "references/samples/native-apps/unity_ii_deeplink/README",
-            "references/samples/native-apps/unity_ii_deeplink/ii_integration_dapp/README",
-          ],
-        },
-      ],
-    },
+
     {
       type: "category",
       label: "Bootcamps",
@@ -746,7 +674,7 @@ const sidebars = {
       type: "category",
       label: "Core concepts",
       items: [
-        "concepts/canisters-code",
+        "concepts/smartcontracts-code",
         "concepts/governance",
         "concepts/nodes-subnets",
         "concepts/subnet-types",
