@@ -18,7 +18,7 @@ function FileStorage() {
       description="From legal contracts to digital collections, BigFile guarantees that your permanent data will remain secure and accessible for generations to come."
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
-      <ShareMeta image="/img/shareImages/share-bitcoin-integration.jpg"></ShareMeta>
+      <ShareMeta image="/img/shareImages/file-storage.jpg"></ShareMeta>
 
       <main
         className="text-black relative overflow-hidden"

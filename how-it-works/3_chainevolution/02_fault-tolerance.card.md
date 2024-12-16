@@ -6,6 +6,6 @@ title: Fault tolerance
 
 # Fault tolerance
 
-In any large-scale distributed system, it is inevitable that individual nodes will fail due to hardware malfunctions, network connectivity issues, or even the owner deciding to remove the nodes from the network. In such cases, the BIG Network Nervous System selects a spare node to replace the failed node in its subnet. The new node then joins the subnet, performs a state synchronization with the existing nodes, and begins contributing to the subnet blockchain's consensus protocol.
+In any large-scale distributed system, node failures are inevitable due to hardware malfunctions, network issues, or an owner's decision to withdraw a node from the network. When this occurs, the BigFile Network System seamlessly replaces the failed node with a spare node within the subnet. The new node synchronizes its state with the existing nodes and immediately begins participating in the subnet blockchain's consensus protocol.
 
 [Go deeper](/how-it-works/fault-tolerance/)

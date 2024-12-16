@@ -4,4 +4,4 @@ card: /img/roadmap/system-utility.card.jpg
 overlay: /img/roadmap/system-utility.overlay.jpg
 ---
 
-BigFile teamwork includes system utilities and dapp development. This includes the NNS front-end dapp, BIG ID, and token standards.
+This section features system utilities developed by the BigFile team, along with essential dApp tools that facilitate core functionalities for the BigFile network. It also includes network management utilities, such as BIG Token operations and BIG ID authentication.

@@ -100,7 +100,7 @@ function AcceleratorPage() {
       title="BigDrive | The On-chain Permanent File Storage"
       description="Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, store-forever model."
     >
-      <ShareMeta image="/img/shareImages/share-olympus.jpg"></ShareMeta>
+      <ShareMeta image="/img/shareImages/share-bigdrive.jpg"></ShareMeta>
 
       <main
         className="text-black relative overflow-hidden"
