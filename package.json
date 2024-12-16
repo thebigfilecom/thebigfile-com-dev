@@ -1,6 +1,6 @@
 {
   "name": "@thebigfilecom/thebigfile-com-dev",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
