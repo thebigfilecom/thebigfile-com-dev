@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { searchContent, SearchResult, PageSearchResult } from '../../../utils/search';
+import { searchContent, PageSearchResult } from '../../../utils/search';
 import { createFocusTrap } from "focus-trap";
 import Link from "@docusaurus/Link";
 import useLockBodyScroll from "../../../utils/use-lock-body-scroll";

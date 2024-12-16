@@ -1,3 +1,17 @@
+export interface SearchResult {
+  id: string;
+  title: string;
+  excerpt: string;
+  url: string;
+  score: number;
+}
+
+export interface PageSearchResult {
+  url: string;
+  title: string;
+  results: SearchResult[];
+}
+
 export async function searchContent(query: string): Promise<PageSearchResult[]> {
   if (!query.trim()) {
     return [];
