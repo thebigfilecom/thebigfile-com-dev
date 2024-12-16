@@ -140,7 +140,7 @@ function InternetIdentityPage() {
                 Easy integration
               </h3>
               <p className="tw-paragraph md:tw-lead-sm mb-3 md:mb-6">
-               A local-first, self-custodial wallet with comprehensive features: create, import, or export wallets using passphrase or key files, enjoy seamless Ledger support, send and receive BIG tokens, upload permanent data (text, files, folders, or deploy static websites), and easily view transactions and data.
+               A local-first, self-custodial wallet with comprehensive features: create, import, or export wallets using passphrase or key files, enjoy seamless Ledger support, send and receive BIG tokens, upload decentralized data (text, files, folders, or deploy static websites), and easily view transactions and data.
               </p>
               <p className="mb-0">
                 <Link
@@ -373,7 +373,7 @@ function InternetIdentityPage() {
             </Faq>
             <Faq title="Can I send BIG tokens to MyEtherWallet/another third party wallet or an ETH address?">
               <p>
-              No, BIG tokens are fundamentally incompatible with MyEtherWallet, third-party wallets, or Ethereum addresses. Sending your BIG tokens to addresses or wallets on other blockchains will result in their permanent loss. Always ensure you are using a wallet compatible with the BigFile network.
+              No, BIG tokens are fundamentally incompatible with MyEtherWallet, third-party wallets, or Ethereum addresses. Sending your BIG tokens to addresses or wallets on other blockchains will result in their decentralized loss. Always ensure you are using a wallet compatible with the BigFile network.
               </p>
             </Faq>
           </FaqSection>

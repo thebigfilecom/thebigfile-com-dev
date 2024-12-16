@@ -1,0 +1,14 @@
+{
+  "pages": [
+    {
+      "path": "/docs/current/home",
+      "content": "BigFile Documentation",
+      "title": "Documentation"
+    },
+    {
+      "path": "/what-is-big-file",
+      "content": "BigFile is an AI-powered decentralized blockchain network",
+      "title": "What is BigFile"
+    }
+  ]
+} 

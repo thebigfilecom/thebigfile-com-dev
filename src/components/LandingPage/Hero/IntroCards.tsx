@@ -25,7 +25,7 @@ const IntroCards: React.FC = () => {
                 What is the BigFile
               </h2>
               <p className="tw-paragraph-sm md:tw-lead mb-6 text-white/60">
-              BigFile (BIG) is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
+              BigFile is an AI-powered decentralized blockchain network engineered to provide decentralized, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability.
               </p>
               <p className="mb-0 self-stretch sm:self-auto">
                 <Link

@@ -10,16 +10,6 @@ const showcaseProjectsPlugin = async function () {
       if (!cache) {
         const ids = [
           "dscvr",
-          "distrikt",
-          "mora",
-          "funded",
-          "kinic",
-          "cubetopia",
-          "plethora",
-          "yumi",
-          "hot-or-not",
-          "taggr",
-          "catalyze",
         ];
 
         const projects = ids

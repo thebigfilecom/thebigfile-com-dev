@@ -1,6 +1,6 @@
 {
   "name": "@thebigfilecom/thebigfile-com-dev",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -14,10 +14,10 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "analyze": "NODE_OPTIONS=--max_old_space_size=24000 docusaurus build --bundle-analyzer",
-    "postbuild": "sh download-redirected-files.sh"
+    "postbuild": "sh download-redirected-files.sh",
+    "prebuild": "ts-node scripts/generate-search-index.ts"
   },
   "dependencies": {
-    "@dfinity/agent": "^0.15.4",
     "@dfinity/candid": "^0.15.4",
     "@dfinity/principal": "^0.15.4",
     "@floating-ui/react": "^0.26.9",

@@ -77,7 +77,7 @@ const cardsData = [
     title: "Built for Developers",
     subtitle: "Echo your expertise in the field",
     description:
-      "Bring your next project to life on the permaweb. Use BigDrive to create a permanent website or launch a forever-running app with ease.",
+      "Bring your next project to life on the permaweb. Use BigDrive to create a decentralized website or launch a forever-running app with ease.",
   },
   {
     id: 4,
@@ -85,7 +85,7 @@ const cardsData = [
     title: "Blockchain for Everyone",
     subtitle: "A Blockchain for Everyone",
     description:
-      "Like the internet, but built to last for generations. Preserve websites, news articles, and files in a permanent digital time capsule.",
+      "Like the internet, but built to last for generations. Preserve websites, news articles, and files in a decentralized digital time capsule.",
   },
 ];
 
@@ -98,7 +98,7 @@ function AcceleratorPage() {
   return (
     <Layout
       title="BigDrive | The On-chain Permanent File Storage"
-      description="Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, store-forever model."
+      description="Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, enjoy-forever model."
     >
       <ShareMeta image="/img/shareImages/share-bigdrive.jpg"></ShareMeta>
 
@@ -133,7 +133,7 @@ function AcceleratorPage() {
                   className="tw-lead-sm md:tw-lead mb-8"
                   variants={transitions.item}
                 >
-                  Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, store-forever model.
+                  Streamline your digital world with BigDrive: the app that simplifies file management and inspires creativity with its pay-once, enjoy-forever model.
                 </motion.p>
               </div>
               <MotionLink
@@ -167,7 +167,7 @@ function AcceleratorPage() {
               className="text-gradient tw-heading-4 md:tw-heading-60 mb-0 md:max-w-9/12"
               variants={transitions.item}
             >
-              Rethink your approach to cloud storage—because true permanence demands a new way forward.
+              Rethink your approach to cloud storage—because true decentralized demands a new way forward.
             </motion.h2>
           </AnimateSpawn>
         </section>

@@ -4,13 +4,6 @@ declare global {
   }
 }
 
-export function trackEvent(
-  category: string,
-  name: string,
-  action?: string,
-  value?: string
-) {
-  try {
-    window._paq.push(["trackEvent", category, name, action, value]);
-  } catch {}
-}
+export const trackEvent = (category: string, action: string, name?: string) => {
+  console.log('Track:', category, action, name);
+};

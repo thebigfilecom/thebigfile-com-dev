@@ -3,6 +3,10 @@
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@site/*": ["./*"]
+    },
     "resolveJsonModule": true,
     "downlevelIteration": true
   },

@@ -104,7 +104,7 @@ const FeaturesSection = () => {
           />
           <h3 className="tw-lead md:tw-title-sm mb-0">Oracle and Blockchain Data</h3>
           <p className="mb-0 tw-paragraph-sm text-black/60">
-           Blockchain applications and oracle services must be able to trust that the data they rely on will remain permanently accessible. BigFile indexes and retrieves permanent data storage on BigFile blockchain, ensuring that data such as transaction histories, price feeds, and oracle inputs are archived and served forever.
+           Blockchain applications and oracle services must be able to trust that the data they rely on will remain permanently accessible. BigFile indexes and retrieves decentralized data storage on BigFile blockchain, ensuring that data such as transaction histories, price feeds, and oracle inputs are archived and served forever.
           </p>
           <p className="mb-0 -mx-3">
             <Link

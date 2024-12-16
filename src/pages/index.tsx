@@ -25,12 +25,12 @@ export default function Home(): JSX.Element {
       editPath={`https://github.com/thebigfilecom/thebigfile-com-dev/edit/main/${__filename}`}
     >
       <Hero
-        headline={<>BIGFILE ON BLOCKCHAIN</>}
+        headline={<>BIGFILE ON BLOCKCHAIN{" "}</>}
       >
         <CardsSection />
         
         <VisionSection>
-          BigFile is an AI-powered decentralized blockchain network engineered to provide permanent, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. 
+          BigFile is an AI-powered decentralized blockchain network engineered to provide decentralized, immutable, and scalable data storage solutions. It is designed to securely host applications, files, and Big Data, while facilitating computations on smart contracts at unparalleled scalability. 
         </VisionSection>
         <IntroCards />
       </Hero>

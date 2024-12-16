@@ -138,7 +138,7 @@ function TokenHolders(): JSX.Element {
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
                 variants={transitions.item}
               >
-                Permanent Data Storage: Users pay with BIG Token to store their data permanently on the BigFile network. The "pay once, store forever" model ensures that, once the storage fee is paid, the data remains permanently stored on the network.
+                Decentralized Data Storage: Users pay with BIG Token to store their data permanently on the BigFile network. The "pay once, store forever" model ensures that, once the storage fee is paid, the data remains permanently stored on the network.
               </motion.p>
               <motion.p
                 className="tw-paragraph md:tw-lead-sm text-black/60 mb-3"
@@ -231,7 +231,7 @@ function TokenHolders(): JSX.Element {
                 variants={transitions.item}
               >
                 <h3 className="tw-heading-5 md:tw-heading-4 mb-6">
-                  Permanent Data Storage
+                 Decentralized Data Storage
                 </h3>
                 <p className="tw-paragraph md:tw-lead-sm mb-6 text-black/60">
                   Users pay with BIG Token to store their data permanently on the BigFile network. The "pay once, store forever" model ensures that, once the storage fee is paid, the data remains permanently stored on the network. When users want to add new versions to the data they have permanently uploaded, they make payments using BIG Token.
@@ -258,7 +258,7 @@ function TokenHolders(): JSX.Element {
                 </p>
                 <p className="mb-0">
                   <Link
-                    href="/capabilities/reverse-gas"
+                    href="/"
                     className="link-primary link-with-icon items-center"
                   >
                     <LinkArrowRight />

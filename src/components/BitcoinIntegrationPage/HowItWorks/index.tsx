@@ -15,7 +15,7 @@ function Index() {
           variants={transitions.item}
           className="tw-heading-5 md:tw-heading-3 text-gradient mb-0"
         >
-          BigFile leverages bundling to scale permanent data storage efficiently. Whether you're storing a few files or gigabytes of data, bundling combines multiple transactions into one, minimizing fees while enabling faster and more reliable uploads.
+          BigFile leverages bundling to scale decentralized data storage efficiently. Whether you're storing a few files or gigabytes of data, bundling combines multiple transactions into one, minimizing fees while enabling faster and more reliable uploads.
         </motion.h2>
       </div>
     </AnimateSpawn>
