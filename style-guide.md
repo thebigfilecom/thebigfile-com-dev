@@ -44,10 +44,6 @@ Introduce the feature or tool. What is it? Give a brief overview of how it works
 
 Optional; only necessary for documents that require prerequisite conditions or parameters be met.
 
-List all dependencies that the developer will need to download or setup in order to use the feature. The most common prerequisite is downloading dfx. Please link to the dfx installation page. 
-- [x] Prerequisite 1.
-- [x] Prerequisite 2.
-- [x] Prerequisite 3.
 
 ## Topic 1
 

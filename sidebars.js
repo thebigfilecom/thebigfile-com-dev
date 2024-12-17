@@ -246,7 +246,7 @@ const sidebars = {
           items: [
             {
               type: "category",
-              label: "dfx",
+              label: "big",
               link: {
                 type: "doc",
                 id: "developer-docs/developer-tools/cli-tools/cli-reference/index",
@@ -703,7 +703,6 @@ const sidebars = {
           type: "category",
           label: "Languages",
           items: [
-            "references/candid-ref",
             {
               type: "link",
               label: "Rust CDK references",
@@ -717,18 +716,8 @@ const sidebars = {
           items: [
             {
               type: "doc",
-              label: "Asset canister",
-              id: "references/asset-canister",
-            },
-            {
-              type: "doc",
               label: "BIG token standard",
               id: "references/big-token-standard",
-            },
-            {
-              type: "doc",
-              label: "Ledger canister",
-              id: "references/ledger",
             },
           ],
         },
@@ -737,7 +726,6 @@ const sidebars = {
           label: "Feature references",
           items: [
             "references/https-outcalls-how-it-works",
-            "references/t-ecdsa-how-it-works",
             "references/supported-signatures",
           ],
         },

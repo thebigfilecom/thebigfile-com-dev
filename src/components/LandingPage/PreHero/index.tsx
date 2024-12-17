@@ -149,7 +149,7 @@ const PreHero: React.FC<{
                     className="button-outline-white text-center sm:text-left"
                     href="https://dashboard.thebigfile.com"
                   >
-                    INTERNET COMPUTER DASHBOARD
+                    BigFile DASHBOARD
                   </Link>
                   <Link
                     href="https://wiki.thebigfile.com/wiki/L1_comparison"

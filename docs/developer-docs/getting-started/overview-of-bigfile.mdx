@@ -21,32 +21,13 @@ Combined with threshold signatures, these features will enable smart contracts t
 
 Read on to learn more about how these features are made possible. 
 
-## Subnets
-
-## Threshold signatures
-
-Each BigFile subnet has a fixed public key.
-The corresponding private key is not stored on a single node, nor is it ever available on any node.
-Instead, it is split into multiple secret shares and distributed over all nodes using threshold cryptography.
-Nodes can collectively sign messages to users and other subnets using these secret shares.
-This makes validation of the state and results trivial for users since all they need to do is verify the digital signature against the fixed public key without downloading and validating blocks in the blockchain.
-
-This feature has profound implications and use cases:
-
-- There is no need to keep the blocks in the blockchain available forever, which would be a scalability bottleneck.
-  In fact, BigFile actively garbage collects old blocks to keep storage usage bounded.
-- Smart contracts [can have their own secret keys](https://medium.com/) and can sign transactions for other blockchains such as Bitcoin and Ethereum.
-  This enables trustless interaction with those blockchains.
+## Gateways
 
 
 ## Smart contracts
 
 
 ## Accounts and keys
-
-BigFile derives the address of a user account from the user’s public key by hashing it.
-
-The textual encoding of an address includes a checksum that looks something like this:
 
 ```
 ....
@@ -62,133 +43,3 @@ The textual encoding of an address includes a checksum that looks something like
 ## Cycles
 
 ## Nodes
-
-Becoming a node provider on BigFile requires voting through BIG.
-
-Currently, subnets contain between 1 and 4 nodes, and most of them are geographically distributed. However, there can also be localized subnets to support applications that need to comply with local regulations.
-
-## Quick comparison with Ethereum
-
-<table>
-<thead>
-<tr>
-  <th> </th>
-  <th> Ethereum </th>
-  <th> BigFile </th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-  <td> Virtual machine </td>
-  <td> EVM </td>
-  <td> WebAssembly </td>
-</tr>
-
-<tr>
-  <td> On-chain Web3 </td>
-  <td> - </td>
-  <td> Yes </td>
-</tr>
-
-<tr>
-  <td> Bridgeless Bitcoin </td>
-  <td> - </td>
-  <td> Yes </td>
-</tr>
-
-<tr>
-  <td> Smart contracts can sign messages </td>
-  <td> - </td>
-  <td> Yes </td>
-</tr>
-
-<tr>
-  <td> HTTP calls to Web2 from smart contracts </td>
-  <td> - </td>
-  <td> Yes </td>
-</tr>
-
-<tr>
-  <td> Languages </td>
-  <td> Solidity, Vyper, Yul </td>
-  <td> JS, Python, Rust, Solidity and more </td>
-</tr>
-
-<tr>
-  <td> Programming model </td>
-  <td> Atomic transactions </td>
-  <td> Async message passing </td>
-</tr>
-
-<tr>
-  <td> Upgradability </td>
-  <td> Immutable </td>
-  <td> Upgradable or immutable </td>
-</tr>
-
-<tr>
-  <td> Gas model </td>
-  <td> User pays </td>
-  <td> Smart contract pays </td>
-</tr>
-
-<tr>
-  <td> Gas price </td>
-  <td> Variable </td>
-  <td> Fixed </td>
-</tr>
-
-<tr>
-  <td> Compute </td>
-  <td>
-    {" "}
-    Few million instructions per block (based on the 30 million gas limit){" "}
-  </td>
-  <td> 3 billion instructions per block (per subnet) </td>
-</tr>
-
-<tr>
-  <td> Finality </td>
-  <td> ~15min </td>
-  <td> ~1.2s </td>
-</tr>
-
-<tr>
-  <td> Average tx/msg fee </td>
-  <td> ~$1 </td>
-  <td> ~$0.000001 </td>
-</tr>
-
-<tr>
-  <td>Stack size</td>
-  <td> 32KB (1024 of 256-bit values) </td>
-  <td> 10MB </td>
-</tr>
-
-<tr>
-  <td> Code size </td>
-  <td> 24KB (more with code sharing) </td>
-  <td> 15MB </td>
-</tr>
-
-<tr>
-  <td> Memory size </td>
-  <td> Few KB </td>
-  <td> 404GiB (4GiB Wasm memory + 400GiB of stable memory) </td>
-</tr>
-
-<tr>
-  <td> Storage cost </td>
-  <td> $18M per GiB (based on 640K gas per KB) </td>
-  <td> $4 per GiB per year </td>
-</tr>
-
-<tr>
-  <td> Number of nodes </td>
-  <td> ~7K </td>
-  <td> ~20 in total, 1-4 per subnet </td>
-</tr>
-
-</tbody>
-</table>
