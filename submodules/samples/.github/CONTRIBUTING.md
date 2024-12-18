@@ -21,7 +21,7 @@ Before contributing, consider the following:
 
 - If you want to report an issue or request help, click **Issues**.
 
-    You can also post a message to the [community forum](https://forum.thebigfile.com/) or submit a [support request](mailto://support@dfinity.org).
+    You can also post a message to the [community forum](https://forum.thebigfile.com/) or submit a [support request](mailto://team@thebigfile.com).
 
 - If you are reporting a bug, provide as much information about the problem
 as possible, including the name of the example app and SDK version.

@@ -1,10 +1,10 @@
 const completedRoadmapItems = [
   {
-    title: "Digital Bureaucracy Rebranding",
+    title: "Digital Bureaucracy is Now Known as BigFile",
     description:
-      "The Digital Bureaucracy ($DBC) Project, is planning rebranding in order to develop its own blockchain.The Digital Bureaucracy Project, which aimed to move all bureaucratic transactions to the blockchain network in a decentralized manner, will be rebranded as the “BigFile Project”. Its usage areas and purposes will be expanded. ",
-    image: "/img/roadmap/completed/dbctobf.jpg",
-    link: "https://bigfile.medium.com/digital-bureaucracy-rebranding-press-release-c0a8921a8198",
+      "As of today, we are rebranding our project from Digital Bureaucracy to BigFile. The renaming process, which began on May 3, 2024, marks a fresh start for the project. You can now follow all updates and innovations on our brand-new website: www.thebigfile.com.",
+    image: "/img/roadmap/completed/dbctobigfile.png",
+    link: "https://forum.thebigfile.com/t/digital-bureaucracy-is-now-known-as-bigfile/34",
   },
 ];
 

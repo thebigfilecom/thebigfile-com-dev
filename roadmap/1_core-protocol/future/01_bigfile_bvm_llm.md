@@ -1,5 +1,5 @@
 ---
-title: BigFile GPU LLM Node
+title: BigFile BVM (LLM Support)
 links:
   Forum Link: https://forum.thebigfile.com/t/bigfile-gpu-llm-node/38
   BIG Wiki: https://wiki.thebigfile.com/wiki/

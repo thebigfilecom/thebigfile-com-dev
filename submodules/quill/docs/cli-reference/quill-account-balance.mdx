@@ -4,7 +4,6 @@ import { MarkdownChipRow } from "/src/components/Chip/MarkdownChipRow";
 
 <MarkdownChipRow labels={["Reference"]} />
 
-Queries a ledger account for its balance.
 
 ## Basic usage
 
@@ -47,9 +46,3 @@ This will produce a response like
 "e8s" is a shorthand for meaning the number of 1e-8s, or one-hundred-millionths, of an BIG in integer form; this response must be divided by 100,000,000 to get the real balance, which in this case would be 8.0 BIG.
 
 ## Remarks
-
-As this is a query call, it cannot be executed on an air-gapped machine, but does not require access to your keys. You can use the `quill public-ids` command to get your account ID. 
-
-For more information about the BIG ledger, see [The Ledger Cube].
-
-[The Ledger Cube]: https://thebigfile.com/docs/current/references/ledger

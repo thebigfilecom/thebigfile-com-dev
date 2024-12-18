@@ -11,15 +11,15 @@ import TranslatedLayout from "../components/Common/TranslatedLayout/TranslatedLa
 import { useDarkHeaderInHero } from "../utils/use-dark-header-in-hero";
 
 const largeNfts: { url: string; title: string; imageUrl: string }[] = [
-  { imageUrl: "/img/nft/btcflower.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft1.webp", title: "", url: "" },
   { imageUrl: "/img/nft/cosmic-birth.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/boxydude.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/icbucks.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/cubetopia-2.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/colorful-abstracts.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/icflowers.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/creator-gloves.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/ickitties.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft8.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft2.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft5.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft6.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft9.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft7.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft10.webp", title: "", url: "" },
 ];
 
 const smallNfts: { url: string; title: string; imageUrl: string }[] = [
@@ -27,15 +27,11 @@ const smallNfts: { url: string; title: string; imageUrl: string }[] = [
   { imageUrl: "/img/nft/icpuppies.webp", title: "", url: "" },
   { imageUrl: "/img/nft/moonwalker.webp", title: "", url: "" },
   { imageUrl: "/img/nft/eimolad.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/motoko.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/motomoji.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/nautscc.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft3.webp", title: "", url: "" },
   { imageUrl: "/img/nft/pineapplepunks.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/pockedbot.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/pod.webp", title: "", url: "" },
+  { imageUrl: "/img/nft/bignft4.webp", title: "", url: "" },
   { imageUrl: "/img/nft/spaceapes.webp", title: "", url: "" },
   { imageUrl: "/img/nft/boxydude.webp", title: "", url: "" },
-  { imageUrl: "/img/nft/btcflower.webp", title: "", url: "" },
 ];
 
 const NftShowcase = React.memo(() => {

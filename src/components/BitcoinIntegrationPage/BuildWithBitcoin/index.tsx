@@ -16,7 +16,7 @@ function Index() {
     },
     {
       title: "BigDrive Docs",
-      href: "/docs/current/references/t-ecdsa-how-it-works",
+      href: "/docs/current",
     },
     {
       title: "Sample Code",

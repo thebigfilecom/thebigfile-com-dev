@@ -48,9 +48,6 @@ const redirects = `
   /docs/current/developer-docs/quickstart/local-quickstart /docs/current/developer-docs/getting-started/install/
   /docs/current/developer-docs/setup/install/index.mdx /docs/current/developer-docs/getting-started/install/
 
-  /docs/candid-guide/candid-ref /docs/current/references/candid-ref
-  /docs/candid-guide/candid-types /docs/current/references/candid-ref
-
 
   /docs/current/developer-docs/build/ /docs/current/developer-docs/smart-contracts/write/overview
   /docs/current/developer-docs/build/languages/other-languages/* /docs/current/developer-docs/smart-contracts/write/overview
@@ -209,7 +206,7 @@ const redirects = `
   /docs/current/references/cli-reference/big-upgrade /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-upgrade
   /docs/current/references/cli-reference/big-wallet /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-wallet
   /docs/current/references/cli-reference/big-envars /docs/current/developer-docs/developer-tools/cli-tools/cli-reference/big-envars
-  /docs/current/references/cli-reference/dfx-json-reference /docs/current/developer-docs/developer-tools/cli-tools/dfx-json-reference
+  /docs/current/references/cli-reference/big-json-reference /docs/current/developer-docs/developer-tools/cli-tools/big-json-reference
   /docs/current/references/quill-cli-reference/ /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/quill-parent
   /docs/current/references/quill-cli-reference/quill-account-balance /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/quill-account-balance
   /docs/current/references/quill-cli-reference/ckbtc/quill-ckbtc /docs/current/developer-docs/developer-tools/cli-tools/quill-cli-reference/ckbtc/quill-ckbtc
@@ -316,7 +313,6 @@ const redirects = `
   /docs/current/tokenomics/index /docs/current/developer-docs/daos/overview
   /docs/current/tokenomics/ /docs/current/developer-docs/daos/overview
   /docs/current/developer-docs/integrations/https-outcalls/https-outcalls-how-it-works /docs/current/references/https-outcalls-how-it-works
-  /docs/current/developer-docs/integrations/t-ecdsa/t-ecdsa-how-it-works /docs/current/references/t-ecdsa-how-it-works
   /docs/current/developer-docs/developer-tools/cli-tools/networks-json /docs/current/developer-docs/developer-tools/cli-tools/advanced-dfx/networks-json
   /docs/current/developer-docs/production/system-canisters /docs/current/developer-docs/smart-contracts/advanced-features/system-canisters
   /docs/current/developer-docs/backend/arguments /docs/current/developer-docs/smart-contracts/call/arguments
