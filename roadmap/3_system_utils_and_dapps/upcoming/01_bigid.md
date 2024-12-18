@@ -1,5 +1,5 @@
 ---
-title: BigFile Wallet BID ID
+title: BID ID
 links:
   Forum Link: https://forum.thebigfile.com/
   Proposal: https://big-id.thebigfile.com/
