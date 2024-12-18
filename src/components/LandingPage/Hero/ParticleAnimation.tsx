@@ -43,7 +43,7 @@ const lerpMultiple = (percent, points, fn = lerp) => {
 
 const colorsLinear = [
   [237, 30, 121],
-  //[241,90, 36], //o
+  [241,90, 36], //o
   [251, 176, 59], //y
   [251, 176, 59], //y
   [137, 14, 237], //p
@@ -153,7 +153,7 @@ const ParticleAnimation = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     canvasContainer.current.appendChild(renderer.domElement);
-    renderer.setClearColor(0x1e005d, 1);
+    renderer.setClearColor(0x000000, 1);
 
     let relScrollTop = 0;
 

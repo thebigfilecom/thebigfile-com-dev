@@ -25,7 +25,7 @@ const Hero: React.FC<{
   const isDark = useDarkHeaderInHero(darkRef);
 
   return (
-    <section className=" bg-[#1B025A]" id="home" ref={darkRef}>
+    <section className=" bg-black" id="home" ref={darkRef}>
       {isDark && <DarkHeroStyles bgColor="transparent" />}
 
       <ParticleAnimation />
