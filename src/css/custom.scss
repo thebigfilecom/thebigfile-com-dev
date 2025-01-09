@@ -512,3 +512,20 @@ div[class^="announcementBarContent"] {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Footer styles
+.footer {
+  background-color: #000 !important;
+}
+
+.footer__link-item {
+  color: #fff;
+}
+
+.footer__title {
+  color: #fff;
+}
+
+.footer__copyright {
+  color: #fff;
+}
