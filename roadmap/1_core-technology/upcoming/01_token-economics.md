@@ -1,5 +1,5 @@
 ---
-title: Token Economics & Incentives
+title: Token Economics
 links:
   Forum Link: https://forum.thebigfile.com/t/token-economics-incentives/49
 eta: Q2 2025

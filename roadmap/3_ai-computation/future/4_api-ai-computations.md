@@ -1,10 +1,8 @@
 ---
 title: API for AI computations
 links:
-  Proposal: https://forum.thebigfile.com/t/api-for-ai-computations/43
+  Forum: https://forum.thebigfile.com/t/api-for-ai-computations/43
   Deployment & Upgrades: https://forum.thebigfile.com/
-  Rewards: https://forum.thebigfile.com/
-  Decentralization Swap: https://forum.thebigfile.com/
 eta: Q3 25
 is_community: false
 ---
