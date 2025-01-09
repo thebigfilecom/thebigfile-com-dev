@@ -1,5 +1,5 @@
 ---
-title: Developer experience
+title: Network Infrastructure
 card: /img/roadmap/dx.card.jpg
 overlay: /img/roadmap/developer.overlay.jpg
 ---

@@ -1,5 +1,5 @@
 ---
-title: Core
+title: Core Technology
 
 card: /img/roadmap/core-protocol.card.jpg
 overlay: /img/roadmap/core-protocol.overlay.jpg

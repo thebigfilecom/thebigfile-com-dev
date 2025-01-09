@@ -1,5 +1,5 @@
 ---
-title: Gateways
+title: Storage & Data Management
 card: /img/roadmap/boundary-nodes.card.jpg
 overlay: /img/roadmap/boundary-nodes.overlay.jpg
 ---

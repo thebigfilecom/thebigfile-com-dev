@@ -1,5 +1,5 @@
 ---
-title: Infrastructure & operations
+title: Ecosystem Growth
 card: /img/roadmap/infrastructure.card.jpg
 overlay: /img/roadmap/infrastructure.overlay.jpg
 ---
