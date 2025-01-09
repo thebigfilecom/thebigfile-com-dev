@@ -4,4 +4,4 @@ card: /img/roadmap/system-utility.card.jpg
 overlay: /img/roadmap/system-utility.overlay.jpg
 ---
 
-This section features system utilities developed by the BigFile team, along with essential dApp tools that facilitate core functionalities for the BigFile network. It also includes network management utilities, such as BIG Token operations and BIG ID authentication.
+The AI & Computation layer integrates artificial intelligence capabilities with blockchain technology. This includes GPU-based mining for AI model training, distributed computation networks, and decentralized AI model marketplace development.
