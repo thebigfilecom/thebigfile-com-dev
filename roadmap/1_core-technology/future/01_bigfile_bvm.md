@@ -1,8 +1,7 @@
 ---
-title: BigFile BVM (LLM Support)
+title: BigFile BVM
 links:
   Forum Link: https://forum.thebigfile.com/t/bigfile-gpu-llm-node/38
-  BIG Wiki: https://wiki.thebigfile.com/wiki/
   Documentation: https://thebigfile.com/docs/current/home
 eta: Q4 2026
 is_community: true

@@ -2,7 +2,6 @@
 title: BigFile Mainnet
 links:
   Forum Link: https://forum.thebigfile.com/t/bigfile-mainnet/36
-  BIG Wiki: https://wiki.thebigfile.com/wiki/
   Documentation: https://thebigfile.com/docs/current/home
 eta: Q2 2026
 is_community: true
