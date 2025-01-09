@@ -1,10 +1,9 @@
 ---
 title: Thebigfile.com Developer Portal 
 links:
-  Forum Link: https://forum.thebigfile.com/t/thebigfile-com-developer-portal/18
+  Forum Link:
   Proposal:
 eta: July 2024
 is_community: false
-in_beta: false
 ---
-The BigFile Project's official website www.thebigfile.com has been completed and published. The website has been shared as open source via our githup repository. Since the project is an open source blockchain project, details can be accessed via the forum.
+Thebigfile.com, the official website of the BigFile Project, will be completed and published. Detailed information and developer documents about the project will be published on this website.
