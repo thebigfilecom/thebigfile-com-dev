@@ -9,6 +9,9 @@ import IntraPageNav from "../components/Common/IntraPageNav";
 import ShareMeta from "../components/Common/ShareMeta";
 import { css } from "../utils/dummy-css";
 import { useScrollSpyMenu } from "../utils/use-scroll-spy-menu";
+import { motion } from "framer-motion";
+import { AnimateSpawn } from "../components/Common/AnimateSpawn";
+import { transitions } from "../utils/transitions";
 
 const CardGroup: React.FC<{ group: HowItWorksCardGroup }> = ({ group }) => {
   const groupClassName = `${slugify(group.title)}-item`;
@@ -110,25 +113,18 @@ function HowItWorks() {
         `}
       </style>
       <ShareMeta image="/img/shareImages/share-how-it-works.webp"></ShareMeta>
-      <main className="text-black relative">
-        <section className="overflow-hidden bg-infinite text-white">
+      <main className="relative overflow-hidden">
+        <section className="bg-black text-white pt-20">
           <DarkHeroStyles></DarkHeroStyles>
           <div className="container-10 pt-12 mb-30 md:mb-40 md:pt-36 relative">
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">
-               Bringing the BigFile Vision to Life
+                How BigFile works
               </h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-              BigFile is an AI-powered, decentralized blockchain network designed to deliver decentralized, immutable, and scalable data storage solutions. Dive into its cutting-edge technology through open-source repositories, comprehensive video academy sessions, white papers, publications, and detailed technical articles.
+                BigFile is an AI-powered, decentralized blockchain network designed to deliver decentralized, immutable, and scalable data storage solutions. Dive into its cutting-edge technology through open-source repositories, comprehensive video academy sessions, white papers, publications, and detailed technical articles.
               </p>
             </div>
-          </div>
-          <div className="container-10 relative">
-            <img
-              alt=""
-              src="/img/whiteBlurredCircle.webp"
-              className="absolute pointer-events-none max-w-none w-[800px] aspect-square -right-[200px] bottom-[-400px] md:w-[1500px] md:bottom-[-680px] md:right-[-550px] object-contain object-center"
-            />
           </div>
         </section>
         <section className="container-12 mt-32 space-y-24 md:space-y-20 relative mb-52  ">

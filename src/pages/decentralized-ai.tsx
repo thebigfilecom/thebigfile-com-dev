@@ -69,7 +69,7 @@ function DecentralizedAIPage() {
         {isDark && <DarkHeroStyles bgColor="transparent"></DarkHeroStyles>}
 
         <section
-          className="overflow-hidden bg-infinite text-white pt-20"
+          className="overflow-hidden bg-black text-white pt-20"
           ref={heroRef}
         >
           <AnimateSpawn

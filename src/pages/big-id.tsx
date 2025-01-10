@@ -37,7 +37,7 @@ function InternetIdentityPage() {
           marginTop: `calc(var(--ifm-navbar-height) * -1)`,
         }}
       >
-        <section className="bg-infinite text-white pt-20" ref={heroRef}>
+        <section className="bg-black text-white pt-20" ref={heroRef}>
           {bgDark && <DarkHeroStyles bgColor="transparent"></DarkHeroStyles>}
 
           <div className="container-10 pt-20 pb-12 sm:pb-0 md:pb-40 md:pt-36 relative">

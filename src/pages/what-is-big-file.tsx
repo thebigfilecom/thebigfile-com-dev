@@ -32,7 +32,7 @@ function WhatIsBigPage() {
       >
         {isDark && <DarkHeroStyles bgColor="transparent"></DarkHeroStyles>}
 
-        <section className=" bg-infinite text-white pt-20" ref={heroRef}>
+        <section className="bg-black text-white pt-20" ref={heroRef}>
           <AnimateSpawn
             className="container-10 pt-10 pb-14 md:pb-24 md:pt-36 relative"
             variants={transitions.container}

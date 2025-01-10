@@ -321,7 +321,7 @@ function ShowcasePage(): JSX.Element {
       >
         {isDark && <DarkHeroStyles bgColor="transparent"></DarkHeroStyles>}
         <section
-          className="overflow-hidden bg-infinite text-white pt-20"
+          className="overflow-hidden bg-black text-white pt-20"
           ref={heroRef}
         >
           <div className="container-10 pt-20 md:pt-30 pb-60 md:pb-60 relative">

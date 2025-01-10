@@ -7,7 +7,7 @@ import React, { forwardRef } from "react";
 const Hero = forwardRef<HTMLDivElement, {}>((_, ref) => {
   return (
     <div className="overflow-hidden" ref={ref}>
-      <div className="bg-infinite">
+      <div className="bg-black">
         <AnimateSpawn
           variants={transitions.container}
           className="container-10 relative text-white pt-36  md:pt-60 pb-40 "

@@ -90,7 +90,7 @@ function TokenHolders(): JSX.Element {
         <main className="overflow-hidden">
           <ShareMeta image="/img/shareImages/share-big-tokens.jpg" />
           {isDark && <DarkHeroStyles />}
-          <section className="bg-infinite text-white overflow-hidden" ref={ref}>
+          <section className="bg-black text-white overflow-hidden" ref={ref}>
             <AnimateSpawn
               className="container-10 pt-20 md:pt-32 pb-52 md:pb-32 relative "
               variants={transitions.container}

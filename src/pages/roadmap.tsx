@@ -7,13 +7,14 @@ import GithubIcon from "@site/static/img/svgIcons/github.svg";
 import transitions from "@site/static/transitions.json";
 import Layout from "@theme/Layout";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import AnimateSpawn from "../components/Common/AnimateSpawn";
 import DarkHeroStyles from "../components/Common/DarkHeroStyles";
 import ShareMeta from "../components/Common/ShareMeta";
 import DomainCard from "../components/RoadmapPage/DomainCard";
 import Overlay from "../components/RoadmapPage/Overlay";
 import { RoadmapDomain } from "../components/RoadmapPage/RoadmapTypes";
+import { useDarkHeaderInHero } from "../utils/use-dark-header-in-hero";
 
 const MotionLink = motion(Link);
 
@@ -22,6 +23,8 @@ const data = roadmapData as RoadmapDomain[];
 const RoadmapPage: React.FC = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
   const [overlayOpenAt, setOverlayOpenAt] = useState(0);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const isDark = useDarkHeaderInHero(heroRef);
 
   function openOverlay(at: number) {
     document.body.style.overflow = "hidden";
@@ -43,13 +46,13 @@ const RoadmapPage: React.FC = () => {
       <ShareMeta image="/img/shareImages/share-roadmap.webp"></ShareMeta>
 
       <main className="w-full overflow-hidden">
-        <section className="overflow-hidden bg-infinite text-white">
+        <section className="bg-black text-white pt-20" ref={heroRef}>
           <DarkHeroStyles></DarkHeroStyles>
           <div className="container-10 pt-12 mb-60 md:mb-52 md:pt-36 relative">
             <div className="md:w-7/10">
               <h1 className="tw-heading-3 md:tw-heading-2 mb-6">Roadmap</h1>
               <p className="tw-lead-sm md:tw-lead mb-0">
-              BigFile prepares various development environments and resources to make the blockchain more efficient, faster, and easier to use. This roadmap highlights the status of many projects across the BigFile stack, but not all—more updates will be coming in the next few weeks.
+                BigFile prepares various development environments and resources to make the blockchain more efficient, faster, and easier to use. This roadmap highlights the status of many projects across the BigFile stack, but not all—more updates will be coming in the next few weeks.
               </p>
             </div>
           </div>
