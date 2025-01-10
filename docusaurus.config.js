@@ -104,13 +104,6 @@ const subnavItems = [
       },
     ],
   },
-  /**
-   * Add UI tests in development mode
-   */
-  process.env.NODE_ENV === "development" && {
-    label: "UI Tests",
-    href: "/docs/current/tests/all",
-  },
 ].filter(Boolean);
 
 /** @type {import("./src/components/Common/MarketingNav").MarketingNavType} */
